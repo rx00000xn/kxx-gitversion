@@ -1,0 +1,169 @@
+#### PRF Ideas ####
+
+ideas = {
+
+##############
+# Country ideas
+##############
+	country = {
+		PRF_economic_backwardness = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea PRF_economic_backwardness"}
+			picture = generic_disjointed_gov
+			allowed = { always = no }
+            modifier = {
+				conscription_factor = -0.15
+				production_factory_efficiency_gain_factor = -0.1
+				industrial_capacity_factory = -0.05
+			}
+		}
+		PRF_military_backwardness = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea PRF_military_backwardness"}
+			picture = generic_disjointed_gov
+			allowed = { always = no }
+            modifier = {
+				war_support_factor = -0.1
+				army_infantry_attack_factor = -0.1
+				planning_speed = -0.05
+				no_supply_grace = -0.05
+			}
+		}
+		PRF_left_wing_rebellion = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea PRF_left_wing_rebellion"}
+			picture = generic_disjointed_gov
+			allowed = { always = no }
+            modifier = {
+				political_power_cost = 0.1
+				stability_factor = -0.2
+				industrial_capacity_factory = -0.1
+			}
+		}
+		PRF_public_morale_instability = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea PRF_public_morale_instability"}
+			picture = raj_indian_gentlemen_officers
+			allowed = { always = no }
+            modifier = {
+				stability_factor = -0.05
+				political_power_gain = -0.15
+				conscription_factor = 0.1
+				surrender_limit = -0.2
+			}
+		}
+		PRF_caste_problem = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea PRF_caste_problem"}
+			picture = generic_agrarian_society
+			allowed = { always = no }
+            modifier = {
+				consumer_goods_factor = 0.1
+				production_factory_start_efficiency_factor = -0.1
+				production_factory_max_efficiency_factor = -0.1
+				industrial_capacity_factory = -0.2
+				production_factory_max_efficiency_factor = -0.2
+				local_building_slots_factor = -0.1
+			}
+		}
+		PRF_religious_conflict = {#宗教冲突
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea PRF_religious_conflict"}
+			picture = generic_agrarian_society
+			allowed = { always = no }
+            modifier = {
+				stability_factor = -0.1
+				war_support_weekly = -0.004
+				production_factory_max_efficiency_factor = -0.1
+				political_power_gain = -0.1
+			}
+		}
+	}
+
+##############
+# Companies
+##############
+
+#### General ####
+	industrial_concern = {
+
+		braithwaite = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea braithwaite"}
+			allowed = { original_tag = PRF }
+			traits = { industrial_manufacturer }
+            modifier = {
+				production_speed_arms_factory_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+			}
+			research_bonus = {
+				industry = 0.1
+			}
+		}
+	}
+
+#### Weapons Manufacturer ####
+	materiel_manufacturer = {
+		designer = yes
+
+		ordnance_factories_board = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ordnance_factories_board"}
+			allowed = { original_tag = PRF }
+			traits = { infantry_equipment_producer_offense_1 }
+			research_bonus = {
+				infantry_weapons = 0.1
+			}
+		}
+
+		gun_factory_jabalpur = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea gun_factory_jabalpur"}
+			allowed = { original_tag = PRF }
+			traits = { artillery_producer_offense_1 }
+			research_bonus = {
+				artillery = 0.1
+			}
+		}
+
+		hindustan_motors = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea hindustan_motors"}
+			allowed = { original_tag = PRF }
+			traits = { motorised_equipment_producer_mass_0 }
+			research_bonus = {
+				motorized_equipment = 0.1
+			}
+		}
+
+	}
+
+#### Air and Naval Manufacturer ####
+	naval_manufacturer = {
+		designer = yes
+
+		garden_reach_workshops = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea garden_reach_workshops"}
+			allowed = { original_tag = PRF }
+			traits = { small_ship_producer_offense_1 }
+			research_bonus = {
+				naval_equipment = 0.1
+			}
+		}
+
+		mazagon_dock = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea mazagon_dock"}
+			allowed = { original_tag = PRF }
+			traits = { small_ship_producer_defense_1 }
+			research_bonus = {
+				naval_equipment = 0.1
+			}
+		}
+
+	}
+
+	aircraft_manufacturer = {
+		designer = yes
+
+		hindustan_aircraft = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea hindustan_aircraft"}
+			allowed = { original_tag = PRF }
+			traits = { fighter_producer_defense_1 }
+			research_bonus = {
+				air_equipment = 0.1
+			}
+		}
+
+	}
+
+}
