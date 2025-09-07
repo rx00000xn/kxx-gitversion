@@ -3343,11 +3343,12 @@ country_event = { #Araki Ideology Picker
 	is_triggered_only = yes
 	option = { #stay same
 		name = "我们永远忠于皇帝"
+		ai_chance = { base = 45 }
 		add_ideas = JAP_new_shogunate
 	}
 	option = { #Pan-Asianism
 		name = japan_new_event.42.a
-		ai_chance = { base = 100 }
+		ai_chance = { base = 45 }
 		set_politics = {
 			ruling_party = paternal_autocrat
 			election_frequency = 48
@@ -3372,7 +3373,7 @@ country_event = { #Araki Ideology Picker
 	
 	option = { #Prussian Constitutionaliusm
 		name = japan_new_event.42.b
-		ai_chance = { base = 100 }
+		ai_chance = { base = 10 }
 		set_politics = {
 			ruling_party = authoritarian_democrat
 			election_frequency = 48

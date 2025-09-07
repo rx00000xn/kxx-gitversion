@@ -395,6 +395,7 @@ shared_focus = JAPFOR_japansplaceintheworld
 		}
 		prerequisite = { focus = JAPTOSEIHA_a_military_reign_of_terror  } prerequisite = { focus = JAPTOSEIHA_call_for_spiritual_mobilization  }
 		completion_reward = {
+			country_event = KXXJAP.7
 		add_ideas = {
 		JAP_tojo_shogunate
 		}
@@ -765,6 +766,7 @@ shared_focus = JAPFOR_japansplaceintheworld
 		}
 		prerequisite = { focus = JAPTOSEIHA_push_forward_modernization  } prerequisite = { focus = JAPTOSEIHA_weraiseourriflestotheemperor  }
 		completion_reward = {
+			country_event = KXXJAP.6
 			if = {
 				limit = {
 					has_country_leader = {

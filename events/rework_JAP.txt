@@ -453,7 +453,7 @@ country_event = { #Syndicalist Socdem
 			name = "永田铁山"
 			picture = "gfx/leaders/JAP/Portrait_JAP_Nagata_Tetsuzan.png"
 			expire = "1965.1.1"
-			ideology = patau_japanese_militarism_subtype
+			ideology = pataut_japanese_militarism_subtype
 			}
 		create_country_leader = {
 			name = "东条英机"
