@@ -5085,10 +5085,12 @@ country_event = { #1940 elections
 	option = { #Kokumin Domei
 		name = 国民同盟
 		trigger = {
-			has_focus_tree = japan-seiyukai
-			has_focus_tree = minseito-japan
-			has_focus_tree = socdem-japan
-			has_focus_tree = kokumin-domei
+			OR = {
+				has_focus_tree = japan-seiyukai
+				has_focus_tree = minseito-japan
+				has_focus_tree = socdem-japan
+				has_focus_tree = kokumin-domei
+			}
 		}
 		ai_chance = {
 			base = 25
