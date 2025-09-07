@@ -5183,10 +5183,12 @@ country_event = { #1940 elections
 	option = { #The Seiyukai have defended their absolute majority!
 		name = 政友会
 		trigger = {
-			has_focus_tree = japan-seiyukai
-			has_focus_tree = minseito-japan
-			has_focus_tree = socdem-japan
-			has_focus_tree = kokumin-domei
+			OR = {
+				has_focus_tree = japan-seiyukai
+				has_focus_tree = minseito-japan
+				has_focus_tree = socdem-japan
+				has_focus_tree = kokumin-domei
+			}
 		}		
 		ai_chance = {
 			base = 25
@@ -5222,11 +5224,13 @@ country_event = { #1940 elections
 	option = { #Minseito
 		name = 民政党
 		trigger = {
-			has_focus_tree = japan-seiyukai
-			has_focus_tree = minseito-japan
-			has_focus_tree = socdem-japan
-			has_focus_tree = kokumin-domei
-		}		
+			OR = {
+				has_focus_tree = japan-seiyukai
+				has_focus_tree = minseito-japan
+				has_focus_tree = socdem-japan
+				has_focus_tree = kokumin-domei
+			}
+		}	
 		ai_chance = {
 			base = 25
 			modifier = {
@@ -5269,10 +5273,12 @@ country_event = { #1940 elections
 	option = { #Shakai-Taishuto
 		name = 社会大众党
 		trigger = {
-			has_focus_tree = japan-seiyukai
-			has_focus_tree = minseito-japan
-			has_focus_tree = socdem-japan
-			has_focus_tree = kokumin-domei
+			OR = {
+				has_focus_tree = japan-seiyukai
+				has_focus_tree = minseito-japan
+				has_focus_tree = socdem-japan
+				has_focus_tree = kokumin-domei
+			}
 		}		
 		ai_chance = {
 			base = 25
