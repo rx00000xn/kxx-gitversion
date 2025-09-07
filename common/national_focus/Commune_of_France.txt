@@ -15106,7 +15106,7 @@ focus = FRA_office_des_chemins_de_fer
 			has_government = totalist
 		}
 		ai_will_do = {
-			factor = 999
+			factor = 100
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_DTT"
@@ -15128,7 +15128,7 @@ focus = FRA_office_des_chemins_de_fer
 			has_government = totalist
 		}
 		ai_will_do = {
-			factor = 999
+			factor = 100
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_DTT"
@@ -15153,7 +15153,7 @@ focus = FRA_office_des_chemins_de_fer
 			has_government = totalist
 		}
 		ai_will_do = {
-			factor = 999
+			factor = 100
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_DTT"
@@ -15237,7 +15237,7 @@ focus = FRA_office_des_chemins_de_fer
 			has_government = totalist
 		}
 		ai_will_do = {
-			factor = 999
+			factor = 100
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_DTT"
@@ -15260,7 +15260,7 @@ focus = FRA_office_des_chemins_de_fer
 			has_government = totalist
 		}
 		ai_will_do = {
-			factor = 999
+			factor = 100
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_DTT"
@@ -15287,7 +15287,7 @@ focus = FRA_office_des_chemins_de_fer
 			has_government = totalist
 		}
 		ai_will_do = {
-			factor = 999
+			factor = 100
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_DTT"
@@ -15321,7 +15321,7 @@ focus = FRA_office_des_chemins_de_fer
 			has_government = totalist
 		}
 		ai_will_do = {
-			factor = 999
+			factor = 100
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_DTT"
@@ -15348,7 +15348,7 @@ focus = FRA_office_des_chemins_de_fer
 			has_government = totalist
 		}
 		ai_will_do = {
-			factor = 999
+			factor = 100
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_DTT"
@@ -15376,7 +15376,7 @@ focus = FRA_office_des_chemins_de_fer
 			has_government = totalist
 		}
 		ai_will_do = {
-			factor = 999
+			factor = 100
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_DTT"
@@ -15402,7 +15402,7 @@ focus = FRA_office_des_chemins_de_fer
 			has_government = totalist
 		}
 		ai_will_do = {
-			factor = 999
+			factor = 100
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_DTT"
@@ -15476,7 +15476,7 @@ focus = FRA_office_des_chemins_de_fer
 			has_government = totalist
 		}
 		ai_will_do = {
-			factor = 999
+			factor = 100
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_DTT"
@@ -15659,7 +15659,7 @@ focus = FRA_office_des_chemins_de_fer
 			}
 		}
 		ai_will_do = {
-			factor = 999
+			factor = 100
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_new_jacobin"
@@ -15681,7 +15681,7 @@ focus = FRA_office_des_chemins_de_fer
 			has_government = totalist
 		}
 		ai_will_do = {
-			factor = 999
+			factor = 100
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_educate_workers"
@@ -15708,7 +15708,7 @@ focus = FRA_office_des_chemins_de_fer
 			has_government = totalist
 		}
 		ai_will_do = {
-			factor = 999
+			factor = 100
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_new_jacobin"
@@ -15728,7 +15728,7 @@ focus = FRA_office_des_chemins_de_fer
 		y = 2
 		relative_position_id = FRA_new_jacobin
 		ai_will_do = {
-			factor = 999
+			factor = 100
 		}
 		available = {
 			has_government = totalist
@@ -15754,7 +15754,7 @@ focus = FRA_office_des_chemins_de_fer
 			has_government = totalist
 		}
 		ai_will_do = {
-			factor = 999
+			factor = 100
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_commune_virtue"
@@ -15775,7 +15775,7 @@ focus = FRA_office_des_chemins_de_fer
 			has_government = totalist
 		}
 		ai_will_do = {
-			factor = 999
+			factor = 100
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_new_economic_plan"
@@ -15799,7 +15799,7 @@ focus = FRA_office_des_chemins_de_fer
 			has_government = totalist
 		}
 		ai_will_do = {
-			factor = 999
+			factor = 100
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_revolutionary_youth"
@@ -15826,7 +15826,7 @@ focus = FRA_office_des_chemins_de_fer
 			has_government = totalist
 		}
 		ai_will_do = {
-			factor = 999
+			factor = 100
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_revolutionary_youth"
@@ -15883,7 +15883,7 @@ focus = FRA_office_des_chemins_de_fer
 			focus = FRA_export_revolution
 		}
 		ai_will_do = {
-			factor = 999
+			factor = 100
 		}
 		x = 0
 		y = 4
@@ -15909,7 +15909,7 @@ focus = FRA_office_des_chemins_de_fer
 		}
 		
 		ai_will_do = {
-			factor = 999
+			factor = 100
 		}
 		x = -3
 		y = 1
@@ -15937,7 +15937,7 @@ focus = FRA_office_des_chemins_de_fer
 			focus = FRA_lenin_legacy
 		}
 		ai_will_do = {
-			factor = 999
+			factor = 100
 		}
 		x = -2
 		y = 1
@@ -15973,7 +15973,7 @@ focus = FRA_office_des_chemins_de_fer
 			focus = FRA_peoples_commune
 		}
 		ai_will_do = {
-			factor = 999
+			factor = 100
 		}
 		x = -2
 		y = 2
@@ -15995,7 +15995,7 @@ focus = FRA_office_des_chemins_de_fer
 			focus = FRA_big_jump
 		}
 		ai_will_do = {
-			factor = 999
+			factor = 100
 		}
 		x = -2
 		y = 3
@@ -16021,7 +16021,7 @@ focus = FRA_office_des_chemins_de_fer
 			focus = FRA_lenin_legacy
 		}
 		ai_will_do = {
-			factor = 999
+			factor = 100
 		}
 		x = 0
 		y = 1
@@ -16139,7 +16139,7 @@ focus = FRA_office_des_chemins_de_fer
 			focus = FRA_bolshevik_learn
 		}
 		ai_will_do = {
-			factor = 999
+			factor = 100
 		}
 		x = 2
 		y = 2
@@ -16168,7 +16168,7 @@ focus = FRA_office_des_chemins_de_fer
 			has_government = totalist
 		}
 		ai_will_do = {
-			factor = 999
+			factor = 100
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_educate_workers"
@@ -16201,7 +16201,7 @@ focus = FRA_office_des_chemins_de_fer
 			focus = FRA_worker
 		}
 		ai_will_do = {
-			factor = 999
+			factor = 100
 		}
 		x = 0
 		y = 4
@@ -16271,7 +16271,7 @@ focus = FRA_office_des_chemins_de_fer
 		y = 1
 		relative_position_id = FRA_sorelians_rule_supreme
 			ai_will_do = {
-				factor = 1
+				factor = 100
 			}
 			available = {
 				has_government = totalist
@@ -16337,7 +16337,7 @@ focus = FRA_office_des_chemins_de_fer
 		y = 2
 		relative_position_id = FRA_sorelians_rule_supreme
 		ai_will_do = {
-			factor = 999
+			factor = 100
 		}
 		available = {
 			has_government = totalist
@@ -16359,7 +16359,7 @@ focus = FRA_office_des_chemins_de_fer
 		y = 2
 		relative_position_id = FRA_sorelians_rule_supreme
 		ai_will_do = {
-			factor = 999
+			factor = 100
 		}
 		available = {
 			has_government = totalist
@@ -16387,7 +16387,7 @@ focus = FRA_office_des_chemins_de_fer
 		y = 3
 		relative_position_id = FRA_sorelians_rule_supreme
 		ai_will_do = {
-			factor = 999
+			factor = 100
 		}
 		available = {
 			has_government = totalist
@@ -16412,7 +16412,7 @@ focus = FRA_office_des_chemins_de_fer
 		y = 1
 		relative_position_id = FRA_sorelians_rule_supreme
 		ai_will_do = {
-			factor = 999
+			factor = 100
 		}
 		available = {
 			has_government = totalist
@@ -16438,7 +16438,7 @@ focus = FRA_office_des_chemins_de_fer
 		y = 2
 		relative_position_id = FRA_sorelians_rule_supreme
 		ai_will_do = {
-			factor = 999
+			factor = 100
 		}
 		available = {
 			has_government = totalist
@@ -16469,7 +16469,7 @@ focus = FRA_office_des_chemins_de_fer
 		y = 2
 		relative_position_id = FRA_sorelians_rule_supreme
 		ai_will_do = {
-			factor = 999
+			factor = 100
 		}
 		available = {
 			has_government = totalist
@@ -16494,7 +16494,7 @@ focus = FRA_office_des_chemins_de_fer
 		y = 3
 		relative_position_id = FRA_sorelians_rule_supreme
 		ai_will_do = {
-			factor = 999
+			factor = 100
 		}
 		available = {
 			has_government = totalist
@@ -16523,7 +16523,7 @@ focus = FRA_office_des_chemins_de_fer
 			has_government = totalist
 		}
 		ai_will_do = {
-			factor = 999
+			factor = 100
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_direct_rule"
@@ -16556,7 +16556,7 @@ focus = FRA_office_des_chemins_de_fer
 		}
 		cancel_if_invalid = yes
 		ai_will_do = {
-			factor = 999
+			factor = 100
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_valois_is_gone"
@@ -16577,7 +16577,7 @@ focus = FRA_office_des_chemins_de_fer
 		cost = 8.00
 		
 		ai_will_do = {
-			factor = 999
+			factor = 100
 		}
 		x = 0
 		y = 15
