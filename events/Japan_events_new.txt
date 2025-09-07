@@ -4573,7 +4573,7 @@ country_event = { #Minseito Factionalism
 			name = "永井柳太郎"
 			picture = "gfx/leaders/JAP/Portrait_JAP_Ryūtarō_Nagai.png"
 			expire = "1965.1.1"
-			ideology = national_liberalism_subtype
+			ideology = soclib_popular_patriotism_subtype
 		}
 		set_politics = { ruling_party = social_liberal }
 		complete_national_focus = JAPLIB_tojnha_faction_dominance
@@ -6685,7 +6685,7 @@ country_event = { #Minseito Factionalism
 			name = "永井柳太郎"
 			picture = "gfx/leaders/JAP/Portrait_JAP_Ryūtarō_Nagai.png"
 			expire = "1965.1.1"
-			ideology = national_liberalism_subtype
+			ideology = soclib_popular_patriotism_subtype
 		}
 		set_politics = { ruling_party = social_liberal }
 		if = {
