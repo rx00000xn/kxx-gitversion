@@ -21,6 +21,9 @@ focus_tree = {
 		x = 3
 		y = 3
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
@@ -37,6 +40,9 @@ focus_tree = {
 		x = 5
 		y = 2
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_WAR_SUPPORT
 		}
@@ -86,6 +92,9 @@ focus_tree = {
 		x = 5
 		y = 3
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_STABILITY
 		}
@@ -116,6 +125,9 @@ focus_tree = {
 		x = 7
 		y = 3
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_STABILITY
 		}
@@ -134,6 +146,9 @@ focus_tree = {
 		x = 7
 		y = 4
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_FRA_OCCUPATION_COST
 		}
@@ -150,6 +165,9 @@ focus_tree = {
 		x = 5
 		y = 4
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
@@ -170,6 +188,9 @@ focus_tree = {
 		x = 3
 		y = 4
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_FRA_OCCUPATION_COST
 		}
@@ -206,6 +227,9 @@ focus_tree = {
 		x = 4
 		y = 6
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_FRA_OCCUPATION_COST
 		}
@@ -224,6 +248,9 @@ focus_tree = {
 		x = 6
 		y = 6
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_WAR_SUPPORT
 		}
@@ -241,6 +268,9 @@ focus_tree = {
 		x = 7
 		y = 7
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_STABILITY
 		}
@@ -259,6 +289,9 @@ focus_tree = {
 		x = 5
 		y = 7
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
@@ -279,6 +312,9 @@ focus_tree = {
 		x = 3
 		y = 7
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_WAR_SUPPORT
 		}
@@ -297,6 +333,9 @@ focus_tree = {
 		x = 5
 		y = 8
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
@@ -319,6 +358,9 @@ focus_tree = {
 		x = 11
 		y = 2
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
@@ -365,6 +407,9 @@ focus_tree = {
 		x = 9
 		y = 6
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
@@ -397,6 +442,9 @@ focus_tree = {
 		x = 11
 		y = 6
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
@@ -435,6 +483,9 @@ focus_tree = {
 		x = 13
 		y = 6
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
@@ -488,6 +539,9 @@ focus_tree = {
 		x = 17
 		y = 2
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_WAR_SUPPORT
 		}
@@ -506,6 +560,9 @@ focus_tree = {
 		x = 15
 		y = 3
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
@@ -524,6 +581,9 @@ focus_tree = {
 		x = 19
 		y = 3
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
@@ -540,6 +600,9 @@ focus_tree = {
 		x = 15
 		y = 4
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
@@ -558,6 +621,9 @@ focus_tree = {
 		x = 17
 		y = 4
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
@@ -588,6 +654,9 @@ focus_tree = {
 		x = 19
 		y = 4
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_WAR_SUPPORT
 		}
@@ -604,6 +673,9 @@ focus_tree = {
 		x = 21
 		y = 5
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_WAR_SUPPORT
 		}
@@ -622,6 +694,9 @@ focus_tree = {
 		x = 19
 		y = 5
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_STABILITY
 		}
@@ -640,6 +715,9 @@ focus_tree = {
 		x = 15
 		y = 5
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
@@ -658,6 +736,9 @@ focus_tree = {
 		x = 17
 		y = 6
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
@@ -691,6 +772,9 @@ focus_tree = {
 		x = 21
 		y = 6
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_ANNEXATION
 		}
@@ -709,6 +793,9 @@ focus_tree = {
 		x = 16
 		y = 7
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
@@ -727,6 +814,9 @@ focus_tree = {
 		x = 19
 		y = 7
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_STABILITY
 		}
@@ -747,6 +837,9 @@ focus_tree = {
 		x = 17
 		y = 8
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}

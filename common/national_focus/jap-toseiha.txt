@@ -51,6 +51,9 @@ shared_focus = JAPFOR_japansplaceintheworld
 		x = 8
 		y = 2
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
@@ -69,6 +72,9 @@ shared_focus = JAPFOR_japansplaceintheworld
 		x = 6
 		y = 3
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_WAR_SUPPORT
 		}
@@ -85,6 +91,9 @@ shared_focus = JAPFOR_japansplaceintheworld
 		x = 10
 		y = 3
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_STABILITY
 		}
@@ -106,6 +115,9 @@ shared_focus = JAPFOR_japansplaceintheworld
 		x = 10
 		y = 4
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
@@ -124,6 +136,9 @@ shared_focus = JAPFOR_japansplaceintheworld
 		x = 8
 		y = 4
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_WAR_SUPPORT
 		}
@@ -142,6 +157,9 @@ shared_focus = JAPFOR_japansplaceintheworld
 		x = 6
 		y = 4
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_MANPOWER
 		}
@@ -160,6 +178,9 @@ shared_focus = JAPFOR_japansplaceintheworld
 		x = 6
 		y = 5
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_STABILITY
 		}
@@ -177,6 +198,9 @@ shared_focus = JAPFOR_japansplaceintheworld
 		x = 8
 		y = 5
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_WAR_SUPPORT
 		}
@@ -196,6 +220,9 @@ shared_focus = JAPFOR_japansplaceintheworld
 		x = 10
 		y = 6
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_MANPOWER
 		}
@@ -214,6 +241,9 @@ shared_focus = JAPFOR_japansplaceintheworld
 		x = 8
 		y = 6
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
@@ -232,6 +262,9 @@ shared_focus = JAPFOR_japansplaceintheworld
 		x = 6
 		y = 6
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_WAR_SUPPORT
 		}
@@ -248,6 +281,9 @@ shared_focus = JAPFOR_japansplaceintheworld
 		x = 6
 		y = 7
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_WAR_SUPPORT
 		}
@@ -266,6 +302,9 @@ shared_focus = JAPFOR_japansplaceintheworld
 		x = 8
 		y = 7
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
@@ -282,6 +321,9 @@ shared_focus = JAPFOR_japansplaceintheworld
 		x = 10
 		y = 7
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_STABILITY
 		}
@@ -302,6 +344,9 @@ shared_focus = JAPFOR_japansplaceintheworld
 		x = 9
 		y = 8
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_MANPOWER
 		}
@@ -320,6 +365,9 @@ shared_focus = JAPFOR_japansplaceintheworld
 		x = 7
 		y = 8
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_WAR_SUPPORT
 		}
@@ -339,6 +387,9 @@ shared_focus = JAPFOR_japansplaceintheworld
 		x = 8
 		y = 9
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
@@ -373,6 +424,9 @@ shared_focus = JAPFOR_japansplaceintheworld
 		x = 13
 		y = 2
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
@@ -391,6 +445,9 @@ shared_focus = JAPFOR_japansplaceintheworld
 		x = 14
 		y = 3
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
@@ -409,6 +466,9 @@ shared_focus = JAPFOR_japansplaceintheworld
 		x = 12
 		y = 3
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_WAR_SUPPORT
 		}
@@ -431,6 +491,9 @@ shared_focus = JAPFOR_japansplaceintheworld
 		x = 12
 		y = 4
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_MANPOWER
 		}
@@ -449,6 +512,9 @@ shared_focus = JAPFOR_japansplaceintheworld
 		x = 14
 		y = 4
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_STABILITY
 		}
@@ -467,6 +533,9 @@ shared_focus = JAPFOR_japansplaceintheworld
 		x = 16
 		y = 4
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
@@ -483,6 +552,9 @@ shared_focus = JAPFOR_japansplaceintheworld
 		x = 16
 		y = 5
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
@@ -501,6 +573,9 @@ shared_focus = JAPFOR_japansplaceintheworld
 		x = 14
 		y = 5
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
@@ -517,6 +592,9 @@ shared_focus = JAPFOR_japansplaceintheworld
 		x = 12
 		y = 5
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_WAR_SUPPORT
 		}
@@ -533,6 +611,9 @@ shared_focus = JAPFOR_japansplaceintheworld
 		x = 15
 		y = 6
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_STABILITY
 		}
@@ -549,6 +630,9 @@ shared_focus = JAPFOR_japansplaceintheworld
 		x = 12
 		y = 6
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
@@ -567,6 +651,9 @@ shared_focus = JAPFOR_japansplaceintheworld
 		x = 14
 		y = 7
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
@@ -587,6 +674,9 @@ shared_focus = JAPFOR_japansplaceintheworld
 		x = 13
 		y = 8
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
@@ -606,6 +696,9 @@ shared_focus = JAPFOR_japansplaceintheworld
 		x = 15
 		y = 8
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_WAR_SUPPORT
 		}
@@ -624,6 +717,9 @@ shared_focus = JAPFOR_japansplaceintheworld
 		x = 15
 		y = 9
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
@@ -640,6 +736,9 @@ shared_focus = JAPFOR_japansplaceintheworld
 		x = 13
 		y = 9
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_WAR_SUPPORT
 		}
@@ -658,6 +757,9 @@ shared_focus = JAPFOR_japansplaceintheworld
 		x = 14
 		y = 10
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
@@ -711,6 +813,9 @@ shared_focus = JAPFOR_japansplaceintheworld
 		x = 0
 		y = 2
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
@@ -738,6 +843,9 @@ shared_focus = JAPFOR_japansplaceintheworld
 		x = 2
 		y = 2
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_STABILITY
 		}
@@ -756,6 +864,9 @@ shared_focus = JAPFOR_japansplaceintheworld
 		x = 4
 		y = 2
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_ANNEXATION
 		}
@@ -774,6 +885,9 @@ shared_focus = JAPFOR_japansplaceintheworld
 		x = 4
 		y = 3
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_WAR_SUPPORT
 		}
@@ -793,6 +907,9 @@ shared_focus = JAPFOR_japansplaceintheworld
 		x = 2
 		y = 3
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_MANPOWER
 		}
@@ -811,6 +928,9 @@ shared_focus = JAPFOR_japansplaceintheworld
 		x = 0
 		y = 3
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_STABILITY
 		}
@@ -831,6 +951,9 @@ shared_focus = JAPFOR_japansplaceintheworld
 		x = 0
 		y = 4
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
@@ -849,6 +972,9 @@ shared_focus = JAPFOR_japansplaceintheworld
 		x = 2
 		y = 4
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
@@ -867,6 +993,9 @@ shared_focus = JAPFOR_japansplaceintheworld
 		x = 4
 		y = 4
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
@@ -883,6 +1012,9 @@ shared_focus = JAPFOR_japansplaceintheworld
 		x = 3
 		y = 5
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_WAR_SUPPORT
 		}
@@ -959,6 +1091,9 @@ shared_focus = JAPFOR_japansplaceintheworld
 		x = 1
 		y = 5
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_WAR_SUPPORT
 		}
@@ -979,6 +1114,9 @@ shared_focus = JAPFOR_japansplaceintheworld
 		x = 3
 		y = 7
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
@@ -998,6 +1136,9 @@ shared_focus = JAPFOR_japansplaceintheworld
 		x = 1
 		y = 7
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_WAR_SUPPORT
 		}
@@ -1016,6 +1157,9 @@ shared_focus = JAPFOR_japansplaceintheworld
 		x = 2
 		y = 8
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
