@@ -8981,7 +8981,7 @@ if = {
     id = SER_black_hand
     icon = GFX_goal_SER_black_hand_takes_power
     cost = 3.00
-    x = 55
+    x = 75
     y = 0
     ai_will_do = {
       factor = 100
@@ -12724,12 +12724,7 @@ focus = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_socialist_coalition"
-			add_political_power = 150
-			add_stability = 0.05
-			add_popularity = {
-				ideology = social_democrat
-				popularity = 0.02
-			}
+			custom_effect_tooltip = tooltip_focus_unlocked_by_event
 		}
 	}
 
@@ -12846,12 +12841,7 @@ focus = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_radical_coalition"
-			add_political_power = 150
-			add_stability = 0.05
-			add_popularity = {
-				ideology = market_liberal
-				popularity = 0.02
-			}
+			custom_effect_tooltip = tooltip_focus_unlocked_by_event
 		}
 	}
 
@@ -16063,7 +16053,7 @@ relative_position_id = SER_protect_democracy
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_grace"
-			
+			custom_effect_tooltip = tooltip_focus_unlocked_by_event
 		}
 	}
   focus = {
