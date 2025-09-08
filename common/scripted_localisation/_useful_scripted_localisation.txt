@@ -7594,9 +7594,18 @@ text = {
 		}
 		localization_key = natpop_social_confucianism_subtype
 	}
-
-
-
+	text = {
+		trigger = {
+			has_country_leader_ideology = marlib_yugoslavism_subtype
+		}
+		localization_key = marlib_yugoslavism_subtype
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = autdem_yugoslavism_subtype
+		}
+		localization_key = autdem_yugoslavism_subtype
+	}
 
 	text = {
 		trigger = {

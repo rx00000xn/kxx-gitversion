@@ -71,6 +71,68 @@ country_event = {
   }
 }
 country_event = {
+  id = serbia.5
+  immediate = {
+    log = "[GetDateText]: [Root.GetName]: event serbia.3 FROM = [From.GetName]"
+  }
+  title = serbia.5.t
+  desc = serbia.5.d
+  is_triggered_only = yes
+  option = {
+    name = serbia.5.a
+   CRO = {
+    country_event = serbia.7
+   }
+  }
+}
+country_event = {
+  id = serbia.6
+  immediate = {
+    log = "[GetDateText]: [Root.GetName]: event serbia.3 FROM = [From.GetName]"
+  }
+  title = serbia.6.t
+  desc = serbia.6.d
+  is_triggered_only = yes
+  option = {
+    name = serbia.6.a
+   transfer_state = 1097
+   transfer_state = 105
+   transfer_state = 1270
+  }
+}
+country_event = {
+  id = serbia.7
+  immediate = {
+    log = "[GetDateText]: [Root.GetName]: event serbia.3 FROM = [From.GetName]"
+  }
+  title = serbia.7.t
+  desc = serbia.7.d
+  is_triggered_only = yes
+  option = {
+    name = serbia.7.a
+    ai_chance = {
+      base = 100
+    }
+   SER = {
+    country_event = {
+      id = serbia.6
+      days = 2
+    }
+   }
+    
+  }
+  option = {
+    name = serbia.7.b
+    ai_chance = {
+      base = 0
+    }
+   SER = {
+    create_wargoal = { target = CRO type = annex_everything }
+   }
+    
+  }
+}
+country_event = {
   id = serbia.9
   immediate = {
     log = "[GetDateText]: [Root.GetName]: event serbia.9 FROM = [From.GetName]"
@@ -195,7 +257,7 @@ country_event = {
       desc = "POLITICS_ALEXANDER_II_DESC"
       picture = "gfx/leaders/SER/Portrait_SER_Alexander_II.png"
       expire = "1.1.1"
-      ideology = authoritarian_democrat_subtype
+      ideology = authdem_national_conservative_subtype
     }
     hidden_effect = {
       create_country_leader = {
@@ -203,14 +265,14 @@ country_event = {
         desc = "POLITICS_ALEXANDER_II_DESC"
         picture = "gfx/leaders/SER/Portrait_SER_Alexander_II.png"
         expire = "1.1.1"
-        ideology = yugoslavism_subtype
+        ideology = absolute_monarchy_subtype
       }
       create_country_leader = {
         name = "亚历山大二世"  # Alexander II
         desc = "POLITICS_ALEXANDER_II_DESC"
         picture = "gfx/leaders/SER/Portrait_SER_Alexander_II.png"
         expire = "1.1.1"
-        ideology = natpop_yugoslavism_subtype
+        ideology = maurrassism_subtype
       }
     }
     add_popularity = {
@@ -538,8 +600,55 @@ country_event = {
   title = serbia.21.t
   desc = serbia.21.d
   is_triggered_only = yes
+  immediate = {
+    hidden_effect = {
+      set_party_name = {
+        ideology = social_liberal
+        name = SER_social_liberal_party
+        long_name = SER_social_liberal_party_long
+      }
+    }
+  }
   option = {
     name = serbia.21.a
+    ai_chance = {
+      factor = 50
+      modifier = {
+        factor = 0
+        has_game_rule = {
+          rule = SER_government_path
+          option = SER_GOVERNMENT_PATH_REPUBLIC_SOCCON
+        }
+      }
+    }
+    add_popularity = {
+      ideology = social_liberal
+      popularity = 0.15
+    }
+    complete_national_focus = SER_Moralistic_Democracy
+    hidden_effect = {
+      meta_effect = {
+        text = {
+          set_politics = {
+            ruling_party = social_liberal
+            last_election = "[CURRENT_DATE]"
+            election_frequency = 48
+            elections_allowed = yes
+          }
+        }
+        CURRENT_DATE = "[?global.date.GetDateStringNoHour]"
+      }
+      remove_all_ministers = yes
+      add_ideas = {
+        SER_Ljubomir_Davidovic_hog_mli
+        SER_Bozidar_Puric_for_sli
+        SER_Milutin_Milankovic_eco_sli
+        SER_Mihailo_Konstantinovic_sec_sli
+      }
+    }
+  }
+  option = {
+    name = serbia.21.c
     ai_chance = {
       factor = 50
       modifier = {
@@ -554,23 +663,8 @@ country_event = {
       ideology = market_liberal
       popularity = 0.15
     }
-    effect_tooltip = {
-      set_politics = {
-        ruling_party = market_liberal
-        election_frequency = 48
-        elections_allowed = yes
-      }
-    }
+    complete_national_focus = SER_radical_coalition
     hidden_effect = {
-      add_popularity = {
-        ideology = social_liberal
-        popularity = -0.1
-      }
-      set_party_name = {
-        ideology = social_liberal
-        name = SER_social_liberal_party
-        long_name = SER_social_liberal_party_long
-      }
       meta_effect = {
         text = {
           set_politics = {
@@ -607,23 +701,9 @@ country_event = {
       ideology = social_conservative
       popularity = 0.15
     }
-    effect_tooltip = {
-      set_politics = {
-        ruling_party = social_conservative
-        election_frequency = 48
-        elections_allowed = yes
-      }
-    }
+    complete_national_focus = SER_National_Vanguard
     hidden_effect = {
-      add_popularity = {
-        ideology = social_liberal
-        popularity = -0.1
-      }
-      set_party_name = {
-        ideology = social_liberal
-        name = SER_social_liberal_party
-        long_name = SER_social_liberal_party_long
-      }
+      
       remove_all_ministers = yes
       add_ideas = {
         SER_Nikola_Uzunovic_hog_sco
@@ -644,7 +724,46 @@ country_event = {
       }
     }
   }
-    option = {
+   option = {
+    name = serbia.21.e
+    ai_chance = {
+      factor = 50
+      modifier = {
+        factor = 0
+        has_game_rule = {
+          rule = SER_government_path
+          option = SER_GOVERNMENT_PATH_REPUBLIC_MARLIB
+        }
+      }
+    }
+    add_popularity = {
+      ideology = social_democrat
+      popularity = 0.15
+    }
+    complete_national_focus = SER_socialist_coalition
+    hidden_effect = {
+      
+      remove_all_ministers = yes
+      add_ideas = {
+        SER_Zivko_Topalovic_hog_sde
+        SER_Milos_Moskovljevic_for_sde
+        SER_Dragisa_Lapcevic_eco_sde
+        SER_Dragoljub_Jovanovic_sec_sde
+      }
+      meta_effect = {
+        text = {
+          set_politics = {
+            ruling_party = social_democrat
+            last_election = "[CURRENT_DATE]"
+            election_frequency = 48
+            elections_allowed = yes
+          }
+        }
+        CURRENT_DATE = "[?global.date.GetDateStringNoHour]"
+      }
+    }
+  }
+  option = {
     name = serbia.21.f
     ai_chance = {
       factor = 50
@@ -660,22 +779,13 @@ country_event = {
       ideology = radical_socialist
       popularity = 0.15
     }
-   
+   complete_national_focus = SER_Victory_for_the_People
     hidden_effect = {
-      add_popularity = {
-        ideology = social_liberal
-        popularity = -0.1
-      }
-      set_party_name = {
-        ideology = social_liberal
-        name = SER_social_liberal_party
-        long_name = SER_social_liberal_party_long
-      }
       remove_all_ministers = yes
       add_ideas = {
-        SER_Zivko_Topalovic_hog_sde
+        SER_Sima_Markovic_hog_syn
+        SER_Stanoje_Simic_for_rso
         SER_Jovan_Veselinov_eco_syn
-        SER_Dragisa_Lapcevic_eco_sde
         SER_Aleksandar_Rankovic_sec_syn
       }
       meta_effect = {
@@ -684,7 +794,6 @@ country_event = {
             ruling_party = radical_socialist
             elections_allowed = no
           }
-          set_country_leader_ideology = moderate_socialist_subtype
         }
         CURRENT_DATE = "[?global.date.GetDateStringNoHour]"
       }
@@ -1027,13 +1136,6 @@ country_event = {
   }
   title = serbia.30.t
   desc = serbia.30.d
-  trigger = {
-    has_country_leader = {
-      name = "亚历山大二世"  # Alexander II
-    }
-    owns_state = 106
-    has_idea = SER_macedonian_resistance
-  }
   is_triggered_only = yes
   option = {
     name = serbia.30.a
@@ -1044,31 +1146,31 @@ country_event = {
         name = "彼得二世"  # Peter II
         picture = "gfx/leaders/SER/Portrait_SER_Peter_II.png"
         expire = "1.1.1"
-        ideology = authoritarian_democrat_subtype
+        ideology = controlled_democracy_subtype
       }
       create_country_leader = {
         name = "彼得二世"  # Peter II
         picture = "gfx/leaders/SER/Portrait_SER_Peter_II.png"
         expire = "1.1.1"
-        ideology = social_conservative_subtype
+        ideology = soccon_agrarianism_subtype
       }
       create_country_leader = {
         name = "彼得二世"  # Peter II
         picture = "gfx/leaders/SER/Portrait_SER_Peter_II.png"
         expire = "1.1.1"
-        ideology = market_liberal_subtype
+        ideology = marlib_national_liberalism_subtype
       }
       create_country_leader = {
         name = "彼得二世"  # Peter II
         picture = "gfx/leaders/SER/Portrait_SER_Peter_II.png"
         expire = "1.1.1"
-        ideology = social_liberal_subtype
+        ideology = radical_liberalism_subtype
       }
       create_country_leader = {
         name = "彼得二世"  # Peter II
         picture = "gfx/leaders/SER/Portrait_SER_Peter_II.png"
         expire = "1.1.1"
-        ideology = social_democrat_subtype
+        ideology = socdem_radical_progressivism_subtype
       }
       country_event = {
         id = serbia.31
@@ -1079,8 +1181,14 @@ country_event = {
       name = "彼得二世"  # Peter II
       picture = "gfx/leaders/SER/Portrait_SER_Peter_II.png"
       expire = "1.1.1"
-      ideology = yugoslavism_subtype
+      ideology = absolute_monarchy_subtype
     }
+     create_country_leader = {
+        name = "彼得二世"  # Peter II
+        picture = "gfx/leaders/SER/Portrait_SER_Peter_II.png"
+        expire = "1.1.1"
+        ideology = maurrassism_subtype
+      }
   }
 }
 country_event = {
@@ -1095,8 +1203,106 @@ country_event = {
     name = serbia.31.a
     add_stability = 0.05
     add_political_power = 15
+    hidden_effect = {
+      country_event = {
+        id = serbia.32
+        days = 7
+      }
+    }
   }
 }
+country_event = {
+  id = serbia.32
+  immediate = {
+    log = "[GetDateText]: [Root.GetName]: event serbia.31 FROM = [From.GetName]"
+  }
+  title = serbia.32.t
+  desc = serbia.32.d
+  is_triggered_only = yes
+  option = {
+    name = serbia.32.a
+    hidden_effect = {
+      country_event = {
+        id = serbia.33
+        days = 2
+      }
+    }
+  }
+  option = {
+    name = serbia.32.b
+   
+  }
+}
+country_event = {
+  id = serbia.33
+  immediate = {
+    log = "[GetDateText]: [Root.GetName]: event serbia.31 FROM = [From.GetName]"
+  }
+  title = serbia.33.t
+  desc = serbia.33.d
+  is_triggered_only = yes
+  option = {
+    name = serbia.33.a
+   set_politics = {
+    ruling_party = authoritarian_democrat
+    elections_allowed = no
+   }
+   remove_all_ministers = yes
+   add_ideas = SER_Dusan_Simovic_hog_ade
+
+   complete_national_focus = SER_March_Conspiracy
+      country_event = {
+        id = serbia.34
+        days = 2
+      }
+    
+  }
+
+}
+country_event = {
+  id = serbia.34
+  immediate = {
+    log = "[GetDateText]: [Root.GetName]: event serbia.31 FROM = [From.GetName]"
+  }
+  title = serbia.34.t
+  desc = serbia.34.d
+  is_triggered_only = yes
+  option = {
+    name = serbia.34.a
+   set_politics = {
+    ruling_party = social_liberal
+    elections_allowed = no
+   }
+   
+   add_ideas = {
+        SER_Bozidar_Puric_for_sli
+        SER_Milutin_Milankovic_eco_sli
+        SER_Mihailo_Konstantinovic_sec_sli
+      }
+   
+   complete_national_focus = SER_democratic_party_petar
+     
+    
+  }
+option = {
+    name = serbia.34.b
+   set_politics = {
+    ruling_party = social_conservative
+    elections_allowed = no
+   }
+   
+   
+   add_ideas = {
+        SER_Momcilo_Nincic_for_sco
+        SER_Ninko_Peric_eco_sco
+        SER_Bozidar_Maksimovic_sec_sco
+      }
+   complete_national_focus = SER_radical_party_petar
+     
+    
+  }
+}
+
 country_event = {
   id = serbia.38
   immediate = {

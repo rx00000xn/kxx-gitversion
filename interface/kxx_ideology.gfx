@@ -1000,4 +1000,12 @@ spriteTypes = {
 		name = "GFX_ideology_player_subtype" 
 		texturefile = "gfx/interface/ideologies/subideologies/player.png"
 	}
+	spriteType = {
+		name = "GFX_ideology_marlib_yugoslavism_subtype" 
+		texturefile = "gfx/interface/ideologies/subideologies/marlib_yugoslavism_subtype.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_autdem_yugoslavism_subtype" 
+		texturefile = "gfx/interface/ideologies/subideologies/autdem_yugoslavism_subtype.png"
+	}
 }
