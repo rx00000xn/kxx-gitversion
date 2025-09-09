@@ -16073,7 +16073,9 @@ relative_position_id = SER_protect_democracy
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_grace"
-			
+			add_political_power = 100
+      add_stability = 0.1
+      increase_ruling_party_popularity_by_10 = yes
 		}
 	}
   focus = {
@@ -16093,7 +16095,9 @@ relative_position_id = SER_protect_democracy
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_grace"
-			
+			add_political_power = 100
+      add_stability = 0.1
+      increase_ruling_party_popularity_by_10 = yes
 		}
 	}
   focus = {
@@ -16113,7 +16117,9 @@ relative_position_id = SER_protect_democracy
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_grace"
-			
+			add_political_power = 100
+      add_stability = 0.1
+      increase_ruling_party_popularity_by_10 = yes
 		}
 	}
   focus = {
@@ -16133,7 +16139,9 @@ relative_position_id = SER_protect_democracy
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_grace"
-			
+			add_political_power = 100
+      add_stability = 0.1
+      increase_ruling_party_popularity_by_10 = yes
 		}
 	}
   focus = {
@@ -16151,7 +16159,12 @@ relative_position_id = SER_protect_democracy
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_grace"
-			
+			add_war_support = 0.1
+      add_equipment_to_stockpile = {
+			  type = infantry_equipment
+			  amount = 3000
+			  producer = FRA
+		  }
 		}
 	}
   focus = {
@@ -16169,7 +16182,7 @@ relative_position_id = SER_protect_democracy
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_grace"
-			
+			add_ideas = SER_liberate_proles
 		}
 	}
   focus = {
@@ -16187,7 +16200,10 @@ relative_position_id = SER_protect_democracy
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_grace"
-			
+			swap_ideas = {
+        remove_idea = SER_liberate_proles
+        add_idea = SER_union_of_worker_peasants
+      }
 		}
 	}
   focus = {
@@ -16205,7 +16221,7 @@ relative_position_id = SER_protect_democracy
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_grace"
-			
+			add_ideas = SER_socialist_chetniks
 		}
 	}
   focus = {
@@ -16223,7 +16239,10 @@ relative_position_id = SER_protect_democracy
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_grace"
-			
+			swap_ideas = {
+        remove_idea = SER_socialist_chetniks
+        add_idea = SER_socialist_chetniks2
+      }
 		}
 	}
   focus = {
@@ -16241,7 +16260,8 @@ relative_position_id = SER_protect_democracy
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_grace"
-			
+      add_one_random_civilian_factory = yes
+      add_one_random_military_factory = yes
 		}
 	}
   focus = {
@@ -16261,7 +16281,10 @@ relative_position_id = SER_protect_democracy
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_grace"
-			
+			swap_ideas = {
+        remove_idea = SER_socialist_chetniks2
+        add_idea = SER_socialist_chetniks3
+      }
 		}
 	}
   focus = {
@@ -16279,6 +16302,7 @@ relative_position_id = SER_protect_democracy
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_grace"
+		  add_ideas = SER_serbian_militarianism
 			
 		}
 	}
@@ -16297,7 +16321,8 @@ relative_position_id = SER_protect_democracy
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_grace"
-			
+			add_manpower = 100000
+      add_stability = -0.1
 		}
 	}
   focus = {
@@ -16315,7 +16340,10 @@ relative_position_id = SER_protect_democracy
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_grace"
-			
+			swap_ideas = {
+        remove_idea = SER_serbian_militarianism
+        add_idea = SER_war_gears
+      }
 		}
 	}
   focus = {
@@ -16333,7 +16361,11 @@ relative_position_id = SER_protect_democracy
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_grace"
-			
+			create_intelligence_agency = yes
+      upgrade_intelligence_agency = upgrade_anti_partisan
+      upgrade_intelligence_agency = upgrade_commando_training
+      upgrade_intelligence_agency = upgrade_form_department
+      add_war_support = 0.2
 		}
 	}
   focus = {
@@ -16351,7 +16383,7 @@ relative_position_id = SER_protect_democracy
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_grace"
-			
+			add_ideas = SER_revanchist_chetnik
 		}
 	}
   focus = {
@@ -16369,7 +16401,10 @@ relative_position_id = SER_protect_democracy
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_grace"
-			
+			swap_ideas = {
+        remove_idea = SER_revanchist_chetnik
+        add_idea = SER_revanchist_chetnik2
+      }
 		}
 	}
   focus = {
@@ -16389,7 +16424,10 @@ relative_position_id = SER_protect_democracy
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_grace"
-			
+			swap_ideas = {
+        remove_idea = SER_revanchist_chetnik2
+        add_idea = SER_revanchist_chetnik3
+      }
 		}
 	}
   focus = {
@@ -16407,7 +16445,8 @@ relative_position_id = SER_protect_democracy
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_grace"
-			
+			add_ideas = SER_worship_violence
+      
 		}
 	}
 
@@ -16426,7 +16465,13 @@ relative_position_id = SER_protect_democracy
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_grace"
-			
+			add_manpower = 10000
+      add_equipment_to_stockpile = {
+			  type = infantry_equipment
+			  amount = 5000
+			  producer = FRA
+		  }
+      add_war_support = 0.05
 		}
 	}
   focus = {
@@ -16437,16 +16482,17 @@ relative_position_id = SER_protect_democracy
 		y = 3
     relative_position_id = SER_power_of_orjuna
     prerequisite = {
-      focus = SER_worship_violence
+      focus = SER_all_yugoslav_legion
     }
-    available = {
-      always = no
-    }
+   
 		ai_will_do = { factor = 10 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_grace"
-			
+			swap_ideas = {
+        remove_idea = SER_worship_violence
+        add_idea = SER_heroic_race
+      }
 		}
 	}
   focus = {
@@ -16464,7 +16510,11 @@ relative_position_id = SER_protect_democracy
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_grace"
-			
+			add_one_random_civilian_factory = yes
+      add_one_random_military_factory = yes
+      add_one_random_civilian_factory = yes
+      add_one_random_military_factory = yes
+      add_stability = -0.05
 		}
 	}
    focus = {
@@ -16482,7 +16532,7 @@ relative_position_id = SER_protect_democracy
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_grace"
-			
+			add_ideas = SER_nationalist_chetnik
 		}
 	}
   focus = {
@@ -16500,7 +16550,10 @@ relative_position_id = SER_protect_democracy
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_grace"
-			
+			swap_ideas = {
+        remove_idea = SER_nationalist_chetnik
+        add_idea = SER_nationalist_chetnik2
+      }
 		}
 	}
   focus = {
@@ -16521,7 +16574,10 @@ relative_position_id = SER_protect_democracy
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_grace"
-			
+			swap_ideas = {
+        remove_idea = SER_nationalist_chetnik2
+        add_idea = SER_nationalist_chetnik3
+      }
 		}
 	}
   focus = {
@@ -16539,7 +16595,7 @@ relative_position_id = SER_protect_democracy
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_grace"
-			
+			add_ideas = SER_maintain_democratic_beliefs
 		}
 	}
   focus = {
@@ -16557,7 +16613,10 @@ relative_position_id = SER_protect_democracy
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_grace"
-			
+			swap_ideas = {
+        remove_idea = SER_maintain_democratic_beliefs
+        add_idea = SER_national_party_union
+      }
 		}
 	}
   focus = {
@@ -16575,7 +16634,7 @@ relative_position_id = SER_protect_democracy
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_grace"
-			
+			add_ideas = SER_liberal_chetnik
 		}
 	}
   focus = {
@@ -16593,7 +16652,9 @@ relative_position_id = SER_protect_democracy
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_grace"
-			
+			add_one_random_military_factory = yes
+      add_one_random_military_factory = yes
+      add_one_random_military_factory = yes
 		}
 	}
   focus = {
@@ -16611,7 +16672,10 @@ relative_position_id = SER_protect_democracy
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_grace"
-			
+			swap_ideas = {
+        remove_idea = SER_liberal_chetnik
+        add_idea = SER_liberal_chetnik2
+      }
 		}
 	}
   focus = {
@@ -16629,7 +16693,14 @@ relative_position_id = SER_protect_democracy
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_grace"
-			
+			add_one_random_civilian_factory = yes
+      add_one_random_civilian_factory = yes
+      add_tech_bonus = {
+        name = SER_Continue_The_Mechanisation_Efforts
+        bonus = 2
+        uses = 2
+        category = industry
+      }
 		}
 	}
   focus = {
@@ -16649,7 +16720,10 @@ relative_position_id = SER_protect_democracy
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_grace"
-			
+			swap_ideas = {
+        remove_idea = SER_liberal_chetnik2
+        add_idea = SER_liberal_chetnik3
+      }
 		}
 	}
   focus = {
@@ -16670,7 +16744,7 @@ relative_position_id = SER_protect_democracy
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_grace"
-			
+			add_ideas = SER_arm_chetas
 		}
 	}
   focus = {
@@ -16688,7 +16762,9 @@ relative_position_id = SER_protect_democracy
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_grace"
-			
+			add_manpower = 50000
+      add_command_power = 50
+      army_experience = 50
 		}
 	}
   focus = {
@@ -16706,7 +16782,7 @@ relative_position_id = SER_protect_democracy
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_grace"
-			
+			add_ideas = SER_prepare_liberation
 		}
 	}
   focus = {
@@ -16726,7 +16802,7 @@ relative_position_id = SER_protect_democracy
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_grace"
-			
+			add_ideas = SER_secret_rearmament
 		}
 	}
   focus = {
@@ -16743,7 +16819,8 @@ relative_position_id = SER_protect_democracy
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_grace"
-			
+			remove_ideas = SER_reparation_payments
+      add_war_support = 0.2
 		}
 	}
   focus = {
@@ -16760,7 +16837,11 @@ relative_position_id = SER_protect_democracy
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_grace"
-			
+			swap_ideas = {
+        remove_idea = SER_secret_rearmament
+        add_idea = SER_open_rearmament 
+      }
+      create_wargoal = { target = BUL type = annex_everything }
 		}
 	}
   focus = {
@@ -16780,7 +16861,7 @@ relative_position_id = SER_protect_democracy
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_grace"
-			
+			add_ideas = SER_homoengenous_nation
 		}
 	}
   focus = {
@@ -16797,7 +16878,8 @@ relative_position_id = SER_protect_democracy
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_grace"
-			
+			add_manpower = -1000
+      add_stability = 0.2
 		}
 	}
   focus = {
@@ -16814,7 +16896,10 @@ relative_position_id = SER_protect_democracy
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_grace"
-			
+			add_manpower = -1000
+      add_political_power = 100
+      increase_ruling_party_popularity_by_20 = yes
+      add_war_support = 0.1
 		}
 	}
 }

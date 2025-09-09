@@ -2262,6 +2262,288 @@ country_event = {
   }
 }
 country_event = {
+  id = serbia.69
+  title = serbia.69.t
+  desc = serbia.69.d
+  is_triggered_only = yes
+  immediate = {
+    log = "[GetDateText]: [Root.GetName]: event serbia.68"
+    hidden_effect = {
+       create_country_leader = {
+        name = "德拉查·米哈伊洛维奇" 
+        picture = "gfx/leaders/SER/Portrait_SER_Draza_Mihailovic.png"
+        expire = "1.1.1"
+        ideology = authdem_junta_subtype
+      }
+      set_politics = {
+        ruling_party = authoritarian_democrat
+        elections_allowed = no
+      }
+      complete_national_focus = SER_chetnik_coup
+      set_country_flag = KXX_LEADER_GUI_VISIBLE
+      set_party_name = {
+				ideology = totalist
+				long_name = "切特尼克救国军政府"
+				name = "切特尼克救国军政府"
+			}
+      set_party_name = {
+				ideology = syndicalist
+				long_name = "切特尼克救国军政府"
+				name = "切特尼克救国军政府"
+			}
+      set_party_name = {
+				ideology = radical_socialist
+				long_name = "切特尼克救国军政府"
+				name = "切特尼克救国军政府"
+			}
+      set_party_name = {
+				ideology = social_democrat
+				long_name = "切特尼克救国军政府"
+				name = "切特尼克救国军政府"
+			}
+      set_party_name = {
+				ideology = social_liberal
+				long_name = "切特尼克救国军政府"
+				name = "切特尼克救国军政府"
+			}
+      set_party_name = {
+				ideology = market_liberal
+				long_name = "切特尼克救国军政府"
+				name = "切特尼克救国军政府"
+			}
+      set_party_name = {
+				ideology = social_conservative
+				long_name = "切特尼克救国军政府"
+				name = "切特尼克救国军政府"
+			}
+			set_party_name = {
+				ideology = authoritarian_democrat
+				long_name = "切特尼克救国军政府"
+				name = "切特尼克救国军政府"
+			}
+      set_party_name = {
+				ideology = paternal_autocrat
+				long_name = "切特尼克救国军政府"
+				name = "切特尼克救国军政府"
+			}
+      set_party_name = {
+				ideology = national_populist
+				long_name = "切特尼克救国军政府"
+				name = "切特尼克救国军政府"
+			}
+    }
+  }
+  option = {
+    name = serbia.69.a
+     create_country_leader = {
+        name = "弗拉达·泽切维奇" 
+        picture = "gfx/leaders/SER/Portrait_SER_Vlada_Zecevic.png"
+        expire = "1.1.1"
+        ideology = red_junta_subtype
+      }
+      set_politics = {
+        ruling_party = totalist
+        elections_allowed = no
+      }
+      country_event = serbia.70
+      complete_national_focus = SER_unexpected_alliance
+  }
+  option = {
+    name = serbia.69.b
+     create_country_leader = {
+			  name = "德拉戈米尔·瓦西奇"
+		    picture = "gfx/leaders/SER/SER_dragomir_vasic.png"
+			  expire = "1965.1.1"
+			  ideology = soclib_popular_patriotism_subtype
+	    }
+      set_politics = {
+        ruling_party = social_liberal
+        elections_allowed = no
+      }
+      country_event = serbia.71
+      complete_national_focus = SER_ally_skk
+  }
+  option = {
+    name = serbia.69.c
+     create_country_leader = {
+			  name = "尼科·巴尔图洛维奇"
+		    picture = "gfx/leaders/SER/Portrait_SER_Niko_Bartulovic.png"
+			  expire = "1965.1.1"
+			  ideology = marlib_yugoslavism_subtype
+	    }
+       set_politics = {
+        ruling_party = market_liberal
+        elections_allowed = no
+      }
+      country_event = serbia.72
+      complete_national_focus = SER_power_of_orjuna
+  }
+  option = {
+    name = serbia.69.e
+     create_country_leader = {
+      name = "德拉古廷·克雷索维奇"  # Dragutin Keresovic
+      picture = "gfx/leaders/SER/Portrait_SER_Dragutin_Keserovic.png"
+      expire = "1.1.1"
+      ideology = militarism_subtype
+      traits = {}
+    }
+       set_politics = {
+        ruling_party = national_populist
+        elections_allowed = no
+      }
+      country_event = serbia.73
+      complete_national_focus = SER_deal_with_devil
+  }
+}
+country_event = {
+  id = serbia.70
+  immediate = {
+    log = "[GetDateText]: [Root.GetName]: event dhserbia.16"
+  }
+  title = serbia.70.t
+  desc = serbia.70.d
+  is_triggered_only = yes
+  fire_only_once = yes
+  option = {
+    name = serbia.70.a
+     create_country_leader = {
+        name = "弗拉达·泽切维奇" 
+        picture = "gfx/leaders/SER/Portrait_SER_Vlada_Zecevic.png"
+        expire = "1.1.1"
+        ideology = natdem_syndicalism_subtype
+      }
+      set_politics = {
+        ruling_party = syndicalist
+        elections_allowed = no
+      }
+      add_tot_to_coalition = yes
+      add_radsoc_to_coalition = yes
+  }
+  option = {
+    name = serbia.70.b
+     create_country_leader = {
+        name = "弗拉达·泽切维奇" 
+        picture = "gfx/leaders/SER/Portrait_SER_Vlada_Zecevic.png"
+        expire = "1.1.1"
+        ideology = radsoc_national_communism_subtype
+      }
+      set_politics = {
+        ruling_party = radical_socialist
+        elections_allowed = no
+      }
+      add_synd_to_coalition = yes
+      add_tot_to_coalition = yes
+  }
+  option = {
+    name = serbia.70.c
+    add_synd_to_coalition = yes
+    add_radsoc_to_coalition = yes
+  }
+}
+country_event = {
+  id = serbia.71
+  immediate = {
+    log = "[GetDateText]: [Root.GetName]: event dhserbia.16"
+  }
+  title = serbia.71.t
+  desc = serbia.71.d
+  is_triggered_only = yes
+  fire_only_once = yes
+  option = {
+    name = serbia.71.a
+     create_country_leader = {
+	    name = "日夫科·托帕洛维奇"
+	    picture = "gfx/leaders/SER/Portrait_SER_Zivko_Topalovic.png"
+	    expire = "1.1.1"
+	    ideology = popular_patriotism_subtype
+    }
+      set_politics = {
+        ruling_party = social_democrat
+        elections_allowed = no
+      }
+      add_soclib_to_coalition = yes
+      add_soccon_to_coalition = yes
+  }
+  option = {
+    name = serbia.71.b
+      create_country_leader = {
+			    name = "米兰·斯托亚迪诺维奇"
+		    	picture = "gfx/leaders/SER/Portrait_SER_Milan_Stojadinovic.png"
+			    expire = "1965.1.1"
+			    ideology = soccon_popular_patriotism_subtype
+	    	}
+      set_politics = {
+        ruling_party = social_conservative
+        elections_allowed = no
+      }
+      add_socdem_to_coalition = yes
+      add_soclib_to_coalition = yes
+  }
+  option = {
+    name = serbia.71.c
+    add_socdem_to_coalition = yes
+    add_soccon_to_coalition = yes
+  }
+}
+country_event = {
+  id = serbia.72
+  immediate = {
+    log = "[GetDateText]: [Root.GetName]: event dhserbia.16"
+  }
+  title = serbia.72.t
+  desc = serbia.72.d
+  is_triggered_only = yes
+  fire_only_once = yes
+  option = {
+    name = serbia.72.a
+     create_country_leader = {
+			  name = "尼科·巴尔图洛维奇"
+		    picture = "gfx/leaders/SER/Portrait_SER_Niko_Bartulovic.png"
+			  expire = "1965.1.1"
+			  ideology = autdem_yugoslavism_subtype
+	    }
+      set_politics = {
+        ruling_party = authoritarian_democrat
+        elections_allowed = no
+      }
+      add_marlib_to_coalition = yes
+  }
+  option = {
+    name = serbia.72.b
+    add_authdem_to_coalition = yes
+  }
+}
+country_event = {
+  id = serbia.73
+  immediate = {
+    log = "[GetDateText]: [Root.GetName]: event dhserbia.16"
+  }
+  title = serbia.73.t
+  desc = serbia.73.d
+  is_triggered_only = yes
+  fire_only_once = yes
+  option = {
+    name = serbia.73.a
+    create_country_leader = {
+      name = "德拉古廷·克雷索维奇"  # Dragutin Keresovic
+      picture = "gfx/leaders/SER/Portrait_SER_Dragutin_Keserovic.png"
+      expire = "1.1.1"
+      ideology = junta_subtype
+      traits = {}
+    }
+      set_politics = {
+        ruling_party = paternal_autocrat
+        elections_allowed = no
+      }
+      add_natpop_to_coalition = yes
+  }
+  
+  option = {
+    name = serbia.73.b
+    add_pataut_to_coalition = yes
+  }
+}
+country_event = {
   id = dhserbia.1
   immediate = {
     log = "[GetDateText]: [Root.GetName]: event dhserbia.1"

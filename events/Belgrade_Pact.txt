@@ -1812,6 +1812,12 @@ country_event = {
 			days = 1460
 		}
 		# event for chetnik coup insert here
+		hidden_effect = {
+			country_event = {
+				id = serbia.69
+				days = 10
+			}
+		}
 	}
 }
 

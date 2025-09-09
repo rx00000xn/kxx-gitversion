@@ -6,7 +6,366 @@ ideas = {
 ##############
 	country = {
 		### New ideas ###
+		SER_revanchist_chetnik3 = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = army_cooperation
+			allowed = { always = no }
+			name = "复仇主义政策"
+            modifier = {	
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				army_attack_speed_factor = 0.1
+				org_loss_at_low_org_factor = -0.1
+				army_org_factor = 0.15
+				army_morale_factor = 0.15
+				army_strength_factor = 0.1
+				equipment_capture_factor = 0.15
+				paternal_autocrat_drift = 0.05
+				national_populist_drift = 0.05
+			}
+			
+		}
+		SER_revanchist_chetnik2 = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = army_cooperation
+			allowed = { always = no }
+			name = "复仇主义政策"
+            modifier = {	
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				army_attack_speed_factor = 0.1
+				org_loss_at_low_org_factor = -0.1
+				army_org_factor = 0.15
+				army_morale_factor = 0.15
+
+			}
+			
+		}
+		SER_revanchist_chetnik = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = army_cooperation
+			allowed = { always = no }
+			name = "复仇主义政策"
+            modifier = {	
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				army_attack_speed_factor = 0.1
+			}
+			
+		}
+		SER_war_gears = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = GER_quenched_militarism
+			allowed = { always = no }
+            modifier = {	
+				political_power_cost = -0.2
+				war_support_factor = 0.1
+				party_popularity_stability_factor = 0.25
+				war_stability_factor = 0.25
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+
+			}
+			
+		}
+		SER_serbian_militarianism = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = GER_quenched_militarism
+			allowed = { always = no }
+            modifier = {	
+				political_power_cost = -0.2
+				war_support_factor = 0.1
+				party_popularity_stability_factor = 0.25
+				war_stability_factor = 0.25
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+
+			}
+			
+		}
 		
+		SER_homoengenous_nation = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = camps
+			allowed = { always = no }
+            modifier = {	
+				resistance_target = -0.15
+				required_garrison_factor = -0.1
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+
+			}
+			
+		}
+		SER_nationalist_chetnik3 = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = preparing_for_armageddon
+			name = "民族主义政策"
+			allowed = { always = no }
+            modifier = {	
+				conscription = 0.01
+				conscription_factor = 0.1
+				experience_loss_factor = -0.15
+				planning_speed = 0.25
+				max_planning = 0.25
+				army_speed_factor = 0.1
+				supply_consumption_factor = -0.1
+				supply_node_rage = 0.15
+				market_liberal_drift = 0.05
+				authoritarian_democrat_drift = 0.05
+			}
+			
+		}
+		SER_nationalist_chetnik2 = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = preparing_for_armageddon
+			name = "民族主义政策"
+			allowed = { always = no }
+            modifier = {	
+				conscription = 0.01
+				conscription_factor = 0.1
+				experience_loss_factor = -0.15
+				planning_speed = 0.25
+				max_planning = 0.25
+				army_speed_factor = 0.1
+			}
+			
+		}
+		SER_nationalist_chetnik = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = preparing_for_armageddon
+			name = "民族主义政策"
+			allowed = { always = no }
+            modifier = {	
+				conscription = 0.01
+				conscription_factor = 0.1
+				experience_loss_factor = -0.15
+			}
+			
+		}
+		SER_heroic_race = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = FRA_violence
+			allowed = { always = no }
+            modifier = {	
+				political_power_cost = -0.2
+				stability_factor = 0.1
+				party_popularity_stability_factor = 0.25
+				war_stability_factor = 0.25
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				breakthrough_factor = 0.1
+				org_loss_when_moving = -0.1
+			}
+			
+		}
+		SER_worship_violence = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = FRA_violence
+			allowed = { always = no }
+            modifier = {	
+				political_power_cost = -0.2
+				stability_factor = 0.1
+				party_popularity_stability_factor = 0.25
+				war_stability_factor = 0.25
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+			}
+			
+		}
+		SER_liberal_chetnik3 = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = KSV_merc_democracy_idea
+			allowed = { always = no }
+			name = "自由主义政策"
+            modifier = {	
+				command_power_gain_mult = 0.25
+				max_command_power_mult = 0.25
+				attrition = -0.15
+				army_org_factor = 0.1
+				army_morale_factor = 0.1
+				production_speed_arms_factory_factor = 0.25
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				social_democrat_drift = 0.05
+				social_liberal_drift = 0.05
+				social_conservative_drift = 0.05
+			}
+			
+		}
+		SER_liberal_chetnik2 = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = KSV_merc_democracy_idea
+			allowed = { always = no }
+			name = "自由主义政策"
+            modifier = {	
+				command_power_gain_mult = 0.25
+				max_command_power_mult = 0.25
+				attrition = -0.15
+				army_org_factor = 0.1
+				army_morale_factor = 0.1
+				production_speed_arms_factory_factor = 0.25
+			}
+			
+		}
+		SER_liberal_chetnik = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = KSV_merc_democracy_idea
+			allowed = { always = no }
+			name = "自由主义政策"
+            modifier = {	
+				command_power_gain_mult = 0.25
+				max_command_power_mult = 0.25
+				attrition = -0.15
+			}
+			
+		}
+		SER_national_party_union = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = CSA_preserved_democratic_tradition
+			allowed = { always = no }
+            modifier = {	
+				political_power_cost = -0.2
+				stability_factor = 0.1
+				party_popularity_stability_factor = 0.25
+				war_support_factor = 0.1
+				research_speed_factor = 0.1
+				local_resources_factor = 0.1
+				stability_weekly = 0.01
+				war_support_weekly = 0.01
+			}
+			
+		}
+		SER_maintain_democratic_beliefs = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = CSA_preserved_democratic_tradition
+			allowed = { always = no }
+            modifier = {	
+				political_power_cost = -0.2
+				stability_factor = 0.1
+				party_popularity_stability_factor = 0.25
+				war_support_factor = 0.1
+				research_speed_factor = 0.1
+				local_resources_factor = 0.1
+
+			}
+			
+		}
+		SER_prepare_liberation = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = SER_Unity_death
+			allowed = { always = no }
+            modifier = {	
+				army_infantry_attack_factor = 0.15
+				army_infantry_defence_factor = 0.15
+			}
+			targeted_modifier = {
+				tag = CRO
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
+				breakthrough_bonus_against = 0.15
+			}
+			targeted_modifier = {
+				tag = BUL
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
+				breakthrough_bonus_against = 0.15
+			}
+		}
+		SER_arm_chetas = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = CAN_militarism_idea
+			allowed = { always = no }
+            modifier = {	
+				non_core_manpower = 0.25
+				conscription = 0.02
+				conscription_factor = 0.2
+				weekly_manpower = 500
+			}
+
+		}
+		SER_socialist_chetniks3 = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = generic_syndicalist_worker
+			allowed = { always = no }
+			name = "社会主义政策"
+            modifier = {	
+				production_factory_start_efficiency_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				consumer_goods_expected_value = -0.15
+				production_speed_arms_factory_factor = 0.15
+				production_speed_industrial_complex_factor = 0.15
+				army_org_factor = 0.1
+				army_morale_factor = 0.1
+				totalist_drift = 0.05
+				syndicalist_drift = 0.05
+				radical_socialist_drift = 0.05
+			}
+
+		}
+		SER_socialist_chetniks2 = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = generic_syndicalist_worker
+			allowed = { always = no }
+			name = "社会主义政策"
+            modifier = {	
+				production_factory_start_efficiency_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				consumer_goods_expected_value = -0.15
+				production_speed_arms_factory_factor = 0.15
+				production_speed_industrial_complex_factor = 0.15
+
+			}
+
+		}
+		SER_socialist_chetniks = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = generic_syndicalist_worker
+			allowed = { always = no }
+			name = "社会主义政策"
+            modifier = {	
+				production_factory_start_efficiency_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+			}
+
+		}
+		SER_union_of_worker_peasants = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = SOV_workers
+			allowed = { always = no }
+            modifier = {	
+				political_power_factor = 0.15
+				stability_factor = 0.1
+				war_stability_factor = 0.25
+				war_support_factor = 0.1
+				industrial_capacity_factory = 0.1
+				production_speed_buildings_factor = 0.1
+				supply_consumption_factor = -0.15
+				global_building_slots_factor = 0.12
+				line_change_production_efficiency_factor = 0.1
+				consumer_goods_factor = -0.1
+			}
+
+		}
+		SER_liberate_proles = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = SOV_workers
+			allowed = { always = no }
+            modifier = {	
+				political_power_factor = 0.15
+				stability_factor = 0.1
+				war_stability_factor = 0.25
+				war_support_factor = 0.1
+				industrial_capacity_factory = 0.1
+				production_speed_buildings_factor = 0.1
+
+			}
+		}
 		SER_social_nationalism = { 
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
 			picture = ALB_nationalization
@@ -321,10 +680,11 @@ ideas = {
 				is_subject = no
 			}
 			modifier = {
-				unit_limit_bonus = 5
+				consumer_goods_factor = -0.15
+				consumer_goods_expected_value = -0.15
 			}
 			research_bonus = {
-				infantry_weapons = 0.05
+				infantry_weapons = 0.1
 			}
 			equipment_bonus = {
 				infantry_equipment = {
