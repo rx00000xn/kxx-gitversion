@@ -1470,7 +1470,37 @@ ideas = {
 				production_factory_efficiency_gain_factor = 0.05
 			}
 		}
+		SER_royal_constitution2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_royal_constitution" }
+			picture = generic_constitutional_guarantees
+			allowed = { always = no }
+			name = SER_royal_constitution
+			modifier = {
+				political_power_factor = 0.1
+				stability_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.1
+				industrial_capacity_factory = 0.1
+				local_resources_factor = 0.1
 
+			}
+		}
+		SER_royal_constitution3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_royal_constitution" }
+			picture = generic_constitutional_guarantees
+			allowed = { always = no }
+			name = SER_royal_constitution
+			modifier = {
+				political_power_factor = 0.1
+				stability_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.1
+				industrial_capacity_factory = 0.1
+				local_resources_factor = 0.1
+				army_org_factor = 0.1
+				production_factory_max_efficiency_factor = 0.15
+				social_liberal_drift = 0.05
+				social_conservative_drift = 0.05
+			}
+		}
 		### VMRO Ideas
 
 		IMRO_idea = {
