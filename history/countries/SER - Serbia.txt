@@ -139,14 +139,14 @@ create_country_leader = {
 	name = "Petar Živković"
 	picture = "gfx/leaders/SER/Portrait_SER_Petar_Zivkovic.png"
 	expire = "1.1.1"
-	ideology = yugoslavism_subtype
+	ideology = junta_subtype
 }
 
 create_country_leader = {
 	name = "Dragustin Keresovic"
 	picture = "gfx/leaders/SER/Portrait_SER_Dragutin_Keserovic.png"
 	expire = "1.1.1"
-	ideology = natpop_yugoslavism_subtype
+	ideology = militarism_subtype
 }
 
 ### Army Leaders

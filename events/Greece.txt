@@ -9560,7 +9560,7 @@ country_event = {
 			popularity = 0.1
 		}
 		set_cosmetic_tag = GRE_revisionist_socialism
-		complete_national_focus = GRE_the_eclipse
+		complete_national_focus = GRE_orphism_revival
 		remove_ideas = GRE_golden_dawn
 		remove_all_ministers = yes
 		add_ideas = {

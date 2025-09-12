@@ -1599,7 +1599,7 @@ country_event = { #Post-war government shift
 				ideology = authoritarian_liberalism_subtype
 			}
 
-			country_event = { id = bulgaria.125 days = 90 random_days = 30 }
+			country_event = { id = bulgaria.125 days = 30  }
 		}
 
 		add_popularity = {
@@ -1705,7 +1705,7 @@ country_event = { #Post-war government shift
 				ideology = authoritarian_liberalism_subtype
 			}
 
-			country_event = { id = bulgaria.125 days = 90 random_days = 30 }
+			country_event = { id = bulgaria.125 days = 30 }
 		}
 
 		add_popularity = {

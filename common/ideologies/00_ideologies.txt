@@ -983,6 +983,7 @@ ideologies = {
 			marlib_zionism = {can_be_randomly_selected = no} #自由锡安主义
 			marlib_Grand_Thai_nationalism_subtype = {can_be_randomly_selected = no} #泛泰主义
 			marlib_national_mysticism_subtype = { can_be_randomly_selected = no } #民族神秘主义（云的补充）
+			marlib_yugoslavism_subtype = {can_be_randomly_selected = no} #南斯拉夫主义
 
 			#点
 			marlib_lianshengism_subtype = {can_be_randomly_selected = no} #联省主义
@@ -1265,6 +1266,8 @@ ideologies = {
 			transitional_government_subtype = { can_be_randomly_selected = no } #过渡内阁
 			controlled_democracy_subtype = { can_be_randomly_selected = no } #指导式民主
 			autdem_revolutionary_nationalism_subtype = {can_be_randomly_selected = no} #革命民族主义
+			autdem_yugoslavism_subtype = {can_be_randomly_selected = no} #南斯拉夫主义
+			
 			
 			#点
 			new_legalism_subtype = {can_be_randomly_selected = no} #新法家
