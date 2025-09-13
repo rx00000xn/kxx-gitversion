@@ -2758,6 +2758,91 @@ country_event = {
       }
     }
   }
+  option = {
+    name = dhserbia.2.c
+    ai_chance = {
+      factor = 50
+    }
+    create_country_leader = {
+      name = "瓦索·丘布里洛维奇"  # 
+      picture = "gfx/leaders/SER/Portrait_SER_Vaso_Cubrilovic.png"
+      expire = "1.1.1"
+      ideology = national_bolshevik_subtype
+      traits = {}
+    }
+    set_politics = {
+      ruling_party = totalist
+      elections_allowed = no
+    }
+    set_party_name = {
+      ideology = totalist
+      name = SER_national_populist_party
+      long_name = SER_national_populist_party_long
+    }
+    hidden_effect = {
+      set_country_flag = SER_tot_leader
+      add_ideas = {
+        SER_Sima_Markovic_hog_syn
+        SER_Stanoje_Simic_for_rso
+        SER_Jovan_Veselinov_eco_syn
+        SER_Aleksandar_Rankovic_sec_syn
+      }
+    }
+  }
+  option = {
+    name = dhserbia.2.e
+    ai_chance = {
+      factor = 50
+    }
+    create_country_leader = {
+      name = "尼古拉·维利米罗维奇" 
+      picture = "gfx/leaders/SER/Portrait_SER_Nikolaj_Velimirovic.png"
+      expire = "1.1.1"
+      ideology = fundementalism_subtype
+      traits = {}
+    }
+    
+    hidden_effect = {
+      set_country_flag = SER_clerical_leader
+      add_ideas = {
+        SER_Dimitrije_Ljotic_hog_npo
+        SER_Velibor_Jonic_for_npo
+        SER_Mihailo_Olcan_eco_npo
+        SER_Dimitrije_Ljotic_sec_npo
+      }
+    }
+  }
+  option = {
+    name = dhserbia.2.f
+    ai_chance = {
+      factor = 50
+    }
+    create_country_leader = {
+      name = "莫姆西洛·杜伊奇"  # 
+      picture = "gfx/leaders/SER/Portrait_SER_Momocilo_Dujic.png"
+      expire = "1.1.1"
+      ideology = christian_syndicalism_subtype
+      traits = {}
+    }
+     set_politics = {
+      ruling_party = syndicalist
+      elections_allowed = no
+    }
+    set_party_name = {
+      ideology = syndicalist
+      name = SER_national_populist_party
+      long_name = SER_national_populist_party_long
+    }
+    hidden_effect = {
+      set_country_flag = SER_syndie_leader
+      add_ideas = {
+        SER_Dimitrije_Ljotic_hog_npo
+        SER_Stanoje_Simic_for_rso
+        SER_Jovan_Veselinov_eco_syn
+        SER_Dimitrije_Ljotic_sec_npo
+      }
+    }
+  }
 }
 country_event = {
   id = dhserbia.3
@@ -4306,9 +4391,24 @@ country_event = {
     is_triggered_only = yes
     option = {
       name = serbia.103.a
+      create_country_leader = {
+			    name = "米兰·斯托亚迪诺维奇"
+		    	picture = "gfx/leaders/SER/Portrait_SER_Milan_Stojadinovic.png"
+			    expire = "1965.1.1"
+			    ideology = authdem_agrarianism_subtype
+	    	}
+        complete_national_focus = SER_National_Vanguard
     }
     option = {
       name = serbia.103.b
+      create_country_leader = {
+		 		name = "弗拉迪米尔·德沃尼科维奇"
+				picture = "gfx/leaders/YUG/Portrait_YUG_Vladimir_Dvornikovic.png"
+				expire = "1965.1.1"
+				ideology = autdem_right_technocracy_subtype
+				
+			}
+      complete_national_focus = YUG_hey_slavs
      hidden_effect = {
       country_event = {
         id = yugoslavia.5
