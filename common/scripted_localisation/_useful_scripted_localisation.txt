@@ -8675,6 +8675,12 @@ text = {
 	}
 	text = {
 		trigger = {
+			has_country_leader_ideology = capooism_subtype
+		}
+		localization_key = capooism_subtype
+	}	
+	text = {
+		trigger = {
 			has_country_leader_ideology = generic_sssp_subtype
 		}
 		localization_key = generic_sssp_subtype  
