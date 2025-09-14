@@ -1341,10 +1341,10 @@ focus_tree = {
 			focus = SER_One_Vojvoda_One_Nation_One_State
       focus = SER_A_Nascent_Balkan_Democracy
 		}
-		bypass = {
-			has_country_flag = SER_has_completed_1936_elc
+		
+    available = {
+			always = no
 		}
-
 		ai_will_do = { factor = 10 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
@@ -3434,11 +3434,9 @@ focus_tree = {
 			focus = SER_A_Nascent_Balkan_Democracy
 		}
 		available = {
-			
+			always = no
 		}
-		bypass = {
-			has_country_flag = SER_has_completed_1936_elc
-		}
+		
 		ai_will_do = { factor = 10 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
@@ -4550,6 +4548,9 @@ focus_tree = {
     }
     available = {
       is_subject = no
+      NOT = {
+        has_completed_focus = SER_power_of_orjuna
+      }
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus SER_greater_serbia"
@@ -4581,6 +4582,9 @@ focus_tree = {
     }
     available = {
       is_subject = no
+      NOT = {
+        has_completed_focus = SER_black_hand
+      }
     }
     ai_will_do = {
       factor = 100
@@ -4607,6 +4611,7 @@ focus_tree = {
         }
         add_claim_by = ROOT
       }
+      add_ideas = SER_the_dream_of_yugoslavia
     }
     search_filters = {
       FOCUS_FILTER_POLITICAL
@@ -8138,9 +8143,10 @@ if = {
 			every_owned_state = {
 				limit = {
 					OR = {
-						state = 102
-						state = 104
-						state = 109
+						is_core_of = CRO
+            is_core_of = SLO
+            is_core_of = BOS
+            is_core_of = MNT
 					}
 					free_building_slots = {
 						building = infrastructure
@@ -8154,9 +8160,7 @@ if = {
 					instant_build = yes
 				}
 			}
-			set_temp_variable = { gained_pp_per_turn = 1 }
-			custom_effect_tooltip = YUG_modify_pp_gain_increase_tt
-			add_to_variable = { YUG_political_capital_gain = gained_pp_per_turn }
+			
 		}
 	}
 
@@ -8179,36 +8183,7 @@ if = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SER_YUG_abolish_habsburg_legal_code"
-			if = {
-				limit = {
-					check_variable = { YUG_croatia_relations_level > 1 }
-				}
-				set_temp_variable = { checked_state = 2 } # Croatia
-				set_temp_variable = { ethnic_situation = -1 }
-				custom_effect_tooltip = YUG_croatia_reduce_relations_tt
-				YUG_update_ethnic_situation = yes
-			}
-			if = {
-				limit = {
-					check_variable = { YUG_bosnia_relations_level > 1 }
-				}
-				set_temp_variable = { checked_state = 3 } # Bosnia
-				set_temp_variable = { ethnic_situation = -1 }
-				custom_effect_tooltip = YUG_bosnia_reduce_relations_tt
-				YUG_update_ethnic_situation = yes
-			}
-			if = {
-				limit = {
-					check_variable = { YUG_slovenia_relations_level > 1 }
-				}
-				set_temp_variable = { checked_state = 4 } # Slovenia
-				set_temp_variable = { ethnic_situation = -1 }
-				custom_effect_tooltip = YUG_slovenia_reduce_relations_tt
-				YUG_update_ethnic_situation = yes
-			}
-			set_temp_variable = { gained_pp_per_turn = 3 }
-			custom_effect_tooltip = YUG_modify_pp_gain_increase_tt
-			add_to_variable = { YUG_political_capital_gain = gained_pp_per_turn }
+			add_ideas = SER_national_lottery
 			add_political_power = 50
 		}
 	}
@@ -8234,9 +8209,7 @@ if = {
 			log = "[GetDateText]: [Root.GetName]: Focus SER_YUG_integrate_education"
 			add_ideas = SER_YUG_unified_education_system
 			add_stability = 0.05
-			set_temp_variable = { gained_pp_per_turn = 1 }
-			custom_effect_tooltip = YUG_modify_pp_gain_increase_tt
-			add_to_variable = { YUG_political_capital_gain = gained_pp_per_turn }
+			
 		}
 	}
 
@@ -8260,9 +8233,7 @@ if = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SER_YUG_princip_memorial"
 			add_ideas = SER_YUG_princip_memorial_idea
-			set_temp_variable = { gained_pp_per_turn = 1 }
-			custom_effect_tooltip = YUG_modify_pp_gain_increase_tt
-			add_to_variable = { YUG_political_capital_gain = gained_pp_per_turn }
+			
 		}
 	}
 
@@ -8310,7 +8281,7 @@ if = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SER_YUG_expand_universities"
-			add_research_slot_until_five = yes
+			add_research_slot = 1
 		}
 	}
 
@@ -8356,24 +8327,9 @@ if = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SER_YUG_brotherhood_and_unity"
-			custom_effect_tooltip = SER_YUG_brotherhood_and_unity_tt
-			hidden_effect = {
-				remove_mission = YUG_rounds_system_mission
-				YUG_reset_yugoslavia_missions = yes
-				remove_targeted_decision = { decision = YUG_serbia_expenditure_0 target = event_target:SER_dummy }
-				remove_targeted_decision = { decision = YUG_croatia_expenditure_0 target = CRO }
-				remove_targeted_decision = { decision = YUG_bosnia_expenditure_0 target = BOS }
-				remove_targeted_decision = { decision = YUG_slovenia_expenditure_0 target = SLV }
-				remove_targeted_decision = { decision = YUG_other_expenditure_0 target = ALB }
-			}
-			custom_effect_tooltip = SER_The_Dream_Fulfilled_tooltip
-			hidden_effect = {
-				remove_ideas = {
-					SER_the_dream_of_yugoslavia
-					SER_the_dream_of_yugoslavia_no_AUS
-				}
-				add_ideas = SER_the_dream_of_yugoslavia_fulfilled
-			}
+			custom_effect_tooltip = SER_YUG_brotherhood_and_unity_tt			
+      add_ideas = SER_the_dream_of_yugoslavia_fulfilled
+			
 		}
 	}
 
@@ -8393,23 +8349,20 @@ if = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SER_YUG_bosnia_land_reform"
-			104 = {
-				increase_state_category_by_one_level = yes
+      104 = {
+				increase_state_category_by_two_levels = yes
 			}
-			set_temp_variable = { pp_gain = 2 }
-			custom_effect_tooltip = YUG_pp_gain_tt
-			add_to_variable = { YUG_political_capital = pp_gain }
-			if = {
-				limit = {
-					check_variable = { YUG_bosnia_relations_level > 1 }
-					NOT = {
-						has_completed_focus = SER_YUG_brotherhood_and_unity
-					}
-				}
-				set_temp_variable = { checked_state = 3 } # Bosnia
-				set_temp_variable = { ethnic_situation = -1 }
-				custom_effect_tooltip = YUG_bosnia_reduce_relations_tt
-				YUG_update_ethnic_situation = yes
+			1148 = {
+				increase_state_category_by_two_levels = yes
+			}
+      1143 = {
+				increase_state_category_by_two_levels = yes
+			}
+      1141 = {
+				increase_state_category_by_two_levels = yes
+			}
+      1142 = {
+				increase_state_category_by_two_levels = yes
 			}
 		}
 	}
@@ -8431,25 +8384,37 @@ if = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SER_YUG_croatia_land_reform"
 			109 = {
-				increase_state_category_by_one_level = yes
+				increase_state_category_by_two_levels = yes
 			}
 			103 = {
-				increase_state_category_by_one_level = yes
+				increase_state_category_by_two_levels = yes
 			}
-			set_temp_variable = { pp_gain = 2 }
-			custom_effect_tooltip = YUG_pp_gain_tt
-			add_to_variable = { YUG_political_capital = pp_gain }
-			if = {
-				limit = {
-					check_variable = { YUG_croatia_relations_level > 1 }
-					NOT = {
-						has_completed_focus = SER_YUG_brotherhood_and_unity
-					}
-				}
-				set_temp_variable = { checked_state = 2 } # Croatia
-				set_temp_variable = { ethnic_situation = -1 }
-				custom_effect_tooltip = YUG_croatia_reduce_relations_tt
-				YUG_update_ethnic_situation = yes
+		 1128 = {
+				increase_state_category_by_two_levels = yes
+			}
+      794 = {
+				increase_state_category_by_two_levels = yes
+			}
+      1102 = {
+				increase_state_category_by_two_levels = yes
+			}
+      109 = {
+				increase_state_category_by_two_levels = yes
+			}
+      1105 = {
+				increase_state_category_by_two_levels = yes
+			}
+     1206 = {
+				increase_state_category_by_two_levels = yes
+			}
+      1099 = {
+				increase_state_category_by_two_levels = yes
+			}
+      163 = {
+				increase_state_category_by_two_levels = yes
+			}
+      1098 = {
+				increase_state_category_by_two_levels = yes
 			}
 		}
 	}
@@ -8799,25 +8764,7 @@ if = {
 		search_filters = { FOCUS_FILTER_NAVY_BONUS }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SER_YUG_Dockyard_Construction"
-			if = {
-				limit = {
-					NOT = {
-					
-					}
-				}
-				effect_tooltip = {
-					105 = {
-						add_extra_state_shared_building_slots = 3
-						add_building_construction = {
-							type = dockyard
-							level = 3
-							instant_build = yes
-						}
-					}
-				}
-			}
-			else = {
-				random_owned_controlled_state = {
+			random_owned_controlled_state = {
 					prioritize = { 105 }
 					limit = {
 						is_coastal = yes
@@ -8834,7 +8781,6 @@ if = {
 						instant_build = yes
 					}
 				}
-			}
 		}
 	}
 
@@ -8857,38 +8803,7 @@ if = {
 		search_filters = { FOCUS_FILTER_NAVY_BONUS }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SER_YUG_Form_A_Merchant_Navy"
-			if = {
-				limit = {
-					NOT = {
-					
-					}
-				}
-				effect_tooltip = {
-					841 = {
-						add_building_construction = {
-							type = naval_base
-							level = 3
-							province = 7623
-							instant_build = yes
-						}
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					841 = { is_owned_and_controlled_by = ROOT }
-				}
-				841 = {
-					add_building_construction = {
-						type = naval_base
-						level = 3
-						province = 7623
-						instant_build = yes
-					}
-				}
-			}
-			else = {
-				random_owned_controlled_state = {
+			random_owned_controlled_state = {
 					limit = { naval_base > 0 }
 					add_building_construction = {
 						type = naval_base
@@ -8901,7 +8816,6 @@ if = {
 						instant_build = yes
 					}
 				}
-			}
 			add_equipment_to_stockpile = {
 				type = convoy
 				amount = 50
@@ -8968,7 +8882,7 @@ if = {
 				idea = SER_naval_investments
 				days = 365
 			}
-			unlock_decision_tooltip = SER_Purchase_HMS_Lion
+			
 		}
 	}
 
@@ -9088,17 +9002,13 @@ if = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus SER_black_hand"
-      add_ideas = SER_black_hand
+      add_ideas = SER_father_of_fire
       add_popularity = {
-        ideology = national_populist
-        popularity = 0.17
+        ideology = syndicalist
+        popularity = 0.2
       }
       add_political_power = 75
-      country_event = {
-        id = dhserbia.2
-        days = 14
-        random_days = 3
-      }
+     
       custom_effect_tooltip = unlock_focuses
     }
   }
@@ -9117,18 +9027,13 @@ if = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus SER_black_hand"
-      add_ideas = SER_black_hand
-      add_popularity = {
-        ideology = national_populist
-        popularity = 0.17
-      }
-      add_political_power = 75
-      country_event = {
-        id = dhserbia.2
-        days = 14
-        random_days = 3
-      }
-      custom_effect_tooltip = unlock_focuses
+      add_ideas = SER_christian_union
+     add_one_random_civilian_factory = yes
+      add_one_random_military_factory = yes
+      add_one_random_civilian_factory = yes
+      add_one_random_military_factory = yes
+       add_one_random_civilian_factory = yes
+      add_one_random_military_factory = yes
     }
   }
   focus = {
@@ -9146,18 +9051,14 @@ if = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus SER_black_hand"
-      add_ideas = SER_black_hand
-      add_popularity = {
-        ideology = national_populist
-        popularity = 0.17
-      }
-      add_political_power = 75
-      country_event = {
-        id = dhserbia.2
-        days = 14
-        random_days = 3
-      }
-      custom_effect_tooltip = unlock_focuses
+      add_ideas = SER_intergrate_chetniks
+      add_equipment_to_stockpile = {
+			  type = infantry_equipment
+			  amount = 5000
+			  producer = SER
+		  }
+      add_war_support = 0.1
+      
     }
   }
   focus = {
@@ -9178,18 +9079,12 @@ if = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus SER_black_hand"
-      add_ideas = SER_black_hand
       add_popularity = {
-        ideology = national_populist
-        popularity = 0.17
+        ideology = syndicalist
+        popularity = 0.15
       }
-      add_political_power = 75
-      country_event = {
-        id = dhserbia.2
-        days = 14
-        random_days = 3
-      }
-      custom_effect_tooltip = unlock_focuses
+      add_political_power = 100
+      add_stability = 0.2
     }
   }
   focus = {
@@ -9208,18 +9103,14 @@ if = {
    
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus SER_black_hand"
-      add_ideas = SER_black_hand
+      add_ideas = SER_progressive_chavinism
       add_popularity = {
         ideology = national_populist
-        popularity = 0.17
+        popularity = 0.1
       }
+      add_natpop_to_coalition = yes
       add_political_power = 75
-      country_event = {
-        id = dhserbia.2
-        days = 14
-        random_days = 3
-      }
-      custom_effect_tooltip = unlock_focuses
+     
     }
   }
   focus = {
@@ -9238,18 +9129,9 @@ if = {
    
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus SER_black_hand"
-      add_ideas = SER_black_hand
-      add_popularity = {
-        ideology = national_populist
-        popularity = 0.17
-      }
-      add_political_power = 75
-      country_event = {
-        id = dhserbia.2
-        days = 14
-        random_days = 3
-      }
-      custom_effect_tooltip = unlock_focuses
+      add_ideas = SER_national_social_revolution
+      add_stability = 0.1
+      add_war_support = 0.1
     }
   }
   focus = {
@@ -9273,17 +9155,13 @@ if = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus SER_black_hand"
-      add_ideas = SER_black_hand
+      add_ideas = SER_voice_of_god
       add_popularity = {
         ideology = national_populist
-        popularity = 0.17
+        popularity = 0.2
       }
       add_political_power = 75
-      country_event = {
-        id = dhserbia.2
-        days = 14
-        random_days = 3
-      }
+     
       custom_effect_tooltip = unlock_focuses
     }
   }
@@ -9302,18 +9180,12 @@ if = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus SER_black_hand"
-      add_ideas = SER_black_hand
-      add_popularity = {
-        ideology = national_populist
-        popularity = 0.17
-      }
-      add_political_power = 75
-      country_event = {
-        id = dhserbia.2
-        days = 14
-        random_days = 3
-      }
-      custom_effect_tooltip = unlock_focuses
+      add_ideas = SER_theocratic_state
+       add_one_random_civilian_factory = yes
+      add_one_random_military_factory = yes
+      add_one_random_civilian_factory = yes
+      add_one_random_military_factory = yes
+      add_stability = 0.2
     }
   }
   focus = {
@@ -9331,18 +9203,11 @@ if = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus SER_black_hand"
-      add_ideas = SER_black_hand
-      add_popularity = {
-        ideology = national_populist
-        popularity = 0.17
-      }
-      add_political_power = 75
-      country_event = {
-        id = dhserbia.2
-        days = 14
-        random_days = 3
-      }
-      custom_effect_tooltip = unlock_focuses
+      add_ideas = SER_sansawa_legacy
+     
+      add_political_power = 100
+      add_war_support = 0.1
+
     }
   }
   
@@ -9364,18 +9229,9 @@ if = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus SER_black_hand"
-      add_ideas = SER_black_hand
-      add_popularity = {
-        ideology = national_populist
-        popularity = 0.17
-      }
-      add_political_power = 75
-      country_event = {
-        id = dhserbia.2
-        days = 14
-        random_days = 3
-      }
-      custom_effect_tooltip = unlock_focuses
+      add_ideas = SER_god_king_country
+      add_manpower = 10000
+      add_political_power = 100
     }
   }
   focus = {
@@ -9394,18 +9250,10 @@ if = {
    
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus SER_black_hand"
-      add_ideas = SER_black_hand
-      add_popularity = {
-        ideology = national_populist
-        popularity = 0.17
-      }
-      add_political_power = 75
-      country_event = {
-        id = dhserbia.2
-        days = 14
-        random_days = 3
-      }
-      custom_effect_tooltip = unlock_focuses
+      add_ideas = SER_orthodox_church_unity
+      add_one_random_civilian_factory = yes
+      add_one_random_military_factory = yes
+     
     }
   }
    focus = {
@@ -9424,18 +9272,13 @@ if = {
    
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus SER_black_hand"
-      add_ideas = SER_black_hand
       add_popularity = {
         ideology = national_populist
-        popularity = 0.17
+        popularity = 0.2
       }
-      add_political_power = 75
-      country_event = {
-        id = dhserbia.2
-        days = 14
-        random_days = 3
-      }
-      custom_effect_tooltip = unlock_focuses
+      add_stability = 0.1
+      add_political_power = 100
+    add_manpower = -155
     }
   }
   focus = {
@@ -9459,17 +9302,13 @@ if = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus SER_black_hand"
-      add_ideas = SER_black_hand
+      add_ideas = SER_legacy_of_young_bosnia
       add_popularity = {
-        ideology = national_populist
-        popularity = 0.17
+        ideology = totalist
+        popularity = 0.2
       }
-      add_political_power = 75
-      country_event = {
-        id = dhserbia.2
-        days = 14
-        random_days = 3
-      }
+      add_political_power = 100
+      
       custom_effect_tooltip = unlock_focuses
     }
   }
@@ -9488,18 +9327,13 @@ if = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus SER_black_hand"
-      add_ideas = SER_black_hand
+      add_ideas = SER_national_atheism
       add_popularity = {
-        ideology = national_populist
-        popularity = 0.17
+        ideology = totalist
+        popularity = 0.2
       }
-      add_political_power = 75
-      country_event = {
-        id = dhserbia.2
-        days = 14
-        random_days = 3
-      }
-      custom_effect_tooltip = unlock_focuses
+      add_stability = 0.1
+      
     }
   }
   focus = {
@@ -9517,18 +9351,13 @@ if = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus SER_black_hand"
-      add_ideas = SER_black_hand
-      add_popularity = {
-        ideology = national_populist
-        popularity = 0.17
-      }
-      add_political_power = 75
-      country_event = {
-        id = dhserbia.2
-        days = 14
-        random_days = 3
-      }
-      custom_effect_tooltip = unlock_focuses
+      add_ideas = SER_revitalize_agriculture
+        add_one_random_civilian_factory = yes
+      add_one_random_military_factory = yes
+      add_one_random_civilian_factory = yes
+      add_one_random_military_factory = yes
+       add_one_random_civilian_factory = yes
+      add_one_random_military_factory = yes
     }
   }
   focus = {
@@ -9549,18 +9378,18 @@ if = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus SER_black_hand"
-      add_ideas = SER_black_hand
       add_popularity = {
-        ideology = national_populist
-        popularity = 0.17
+        ideology = syndicalist
+        popularity = 0.1
       }
-      add_political_power = 75
-      country_event = {
-        id = dhserbia.2
-        days = 14
-        random_days = 3
+       add_popularity = {
+        ideology = radical_socialist
+        popularity = 0.1
       }
-      custom_effect_tooltip = unlock_focuses
+      add_war_support = 0.1
+      add_manpower = 10000
+    add_synd_to_coalition = yes
+    add_radsoc_to_coalition = yes
     }
   }
   focus = {
@@ -9579,18 +9408,13 @@ if = {
     
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus SER_black_hand"
-      add_ideas = SER_black_hand
+      add_ideas = SER_serbian_totalism
       add_popularity = {
-        ideology = national_populist
-        popularity = 0.17
+        ideology = totalist
+        popularity = 0.15
       }
-      add_political_power = 75
-      country_event = {
-        id = dhserbia.2
-        days = 14
-        random_days = 3
-      }
-      custom_effect_tooltip = unlock_focuses
+      add_stability = 0.1
+     
     }
   }
   focus = {
@@ -9609,18 +9433,10 @@ if = {
     
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus SER_black_hand"
-      add_ideas = SER_black_hand
-      add_popularity = {
-        ideology = national_populist
-        popularity = 0.17
-      }
-      add_political_power = 75
-      country_event = {
-        id = dhserbia.2
-        days = 14
-        random_days = 3
-      }
-      custom_effect_tooltip = unlock_focuses
+      add_ideas = SER_forced_intergration
+      add_one_random_civilian_factory = yes
+     add_one_random_military_factory = yes
+     
     }
   }
   focus = {
@@ -9852,13 +9668,12 @@ if = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus SER_fund_king_men"
-      add_political_power = -50
-      add_ideas = SER_king_men_big
-      country_event = {
-        id = dhserbia.9
-        days = 35
-        random_days = 2
-      }
+      add_one_random_civilian_factory = yes
+      add_one_random_military_factory = yes
+      add_one_random_civilian_factory = yes
+      add_one_random_military_factory = yes
+       add_one_random_civilian_factory = yes
+      add_one_random_military_factory = yes
     }
   }
   focus = {
@@ -9877,13 +9692,9 @@ if = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus SER_fund_king_men"
-      add_political_power = -50
-      add_ideas = SER_king_men_big
-      country_event = {
-        id = dhserbia.9
-        days = 35
-        random_days = 2
-      }
+      add_political_power = 50
+      add_ideas = SER_return_to_tradition
+      
     }
   }
   focus = {
@@ -10060,8 +9871,7 @@ if = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus SER_new_myth"
-      add_manpower = 2000
-      add_ideas = SER_population
+      add_ideas = SER_piedmontianism_idea
       add_popularity = {
         ideology = national_populist
         popularity = 0.05
@@ -10084,12 +9894,11 @@ if = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus SER_new_myth"
-      add_manpower = 2000
-      add_ideas = SER_population
-      add_popularity = {
-        ideology = national_populist
-        popularity = 0.05
-      }
+       create_intelligence_agency = yes
+      upgrade_intelligence_agency = upgrade_anti_partisan
+      upgrade_intelligence_agency = upgrade_commando_training
+      upgrade_intelligence_agency = upgrade_form_department
+      upgrade_intelligence_agency = upgrade_intelligence_agency
     }
   }
   focus = {
@@ -11460,7 +11269,7 @@ focus = {
 #Focus for Progressive Pan-Slavism
 focus = {
   id = YUG_progressivepanslavism2
-  icon = GFX_goal_POL_Integrate_Patriots
+  icon = GFX_goal_SER_ORJUNA
 	x = -5
 	y = 1
 	relative_position_id = YUG_hey_slavs
@@ -12809,7 +12618,9 @@ focus = {
     prerequisite = {
       focus = SER_A_Nascent_Balkan_Democracy
     }
-		
+		available = {
+			always = no
+		}
 		ai_will_do = { factor = 10 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
@@ -12926,7 +12737,9 @@ focus = {
     prerequisite = {
       focus = SER_A_Nascent_Balkan_Democracy
     }
-	
+	available = {
+			always = no
+		}
 		ai_will_do = { factor = 10 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
@@ -13566,7 +13379,7 @@ focus = {
 	}
   focus = {
 		id = SER_guide_of_orjuna
-		icon = GFX_goal_MNT_armanist_exceptionalism
+		icon = GFX_goal_SER_ORJUNA
 		cost = 4
   relative_position_id = SER_A_Nascent_Balkan_Democracy
 		x = -12

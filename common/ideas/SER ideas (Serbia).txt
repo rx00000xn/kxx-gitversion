@@ -6,6 +6,173 @@ ideas = {
 ##############
 	country = {
 		### New ideas ###
+		SER_national_social_revolution = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = CZE_revolution_idea
+			allowed = { always = no }
+            modifier = {	
+				consumer_goods_factor = -0.25
+				army_attack_speed_factor = 0.25
+			}
+			
+		}
+		SER_progressive_chavinism = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = generic_ultranationalism
+			allowed = { always = no }
+            modifier = {	
+				conscription = 0.02
+				conscription_factor = 0.2
+				army_org_factor = 0.1
+				army_morale_factor = 0.1
+				syndicalist_drift = 0.05
+				national_populist_drift = 0.05
+			}
+			
+		}
+		SER_intergrate_chetniks = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = BAN_extreme_militarization
+			allowed = { always = no }
+            modifier = {	
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+			}
+			
+		}
+		SER_christian_union = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = KIV_social_christian_capitalism_idea
+			allowed = { always = no }
+            modifier = {	
+				production_factory_max_efficiency_factor = 0.25
+				production_factory_efficiency_gain_factor = 0.25
+			}
+			
+		}
+		SER_father_of_fire = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = NEE_christian_morals
+			allowed = { always = no }
+            modifier = {	
+				line_change_production_efficiency_factor = 0.25
+				industrial_capacity_factory = 0.25
+			}
+			
+		}
+		SER_orthodox_church_unity = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = BRG_Christian_Unity
+			allowed = { always = no }
+            modifier = {	
+				weekly_manpower = 1000
+				army_org_factor = 0.15
+
+			}
+			
+		}
+		SER_god_king_country = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = SHX_christian_statism
+			allowed = { always = no }
+            modifier = {	
+				army_core_attack_factor = 0.25
+				army_core_defence_factor = 0.25
+				army_infantry_attack_factor = 0.15
+				army_infantry_defence_factor = 0.15
+
+			}
+			
+		}
+		SER_theocratic_state = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = SHX_christian_statism
+			allowed = { always = no }
+            modifier = {	
+				consumer_goods_expected_value = -0.15
+				production_speed_buildings_factor = 0.25
+
+			}
+			
+		}
+		SER_voice_of_god = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = ALB_unified_church
+			allowed = { always = no }
+            modifier = {	
+				national_populist_drift = 0.05
+				conscription_factor = 0.2
+				army_strength_factor = 0.1
+			}
+			
+		}
+		SER_forced_intergration = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = WHR_forced_labour
+			allowed = { always = no }
+            modifier = {	
+				production_factory_start_efficiency_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				production_speed_buildings_factor = 0.1
+			}
+			
+		}
+		SER_serbian_totalism = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = totalism
+			allowed = { always = no }
+            modifier = {	
+				totalist_drift = 0.05
+				syndicalist_drift = 0.01
+				radical_socialist_drift = 0.02
+				army_attack_factor = 0.1
+				line_change_production_efficiency_factor = 0.1
+
+			}
+			
+		}
+		SER_revitalize_agriculture = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = agricultural_revolution
+			allowed = { always = no }
+            modifier = {	
+				supply_consumption_factor = -0.15
+				monthly_population = 0.5
+			}
+			
+		}
+		SER_national_atheism = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = YUC_atheism_idea
+			allowed = { always = no }
+            modifier = {	
+				conscription = 0.03
+				industrial_capacity_factory = 0.25
+			}
+			
+		}
+		SER_legacy_of_young_bosnia = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = terror_in_the_knight
+			allowed = { always = no }
+            modifier = {	
+				attrition = -0.1
+				army_speed_factor = 0.1
+
+			}
+			
+		}
+		SER_return_to_tradition = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = generic_traditional_values
+			allowed = { always = no }
+            modifier = {	
+				army_org_factor = 0.15
+				army_morale_factor = 0.15
+			}
+			
+		}
 		SER_revanchist_chetnik3 = { 
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
 			picture = army_cooperation
@@ -1635,11 +1802,6 @@ ideas = {
 			name = SER_piedmontianism
 			picture = YUG_local_militias
 			allowed = { always = no }
-			available = {
-				NOT = {
-					owns_state = 45
-				}
-			}
 			modifier = {
 				army_attack_factor = 0.1
 				conscription = 0.01
@@ -1683,7 +1845,7 @@ ideas = {
 			allowed = { always = no }
 			modifier = {
 				army_morale_factor = 0.05
-				training_time_army_factor = -0.1
+				training_time_army_factor = 0.1
 				political_power_factor = 0.15
 			}
 		}
@@ -1692,8 +1854,9 @@ ideas = {
 			picture = YUG_yugoslavian_general_staff
 			allowed = { always = no }
 			modifier = {
-				army_morale_factor = -0.05
-				political_power_factor = -0.05
+				army_morale_factor = 0.05
+				political_power_factor = 0.05
+				war_support_factor = 0.1
 			}
 		}
 		SER_YUG_deep_state = {
@@ -1701,11 +1864,9 @@ ideas = {
 			picture = YUG_yugoslavian_general_staff
 			allowed = { always = no }
 			modifier = {
-				army_morale_factor = -0.05
-				industrial_capacity_factory = -0.1
-				political_power_factor = -0.1
-				war_support_factor = 0.1
-				stability_factor = -0.1
+				industrial_capacity_factory = 0.1
+				political_power_factor = 0.1				
+				stability_factor = 0.1
 			}
 		}
 		SER_YUG_reformed_conscription = {
