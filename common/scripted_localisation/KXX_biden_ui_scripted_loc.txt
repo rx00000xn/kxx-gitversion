@@ -136,6 +136,7 @@ defined_text = {
 		localization_key = SHE_SWTH
 	}
 	##############################################
+	#塞尔维亚
 	text = {
 		trigger = {
 			tag = SER
@@ -2595,7 +2596,7 @@ defined_text = {
 		trigger = {
 			has_country_flag = SER_Draza_Mihailovic_VISIBLE
 		}
-		localization_key = GFX_Portrait_SER_Draza_Mihailovic
+		localization_key = GFX_Portrait_SER_Draza_Mihailovics
 	}
 	#挪威
 	text = {

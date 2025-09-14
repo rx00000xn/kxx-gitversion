@@ -220,7 +220,7 @@ spriteTypes = {
 
 	###塞尔维亚###
 	spriteType = {
-		name = "GFX_Portrait_SER_Draza_Mihailovic"
+		name = "GFX_Portrait_SER_Draza_Mihailovics"
 		texturefile = "gfx/leaders/SER/Portrait_SER_Draza_Mihailovic.png"
 	}
 	###挪威###

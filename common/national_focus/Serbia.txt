@@ -2225,7 +2225,7 @@ focus_tree = {
 		icon = GFX_goal_ideology_radical_socialist
 		 cost = 3
 
-		x = 16
+		x = 10
 		y = 5
     
 		
@@ -3941,7 +3941,7 @@ focus_tree = {
 				ideology = national_populist
 				popularity = 0.1
 			}
-       set_party_name = {
+      set_party_name = {
 				ideology = social_liberal
 				long_name = "塞尔维亚全国中央委员会"
 				name = "塞尔维亚全国中央委员会"
@@ -4583,7 +4583,13 @@ focus_tree = {
     available = {
       is_subject = no
       NOT = {
-        has_completed_focus = SER_black_hand
+        OR = {
+          has_completed_focus = SER_black_general
+          has_completed_focus = SER_voice_of_god
+          has_completed_focus = SER_SKK
+          has_completed_focus = SER_father_of_fire
+        }
+        
       }
     }
     ai_will_do = {
@@ -5490,24 +5496,8 @@ focus_tree = {
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus SER_form_yugoslavia"
       set_cosmetic_tag = SER_YUG
-
-      hidden_effect = {
-        set_party_name = {
-          ideology = authoritarian_democrat
-          name = SER_YUG_authoritarian_democrat_party
-          long_name = SER_YUG_authoritarian_democrat_party_long
-        }
-        set_party_name = {
-          ideology = paternal_autocrat
-          name = SER_YUG_paternal_autocrat_party
-          long_name = SER_YUG_paternal_autocrat_party_long
-        }
-        set_party_name = {
-          ideology = national_populist
-          name = SER_YUG_national_populist_party
-          long_name = SER_YUG_national_populist_party_long
-        }
-      }
+     
+      
       add_state_core = 45
       add_state_core = 875
       add_state_core = 794
@@ -5528,23 +5518,14 @@ focus_tree = {
       add_state_core = 163
       add_state_core = 103
       add_state_core = 1105
-      if = {
-        limit = {
-          owns_state = 102
-        }
-        add_state_core = 102
-        add_state_core = 1103
-        add_state_core = 1101
-        add_state_core = 1104
-      }
-      if = {
-        limit = {
-          owns_state = 736
-        }
-        add_state_core = 736
-        add_state_core = 1100
-        add_state_core = 1144
-      }
+      add_state_core = 102
+      add_state_core = 1103
+      add_state_core = 1101
+      add_state_core = 1104
+      add_state_core = 736
+      add_state_core = 1100
+      add_state_core = 1144
+      
       if = {
         limit = {
           has_subject = MNT
@@ -5562,16 +5543,7 @@ focus_tree = {
     search_filters = {
       FOCUS_FILTER_ANNEXATION
     }
-    if = {
-      limit = {
-        has_socialist_government = yes
-      }
-    
-    country_event = {
-      id = serbia.101
-      days = 7
-    }
-  }
+   
   if = {
     limit = {
       OR = {
@@ -5588,33 +5560,14 @@ focus_tree = {
 }
 if = {
   limit = {
-   has_government = authoritarian_democrat
-   
+   has_completed_focus = SER_The_Vojvoda_Stands_Tall
   }
    country_event = {
     id = serbia.103
     days = 7
   }
 }  
-if = {
-  limit = {
-    NOT = {
-       OR = {
-      has_government = authoritarian_democrat
-      has_government = national_populist
-      has_government = paternal_autocrat
-      has_socialist_government = yes
-    }
-    }
-   
-    
-  }
 
-  country_event = {
-    id = serbia.100
-    days = 1
-  }
-} 
  
 
 }
@@ -6898,317 +6851,7 @@ if = {
       }
     }
   }
-  focus = {
-    id = SER_multiethnic_army
-    icon = GFX_goal_CRO_illyrian_army
-    x = 41
-    y = 0
-    available = {
-      has_global_flag = balkan_war_ended
-    }
-    cost = 3
-    completion_reward = {
-      army_experience = 30
-    }
-  }
-  focus = {
-    id = SER_split_leadership
-    icon = GFX_goal_CRO_illyrian_officers
-    x = 41
-    y = 1
-    cost = 3
-    prerequisite = {
-      focus = SER_multiethnic_army
-    }
-    completion_reward = {
-      swap_ideas = {
-        remove_idea = CRO_croatian_command
-        add_idea = CRO_represented_armies
-      }
-    }
-  }
-  focus = {
-    id = SER_form_regional_militias
-    icon = GFX_goal_CRO_military_frontier
-    x = 40
-    y = 3
-    cost = 3
-    prerequisite = {
-      focus = SER_split_leadership
-    }
-    completion_reward = {
-      add_stability = 0.05
-      hidden_effect = {
-        load_oob = CRO_militia
-      }
-    }
-  }
-  focus = {
-    id = SER_democratic_army
-    icon = GFX_goal_generic_elections
-    x = 42
-    y = 3
-    cost = 3
-    prerequisite = {
-      focus = SER_split_leadership
-    }
-    completion_reward = {
-      add_war_support = 0.05
-      add_stability = -0.025
-    }
-  }
-  focus = {
-    id = SER_army_quality
-    icon = GFX_goal_generic_special_forces
-    x = 44
-    y = 4
-    cost = 3
-    prerequisite = {
-      focus = SER_democratic_army
-    }
-    prerequisite = {
-      focus = SER_form_regional_militias
-    }
-    mutually_exclusive = {
-      focus = SER_army_quantity
-    }
-    completion_reward = {
-      add_ideas = CRO_quality_army
-    }
-  }
-  focus = {
-    id = SER_only_the_best
-    icon = GFX_goal_generic_allies_build_infantry
-    x = 43
-    y = 5
-    cost = 3
-    prerequisite = {
-      focus = SER_army_quality
-    }
-    completion_reward = {
-      add_ideas = CRO_best_equipment
-    }
-  }
-  focus = {
-    id = SER_army_quantity
-    icon = GFX_goal_mass_concentration_of_army
-    x = 38
-    y = 4
-    cost = 3
-    prerequisite = {
-      focus = SER_democratic_army
-    }
-    prerequisite = {
-      focus = SER_form_regional_militias
-    }
-    mutually_exclusive = {
-      focus = SER_army_quality
-    }
-    completion_reward = {
-      add_ideas = CRO_quantity_army
-    }
-  }
-  focus = {
-    id = SER_cheap_equipment
-    icon = GFX_goal_generic_drafted_army
-    x = 39
-    y = 5
-    cost = 3
-    prerequisite = {
-      focus = SER_army_quantity
-    }
-    completion_reward = {
-      add_ideas = CRO_mass_equipment
-    }
-  }
-  focus = {
-    id = SER_armor_construction
-    icon = GFX_goal_generic_armored_cars
-    x = 41
-    y = 5
-    cost = 3
-    prerequisite = {
-      focus = SER_split_leadership
-    }
-    completion_reward = {
-      add_tech_bonus = {
-        bonus = 0.5
-        uses = 2
-        category = armor
-      }
-    }
-  }
-  focus = {
-    id = SER_metal_beasts
-    icon = GFX_goal_generic_army_tanks2
-    x = 42
-    y = 7
-    cost = 3
-    prerequisite = {
-      focus = SER_armor_construction
-    }
-    prerequisite = {
-      focus = SER_only_the_best
-    }
-    completion_reward = {
-      swap_ideas = {
-        add_idea = CRO_best_equipment_2
-        remove_idea = CRO_best_equipment
-      }
-    }
-  }
-  focus = {
-    id = SER_metal_hordes
-    icon = GFX_goal_generic_army_tanks3
-    x = 40
-    y = 7
-    cost = 3
-    prerequisite = {
-      focus = SER_armor_construction
-    }
-    prerequisite = {
-      focus = SER_cheap_equipment
-    }
-    completion_reward = {
-      swap_ideas = {
-        add_idea = CRO_mass_equipment_2
-        remove_idea = CRO_mass_equipment
-      }
-    }
-  }
-  focus = {
-    id = SER_lessons_weltkrieg
-    icon = GFX_goal_generic_army_doctrines
-    x = 38
-    y = 2
-    cost = 3
-    prerequisite = {
-      focus = SER_multiethnic_army
-    }
-    mutually_exclusive = {
-      focus = SER_experimental_tactics
-    }
-    completion_reward = {
-      add_doctrine_cost_reduction = {
-        name = land_doc_bonus
-        cost_reduction = 0.5
-        uses = 1
-        category = land_doctrine
-      }
-    }
-  }
-  focus = {
-    id = SER_heavy_artillery
-    icon = GFX_goal_national_artillery
-    x = 37
-    y = 3
-    cost = 3
-    prerequisite = {
-      focus = SER_lessons_weltkrieg
-    }
-    completion_reward = {
-      add_tech_bonus = {
-        bonus = 0.5
-        uses = 2
-        category = artillery
-      }
-    }
-  }
-  focus = {
-    id = SER_bunker_up
-    icon = GFX_goal_nested_fortifications
-    x = 37
-    y = 5
-    cost = 3
-    prerequisite = {
-      focus = SER_heavy_artillery
-    }
-    completion_reward = {
-      add_ideas = CRO_defensive_focus
-    }
-  }
-  focus = {
-    id = SER_doctrinal_reform
-    icon = GFX_goal_army_guy_2
-    x = 41
-    y = 6
-    cost = 3
-    prerequisite = {
-      focus = SER_bunker_up
-      focus = SER_army_of_offense
-    }
-    prerequisite = {
-      focus = SER_cheap_equipment
-      focus = SER_only_the_best
-    }
-    prerequisite = {
-      focus = SER_armor_construction
-    }
-    completion_reward = {
-      add_doctrine_cost_reduction = {
-        name = land_doc_bonus
-        cost_reduction = 0.5
-        uses = 1
-        category = land_doctrine
-      }
-    }
-  }
-  focus = {
-    id = SER_experimental_tactics
-    icon = GFX_goal_generic_army_motorized
-    x = 44
-    y = 2
-    cost = 3
-    prerequisite = {
-      focus = SER_multiethnic_army
-    }
-    mutually_exclusive = {
-      focus = SER_lessons_weltkrieg
-    }
-    completion_reward = {
-      add_doctrine_cost_reduction = {
-        name = land_doc_bonus
-        cost_reduction = 0.5
-        uses = 1
-        category = land_doctrine
-      }
-    }
-  }
-  focus = {
-    id = SER_wheeled_terror
-    icon = GFX_goal_doctrine_tank_warfare
-    x = 45
-    y = 3
-    cost = 3
-    prerequisite = {
-      focus = SER_experimental_tactics
-    }
-    completion_reward = {
-      add_tech_bonus = {
-        bonus = 1
-        uses = 1
-        category = motorized_equipment
-      }
-      add_tech_bonus = {
-        bonus = 1
-        uses = 1
-        category = armor
-      }
-    }
-  }
-  focus = {
-    id = SER_army_of_offense
-    icon = GFX_goal_CRO_home_guard
-    x = 45
-    y = 5
-    cost = 3
-    prerequisite = {
-      focus = SER_wheeled_terror
-    }
-    completion_reward = {
-      add_ideas = CRO_offensive_focus
-    }
-  }
+  
   focus = {
     id = SER_Serbian_Mountain_Corps
     icon = GFX_goal_SKM_Mastery_Mountains
@@ -8160,7 +7803,53 @@ if = {
 					instant_build = yes
 				}
 			}
-			
+			if = {
+        limit = {
+          has_socialist_government = yes
+        }
+        set_country_flag = SER_YUG_soc
+      }
+      else_if = {
+        limit = {
+          has_completed_focus = SER_Return_Of_The_Crown_Prince
+          NOT = {
+            has_completed_focus = SER_March_Conspiracy
+          }
+        }
+        set_country_flag = SER_YUG_king
+      }
+      
+      else_if = {
+        limit = {
+          OR = {
+            has_completed_focus = SER_National_Vanguard
+            has_completed_focus = YUG_progressivepanslavism
+            has_completed_focus = YUG_progressivepanslavism2
+            has_country_flag = SER_democracy_is_fucked
+          }
+        }
+        set_country_flag = SER_YUG_radical
+      }
+      else_if = {
+        limit = {
+          OR = {
+            has_completed_focus = SER_Moralistic_Democracy
+            has_completed_focus = SER_radical_coalition
+            has_completed_focus = SER_socialist_coalition
+          }
+          NOT = {
+            has_country_flag = SER_democracy_is_fucked
+          }
+        }
+        set_country_flag = SER_YUG_democracy
+      }
+      else_if = {
+        limit = {
+         has_completed_focus = SER_March_Conspiracy
+        }
+        set_country_flag = SER_YUG_constitutional
+      }
+      mark_focus_tree_layout_dirty = yes
 		}
 	}
 
@@ -8176,9 +7865,7 @@ if = {
 		prerequisite = {
 			focus = SER_YUG_standardize_rail_gauges
 		}
-		bypass = {
-			has_completed_focus = SER_YUG_brotherhood_and_unity
-		}
+		 
 		ai_will_do = { factor = 10 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
@@ -8954,7 +8641,7 @@ if = {
     id = SER_black_hand
     icon = GFX_goal_SER_black_hand_takes_power
     cost = 3.00
-    x = 75
+    x = 53
     y = 0
     ai_will_do = {
       factor = 100
@@ -8974,8 +8661,8 @@ if = {
       }
       add_political_power = 75
       country_event = {
-        id = dhserbia.2
-        days = 14
+        id = dhserbia.111
+        days = 1
         random_days = 3
       }
       custom_effect_tooltip = unlock_focuses
@@ -8993,6 +8680,9 @@ if = {
     }
     prerequisite = {
       focus = SER_black_hand
+    }
+    available = {
+      has_country_flag = SER_syndie_leader
     }
     mutually_exclusive = {
       focus = SER_SKK
@@ -9153,6 +8843,9 @@ if = {
       focus = SER_black_general
       focus = SER_father_of_fire
     }
+    available = {
+      has_country_flag = SER_clerical_leader
+    }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus SER_black_hand"
       add_ideas = SER_voice_of_god
@@ -9291,6 +8984,9 @@ if = {
     ai_will_do = {
       factor = 100
     }
+    available = {
+      has_country_flag = SER_tot_leader
+    }
     mutually_exclusive = {
       focus = SER_SKK
       focus = SER_black_general
@@ -9414,7 +9110,12 @@ if = {
         popularity = 0.15
       }
       add_stability = 0.1
-     
+     hidden_effect = {
+      country_event = {
+        id = dhserbia.28
+        days = 30
+      }
+     }
     }
   }
   focus = {
@@ -9970,10 +9671,7 @@ if = {
     prerequisite = {
       focus = SER_promote_unity
     }
-    prerequisite = {
-      focus = SER_fund_king_men
-      focus = SER_Loyal_population
-    }
+    
     x = 0
     y = 2
     relative_position_id = SER_pacify_oposition
@@ -10117,8 +9815,45 @@ if = {
     
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus SER_friends_forever"
-      add_political_power = -50
-      add_ideas = SER_friends_4ever
+      add_state_core = 45
+      add_state_core = 875
+      add_state_core = 794
+      add_state_core = 1128
+      add_state_core = 105
+      add_state_core = 1097
+      add_state_core = 1269
+      add_state_core = 104
+      add_state_core = 1141
+      add_state_core = 1142
+      add_state_core = 1270
+      add_state_core = 1143
+      add_state_core = 1145
+      add_state_core = 109
+      add_state_core = 1098
+      add_state_core = 1099
+      add_state_core = 1102
+      add_state_core = 163
+      add_state_core = 103
+      add_state_core = 1105
+      add_state_core = 102
+      add_state_core = 1103
+      add_state_core = 1101
+      add_state_core = 1104
+      add_state_core = 736
+      add_state_core = 1100
+      add_state_core = 1144
+      add_state_core = 82
+      add_state_core = 731
+      add_state_core = 989
+      add_state_core = 1268
+      add_state_core = 766
+      add_state_core = 758
+      add_state_core = 1076
+      add_state_core = 768
+      add_state_core = 185
+      add_state_core = 989
+      add_state_core = 44
+      add_state_core = 1114
     }
   }
   ##### Tesla tree #####
@@ -13821,16 +13556,14 @@ relative_position_id = SER_protect_democracy
 		icon = GFX_focus_YUG_pan_slavic_congress
 		cost = 1
 
-		x = 40
-		y = 13
-
-		
-		available = {
-			custom_override_tooltip = {
-				tooltip = SER_YUG_balkan_federalism_tt
-				always = no
-			}
-		}
+		x = 43
+		y = 7
+    prerequisite = {
+      focus = SER_YUG_standardize_rail_gauges
+    }
+    allow_branch = {
+      has_country_flag = SER_YUG_soc
+    }
 		ai_will_do = { factor = 10 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
@@ -13841,7 +13574,7 @@ relative_position_id = SER_protect_democracy
   focus = {
 		id = SER_YUG_liberate_balkan_socialists
 		icon = GFX_goal_syndicalist_workers
-		cost = 6
+		cost = 3
     relative_position_id = SER_YUG_balkan_federalism
 		x = -1
 		y = 1
@@ -13862,21 +13595,18 @@ relative_position_id = SER_protect_democracy
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_liberate_balkan_socialists"
-			if = {
-				limit = {
-					is_faction_leader = yes
-					any_allied_country = { has_socialist_government = no }
-				}
-				belgrade_pact_is_disbanded = yes
-			}
-			custom_effect_tooltip = SER_YUG_liberate_balkan_socialists_tt
+			create_wargoal = { target = ROM type = annex_everything }
+      create_wargoal = { target = GRE type = annex_everything }
+      create_wargoal = { target = HUN type = annex_everything }
+      create_wargoal = { target = TUR type = annex_everything }
+      create_wargoal = { target = BUL type = annex_everything }
 		}
 	}
 
 	focus = {
 		id = SER_YUG_soc_integrate_bulgaria
 		icon = GFX_focus_BUL_balkan_federation_of_socialist_republics
-		cost = 6
+		cost = 3
  relative_position_id = SER_YUG_balkan_federalism
 		x = -2
 		y = 2
@@ -13898,66 +13628,26 @@ relative_position_id = SER_protect_democracy
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_soc_integrate_bulgaria"
-			SER_enable_bulgarian_integration = yes
-			BUL = { country_event = yugoslavia.12 }
+			
+			BUL = { country_event = serbia.101 }
 			custom_effect_tooltip = if_they_accept_tt
 			effect_tooltip = {
-				every_other_country = {
-					limit = {
-						has_war_with = BUL
-						NOT = { has_war_with = ROOT }
-					}
-					ROOT = {
-						add_to_war = {
-							targeted_alliance = BUL
-							enemy = PREV
-							hostility_reason = asked_to_join
-						}
-					}
-				}
+				
 				annex_country = {
 					target = BUL
 					transfer_troops = yes
 				}
-				BUL = {
-					every_core_state = {
-						limit = {
-							is_claim_or_core_of_ROOT = no
-							NOT = { is_core_of = GRE }
-							NOT = { is_claimed_by = GRE }
-							NOT = { is_core_of = ROM }
-							NOT = { is_claimed_by = GRE }
-						}
-						add_claim_by = ROOT
-					}
-					every_character = {
-						limit = {
-							is_unit_leader = yes
-							NOT = {
-								is_character = BUL_pencho_zlatev
-								is_character = BUL_kimon_georgiev
-								is_character = BUL_hristo_lukov
-								is_character = BUL_ivan_valkov
-								is_character = BUL_nikola_hadzhipetkov
-								is_character = BUL_boris_sakskoburggotski
-								is_character = BUL_kyril_sakskoburggotski
-							}
-						}
-						set_character_flag = BUL_leader
-						set_nationality = ROOT
-					}
-				}
-				add_stability = -0.1
-				YUG_bulgarian_integration_relations_effect = yes
+				
+
 			}
-			custom_effect_tooltip = SER_YUG_soc_integrate_bulgaria_tt
+			
 		}
 	}
 
 	focus = {
 		id = SER_YUG_balkan_socialist_federation
 		icon = GFX_focus_BUL_the_unification_of_the_balkans
-		cost = 6
+		cost = 3
 
 		 relative_position_id = SER_YUG_balkan_federalism
 		x = 0
@@ -13966,39 +13656,56 @@ relative_position_id = SER_protect_democracy
 		prerequisite = {
 			focus = SER_YUG_liberate_balkan_socialists
 		}
-		available = {
-			ROM = {
-				is_subject_of = SER
-			}
-			OR = {
-				BUL = {
-					is_subject_of = SER
-				}
-				owns_state = 48
-			}
-			NOT = {
-				is_in_faction_with = INT
-			}
-		}
+		
 		ai_will_do = { factor = 10 }
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_balkan_socialist_federation"
-			if = {
+			every_state = {
 				limit = {
-					is_faction_leader = yes
+					is_core_of = BUL
 				}
-				set_faction_name = balkan_socialist_federation
+				add_core_of = SER
 			}
-			else = {
-				create_faction = balkan_socialist_federation
+      every_state = {
+				limit = {
+					is_core_of = ALB
+				}
+				add_core_of = SER
 			}
+      every_state = {
+				limit = {
+					is_core_of = HUN
+				}
+				add_core_of = SER
+			}
+      every_state = {
+				limit = {
+					is_core_of = ROM
+				}
+				add_core_of = SER
+			}
+      every_state = {
+				limit = {
+					is_core_of = GRE
+				}
+				add_core_of = SER
+			}
+      every_state = {
+				limit = {
+					is_core_of = CRE
+				}
+				add_core_of = SER
+			}
+      add_state_core = 341
+      add_state_core = 773
+      set_cosmetic_tag = BAN_balkan_union
 		}
 	}
   focus = {
 		id = SER_YUG_peoples_republics
 		icon = GFX_goal_commune_politics
-		cost = 6
+		cost = 3
  relative_position_id = SER_YUG_balkan_federalism
 		x = 3
 		y = 1
@@ -14006,26 +13713,19 @@ relative_position_id = SER_protect_democracy
 		prerequisite = {
 			focus = SER_YUG_balkan_federalism
 		}
-		bypass = {
-			has_completed_focus = SER_YUG_brotherhood_and_unity
-		}
+		 
 		ai_will_do = { factor = 10 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_peoples_republics"
-			set_temp_variable = { gained_pp_per_turn = 2 }
-			custom_effect_tooltip = YUG_modify_pp_gain_increase_tt
-			add_to_variable = { YUG_political_capital_gain = gained_pp_per_turn }
-			set_temp_variable = { pp_gain = 2 }
-			custom_effect_tooltip = YUG_pp_gain_tt
-			add_to_variable = { YUG_political_capital = pp_gain }
+			add_ideas = SER_YUG_peoples_republics
 		}
 	}
 
 	focus = {
 		id = SER_YUG_soc_denationalization
 		icon = GFX_HOL_crackdown_natpop
-		cost = 6
+		cost = 3
 
 		relative_position_id = SER_YUG_peoples_republics
 		x = -1
@@ -14034,21 +13734,22 @@ relative_position_id = SER_protect_democracy
 		prerequisite = {
 			focus = SER_YUG_peoples_republics
 		}
-		bypass = {
-			has_completed_focus = SER_YUG_brotherhood_and_unity
-		}
+		 
 		ai_will_do = { factor = 10 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_soc_denationalization"
-			custom_effect_tooltip = SER_YUG_denationalisation_campaign_tt
+			swap_ideas = {
+        remove_idea = SER_YUG_peoples_republics
+        add_idea = SER_YUG_peoples_republics2
+      }
 		}
 	}
 
 	focus = {
 		id = SER_YUG_soc_hero_cult
 		icon = GFX_focus_focus_fra_revolution_utmost
-		cost = 6
+		cost = 3
 
 		relative_position_id = SER_YUG_peoples_republics
 		x = -1
@@ -14057,19 +13758,12 @@ relative_position_id = SER_protect_democracy
 		prerequisite = {
 			focus = SER_YUG_soc_denationalization
 		}
-		bypass = {
-			has_completed_focus = SER_YUG_brotherhood_and_unity
-		}
+		 
 		ai_will_do = { factor = 10 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_soc_hero_cult"
-			set_temp_variable = { gained_pp_per_turn = 1 }
-			custom_effect_tooltip = YUG_modify_pp_gain_increase_tt
-			add_to_variable = { YUG_political_capital_gain = gained_pp_per_turn }
-			set_temp_variable = { pp_gain = 1 }
-			custom_effect_tooltip = YUG_pp_gain_tt
-			add_to_variable = { YUG_political_capital = pp_gain }
+		  add_ideas = SER_YUG_soc_hero_cult
 			add_stability = 0.05
 		}
 	}
@@ -14077,7 +13771,7 @@ relative_position_id = SER_protect_democracy
 	focus = {
 		id = SER_YUG_soc_collective_presidency
 		icon = GFX_goal_HOL_council_communism
-		cost = 6
+		cost = 3
 
 		relative_position_id = SER_YUG_peoples_republics
 		x = 0
@@ -14086,27 +13780,22 @@ relative_position_id = SER_protect_democracy
 		prerequisite = {
 			focus = SER_YUG_soc_denationalization
 		}
-		bypass = {
-			has_completed_focus = SER_YUG_brotherhood_and_unity
-		}
+		
 		ai_will_do = { factor = 10 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_soc_collective_presidency"
-			custom_effect_tooltip = SER_YUG_local_governance_tt
-			add_to_variable = { YUG_pc_expenditure_serbia = 2 }
-			add_to_variable = { YUG_pc_expenditure_croatia = 2 }
-			add_to_variable = { YUG_pc_expenditure_bosnia = 2 }
-			add_to_variable = { YUG_pc_expenditure_slovenia = 2 }
-			add_to_variable = { YUG_pc_expenditure_other = 2 }
-			YUG_update_expenditure_missions = yes
+			swap_ideas = {
+        remove_idea = SER_YUG_peoples_republics2
+        add_idea = SER_YUG_peoples_republics3
+      }
 		}
 	}
 
 	focus = {
 		id = SER_YUG_soc_secularism
 		icon = GFX_focus_mex_triumph_over_the_cristeros
-		cost = 6
+		cost = 3
 
 		relative_position_id = SER_YUG_peoples_republics
 		x = 1
@@ -14115,54 +13804,20 @@ relative_position_id = SER_protect_democracy
 		prerequisite = {
 			focus = SER_YUG_peoples_republics
 		}
-		bypass = {
-			has_completed_focus = SER_YUG_brotherhood_and_unity
-		}
+		
 		ai_will_do = { factor = 10 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_soc_secularism"
-			if = {
-				limit = {
-					check_variable = { YUG_serbia_relations_level > 1 }
-				}
-				set_temp_variable = { checked_state = 1 } # Serbia
-				set_temp_variable = { ethnic_situation = -1 }
-				custom_effect_tooltip = YUG_serbia_reduce_relations_tt
-				YUG_update_ethnic_situation = yes
-			}
-			if = {
-				limit = {
-					check_variable = { YUG_croatia_relations_level < 10 }
-				}
-				set_temp_variable = { checked_state = 2 } # Croatia
-				set_temp_variable = { ethnic_situation = -1 }
-				custom_effect_tooltip = YUG_croatia_reduce_relations_tt
-				YUG_update_ethnic_situation = yes
-			}
-			if = {
-				limit = {
-					check_variable = { YUG_slovenia_relations_level < 10 }
-				}
-				set_temp_variable = { checked_state = 3 } # Bosnia
-				set_temp_variable = { ethnic_situation = -1 }
-				custom_effect_tooltip = YUG_bosnia_reduce_relations_tt
-				YUG_update_ethnic_situation = yes
-			}
 			add_political_power = 100
-			set_temp_variable = { gained_pp_per_turn = 2 }
-			custom_effect_tooltip = YUG_modify_pp_gain_increase_tt
-			add_to_variable = { YUG_political_capital_gain = gained_pp_per_turn }
-			set_temp_variable = { pp_gain = 2 }
-			custom_effect_tooltip = YUG_pp_gain_tt
-			add_to_variable = { YUG_political_capital = pp_gain }
+      add_stability = 0.1
 		}
 	}
 
 	focus = {
 		id = SER_YUG_soc_party_supremacy
 		icon = GFX_focus_YUG_pan_slavic_congress
-		cost = 6
+		cost = 3
 
 		relative_position_id = SER_YUG_peoples_republics
 		x = 2
@@ -14174,30 +13829,25 @@ relative_position_id = SER_protect_democracy
 		prerequisite = {
 			focus = SER_YUG_soc_secularism
 		}
-		bypass = {
-			has_completed_focus = SER_YUG_brotherhood_and_unity
-		}
+		available = {
+      has_completed_focus = SER_YUG_soc_collective_presidency
+    } 
 		ai_will_do = { factor = 10 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_soc_party_supremacy"
-			add_popularity = {
-				ideology = radical_socialist
-				popularity = 0.08
-			}
-			set_temp_variable = { gained_pp_per_turn = 1 }
-			custom_effect_tooltip = YUG_modify_pp_gain_increase_tt
-			add_to_variable = { YUG_political_capital_gain = gained_pp_per_turn }
-			set_temp_variable = { pp_gain = 1 }
-			custom_effect_tooltip = YUG_pp_gain_tt
-			add_to_variable = { YUG_political_capital = pp_gain }
+			increase_ruling_party_popularity_by_10 = yes
+			swap_ideas = {
+        remove_idea = SER_YUG_peoples_republics3
+        add_idea = SER_YUG_peoples_republics4
+      }
 		}
 	}
 
 	focus = {
 		id = SER_YUG_soc_move_the_capital
 		icon = GFX_goal_generic_industry_reallocation
-		cost = 6
+		cost = 3
 
 		relative_position_id = SER_YUG_peoples_republics
 		x = 1
@@ -14277,34 +13927,28 @@ relative_position_id = SER_protect_democracy
 		icon = GFX_focus_spr_torchbearers_of_tomorrow
 		cost = 1
 
-		x = 50
-		y = 13
+		x = 43
+		y = 7
 
 		
-		available = {
-			custom_override_tooltip = {
-				tooltip = SER_YUG_united_states_tt
-				always = no
-			}
-		}
+		prerequisite = {
+      focus = SER_YUG_standardize_rail_gauges
+    }
+    allow_branch = {
+      has_country_flag = SER_YUG_democracy
+    }
 		ai_will_do = { factor = 10 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_united_states"
 			custom_effect_tooltip = SER_YUG_united_states_effect_tt
-			if = {
-				limit = {
-					has_completed_focus = SER_montenegro_experiment
-					owns_state = 841
-				}
-				841 = { add_dynamic_modifier = { modifier = SER_federalized_montenegro } }
-			}
+			
 		}
 	}
   focus = {
 		id = SER_YUG_federal_constitution
 		icon = GFX_goal_OTT_constitution
-		cost = 6
+		cost = 3
   relative_position_id = SER_YUG_united_states
 		x = 3
 		y = 1
@@ -14312,14 +13956,12 @@ relative_position_id = SER_protect_democracy
 		prerequisite = {
 			focus = SER_YUG_united_states
 		}
-		bypass = {
-			has_completed_focus = SER_YUG_brotherhood_and_unity
-		}
+		 
 		ai_will_do = { factor = 10 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_federal_constitution"
-			custom_effect_tooltip = SER_YUG_federal_constitution_tt
+			add_ideas = SER_YUG_federal_constitution
 			add_stability = 0.05
 		}
 	}
@@ -14327,7 +13969,7 @@ relative_position_id = SER_protect_democracy
 	focus = {
 		id = SER_YUG_serbo_croatian_language
 		icon = GFX_goal_KTG_Educate_natives
-		cost = 6
+		cost = 3
 
 		relative_position_id = SER_YUG_federal_constitution
 		x = 0
@@ -14336,9 +13978,7 @@ relative_position_id = SER_protect_democracy
 		prerequisite = {
 			focus = SER_YUG_federal_constitution
 		}
-		bypass = {
-			has_completed_focus = SER_YUG_brotherhood_and_unity
-		}
+		 
 		ai_will_do = { factor = 10 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
@@ -14353,7 +13993,7 @@ relative_position_id = SER_protect_democracy
 	focus = {
 		id = SER_YUG_local_governance
 		icon = GFX_goal_generic_elections
-		cost = 6
+		cost = 3
 
 		relative_position_id = SER_YUG_federal_constitution
 		x = 2
@@ -14362,27 +14002,20 @@ relative_position_id = SER_protect_democracy
 		prerequisite = {
 			focus = SER_YUG_federal_constitution
 		}
-		bypass = {
-			has_completed_focus = SER_YUG_brotherhood_and_unity
-		}
+		 
 		ai_will_do = { factor = 10 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_local_governance"
-			custom_effect_tooltip = SER_YUG_local_governance_tt
-			add_to_variable = { YUG_pc_expenditure_serbia = 2 }
-			add_to_variable = { YUG_pc_expenditure_croatia = 2 }
-			add_to_variable = { YUG_pc_expenditure_bosnia = 2 }
-			add_to_variable = { YUG_pc_expenditure_slovenia = 2 }
-			add_to_variable = { YUG_pc_expenditure_other = 2 }
-			YUG_update_expenditure_missions = yes
+			add_one_random_military_factory = yes
+      add_one_random_military_factory = yes
 		}
 	}
 
 	focus = {
 		id = SER_YUG_rep_bosniak_relations
 		icon = GFX_goal_OTT_Muslim_Relations
-		cost = 6
+		cost = 3
 
 		relative_position_id = SER_YUG_federal_constitution
 		x = 1
@@ -14394,15 +14027,12 @@ relative_position_id = SER_protect_democracy
 		mutually_exclusive = {
 			focus = SER_YUG_rep_renew_precani_settlement
 		}
-		bypass = {
-			has_completed_focus = SER_YUG_brotherhood_and_unity
-		}
+		 
 		ai_will_do = { factor = 10 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_rep_bosniak_relations"
-			set_variable = { YUG_bosnia_pp_requirement = 0 }
-			custom_effect_tooltip = SER_YUG_bosnia_zero_demand_tt
+			add_stability = 0.1
 			add_political_power = 100
 		}
 	}
@@ -14410,7 +14040,7 @@ relative_position_id = SER_protect_democracy
 	focus = {
 		id = SER_YUG_rep_renew_precani_settlement
 		icon = GFX_goal_conspiracy
-		cost = 6
+		cost = 3
 
 		relative_position_id = SER_YUG_federal_constitution
 		x = 3
@@ -14422,30 +14052,20 @@ relative_position_id = SER_protect_democracy
 		mutually_exclusive = {
 			focus = SER_YUG_rep_bosniak_relations
 		}
-		bypass = {
-			has_completed_focus = SER_YUG_brotherhood_and_unity
-		}
+		 
 		ai_will_do = { factor = 10 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_rep_renew_precani_settlement"
-			if = {
-				limit = {
-					check_variable = { YUG_bosnia_relations_level > 1 }
-				}
-				set_temp_variable = { checked_state = 3 } # Bosnia
-				set_temp_variable = { ethnic_situation = -1 }
-				custom_effect_tooltip = YUG_bosnia_reduce_relations_tt
-				YUG_update_ethnic_situation = yes
-			}
-			custom_effect_tooltip = SER_YUG_rep_renew_precani_settlement_tt
+			add_one_random_civilian_factory = yes
+      add_one_random_civilian_factory = yes
 		}
 	}
 
 	focus = {
 		id = SER_YUG_republican_concordat
 		icon = GFX_goal_accord_with_pope
-		cost = 6
+		cost = 3
 
 		relative_position_id = SER_YUG_federal_constitution
 		x = -1
@@ -14454,40 +14074,15 @@ relative_position_id = SER_protect_democracy
 		prerequisite = {
 			focus = SER_YUG_federal_constitution
 		}
-		bypass = {
-			has_completed_focus = SER_YUG_brotherhood_and_unity
-		}
+		 
 		ai_will_do = { factor = 10 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_republican_concordat"
-			if = {
-				limit = {
-					check_variable = { YUG_serbia_relations_level > 1 }
-				}
-				set_temp_variable = { checked_state = 1 } # Serbia
-				set_temp_variable = { ethnic_situation = -1 }
-				custom_effect_tooltip = YUG_serbia_reduce_relations_tt
-				YUG_update_ethnic_situation = yes
-			}
-			if = {
-				limit = {
-					check_variable = { YUG_croatia_relations_level < 10 }
-				}
-				set_temp_variable = { checked_state = 2 } # Croatia
-				set_temp_variable = { ethnic_situation = 1 }
-				custom_effect_tooltip = YUG_croatia_improve_relations_tt
-				YUG_update_ethnic_situation = yes
-			}
-			if = {
-				limit = {
-					check_variable = { YUG_slovenia_relations_level < 10 }
-				}
-				set_temp_variable = { checked_state = 4 } # Slovenia
-				set_temp_variable = { ethnic_situation = 1 }
-				custom_effect_tooltip = YUG_slovenia_improve_relations_tt
-				YUG_update_ethnic_situation = yes
-			}
+			swap_ideas = {
+        remove_idea = SER_YUG_federal_constitution
+        add_idea = SER_YUG_federal_constitution2
+      }
 			add_stability = 0.05
 		}
 	}
@@ -14495,7 +14090,7 @@ relative_position_id = SER_protect_democracy
 	focus = {
 		id = SER_YUG_referendum_federalism
 		icon = GFX_goal_DOM_Call_Special_Election
-		cost = 6
+		cost = 3
 
 		relative_position_id = SER_YUG_federal_constitution
 		x = 0
@@ -14508,24 +14103,23 @@ relative_position_id = SER_protect_democracy
 			focus = SER_YUG_rep_renew_precani_settlement
 			focus = SER_YUG_rep_bosniak_relations
 		}
-		bypass = {
-			has_completed_focus = SER_YUG_brotherhood_and_unity
-		}
+		 
 		ai_will_do = { factor = 10 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_referendum_federalism"
-			set_temp_variable = { pp_gain = 4 }
-			custom_effect_tooltip = YUG_pp_gain_tt
-			add_to_variable = { YUG_political_capital = pp_gain }
-			custom_effect_tooltip = SER_YUG_referendum_federalism_tt
+			swap_ideas = {
+        remove_idea = SER_YUG_federal_constitution2
+        add_idea = SER_YUG_federal_constitution3
+      }
+      
 		}
 	}
 
 	focus = {
 		id = SER_YUG_balkans_guiding_light
 		icon = GFX_focus_BUL_free_balkan_states
-		cost = 6
+		cost = 3
     relative_position_id = SER_YUG_united_states
 		x = -1
 		y = 1
@@ -14546,21 +14140,27 @@ relative_position_id = SER_protect_democracy
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_balkans_guiding_light"
-			if = {
+			create_wargoal = { target = BUL type = annex_everything }
+      every_state = {
 				limit = {
-					is_faction_leader = yes
-					any_allied_country = { has_democratic_government = no }
+					is_core_of = BUL
 				}
-				belgrade_pact_is_disbanded = yes
+				add_core_of = SER
 			}
-			custom_effect_tooltip = SER_YUG_balkans_guiding_light_tt
+      create_wargoal = { target = ALB type = annex_everything }
+			 every_state = {
+				limit = {
+					is_core_of = ALB
+				}
+				add_core_of = SER
+			}
 		}
 	}
 
 	focus = {
 		id = SER_YUG_invite_foreign_experts
 		icon = GFX_goal_bag_of_money
-		cost = 6
+		cost = 3
   relative_position_id = SER_YUG_united_states
 		x = -3
 		y = 2
@@ -14596,7 +14196,7 @@ relative_position_id = SER_protect_democracy
 	focus = {
 		id = SER_YUG_special_relationship
 		icon = GFX_goal_FRA_Internationale_Congress
-		cost = 6
+		cost = 3
 
 	  relative_position_id = SER_YUG_united_states
 		x = -1
@@ -14610,9 +14210,18 @@ relative_position_id = SER_protect_democracy
 			focus = SER_YUG_invite_foreign_experts
 		}
 		available = {
-			has_global_flag = second_weltkrieg_has_ended
+      OR = {
+        AND = {
+          has_government = social_liberal
+          has_completed_focus = SER_shadow_of_konspiracija
+        }
+        AND = {
+          has_government = social_democrat
+          has_completed_focus = SER_suspend_elections
+        }
+      }
+      
 			INT = { is_faction_leader = yes }
-			GER = { is_faction_leader = no }
 			NOT = {
 				has_war_with = INT
 				is_in_faction_with = ENT
@@ -14630,9 +14239,13 @@ relative_position_id = SER_protect_democracy
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_special_relationship"
-			INT = { country_event = yugoslavia.7 }
-			custom_effect_tooltip = if_they_accept_tt
-			effect_tooltip = {
+      if = {
+        limit = {
+          has_government = social_liberal
+        }
+        country_event = serbia.100
+      }
+      
 				INT = {
 					give_guarantee = SER
 					give_military_access = SER
@@ -14645,14 +14258,14 @@ relative_position_id = SER_protect_democracy
 					give_military_access = INT
 				}
 				add_ideas = SER_YUG_special_relationship_idea
-			}
+			
 		}
 	}
 
 	focus = {
 		id = SER_YUG_anti_imperialist_vanguard
 		icon = GFX_goal_balkan_fist
-		cost = 6
+		cost = 3
 
 	  relative_position_id = SER_YUG_united_states
 		x = 1
@@ -14666,7 +14279,6 @@ relative_position_id = SER_protect_democracy
 			focus = SER_YUG_invite_foreign_experts
 		}
 		available = {
-			has_global_flag = second_weltkrieg_has_ended
 			GER = { is_faction_leader = yes }
 			NOT = {
 				has_war_with = GER
@@ -14689,7 +14301,7 @@ relative_position_id = SER_protect_democracy
 			else = {
 				create_faction = non_aligned_movement
 			}
-			custom_effect_tooltip = SER_YUG_anti_imperialist_vanguard_tt
+			
 		}
 	}
   focus = {
@@ -14697,16 +14309,16 @@ relative_position_id = SER_protect_democracy
 		icon = GFX_goal_SER_yugoslavia
 		cost = 1
 
-		x = 60
-		y = 13
+		x = 43
+		y = 7
 
 		
-		available = {
-			custom_override_tooltip = {
-				tooltip = SER_YUG_three_named_nation_tt
-				always = no
-			}
-		}
+		prerequisite = {
+      focus = SER_YUG_standardize_rail_gauges
+    }
+    allow_branch = {
+      has_country_flag = SER_YUG_radical
+    }
 		ai_will_do = { factor = 10 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
@@ -14717,40 +14329,27 @@ relative_position_id = SER_protect_democracy
   focus = {
 		id = SER_YUG_award_piemont
 		icon = GFX_goal_serbia
-		cost = 6
- relative_position_id = SER_YUG_three_named_nation
+		cost = 3
+    relative_position_id = SER_YUG_three_named_nation
 		x = 3
 		y = 1
 
 		prerequisite = {
 			focus = SER_YUG_three_named_nation
 		}
-		bypass = {
-			has_completed_focus = SER_YUG_brotherhood_and_unity
-		}
+		 
 		ai_will_do = { factor = 10 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_award_piemont"
-			if = {
-				limit = {
-					check_variable = { YUG_serbia_relations_level < 10 }
-				}
-				set_temp_variable = { checked_state = 1 }
-				set_temp_variable = { ethnic_situation = 1 }
-				custom_effect_tooltip = YUG_serbia_improve_relations_tt
-				YUG_update_ethnic_situation = yes
-			}
-			set_temp_variable = { gained_pp_per_turn = 1 }
-			custom_effect_tooltip = YUG_modify_pp_gain_increase_tt
-			add_to_variable = { YUG_political_capital_gain = gained_pp_per_turn }
+			add_ideas = SER_YUG_award_piemont
 		}
 	}
 
 	focus = {
 		id = SER_YUG_promote_cyrillic
 		icon = GFX_goal_KTG_Educate_natives
-		cost = 6
+		cost = 3
 
 		relative_position_id = SER_YUG_award_piemont
 		x = -1
@@ -14759,25 +14358,12 @@ relative_position_id = SER_protect_democracy
 		prerequisite = {
 			focus = SER_YUG_award_piemont
 		}
-		bypass = {
-			has_completed_focus = SER_YUG_brotherhood_and_unity
-		}
+		 
 		ai_will_do = { factor = 10 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_promote_cyrillic"
-			if = {
-				limit = {
-					check_variable = { YUG_croatia_relations_level > 1 }
-				}
-				set_temp_variable = { checked_state = 2 }
-				set_temp_variable = { ethnic_situation = -1 }
-				custom_effect_tooltip = YUG_croatia_reduce_relations_tt
-				YUG_update_ethnic_situation = yes
-			}
-			set_temp_variable = { gained_pp_per_turn = 1 }
-			custom_effect_tooltip = YUG_modify_pp_gain_increase_tt
-			add_to_variable = { YUG_political_capital_gain = gained_pp_per_turn }
+			
 			add_ideas = SER_YUG_cyrillic
 		}
 	}
@@ -14785,7 +14371,7 @@ relative_position_id = SER_protect_democracy
 	focus = {
 		id = SER_YUG_political_centralisation
 		icon = GFX_goal_ideology_authoritarian_democrat
-		cost = 6
+		cost = 3
 
 		relative_position_id = SER_YUG_award_piemont
 		x = 1
@@ -14794,21 +14380,22 @@ relative_position_id = SER_protect_democracy
 		prerequisite = {
 			focus = SER_YUG_award_piemont
 		}
-		bypass = {
-			has_completed_focus = SER_YUG_brotherhood_and_unity
-		}
+		 
 		ai_will_do = { factor = 10 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_political_centralisation"
-			custom_effect_tooltip = SER_YUG_economic_centralisation_tt
+			swap_ideas = {
+        remove_idea = SER_YUG_award_piemont
+        add_idea = SER_YUG_award_piemont2
+      }
 		}
 	}
 
 	focus = {
 		id = SER_YUG_ballot_box_centralization
 		icon = GFX_goal_KTG_Elections
-		cost = 6
+		cost = 3
 
 		relative_position_id = SER_YUG_award_piemont
 		x = 0
@@ -14817,27 +14404,22 @@ relative_position_id = SER_protect_democracy
 		prerequisite = {
 			focus = SER_YUG_political_centralisation
 		}
-		bypass = {
-			has_completed_focus = SER_YUG_brotherhood_and_unity
-		}
+		 
 		ai_will_do = { factor = 10 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_ballot_box_centralization"
-			custom_effect_tooltip = SER_YUG_local_governance_tt
-			add_to_variable = { YUG_pc_expenditure_serbia = 2 }
-			add_to_variable = { YUG_pc_expenditure_croatia = 2 }
-			add_to_variable = { YUG_pc_expenditure_bosnia = 2 }
-			add_to_variable = { YUG_pc_expenditure_slovenia = 2 }
-			add_to_variable = { YUG_pc_expenditure_other = 2 }
-			YUG_update_expenditure_missions = yes
+			swap_ideas = {
+        remove_idea = SER_YUG_award_piemont2
+        add_idea = SER_YUG_award_piemont3
+      }
 		}
 	}
 
 	focus = {
 		id = SER_YUG_heritage_of_two_revolutions
 		icon = GFX_goal_liberty
-		cost = 6
+		cost = 3
 
 		relative_position_id = SER_YUG_award_piemont
 		x = 1
@@ -14846,24 +14428,23 @@ relative_position_id = SER_protect_democracy
 		prerequisite = {
 			focus = SER_YUG_ballot_box_centralization
 		}
-		bypass = {
-			has_completed_focus = SER_YUG_brotherhood_and_unity
-		}
+		 
 		ai_will_do = { factor = 10 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_heritage_of_two_revolutions"
 			add_stability = 0.05
-			set_temp_variable = { pp_gain = 4 }
-			custom_effect_tooltip = YUG_pp_gain_tt
-			add_to_variable = { YUG_political_capital = pp_gain }
+			swap_ideas = {
+        remove_idea = SER_YUG_award_piemont3
+        add_idea = SER_YUG_award_piemont4
+      }
 		}
 	}
 
 	focus = {
 		id = SER_YUG_islamic_religious_community
 		icon = GFX_goal_OTT_Islamic_Education
-		cost = 6
+		cost = 3
 
 		relative_position_id = SER_YUG_award_piemont
 		x = 2
@@ -14872,29 +14453,25 @@ relative_position_id = SER_protect_democracy
 		prerequisite = {
 			focus = SER_YUG_political_centralisation
 		}
-		bypass = {
-			has_completed_focus = SER_YUG_brotherhood_and_unity
-		}
+		 
 		ai_will_do = { factor = 10 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_islamic_religious_community"
-			if = {
-				limit = {
-					check_variable = { YUG_bosnia_relations_level < 10 }
-				}
-				set_temp_variable = { checked_state = 3 } # Bosnia
-				set_temp_variable = { ethnic_situation = 1 }
-				custom_effect_tooltip = YUG_bosnia_improve_relations_tt
-				YUG_update_ethnic_situation = yes
+			 104 = {
+				increase_state_category_by_two_levels = yes
 			}
-			else = {
-				set_temp_variable = { pp_gain = 1 }
-				custom_effect_tooltip = YUG_pp_gain_tt
-				add_to_variable = { YUG_political_capital = pp_gain }
-				104 = {
-					add_extra_state_shared_building_slots = 1
-				}
+			1148 = {
+				increase_state_category_by_two_levels = yes
+			}
+      1143 = {
+				increase_state_category_by_two_levels = yes
+			}
+      1141 = {
+				increase_state_category_by_two_levels = yes
+			}
+      1142 = {
+				increase_state_category_by_two_levels = yes
 			}
 		}
 	}
@@ -14902,7 +14479,7 @@ relative_position_id = SER_protect_democracy
 	focus = {
 		id = SER_YUG_renew_settlement_decrees
 		icon = GFX_goal_SYR_Stop_Jewish_Settlers
-		cost = 6
+		cost = 3
 
 		relative_position_id = SER_YUG_award_piemont
 		x = 4
@@ -14911,47 +14488,21 @@ relative_position_id = SER_protect_democracy
 		prerequisite = {
 			focus = SER_YUG_political_centralisation
 		}
-		bypass = {
-			has_completed_focus = SER_YUG_brotherhood_and_unity
-		}
+		 
 		ai_will_do = { factor = 10 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_renew_settlement_decrees"
-			if = {
-				limit = {
-					check_variable = { YUG_other_relations_level > 2 }
-				}
-				set_temp_variable = { checked_state = 5 }
-				set_temp_variable = { ethnic_situation = -2 }
-				custom_effect_tooltip = YUG_other_reduce_relations_tt
-				YUG_update_ethnic_situation = yes
-			}
-			else_if = {
-				limit = {
-					check_variable = { YUG_other_relations_level > 1 }
-				}
-				set_temp_variable = { checked_state = 5 }
-				set_temp_variable = { ethnic_situation = -1 }
-				custom_effect_tooltip = YUG_other_reduce_relations_tt
-				YUG_update_ethnic_situation = yes
-			}
-			set_temp_variable = { gained_pp_per_turn = 2 }
-			custom_effect_tooltip = YUG_modify_pp_gain_increase_tt
-			add_to_variable = { YUG_political_capital_gain = gained_pp_per_turn }
-			set_temp_variable = { pp_gain = 2 }
-			custom_effect_tooltip = YUG_pp_gain_tt
-			add_to_variable = { YUG_political_capital = pp_gain }
-			106 = {
-				add_extra_state_shared_building_slots = 2
-			}
+			add_one_random_military_factory = yes
+      add_one_random_civilian_factory = yes
+      add_one_random_civilian_factory = yes
 		}
 	}
 
 	focus = {
 		id = SER_YUG_form_yugosphere
 		icon = GFX_focus_invite_yugoslavia
-		cost = 6
+		cost = 3
     relative_position_id = SER_YUG_three_named_nation
 		x = -1
 		y = 1
@@ -14973,7 +14524,7 @@ relative_position_id = SER_protect_democracy
 	focus = {
 		id = SER_YUG_pragmatic_foreign_policy
 		icon = GFX_goal_bag_of_money
-		cost = 6
+		cost = 3
  relative_position_id = SER_YUG_three_named_nation
 		x = 1
 		y = 3
@@ -15008,7 +14559,7 @@ relative_position_id = SER_protect_democracy
 	focus = {
 		id = SER_YUG_subjugate_bulgaria
 		icon = GFX_BUL_broken_crown
-		cost = 6
+		cost = 3
  relative_position_id = SER_YUG_three_named_nation
 		x = -2
 		y = 2
@@ -15023,14 +14574,20 @@ relative_position_id = SER_protect_democracy
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_subjugate_bulgaria"
-			unlock_decision_tooltip = SER_YUG_Invade_Bulgaria
+			create_wargoal = { target = BUL type = annex_everything }
+      every_state = {
+				limit = {
+					is_core_of = BUL
+				}
+				add_core_of = SER
+			}
 		}
 	}
 
 	focus = {
 		id = SER_YUG_subjugate_albania
 		icon = GFX_goal_albania
-		cost = 6
+		cost = 3
  relative_position_id = SER_YUG_three_named_nation
 		x = 0
 		y = 2
@@ -15046,7 +14603,13 @@ relative_position_id = SER_protect_democracy
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_subjugate_albania"
-			unlock_decision_tooltip = SER_YUG_Invade_Albania
+			 create_wargoal = { target = ALB type = annex_everything }
+			 every_state = {
+				limit = {
+					is_core_of = ALB
+				}
+				add_core_of = SER
+			}
 		}
 	}
   focus = {
@@ -15054,15 +14617,14 @@ relative_position_id = SER_protect_democracy
 		icon = GFX_goal_SER_Immortal_Yugoslavism
 		cost = 1
 
-		x = 70
-		y = 13
-
-		available = {
-			custom_override_tooltip = {
-				tooltip = SER_YUG_integral_yugoslavia_tt
-				always = no
-			}
-		}
+		x = 43
+		y = 7
+    prerequisite = {
+      focus = SER_YUG_standardize_rail_gauges
+    }
+    allow_branch = {
+      has_country_flag = SER_YUG_king
+    }
 		ai_will_do = { factor = 10 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
@@ -15073,7 +14635,7 @@ relative_position_id = SER_protect_democracy
   focus = {
 		id = SER_YUG_banovina_organisation
 		icon = GFX_focus_generic_authoritarian_government
-		cost = 6
+		cost = 3
  relative_position_id = SER_YUG_integral_yugoslavia
 		x = 3
 		y = 1
@@ -15081,71 +14643,26 @@ relative_position_id = SER_protect_democracy
 		prerequisite = {
 			focus = SER_YUG_integral_yugoslavia
 		}
-		bypass = {
-			has_completed_focus = SER_YUG_brotherhood_and_unity
-		}
+		 
 		ai_will_do = { factor = 10 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_banovina_organisation"
-			if = {
-				limit = {
-					check_variable = { YUG_serbia_relations_level > 1 }
-				}
-				set_temp_variable = { checked_state = 1 } # Serbia
-				set_temp_variable = { ethnic_situation = -1 }
-				custom_effect_tooltip = YUG_serbia_reduce_relations_tt
-				YUG_update_ethnic_situation = yes
-			}
-			if = {
-				limit = {
-					check_variable = { YUG_croatia_relations_level > 1 }
-				}
-				set_temp_variable = { checked_state = 2 } # Croatia
-				set_temp_variable = { ethnic_situation = -1 }
-				custom_effect_tooltip = YUG_croatia_reduce_relations_tt
-				YUG_update_ethnic_situation = yes
-			}
-			if = {
-				limit = {
-					check_variable = { YUG_bosnia_relations_level > 1 }
-				}
-				set_temp_variable = { checked_state = 3 } # Bosnia
-				set_temp_variable = { ethnic_situation = -1 }
-				custom_effect_tooltip = YUG_bosnia_reduce_relations_tt
-				YUG_update_ethnic_situation = yes
-			}
-			if = {
-				limit = {
-					check_variable = { YUG_slovenia_relations_level > 1 }
-				}
-				set_temp_variable = { checked_state = 4 } # Slovenia
-				set_temp_variable = { ethnic_situation = -1 }
-				custom_effect_tooltip = YUG_slovenia_reduce_relations_tt
-				YUG_update_ethnic_situation = yes
-			}
-			if = {
-				limit = {
-					check_variable = { YUG_other_relations_level > 1 }
-				}
-				set_temp_variable = { checked_state = 5 } # Other
-				set_temp_variable = { ethnic_situation = -1 }
-				custom_effect_tooltip = YUG_other_reduce_relations_tt
-				YUG_update_ethnic_situation = yes
-			}
-			set_temp_variable = { gained_pp_per_turn = 3 }
-			custom_effect_tooltip = YUG_modify_pp_gain_increase_tt
-			add_to_variable = { YUG_political_capital_gain = gained_pp_per_turn }
-			set_temp_variable = { pp_gain = 3 }
-			custom_effect_tooltip = YUG_pp_gain_tt
-			add_to_variable = { YUG_political_capital = pp_gain }
+			every_owned_state = {
+        add_extra_state_shared_building_slots = 1
+        add_building_construction = {
+          type = infrastructure
+          level = 1
+          instant_build = yes
+        }
+      }
 		}
 	}
 
 	focus = {
 		id = SER_YUG_united_myth
 		icon = GFX_goal_national_populism
-		cost = 6
+		cost = 3
 
 		relative_position_id = SER_YUG_banovina_organisation
 		x = -1
@@ -15154,33 +14671,20 @@ relative_position_id = SER_protect_democracy
 		prerequisite = {
 			focus = SER_YUG_banovina_organisation
 		}
-		bypass = {
-			has_completed_focus = SER_YUG_brotherhood_and_unity
-		}
+		 
 		ai_will_do = { factor = 10 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_united_myth"
 			add_ideas = SER_YUG_national_myth
-			if = {
-				limit = {
-					check_variable = { YUG_serbia_relations_level > 1 }
-				}
-				set_temp_variable = { checked_state = 1 } # Serbia
-				set_temp_variable = { ethnic_situation = -1 }
-				custom_effect_tooltip = YUG_serbia_reduce_relations_tt
-				YUG_update_ethnic_situation = yes
-			}
-			set_temp_variable = { gained_pp_per_turn = 2 }
-			custom_effect_tooltip = YUG_modify_pp_gain_increase_tt
-			add_to_variable = { YUG_political_capital_gain = gained_pp_per_turn }
+			
 		}
 	}
 
 	focus = {
 		id = SER_YUG_yugoslav_king
 		icon = GFX_goal_monarchism
-		cost = 6
+		cost = 3
 
 		relative_position_id = SER_YUG_banovina_organisation
 		x = -1
@@ -15189,9 +14693,7 @@ relative_position_id = SER_protect_democracy
 		prerequisite = {
 			focus = SER_YUG_united_myth
 		}
-		bypass = {
-			has_completed_focus = SER_YUG_brotherhood_and_unity
-		}
+		 
 		available = {
 			NOT = { has_country_leader = { character = SER_milan_stojadinovic } }
 		}
@@ -15199,26 +14701,16 @@ relative_position_id = SER_protect_democracy
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_yugoslav_king"
-			if = {
-				limit = {
-					check_variable = { YUG_serbia_relations_level < 10 }
-				}
-				set_temp_variable = { checked_state = 1 }
-				set_temp_variable = { ethnic_situation = 1 }
-				custom_effect_tooltip = YUG_serbia_improve_relations_tt
-				YUG_update_ethnic_situation = yes
-			}
+			
 			add_stability = 0.05
-			set_temp_variable = { pp_gain = 1 }
-			custom_effect_tooltip = YUG_pp_gain_tt
-			add_to_variable = { YUG_political_capital = pp_gain }
+			add_ideas = SER_YUG_yugoslav_king
 		}
 	}
 
 	focus = {
 		id = SER_YUG_defeat_tribalism
 		icon = GFX_goal_generic_imprison_people
-		cost = 6
+		cost = 3
 
 		relative_position_id = SER_YUG_banovina_organisation
 		x = 1
@@ -15227,21 +14719,19 @@ relative_position_id = SER_protect_democracy
 		prerequisite = {
 			focus = SER_YUG_banovina_organisation
 		}
-		bypass = {
-			has_completed_focus = SER_YUG_brotherhood_and_unity
-		}
+		 
 		ai_will_do = { factor = 10 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_defeat_tribalism"
-			custom_effect_tooltip = SER_YUG_integralism_campaign_tt
+			add_ideas = SER_YUG_defeat_tribalism
 		}
 	}
 
 	focus = {
 		id = SER_YUG_permeate_education
 		icon = GFX_goal_KTG_Educate_natives
-		cost = 6
+		cost = 3
 
 		relative_position_id = SER_YUG_banovina_organisation
 		x = 0
@@ -15250,23 +14740,19 @@ relative_position_id = SER_protect_democracy
 		prerequisite = {
 			focus = SER_YUG_defeat_tribalism
 		}
-		bypass = {
-			has_completed_focus = SER_YUG_brotherhood_and_unity
-		}
+		 
 		ai_will_do = { factor = 10 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_permeate_education"
-			set_temp_variable = { gained_pp_per_turn = 2 }
-			custom_effect_tooltip = YUG_modify_pp_gain_increase_tt
-			add_to_variable = { YUG_political_capital_gain = gained_pp_per_turn }
+			add_ideas = SER_YUG_permeate_education
 		}
 	}
 
 	focus = {
 		id = SER_YUG_mass_integralist_movement
 		icon = GFX_goal_conspiracy
-		cost = 6
+		cost = 3
 
 		relative_position_id = SER_YUG_banovina_organisation
 		x = 1
@@ -15275,31 +14761,20 @@ relative_position_id = SER_protect_democracy
 		prerequisite = {
 			focus = SER_YUG_defeat_tribalism
 		}
-		bypass = {
-			has_completed_focus = SER_YUG_brotherhood_and_unity
-		}
+		 
 		ai_will_do = { factor = 10 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_mass_integralist_movement"
-			set_temp_variable = { pp_gain = 4 }
-			custom_effect_tooltip = YUG_pp_gain_tt
-			add_to_variable = { YUG_political_capital = pp_gain }
-			add_manpower = 10000
-			if = {
-				limit = {
-					has_country_flag = YUG_orjuna_is_established
-				}
-				clr_country_flag = YUG_orjuna_is_established
-				custom_effect_tooltip = YUG_orjuna_is_disestablished_tt
-			}
+			add_manpower = 50000
+      add_war_support = 0.1
 		}
 	}
 
 	focus = {
 		id = SER_YUG_language_standardisation
 		icon = GFX_goal_new_treaty
-		cost = 6
+		cost = 3
 
 		relative_position_id = SER_YUG_banovina_organisation
 		x = 3
@@ -15308,42 +14783,20 @@ relative_position_id = SER_protect_democracy
 		prerequisite = {
 			focus = SER_YUG_defeat_tribalism
 		}
-		bypass = {
-			has_completed_focus = SER_YUG_brotherhood_and_unity
-		}
+		 
 		ai_will_do = { factor = 10 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_language_standardisation"
 			add_ideas = SER_YUG_serbocroatianslovenian
-			if = {
-				limit = {
-					check_variable = { YUG_croatia_relations_level > 1 }
-				}
-				set_temp_variable = { checked_state = 2 } # Croatia
-				set_temp_variable = { ethnic_situation = -1 }
-				custom_effect_tooltip = YUG_croatia_reduce_relations_tt
-				YUG_update_ethnic_situation = yes
-			}
-			if = {
-				limit = {
-					check_variable = { YUG_slovenia_relations_level > 1 }
-				}
-				set_temp_variable = { checked_state = 4 } # Slovenia
-				set_temp_variable = { ethnic_situation = -1 }
-				custom_effect_tooltip = YUG_slovenia_reduce_relations_tt
-				YUG_update_ethnic_situation = yes
-			}
-			set_temp_variable = { gained_pp_per_turn = 2 }
-			custom_effect_tooltip = YUG_modify_pp_gain_increase_tt
-			add_to_variable = { YUG_political_capital_gain = gained_pp_per_turn }
+			
 		}
 	}
 
 	focus = {
 		id = SER_YUG_anti_partisanship
 		icon = GFX_focus_usa_voter_registration_act
-		cost = 6
+		cost = 3
 
 		relative_position_id = SER_YUG_banovina_organisation
 		x = 2
@@ -15355,41 +14808,20 @@ relative_position_id = SER_protect_democracy
 		prerequisite = {
 			focus = SER_YUG_mass_integralist_movement
 		}
-		bypass = {
-			has_completed_focus = SER_YUG_brotherhood_and_unity
-		}
+		 
 		ai_will_do = { factor = 10 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_anti_partisanship"
-			set_temp_variable = { gained_pp_per_turn = 1 }
-			custom_effect_tooltip = YUG_modify_pp_gain_increase_tt
-			add_to_variable = { YUG_political_capital_gain = gained_pp_per_turn }
-			set_temp_variable = { ideology_change_var = 0.05 }
-			change_ruling_party_popularity = yes
-			add_war_support = 0.05
-			set_party_name = {
-				ideology = authoritarian_democrat
-				long_name = SER_YUG_new_royal_paternal_autocrat_party_long
-				name = SER_YUG_new_royal_paternal_autocrat_party
-			}
-			set_party_name = {
-				ideology = paternal_autocrat
-				long_name = SER_YUG_new_royal_paternal_autocrat_party_long
-				name = SER_YUG_new_royal_paternal_autocrat_party
-			}
-			set_party_name = {
-				ideology = national_populist
-				long_name = SER_YUG_new_royal_paternal_autocrat_party_long
-				name = SER_YUG_new_royal_paternal_autocrat_party
-			}
+			increase_ruling_party_popularity_by_15 = yes
+      add_political_power = 100
 		}
 	}
 
 	focus = {
 		id = SER_YUG_greater_yugoslavia
 		icon = GFX_goal_SER_yugoslavia
-		cost = 6
+		cost = 3
     relative_position_id = SER_YUG_integral_yugoslavia
 		x = -1
 		y = 1
@@ -15448,7 +14880,7 @@ relative_position_id = SER_protect_democracy
 	focus = {
 		id = SER_YUG_greater_yugoslavia_south
 		icon = GFX_goal_generic_aegean_sea
-		cost = 6
+		cost = 3
 
 		 relative_position_id = SER_YUG_integral_yugoslavia
 		x = -1
@@ -15461,16 +14893,20 @@ relative_position_id = SER_protect_democracy
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_greater_yugoslavia_south"
-			add_state_claim = 731
-			unlock_decision_tooltip = SER_YUG_Southern_Expansion
-			unlock_decision_tooltip = SER_YUG_Invade_Albania
+			 create_wargoal = { target = ALB type = annex_everything }
+			 every_state = {
+				limit = {
+					is_core_of = ALB
+				}
+				add_core_of = SER
+			}
 		}
 	}
 
 	focus = {
 		id = SER_YUG_greater_yugoslavia_east
 		icon = GFX_BUL_broken_crown
-		cost = 6
+		cost = 3
  relative_position_id = SER_YUG_integral_yugoslavia
 		x = 0
 		y = 2
@@ -15478,24 +14914,17 @@ relative_position_id = SER_protect_democracy
 		prerequisite = {
 			focus = SER_YUG_greater_yugoslavia
 		}
-		available = {
-			NOT = { country_exists = BUL }
-			owns_state = 48 #Sofia
-		}
+		
 		ai_will_do = { factor = 10 }
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_greater_yugoslavia_east"
-			add_stability = -0.1
-			SER_enable_bulgarian_integration = yes
-			custom_effect_tooltip = tooltip_white_line
-			YUG_bulgarian_integration_relations_effect = yes
-			if = {
+			create_wargoal = { target = BUL type = annex_everything }
+      every_state = {
 				limit = {
-					is_ai = no
-					NOT = { has_completed_focus = SER_YUG_brotherhood_and_unity }
+					is_core_of = BUL
 				}
-				set_country_flag = four_of_a_kind_achievement_condition
+				add_core_of = SER
 			}
 		}
 	}
@@ -15503,7 +14932,7 @@ relative_position_id = SER_protect_democracy
 	focus = {
 		id = SER_YUG_greater_yugoslavia_west
 		icon = GFX_focus_generic_eagle
-		cost = 6
+		cost = 3
  relative_position_id = SER_YUG_integral_yugoslavia
 		x = -2
 		y = 2
@@ -15512,20 +14941,13 @@ relative_position_id = SER_protect_democracy
 			focus = SER_YUG_greater_yugoslavia
 		}
 		ai_will_do = { factor = 10 }
-		bypass = {
-			owns_state = 103
-			owns_state = 488
-			owns_state = 683
-			owns_state = 736
-		}
+		
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_greater_yugoslavia_west"
-			add_state_claim = 103
-			add_state_claim = 488
-			add_state_claim = 683
-			add_state_claim = 736
-			unlock_decision_tooltip = SER_YUG_Western_Expansion
+			add_state_core = 1272
+			add_state_core = 759
+			create_wargoal = { target = ITA type = annex_everything }
 		}
 	}
   focus = {
@@ -15533,17 +14955,15 @@ relative_position_id = SER_protect_democracy
 		icon = GFX_goal_SER_yugoslavism
 		cost = 1
 
-		x = 30
-		y = 13
-
-
-    
-		available = {
-			custom_override_tooltip = {
-				tooltip = SER_YUG_royal_federation_tt
-				always = no
-			}
-		}
+		x = 43
+		y = 7
+    prerequisite = {
+      focus = SER_YUG_standardize_rail_gauges
+    }
+    allow_branch = {
+      has_country_flag = SER_YUG_constitutional
+    }
+		
 		ai_will_do = { factor = 10 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
@@ -15554,7 +14974,7 @@ relative_position_id = SER_protect_democracy
   focus = {
 		id = SER_YUG_royal_form_yugosphere
 		icon = GFX_focus_invite_yugoslavia
-		cost = 6
+		cost = 3
     relative_position_id = SER_YUG_royal_federation
 		x = -1
 		y = 1
@@ -15576,7 +14996,7 @@ relative_position_id = SER_protect_democracy
 	focus = {
 		id = SER_YUG_royal_pragmatic_foreign_policy
 		icon = GFX_goal_bag_of_money
-		cost = 6
+		cost = 3
  relative_position_id = SER_YUG_royal_federation
 		x = -2
 		y = 3
@@ -15612,12 +15032,10 @@ relative_position_id = SER_protect_democracy
 	focus = {
 		id = SER_YUG_royal_subjugate_bulgaria
 		icon = GFX_BUL_broken_crown
-		cost = 6
+		cost = 3
  relative_position_id = SER_YUG_royal_federation
 		x = -1
 		y = 2
-
-
 		prerequisite = {
 			focus = SER_YUG_royal_form_yugosphere
 		}
@@ -15628,14 +15046,20 @@ relative_position_id = SER_protect_democracy
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_subjugate_bulgaria"
-			unlock_decision_tooltip = SER_YUG_Invade_Bulgaria
+			create_wargoal = { target = BUL type = annex_everything }
+      every_state = {
+				limit = {
+					is_core_of = BUL
+				}
+				add_core_of = SER
+			}
 		}
 	}
 
 	focus = {
 		id = SER_YUG_royal_subjugate_albania
 		icon = GFX_goal_albania
-		cost = 6
+		cost = 3
  relative_position_id = SER_YUG_royal_federation
 		x = 1
 		y = 2
@@ -15652,14 +15076,20 @@ relative_position_id = SER_protect_democracy
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_subjugate_albania"
-			unlock_decision_tooltip = SER_YUG_Invade_Albania
+      create_wargoal = { target = ALB type = annex_everything }
+			 every_state = {
+				limit = {
+					is_core_of = ALB
+				}
+				add_core_of = SER
+			}
 		}
 	}
 
 	focus = {
 		id = SER_YUG_royal_federal_constitution
 		icon = GFX_GRE_empower_monarchy
-		cost = 6
+		cost = 3
  relative_position_id = SER_YUG_royal_federation
 		x = 3
 		y = 1
@@ -15668,14 +15098,12 @@ relative_position_id = SER_protect_democracy
 		prerequisite = {
 			focus = SER_YUG_royal_federation
 		}
-		bypass = {
-			has_completed_focus = SER_YUG_brotherhood_and_unity
-		}
+		 
 		ai_will_do = { factor = 10 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_federal_constitution"
-			custom_effect_tooltip = SER_YUG_federal_constitution_tt
+			add_ideas = SER_YUG_royal_federal_constitution
 			add_stability = 0.05
 		}
 	}
@@ -15683,7 +15111,7 @@ relative_position_id = SER_protect_democracy
 	focus = {
 		id = SER_YUG_royal_serbo_croatian_language
 		icon = GFX_goal_KTG_Educate_natives
-		cost = 6
+		cost = 3
 
 		relative_position_id = SER_YUG_royal_federal_constitution
 		x = 0
@@ -15692,24 +15120,20 @@ relative_position_id = SER_protect_democracy
 		prerequisite = {
 			focus = SER_YUG_royal_federal_constitution
 		}
-		bypass = {
-			has_completed_focus = SER_YUG_brotherhood_and_unity
-		}
+		 
 		ai_will_do = { factor = 10 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_serbo_croatian_language"
 			add_ideas = SER_YUG_serbocroatian
-			set_temp_variable = { gained_pp_per_turn = 1 }
-			custom_effect_tooltip = YUG_modify_pp_gain_increase_tt
-			add_to_variable = { YUG_political_capital_gain = gained_pp_per_turn }
+			
 		}
 	}
 
 	focus = {
 		id = SER_YUG_royal_local_governance
 		icon = GFX_goal_generic_elections
-		cost = 6
+		cost = 3
 
 		relative_position_id = SER_YUG_royal_federal_constitution
 		x = 2
@@ -15718,27 +15142,20 @@ relative_position_id = SER_protect_democracy
 		prerequisite = {
 			focus = SER_YUG_royal_federal_constitution
 		}
-		bypass = {
-			has_completed_focus = SER_YUG_brotherhood_and_unity
-		}
+		 
 		ai_will_do = { factor = 10 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_local_governance"
-			custom_effect_tooltip = SER_YUG_local_governance_tt
-			add_to_variable = { YUG_pc_expenditure_serbia = 2 }
-			add_to_variable = { YUG_pc_expenditure_croatia = 2 }
-			add_to_variable = { YUG_pc_expenditure_bosnia = 2 }
-			add_to_variable = { YUG_pc_expenditure_slovenia = 2 }
-			add_to_variable = { YUG_pc_expenditure_other = 2 }
-			YUG_update_expenditure_missions = yes
+			add_one_random_military_factory = yes
+      add_one_random_military_factory = yes
 		}
 	}
 
 	focus = {
 		id = SER_YUG_royal_rep_bosniak_relations
 		icon = GFX_goal_OTT_Muslim_Relations
-		cost = 6
+		cost = 3
 
 		relative_position_id = SER_YUG_royal_federal_constitution
 		x = 1
@@ -15750,15 +15167,12 @@ relative_position_id = SER_protect_democracy
 		mutually_exclusive = {
 			focus = SER_YUG_royal_rep_renew_precani_settlement
 		}
-		bypass = {
-			has_completed_focus = SER_YUG_brotherhood_and_unity
-		}
+		 
 		ai_will_do = { factor = 10 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_rep_bosniak_relations"
-			set_variable = { YUG_bosnia_pp_requirement = 0 }
-			custom_effect_tooltip = SER_YUG_bosnia_zero_demand_tt
+			add_stability = 0.1
 			add_political_power = 100
 		}
 	}
@@ -15766,7 +15180,7 @@ relative_position_id = SER_protect_democracy
 	focus = {
 		id = SER_YUG_royal_rep_renew_precani_settlement
 		icon = GFX_goal_conspiracy
-		cost = 6
+		cost = 3
 
 		relative_position_id = SER_YUG_royal_federal_constitution
 		x = 3
@@ -15778,30 +15192,21 @@ relative_position_id = SER_protect_democracy
 		mutually_exclusive = {
 			focus = SER_YUG_royal_rep_bosniak_relations
 		}
-		bypass = {
-			has_completed_focus = SER_YUG_brotherhood_and_unity
-		}
+		 
 		ai_will_do = { factor = 10 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_rep_renew_precani_settlement"
-			if = {
-				limit = {
-					check_variable = { YUG_bosnia_relations_level > 1 }
-				}
-				set_temp_variable = { checked_state = 3 } # Bosnia
-				set_temp_variable = { ethnic_situation = -1 }
-				custom_effect_tooltip = YUG_bosnia_reduce_relations_tt
-				YUG_update_ethnic_situation = yes
-			}
-			custom_effect_tooltip = SER_YUG_rep_renew_precani_settlement_tt
+      add_one_random_civilian_factory = yes
+      add_one_random_civilian_factory = yes
+
 		}
 	}
 
 	focus = {
 		id = SER_YUG_royal_republican_concordat
 		icon = GFX_goal_accord_with_pope
-		cost = 6
+		cost = 3
 
 		relative_position_id = SER_YUG_royal_federal_constitution
 		x = -1
@@ -15810,40 +15215,15 @@ relative_position_id = SER_protect_democracy
 		prerequisite = {
 			focus = SER_YUG_royal_federal_constitution
 		}
-		bypass = {
-			has_completed_focus = SER_YUG_brotherhood_and_unity
-		}
+		 
 		ai_will_do = { factor = 10 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_republican_concordat"
-			if = {
-				limit = {
-					check_variable = { YUG_serbia_relations_level > 1 }
-				}
-				set_temp_variable = { checked_state = 1 } # Serbia
-				set_temp_variable = { ethnic_situation = -1 }
-				custom_effect_tooltip = YUG_serbia_reduce_relations_tt
-				YUG_update_ethnic_situation = yes
-			}
-			if = {
-				limit = {
-					check_variable = { YUG_croatia_relations_level < 10 }
-				}
-				set_temp_variable = { checked_state = 2 } # Croatia
-				set_temp_variable = { ethnic_situation = 1 }
-				custom_effect_tooltip = YUG_croatia_improve_relations_tt
-				YUG_update_ethnic_situation = yes
-			}
-			if = {
-				limit = {
-					check_variable = { YUG_slovenia_relations_level < 10 }
-				}
-				set_temp_variable = { checked_state = 4 } # Slovenia
-				set_temp_variable = { ethnic_situation = 1 }
-				custom_effect_tooltip = YUG_slovenia_improve_relations_tt
-				YUG_update_ethnic_situation = yes
-			}
+			swap_ideas = {
+        remove_idea = SER_YUG_royal_federal_constitution
+        add_idea = SER_YUG_royal_federal_constitution2
+      }
 			add_stability = 0.05
 		}
 	}
@@ -15851,7 +15231,7 @@ relative_position_id = SER_protect_democracy
 	focus = {
 		id = SER_YUG_royal_referendum_federalism
 		icon = GFX_goal_DOM_Call_Special_Election
-		cost = 6
+		cost = 3
 
 		relative_position_id = SER_YUG_royal_federal_constitution
 		x = -1
@@ -15864,24 +15244,22 @@ relative_position_id = SER_protect_democracy
 			focus = SER_YUG_royal_rep_renew_precani_settlement
 			focus = SER_YUG_royal_rep_bosniak_relations
 		}
-		bypass = {
-			has_completed_focus = SER_YUG_brotherhood_and_unity
-		}
+		 
 		ai_will_do = { factor = 10 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_referendum_federalism"
-			set_temp_variable = { gained_pp_per_turn = 2 }
-			custom_effect_tooltip = YUG_modify_pp_gain_increase_tt
-			add_to_variable = { YUG_political_capital_gain = gained_pp_per_turn }
-			custom_effect_tooltip = SER_YUG_referendum_federalism_tt
+			swap_ideas = {
+        remove_idea = SER_YUG_royal_federal_constitution2
+        add_idea = SER_YUG_royal_federal_constitution3
+      }
 		}
 	}
 
 	focus = {
 		id = SER_YUG_royal_grace
 		icon = GFX_goal_monarchism
-		cost = 6
+		cost = 3
 
 		relative_position_id = SER_YUG_royal_federal_constitution
 		x = 1
@@ -15894,52 +15272,17 @@ relative_position_id = SER_protect_democracy
 			focus = SER_YUG_royal_rep_renew_precani_settlement
 			focus = SER_YUG_royal_rep_bosniak_relations
 		}
-		bypass = {
-			has_completed_focus = SER_YUG_brotherhood_and_unity
-		}
+		available = {
+      has_completed_focus = SER_YUG_royal_referendum_federalism
+    } 
 		ai_will_do = { factor = 10 }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_grace"
-			set_temp_variable = { pp_gain = 2 }
-			custom_effect_tooltip = YUG_pp_gain_tt
-			add_to_variable = { YUG_political_capital = pp_gain }
-			if = {
-				limit = {
-					check_variable = { YUG_croatia_relations_level < 10 }
-				}
-				set_temp_variable = { checked_state = 2 } # Croatia
-				set_temp_variable = { ethnic_situation = 1 }
-				custom_effect_tooltip = YUG_croatia_improve_relations_tt
-				YUG_update_ethnic_situation = yes
-			}
-			if = {
-				limit = {
-					check_variable = { YUG_bosnia_relations_level < 10 }
-				}
-				set_temp_variable = { checked_state = 3 } # Bosnia
-				set_temp_variable = { ethnic_situation = 1 }
-				custom_effect_tooltip = YUG_bosnia_improve_relations_tt
-				YUG_update_ethnic_situation = yes
-			}
-			if = {
-				limit = {
-					check_variable = { YUG_slovenia_relations_level < 10 }
-				}
-				set_temp_variable = { checked_state = 4 } # Slovenia
-				set_temp_variable = { ethnic_situation = 1 }
-				custom_effect_tooltip = YUG_slovenia_improve_relations_tt
-				YUG_update_ethnic_situation = yes
-			}
-			if = {
-				limit = {
-					check_variable = { YUG_other_relations_level < 10 }
-				}
-				set_temp_variable = { checked_state = 5 } # Other
-				set_temp_variable = { ethnic_situation = 1 }
-				custom_effect_tooltip = YUG_other_improve_relations_tt
-				YUG_update_ethnic_situation = yes
-			}
+			swap_ideas = {
+        remove_idea = SER_YUG_royal_federal_constitution3
+        add_idea = SER_YUG_royal_federal_constitution4
+      }
 		}
 	}
   focus = {
@@ -15947,7 +15290,7 @@ relative_position_id = SER_protect_democracy
 		icon = GFX_goal_FIU_chetnik
 		cost = 3
 		x = 35
-		y = 20
+		y = 15
 
     available = {
       always = no
