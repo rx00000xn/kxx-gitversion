@@ -381,7 +381,7 @@ country_event = {# Mount Tai Outraged at Zongchang
 	option = { # Come, let's confront these Ascetics
 		name = shandong.6.a
 		ai_chance = {
-			factor = 55
+			factor = 35
 			modifier = {
 				factor = 0
 				has_game_rule = {
@@ -402,7 +402,7 @@ country_event = {# Mount Tai Outraged at Zongchang
 	option = { # Smarter to wait for them here
 		name = shandong.6.b
 		ai_chance = {
-			factor = 45
+			factor = 10
 			modifier = {
 				factor = 0
 				has_game_rule = {
@@ -421,6 +421,9 @@ country_event = {# Mount Tai Outraged at Zongchang
 	}	
 	option = { #burn them all
 		name = "放把火，烧死他们！" 
+		ai_chance = {
+			factor = 55
+		}		
 		add_political_power = -15
 		hidden_effect = {
 			country_event = {
