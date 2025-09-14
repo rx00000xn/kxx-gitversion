@@ -2525,7 +2525,7 @@ country_event = { #Success of the Spirit Soldiers
 	is_triggered_only = yes
 	option = { #
 		name = hunan_rework.44.a
-		ai_chance = { base = 100 }
+		ai_chance = { base = 20 }
 		complete_national_focus = HNNSPIRITSOLIDER_ifbulletscannotstopusthenimpurityshantstopuseither
 		set_country_flag = RD_Monarch_Larp
 		set_cosmetic_tag = HNN_Spirit_Hunan
@@ -2557,7 +2557,19 @@ country_event = { #Success of the Spirit Soldiers
 				HNN_Zhang_Gongfuzi_eco_npo
 				HNN_Wu_Xinghan_for_npo
 			}
-		
+	}
+
+	option = { #
+		name = hunan_rework.44.b
+		trigger = {
+			is_ai = yes
+		}
+		ai_chance = { 
+			base = 80
+		}	
+		set_country_flag = stopped_peasant_march_to_hunan
+		clr_country_flag = HNN_peasant_march_to_hunan
+		country_event = hunan_rework.9		
 	}
 }
 
@@ -2713,7 +2725,9 @@ country_event = { #Chen Quzhen Takes Changsha
 	is_triggered_only = yes
 	option = { #
 		name = hunan_rework.50.a
-		ai_chance = { base = 100 }
+		ai_chance = { 
+			base = 20 
+		}
 		set_cosmetic_tag = HNN_QUZHEN_MIAO
 		load_focus_tree = hnn-chen-quzhen-tree
 		complete_national_focus = HNNQUZHEN_rule_of_the_xiangxi_king
@@ -2745,6 +2759,20 @@ country_event = { #Chen Quzhen Takes Changsha
 				HNN_Long_Yunfei_sec_pau
 			}
 	}
+
+    option = { #
+        name = hunan_rework.50.b
+        trigger = {
+            is_ai = yes
+        }
+        ai_chance = { 
+            base = 80
+        }    
+		set_country_flag = stopped_quzhen_rebellion
+		clr_country_flag = HNN_quzhen_rebellion
+		country_event = hunan_rework.10      
+    }
+
 }
 
 country_event = { #The Xinmin Society
