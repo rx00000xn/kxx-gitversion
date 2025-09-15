@@ -1807,7 +1807,7 @@ country_event = {
 	option = {
 		name = gre.52.a #Social Conservative
 		ai_chance = {
-			factor = 10
+			factor = 5
 			modifier = {
 				factor = 3
 				date > 1939.1.1
@@ -1849,7 +1849,7 @@ country_event = {
 	option = {
 		name = gre.52.b #Social Liberal
 		ai_chance = {
-			factor = 35
+			factor = 5
 			modifier = {
 				factor = 2
 				date > 1939.1.1
@@ -1890,7 +1890,7 @@ country_event = {
 	option = {
 		name = gre.52.c #Market Liberal
 		ai_chance = {
-			factor = 30
+			factor = 5
 			modifier = {
 				factor = 2
 				date > 1939.1.1
@@ -1940,7 +1940,7 @@ country_event = {
 		name = gre.50.e #Social Democrats
 		
 		ai_chance = {
-			factor = 10
+			factor = 5
 			modifier = {
 				factor = 5
 				date > 1939.1.1
@@ -2027,7 +2027,7 @@ country_event = {
 		name = gre.52.f 
 		
 		ai_chance = {
-			factor = 25
+			base = 25
 			
 		}
 		
@@ -2063,8 +2063,7 @@ country_event = {
 		name = gre.52.g 
 		
 		ai_chance = {
-			factor = 25
-			
+			base = 25
 		}
 		add_stability = -0.2
 		country_event = {
@@ -2871,7 +2870,7 @@ country_event = {
 	option = {
 		name = gre.110.a #Republicans
 		ai_chance = {
-			factor = 50
+			base = 55
 			modifier = {
 				factor = 0
 				GRE = {
@@ -2972,7 +2971,7 @@ country_event = {
 	option = {
 		name = gre.110.b #Monarchists
 		ai_chance = {
-			factor = 50
+			base = 45
 			modifier = {
 				factor = 0
 				GRE = {
