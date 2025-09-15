@@ -7042,7 +7042,7 @@ if = {
         has_idea = SER_austrias_watchful_eye
       }
     }
-    x = 20
+    x = 10
     y = 15
     cost = 3
     ai_will_do = {
@@ -7345,7 +7345,7 @@ if = {
         is_core_of = SER
       }
     }
-    x = 15
+    x = 5
     y = 15
     cost = 3
     ai_will_do = {
@@ -13569,6 +13569,7 @@ relative_position_id = SER_protect_democracy
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_balkan_federalism"
 			custom_effect_tooltip = SER_YUG_balkan_federalism_effect_tt
+      set_cosmetic_tag = SER_YUG_socialist
 		}
 	}
   focus = {
@@ -13942,7 +13943,7 @@ relative_position_id = SER_protect_democracy
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_united_states"
 			custom_effect_tooltip = SER_YUG_united_states_effect_tt
-			
+			set_cosmetic_tag = SER_YUG_united_states
 		}
 	}
   focus = {
@@ -14324,6 +14325,7 @@ relative_position_id = SER_protect_democracy
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_three_named_nation"
 			custom_effect_tooltip = SER_YUG_three_named_nation_effect_tt
+      set_cosmetic_tag = SER_YUG_state
 		}
 	}
   focus = {
@@ -14630,6 +14632,7 @@ relative_position_id = SER_protect_democracy
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_integral_yugoslavia"
 			custom_effect_tooltip = SER_YUG_integral_yugoslavia_effect_tt
+      set_cosmetic_tag = SER_YUG_kingdom
 		}
 	}
   focus = {
@@ -14969,6 +14972,7 @@ relative_position_id = SER_protect_democracy
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_federation"
 			custom_effect_tooltip = SER_YUG_royal_federation_effect_tt
+      set_cosmetic_tag = SER_YUG_kingdom_fed
 		}
 	}
   focus = {
@@ -15289,7 +15293,7 @@ relative_position_id = SER_protect_democracy
 		id = SER_chetnik_coup
 		icon = GFX_goal_FIU_chetnik
 		cost = 3
-		x = 35
+		x = 25
 		y = 15
 
     available = {
@@ -15300,6 +15304,175 @@ relative_position_id = SER_protect_democracy
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_grace"
 			custom_effect_tooltip = tooltip_focus_unlocked_by_event
+		}
+	}
+  #hidden path - coop with ustase
+  focus = {
+		id = SER_desperate_alliance
+		icon = GFX_goal_FIU_france_east
+		cost = 3
+		x = 13
+		y = 1
+    relative_position_id = SER_chetnik_coup
+    prerequisite = {
+      focus = SER_chetnik_coup
+    }
+    available = {
+      always = no
+    }
+    allow_branch = {
+      has_country_flag = SER_hidden_path_unlock
+    }
+		ai_will_do = { factor = 10 }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_grace"
+			add_political_power = 100
+      add_stability = 0.1
+      increase_ruling_party_popularity_by_10 = yes
+		}
+	}
+  focus = {
+		id = SER_ultra_nat_union
+		icon = GFX_goal_FIU_france_east
+		cost = 3
+		x = -1
+		y = 1
+    relative_position_id = SER_desperate_alliance
+    prerequisite = {
+      focus = SER_desperate_alliance
+    }
+   
+		ai_will_do = { factor = 10 }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_grace"
+			add_political_power = 100
+      add_stability = 0.1
+      increase_ruling_party_popularity_by_10 = yes
+		}
+	}
+  focus = {
+		id = SER_against_oppressors
+		icon = GFX_goal_FIU_france_east
+		cost = 3
+		x = 1
+		y = 1
+    relative_position_id = SER_desperate_alliance
+    prerequisite = {
+      focus = SER_desperate_alliance
+    }
+   
+		ai_will_do = { factor = 10 }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_grace"
+			add_political_power = 100
+      add_stability = 0.1
+      increase_ruling_party_popularity_by_10 = yes
+		}
+	}
+  
+  focus = {
+		id = SER_anti_socialist_propaganda
+		icon = GFX_goal_FIU_france_east
+		cost = 3
+		x = 1
+		y = 2
+    relative_position_id = SER_desperate_alliance
+    prerequisite = {
+      focus = SER_against_oppressors
+    }
+   
+		ai_will_do = { factor = 10 }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_grace"
+			add_political_power = 100
+      add_stability = 0.1
+      increase_ruling_party_popularity_by_10 = yes
+		}
+	}
+   focus = {
+		id = SER_end_church_conflict
+		icon = GFX_goal_FIU_france_east
+		cost = 3
+		x = 1
+		y = 3
+    relative_position_id = SER_desperate_alliance
+    prerequisite = {
+      focus = SER_anti_socialist_propaganda
+    }
+   
+		ai_will_do = { factor = 10 }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_grace"
+			add_political_power = 100
+      add_stability = 0.1
+      increase_ruling_party_popularity_by_10 = yes
+		}
+	}
+  focus = {
+		id = SER_fight_for_great_yugoslavia
+		icon = GFX_goal_FIU_france_east
+		cost = 3
+		x = 0
+		y = 4
+    relative_position_id = SER_desperate_alliance
+    prerequisite = {
+      focus = SER_end_church_conflict
+    }
+    prerequisite = {
+      focus = SER_unified_militias
+    }
+		ai_will_do = { factor = 10 }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_grace"
+			add_political_power = 100
+      add_stability = 0.1
+      increase_ruling_party_popularity_by_10 = yes
+		}
+	}
+  focus = {
+		id = SER_intergrate_musilm
+		icon = GFX_goal_FIU_france_east
+		cost = 3
+		x = -1
+		y = 2
+    relative_position_id = SER_desperate_alliance
+    prerequisite = {
+      focus = SER_ultra_nat_union
+    }
+   
+		ai_will_do = { factor = 10 }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_grace"
+			add_political_power = 100
+      add_stability = 0.1
+      increase_ruling_party_popularity_by_10 = yes
+		}
+	}
+  focus = {
+		id = SER_unified_militias
+		icon = GFX_goal_FIU_france_east
+		cost = 3
+		x = -1
+		y = 3
+    relative_position_id = SER_desperate_alliance
+    prerequisite = {
+      focus = SER_intergrate_musilm
+    }
+   
+		ai_will_do = { factor = 10 }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_grace"
+			add_political_power = 100
+      add_stability = 0.1
+      increase_ruling_party_popularity_by_10 = yes
 		}
 	}
   focus = {
@@ -16043,6 +16216,7 @@ relative_position_id = SER_protect_democracy
       focus = SER_ally_skk
       focus = SER_power_of_orjuna
       focus = SER_deal_with_devil
+      focus = SER_desperate_alliance
     }
 		ai_will_do = { factor = 10 }
 		search_filters = { FOCUS_FILTER_POLITICAL }

@@ -2570,6 +2570,52 @@ country_event = {
   }
 }
 country_event = {
+  id = serbia.74
+  immediate = {
+    log = "[GetDateText]: [Root.GetName]: event dhserbia.16"
+  }
+  title = serbia.74.t
+  desc = serbia.74.d
+  is_triggered_only = yes
+  fire_only_once = yes
+  option = {
+    name = serbia.74.a
+    country_event = serbia.69
+  }
+  
+  option = {
+    name = serbia.74.b
+    country_event = serbia.75
+  }
+}
+country_event = {
+  id = serbia.75
+  immediate = {
+    log = "[GetDateText]: [Root.GetName]: event dhserbia.16"
+  }
+  title = serbia.75.t
+  desc = serbia.75.d
+  is_triggered_only = yes
+  fire_only_once = yes
+  option = {
+    name = serbia.75.a
+    create_country_leader = {
+      name = "乔治一世"  
+      picture = "gfx/leaders/SER/georgeobrehnovic.dds"
+      expire = "1.1.1"
+      ideology = oligarchy_subtype
+      traits = {}
+    }
+    set_politics = {
+      ruling_party = authoritarian_democrat
+      elections_allowed = no
+    }
+    complete_national_focus = SER_under_bulgarian_hegemony
+  }
+  
+  
+}
+country_event = {
   id = dhserbia.1
   immediate = {
     log = "[GetDateText]: [Root.GetName]: event dhserbia.1"
@@ -2683,6 +2729,7 @@ country_event = {
    
     add_ideas = SER_king_alexander
    set_country_flag = SER_black_hand_kingdom
+   set_cosmetic_tag = SER_natpop_kingdom
   }
   option = {
     name = dhserbia.111.b
@@ -2709,6 +2756,7 @@ country_event = {
    
     add_ideas = SER_national_state
    set_country_flag = SER_black_hand_republic
+   set_cosmetic_tag = SER_natpop_republic
   }
   
 }
