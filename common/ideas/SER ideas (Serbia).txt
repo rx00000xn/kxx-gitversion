@@ -6,6 +6,16 @@ ideas = {
 ##############
 	country = {
 		### New ideas ###
+		SER_national_state = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = generic_bad_king
+			name = "民族共和国"
+			allowed = { always = no }
+            modifier = {	
+				political_power_factor = 0.1
+			}
+			
+		}
 		SER_national_social_revolution = { 
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
 			picture = CZE_revolution_idea
@@ -1818,7 +1828,237 @@ ideas = {
 				stability_factor = 0.05
 			}
 		}
+		SER_YUG_peoples_republics = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_YUG_unified_tariff_system" }
+			picture = syndie_republic
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = 0.1
+				production_factory_efficiency_gain_factor = 0.05
 
+			}
+		}
+		SER_YUG_peoples_republics2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_YUG_unified_tariff_system" }
+			picture = syndie_republic
+			name = SER_YUG_peoples_republics
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				global_building_slots_factor = 0.1
+
+			}
+		}
+		SER_YUG_peoples_republics3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_YUG_unified_tariff_system" }
+			picture = syndie_republic
+			name = SER_YUG_peoples_republics
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				global_building_slots_factor = 0.1
+				party_popularity_stability_factor = 0.2
+				stability_factor = 0.1
+			}
+		}
+		SER_YUG_peoples_republics4 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_YUG_unified_tariff_system" }
+			picture = syndie_republic
+			name = SER_YUG_peoples_republics
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				global_building_slots_factor = 0.1
+				party_popularity_stability_factor = 0.2
+				stability_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_speed_buildings_factor = 0.05
+
+			}
+		}
+		SER_YUG_soc_hero_cult = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_YUG_unified_tariff_system" }
+			picture = GRU_HEROISM
+			allowed = { always = no }
+			modifier = {
+				experience_loss_factor = -0.1
+				army_morale_factor = 0.05
+			}
+		}
+		SER_YUG_royal_federal_constitution = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_YUG_unified_tariff_system" }
+			picture = Constitution
+			allowed = { always = no }
+			modifier = {
+				political_power_cost = -0.1
+				stability_factor = 0.1
+			}
+		}
+		SER_YUG_royal_federal_constitution2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_YUG_unified_tariff_system" }
+			picture = Constitution
+			name = SER_YUG_royal_federal_constitution
+			allowed = { always = no }
+			modifier = {
+				political_power_cost = -0.1
+				stability_factor = 0.1
+				production_speed_arms_factory_factor = 0.15
+				production_speed_industrial_complex_factor = 0.15
+			}
+		}
+		SER_YUG_royal_federal_constitution3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_YUG_unified_tariff_system" }
+			picture = Constitution
+			name = SER_YUG_royal_federal_constitution
+			allowed = { always = no }
+			modifier = {
+				political_power_cost = -0.1
+				stability_factor = 0.2
+				production_speed_arms_factory_factor = 0.15
+				production_speed_industrial_complex_factor = 0.15
+				consumer_goods_expected_value = -0.1
+			}
+		}
+		SER_YUG_royal_federal_constitution4 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_YUG_unified_tariff_system" }
+			picture = Constitution
+			name = SER_YUG_royal_federal_constitution
+			allowed = { always = no }
+			modifier = {
+				political_power_cost = -0.1
+				stability_factor = 0.2
+				production_speed_arms_factory_factor = 0.15
+				production_speed_industrial_complex_factor = 0.15
+				consumer_goods_expected_value = -0.1
+				research_speed_factor = 0.1
+				conscription_factor = 0.1
+
+			}
+		}
+		SER_YUG_federal_constitution = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_YUG_unified_tariff_system" }
+			picture = Constitution
+			allowed = { always = no }
+			modifier = {
+				political_power_cost = -0.1
+				stability_factor = 0.1
+			}
+		}
+		SER_YUG_federal_constitution2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_YUG_unified_tariff_system" }
+			picture = Constitution
+			name = SER_YUG_federal_constitution
+			allowed = { always = no }
+			modifier = {
+				political_power_cost = -0.1
+				stability_factor = 0.1
+				production_speed_arms_factory_factor = 0.15
+				production_speed_industrial_complex_factor = 0.15
+			}
+		}
+		SER_YUG_federal_constitution3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_YUG_unified_tariff_system" }
+			picture = Constitution
+			name = SER_YUG_federal_constitution
+			allowed = { always = no }
+			modifier = {
+				political_power_cost = -0.1
+				stability_factor = 0.2
+				production_speed_arms_factory_factor = 0.15
+				production_speed_industrial_complex_factor = 0.15
+				consumer_goods_expected_value = -0.1
+			}
+		}
+		SER_YUG_local_governance = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_YUG_unified_tariff_system" }
+			picture = local_empowerement
+			allowed = { always = no }
+			modifier = {
+				global_building_slots_factor = 0.1
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		SER_YUG_award_piemont = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_YUG_unified_tariff_system" }
+			picture = ALB_yugophilism
+			allowed = { always = no }
+			modifier = {
+				political_power_factor = 0.1
+				consumer_goods_factor = -0.15
+			}
+		}
+		SER_YUG_award_piemont2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_YUG_unified_tariff_system" }
+			picture = ALB_yugophilism
+			name = SER_YUG_award_piemont
+			allowed = { always = no }
+			modifier = {
+				political_power_factor = 0.1
+				consumer_goods_factor = -0.2
+				stability_weekly = 0.001
+			}
+		}
+		SER_YUG_award_piemont3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_YUG_unified_tariff_system" }
+			picture = ALB_yugophilism
+			name = SER_YUG_award_piemont
+			allowed = { always = no }
+			modifier = {
+				political_power_factor = 0.1
+				consumer_goods_factor = -0.2
+				stability_weekly = 0.001
+				research_speed_factor = 0.1
+				local_resources_factor = 0.1
+
+			}
+		}
+		SER_YUG_award_piemont4 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_YUG_unified_tariff_system" }
+			picture = ALB_yugophilism
+			name = SER_YUG_award_piemont
+			allowed = { always = no }
+			modifier = {
+				political_power_factor = 0.1
+				consumer_goods_factor = -0.2
+				stability_weekly = 0.001
+				research_speed_factor = 0.1
+				local_resources_factor = 0.1
+				line_change_production_efficiency_factor = 0.1
+				production_factory_start_efficiency_factor = 0.1
+
+			}
+		}
+		SER_YUG_yugoslav_king = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_YUG_unified_tariff_system" }
+			picture = CAN_king_visit
+			allowed = { always = no }
+			modifier = {
+				conscription = 0.01
+				mobilization_speed = 0.1
+			}
+		}
+		SER_YUG_defeat_tribalism = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_YUG_unified_tariff_system" }
+			picture = BUL_Balkan_Union
+			allowed = { always = no }
+			modifier = {
+				global_building_slots_factor = 0.1
+				industrial_capacity_factory = 0.1
+
+			}
+		}
+		SER_YUG_permeate_education = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_YUG_unified_tariff_system" }
+			picture = educational_spending
+			allowed = { always = no }
+			modifier = {
+				research_speed_factor = 0.15
+				production_lack_of_resource_penalty_factor = -0.15
+			}
+		}
 		SER_YUG_unified_tariff_system = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_YUG_unified_tariff_system" }
 			picture = KTG_Gold_Trade
@@ -1883,6 +2123,7 @@ ideas = {
 			allowed = { always = no }
 			modifier = {
 				justify_war_goal_time = -0.5
+				army_attack_factor = 0.05
 			}
 		}
 		SER_YUG_yugosphere_idea = {
@@ -1908,7 +2149,7 @@ ideas = {
 			picture = HUN_treaty_of_triannon
 			allowed = { always = no }
 			modifier = {
-				political_power_gain = -0.08
+				political_power_gain = 0.11
 				research_speed_factor = 0.02
 			}
 		}
@@ -1917,7 +2158,7 @@ ideas = {
 			picture = HUN_treaty_of_triannon
 			allowed = { always = no }
 			modifier = {
-				political_power_gain = -0.11
+				political_power_gain = 0.08
 				research_speed_factor = 0.04
 			}
 		}
@@ -1926,8 +2167,8 @@ ideas = {
 			picture = HUN_treaty_of_triannon
 			allowed = { always = no }
 			modifier = {
-				political_power_gain = 0.04
-				research_speed_factor = -0.04
+				political_power_gain = 0.05
+				research_speed_factor = 0.06
 			}
 		}
 		SER_YUG_national_myth = {

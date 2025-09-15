@@ -146,17 +146,17 @@ guiTypes = {
 			position = { x = 8 y = 10 }
 			spriteType = "GFX_Portrait_Fritz_Gerlich"
 		}
-		
 		iconType = {
 			name = "Draza_Mihailovic" 
 			position = { x = 8 y = 10 }
 			spriteType = "GFX_Portrait_SER_Draza_Mihailovic"
 		}
+	
 		####################塞尔维亚#########################
 		iconType = { #
-			name = "Draza_Mihailovic"
+			name = "Draza_Mihailovics"
 			position = { x = 8 y = 10 }
-			spriteType = "GFX_Portrait_SER_Draza_Mihailovic"
+			spriteType = "GFX_Portrait_SER_Draza_Mihailovics"
 		}
 		####################挪威#############################
 		iconType = { #

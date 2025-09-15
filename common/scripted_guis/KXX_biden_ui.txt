@@ -170,7 +170,7 @@ scripted_gui = {
 			}
 
 			#塞尔维亚
-			Draza_Mihailovic_visible = { #德拉查·米哈伊洛维奇
+			Draza_Mihailovics_visible = { #德拉查·米哈伊洛维奇
 				AND = {
 					has_country_flag = KXX_HOG_veiw
 					has_country_flag = SER_Draza_Mihailovic_VISIBLE
