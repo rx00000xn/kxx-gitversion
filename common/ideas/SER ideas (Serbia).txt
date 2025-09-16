@@ -1092,11 +1092,35 @@ ideas = {
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.04
-				army_morale_factor = 0.05
+				army_org_factor = 0.1
 				national_populist_drift = -0.03
 			}
 		}
-		SER_ideologically_charged_army = {
+		SER_republican_guard2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_republican_guard" }
+			picture = YUG_all_yugoslavian_regiments
+			name = SER_republican_guard
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.04
+				army_org_factor = 0.1
+				army_morale_factor = 0.1
+				national_populist_drift = -0.03
+			}
+		}
+		SER_peoples_army = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_ideologically_charged_army" }
+			picture = MEX_revolutionary_army
+			allowed = { always = no }
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				dig_in_speed_factor = 0.15
+				max_dig_in_factor = 0.15
+
+			}
+		}
+		SER_peoples_army = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_ideologically_charged_army" }
 			picture = YUG_all_yugoslavian_regiments
 			allowed = { always = no }
@@ -1354,6 +1378,7 @@ ideas = {
 			modifier = {
 				stability_factor = 0.1
 				political_power_factor = 0.05
+				consumer_goods_factor = -0.15
 			}
 		}
 		SER_practical_action_program_2 = {
@@ -1365,6 +1390,19 @@ ideas = {
 				stability_factor = 0.1
 				political_power_factor = 0.05
 				consumer_goods_factor = -0.15
+				production_factory_efficiency_gain_factor = 0.1
+				production_factory_start_efficiency_factor = 0.1
+			}
+		}
+		SER_new_repubilic = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_practical_action_program_2" }
+			picture = BAN_defend_republic
+			allowed = { always = no }
+			modifier = {
+				political_power_factor = 0.1
+				monthly_population = 0.5
+				production_speed_buildings_factor = 0.1
+				consumer_goods_expected_value = -0.15
 			}
 		}
 		SER_social_welfare_idea = {
@@ -1373,7 +1411,7 @@ ideas = {
 			allowed = { always = no }
 			modifier = {
 				production_factory_max_efficiency_factor = 0.1
-				research_speed_factor = 0.02
+				research_speed_factor = 0.2
 			}
 		}
 		SER_avant_garde_idea = {
@@ -1381,7 +1419,8 @@ ideas = {
 			picture = generic_victors_of_ww1
 			allowed = { always = no }
 			modifier = {
-				research_speed_factor = 0.04
+				research_speed_factor = 0.08
+				political_power_gain = 0.1
 			}
 		}
 		SER_avant_garde_idea_2 = {
@@ -1390,8 +1429,9 @@ ideas = {
 			picture = generic_victors_of_ww1
 			allowed = { always = no }
 			modifier = {
-				research_speed_factor = 0.08
+				research_speed_factor = 0.15
 				political_power_gain = 0.1
+				
 			}
 		}
 		SER_socialist_realism_idea = {
@@ -1406,8 +1446,10 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_hotel_slavija" }
 			picture = generic_syndicalist_medal
 			allowed = { always = no }
-			
 			modifier = {
+				political_power_gain = 0.1
+				stability_factor = 0.1
+				party_popularity_stability_factor = 0.2
 				radical_socialist_drift = 0.1
 			}
 		}
