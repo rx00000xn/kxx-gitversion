@@ -7801,7 +7801,11 @@ if = {
       }
       else_if = {
         limit = {
-         has_completed_focus = SER_March_Conspiracy
+          OR = {
+            has_completed_focus = SER_March_Conspiracy
+            has_completed_focus = SER_under_bulgarian_hegemony
+          }
+         
         }
         set_country_flag = SER_YUG_constitutional
       }
