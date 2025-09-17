@@ -2418,12 +2418,51 @@ ideas = {
 			}
 		}
 		### Puppet ideas ###
+		SER_lib_tendency = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_progressive_reforms_base" }
+			picture = generic_liberalism
+			name = "自由主义倾向"
+			allowed = { always = no }
+			modifier = {
+				line_change_production_efficiency_factor = 0.1
+				industrial_capacity_factory = 0.1
+
+			}
+		}
+		SER_auth_tendency = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_progressive_reforms_base" }
+			picture = authority_caesar
+			name = "威权主义倾向"
+			allowed = { always = no }
+			modifier = {
+				breakthrough_factor = 0.1
+				recon_factor = 0.1
+			}
+		}
+		SER_consolidate_the_state = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_progressive_reforms_base" }
+			picture = state_economy
+			allowed = { always = no }
+			modifier = {
+				political_power_cost = -0.1
+				market_liberal_drift = 0.05
+				authoritarian_democrat_drift = 0.05
+				production_speed_arms_factory_factor = 0.25
+				production_speed_industrial_complex_factor = 0.25
+				command_power_gain = 0.15
+				max_command_power = 150
+				command_power_gain_mult = 0.15
+				max_command_power_mult = 0.15
+
+			}
+		}
 		SER_progressive_reforms_base = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_progressive_reforms_base" }
 			picture = generic_constitutional_guarantees
 			allowed = { always = no }
 			modifier = {
 				political_power_gain = 0.05
+				industrial_capacity_factory = 0.05
 			}
 		}
 		SER_progressive_reforms_liberal = {
@@ -2431,7 +2470,13 @@ ideas = {
 			picture = generic_constitutional_guarantees
 			allowed = { always = no }
 			modifier = {
-				industrial_capacity_factory = 0.05
+				political_power_gain = 0.05
+				industrial_capacity_factory = 0.1
+				production_speed_buildings_factor = 0.1
+				production_factory_start_efficiency_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+
 			}
 		}
 		SER_progressive_reforms_authoritarian = {
@@ -2439,7 +2484,12 @@ ideas = {
 			picture = generic_constitutional_guarantees
 			allowed = { always = no }
 			modifier = {
-				political_power_gain = 0.15
+				political_power_gain = 0.05
+				industrial_capacity_factory = 0.05
+				conscription = 0.03
+				conscription_factor = 0.3
+				supply_consumption_factor = -0.1
+				no_supply_grace = 48
 			}
 		}
 		SER_progressive_reforms_final_liberal = {
@@ -2447,9 +2497,13 @@ ideas = {
 			picture = generic_neutrality_drift_bonus
 			allowed = { always = no }
 			modifier = {
-				consumer_goods_factor = 0.1
-				industrial_capacity_factory = 0.1
-				production_speed_buildings_factor = 0.05
+				political_power_gain = 0.05
+				industrial_capacity_factory = 0.15
+				production_speed_buildings_factor = 0.15
+				production_factory_start_efficiency_factor = 0.15
+				production_factory_max_efficiency_factor = 0.15
+				production_factory_efficiency_gain_factor = 0.15
+
 			}
 		}
 		SER_progressive_reforms_final_authoritarian = {
@@ -2457,9 +2511,12 @@ ideas = {
 			picture = generic_intel_bonus
 			allowed = { always = no }
 			modifier = {
-				consumer_goods_factor = -0.15
-				political_power_gain = 0.15
-				stability_factor = 0.05
+				political_power_gain = 0.05
+				industrial_capacity_factory = 0.1
+				conscription = 0.05
+				conscription_factor = 0.5
+				supply_consumption_factor = -0.15
+				no_supply_grace = 96
 			}
 		}
 		SER_dinar_stabilized = {
@@ -2467,6 +2524,8 @@ ideas = {
 			picture = chi_hyper_inflation2
 			allowed = { always = no }
 			modifier = {
+				global_building_slots_factor = 0.2
+				consumer_goods_expected_value = -0.15
 				consumer_goods_factor = -0.15
 			}
 		}
@@ -2477,6 +2536,8 @@ ideas = {
 			modifier = {
 				stability_factor = 0.05
 				trade_opinion_factor = 0.3
+				production_factory_max_efficiency_factor = 0.15
+				production_factory_efficiency_gain_factor = 0.15
 			}
 		}
 		SER_domestic_enemies_1 = {
@@ -2484,10 +2545,11 @@ ideas = {
 			picture = generic_destruction
 			allowed = { always = no }
 			modifier = {
-				stability_factor = -0.15
-				war_support_factor = -0.15
-				political_power_gain = -0.5
-				army_morale_factor = -0.15
+				stability_factor = 0.15
+				war_support_factor = 0.15
+				political_power_gain = 0.5
+				army_morale_factor = 0.15
+				army_org_factor = 0.15
 			}
 		}
 		SER_domestic_enemies_2 = {
@@ -2495,10 +2557,11 @@ ideas = {
 			picture = generic_destruction
 			allowed = { always = no }
 			modifier = {
-				stability_factor = -0.10
-				war_support_factor = -0.10
-				political_power_gain = -0.25
-				army_morale_factor = -0.1
+				stability_factor = 0.10
+				war_support_factor = 0.10
+				political_power_gain = 0.25
+				army_morale_factor = 0.1
+				army_org_factor = 0.1
 			}
 		}
 		SER_domestic_enemies_3 = {
@@ -2506,10 +2569,11 @@ ideas = {
 			picture = generic_destruction
 			allowed = { always = no }
 			modifier = {
-				stability_factor = -0.05
-				war_support_factor = -0.05
-				political_power_gain = -0.10
-				army_morale_factor = -0.05
+				stability_factor = 0.05
+				war_support_factor = 0.05
+				political_power_gain = 0.10
+				army_morale_factor = 0.05
+				army_org_factor = 0.05
 			}
 		}
 		SER_surprise_attack = {

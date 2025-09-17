@@ -5905,7 +5905,7 @@ if = {
   focus = {
     id = SER_Farming_Subsidies
     icon = GFX_goal_generic_cow_pig
-    x = 12
+    x = 10
     y = 0
      cost = 3
     ai_will_do = {
@@ -11970,7 +11970,7 @@ focus = {
 		icon = GFX_BUL_bulgarian_officer
 		cost = 5.00
 
-		x = 6
+		x = 4
 		y = 0
 
 		available = { is_subject_of = BUL }
@@ -11979,7 +11979,8 @@ focus = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_under_bulgarian_hegemony"
 			custom_effect_tooltip = unlock_focuses
-			add_ideas = SER_domestic_enemies_1
+			add_ideas = SER_domestic_enemies_3
+      country_event = serpuppet.1
 		}
 	}
 
@@ -12036,7 +12037,7 @@ focus = {
 		ai_will_do = { factor = 12 }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_promote_scientific_education"
-			add_research_slot_until_five = yes
+			add_research_slot = 1
 		}
 	}
 
@@ -12100,9 +12101,10 @@ focus = {
 		ai_will_do = { factor = 12 }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_deal_with_domestic_enemies"
-			unlock_decision_tooltip = SER_fight_monarchists_remnants
-			unlock_decision_tooltip = SER_fight_the_konspiracija
-			unlock_decision_tooltip = SER_fight_socialists_terrorists
+			swap_ideas = {
+					remove_idea = SER_domestic_enemies_3
+					add_idea = SER_domestic_enemies_2
+				}
 		}
 	}
 
@@ -12125,6 +12127,8 @@ focus = {
 				target = BUL
 				modifier = KR_close_allies
 			}
+      add_political_power = 100
+      add_stability = 0.1
 			add_war_support = 0.1
 		}
 	}
@@ -12144,10 +12148,11 @@ focus = {
 		ai_will_do = { factor = 12 }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_merge_the_opposition"
-			add_popularity = {
-				ideology = authoritarian_democrat
-				popularity = 0.1
-			}
+		increase_ruling_party_popularity_by_10 = yes
+      swap_ideas = {
+					remove_idea = SER_domestic_enemies_2
+					add_idea = SER_domestic_enemies_1
+				}
 		}
 	}
 
@@ -12155,7 +12160,7 @@ focus = {
 		id = SER_consolidate_the_state
 		icon = GFX_focus_generic_authoritarian_government
 		cost = 5.00
- relative_position_id = SER_under_bulgarian_hegemony
+    relative_position_id = SER_under_bulgarian_hegemony
 		x = 0
 		y = 3
 
@@ -12170,6 +12175,7 @@ focus = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_consolidate_the_state"
 			add_stability = 0.1
+      add_ideas = SER_consolidate_the_state
 		}
 	}
 
@@ -12259,6 +12265,12 @@ focus = {
 				uses = 2
 				category = industry
 			}
+      add_one_random_civilian_factory = yes
+      add_one_random_military_factory = yes
+      add_one_random_civilian_factory = yes
+      add_one_random_military_factory = yes
+       add_one_random_civilian_factory = yes
+      add_one_random_military_factory = yes
 		}
 	}
 
@@ -12284,13 +12296,7 @@ focus = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_the_eagle_and_the_lion"
 			add_political_power = 100
-			BUL = {
-				set_autonomy = {
-					target = SER
-					autonomy_state = autonomous_puppet
-					end_wars = no
-				}
-			}
+			
 			hidden_effect = {
 				country_event = { id = serpuppet.7 days = 300 random_days = 30 }
 			}
@@ -15265,7 +15271,7 @@ relative_position_id = SER_protect_democracy
   #hidden path - coop with ustase
   focus = {
 		id = SER_desperate_alliance
-		icon = GFX_goal_FIU_france_east
+		icon = GFX_goal_CRO_authoritarian
 		cost = 3
 		x = 13
 		y = 1
@@ -15290,7 +15296,7 @@ relative_position_id = SER_protect_democracy
 	}
   focus = {
 		id = SER_ultra_nat_union
-		icon = GFX_goal_FIU_france_east
+		icon = GFX_goal_national_populism
 		cost = 3
 		x = -1
 		y = 1
@@ -15310,7 +15316,7 @@ relative_position_id = SER_protect_democracy
 	}
   focus = {
 		id = SER_against_oppressors
-		icon = GFX_goal_FIU_france_east
+		icon = GFX_goal_CZE_attack_austria
 		cost = 3
 		x = 1
 		y = 1
@@ -15331,7 +15337,7 @@ relative_position_id = SER_protect_democracy
   
   focus = {
 		id = SER_anti_socialist_propaganda
-		icon = GFX_goal_FIU_france_east
+		icon = GFX_goal_AUS_suppress_syndicalism
 		cost = 3
 		x = 1
 		y = 2
@@ -15351,7 +15357,7 @@ relative_position_id = SER_protect_democracy
 	}
    focus = {
 		id = SER_end_church_conflict
-		icon = GFX_goal_FIU_france_east
+		icon = GFX_HUN_role_of_the_church 
 		cost = 3
 		x = 1
 		y = 3
@@ -15371,7 +15377,7 @@ relative_position_id = SER_protect_democracy
 	}
   focus = {
 		id = SER_fight_for_great_yugoslavia
-		icon = GFX_goal_FIU_france_east
+		icon = GFX_goal_BUL_Yugo_Realized
 		cost = 3
 		x = 0
 		y = 4
@@ -15393,7 +15399,7 @@ relative_position_id = SER_protect_democracy
 	}
   focus = {
 		id = SER_intergrate_musilm
-		icon = GFX_goal_FIU_france_east
+		icon = GFX_goal_CRO_bosnian_legion
 		cost = 3
 		x = -1
 		y = 2
@@ -15413,7 +15419,7 @@ relative_position_id = SER_protect_democracy
 	}
   focus = {
 		id = SER_unified_militias
-		icon = GFX_goal_FIU_france_east
+		icon = GFX_goal_CRO_military_frontier
 		cost = 3
 		x = -1
 		y = 3
