@@ -1,8 +1,5 @@
-﻿
-
-#add_namespace = fne
 add_namespace = frg
-
+add_namespace = frg_new
 country_event = {
 	id = frg.210
 	immediate = {log = "[GetDateText]: [Root.GetName]: event comfrance.971"}
@@ -34,14 +31,35 @@ country_event = {
 		
 			
             FRG = { 
-				add_state_core = 762
-                add_state_core = 21
-                add_state_core = 763
-                add_state_core = 32
-                add_state_core = 735
-                add_state_core = 20
-                add_state_core = 26
-				add_state_core = 25
+				add_state_core = 14
+        		add_state_core = 983
+      		  	add_state_core = 17
+      		  	add_state_core = 980
+    		   	add_state_core = 785
+        		add_state_core = 24
+        		add_state_core = 18
+        		add_state_core = 16
+        		add_state_core = 15
+        		add_state_core = 30
+        		add_state_core = 23
+        		add_state_core = 33
+        		add_state_core = 27
+    			add_state_core = 25
+        		add_state_core = 26
+        		add_state_core = 19
+        		add_state_core = 984
+        		add_state_core = 31
+        		add_state_core = 817
+        		add_state_core = 22
+        		add_state_core = 21
+       			add_state_core = 32
+        		add_state_core = 763
+        		add_state_core = 20
+        		add_state_core = 785
+        		add_state_core = 762
+        		add_state_core = 1
+        		add_state_core = 779
+				add_state_core = 1334
 			}
 			
 			FRG = {
@@ -81,14 +99,35 @@ country_event = {
 		
 			
             FRG = { 
-				add_state_core = 762
-                add_state_core = 21
-                add_state_core = 763
-                add_state_core = 32
-                add_state_core = 735
-                add_state_core = 20
-                add_state_core = 26
-				add_state_core = 25
+				add_state_core = 14
+        		add_state_core = 983
+      		  	add_state_core = 17
+      		  	add_state_core = 980
+    		   	add_state_core = 785
+        		add_state_core = 24
+        		add_state_core = 18
+        		add_state_core = 16
+        		add_state_core = 15
+        		add_state_core = 30
+        		add_state_core = 23
+        		add_state_core = 33
+        		add_state_core = 27
+    			add_state_core = 25
+        		add_state_core = 26
+        		add_state_core = 19
+        		add_state_core = 984
+        		add_state_core = 31
+        		add_state_core = 817
+        		add_state_core = 22
+        		add_state_core = 21
+       			add_state_core = 32
+        		add_state_core = 763
+        		add_state_core = 20
+        		add_state_core = 785
+        		add_state_core = 762
+        		add_state_core = 1
+        		add_state_core = 779
+				add_state_core = 1334
 			}
 			
 			FRG = {
@@ -166,6 +205,7 @@ country_event = {
 			factor = 90
 		}   
         add_stability = 0.01  
+		country_event = { id = frg_new.1 days = 45 }
 	}
 }
 
@@ -363,19 +403,50 @@ country_event = {
 		ai_chance = {
 			factor = 100
 		}
-		if = {
-			limit = {
-				has_completed_focus = FRA_help_from_Boncour
+		hidden_effect = {	
+			set_country_flag = Georges_Valois_dead
+			complete_national_focus = FRA_who_shall_lead
+		 	complete_national_focus = FRA_woke_gang_win
+			mark_focus_tree_layout_dirty = yes
+			set_politics = {
+				ruling_party = totalist
+				elections_allowed = no
 			}
-			country_event = {
-				id = frg.15
-				days = 7
+			create_country_leader = {
+				name = "马塞尔·布卡德"
+				desc = "POLITICS_MARCEL_BUCARD_DESC"
+				picture = "gfx/leaders/FRA/Portrait_France_Marcel_Bucard_Political.png"
+				expire = "1965.1.1"
+				ideology = tot_francism_subtype
 			}
-		}
-		else = {
+			add_stability = -0.1
+			remove_ideas_with_trait = head_of_government
+			add_ideas = FRA_Rene_Binet_hog_tot
+			remove_ideas_with_trait = foreign_minister
+			add_ideas = FRA_Jean_Fontenoy_for_tot
+			remove_ideas_with_trait = economy_minister
+			add_ideas = FRA_Gabriel_Jeantet_eco_tot
+			remove_ideas_with_trait = security_minister
+			add_ideas = FRA_Marc_Augier_sec_tot
+			add_popularity = {
+			  ideology = totalist
+			   popularity = 0.20
+		 	}
+			set_party_name = {
+			  ideology = totalist
+			  long_name = FRA_ultranatsynd
+			  name = FRA_ultranatsynd
+			}	 
 			country_event = {
-				id = frg.16
-				days = 7
+				id = comfrance.928
+				days = 10
+			}
+			
+			hidden_effect = {
+				country_event = {
+					id = frg.15
+					days = 30
+				}
 			}
 		}
 	}
@@ -511,7 +582,6 @@ country_event = {
 			}
 			set_country_flag = FRA_ribes_ousted
 		}
-		mark_focus_tree_layout_dirty = yes
 	}
 
 	
@@ -580,56 +650,39 @@ country_event = {
 
 	option = {
 		name = frg.15.a
-		set_politics = {
-			ruling_party = social_democrat
-			elections_allowed = no
-		}
-
-		add_popularity = {
-			ideology = social_democrat
-			popularity = 0.3
-		}
-
-		add_popularity = {
-			ideology = totalist
-			popularity = -0.3
-		}
-		add_stability = -0.2
-		create_country_leader = {
-			name = "莫里斯·甘末林"
-			desc = "POLITICS_GAMELIN_DESC"
-			picture = "gfx/leaders/FRA/Portrait_France_Maurice_Gamelin_KR.png"
-			expire = "1965.1.1"
-			ideology = marechal_democracy_subtype
-			traits = {marshal_leader}
-		}
+		add_stability = -0.05
 		hidden_effect = {
-			country_event = {
-				id = frg.21
-				days = 7
+			if = {
+				limit = {
+					has_country_leader = {
+						ruling_only = yes
+						name = "莫里斯·甘末林"
+					}
+				}
+				country_event = {
+					id = frg.16
+					days = 7
+				}
 			}
-			country_event = {
-				id = frg.18
-				days = 14
-			}
-			country_event = {
-				id = frg.19
-				days = 21
-			}
-			country_event = {
-				id = frg.20
-				days = 28
-			}
-			country_event = {
-				id = frg.210
-				days = 30
+			if = {
+				limit = {
+					has_country_leader = {
+						ruling_only = yes
+						name = "马塞尔·布卡德"
+					}
+				}
+				country_event = {
+					id = frg.17
+					days = 7
+				}
 			}
 		}
+		
 	}
 	
 	
 }
-country_event = { 
+country_event = {  #甘莫林专属事件-可疑的举动
 	id = frg.16 #thorez seizes control
 	immediate = {log = "[GetDateText]: [Root.GetName]: event frg.7 "}
 	title = frg.16.t
@@ -641,48 +694,11 @@ country_event = {
 
 	option = {
 		name = frg.16.a
-		set_politics = {
-			ruling_party = totalist
-			elections_allowed = no
-		}
-
-		add_popularity = {
-			ideology = social_democrat
-			popularity = -0.3
-		}
-
-		add_popularity = {
-			ideology = totalist
-			popularity = 0.3
-		}
-		add_stability = -0.2
-		create_country_leader = {
-			name = "莫里斯·多列士"
-			desc = "POLITICS_MAURICE_THOREZ_DESC"
-			picture = "gfx/leaders/FRA/Portrait_France_Maurice_Thorez.png"
-			expire = "1965.1.1"
-			ideology = jacobinism_subtype
-		}
+		add_stability = -0.05
 		hidden_effect = {
 			country_event = {
-				id = frg.17
-				days = 7
-			}
-			country_event = {
 				id = frg.18
-				days = 14
-			}
-			country_event = {
-				id = frg.19
-				days = 21
-			}
-			country_event = {
-				id = frg.20
-				days = 28
-			}
-			country_event = {
-				id = frg.210
-				days = 30
+				days = 7
 			}
 		}
 	}
@@ -690,7 +706,7 @@ country_event = {
 	
 }
 country_event = { 
-	id = frg.17 #normandy seperatists
+	id = frg.17 #布卡德专属事件-卡昂会议
 	immediate = {log = "[GetDateText]: [Root.GetName]: event frg.7 "}
 	title = frg.17.t
 	desc = frg.17.d
@@ -701,33 +717,17 @@ country_event = {
 
 	option = {
 		name = frg.17.a
-		NRM = { transfer_state = 15 }
-		NRM = { 
-			inherit_technology = FRA
-			add_state_core = 15
-			set_politics = {
-				ruling_party = social_liberal
-				elections_allowed = no
+		add_stability = -0.05
+		hidden_effect = {
+			country_event = {
+				id = frg.19
+				days = 7
 			}
 		}
 	}
-	option = {
-		name = frg.17.b
-		NRM = { transfer_state = 15 }
-		NRM = { 
-			inherit_technology = FRA
-			add_state_core = 15
-			set_politics = {
-				ruling_party = social_liberal
-				elections_allowed = no
-			}
-		}
-		NRM = { change_tag_from = FRA }
-	}
-	
 }
 country_event = { 
-	id = frg.18 #brittany revolts
+	id = frg.18 #甘莫林专属事件-延续态度？
 	immediate = {log = "[GetDateText]: [Root.GetName]: event frg.7 "}
 	title = frg.18.t
 	desc = frg.18.d
@@ -738,32 +738,22 @@ country_event = {
 
 	option = {
 		name = frg.18.a
-		BRI = { transfer_state = 983 }
-		BRI = { transfer_state = 14 }
-		BRI = { 
-			inherit_technology = FRA
-			add_state_core = 983
-			add_state_core = 14
-			set_politics = {
-				ruling_party = paternal_autocrat
-				elections_allowed = no
-			}
+		add_stability = -0.1
+		set_country_flag = LRE_SAVE
+		country_event = {
+			id = frg.20
+			days = 7
 		}
 	}
 	option = {
 		name = frg.18.b
-		BRI = { transfer_state = 983 }
-		BRI = { transfer_state = 14 }
-		BRI = { 
-			inherit_technology = FRA
-			add_state_core = 983
-			add_state_core = 14
-			set_politics = {
-				ruling_party = paternal_autocrat
-				elections_allowed = no
+		add_stability = -0.05
+		hidden_effect = {
+			country_event = {
+				id = frg.19
+				days = 7
 			}
 		}
-		BRI = { change_tag_from = FRA }
 	}
 	
 }
@@ -779,137 +769,56 @@ country_event = {
 
 	option = {
 		name = frg.19.a
-			OCC = { transfer_state = 817 }
-			OCC = { transfer_state = 984 }
-			OCC = { transfer_state = 1334 }
-			OCC = { transfer_state = 31 }
-			OCC = { transfer_state = 19 }
-			OCC = { transfer_state = 22 }
-			OCC = { 
-				inherit_technology = FRA
-				add_state_core = 817
-				add_state_core = 984
-				add_state_core = 31
-				add_state_core = 19
-				add_state_core = 22
-				set_politics = {
-					ruling_party = authoritarian_democrat
-					elections_allowed = no
-				}
+		add_stability = -0.05
+		set_country_flag = LRE_BOOM
+		hidden_effect = {
+			country_event = {
+				id = frg.20
+				days = 7
 			}
+		}
 	}
-	option = {
-		name = frg.19.b
-			OCC = { transfer_state = 817 }
-			OCC = { transfer_state = 984 }
-			OCC = { transfer_state = 1334 }
-			OCC = { transfer_state = 31 }
-			OCC = { transfer_state = 19 }
-			OCC = { transfer_state = 22 }
-			OCC = { 
-				inherit_technology = FRA
-				add_state_core = 817
-				add_state_core = 984
-				add_state_core = 31
-				add_state_core = 19
-				add_state_core = 22
-				set_politics = {
-					ruling_party = authoritarian_democrat
-					elections_allowed = no
-				}
-			}
-		OCC = { change_tag_from = FRA }
-	}
-	
 }
 country_event = { 
-	id = frg.20 #JDF
+	id = frg.20 #LRE
 	immediate = {log = "[GetDateText]: [Root.GetName]: event frg.7 "}
 	title = frg.20.t
 	desc = frg.20.d
 
 	is_triggered_only = yes
 	fire_only_once = yes
-         
-
 	option = {
 		name = frg.20.a
-		JDF = { transfer_state = 785 }
-		JDF = { 
-			inherit_technology = FRA
-			set_politics = {
-				ruling_party = social_liberal
-				elections_allowed = no
-			}
-			add_state_core = 785
+		add_stability = -0.05
+		country_event = {
+			id = frg.21
+			days = 7
 		}
-	}
-	option = {
-		name = frg.20.b
-		JDF = { transfer_state = 785 }
-		JDF = { 
-			inherit_technology = FRA
-			add_state_core = 785
-			set_politics = {
-				ruling_party = social_liberal
-				elections_allowed = no
-			}
-		}
-		JDF = { change_tag_from = FRA }
 	}
 	
 }
+
 country_event = { 
-	id = frg.21 #normandy revolution
+	id = frg.21 #LRE
 	immediate = {log = "[GetDateText]: [Root.GetName]: event frg.7 "}
 	title = frg.21.t
 	desc = frg.21.d
 
 	is_triggered_only = yes
 	fire_only_once = yes
-         
-
 	option = {
 		name = frg.21.a
-		NRM = { transfer_state = 15 }
-		NRM = { 
-			inherit_technology = FRA
-			add_state_core = 15
-			set_politics = {
-				ruling_party = totalist
-				elections_allowed = no
-			}
-			create_country_leader = {
-				name = "革命指挥部"
-				picture = "gfx/leaders/FRG/Communard_politburo.dds"
-				expire = "1965.1.1"
-				ideology = jacobinism_subtype
-			}
+		add_stability = -0.05
+		country_event = {
+			id = frg.22
+			days = 7
 		}
-	}
-	option = {
-		name = frg.21.b
-		NRM = { transfer_state = 15 }
-		NRM = { 
-			inherit_technology = FRA
-			add_state_core = 15
-			set_politics = {
-				ruling_party = totalist
-				elections_allowed = no
-			}
-			create_country_leader = {
-				name = "革命指挥部"
-				picture = "gfx/leaders/FRG/Communard_politburo.dds"
-				expire = "1965.1.1"
-				ideology = jacobinism_subtype
-			}
-		}
-		NRM = { change_tag_from = FRA }
 	}
 	
 }
+
 country_event = { 
-	id = frg.22 #commuards has returned
+	id = frg.22 #normandy revolution
 	immediate = {log = "[GetDateText]: [Root.GetName]: event frg.7 "}
 	title = frg.22.t
 	desc = frg.22.d
@@ -920,88 +829,51 @@ country_event = {
 
 	option = {
 		name = frg.22.a
-		dismantle_faction = yes
-		set_politics = {
-			ruling_party = radical_socialist
-			elections_allowed = no
+		if = {
+			limit = {
+				has_country_leader = {
+					ruling_only = yes
+					name = "马塞尔·布卡德"
+				}
+			}
+			add_stability = -0.05
+			country_event = {
+				id = frg.23
+				days = 7
+			}
 		}
-
-		add_popularity = {
-			ideology = totalist
-			popularity = 0.2
+		if = {
+			limit = {
+				has_country_leader = {
+					ruling_only = yes
+					name = "莫里斯·甘末林"					# Maurice Gamelin
+				}
+			}
+			add_stability = -0.05
+			country_event = {
+				id = frg.24
+				days = 7
+			}
 		}
-		add_popularity = {
-			ideology = syndicalist
-			popularity = 0.2
-		}
-		add_popularity = {
-			ideology = radical_socialist
-			popularity = 0.2
-		}
-		add_popularity = {
-			ideology = social_democrat
-			popularity = 0.2
-		}
-		add_popularity = {
-			ideology = national_populist
-			popularity = -0.5
-		}
-		create_country_leader = {	
-			name = "加斯东·维达尔"  # Gaston Vidal
-			picture = "gfx/leaders/FRA/Portrait_FRA_Gaston_Vidal.png"
-			expire = "1.1.1"
-			ideology = radsoc_red_junta_subtype
-		}
-		remove_all_ministers = yes
-		add_ideas = {
-			FRA_Guy_Mollet_hog_sde
-			FRA_Fernand_Despres_for_rso
-			FRA_Laurent_Casenove_eco_syn
-			FRA_Claudine_Chomat_sec_tot
-		}
-		set_party_name = {
-			ideology = totalist
-			long_name = "社会主义行动党"
-			name = "社会主义行动党"
-		}
-		set_party_name = {
-			ideology = syndicalist
-			long_name = "劳工总联合会"
-			name = "劳工总联合会"
-		}
-		set_party_name = {
-			ideology = radical_socialist
-			long_name = "临时政府/联邦无政府主义者联合会"
-			name = "临时政府/联邦无政府主义者联合会"
-		}
-		set_party_name = {
-			ideology = social_democrat
-			long_name = "工人国际法国支部"
-			name = "工人国际法国支部"
-		}
-		set_cosmetic_tag = FRG_commune
-		FRG = {
-			every_unit_leader = {	
-				set_nationality = NSW
-			}	
-		}
-		FRA = {
-			every_unit_leader = {	
-				set_nationality = FRG
-			}	
-		}
-		country_event = {
-			id = frg.23 
-			days = 2
-		}
-		remove_ideas = FRG_A_chaotic_government
 	}
-	
-	
+
 }
+
 country_event = { 
-	id = frg.23 #elections or not
-	immediate = {log = "[GetDateText]: [Root.GetName]: event frg.7 "}
+	id = frg.23 #布卡德专属事件-诺曼底
+	immediate = {
+		hidden_effect = {
+			NRM = { transfer_state = 15 }
+			NRM = { 
+				inherit_technology = FRA
+				add_state_core = 15
+				set_politics = {
+					ruling_party = authoritarian_democrat
+					elections_allowed = no
+				}
+			}
+		}
+	}
 	title = frg.23.t
 	desc = frg.23.d
 
@@ -1011,50 +883,202 @@ country_event = {
 
 	option = {
 		name = frg.23.a
-		set_country_flag = FRG_totalist_tip
-		add_popularity = {
-			ideology = totalist
-			popularity = 0.1
-		}
-		add_popularity = {
-			ideology = social_democrat
-			popularity = 0.1
-		}
-		add_popularity = {
-			ideology = radical_socialist
-			popularity = 0.1
-		}
-		country_event = {
-			id = frg.24
-			days = 7
-		}
-	}
-	option = {
-		name = frg.23.b
-		
-		set_country_flag = FRG_syndicalist_tip
-		add_popularity = {
-			ideology = syndicalist
-			popularity = 0.1
-		}
-		add_popularity = {
-			ideology = radical_socialist
-			popularity = 0.1
-		}
-		add_popularity = {
-			ideology = social_democrat
-			popularity = 0.1
+		hidden_effect = {
+			NRM = {
+				add_manpower = 800000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 50000
+					producer = FRA
+				}
+				NRM = {
+					division_template = {
+						name = "诺曼底卫队"
+						division_names_group = NRM_NRARMY_01
+						regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 2 y = 0 }
+						infantry = { x = 2 y = 1 }
+						}
+						support = {
+						artillery = { x = 0 y = 0 }
+						}
+					}
+				random_owned_controlled_state = {
+						create_unit = {
+							division = "name = \"诺曼底卫队\" division_template = \"诺曼底卫队\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = NRM
+						}
+						create_unit = {
+							division = "name = \"诺曼底卫队\" division_template = \"诺曼底卫队\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = NRM
+						}
+						create_unit = {
+							division = "name = \"诺曼底卫队\" division_template = \"诺曼底卫队\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = NRM
+						}
+						create_unit = {
+							division = "name = \"诺曼底卫队\" division_template = \"诺曼底卫队\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = NRM
+						}
+						create_unit = {
+							division = "name = \"诺曼底卫队\" division_template = \"诺曼底卫队\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = NRM
+						}
+						create_unit = {
+							division = "name = \"诺曼底卫队\" division_template = \"诺曼底卫队\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = NRM
+						}
+						create_unit = {
+							division = "name = \"诺曼底卫队\" division_template = \"诺曼底卫队\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = NRM
+						}
+						create_unit = {
+							division = "name = \"诺曼底卫队\" division_template = \"诺曼底卫队\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = NRM
+						}
+						create_unit = {
+							division = "name = \"诺曼底卫队\" division_template = \"诺曼底卫队\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = NRM
+						}
+						create_unit = {
+							division = "name = \"诺曼底卫队\" division_template = \"诺曼底卫队\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = NRM
+						}
+					}
+				}
+			}
 		}
 		country_event = {
 			id = frg.25
 			days = 7
 		}
 	}
+	option = {
+		hidden_effect = {
+			NRM = {
+				add_manpower = 800000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 50000
+					producer = FRA
+				}
+				NRM = {
+					division_template = {
+						name = "诺曼底卫队"
+						division_names_group = NRM_NRARMY_01
+						regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 2 y = 0 }
+						infantry = { x = 2 y = 1 }
+						}
+						support = {
+						artillery = { x = 0 y = 0 }
+						}
+					}
+				random_owned_controlled_state = {
+						create_unit = {
+							division = "name = \"诺曼底卫队\" division_template = \"诺曼底卫队\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = NRM
+						}
+						create_unit = {
+							division = "name = \"诺曼底卫队\" division_template = \"诺曼底卫队\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = NRM
+						}
+						create_unit = {
+							division = "name = \"诺曼底卫队\" division_template = \"诺曼底卫队\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = NRM
+						}
+						create_unit = {
+							division = "name = \"诺曼底卫队\" division_template = \"诺曼底卫队\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = NRM
+						}
+						create_unit = {
+							division = "name = \"诺曼底卫队\" division_template = \"诺曼底卫队\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = NRM
+						}
+						create_unit = {
+							division = "name = \"诺曼底卫队\" division_template = \"诺曼底卫队\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = NRM
+						}
+						create_unit = {
+							division = "name = \"诺曼底卫队\" division_template = \"诺曼底卫队\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = NRM
+						}
+						create_unit = {
+							division = "name = \"诺曼底卫队\" division_template = \"诺曼底卫队\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = NRM
+						}
+						create_unit = {
+							division = "name = \"诺曼底卫队\" division_template = \"诺曼底卫队\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = NRM
+						}
+						create_unit = {
+							division = "name = \"诺曼底卫队\" division_template = \"诺曼底卫队\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = NRM
+						}
+					}
+				}
+			}
+		}
+		name = frg.23.b
+		NRM = { change_tag_from = FRA }
+		country_event = {
+			id = frg.25
+			days = 7
+		}
+	}
+	
 	
 }
+
 country_event = { 
-	id = frg.24 #elections?
-	immediate = {log = "[GetDateText]: [Root.GetName]: event frg.7 "}
+	id = frg.24 #normandy revolution
+	immediate = {
+		hidden_effect = {
+			NRM = { transfer_state = 15 }
+			NRM = { 
+				inherit_technology = FRA
+				add_state_core = 15
+				set_politics = {
+					ruling_party = totalist
+					elections_allowed = no
+				}
+				create_country_leader = {
+					name = "革命指挥部"
+					picture = "gfx/leaders/FRG/Communard_politburo.dds"
+					expire = "1965.1.1"
+					ideology = jacobinism_subtype
+				}
+			}
+		}
+	}
 	title = frg.24.t
 	desc = frg.24.d
 
@@ -1063,67 +1087,198 @@ country_event = {
          
 
 	option = {
-		name = frg.24.a
-		set_politics = {
-			ruling_party = totalist
-			elections_allowed = no
+	name = frg.24.a
+	
+		hidden_effect = {
+			NRM = {
+				add_manpower = 800000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 50000
+					producer = FRA
+				}
+				NRM = {
+					division_template = {
+						name = "工人武装"
+						division_names_group = NRM_NRARMY_01
+						regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 2 y = 0 }
+						infantry = { x = 2 y = 1 }
+						}
+						support = {
+						artillery = { x = 0 y = 0 }
+						}
+					}
+				random_owned_controlled_state = {
+						create_unit = {
+							division = "name = \"工人武装\" division_template = \"工人武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = NRM
+						}
+						create_unit = {
+							division = "name = \"工人武装\" division_template = \"工人武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = NRM
+						}
+						create_unit = {
+							division = "name = \"工人武装\" division_template = \"工人武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = NRM
+						}
+						create_unit = {
+							division = "name = \"工人武装\" division_template = \"工人武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = NRM
+						}
+						create_unit = {
+							division = "name = \"工人武装\" division_template = \"工人武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = NRM
+						}
+						create_unit = {
+							division = "name = \"工人武装\" division_template = \"工人武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = NRM
+						}
+						create_unit = {
+							division = "name = \"工人武装\" division_template = \"工人武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = NRM
+						}
+						create_unit = {
+							division = "name = \"工人武装\" division_template = \"工人武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = NRM
+						}
+						create_unit = {
+							division = "name = \"工人武装\" division_template = \"工人武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = NRM
+						}
+						create_unit = {
+							division = "name = \"工人武装\" division_template = \"工人武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = NRM
+						}
+					}
+				}
+			}
 		}
-		set_cosmetic_tag = FRA_Jacobin
-		
+		country_event = {
+			id = frg.25
+			days = 7
+		}
 	}
 	option = {
 		name = frg.24.b
-		set_politics = {
-			ruling_party = radical_socialist
-			elections_allowed = no
+		hidden_effect = {
+			NRM = {
+				add_manpower = 800000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 50000
+					producer = FRA
+				}
+				NRM = {
+					division_template = {
+						name = "工人武装"
+						division_names_group = NRM_NRARMY_01
+						regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 2 y = 0 }
+						infantry = { x = 2 y = 1 }
+						}
+						support = {
+						artillery = { x = 0 y = 0 }
+						}
+					}
+				random_owned_controlled_state = {
+						create_unit = {
+							division = "name = \"工人武装\" division_template = \"工人武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = NRM
+						}
+						create_unit = {
+							division = "name = \"工人武装\" division_template = \"工人武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = NRM
+						}
+						create_unit = {
+							division = "name = \"工人武装\" division_template = \"工人武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = NRM
+						}
+						create_unit = {
+							division = "name = \"工人武装\" division_template = \"工人武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = NRM
+						}
+						create_unit = {
+							division = "name = \"工人武装\" division_template = \"工人武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = NRM
+						}
+						create_unit = {
+							division = "name = \"工人武装\" division_template = \"工人武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = NRM
+						}
+						create_unit = {
+							division = "name = \"工人武装\" division_template = \"工人武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = NRM
+						}
+						create_unit = {
+							division = "name = \"工人武装\" division_template = \"工人武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = NRM
+						}
+						create_unit = {
+							division = "name = \"工人武装\" division_template = \"工人武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = NRM
+						}
+						create_unit = {
+							division = "name = \"工人武装\" division_template = \"工人武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = NRM
+						}
+					}
+				}
+			}
 		}
-		set_party_name = {
-			ideology = radical_socialist
-			long_name = "基督教劳联"
-			name = "基督教劳联"
+		NRM = { change_tag_from = FRA }
+		country_event = {
+			id = frg.25
+			days = 7
 		}
-		set_party_name = {
-			ideology = social_democrat
-			long_name = "基督教劳联"
-			name = "基督教劳联"
-		}
-		create_country_leader = {
-			name = "加斯东·泰西耶"  # Gaston Tessier
-			picture = "gfx/leaders/FRA/Portrait_FRA_Gaston_Tessier.png"
-			expire = "1.1.1"
-			ideology = christian_socialism_subtype
-		}
-		create_country_leader = {
-			name = "加斯东·泰西耶"  # Gaston Tessier
-			picture = "gfx/leaders/FRA/Portrait_FRA_Gaston_Tessier.png"
-			expire = "1.1.1"
-			ideology = socdem_christian_socialism_subtype
-		}
-		set_cosmetic_tag = FRG_tessier
-	}
-	option = {
-		name = frg.24.c
-		set_politics = {
-			ruling_party = social_democrat
-			elections_allowed = no
-		}
-		set_party_name = {
-			ideology = social_democrat
-			long_name = "共和社会党"
-			name = "共和社会党"
-		}
-		create_country_leader = {	
-			name = "加斯东·维达尔"  # Gaston Vidal
-			picture = "gfx/leaders/FRA/Portrait_FRA_Gaston_Vidal.png"
-			expire = "1.1.1"
-			ideology = socdem_paternal_socialism_subtype
-		}
-		set_cosmetic_tag = FRG_vidal
 	}
 }
+
 country_event = { 
-	id = frg.25 #elections?
-	immediate = {log = "[GetDateText]: [Root.GetName]: event frg.7 "}
+	id = frg.25 #brittany revolts
+	immediate = {
+		hidden_effect = {
+			BRI = { transfer_state = 983 }
+			BRI = { transfer_state = 14 }
+			BRI = { 
+				inherit_technology = FRA
+				add_state_core = 983
+				add_state_core = 14
+				set_politics = {
+					ruling_party = paternal_autocrat
+					elections_allowed = no
+				}
+			}
+		}
+	}
 	title = frg.25.t
 	desc = frg.25.d
 
@@ -1133,45 +1288,185 @@ country_event = {
 
 	option = {
 		name = frg.25.a
-		set_politics = {
-			ruling_party = syndicalist
-			elections_allowed = no
+		hidden_effect = {
+			BRI = {
+				add_manpower = 800000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 50000
+					producer = FRA
+				}
+				BRI = {
+					division_template = {
+						name = "民兵武装"
+						division_names_group = BRI_NRARMY_01
+						regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 2 y = 0 }
+						infantry = { x = 2 y = 1 }
+						}
+						support = {
+						artillery = { x = 0 y = 0 }
+						}
+					}
+				random_owned_controlled_state = {
+						create_unit = {
+							division = "name = \"民兵武装\" division_template = \"民兵武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = BRI
+						}
+						create_unit = {
+							division = "name = \"民兵武装\" division_template = \"民兵武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = BRI
+						}
+						create_unit = {
+							division = "name = \"民兵武装\" division_template = \"民兵武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = BRI
+						}
+						create_unit = {
+							division = "name = \"民兵武装\" division_template = \"民兵武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = BRI
+						}
+						create_unit = {
+							division = "name = \"民兵武装\" division_template = \"民兵武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = BRI
+						}
+						create_unit = {
+							division = "name = \"民兵武装\" division_template = \"民兵武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = BRI
+						}
+						create_unit = {
+							division = "name = \"民兵武装\" division_template = \"民兵武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = BRI
+						}
+						create_unit = {
+							division = "name = \"民兵武装\" division_template = \"民兵武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = BRI
+						}
+					}
+				}
+			}
 		}
 		
-		
+		country_event = {
+			id = frg.26
+			days = 7
+		}
 	}
 	option = {
+		hidden_effect = {
+			BRI = {
+				add_manpower = 800000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 50000
+					producer = FRA
+				}
+				BRI = {
+					division_template = {
+						name = "民兵武装"
+						division_names_group = BRI_NRARMY_01
+						regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 2 y = 0 }
+						infantry = { x = 2 y = 1 }
+						}
+						support = {
+						artillery = { x = 0 y = 0 }
+						}
+					}
+				random_owned_controlled_state = {
+						create_unit = {
+							division = "name = \"民兵武装\" division_template = \"民兵武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = BRI
+						}
+						create_unit = {
+							division = "name = \"民兵武装\" division_template = \"民兵武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = BRI
+						}
+						create_unit = {
+							division = "name = \"民兵武装\" division_template = \"民兵武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = BRI
+						}
+						create_unit = {
+							division = "name = \"民兵武装\" division_template = \"民兵武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = BRI
+						}
+						create_unit = {
+							division = "name = \"民兵武装\" division_template = \"民兵武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = BRI
+						}
+						create_unit = {
+							division = "name = \"民兵武装\" division_template = \"民兵武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = BRI
+						}
+						create_unit = {
+							division = "name = \"民兵武装\" division_template = \"民兵武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = BRI
+						}
+						create_unit = {
+							division = "name = \"民兵武装\" division_template = \"民兵武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = BRI
+						}
+					}
+				}
+			}
+		}
 		name = frg.25.b
-		set_politics = {
-			ruling_party = social_democrat
-			elections_allowed = no
+		BRI = { change_tag_from = FRA }
+		country_event = {
+			id = frg.26
+			days = 7
 		}
-		
 	}
-	option = {
-		name = frg.25.c
-		set_politics = {
-			ruling_party = radical_socialist
-			elections_allowed = no
-		}
-		set_party_name = {
-			ideology = radical_socialist
-			long_name = "联邦无政府主义者联合会"
-			name = "联邦无政府主义者联合会"
-		}
-		create_country_leader = {
-			name = "达尼埃尔·介朗"
-			picture = "gfx/leaders/FRA/Portrait_France_Daniel_Guerin.png"
-			expire = "1.1.1"
-			ideology = anarcho_communism_subtype
-			traits = {}
-		}
-		
-	}
+	
 }
+
 country_event = { 
-	id = frg.26 #remy is shot
-	immediate = {log = "[GetDateText]: [Root.GetName]: event frg.7 "}
+	id = frg.26 #occitania independence
+	immediate = {
+		hidden_effect = {
+			OCC = { transfer_state = 817 }
+			OCC = { transfer_state = 984 }
+			OCC = { transfer_state = 1334 }
+			OCC = { transfer_state = 31 }
+			OCC = { transfer_state = 19 }
+			OCC = { transfer_state = 22 }
+			OCC = { 
+				inherit_technology = FRA
+				add_state_core = 817
+				add_state_core = 984
+				add_state_core = 31
+				add_state_core = 19
+				add_state_core = 22
+				set_politics = {
+					ruling_party = authoritarian_democrat
+					elections_allowed = no
+				}
+			}
+		}
+	}
 	title = frg.26.t
 	desc = frg.26.d
 
@@ -1181,32 +1476,243 @@ country_event = {
 
 	option = {
 		name = frg.26.a
-		add_stability = -0.1
-		create_country_leader = {	
-			name = "临时委员会"  
-			picture = "gfx/leaders/NFA/Portrait_NFA_AF_Council.png"
-			expire = "1.1.1"
-			ideology = maurrassism_subtype
+		hidden_effect = {
+			OCC = {
+				add_manpower = 800000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 50000
+					producer = FRA
+				}
+				OCC = {
+					division_template = {
+						name = "教士武装"
+						division_names_group = OCC_NRARMY_01
+						regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 2 y = 0 }
+						infantry = { x = 2 y = 1 }
+						}
+						support = {
+						artillery = { x = 0 y = 0 }
+						}
+					}
+				random_owned_controlled_state = {
+						create_unit = {
+							division = "name = \"教士武装\" division_template = \"教士武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = OCC
+						}
+						create_unit = {
+							division = "name = \"教士武装\" division_template = \"教士武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = OCC
+						}
+						create_unit = {
+							division = "name = \"教士武装\" division_template = \"教士武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = OCC
+						}
+						create_unit = {
+							division = "name = \"教士武装\" division_template = \"教士武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = OCC
+						}
+						create_unit = {
+							division = "name = \"教士武装\" division_template = \"教士武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = OCC
+						}
+						create_unit = {
+							division = "name = \"教士武装\" division_template = \"教士武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = OCC
+						}
+						create_unit = {
+							division = "name = \"教士武装\" division_template = \"教士武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = OCC
+						}
+						create_unit = {
+							division = "name = \"教士武装\" division_template = \"教士武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = OCC
+						}
+						create_unit = {
+							division = "name = \"教士武装\" division_template = \"教士武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = OCC
+						}
+						create_unit = {
+							division = "name = \"教士武装\" division_template = \"教士武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = OCC
+						}
+						create_unit = {
+							division = "name = \"教士武装\" division_template = \"教士武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = OCC
+						}
+						create_unit = {
+							division = "name = \"教士武装\" division_template = \"教士武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = OCC
+						}
+					}
+				}
+			}
 		}
-		random_unit_leader = {
-			limit = { has_id = 114514 }
-			remove_unit_leader = yes
+		if = {
+			limit = {
+				has_country_flag = LRE_SAVE
+			}
+			country_event = {
+				id = frg.28
+				days = 7
+			}
 		}
-		country_event = {
-			id = frg.27 
-			days = 3
+		if = {
+			limit = {
+				has_country_flag = LRE_BOOM
+			}
+			country_event = {
+				id = frg.27
+				days = 7
+			}
 		}
-		set_country_flag = Remy_die
 	}
 	option = {
 		name = frg.26.b
-		set_country_flag = Remy_alive
+		hidden_effect = {
+			OCC = {
+				add_manpower = 800000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 50000
+					producer = FRA
+				}
+				OCC = {
+					division_template = {
+						name = "教士武装"
+						division_names_group = OCC_NRARMY_01
+						regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 2 y = 0 }
+						infantry = { x = 2 y = 1 }
+						}
+						support = {
+						artillery = { x = 0 y = 0 }
+						}
+					}
+				random_owned_controlled_state = {
+						create_unit = {
+							division = "name = \"教士武装\" division_template = \"教士武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = OCC
+						}
+						create_unit = {
+							division = "name = \"教士武装\" division_template = \"教士武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = OCC
+						}
+						create_unit = {
+							division = "name = \"教士武装\" division_template = \"教士武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = OCC
+						}
+						create_unit = {
+							division = "name = \"教士武装\" division_template = \"教士武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = OCC
+						}
+						create_unit = {
+							division = "name = \"教士武装\" division_template = \"教士武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = OCC
+						}
+						create_unit = {
+							division = "name = \"教士武装\" division_template = \"教士武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = OCC
+						}
+						create_unit = {
+							division = "name = \"教士武装\" division_template = \"教士武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = OCC
+						}
+						create_unit = {
+							division = "name = \"教士武装\" division_template = \"教士武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = OCC
+						}
+						create_unit = {
+							division = "name = \"教士武装\" division_template = \"教士武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = OCC
+						}
+						create_unit = {
+							division = "name = \"教士武装\" division_template = \"教士武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = OCC
+						}
+						create_unit = {
+							division = "name = \"教士武装\" division_template = \"教士武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = OCC
+						}
+						create_unit = {
+							division = "name = \"教士武装\" division_template = \"教士武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = OCC
+						}
+					}
+				}
+			}
+		}
+		OCC = { change_tag_from = FRA }
+		if = {
+			limit = {
+				has_country_flag = LRE_SAVE
+			}
+			country_event = {
+				id = frg.28
+				days = 7
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = LRE_BOOM
+			}
+			country_event = {
+				id = frg.27
+				days = 7
+			}
+		}
 	}
 	
 }
+
 country_event = { 
-	id = frg.27 #new leader
-	immediate = {log = "[GetDateText]: [Root.GetName]: event frg.7 "}
+	id = frg.27 #LRE
+	immediate = {
+		hidden_effect = {
+			LRE = { transfer_state = 785 }
+			LRE = { 
+				inherit_technology = FRA
+				set_politics = {
+					ruling_party = social_liberal
+					elections_allowed = no
+				}
+				add_state_core = 785
+			}
+		}
+	}
 	title = frg.27.t
 	desc = frg.27.d
 
@@ -1216,393 +1722,1338 @@ country_event = {
 
 	option = {
 		name = frg.27.a
-		complete_national_focus = FRG_Fable_win
-	
+		hidden_effect = {
+			LRE = {
+				add_manpower = 800000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 50000
+					producer = FRA
+				}
+				LRE = {
+					division_template = {
+						name = "雇佣兵"
+						division_names_group = LRE_NRARMY_01
+						regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 2 y = 0 }
+						infantry = { x = 2 y = 1 }
+						}
+						support = {
+						artillery = { x = 0 y = 0 }
+						}
+					}
+				random_owned_controlled_state = {
+						create_unit = {
+							division = "name = \"雇佣兵\" division_template = \"雇佣兵\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = LRE
+						}
+						create_unit = {
+							division = "name = \"雇佣兵\" division_template = \"雇佣兵\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = LRE
+						}
+						create_unit = {
+							division = "name = \"雇佣兵\" division_template = \"雇佣兵\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = LRE
+						}
+						create_unit = {
+							division = "name = \"雇佣兵\" division_template = \"雇佣兵\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = LRE
+						}
+						create_unit = {
+							division = "name = \"雇佣兵\" division_template = \"雇佣兵\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = LRE
+						}
+						create_unit = {
+							division = "name = \"雇佣兵\" division_template = \"雇佣兵\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = LRE
+						}
+						create_unit = {
+							division = "name = \"雇佣兵\" division_template = \"雇佣兵\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = LRE
+						}
+					}
+				}
+			}
+		}
+		
+		country_event = {
+			id = frg.28
+			days = 7
+		}
 	}
 	option = {
 		name = frg.27.b
-		complete_national_focus = FRG_Chanel_win
+		hidden_effect = {
+			LRE = {
+				add_manpower = 800000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 50000
+					producer = FRA
+				}
+				LRE = {
+					division_template = {
+						name = "雇佣兵"
+						division_names_group = LRE_NRARMY_01
+						regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 2 y = 0 }
+						infantry = { x = 2 y = 1 }
+						}
+						support = {
+						artillery = { x = 0 y = 0 }
+						}
+					}
+				random_owned_controlled_state = {
+						create_unit = {
+							division = "name = \"雇佣兵\" division_template = \"雇佣兵\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = LRE
+						}
+						create_unit = {
+							division = "name = \"雇佣兵\" division_template = \"雇佣兵\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = LRE
+						}
+						create_unit = {
+							division = "name = \"雇佣兵\" division_template = \"雇佣兵\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = LRE
+						}
+						create_unit = {
+							division = "name = \"雇佣兵\" division_template = \"雇佣兵\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = LRE
+						}
+						create_unit = {
+							division = "name = \"雇佣兵\" division_template = \"雇佣兵\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = LRE
+						}
+						create_unit = {
+							division = "name = \"雇佣兵\" division_template = \"雇佣兵\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = LRE
+						}
+						create_unit = {
+							division = "name = \"雇佣兵\" division_template = \"雇佣兵\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = LRE
+						}
+					}
+				}
+			}
+		}
+		LRE = { change_tag_from = FRA }
+		country_event = {
+			id = frg.28
+			days = 7
+		}
 	}
-	option = {
-		name = frg.27.c
-		complete_national_focus = FRG_Mahieu_win
-	}
-	option = {
-		name = frg.27.e
-		complete_national_focus = FRG_Chack_win
-	}
-	option = {
-		name = frg.27.f
-		complete_national_focus = FRG_Brasillach_win
-	}
+	
 }
-country_event = { 
-	id = frg.28 #ideo picker
-	immediate = {log = "[GetDateText]: [Root.GetName]: event frg.7 "}
+
+country_event = {
+	id = frg.28
+	immediate = {log = "[GetDateText]: [Root.GetName]: event comfrance.971"}
 	title = frg.28.t
 	desc = frg.28.d
-
-	is_triggered_only = yes
+	picture = GFX_news_event_FRA_anarchist_bombings
 	fire_only_once = yes
+	is_triggered_only = yes
+	
 	option = {	
-        name = "现在就挺好，没必要换。"
+        name = frg.28.a
+        hidden_effect = {
+            FRG = { transfer_state = 762 }
+            FRG = { transfer_state = 21 }
+            FRG = { transfer_state = 763 }
+            FRG = { transfer_state = 32 }
+            FRG = { transfer_state = 735 }
+            FRG = { transfer_state = 20 }
+            FRG = { transfer_state = 26 }
+			FRG = { transfer_state = 25 }
+			FRG = {
+				create_faction =  "自由法国"
+				add_to_faction = NFA
+				inherit_technology = FRA
+			}
+          
 		
-    }  
-	option = {	
-        name = "民族革命万岁！"
-		set_politics = {
-			ruling_party = national_populist
-			elections_allowed = no
+			
+            FRG = { 
+				add_state_core = 14
+        		add_state_core = 983
+      		  	add_state_core = 17
+      		  	add_state_core = 980
+    		   	add_state_core = 785
+        		add_state_core = 24
+        		add_state_core = 18
+        		add_state_core = 16
+        		add_state_core = 15
+        		add_state_core = 30
+        		add_state_core = 23
+        		add_state_core = 33
+        		add_state_core = 27
+    			add_state_core = 25
+        		add_state_core = 26
+        		add_state_core = 19
+        		add_state_core = 984
+        		add_state_core = 31
+        		add_state_core = 817
+        		add_state_core = 22
+        		add_state_core = 21
+       			add_state_core = 32
+        		add_state_core = 763
+        		add_state_core = 20
+        		add_state_core = 785
+        		add_state_core = 762
+        		add_state_core = 1
+        		add_state_core = 779
+				add_state_core = 1334
+			}
+			
+			FRG = {
+				add_manpower = 800000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 50000
+					producer = FRA
+				}
+				load_oob = FRG
+			}
+			dismantle_faction = yes
 		}
-		create_country_leader = {
-			name = "阿尔弗雷德·法布尔·卢斯"
-			desc = ""
-			picture = "gfx/leaders/FRG/Portrait_FRG_Alfred_Fabre_Luce.png"
-			expire = "1965.1.1"
-			ideology = natpop_revolution_nationale_subtype
+		country_event = {
+			id = frg_new.2
+			days = 25
 		}
-		add_tot_to_coalition = yes
-    }  
-
-	option = {	
-        name = "忘掉愚蠢的极权思想吧，让我们看向马克思主义的另外一端...."
-		set_politics = {
-			ruling_party = national_populist
-			elections_allowed = no
-		}
-		add_tot_to_coalition = yes
-		create_country_leader = {
-			name = "阿尔弗雷德·法布尔·卢斯"
-			desc = ""
-			picture = "gfx/leaders/FRG/Portrait_FRG_Alfred_Fabre_Luce.png"
-			expire = "1965.1.1"
-			ideology = natpop_goebbels_subtype
-		}
-    } 
-
-	option = {	
-        name = "布拉希拉赫的思想尚有可取之处"
-		set_politics = {
-			ruling_party = national_populist
-			elections_allowed = no
-		}
-		add_tot_to_coalition = yes
-		create_country_leader = {
-			name = "阿尔弗雷德·法布尔·卢斯"
-			desc = ""
-			picture = "gfx/leaders/FRG/Portrait_FRG_Alfred_Fabre_Luce.png"
-			expire = "1965.1.1"
-			ideology = ultranationalism_proto_subtype
-		}
-    } 
-
-	option = {	
-        name = "回归初心，新社会主义将会在法兰西崛起"
-		set_politics = {
-			ruling_party = totalist
-			elections_allowed = no
-		}
-		set_cosmetic_tag = FRG_Fabre_Luce_neosoc
-		create_country_leader = {
-			name = "阿尔弗雷德·法布尔·卢斯"
-			desc = ""
-			picture = "gfx/leaders/FRG/Portrait_FRG_Alfred_Fabre_Luce.png"
-			expire = "1965.1.1"
-			ideology = neo_socialism_subtype
-		}
-		add_natpop_to_coalition = yes
-    } 
-
-	option = {	
-        name = "就现实来说，多里奥的民族雅各宾更适合我们"
-		set_politics = {
-			ruling_party = totalist
-			elections_allowed = no
-		}
-		set_cosmetic_tag = FRG_Fabre_Luce_sorelian
-		create_country_leader = {
-			name = "阿尔弗雷德·法布尔·卢斯"
-			desc = ""
-			picture = "gfx/leaders/FRG/Portrait_FRG_Alfred_Fabre_Luce.png"
-			expire = "1965.1.1"
-			ideology = national_jacobinism_subtype
-		}
-		add_natpop_to_coalition = yes
-    } 
-	option = {	
-        name = "法国革命将会永远前进！"
-		set_politics = {
-			ruling_party = totalist
-			elections_allowed = no
-		}
-		set_cosmetic_tag = FRG_Fabre_Luce_sorelian
-		create_country_leader = {
-			name = "阿尔弗雷德·法布尔·卢斯"
-			desc = ""
-			picture = "gfx/leaders/FRG/Portrait_FRG_Alfred_Fabre_Luce.png"
-			expire = "1965.1.1"
-			ideology = tot_francism_subtype
-		}
-		add_natpop_to_coalition = yes
     }
+	option = {	
+        name = frg.28.b
+		FRG = { change_tag_from = FRA }
+		hidden_effect = {
+            FRG = { transfer_state = 762 }
+            FRG = { transfer_state = 21 }
+            FRG = { transfer_state = 763 }
+            FRG = { transfer_state = 32 }
+            FRG = { transfer_state = 735 }
+            FRG = { transfer_state = 20 }
+            FRG = { transfer_state = 26 }
+			FRG = { transfer_state = 25 }
+			FRG = {
+				create_faction =  "自由法国"
+				add_to_faction = NFA
+				inherit_technology = FRA
+			}
+          
+		
+			
+            FRG = { 
+				add_state_core = 14
+        		add_state_core = 983
+      		  	add_state_core = 17
+      		  	add_state_core = 980
+    		   	add_state_core = 785
+        		add_state_core = 24
+        		add_state_core = 18
+        		add_state_core = 16
+        		add_state_core = 15
+        		add_state_core = 30
+        		add_state_core = 23
+        		add_state_core = 33
+        		add_state_core = 27
+    			add_state_core = 25
+        		add_state_core = 26
+        		add_state_core = 19
+        		add_state_core = 984
+        		add_state_core = 31
+        		add_state_core = 817
+        		add_state_core = 22
+        		add_state_core = 21
+       			add_state_core = 32
+        		add_state_core = 763
+        		add_state_core = 20
+        		add_state_core = 785
+        		add_state_core = 762
+        		add_state_core = 1
+        		add_state_core = 779
+				add_state_core = 1334
+			}
+			
+			FRG = {
+				add_manpower = 800000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 50000
+					producer = FRA
+				}
+				load_oob = FRG
+			}
+			dismantle_faction = yes
+		}
+		country_event = {
+			id = frg_new.2
+			days = 25
+		}
+    } 
 }
+
+
+
+
+
+
 country_event = { 
-	id = frg.29 #frg wants to union
+	id = frg.29 #ideo picker
 	immediate = {log = "[GetDateText]: [Root.GetName]: event frg.7 "}
 	title = frg.29.t
 	desc = frg.29.d
 
 	is_triggered_only = yes
 	fire_only_once = yes
-         
-
-	option = {
-		name = frg.29.a #sure why not maruassians
-		trigger = {
-			NFA = {
-				has_completed_focus = NFA_victory_for_af
-			}
+	option = {	
+        name = frg.29.a
+		country_event = {
+			id = frg.30
+			days = 7
 		}
-		if = {
-			limit = {
-				NFA = {
-					is_ai = no
-				}
-				
-			}
-			NFA = {
-					annex_country = { target = FRG transfer_troops = yes }
-					every_state = {
-						limit = {
-							is_core_of = FRG
-						}
-		
-						add_core_of = NFA
-					}
-					
-				}
-				FRG = {
-					every_unit_leader = {	
-						set_nationality = NFA
-					}	
-				}
-		}
-		else = {
-			FRG = {
-				annex_country = { target = NFA transfer_troops = yes }
-				every_state = {
-					limit = {
-						is_core_of = NFA
-					}
-	
-					add_claim_by = FRG
-				}
-				
-			}
-			NFA = {
-				every_unit_leader = {	
-					set_nationality = FRG
-				}	
-			}
-		}
-	}
-	option = {
-		name = frg.29.b #demand military cuts
-		FRG = {
-			country_event = frg.30
-		}
-	}
-	
+    }  
 }
+
 country_event = { 
-	id = frg.30 #nfa demands military cuts
+	id = frg.30 #ideo picker
 	immediate = {log = "[GetDateText]: [Root.GetName]: event frg.7 "}
 	title = frg.30.t
 	desc = frg.30.d
 
 	is_triggered_only = yes
 	fire_only_once = yes
-         
-
-	option = {
-		name = frg.30.a #we will obey
-		delete_unit_template_and_units = {
-			division_template = "解放运动精锐师"
-		}
-		delete_unit_template_and_units = {
-			division_template = "民族国海军陆战队"
-		}
-		if = {
-			limit = {
-				NFA = {
-					is_ai = no
-				}
-				
-			}
+	option = {	
+        name = frg.30.a
+		trigger = {
+			is_ai = yes
 			NFA = {
-					annex_country = { target = FRG transfer_troops = no }
-					every_state = {
-						limit = {
-							is_core_of = FRG
-						}
+				has_completed_focus = NFA_victory_for_af
+			}
+			
+		}
+		NFA = {
+			annex_country = { target = FRG transfer_troops = yes }
+		}
 		
-						add_core_of = NFA
-					}
-					
-				}
-				FRG = {
-					every_unit_leader = {	
-						set_nationality = NFA
-					}	
-				}
-		}
-		else = {
-			FRG = {
-				annex_country = { target = NFA transfer_troops = yes }
-				every_state = {
-					limit = {
-						is_core_of = NFA
-					}
-	
-					add_claim_by = FRG
-				}
-				
-			}
+    }  
+	option = {	
+        name = frg.30.b
+		trigger = {
 			NFA = {
-				every_unit_leader = {	
-					set_nationality = FRG
-				}	
+				has_completed_focus = NFA_victory_for_af
+			}
+			
+		}
+		NFA = {
+			annex_country = { target = FRA transfer_troops = yes }
+			NFA = { change_tag_from = ROOT } 
+		}
+    }  
+	option = {	
+        name = frg.30.c
+		create_wargoal = {
+			type = annex_everything
+			target = NFA
+		}
+		hidden_effect = {
+			NFA = {
+				leave_faction = yes
+			}
+			
+			country_event = {
+				id = frg.31
+				days = 7
 			}
 		}
-	}
-	option = {
-		name = frg.30.b #thats treason!
-		dismantle_faction = yes
-		create_wargoal = {
-			target = NFA
-			type = annex_everything
-		}
-	}
-	
+    }  
 }
+
 country_event = { 
-	id = frg.31 #more power to clara?
+	id = frg.31 #ideo picker
 	immediate = {log = "[GetDateText]: [Root.GetName]: event frg.7 "}
 	title = frg.31.t
 	desc = frg.31.d
 
 	is_triggered_only = yes
 	fire_only_once = yes
-         
-
-	option = {
-		name = frg.31.a #yes
-		add_stability = 0.2
-		hidden_effect = {
-			country_event = {
-				id = frg.32
-				days = 180
-			}
-		}
-	
-	}
-	option = {
-		name = frg.31.b #no
-	}
-	
+	option = {	
+        name = frg.31.a
+		set_country_flag = frg_alive_flag
+    }  
+	option = {	
+        name = frg.31.b
+		set_country_flag = frg_dead_flag
+    }  
+	option = {	
+        name = frg.31.c
+		set_country_flag = frg_natpop_Fabre_Luce_flag
+    }  
 }
+
 country_event = { 
-	id = frg.32 #clara threat
+	id = frg.32 #ideo picker
 	immediate = {log = "[GetDateText]: [Root.GetName]: event frg.7 "}
 	title = frg.32.t
 	desc = frg.32.d
 
 	is_triggered_only = yes
 	fire_only_once = yes
-         
-
-	option = {
-		name = frg.32.a #do it
-		add_stability = 0.2
+	option = {	
+        name = frg.32.a
+		hidden_effect = {
+			country_event = {
+				id = frg.35
+				days = 15
+			}
+		}
+    }  
+	option = {	
+        name = frg.32.b
 		hidden_effect = {
 			country_event = {
 				id = frg.33
-				days = 7
+				days = 15
 			}
 		}
-	
-	}
-	option = {
-		name = frg.32.b #no
-	}
+    }  
 	
 }
+
+
 country_event = { 
-	id = frg.33 #clara coup
+	id = frg.33 #ideo picker
 	immediate = {log = "[GetDateText]: [Root.GetName]: event frg.7 "}
 	title = frg.33.t
 	desc = frg.33.d
 
 	is_triggered_only = yes
 	fire_only_once = yes
-         
-
-	option = {
-		name = frg.33.a #
-		complete_national_focus = FRG_Appearing_from_the_shadow
-	
-	}
-	
-	
+	option = {	
+        name = frg.33.a
+		set_country_flag = Remy_alive
+		hidden_effect = {
+			country_event = {
+				id = frg.34
+				days = 15
+			}
+		}
+    }  
 }
+
 country_event = { 
-	id = frg.34 #fate of gangs
+	id = frg.34 #ideo picker
 	immediate = {log = "[GetDateText]: [Root.GetName]: event frg.7 "}
 	title = frg.34.t
 	desc = frg.34.d
 
 	is_triggered_only = yes
 	fire_only_once = yes
-         
-
-	option = {
-		name = frg.34.a #purge them
-		hidden_effect = {
-			country_event = {
-				id = frg.35
-				days = 7
-			}
+	option = {	
+        name = frg.34.a
+		set_country_flag = Remy_Maurice
+    }  
+	option = {	
+        name = frg.34.b
+		set_country_flag = Remy_Gaulle
+		set_politics = {
+			ruling_party = authoritarian_democrat
+			elections_allowed = no
 		}
-	
-	}
-	option = {
-		name = frg.34.b #no
-	}
+		set_party_name = {
+			ideology = authoritarian_democrat
+			long_name = FRG_national_populist_party_long
+			name = FRG_national_populist_party
+		}
+		create_country_leader = {
+			name = "科洛内尔·雷米"  # Colonel Rémy
+			 traits = {
+				  FRG_Colonel_Remy
+			  }
+			picture = "gfx/leaders/FRA/Portrait_FRA_Gilbert_Renault_KX.png"
+			expire = "1.1.1"
+			ideology = gaullism_subtype
+		}
+		add_popularity = {
+			ideology = authoritarian_democrat
+			popularity = 0.15
+		}
+		add_natpop_to_coalition = yes
+    }  
 	
 }
+
 country_event = { 
-	id = frg.35 #assination
+	id = frg.35 #ideo picker
 	immediate = {log = "[GetDateText]: [Root.GetName]: event frg.7 "}
 	title = frg.35.t
 	desc = frg.35.d
 
 	is_triggered_only = yes
 	fire_only_once = yes
+	option = {	
+        name = frg.35.a
+		set_country_flag = Remy_die
+		create_country_leader = {
+			name = "权力真空"  # Colonel Rémy
+			picture = "gfx/leaders/NFA/Portrait_NFA_AF_Council.png"
+			expire = "1.1.1"
+			ideology = maurrassism_subtype
+		  }
+    }  
+}
+
+country_event = { 
+	id = frg.36 #ideo picker
+	immediate = {log = "[GetDateText]: [Root.GetName]: event frg.7 "}
+	title = frg.36.t
+	desc = frg.36.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {	
+        name = frg.36.a
+		country_event = {
+			id = frg.37
+			days = 7
+		}
+    }  
+}
+
+country_event = { 
+	id = frg.37 #ideo picker
+	immediate = {log = "[GetDateText]: [Root.GetName]: event frg.7 "}
+	title = frg.37.t
+	desc = frg.37.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {	
+        name = frg.37.a
+		country_event = {
+			id = frg.38
+			days = 7
+		}
+    }  
+}
+
+country_event = { 
+	id = frg.38 #ideo picker
+	immediate = {log = "[GetDateText]: [Root.GetName]: event frg.7 "}
+	title = frg.38.t
+	desc = frg.38.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {	
+        name = frg.38.a
+		country_event = {
+			id = frg.39
+			days = 7
+		}
+    }  
+}
+
+country_event = { 
+	id = frg.39 #ideo picker
+	immediate = {log = "[GetDateText]: [Root.GetName]: event frg.7 "}
+	title = frg.39.t
+	desc = frg.39.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {	
+        name = frg.39.a
+		country_event = {
+			id = frg.40
+			days = 15
+		}
+    }  
+}
+
+country_event = { 
+	id = frg.40 #ideo picker
+	immediate = {log = "[GetDateText]: [Root.GetName]: event frg.7 "}
+	title = frg.40.t
+	desc = frg.40.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {	
+        name = frg.40.a
+		set_cosmetic_tag = FRG_Paul_Chack
+			set_politics = {
+				ruling_party = paternal_autocrat
+				elections_allowed = no
+			}
+			set_party_name = {
+				ideology = paternal_autocrat
+				long_name = "反红行动委员会"
+				name = "反红行动委员会"
+			}
+			set_party_name = {
+				ideology = national_populist
+				long_name = "反红行动委员会"
+				name = "反红行动委员会"
+			}
+			add_natpop_to_coalition = yes
+			create_country_leader = {
+				name = "保罗·查克"
+				desc = ""
+				picture = "gfx/leaders/FRG/Portrait_FRA_Paul_Chack.png"
+				expire = "1965.1.1"
+				ideology = revolution_nationale_subtype
+				traits = {  }
+			}
+    }  
+	option = {	
+        name = frg.40.b
+		set_cosmetic_tag = FRG_CHANEL
+			set_politics = {
+				ruling_party = market_liberal
+				elections_allowed = no
+			}
+			set_party_name = {
+				ideology = market_liberal
+				long_name = "嘉柏丽尔商业联合体"
+				name = "嘉柏丽尔商业联合体"
+			}
+			add_popularity = {
+				ideology = market_liberal
+				popularity = 0.15
+			}
+			create_country_leader = {
+				name = "加布里埃·香奈儿"
+				desc = ""
+				picture = "gfx/leaders/FRG/Portrait_FRG_Gabrielle_Bonheur_Chanel.png"
+				expire = "1965.1.1"
+				ideology = free_market_capitalist_subtype
+				traits = { FRG_CEO }
+			}
+    }  
+	option = {	
+        name = frg.40.c
+		country_event = {
+			id = frg.41
+		}
+    }  
+}
+
+country_event = { 
+	id = frg.41 #ideo picker
+	immediate = {log = "[GetDateText]: [Root.GetName]: event frg.7 "}
+	title = frg.41.t
+	desc = frg.41.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {	
+        name = frg.41.a
+			if = {
+				limit = {
+					has_country_flag = frg_natpop_Fabre_Luce_flag
+				}
+				set_cosmetic_tag = FRG_Fabre_Luce
+				add_tot_to_coalition = yes
+				add_popularity = {
+					ideology = totalist
+					popularity = 0.15
+				}
+				set_party_name = {
+					ideology = totalist
+					long_name = "法国人民党"
+					name = "法国人民党"
+				}
+				set_party_name = {
+					ideology = national_populist
+					long_name = "法国人民党"
+					name = "法国人民党"
+				}
+				create_country_leader = {
+					name = "阿尔弗雷德·法布尔·卢斯"
+					desc = ""
+					picture = "gfx/leaders/FRG/Portrait_FRG_Alfred_Fabre_Luce.png"
+					expire = "1965.1.1"
+					ideology = natpop_volkisch_communitarianism_subtype
+					traits = { FRG_Anti_German }
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = frg_natpop_Fabre_Luce_flag
+					}
+				}
+				set_cosmetic_tag = FRG_Fabre_Luce
+				set_politics = {
+					ruling_party = totalist
+					elections_allowed = no
+				}
+				add_natpop_to_coalition = yes
+				add_popularity = {
+					ideology = totalist
+					popularity = 0.15
+				}
+				set_party_name = {
+					ideology = totalist
+					long_name = "法国人民党"
+					name = "法国人民党"
+				}
+				set_party_name = {
+					ideology = national_populist
+					long_name = "法国人民党"
+					name = "法国人民党"
+				}
+				create_country_leader = {
+					name = "阿尔弗雷德·法布尔·卢斯"
+					desc = ""
+					picture = "gfx/leaders/FRG/Portrait_FRG_Alfred_Fabre_Luce.png"
+					expire = "1965.1.1"
+					ideology = volkisch_communitarianism_subtype
+					traits = { FRG_Anti_German }
+				}
+			}
+			
+    }  
+	option = {	
+        name = frg.41.b
+		set_cosmetic_tag = FRG_Mahieu
+			set_party_name = {
+				ideology = national_populist
+				long_name = "法兰西欧洲之友圈"
+				name = "法兰西欧洲之友圈"
+			}
+			create_country_leader = {
+				name = "雅克·德·马希厄"
+				desc = ""
+				picture = "gfx/leaders/FRG/Portrait_FRG_Jacques_de_Mahieu.png"
+				expire = "1965.1.1"
+				ideology = eugenicsism_subtype
+				traits = { FRG_SPECIAL }
+			}
+    }  
+	option = {	
+        name = frg.41.c
+		set_cosmetic_tag = FRG_Brasillach
+			set_party_name = {
+				ideology = national_populist
+				long_name = "布拉希拉赫集团"
+				name = "布拉希拉赫集团"
+			}
+			create_country_leader = {
+				name = "罗伯特·布拉希拉赫"
+				desc = ""
+				picture = "gfx/leaders/FRG/Portrait_FRG_Robert_Brasillach.png"
+				expire = "1965.1.1"
+				ideology = ultranationalism_proto_subtype
+				traits = { Valley_of_the_Sons_of_Hinnom_2 }
+			}
+    }  
+}
+
+country_event = { 
+	id = frg.42 #ideo picker
+	immediate = {log = "[GetDateText]: [Root.GetName]: event frg.7 "}
+	title = frg.42.t
+	desc = frg.42.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {	
+        name = frg.42.a
+		
+    }  
+	option = {	
+        name = frg.42.b
+		if = {
+			limit = {
+				has_country_flag = frg_natpop_Fabre_Luce_flag
+			}
+			set_politics = {
+				ruling_party = national_populist
+				elections_allowed = no
+			}
+			create_country_leader = {
+				name = "阿尔弗雷德·法布尔·卢斯"
+				desc = ""
+				picture = "gfx/leaders/FRG/Portrait_FRG_Alfred_Fabre_Luce.png"
+				expire = "1965.1.1"
+				ideology = natpop_revolution_nationale_subtype
+			}
+			set_cosmetic_tag = FRG_Fabre_Luce_revolution_nationale_flag
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = frg_natpop_Fabre_Luce_flag
+				}
+			}
+			set_politics = {
+				ruling_party = totalist
+				elections_allowed = no
+			}
+			create_country_leader = {
+				name = "阿尔弗雷德·法布尔·卢斯"
+				desc = ""
+				picture = "gfx/leaders/FRG/Portrait_FRG_Alfred_Fabre_Luce.png"
+				expire = "1965.1.1"
+				ideology = tot_revolution_nationale_subtype
+			}
+			set_cosmetic_tag = FRG_Fabre_Luce_tot_revolution_nationale_flag
+		}
+    }  
+
+	option = {	
+        name = frg.42.c
+		if = {
+			limit = {
+				has_country_flag = frg_natpop_Fabre_Luce_flag
+			}
+			set_politics = {
+				ruling_party = national_populist
+				elections_allowed = no
+			}
+			create_country_leader = {
+				name = "阿尔弗雷德·法布尔·卢斯"
+				desc = ""
+				picture = "gfx/leaders/FRG/Portrait_FRG_Alfred_Fabre_Luce.png"
+				expire = "1965.1.1"
+				ideology = natpop_goebbels_subtype
+			}
+			set_cosmetic_tag = FRG_Fabre_Luce_natpop_national_marxist_flag
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = frg_natpop_Fabre_Luce_flag
+				}
+			}
+			set_politics = {
+				ruling_party = totalist
+				elections_allowed = no
+			}
+			create_country_leader = {
+				name = "阿尔弗雷德·法布尔·卢斯"
+				desc = ""
+				picture = "gfx/leaders/FRG/Portrait_FRG_Alfred_Fabre_Luce.png"
+				expire = "1965.1.1"
+				ideology = national_marxist_subtype
+			}
+			set_cosmetic_tag = FRG_Fabre_Luce_national_marxist_flag
+		}
+    } 
+
+	option = {	
+        name = frg.42.e
+		if = {
+			limit = {
+				has_country_flag = frg_natpop_Fabre_Luce_flag
+			}
+			set_politics = {
+				ruling_party = national_populist
+				elections_allowed = no
+			}
+			create_country_leader = {
+				name = "阿尔弗雷德·法布尔·卢斯"
+				desc = ""
+				picture = "gfx/leaders/FRG/Portrait_FRG_Alfred_Fabre_Luce.png"
+				expire = "1965.1.1"
+				ideology = ultranationalism_proto_subtype
+			}
+			set_cosmetic_tag = FRG_Fabre_Luce_ultranationalism_proto_flag
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = frg_natpop_Fabre_Luce_flag
+				}
+			}
+			set_politics = {
+				ruling_party = totalist
+				elections_allowed = no
+			}
+			create_country_leader = {
+				name = "阿尔弗雷德·法布尔·卢斯"
+				desc = ""
+				picture = "gfx/leaders/FRG/Portrait_FRG_Alfred_Fabre_Luce.png"
+				expire = "1965.1.1"
+				ideology = left_militarism_subtype
+			}
+			set_cosmetic_tag = FRG_Fabre_Luce_ultranationalism_proto_flag
+		}
+    } 
+
+	option = {	
+        name = frg.42.f
+		if = {
+			limit = {
+				has_country_flag = frg_natpop_Fabre_Luce_flag
+			}
+			set_politics = {
+				ruling_party = national_populist
+				elections_allowed = no
+			}
+			create_country_leader = {
+				name = "阿尔弗雷德·法布尔·卢斯"
+				desc = ""
+				picture = "gfx/leaders/FRG/Portrait_FRG_Alfred_Fabre_Luce.png"
+				expire = "1965.1.1"
+				ideology = right_neo_socialism_subtype
+			}
+			set_cosmetic_tag = FRG_Fabre_Luce_right_neo_socialism_flag
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = frg_natpop_Fabre_Luce_flag
+				}
+			}
+			set_politics = {
+				ruling_party = totalist
+				elections_allowed = no
+			}
+			create_country_leader = {
+				name = "阿尔弗雷德·法布尔·卢斯"
+				desc = ""
+				picture = "gfx/leaders/FRG/Portrait_FRG_Alfred_Fabre_Luce.png"
+				expire = "1965.1.1"
+				ideology = neo_socialism_subtype
+			}
+			set_cosmetic_tag = FRG_Fabre_Luce_neosoc
+		}
+    } 
+
+	option = {	
+        name = frg.42.g
+		if = {
+			limit = {
+				has_country_flag = frg_natpop_Fabre_Luce_flag
+			}
+			set_politics = {
+				ruling_party = national_populist
+				elections_allowed = no
+			}
+			create_country_leader = {
+				name = "阿尔弗雷德·法布尔·卢斯"
+				desc = ""
+				picture = "gfx/leaders/FRG/Portrait_FRG_Alfred_Fabre_Luce.png"
+				expire = "1965.1.1"
+				ideology = right_jacobinism_subtype
+			}
+			set_cosmetic_tag = FRG_Fabre_Luce_right_jacobinism_flag
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = frg_natpop_Fabre_Luce_flag
+				}
+			}
+			set_politics = {
+				ruling_party = totalist
+				elections_allowed = no
+			}
+			create_country_leader = {
+				name = "阿尔弗雷德·法布尔·卢斯"
+				desc = ""
+				picture = "gfx/leaders/FRG/Portrait_FRG_Alfred_Fabre_Luce.png"
+				expire = "1965.1.1"
+				ideology = national_jacobinism_subtype
+			}
+			set_cosmetic_tag = FRG_Fabre_Luce_jacobinism_flag
+		}
+    } 
+	option = {	
+        name = frg.42.h
+		set_politics = {
+			ruling_party = totalist
+			elections_allowed = no
+		}
+		if = {
+			limit = {
+				has_country_flag = frg_natpop_Fabre_Luce_flag
+			}
+			set_politics = {
+				ruling_party = national_populist
+				elections_allowed = no
+			}
+			create_country_leader = {
+				name = "阿尔弗雷德·法布尔·卢斯"
+				desc = ""
+				picture = "gfx/leaders/FRG/Portrait_FRG_Alfred_Fabre_Luce.png"
+				expire = "1965.1.1"
+				ideology = Francism_subtype
+			}
+			set_cosmetic_tag = FRG_Fabre_Luce_Francism_flag
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = frg_natpop_Fabre_Luce_flag
+				}
+			}
+			set_politics = {
+				ruling_party = totalist
+				elections_allowed = no
+			}
+			create_country_leader = {
+				name = "阿尔弗雷德·法布尔·卢斯"
+				desc = ""
+				picture = "gfx/leaders/FRG/Portrait_FRG_Alfred_Fabre_Luce.png"
+				expire = "1965.1.1"
+				ideology = tot_francism_subtype
+			}
+			set_cosmetic_tag = FRG_Fabre_Luce_sorelian
+		}
+    }
+}
+
+country_event = { #反日耳曼外交
+	id = frg.43
+	immediate = { log = "[GetDateText]: [Root.GetName]: event frg.43" }
+	title = frg.43.t
+	desc = frg.43.d
+	picture = GFX_report_event_generic_diplomacy1
+	is_triggered_only = yes
+
+	option = {
+		name = frg.43.a #
+		ai_chance = {
+			factor = 50
+		}
+		if = {
+			limit = {
+				is_in_faction = yes
+			}
+			leave_faction = yes
+		}
+		FROM = {
+			add_to_faction = ROOT
+		}
+	}
+
+	option = {
+		name = frg.43.b
+		trigger = {
+			OR = {
+				is_ai = no
+				has_socialist_government = yes
+				is_in_faction = yes
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				ENG = {	is_ai = no }
+			}
+		}
+		FROM = {
+			country_event = frg.44
+		}
+		
+	}
+}
+
+country_event = { #外交遭受阻碍
+	id = frg.44
+	immediate = { log = "[GetDateText]: [Root.GetName]: event frg.44" }
+	title = frg.44.t
+	desc = frg.44.d
+	picture = GFX_report_event_generic_diplomacy1
+	is_triggered_only = yes
+
+	option = {
+		name = frg.44.a
+	}
+}
+
+country_event = { 
+	id = frg.45
+	immediate = {log = "[GetDateText]: [Root.GetName]: event frg_new.1 "}
+	title = frg.45.t
+	desc = frg.45.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
          
 
 	option = {
-		name = frg.35.a #rocca
-		set_politics = {
-			ruling_party = paternal_autocrat
-			elections_allowed = no
-		}
-		add_tot_to_coalition = yes
-		add_popularity = {
-			ideology = paternal_autocrat
-			popularity = 0.15
-		}
-		set_country_flag = Rocca_coup
+		name = frg.45.a
+		ai_chance = {
+			factor = 99
+		}   
+        add_stability = 0.01  
 	}
-	
-	
+
+	option = {
+		name = frg.45.b
+		ai_chance = {
+			factor = 0
+		}   
+		custom_effect_tooltip = FRG_Moloch_animated_tooltip
+        hidden_effect = {
+			
+			every_country = {
+				FRG = {
+					create_wargoal = {
+						type = puppet_wargoal_focus
+						target = PREV
+					}
+				}	
+			}
+			every_state = {
+				add_core_of = FRG
+			}
+			create_country_leader = {
+				name = "摩洛克"
+				desc = ""
+				picture = "GFX_Portrait_FRG_Moloch_animated"
+				expire = "1965.1.1"
+				ideology = Final_Theory_subtype
+				traits = { Valley_of_the_Sons_of_Hinnom }
+			}
+			set_cosmetic_tag = FRG_Promised_land
+		}
+	}
+
+	option = {
+		name = frg.45.c
+		ai_chance = {
+			factor = 1
+		}   
+		set_cosmetic_tag = FRG_Paul_Chack
+			set_politics = {
+				ruling_party = paternal_autocrat
+				elections_allowed = no
+			}
+			set_party_name = {
+				ideology = paternal_autocrat
+				long_name = "反红行动委员会"
+				name = "反红行动委员会"
+			}
+			set_party_name = {
+				ideology = national_populist
+				long_name = "反红行动委员会"
+				name = "反红行动委员会"
+			}
+			add_natpop_to_coalition = yes
+			create_country_leader = {
+				name = "保罗·查克"
+				desc = ""
+				picture = "gfx/leaders/FRG/Portrait_FRA_Paul_Chack.png"
+				expire = "1965.1.1"
+				ideology = revolution_nationale_subtype
+				traits = {  }
+			}
+	}
 }
+
+country_event = { #反德外交方向
+	id = frg.100
+	immediate = { log = "[GetDateText]: [Root.GetName]: event frg.100" }
+	title = frg.100.t
+	desc = frg.100.e
+	is_triggered_only = yes
+	
+	option = { #独自前行
+		name = frg.100.a
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 0.5
+			}
+		}
+		if = {
+			limit = { is_faction_leader = yes }
+			set_faction_name = "大陆轴心"
+		}
+		else = {
+			create_faction = "大陆轴心"
+			complete_national_focus = FRG_be_independent
+		}
+	}
+	option = { #东西夹击是一个不错的选择
+		name = frg.100.b
+		ai_chance = {
+			factor = 20
+		}
+		trigger = {
+			FRG = {
+				has_socialist_government = no
+			}
+			RUS = {
+				OR = {
+				has_government = authoritarian_democrat
+				has_government = paternal_autocrat
+				has_government = national_populist
+			    }
+			}
+		}
+		if = {
+			limit = {
+				is_in_faction = yes
+			}
+			leave_faction = yes
+		}
+		RUS = {
+			add_to_faction = FRG
+		}
+		else = {
+			complete_national_focus = FRG_ally_russia
+		}
+	}
+	option = { #协约再重逢
+		name = frg.100.c
+		ai_chance = {
+			factor = 20
+		}
+		trigger = {
+			FRG = {
+				has_socialist_government = no
+				has_completed_focus = FRG_Crossroads_of_Destiny
+			}
+			CAN = {
+				is_faction_leader = yes
+				has_socialist_government = no
+			}
+		}
+		if = {
+			limit = {
+				is_in_faction = yes
+			}
+			leave_faction = yes
+		}
+		CAN = {
+			add_to_faction = FRG
+		}
+		else = {
+			complete_national_focus = FRG_be_english
+		}
+	}
+	option = { #重组第三国际
+		name = frg.100.d
+		ai_chance = {
+			factor = 700
+		}
+		trigger = {
+			FRG = {
+				has_socialist_government = yes
+			}
+			ENG = {
+				is_faction_leader = yes
+				has_socialist_government = yes
+			}
+		}
+		if = {
+			limit = {
+				is_in_faction = yes
+			}
+			leave_faction = yes
+		}
+		ENG = {
+			add_to_faction = FRG
+		}
+		else = {
+			complete_national_focus = FRG_internationale
+		}	
+	}
+}
+
+country_event = { 
+	id = frg_new.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event frg_new.1 "}
+	title = frg_new.1.t
+	desc = frg_new.1.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+         
+
+	option = {
+		name = frg_new.1.a
+		ai_chance = {
+			factor = 50
+		}   
+        add_stability = 0.01  
+	}
+
+	option = {
+		name = frg_new.1.b
+		ai_chance = {
+			factor = 50
+		}   
+        add_stability = 0.01  
+	}
+}
+
+country_event = { 
+	id = frg_new.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event frg_new.1 "}
+	title = frg_new.1.t
+	desc = frg_new.1.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+         
+
+	option = {
+		name = frg_new.1.a
+		ai_chance = {
+			factor = 50
+		}   
+        add_stability = 0.01  
+	}
+
+	option = {
+		name = frg_new.1.b
+		ai_chance = {
+			factor = 50
+		}   
+        add_stability = 0.01  
+	}
+}
+
+country_event = {
+	id = frg_new.2
+	immediate = {
+		declare_war_on = {
+			target = FRG
+			type = annex_everything
+	   	}
+		declare_war_on = {
+			target = OCC
+			type = annex_everything
+	   	}
+		declare_war_on = {
+			target = BRI
+			type = annex_everything
+	   	}
+		declare_war_on = {
+			target = NRM
+			type = annex_everything
+	   	}
+	}
+	hidden = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+  }

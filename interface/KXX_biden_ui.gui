@@ -158,6 +158,16 @@ guiTypes = {
 			position = { x = 8 y = 10 }
 			spriteType = "GFX_Portrait_SER_Draza_Mihailovics"
 		}
+		iconType = { #
+			name = "Zivojin_Peric"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_SER_Zivojin_Peric"
+		}
+		iconType = { #
+			name = "Dusan_Simovic"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_SER_Dusan_Simovic"
+		}
 		####################挪威#############################
 		iconType = { #
 			name = "Albin_Eines"

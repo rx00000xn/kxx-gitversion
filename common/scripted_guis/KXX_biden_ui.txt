@@ -176,6 +176,18 @@ scripted_gui = {
 					has_country_flag = SER_Draza_Mihailovic_VISIBLE
 				}
 			}
+			Zivojin_Peric_visible = { #日沃因·佩里奇
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = SER_Zivojin_Peric_VISIBLE
+				}
+			}
+			Dusan_Simovic_visible = { #杜尚·西莫维奇
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_country_flag = SER_Dusan_Simovic_VISIBLE
+				}
+			}
 			
 			#挪威
 			Albin_Eines_visible = { #阿尔宾·埃内斯

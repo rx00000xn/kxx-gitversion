@@ -144,6 +144,16 @@ defined_text = {
 		}
 		localization_key = SER_or_leader
 	}
+	text = {
+		trigger = {
+			tag = SER
+			OR = {
+				has_country_flag = SER_Zivojin_Peric_VISIBLE
+				has_country_flag = SER_Dusan_Simovic_VISIBLE
+			}
+		}
+		localization_key = NFA_OR_LEADER
+	}
 
 	#挪威
 	text = {
@@ -784,6 +794,16 @@ defined_text = {
 			has_country_flag = SER_Draza_Mihailovic_VISIBLE
 		}
 		localization_key = SER_or_leader2
+	}
+	text = {
+		trigger = {
+			tag = SER
+			OR = {
+				has_country_flag = SER_Zivojin_Peric_VISIBLE
+				has_country_flag = SER_Dusan_Simovic_VISIBLE
+			}
+		}
+		localization_key = NFA_OR_LEADER1
 	}
 	#挪威
 	text = {
@@ -1476,6 +1496,18 @@ defined_text = {
 			has_country_flag = SER_Draza_Mihailovic_VISIBLE
 		}
 		localization_key = SER_Draza_Mihailovic
+	}
+	text = {
+		trigger = {
+			has_country_flag = SER_Zivojin_Peric_VISIBLE
+		}
+		localization_key = SER_Zivojin_Peric
+	}
+	text = {
+		trigger = {
+			has_country_flag = SER_Dusan_Simovic_VISIBLE
+		}
+		localization_key = SER_Dusan_Simovic
 	}
 	#挪威
 	text = {
@@ -2597,6 +2629,18 @@ defined_text = {
 			has_country_flag = SER_Draza_Mihailovic_VISIBLE
 		}
 		localization_key = GFX_Portrait_SER_Draza_Mihailovics
+	}
+	text = {
+		trigger = {
+			has_country_flag = SER_Zivojin_Peric_VISIBLE
+		}
+		localization_key = GFX_Portrait_SER_Zivojin_Peric
+	}
+	text = {
+		trigger = {
+			has_country_flag = SER_Dusan_Simovic_VISIBLE
+		}
+		localization_key = GFX_Portrait_SER_Dusan_Simovic
 	}
 	#挪威
 	text = {

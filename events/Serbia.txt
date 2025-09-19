@@ -1,5 +1,6 @@
 add_namespace = serbia
 add_namespace = dhserbia
+add_namespace = serpuppet
 country_event = {
   id = serbia.0
   immediate = {
@@ -602,6 +603,10 @@ country_event = {
   is_triggered_only = yes
   immediate = {
     hidden_effect = {
+      country_event = {
+        id = serbia.22
+        days = 1460
+      }
       set_party_name = {
         ideology = social_liberal
         name = SER_social_liberal_party
@@ -809,6 +814,17 @@ country_event = {
   desc = serbia.22.d
   trigger = {
     has_socialist_government = no
+    NOT = {
+      has_country_flag = SER_democracy_is_fucked
+    }
+  }
+  immediate = {
+    hidden_effect = {
+      country_event = {
+        id = serbia.22
+        days = 1460
+      }
+    }
   }
   is_triggered_only = yes
   option = {
@@ -1274,7 +1290,8 @@ country_event = {
    }
    remove_all_ministers = yes
    add_ideas = SER_Dusan_Simovic_hog_ade
-
+   set_country_flag = KXX_LEADER_GUI_VISIBLE
+    set_country_flag = SER_Dusan_Simovic_VISIBLE
    complete_national_focus = SER_March_Conspiracy
       country_event = {
         id = serbia.34
@@ -2294,6 +2311,7 @@ country_event = {
   immediate = {
     log = "[GetDateText]: [Root.GetName]: event serbia.68"
     hidden_effect = {
+      set_cosmetic_tag = SER_CHT
        create_country_leader = {
         name = "德拉查·米哈伊洛维奇" 
         picture = "gfx/leaders/SER/Portrait_SER_Draza_Mihailovic.png"
@@ -2420,6 +2438,31 @@ country_event = {
       country_event = serbia.73
       complete_national_focus = SER_deal_with_devil
   }
+   option = {
+    name = serbia.69.f
+    trigger = {
+      NOT = {
+        country_exists = CRO
+      }
+      owns_state = 109
+    }
+     create_country_leader = {
+      name = "安特·帕韦利奇"  
+      picture = "gfx/leaders/CRO/CRO_ante_pavelic.png"
+      expire = "1.1.1"
+      ideology = ultranationalism_proto_subtype
+      traits = {}
+    }
+    increase_ruling_party_popularity_by_10 = yes
+       set_politics = {
+        ruling_party = national_populist
+        elections_allowed = no
+      }
+      set_cosmetic_tag = SER_CRO_CHT
+      set_country_flag = SER_hidden_path_unlock
+      mark_focus_tree_layout_dirty = yes
+      complete_national_focus = SER_desperate_alliance
+  }
 }
 country_event = {
   id = serbia.70
@@ -2444,6 +2487,7 @@ country_event = {
       }
       add_tot_to_coalition = yes
       add_radsoc_to_coalition = yes
+      increase_ruling_party_popularity_by_10 = yes
   }
   option = {
     name = serbia.70.b
@@ -2459,11 +2503,13 @@ country_event = {
       }
       add_synd_to_coalition = yes
       add_tot_to_coalition = yes
+      increase_ruling_party_popularity_by_10 = yes
   }
   option = {
     name = serbia.70.c
     add_synd_to_coalition = yes
     add_radsoc_to_coalition = yes
+    increase_ruling_party_popularity_by_10 = yes
   }
 }
 country_event = {
@@ -2489,6 +2535,7 @@ country_event = {
       }
       add_soclib_to_coalition = yes
       add_soccon_to_coalition = yes
+      increase_ruling_party_popularity_by_10 = yes
   }
   option = {
     name = serbia.71.b
@@ -2504,11 +2551,13 @@ country_event = {
       }
       add_socdem_to_coalition = yes
       add_soclib_to_coalition = yes
+      increase_ruling_party_popularity_by_10 = yes
   }
   option = {
     name = serbia.71.c
     add_socdem_to_coalition = yes
     add_soccon_to_coalition = yes
+    increase_ruling_party_popularity_by_10 = yes
   }
 }
 country_event = {
@@ -2533,10 +2582,12 @@ country_event = {
         elections_allowed = no
       }
       add_marlib_to_coalition = yes
+      increase_ruling_party_popularity_by_10 = yes
   }
   option = {
     name = serbia.72.b
     add_authdem_to_coalition = yes
+    increase_ruling_party_popularity_by_10 = yes
   }
 }
 country_event = {
@@ -2562,11 +2613,13 @@ country_event = {
         elections_allowed = no
       }
       add_natpop_to_coalition = yes
+      increase_ruling_party_popularity_by_10 = yes
   }
   
   option = {
     name = serbia.73.b
     add_pataut_to_coalition = yes
+    increase_ruling_party_popularity_by_10 = yes
   }
 }
 country_event = {
@@ -2599,6 +2652,8 @@ country_event = {
   fire_only_once = yes
   option = {
     name = serbia.75.a
+    set_country_flag = KXX_LEADER_GUI_VISIBLE
+    set_country_flag = SER_Zivojin_Peric_VISIBLE
     create_country_leader = {
       name = "乔治一世"  
       picture = "gfx/leaders/SER/georgeobrehnovic.dds"
@@ -2606,14 +2661,176 @@ country_event = {
       ideology = oligarchy_subtype
       traits = {}
     }
+    create_country_leader = {
+      name = "乔治一世"  
+      picture = "gfx/leaders/SER/georgeobrehnovic.dds"
+      expire = "1.1.1"
+      ideology = marlib_classical_liberalism_subtype
+      traits = {}
+    }
     set_politics = {
       ruling_party = authoritarian_democrat
       elections_allowed = no
     }
     complete_national_focus = SER_under_bulgarian_hegemony
+    BUL = {
+				set_autonomy = {
+					target = SER
+					autonomy_state = kr_autonomous_puppet
+					end_wars = no
+				}
+			}                       
   }
   
   
+}
+country_event = {
+  id = serbia.76
+  immediate = {
+    log = "[GetDateText]: [Root.GetName]: event dhserbia.16"
+  }
+  title = serbia.76.t
+  desc = serbia.76.d
+  is_triggered_only = yes
+  fire_only_once = yes
+  option = {
+    name = serbia.76.a
+   
+    set_politics = {
+      ruling_party = syndicalist
+      elections_allowed = no
+    }                
+  }
+  option = {
+    name = serbia.76.b
+    
+    set_politics = {
+      ruling_party = totalist
+      elections_allowed = no
+    }                
+  }
+  option = {
+    name = serbia.76.c
+              
+  }
+  option = {
+    name = serbia.76.e
+    create_country_leader = {
+      name = "佩特科·米莱蒂奇"  
+      picture = "gfx/leaders/SER/Portrait_SER_Petko_Miletic.png"
+      expire = "1.1.1"
+      ideology = hardliner_bolshevism_subtype
+      traits = {}
+    }
+    set_politics = {
+      ruling_party = totalist
+      elections_allowed = no
+    }                
+  }
+   option = {
+    name = serbia.76.f
+    create_country_leader = {
+      name = "米兰·戈尔基奇"  
+      picture = "gfx/leaders/SER/Portrait_SER_Milan_Gorkic.png"
+      expire = "1.1.1"
+      ideology = syn_bukharinist_subtype
+      traits = {}
+    }
+    set_politics = {
+      ruling_party = syndicalist
+      elections_allowed = no
+    }                
+  }
+  option = {
+    name = serbia.76.g
+    create_country_leader = {
+      name = "康斯坦丁·波波维奇"  
+      picture = "gfx/leaders/SER/SER_konstantin_popovic.png"
+      expire = "1.1.1"
+      ideology = radsoc_surrealism_subtype
+      traits = {}
+    }
+    set_politics = {
+      ruling_party = radical_socialist
+      elections_allowed = no
+    }                
+  }
+   option = {
+    name = serbia.76.h
+   country_event = serbia.77           
+  }
+}
+country_event = {
+  id = serbia.77
+  immediate = {
+    log = "[GetDateText]: [Root.GetName]: event dhserbia.16"
+  }
+  title = serbia.76.t
+  desc = serbia.76.d
+  is_triggered_only = yes
+  fire_only_once = yes
+  option = {
+    name = serbia.77.a
+   create_country_leader = {
+      name = "拉扎尔·科利舍夫斯基"  
+      picture = "gfx/leaders/SER/Portrait_SER_Lazar_Kolisevski.png"
+      expire = "1.1.1"
+      ideology = natsynd_subtype
+      traits = {}
+    }
+    set_politics = {
+      ruling_party = totalist
+      elections_allowed = no
+    }                
+  }
+  option = {
+    name = serbia.77.b
+    create_country_leader = {
+      name = "亚历山大·兰科维奇"  
+      picture = "gfx/leaders/SER/SER_aleksandar_rankovic.png"
+      expire = "1.1.1"
+      ideology = centralized_syndicalism_subtype
+      traits = {}
+    }
+    set_politics = {
+      ruling_party = syndicalist
+      elections_allowed = no
+    }                
+  }
+  option = {
+    name = serbia.77.c
+     create_country_leader = {
+      name = "特里沙·卡克莱罗维奇"  
+      picture = "gfx/leaders/SER/Portrait_SER_Trifun_Kaclerovic.png"
+      expire = "1.1.1"
+      ideology = radical_progressivism_subtype
+      traits = {}
+    }
+    set_politics = {
+      ruling_party = radical_socialist
+      elections_allowed = no
+    }                         
+  }
+  option = {
+    name = serbia.77.e
+    create_country_leader = {
+      name = "摩沙·皮贾德"  
+      picture = "gfx/leaders/SER/Portrait_SER_Mosa_Pijade.png"
+      expire = "1.1.1"
+      ideology = syndie_social_democrat_subtype
+      traits = {}
+    }
+    set_politics = {
+      ruling_party = social_democrat
+      elections_allowed = no
+    }                
+    set_country_flag = soc_dems_are_socialists
+  }
+   option = {
+    name = serbia.77.f
+   country_event = serbia.76    
+  }
+ 
 }
 country_event = {
   id = dhserbia.1
@@ -4553,3 +4770,649 @@ country_event = {
     }
 
   }
+  
+country_event = { #Puppet Introduction
+	id = serpuppet.1
+	title = serpuppet.1.t
+	desc = serpuppet.1.d
+	picture = GFX_report_event_generic_diplomacy3
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		log = "[GetLogInfo]: event serpuppet.1 option serpuppet.1.a"
+		name = serpuppet.1.a
+    set_cosmetic_tag = SER_obrenovic
+    hidden_effect = {
+      set_party_name = {
+				ideology = market_liberal
+				long_name = "进步党"
+				name = "进步党"
+			}
+       set_party_name = {
+				ideology = authoritarian_democrat
+				long_name = "进步党"
+				name = "进步党"
+			}
+      add_marlib_to_coalition = yes
+    }
+	}
+}
+country_event = { #start of reforms
+	id = serpuppet.2
+	title = serpuppet.2.t
+	desc = serpuppet.2.d
+	picture = GFX_report_event_generic_diplomacy2
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		log = "[GetLogInfo]: event serpuppet.2 option serpuppet.2.a"
+		name = serpuppet.2.a
+    add_stability = 0.1
+    add_popularity = {
+				ideology = market_liberal
+				popularity = 0.1
+			}
+		hidden_effect = {
+			set_variable = {
+				var = ser_liberal
+				value = 1
+			}
+			set_variable = {
+				var = ser_autho
+				value = 0
+			}
+      
+			country_event = { id = serpuppet.3 days = 7 }
+		}
+	}
+	option = {
+		log = "[GetLogInfo]: event serpuppet.2 option serpuppet.2.b"
+		name = serpuppet.2.b
+     add_political_power = 100
+     add_popularity = {
+				ideology = authoritarian_democrat
+				popularity = 0.1
+			}
+		hidden_effect = {
+			set_variable = {
+				var = ser_autho
+				value = 1
+			}
+			set_variable = {
+				var = ser_liberal
+				value = 0
+			}
+     
+			country_event = { id = serpuppet.3 days = 7 }
+		}
+	}
+}
+country_event = {
+	id = serpuppet.3
+	title = serpuppet.3.t
+	desc = serpuppet.3.d
+	picture = GFX_report_event_generic_diplomacy2
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		log = "[GetLogInfo]: event serpuppet.3 option serpuppet.3.a"
+		name = serpuppet.3.a
+     add_one_random_civilian_factory = yes
+      add_one_random_civilian_factory = yes
+      add_one_random_civilian_factory = yes
+		hidden_effect = {
+			add_to_variable = {
+				var = ser_liberal
+				value = 1
+			}
+     
+			country_event = { id = serpuppet.4 days = 7 }
+		}
+	}
+	option = {
+		log = "[GetLogInfo]: event serpuppet.3 option serpuppet.3.b"
+		name = serpuppet.3.b
+    add_one_random_military_factory = yes
+      add_one_random_military_factory = yes
+      add_one_random_military_factory = yes
+		hidden_effect = {
+			add_to_variable = {
+				var = ser_autho
+				value = 1
+			}
+			country_event = { id = serpuppet.4 days = 7 }
+      
+		}
+	}
+}
+country_event = {
+	id = serpuppet.4
+	title = serpuppet.4.t
+	desc = serpuppet.4.d
+	picture = GFX_report_event_generic_conference2
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		log = "[GetLogInfo]: event serpuppet.4 option serpuppet.4.a"
+		name = serpuppet.4.a
+    add_ideas = SER_lib_tendency
+		hidden_effect = {
+			add_to_variable = {
+				var = ser_liberal
+				value = 1
+			}
+			if = {
+				limit = {
+					check_variable = { ser_liberal > ser_autho }
+				}
+				country_event = { id = serpuppet.5 days = 7 }
+			}
+			else = {
+				country_event = { id = serpuppet.6 days = 7 }
+			}
+		}
+	}
+	option = {
+		log = "[GetLogInfo]: event serpuppet.4 option serpuppet.4.b"
+		name = serpuppet.4.b
+    add_ideas = SER_auth_tendency
+		hidden_effect = {
+			add_to_variable = {
+				var = ser_autho
+				value = 1
+			}
+			if = {
+				limit = {
+					check_variable = { ser_liberal < ser_autho }
+				}
+				country_event = { id = serpuppet.6 days = 7 }
+			}
+			else = {
+				country_event = { id = serpuppet.5 days = 7 }
+			}
+		}
+	}
+}
+country_event = { #liberal reforms
+	id = serpuppet.5
+	title = serpuppet.5.t
+	desc = serpuppet.5.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	picture = GFX_report_event_generic_happy_crowd
+
+	option = {
+		log = "[GetLogInfo]: event serpuppet.5 option serpuppet.5.a"
+		name = serpuppet.5.a
+    set_politics = {
+      ruling_party = market_liberal
+      elections_allowed = no
+    }
+    add_authdem_to_coalition = yes
+		swap_ideas = {
+			remove_idea = SER_progressive_reforms_base
+			add_idea = SER_progressive_reforms_liberal
+		}
+	}
+}
+country_event = { #authoritarian reforms
+	id = serpuppet.6
+	title = serpuppet.6.t
+	desc = serpuppet.6.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	picture = GFX_report_event_generic_arrests
+
+	option = {
+		log = "[GetLogInfo]: event serpuppet.6 option serpuppet.6.a"
+		name = serpuppet.6.a
+		swap_ideas = {
+			remove_idea = SER_progressive_reforms_base
+			add_idea = SER_progressive_reforms_authoritarian
+		}
+	}
+}
+country_event = { ### leader meet independantist discretely
+	id = serpuppet.7
+	title = serpuppet.7.t
+	desc = serpuppet.7.d
+	picture = GFX_report_event_generic_diplomacy3
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { ###meet him
+		log = "[GetLogInfo]: event serpuppet.7 option serpuppet.7.a"
+		name = serpuppet.7.a
+		ai_chance = { base = 75 }
+		hidden_effect = {
+			set_variable = {
+				var = ser_stealth ###discretion of the independance movement, if variable fall to 1, bulgaria annex SER, to 3 SER declares war. If SER reaches 8-9-10 they got a bonus of surprise.
+				value = 5
+			}
+			country_event = { id = serpuppet.8 days = 7 }
+		}
+	}
+	
+}
+country_event = { ### Involve members of the government
+	id = serpuppet.8
+	title = serpuppet.8.t
+	desc = serpuppet.8.d
+	picture = GFX_report_event_generic_diplomacy3
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { ### no way, no confidence
+		log = "[GetLogInfo]: event serpuppet.8 option serpuppet.8.a"
+		name = serpuppet.8.a
+		custom_effect_tooltip = SER_NCR_gains_stealth
+		hidden_effect = {
+			add_to_variable = {
+				var = ser_stealth
+				value = 1
+			}
+			country_event = { id = serpuppet.9 days = 7 }
+		}
+	}
+	option = { ### maybe we can gain some support
+		log = "[GetLogInfo]: event serpuppet.8 option serpuppet.8.b"
+		name = serpuppet.8.b
+		custom_effect_tooltip = SER_NCR_loses_stealth
+		hidden_effect = {
+			add_to_variable = {
+				var = ser_stealth
+				value = -1
+			}
+			country_event = { id = serpuppet.9 days = 7 }
+		}
+		add_political_power = 100
+	}
+}
+country_event = { ### Involve generals ?
+	id = serpuppet.9
+	title = serpuppet.9.t
+	desc = serpuppet.9.d
+	picture = GFX_report_event_ROM_generals
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { ### no way, no confidence
+		log = "[GetLogInfo]: event serpuppet.9 option serpuppet.9.a"
+		name = serpuppet.9.a
+		ai_chance = { base = 60 }
+		custom_effect_tooltip = SER_NCR_gains_stealth
+		hidden_effect = {
+			add_to_variable = {
+				var = ser_stealth
+				value = 1
+			}
+			country_event = { id = serpuppet.10 days = 7 }
+		}
+	}
+	option = { ### maybe we can gain some support
+		log = "[GetLogInfo]: event serpuppet.9 option serpuppet.9.b"
+		name = serpuppet.9.b
+		ai_chance = { base = 40 }
+		custom_effect_tooltip = SER_NCR_loses_stealth
+		hidden_effect = {
+			add_to_variable = {
+				var = ser_stealth
+				value = -1
+			}
+			country_event = { id = serpuppet.10 days = 7 }
+		}
+		add_war_support = 0.1
+		add_command_power = 100
+	}
+}
+country_event = { ### Find military equipment
+	id = serpuppet.10
+	title = serpuppet.10.t
+	desc = serpuppet.10.d
+	picture = GFX_report_event_CHI_machinegun_fighting
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { ### too risky
+		log = "[GetLogInfo]: event serpuppet.10 option serpuppet.10.a"
+		name = serpuppet.10.a
+		ai_chance = { base = 30 }
+		custom_effect_tooltip = SER_NCR_gains_stealth
+		hidden_effect = {
+			add_to_variable = {
+				var = ser_stealth
+				value = 1
+			}
+			country_event = { id = serpuppet.11 days = 7 }
+		}
+	}
+	option = { ### it's necessary
+		log = "[GetLogInfo]: event serpuppet.10 option serpuppet.10.b"
+		name = serpuppet.10.b
+		ai_chance = { base = 70 }
+		custom_effect_tooltip = SER_NCR_greatly_loses_stealth
+		hidden_effect = {
+			add_to_variable = {
+				var = ser_stealth
+				value = -2
+			}
+			country_event = { id = serpuppet.11 days = 7 }
+		}
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 2000
+			producer = AUS
+		}
+	}
+}
+country_event = { ### Find men
+	id = serpuppet.11
+	title = serpuppet.11.t
+	desc = serpuppet.11.d
+	picture = GFX_report_event_POR_demand_accept
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { ### too risky
+		log = "[GetLogInfo]: event serpuppet.11 option serpuppet.11.a"
+		name = serpuppet.11.a
+		ai_chance = { base = 30 }
+		custom_effect_tooltip = SER_NCR_gains_stealth
+		hidden_effect = {
+			add_to_variable = {
+				var = ser_stealth
+				value = 1
+			}
+			country_event = { id = serpuppet.18 days = 7 }
+		}
+	}
+	option = { ### it's necessary
+		log = "[GetLogInfo]: event serpuppet.11 option serpuppet.11.b"
+		name = serpuppet.11.b
+		ai_chance = { base = 70 }
+		custom_effect_tooltip = SER_NCR_greatly_loses_stealth
+		hidden_effect = {
+			add_to_variable = {
+				var = ser_stealth
+				value = -2
+			}
+			country_event = { id = serpuppet.18 days = 7 }
+		}
+		add_manpower = 4000
+	}
+}
+country_event = { ### Hiding guns in Churches ?
+	id = serpuppet.18
+	title = serpuppet.18.t
+	desc = serpuppet.18.d
+	picture = GFX_report_event_generic_church
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { ### dewit
+		log = "[GetLogInfo]: event serpuppet.18 option serpuppet.18.a"
+		name = serpuppet.18.a
+		ai_chance = { base = 60 }
+		custom_effect_tooltip = SER_NCR_greatly_gains_stealth
+		hidden_effect = {
+			add_to_variable = {
+				var = ser_stealth
+				value = 2
+			}
+			country_event = { id = serpuppet.12 days = 7 }
+		}
+		add_political_power = -100
+	}
+	option = { ### don't touch to churches
+		log = "[GetLogInfo]: event serpuppet.18 option serpuppet.18.b"
+		name = serpuppet.18.b
+		ai_chance = { base = 40 }
+		custom_effect_tooltip = SER_NCR_loses_stealth
+		hidden_effect = {
+			add_to_variable = {
+				var = ser_stealth
+				value = -1
+			}
+			country_event = { id = serpuppet.12 days = 7 }
+		}
+	}
+}
+country_event = { ### recruit mercenaries ?
+	id = serpuppet.12
+	title = serpuppet.12.t
+	desc = serpuppet.12.d
+	picture = GFX_report_event_USA_desert_battle
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { ### too risky
+		log = "[GetLogInfo]: event serpuppet.12 option serpuppet.12.a"
+		name = serpuppet.12.a
+		ai_chance = { base = 60 }
+		custom_effect_tooltip = SER_NCR_gains_stealth
+		hidden_effect = {
+			add_to_variable = {
+				var = ser_stealth
+				value = 1
+			}
+			country_event = { id = serpuppet.13 days = 7 }
+		}
+	}
+	option = { ### we need them
+		log = "[GetLogInfo]: event serpuppet.12 option serpuppet.12.b"
+		name = serpuppet.12.b
+		ai_chance = { base = 40 }
+		custom_effect_tooltip = SER_NCR_greatly_loses_stealth
+		hidden_effect = {
+			add_to_variable = {
+				var = ser_stealth
+				value = -3
+			}
+			country_event = { id = serpuppet.13 days = 7 }
+			add_manpower = 50000
+		}
+	}
+}
+country_event = {
+	id = serpuppet.13
+	title = serpuppet.13.t
+	desc = serpuppet.13.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		log = "[GetLogInfo]: event serpuppet.13 option serpuppet.13.a"
+		name = serpuppet.13.a
+    hidden_effect = {
+      country_event = { id = serpuppet.18 days = 60 }
+    }
+		hidden_effect = {
+			if = {
+				limit = {
+					check_variable = { ser_stealth > 7 }
+				}
+				country_event = { id = serpuppet.14 days = 7 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { ser_stealth < 4 }
+					check_variable = { ser_stealth > 1 }
+				}
+				country_event = { id = serpuppet.15 days = 7 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { ser_stealth < 2 }
+				}
+				country_event = { id = serpuppet.16 days = 7 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { ser_stealth > 3 }
+					check_variable = { ser_stealth < 8 }
+				}
+				country_event = { id = serpuppet.17 days = 7 }
+			}
+			
+		}
+	}
+}
+country_event = { #
+	id = serpuppet.14
+	title = serpuppet.14.t
+	desc = serpuppet.14.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		log = "[GetLogInfo]: event serpuppet.14 option serpuppet.14.a"
+		name = serpuppet.14.a
+		
+		add_ideas = SER_surprise_attack
+		leave_faction = yes
+    BUL = {
+      declare_war_on = {
+        target = SER
+        type = annex_everything
+      }
+    }
+		
+	}
+}
+country_event = { #conspiration failed
+	id = serpuppet.15
+	title = serpuppet.15.t
+	desc = serpuppet.15.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		log = "[GetLogInfo]: event serpuppet.15 option serpuppet.15.a"
+		name = serpuppet.15.a
+		add_political_power = -100
+    leave_faction = yes
+    BUL = {
+      declare_war_on = {
+        target = SER
+        type = annex_everything
+      }
+    }
+	}
+}
+country_event = { #
+	id = serpuppet.16
+	title = serpuppet.16.t
+	desc = serpuppet.16.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		log = "[GetLogInfo]: event serpuppet.16 option serpuppet.16.a"
+		name = serpuppet.16.a
+		
+		leave_faction = yes
+		BUL = {
+      declare_war_on = {
+        target = SER
+        type = annex_everything
+      }
+    }
+	}
+}
+country_event = { #
+	id = serpuppet.17
+	title = serpuppet.17.t
+	desc = serpuppet.17.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		log = "[GetLogInfo]: event serpuppet.17 option serpuppet.17.a"
+		name = serpuppet.17.a
+		
+		leave_faction = yes
+		BUL = {
+      declare_war_on = {
+        target = SER
+        type = annex_everything
+      }
+    }
+	}
+}
+country_event = { #
+	id = serpuppet.19
+	title = serpuppet.19.t
+	desc = serpuppet.19.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		log = "[GetLogInfo]: event serpuppet.17 option serpuppet.17.a"
+		name = serpuppet.19.a
+    create_wargoal = { target = AUS type = annex_everything } 
+     every_state = {
+        limit = {
+          is_core_of = AUS
+        }
+        SER = { 
+          add_state_core = PREV 
+        }
+      }
+      create_wargoal = { target = HUN type = annex_everything } 
+     every_state = {
+        limit = {
+          is_core_of = HUN
+        }
+        SER = { 
+          add_state_core = PREV 
+        }
+      }
+      create_wargoal = { target = CZE type = annex_everything } 
+     every_state = {
+        limit = {
+          is_core_of = CEZ
+        }
+        SER = { 
+          add_state_core = PREV 
+        }
+      }
+      create_wargoal = { target = GAL type = annex_everything } 
+     every_state = {
+        limit = {
+          is_core_of = GAL
+        }
+        SER = { 
+          add_state_core = PREV 
+        }
+      }
+      create_wargoal = { target = CRO type = annex_everything } 
+     every_state = {
+        limit = {
+          is_core_of = CRO
+        }
+        SER = { 
+          add_state_core = PREV 
+        }
+      }
+      set_cosmetic_tag = SER_aus_hun_ser
+	}
+  option = {
+		log = "[GetLogInfo]: event serpuppet.17 option serpuppet.17.a"
+		name = serpuppet.19.b
+    AUS = {
+      add_to_faction = SER
+    }
+	}
+   option = {
+		log = "[GetLogInfo]: event serpuppet.17 option serpuppet.17.a"
+		name = serpuppet.19.c
+	}
+}

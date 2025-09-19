@@ -223,6 +223,14 @@ spriteTypes = {
 		name = "GFX_Portrait_SER_Draza_Mihailovics"
 		texturefile = "gfx/leaders/SER/Portrait_SER_Draza_Mihailovic.png"
 	}
+	spriteType = {
+		name = "GFX_Portrait_SER_Zivojin_Peric"
+		texturefile = "gfx/leaders/SER/Portrait_SER_Zivojin_Peric.png"
+	}
+	spriteType = {
+		name = "GFX_Portrait_SER_Dusan_Simovic"
+		texturefile = "gfx/leaders/SER/Portrait_SER_Dusan_Simovic.png"
+	}
 	###挪威###
 	spriteType = {
 		name = "GFX_Portrait_Norway_Albin_Eines"
