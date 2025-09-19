@@ -1290,7 +1290,8 @@ country_event = {
    }
    remove_all_ministers = yes
    add_ideas = SER_Dusan_Simovic_hog_ade
-
+   set_country_flag = KXX_LEADER_GUI_VISIBLE
+    set_country_flag = SER_Dusan_Simovic_VISIBLE
    complete_national_focus = SER_March_Conspiracy
       country_event = {
         id = serbia.34
@@ -2310,6 +2311,7 @@ country_event = {
   immediate = {
     log = "[GetDateText]: [Root.GetName]: event serbia.68"
     hidden_effect = {
+      set_cosmetic_tag = SER_CHT
        create_country_leader = {
         name = "德拉查·米哈伊洛维奇" 
         picture = "gfx/leaders/SER/Portrait_SER_Draza_Mihailovic.png"
@@ -2436,6 +2438,31 @@ country_event = {
       country_event = serbia.73
       complete_national_focus = SER_deal_with_devil
   }
+   option = {
+    name = serbia.69.f
+    trigger = {
+      NOT = {
+        country_exists = CRO
+      }
+      owns_state = 109
+    }
+     create_country_leader = {
+      name = "安特·帕韦利奇"  
+      picture = "gfx/leaders/CRO/CRO_ante_pavelic.png"
+      expire = "1.1.1"
+      ideology = ultranationalism_proto_subtype
+      traits = {}
+    }
+    increase_ruling_party_popularity_by_10 = yes
+       set_politics = {
+        ruling_party = national_populist
+        elections_allowed = no
+      }
+      set_cosmetic_tag = SER_CRO_CHT
+      set_country_flag = SER_hidden_path_unlock
+      mark_focus_tree_layout_dirty = yes
+      complete_national_focus = SER_desperate_alliance
+  }
 }
 country_event = {
   id = serbia.70
@@ -2460,6 +2487,7 @@ country_event = {
       }
       add_tot_to_coalition = yes
       add_radsoc_to_coalition = yes
+      increase_ruling_party_popularity_by_10 = yes
   }
   option = {
     name = serbia.70.b
@@ -2475,11 +2503,13 @@ country_event = {
       }
       add_synd_to_coalition = yes
       add_tot_to_coalition = yes
+      increase_ruling_party_popularity_by_10 = yes
   }
   option = {
     name = serbia.70.c
     add_synd_to_coalition = yes
     add_radsoc_to_coalition = yes
+    increase_ruling_party_popularity_by_10 = yes
   }
 }
 country_event = {
@@ -2505,6 +2535,7 @@ country_event = {
       }
       add_soclib_to_coalition = yes
       add_soccon_to_coalition = yes
+      increase_ruling_party_popularity_by_10 = yes
   }
   option = {
     name = serbia.71.b
@@ -2520,11 +2551,13 @@ country_event = {
       }
       add_socdem_to_coalition = yes
       add_soclib_to_coalition = yes
+      increase_ruling_party_popularity_by_10 = yes
   }
   option = {
     name = serbia.71.c
     add_socdem_to_coalition = yes
     add_soccon_to_coalition = yes
+    increase_ruling_party_popularity_by_10 = yes
   }
 }
 country_event = {
@@ -2549,10 +2582,12 @@ country_event = {
         elections_allowed = no
       }
       add_marlib_to_coalition = yes
+      increase_ruling_party_popularity_by_10 = yes
   }
   option = {
     name = serbia.72.b
     add_authdem_to_coalition = yes
+    increase_ruling_party_popularity_by_10 = yes
   }
 }
 country_event = {
@@ -2578,11 +2613,13 @@ country_event = {
         elections_allowed = no
       }
       add_natpop_to_coalition = yes
+      increase_ruling_party_popularity_by_10 = yes
   }
   
   option = {
     name = serbia.73.b
     add_pataut_to_coalition = yes
+    increase_ruling_party_popularity_by_10 = yes
   }
 }
 country_event = {
@@ -2615,6 +2652,8 @@ country_event = {
   fire_only_once = yes
   option = {
     name = serbia.75.a
+    set_country_flag = KXX_LEADER_GUI_VISIBLE
+    set_country_flag = SER_Zivojin_Peric_VISIBLE
     create_country_leader = {
       name = "乔治一世"  
       picture = "gfx/leaders/SER/georgeobrehnovic.dds"
@@ -5309,15 +5348,15 @@ country_event = { #
 	}
 }
 country_event = { #
-	id = serpuppet.18
-	title = serpuppet.18.t
-	desc = serpuppet.18.d
+	id = serpuppet.19
+	title = serpuppet.19.t
+	desc = serpuppet.19.d
 	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
 		log = "[GetLogInfo]: event serpuppet.17 option serpuppet.17.a"
-		name = serpuppet.18.a
+		name = serpuppet.19.a
     create_wargoal = { target = AUS type = annex_everything } 
      every_state = {
         limit = {
@@ -5367,9 +5406,13 @@ country_event = { #
 	}
   option = {
 		log = "[GetLogInfo]: event serpuppet.17 option serpuppet.17.a"
-		name = serpuppet.18.b
-
-
-		
+		name = serpuppet.19.b
+    AUS = {
+      add_to_faction = SER
+    }
+	}
+   option = {
+		log = "[GetLogInfo]: event serpuppet.17 option serpuppet.17.a"
+		name = serpuppet.19.c
 	}
 }

@@ -6,6 +6,100 @@ ideas = {
 ##############
 	country = {
 		### New ideas ###
+		SER_fight_for_great_yugoslavia = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = ALB_yugophilism
+			allowed = { always = no }
+            modifier = {	
+				political_power_cost = -0.1
+				dig_in_speed_factor = 0.15
+				max_dig_in_factor = 0.15
+				defensive_war_stability_factor = 0.25
+				offensive_war_stability_factor = 0.25
+				stability_popularity_factor = 0.25
+
+			}
+			
+		}
+		SER_end_church_conflict = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = church_of_all_religions
+			allowed = { always = no }
+            modifier = {	
+				political_power_factor = 0.15
+				national_populist_drift = 0.05
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				stability_factor = 0.1
+				war_support_factor = 0.1
+			}
+			
+		}
+		SER_against_oppressors = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = generic_iron_fist
+			allowed = { always = no }
+            modifier = {	
+				command_power_gain = 0.15
+				max_command_power = 150
+				command_power_gain_mult = 0.15
+				max_command_power_mult = 0.15
+				training_time_army_factor = -0.15
+				mobilization_speed = 0.15
+			}
+			targeted_modifier = {
+				tag = BUL
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
+				breakthrough_bonus_against = 0.15
+			}
+			targeted_modifier = {
+				tag = HUN
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
+				breakthrough_bonus_against = 0.15
+			}
+			targeted_modifier = {
+				tag = AUS
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
+				breakthrough_bonus_against = 0.15
+			}
+			targeted_modifier = {
+				tag = CRO
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
+				breakthrough_bonus_against = 0.15
+			}
+		}
+		SER_unified_militias = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = UK_military_loyal_idea
+			allowed = { always = no }
+            modifier = {	
+				conscription = 0.025
+				conscription_factor = 0.25
+				army_infantry_attack_factor = 0.15
+				army_infantry_defence_factor = 0.15
+				army_org_factor = 0.1
+				army_morale_factor = 0.1
+			}
+			
+		}
+		SER_ultra_nat_union = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = NFA_mil_state
+			allowed = { always = no }
+            modifier = {	
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				army_speed_factor = 0.1
+				army_attack_speed_factor = 0.1
+				army_strength_factor = 0.1
+				supply_consumption_factor = -0.1
+			}
+			
+		}
 		SER_national_state = { 
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
 			picture = generic_bad_king

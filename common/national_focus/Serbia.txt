@@ -7782,6 +7782,7 @@ if = {
             has_completed_focus = YUG_progressivepanslavism
             has_completed_focus = YUG_progressivepanslavism2
             has_country_flag = SER_democracy_is_fucked
+            has_completed_focus = SER_chetnik_coup
           }
         }
         set_country_flag = SER_YUG_radical
@@ -11972,7 +11973,7 @@ focus = {
 	focus = {
 		id = SER_under_bulgarian_hegemony
 		icon = GFX_BUL_bulgarian_officer
-		cost = 5.00
+		cost = 3
 
 		x = 4
 		y = 0
@@ -11991,7 +11992,7 @@ focus = {
 	focus = {
 		id = SER_new_legislature
 		icon = GFX_goal_government_icon
-		cost = 5.00
+		cost = 3
  relative_position_id = SER_under_bulgarian_hegemony
 		x = -2
 		y = 1
@@ -12010,7 +12011,7 @@ focus = {
 	focus = {
 		id = SER_progessive_reforms
 		icon = GFX_goal_social_reforms
-		cost = 5.00
+		cost = 3
  relative_position_id = SER_under_bulgarian_hegemony
 		x = -2
 		y = 3
@@ -12028,7 +12029,7 @@ focus = {
 	focus = {
 		id = SER_promote_scientific_education
 		icon = GFX_goal_great_science
-		cost = 5.00
+		cost = 3
 
 		 relative_position_id = SER_under_bulgarian_hegemony
 		x = -3
@@ -12048,7 +12049,7 @@ focus = {
 	focus = {
 		id = SER_legacy_of_Milan_pirocanac
 		icon = GFX_goal_ideology_authoritarian_democrat
-		cost = 5.00
+		cost = 3
  relative_position_id = SER_under_bulgarian_hegemony
 		x = -1
 		y = 4
@@ -12093,7 +12094,7 @@ focus = {
 	focus = {
 		id = SER_deal_with_domestic_enemies
 		icon = GFX_goal_generic_trial
-		cost = 5.00
+		cost = 3
     relative_position_id = SER_under_bulgarian_hegemony
 		x = 0
 		y = 1
@@ -12115,7 +12116,7 @@ focus = {
 	focus = {
 		id = SER_panslavism_under_bulgarian_rules
 		icon = GFX_goal_balkan_fist
-		cost = 5.00
+		cost = 3
    relative_position_id = SER_under_bulgarian_hegemony
 		x = -1
 		y = 2
@@ -12140,7 +12141,7 @@ focus = {
 	focus = {
 		id = SER_merge_the_opposition
 		icon = GFX_goal_consolidating_coalitionv2
-		cost = 5.00
+		cost = 3
  relative_position_id = SER_under_bulgarian_hegemony
 		x = 1
 		y = 2
@@ -12163,7 +12164,7 @@ focus = {
 	focus = {
 		id = SER_consolidate_the_state
 		icon = GFX_focus_generic_authoritarian_government
-		cost = 5.00
+		cost = 3
     relative_position_id = SER_under_bulgarian_hegemony
 		x = 0
 		y = 3
@@ -12186,7 +12187,7 @@ focus = {
 	focus = {
 		id = SER_rebuild_serbian_industry
 		icon = GFX_goal_construction
-		cost = 5.00
+		cost = 3
  relative_position_id = SER_under_bulgarian_hegemony
 		x = 2
 		y = 1
@@ -12211,7 +12212,7 @@ focus = {
 	focus = {
 		id = SER_standardize_the_dinar
 		icon = GFX_goal_generic_deals
-		cost = 5.00
+		cost = 3
  relative_position_id = SER_under_bulgarian_hegemony
 		x = 3
 		y = 2
@@ -12230,7 +12231,7 @@ focus = {
 	focus = {
 		id = SER_create_the_banking_comittee
 		icon = GFX_goal_generic_banking_legislation
-		cost = 5.00
+		cost = 3
  relative_position_id = SER_under_bulgarian_hegemony
 		x = 2
 		y = 3
@@ -12249,7 +12250,7 @@ focus = {
 	focus = {
 		id = SER_a_modern_economy
 		icon = GFX_goal_generic_foreign_investments
-		cost = 5.00
+		cost = 3
  relative_position_id = SER_under_bulgarian_hegemony
 		x = 1
 		y = 4
@@ -12281,7 +12282,7 @@ focus = {
 	focus = {
 		id = SER_the_eagle_and_the_lion
 		icon = GFX_goal_SER_BUL_cooperation
-		cost = 5.00
+		cost = 3
  relative_position_id = SER_under_bulgarian_hegemony
 		x = 0
 		y = 5
@@ -15313,9 +15314,7 @@ relative_position_id = SER_protect_democracy
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_grace"
-			add_political_power = 100
-      add_stability = 0.1
-      increase_ruling_party_popularity_by_10 = yes
+			add_ideas = SER_ultra_nat_union
 		}
 	}
   focus = {
@@ -15333,9 +15332,7 @@ relative_position_id = SER_protect_democracy
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_grace"
-			add_political_power = 100
-      add_stability = 0.1
-      increase_ruling_party_popularity_by_10 = yes
+			add_ideas = SER_against_oppressors
 		}
 	}
   
@@ -15356,7 +15353,19 @@ relative_position_id = SER_protect_democracy
 			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_grace"
 			add_political_power = 100
       add_stability = 0.1
-      increase_ruling_party_popularity_by_10 = yes
+      increase_ruling_party_popularity_by_20 = yes
+      add_popularity = {
+				ideology = radical_socialist
+				popularity = -0.1
+			}
+      add_popularity = {
+				ideology = syndicalist
+				popularity = -0.1
+			}
+      add_popularity = {
+				ideology = totalist
+				popularity = -0.1
+			}
 		}
 	}
    focus = {
@@ -15374,9 +15383,7 @@ relative_position_id = SER_protect_democracy
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_grace"
-			add_political_power = 100
-      add_stability = 0.1
-      increase_ruling_party_popularity_by_10 = yes
+			add_ideas = SER_end_church_conflict
 		}
 	}
   focus = {
@@ -15396,9 +15403,7 @@ relative_position_id = SER_protect_democracy
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_grace"
-			add_political_power = 100
-      add_stability = 0.1
-      increase_ruling_party_popularity_by_10 = yes
+			add_ideas = SER_fight_for_great_yugoslavia
 		}
 	}
   focus = {
@@ -15416,9 +15421,10 @@ relative_position_id = SER_protect_democracy
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_grace"
-			add_political_power = 100
-      add_stability = 0.1
-      increase_ruling_party_popularity_by_10 = yes
+			add_war_support = 0.1
+      add_manpower = 100000
+      add_command_power = 50
+      army_experience = 50
 		}
 	}
   focus = {
@@ -15436,9 +15442,7 @@ relative_position_id = SER_protect_democracy
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_royal_grace"
-			add_political_power = 100
-      add_stability = 0.1
-      increase_ruling_party_popularity_by_10 = yes
+      add_ideas = SER_unified_militias
 		}
 	}
   focus = {
