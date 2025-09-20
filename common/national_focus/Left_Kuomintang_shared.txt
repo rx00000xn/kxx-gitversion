@@ -23183,6 +23183,11 @@ focus = {
 		prerequisite = {
 		  focus = CHI_Exterminate_the_Japanese_Devils
 		}
+		available = {
+			JAP = {
+				is_subject_of = CHI
+			}
+		}
 		search_filters = {
 		  FOCUS_FILTER_POLITICAL
 		}
