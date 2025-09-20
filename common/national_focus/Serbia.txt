@@ -2850,7 +2850,7 @@ focus_tree = {
 		 cost = 3
 
 		relative_position_id = SER_Third_Revolution
-		x = 0
+		x = -2
 		y = 1
 
 		
@@ -2872,7 +2872,7 @@ focus_tree = {
 		 cost = 3
 
 		relative_position_id = SER_Third_Revolution
-		x = -1
+		x = -3
 		y = 3
 
 		prerequisite = {
@@ -2902,7 +2902,7 @@ focus_tree = {
 		 cost = 3
 
 		relative_position_id = SER_Third_Revolution
-		x = 0
+		x = -2
 		y = 2
 
 		prerequisite = {
@@ -2921,7 +2921,7 @@ focus_tree = {
 		 cost = 3
 
 		relative_position_id = SER_Third_Revolution
-		x = 0
+		x = -2
 		y = 4
     prerequisite = {
 			focus = SER_political_commissars
@@ -2943,13 +2943,37 @@ focus_tree = {
 		 cost = 3
 
 		relative_position_id = SER_Third_Revolution
-		x = 2
+		x = 0
 		y = 1
 
 		mutually_exclusive = {
 			focus = SER_serbian_path
 		}
-		
+    mutually_exclusive = {
+			focus = SER_bolshevik_path
+		}
+    mutually_exclusive = {
+			focus = SER_surrealist_path
+		}
+    mutually_exclusive = {
+			focus = SER_technocracy_path
+		}
+    mutually_exclusive = {
+			focus = SER_natsynd_path
+		}
+		available = {
+      OR = {
+        has_country_leader = {
+				  ruling_only = yes
+				  name = "亚历山大·兰科维奇"	
+			  }
+        has_country_leader = {
+				  ruling_only = yes
+				  name = "菲利普·菲利波维奇"	
+			  }
+      }
+     
+    }
 		prerequisite = {
 			focus = SER_Third_Revolution
 		}
@@ -2968,13 +2992,37 @@ focus_tree = {
 		 cost = 3
 
 		relative_position_id = SER_Third_Revolution
-		x = 4
+		x = 2
 		y = 1
 
 		mutually_exclusive = {
 			focus = SER_syndicalist_example
 		}
-		
+    mutually_exclusive = {
+			focus = SER_bolshevik_path
+		}
+    mutually_exclusive = {
+			focus = SER_surrealist_path
+		}
+    mutually_exclusive = {
+			focus = SER_technocracy_path
+		}
+    mutually_exclusive = {
+			focus = SER_natsynd_path
+		}
+		available = {
+      OR = {
+        has_country_leader = {
+				  ruling_only = yes
+				  name = "特里沙·卡克莱罗维奇"	
+			  }
+        has_country_leader = {
+				  ruling_only = yes
+				  name = "摩沙·皮贾德"	
+			  }
+      }
+     
+    }
 		prerequisite = {
 			focus = SER_Third_Revolution
 		}
@@ -2986,15 +3034,684 @@ focus_tree = {
 			custom_effect_tooltip = SER_serbian_path_tt
 		}
 	}
-  
+  focus = {
+		id = SER_bolshevik_path
+		icon = GFX_SOV_embrace_bolshevism
+		 cost = 3
 
+		relative_position_id = SER_Third_Revolution
+		x = 4
+		y = 1
+
+		mutually_exclusive = {
+			focus = SER_syndicalist_example
+		}
+    mutually_exclusive = {
+			focus = SER_serbian_path
+		}
+    mutually_exclusive = {
+			focus = SER_surrealist_path
+		}
+    mutually_exclusive = {
+			focus = SER_technocracy_path
+		}
+    mutually_exclusive = {
+			focus = SER_natsynd_path
+		}
+		available = {
+      OR = {
+        has_country_leader = {
+				  ruling_only = yes
+				  name = "佩特科·米莱蒂奇"	
+			  }
+        has_country_leader = {
+				  ruling_only = yes
+				  name = "米兰·戈尔基奇"	
+			  }
+        has_country_leader = {
+				  ruling_only = yes
+				  name = "武卡辛·马尔科维奇"	
+			  }
+      }
+     
+    }
+		prerequisite = {
+			focus = SER_Third_Revolution
+		}
+		ai_will_do = { factor = 10 }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SER_serbian_path"
+			add_ideas = SER_bolshevik_economic_transformation
+		}
+	}
+  focus = {
+		id = SER_surrealist_path
+		icon = GFX_goal_BBR_futurist_edu
+		 cost = 3
+
+		relative_position_id = SER_Third_Revolution
+		x = 7
+		y = 1
+
+		mutually_exclusive = {
+			focus = SER_syndicalist_example
+		}
+    mutually_exclusive = {
+			focus = SER_bolshevik_path
+		}
+    mutually_exclusive = {
+			focus = SER_serbian_path
+		}
+    mutually_exclusive = {
+			focus = SER_technocracy_path
+		}
+    mutually_exclusive = {
+			focus = SER_natsynd_path
+		}
+		available = {
+        has_country_leader = {
+				  ruling_only = yes
+				  name = "康斯坦丁·波波维奇"	
+			  }
+    }
+		prerequisite = {
+			focus = SER_Third_Revolution
+		}
+		ai_will_do = { factor = 10 }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SER_serbian_path"
+			add_ideas = SER_surrealist_economic_transformation
+      add_political_power = 100
+		}
+	}
+  focus = {
+		id = SER_technocracy_path
+		icon = GFX_goal_TEX_tech_and_techno
+		 cost = 3
+
+		relative_position_id = SER_Third_Revolution
+		x = 9
+		y = 1
+
+		mutually_exclusive = {
+			focus = SER_syndicalist_example
+		}
+    mutually_exclusive = {
+			focus = SER_bolshevik_path
+		}
+    mutually_exclusive = {
+			focus = SER_surrealist_path
+		}
+    mutually_exclusive = {
+			focus = SER_serbian_path
+		}
+    mutually_exclusive = {
+			focus = SER_natsynd_path
+		}
+		available = {
+        has_country_leader = {
+				  ruling_only = yes
+				  name = "西马·马尔科维奇"	
+			  }
+    }
+		prerequisite = {
+			focus = SER_Third_Revolution
+		}
+		ai_will_do = { factor = 10 }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SER_serbian_path"
+			add_ideas = SER_neosoc_economic_transformation
+      add_political_power = 100
+		}
+	}
+  focus = {
+		id = SER_natsynd_path
+		icon = GFX_BBR_black_national_syndicalism
+		 cost = 3
+
+		relative_position_id = SER_Third_Revolution
+		x = 11
+		y = 1
+
+		mutually_exclusive = {
+			focus = SER_syndicalist_example
+		}
+    mutually_exclusive = {
+			focus = SER_bolshevik_path
+		}
+    mutually_exclusive = {
+			focus = SER_surrealist_path
+		}
+    mutually_exclusive = {
+			focus = SER_technocracy_path
+		}
+    mutually_exclusive = {
+			focus = SER_serbian_path
+		}
+		available = {
+        has_country_leader = {
+				  ruling_only = yes
+				  name = "拉扎尔·科利舍夫斯基"	
+			  }
+    }
+		prerequisite = {
+			focus = SER_Third_Revolution
+		}
+		ai_will_do = { factor = 10 }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SER_serbian_path"
+			add_ideas = SER_natsynd_economic_transformation
+      add_political_power = 100
+		}
+	}
+  focus = {
+		id = SER_single_state
+		icon = GFX_goal_COR_State_Supreme_Orderer
+		 cost = 3
+
+		relative_position_id = SER_natsynd_path
+		x = -1
+		y = 1
+
+		
+		prerequisite = {
+			focus = SER_natsynd_path
+		}
+		ai_will_do = { factor = 10 }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SER_serbian_path"
+			swap_ideas = {
+        remove_idea = SER_natsynd_economic_transformation
+        add_idea = SER_natsynd_economic_transformation2
+      }
+      add_stability = 0.2
+		}
+	}
+  focus = {
+		id = SER_liberate_macedonia
+		icon = GFX_goal_SER_macedonia_in_flames
+		 cost = 3
+
+		relative_position_id = SER_natsynd_path
+		x = 0
+		y = 2
+
+		
+		prerequisite = {
+			focus = SER_single_state
+		}
+		ai_will_do = { factor = 10 }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SER_serbian_path"
+			add_ideas = SER_liberate_macedonia
+			add_war_support = 0.2
+		}
+	}
+   focus = {
+		id = SER_red_chetniks
+		icon = GFX_goal_MNT_chetnik
+		 cost = 3
+
+		relative_position_id = SER_natsynd_path
+		x = 1
+		y = 3
+
+		
+		prerequisite = {
+			focus = SER_single_state
+		}
+		ai_will_do = { factor = 10 }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SER_serbian_path"
+			swap_ideas = {
+        remove_idea = SER_natsynd_economic_transformation2
+        add_idea = SER_natsynd_economic_transformation3
+      }
+      add_manpower = 100000
+		}
+	}
+  focus = {
+		id = SER_national_revolution
+		icon = GFX_goal_MEX_Adapt_Totalism
+		 cost = 3
+
+		relative_position_id = SER_natsynd_path
+		x = 0
+		y = 4
+    prerequisite = {
+			focus = SER_red_chetniks
+		}
+		prerequisite = {
+			focus = SER_liberate_macedonia
+		}
+		ai_will_do = { factor = 10 }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SER_serbian_path"
+			swap_ideas = {
+        remove_idea = SER_natsynd_economic_transformation3
+        add_idea = SER_natsynd_economic_transformation4
+      }
+      add_political_power = 100
+      increase_ruling_party_popularity_by_10 = yes
+		}
+	}
+  focus = {
+		id = SER_learn_deat
+		icon = GFX_goals_FRA_glory
+		 cost = 3
+
+		relative_position_id = SER_technocracy_path
+		x = 0
+		y = 2
+
+		prerequisite = {
+			focus = SER_technocracy_path
+		}
+		ai_will_do = { factor = 10 }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SER_serbian_path"
+      swap_ideas = {
+        remove_idea = SER_neosoc_economic_transformation
+        add_idea = SER_neosoc_economic_transformation2
+      }
+      add_tech_bonus = {
+				name = SER_a_modern_economy
+				bonus = 1
+				uses = 2
+				category = industry
+			}
+		}
+	}
+  focus = {
+		id = SER_neosocialism_influence
+		icon = GFX_goal_FIN_Totalists
+		 cost = 3
+
+		relative_position_id = SER_technocracy_path
+		x = -1
+		y = 3
+
+		prerequisite = {
+			focus = SER_learn_deat
+		}
+		ai_will_do = { factor = 10 }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SER_serbian_path"
+			add_ideas = SER_neosocialism_influence
+			add_manpower = 50000
+      army_experience = 50
+		}
+	}
+   focus = {
+		id = SER_implement_planisme
+		icon = GFX_goal_FRA_planisme
+		 cost = 3
+
+		relative_position_id = SER_technocracy_path
+		x = 1
+		y = 3
+
+		prerequisite = {
+			focus = SER_learn_deat
+		}
+		ai_will_do = { factor = 10 }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SER_serbian_path"
+			swap_ideas = {
+        remove_idea = SER_neosoc_economic_transformation2
+        add_idea = SER_neosoc_economic_transformation3
+      }
+			add_ideas = command_economy
+		}
+	}
+  focus = {
+		id = SER_techno_state
+		icon = GFX_goal_COR_Attract_Wayward_Technocrats
+		 cost = 3
+
+		relative_position_id = SER_technocracy_path
+		x = 0
+		y = 4
+
+		prerequisite = {
+			focus = SER_neosocialism_influence
+		}
+    prerequisite = {
+			focus = SER_implement_planisme
+		}
+		ai_will_do = { factor = 10 }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SER_serbian_path"
+			swap_ideas = {
+        remove_idea = SER_neosoc_economic_transformation3
+        add_idea = SER_neosoc_economic_transformation4
+      }
+			add_research_slot = 1
+		}
+	}
+  focus = {
+		id = SER_relation_with_breton
+		icon = GFX_goal_FRA_revolt_of_the_masters
+		 cost = 3
+
+		relative_position_id = SER_surrealist_path
+		x = 1
+		y = 1
+    
+		prerequisite = {
+			focus = SER_surrealist_path
+		}
+		ai_will_do = { factor = 10 }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SER_collectivization"
+			swap_ideas = {
+        remove_idea = SER_surrealist_economic_transformation
+        add_idea = SER_surrealist_economic_transformation2
+      }
+        add_equipment_to_stockpile = {
+          type = infantry_equipment
+          amount = 3000
+          producer = FRA
+        }
+        add_equipment_to_stockpile = {
+          type = support_equipment
+          amount = 1500
+          producer = FRA
+        }
+		}
+	}
+  focus = {
+		id = SER_strengthen_body
+		icon = GFX_goal_FRA_clan_belonging
+		 cost = 3
+
+		relative_position_id = SER_surrealist_path
+		x = -1
+		y = 3
+    
+		prerequisite = {
+			focus = SER_relation_with_breton
+		}
+		ai_will_do = { factor = 10 }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SER_collectivization"
+			swap_ideas = {
+        remove_idea = SER_surrealist_economic_transformation2
+        add_idea = SER_surrealist_economic_transformation3
+      }
+      add_war_support = 0.1
+		}
+	}
+  focus = {
+		id = SER_call_international_brigades
+		icon = GFX_goal_FRA_international_insurrection
+		 cost = 3
+
+		relative_position_id = SER_surrealist_path
+		x = 0
+		y = 2
+    
+		prerequisite = {
+			focus = SER_relation_with_breton
+		}
+		ai_will_do = { factor = 10 }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SER_collectivization"
+			add_ideas = SER_call_international_brigades
+      add_manpower = 50000
+		}
+	}
+  focus = {
+		id = SER_surrealist_revolution
+		icon = GFX_goals_FRA_avant_garde
+		 cost = 3
+
+		relative_position_id = SER_surrealist_path
+		x = 0
+		y = 4
+    
+		prerequisite = {
+			focus = SER_call_international_brigades
+		}
+    prerequisite = {
+			focus = SER_strengthen_body
+		}
+		ai_will_do = { factor = 10 }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SER_collectivization"
+			swap_ideas = {
+        remove_idea = SER_surrealist_economic_transformation3
+        add_idea = SER_surrealist_economic_transformation4
+      }
+      increase_ruling_party_popularity_by_10 = yes
+		}
+	}
+  focus = {
+		id = SER_bukarinism_path
+		icon = GFX_RUS_Premier_Bukharin
+		 cost = 3
+
+		relative_position_id = SER_bolshevik_path
+		x = -2
+		y = 1
+    mutually_exclusive = {
+			focus = SER_orthodox_path
+		}
+    mutually_exclusive = {
+			focus = SER_vahabiti_path
+		}
+		prerequisite = {
+			focus = SER_bolshevik_path
+		}
+		ai_will_do = { factor = 10 }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SER_collectivization"
+			swap_ideas = {
+        remove_idea = SER_bolshevik_economic_transformation
+        add_idea = SER_bukarin_economic_transformation
+      }
+		}
+	}
+   focus = {
+		id = SER_orthodox_path
+		icon = GFX_focus_SOV_the_path_of_marxism_leninism
+		 cost = 3
+
+		relative_position_id = SER_bolshevik_path
+		x = 0
+		y = 1
+    mutually_exclusive = {
+			focus = SER_bukarinism_path
+		}
+    mutually_exclusive = {
+			focus = SER_vahabiti_path
+		}
+		prerequisite = {
+			focus = SER_bolshevik_path
+		}
+		ai_will_do = { factor = 10 }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SER_collectivization"
+			swap_ideas = {
+        remove_idea = SER_bolshevik_economic_transformation
+        add_idea = SER_bolshevik_economic_transformation2
+      }
+		}
+	}
+  focus = {
+		id = SER_vahabiti_path
+		icon = GFX_SOV_molotov_2
+		 cost = 3
+
+		relative_position_id = SER_bolshevik_path
+		x = 2
+		y = 1
+    mutually_exclusive = {
+			focus = SER_orthodox_path
+		}
+    mutually_exclusive = {
+			focus = SER_bukarinism_path
+		}
+		prerequisite = {
+			focus = SER_bolshevik_path
+		}
+		ai_will_do = { factor = 10 }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SER_collectivization"
+			swap_ideas = {
+        remove_idea = SER_bolshevik_economic_transformation
+        add_idea = SER_vahabiti_economic_transformation
+      }
+		}
+	}
+  focus = {
+		id = SER_learn_nep
+		icon = GFX_goal_MON_Mongolian_NEP
+		 cost = 3
+
+		relative_position_id = SER_bolshevik_path
+		x = -1
+		y = 2
+    
+		prerequisite = {
+			focus = SER_bukarinism_path
+      focus = SER_orthodox_path
+      focus = SER_vahabiti_path
+		}
+		ai_will_do = { factor = 10 }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SER_collectivization"
+			add_ideas = SER_learn_nep
+		}
+	}
+  focus = {
+		id = SER_purge_party
+		icon = GFX_goal_ALB_Permanent_Purge
+		 cost = 3
+
+		relative_position_id = SER_bolshevik_path
+		x = 0
+		y = 3
+    
+		prerequisite = {
+			focus = SER_bukarinism_path
+      focus = SER_orthodox_path
+      focus = SER_vahabiti_path
+		}
+		ai_will_do = { factor = 10 }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SER_collectivization"
+			add_popularity = {
+				ideology = radical_socialist
+				popularity = -0.1
+			}
+			add_popularity = {
+				ideology = social_democrat
+				popularity = -0.1
+			}
+      add_stability = 0.2
+      increase_ruling_party_popularity_by_10 = yes
+      add_political_power = 100
+		}
+	}
+  focus = {
+		id = SER_heroic_communism
+		icon = GFX_GRU_PIECK_HEROISM
+		 cost = 3
+
+		relative_position_id = SER_bolshevik_path
+		x = 1
+		y = 2
+    
+		prerequisite = {
+			focus = SER_bukarinism_path
+      focus = SER_orthodox_path
+      focus = SER_vahabiti_path
+		}
+		ai_will_do = { factor = 10 }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SER_collectivization"
+			add_ideas = SER_heroic_communism
+		}
+	}
+  
+   focus = {
+		id = SER_yay_lenin
+		icon = GFX_RUS_Heirs_Marx_Lenin
+		 cost = 3
+
+		relative_position_id = SER_bolshevik_path
+		x = -1
+		y = 4
+    
+		prerequisite = {
+			focus = SER_learn_nep
+		}
+    prerequisite = {
+      focus = SER_purge_party
+		}
+		ai_will_do = { factor = 10 }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SER_collectivization"
+			add_political_power = 100
+      increase_ruling_party_popularity_by_10 = yes
+      add_war_support = 0.1
+		}
+	}
+  focus = {
+		id = SER_ind_agri_collectivize
+		icon = GFX_RUS_Labour_Collectives
+		 cost = 3
+
+		relative_position_id = SER_bolshevik_path
+		x = 1
+		y = 4
+    
+		prerequisite = {
+			focus = SER_heroic_communism
+		}
+   
+		ai_will_do = { factor = 10 }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SER_collectivization"
+			add_ideas = SER_ind_agri_collectivize
+      add_one_random_civilian_factory = yes
+      add_one_random_military_factory = yes
+      add_one_random_civilian_factory = yes
+      add_one_random_military_factory = yes
+		}
+	}
 	focus = {
 		id = SER_collectivization
 		icon = GFX_goal_SZC_improvised_farming_machinery
 		 cost = 3
 
 		relative_position_id = SER_Third_Revolution
-		x = 3
+		x = 0
 		y = 2
 
 		prerequisite = {
@@ -3025,8 +3742,8 @@ focus_tree = {
 		 cost = 3
 
 		relative_position_id = SER_Third_Revolution
-		x = 5
-		y = 3
+		x = 2
+		y = 4
 
 		prerequisite = {
 			focus = SER_collectivization
@@ -3075,7 +3792,7 @@ focus_tree = {
 		 cost = 3
 
 		relative_position_id = SER_Third_Revolution
-		x = 3
+		x = 1
 		y = 3
 
 		prerequisite = {
@@ -3143,7 +3860,7 @@ focus_tree = {
 		 cost = 3
 
 		relative_position_id = SER_Third_Revolution
-		x = 1
+		x = -1
 		y = 3
 
 		prerequisite = {
@@ -3160,7 +3877,7 @@ focus_tree = {
 			}
 			add_popularity = {
 				ideology = syndicalist
-				popularity = 0.02
+				popularity = 0.05
 			}
 		}
 	}
@@ -3171,7 +3888,7 @@ focus_tree = {
 		 cost = 3
 
 		relative_position_id = SER_Third_Revolution
-		x = 2
+		x = 0
 		y = 4
 
 		prerequisite = {
@@ -3245,8 +3962,8 @@ focus_tree = {
 		 cost = 3
 
 		relative_position_id = SER_Third_Revolution
-		x = 4
-		y = 4
+		x = 1
+		y = 5
 
 		prerequisite = {
 			focus = SER_youth_work_brigades
@@ -3269,7 +3986,7 @@ focus_tree = {
 		 cost = 3
 
 		relative_position_id = SER_Third_Revolution
-		x = -3
+		x = -5
 		y = 1
 
 		
@@ -3297,7 +4014,7 @@ focus_tree = {
 		 cost = 3
 
 		relative_position_id = SER_Third_Revolution
-		x = -2
+		x = -4
 		y = 2
 
 		prerequisite = {
@@ -3326,7 +4043,7 @@ focus_tree = {
 		 cost = 3
 
 		relative_position_id = SER_Third_Revolution
-		x = -4
+		x = -6
 		y = 2
 
 		prerequisite = {
@@ -3355,7 +4072,7 @@ focus_tree = {
 		 cost = 3
 
 		relative_position_id = SER_Third_Revolution
-		x = -3
+		x = -5
 		y = 3
 
 		prerequisite = {
@@ -3375,7 +4092,7 @@ focus_tree = {
 		 cost = 3
 
 		relative_position_id = SER_Third_Revolution
-		x = -2
+		x = -4
 		y = 4
 
 		prerequisite = {

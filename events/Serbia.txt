@@ -2699,7 +2699,8 @@ country_event = {
     set_politics = {
       ruling_party = syndicalist
       elections_allowed = no
-    }                
+    }       
+    increase_ruling_party_popularity_by_10 = yes         
   }
   option = {
     name = serbia.76.b
@@ -2708,10 +2709,13 @@ country_event = {
       ruling_party = totalist
       elections_allowed = no
     }                
+    
+    increase_ruling_party_popularity_by_10 = yes      
   }
   option = {
     name = serbia.76.c
               
+    increase_ruling_party_popularity_by_10 = yes  
   }
   option = {
     name = serbia.76.e
@@ -2725,7 +2729,8 @@ country_event = {
     set_politics = {
       ruling_party = totalist
       elections_allowed = no
-    }                
+    }   
+    increase_ruling_party_popularity_by_10 = yes               
   }
    option = {
     name = serbia.76.f
@@ -2739,7 +2744,8 @@ country_event = {
     set_politics = {
       ruling_party = syndicalist
       elections_allowed = no
-    }                
+    }     
+    increase_ruling_party_popularity_by_10 = yes             
   }
   option = {
     name = serbia.76.g
@@ -2753,7 +2759,8 @@ country_event = {
     set_politics = {
       ruling_party = radical_socialist
       elections_allowed = no
-    }                
+    }    
+    increase_ruling_party_popularity_by_10 = yes              
   }
    option = {
     name = serbia.76.h
@@ -2781,7 +2788,8 @@ country_event = {
     set_politics = {
       ruling_party = totalist
       elections_allowed = no
-    }                
+    }    
+    increase_ruling_party_popularity_by_10 = yes              
   }
   option = {
     name = serbia.77.b
@@ -2795,7 +2803,8 @@ country_event = {
     set_politics = {
       ruling_party = syndicalist
       elections_allowed = no
-    }                
+    }       
+    increase_ruling_party_popularity_by_10 = yes           
   }
   option = {
     name = serbia.77.c
@@ -2809,7 +2818,8 @@ country_event = {
     set_politics = {
       ruling_party = radical_socialist
       elections_allowed = no
-    }                         
+    }          
+    increase_ruling_party_popularity_by_10 = yes                 
   }
   option = {
     name = serbia.77.e
@@ -2824,6 +2834,7 @@ country_event = {
       ruling_party = social_democrat
       elections_allowed = no
     }                
+    increase_ruling_party_popularity_by_10 = yes  
     set_country_flag = soc_dems_are_socialists
   }
    option = {

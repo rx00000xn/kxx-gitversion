@@ -1608,12 +1608,312 @@ ideas = {
 				radical_socialist_drift = 0.03
 			}
 		}
-		SER_economic_transformation_initial = {
+		SER_neosoc_economic_transformation = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_economic_transformation_initial" }
-			picture = man_five_year_plan_industry
+			picture = CSA_twenty_four_techno_hours
+			name = "技官主义模式"
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = -0.2
+				research_speed_factor = 0.1
+			}
+		}
+		SER_neosoc_economic_transformation2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_economic_transformation_initial" }
+			picture = CSA_twenty_four_techno_hours
+			name = "技官主义模式"
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = -0.2
+				research_speed_factor = 0.1
+				production_factory_max_efficiency_factor = 0.15
+				production_factory_efficiency_gain_factor = 0.15
+
+			}
+		}
+		SER_neosoc_economic_transformation3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_economic_transformation_initial" }
+			picture = CSA_twenty_four_techno_hours
+			name = "技官主义模式"
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = -0.2
+				research_speed_factor = 0.1
+				production_factory_max_efficiency_factor = 0.15
+				production_factory_efficiency_gain_factor = 0.15
+				line_change_production_efficiency_factor = 0.15
+				industrial_capacity_factory = 0.15
+			}
+		}
+		SER_neosoc_economic_transformation4 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_economic_transformation_initial" }
+			picture = CSA_twenty_four_techno_hours
+			name = "技官主义模式"
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = -0.2
+				research_speed_factor = 0.1
+				production_factory_max_efficiency_factor = 0.15
+				production_factory_efficiency_gain_factor = 0.15
+				line_change_production_efficiency_factor = 0.15
+				industrial_capacity_factory = 0.15
+				consumer_goods_expected_value = -0.2
+				production_speed_buildings_factor = 0.15
+			}
+		}
+		SER_neosocialism_influence = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_economic_transformation_initial" }
+			picture = HOL_dutch_militia
+			allowed = { always = no }
+			modifier = {
+				conscription = 0.02
+				experience_loss_factor = -0.1
+				army_org_factor = 0.1
+				army_morale_factor = 0.1
+			}
+		}
+		SER_call_international_brigades = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_economic_transformation_initial" }
+			picture = HOL_unionized_military
+			allowed = { always = no }
+			modifier = {
+				weekly_manpower = 1000
+				conscription_factor = 0.3
+				army_infantry_attack_factor = 0.1
+				army_infantry_defence_factor = 0.1
+			}
+		}
+		SER_liberate_macedonia = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_economic_transformation_initial" }
+			picture = ALB_trade_bulgaria
+			allowed = { always = no }
+			modifier = {
+				army_infantry_attack_factor = 0.15
+				army_infantry_defence_factor = 0.15
+			}
+			targeted_modifier = {
+				tag = BUL
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
+				breakthrough_bonus_against = 0.15
+			}
+		}
+		SER_natsynd_economic_transformation = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_economic_transformation_initial" }
+			picture = totalism
+			name = "国家工团主义模式"
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_expected_value = 0.2
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		SER_natsynd_economic_transformation2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_economic_transformation_initial" }
+			picture = totalism
+			name = "国家工团主义模式"
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_expected_value = -0.2
+				production_speed_buildings_factor = 0.1
+				production_speed_arms_factory_factor = 0.2
+				production_speed_industrial_complex_factor = 0.2
+				global_building_slots_factor = 0.1
+			}
+		}
+		SER_natsynd_economic_transformation3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_economic_transformation_initial" }
+			picture = totalism
+			name = "国家工团主义模式"
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_expected_value = -0.2
+				production_speed_buildings_factor = 0.2
+				production_speed_arms_factory_factor = 0.3
+				production_speed_industrial_complex_factor = 0.3
+				global_building_slots_factor = 0.1
+			}
+		}
+		SER_natsynd_economic_transformation4 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_economic_transformation_initial" }
+			picture = totalism
+			name = "国家工团主义模式"
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_expected_value = -0.2
+				production_speed_buildings_factor = 0.2
+				production_speed_arms_factory_factor = 0.3
+				production_speed_industrial_complex_factor = 0.3
+				global_building_slots_factor = 0.2
+				production_factory_start_efficiency_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+			}
+		}
+		SER_surrealist_economic_transformation = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_economic_transformation_initial" }
+			picture = SOV_social_futurism
+			name = "未来主义模式"
+			allowed = { always = no }
+			modifier = {
+				stability_factor = -0.1
+				consumer_goods_factor = -0.2
+				production_factory_efficiency_gain_factor = 0.1
+			}
+		}
+		SER_surrealist_economic_transformation2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_economic_transformation_initial" }
+			picture = SOV_social_futurism
+			name = "未来主义模式"
+			allowed = { always = no }
+			modifier = {
+				political_power_cost = 0.2
+				stability_factor = -0.2
+				consumer_goods_factor = -0.2
+				production_factory_efficiency_gain_factor = 0.1
+				global_building_slots_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+			}
+		}
+		SER_surrealist_economic_transformation3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_economic_transformation_initial" }
+			picture = SOV_social_futurism
+			name = "未来主义模式"
+			allowed = { always = no }
+			modifier = {
+				political_power_cost = 0.3
+				stability_factor = -0.3
+				consumer_goods_factor = -0.2
+				production_factory_efficiency_gain_factor = 0.1
+				global_building_slots_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+				production_factory_start_efficiency_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				
+
+			}
+		}
+		SER_surrealist_economic_transformation4 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_economic_transformation_initial" }
+			picture = SOV_social_futurism
+			name = "未来主义模式"
+			allowed = { always = no }
+			modifier = {
+				political_power_cost = 0.5
+				stability_factor = -0.5
+				consumer_goods_factor = -0.2
+				production_factory_efficiency_gain_factor = 0.1
+				global_building_slots_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+				production_factory_start_efficiency_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				stability_weekly = 0.005
+				war_support_weekly = 0.005
+				industrial_capacity_factory = 0.2
+				political_power_gain = 0.15
+			}
+		}
+		SER_bolshevik_economic_transformation = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_economic_transformation_initial" }
+			picture = SOV_workers
+			name = "布尔什维克模式"
 			allowed = { always = no }
 			modifier = {
 				consumer_goods_factor = 0.2
+				production_factory_efficiency_gain_factor = 0.1
+			}
+		}
+		SER_bolshevik_economic_transformation2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_economic_transformation_initial" }
+			picture = SOV_workers
+			name = "布尔什维克模式"
+			allowed = { always = no }
+			modifier = {
+				industrial_capacity_factory = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				production_factory_start_efficiency_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+
+			}
+		}
+		SER_bukarin_economic_transformation = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_economic_transformation_initial" }
+			picture = SOV_cult_bukharin
+			name = "人民社会党模式"
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = -0.2
+				production_factory_efficiency_gain_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+
+			}
+		}
+		SER_vahabiti_economic_transformation = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_economic_transformation_initial" }
+			picture = SOV_dictator
+			name = "莫洛托夫模式"
+			allowed = { always = no }
+			modifier = {
+				stability_factor = -0.1
+				consumer_goods_expected_value = -0.15
+				production_factory_efficiency_gain_factor = 0.1
+				industrial_capacity_factory = 0.2
+				production_speed_buildings_factor = 0.15
+				global_building_slots_factor = 0.1
+			}
+		}
+		SER_vahabiti_economic_transformation = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_economic_transformation_initial" }
+			picture = SOV_dictator
+			name = "莫洛托夫模式"
+			allowed = { always = no }
+			modifier = {
+				stability_factor = -0.1
+				consumer_goods_expected_value = -0.15
+				production_factory_efficiency_gain_factor = 0.1
+				industrial_capacity_factory = 0.2
+				production_speed_buildings_factor = 0.15
+				global_building_slots_factor = 0.1
+			}
+		}
+		SER_learn_nep = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_economic_transformation_initial" }
+			picture = SOV_nep
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = -0.1
+				global_building_slots_factor = 0.1
+				production_speed_buildings_factor = 0.05
+				production_speed_arms_factory_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+
+			}
+		}
+		SER_heroic_communism = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_economic_transformation_initial" }
+			picture = UKR_communism_in_20_years
+			allowed = { always = no }
+			modifier = {
+				conscription = 0.02
+				conscription_factor = 0.2
+				army_org_factor = 0.1
+			}
+		}
+		SER_ind_agri_collectivize = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_economic_transformation_initial" }
+			picture = agricultural_collectivization
+			allowed = { always = no }
+			modifier = {
+				monthly_population = -0.1
+				supply_consumption_factor = -0.1
 				industrial_capacity_factory = 0.1
 			}
 		}
@@ -1636,6 +1936,7 @@ ideas = {
 			modifier = {
 				production_speed_buildings_factor = 0.15
 				industrial_capacity_factory = 0.2
+				consumer_goods_factor = -0.2
 			}
 		}
 		SER_economic_transformation_serbian_1 = {
@@ -1644,7 +1945,7 @@ ideas = {
 			picture = man_five_year_plan_industry
 			allowed = { always = no }
 			modifier = {
-				production_speed_buildings_factor = 0.05
+				production_speed_buildings_factor = 0.1
 				industrial_capacity_factory = 0.1
 			}
 		}
@@ -1654,7 +1955,8 @@ ideas = {
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.1
-				production_factory_efficiency_gain_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.1
+				production_factory_start_efficiency_factor = 0.1
 			}
 		}
 		SER_youth_work_brigades_syndie = {
@@ -1664,6 +1966,7 @@ ideas = {
 			allowed = { always = no }
 			modifier = {
 				production_factory_max_efficiency_factor = 0.1
+				line_change_production_efficiency_factor = 0.1
 			}
 		}
 		SER_youth_work_brigades_notsyndie = {
@@ -1673,6 +1976,7 @@ ideas = {
 			allowed = { always = no }
 			modifier = {
 				production_speed_industrial_complex_factor = 0.1
+				line_change_production_efficiency_factor = 0.1
 				production_speed_arms_factory_factor = 0.1
 			}
 		}

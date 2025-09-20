@@ -218,7 +218,9 @@ ideologies = {
 			tot_controlled_democracy_subtype = { can_be_randomly_selected = no }  #指导式民主
 			tot_revolutionary_nationalism_subtype = {can_be_randomly_selected = no} #革命民族主义
 			tot_shintaisei_subtype = {can_be_randomly_selected = no} #革命新体制
-
+			National_Tridemism_subtype = {can_be_randomly_selected = no} #纬式国社理论
+			National_Corporatist_System_subtype = {can_be_randomly_selected = no} #团社体制
+			tot_colonial_government = {can_be_randomly_selected = no} #社会主义殖民政府
 			#点
 			tot_baishi_subtype = {can_be_randomly_selected = no} #百事思想
 			islamic_communism_subtype = {can_be_randomly_selected = no} #伊斯兰马克思主义
@@ -329,6 +331,8 @@ ideologies = {
 			syn_guild_socialism_subtype = {can_be_randomly_selected = no} #行会社会主义
 			anthropophagic_movement_subtype = {can_be_randomly_selected = no} #食人运动
 			syn_technocratic_socialism_subtype = {can_be_randomly_selected = no} #技官社会主义
+			syn_mutualism_subtype = {can_be_randomly_selected = no color = { 255 127 0 } } #互助主义
+			syn_individualist_anarchism_subtype = {can_be_randomly_selected = no color = { 153 216 234 } } #个人无政府主义
 
 			syn_national_jacobinism_subtype = {can_be_randomly_selected = no} #民族雅各宾主义
 			syn_kaysone_thought_subtype = { can_be_randomly_selected = no } #凯山·丰威汉思想
@@ -353,6 +357,7 @@ ideologies = {
 			canaanist_subtype = {can_be_randomly_selected = no} #迦南主义
 			syn_sssp_subtype_subtype = { can_be_randomly_selected = no }  #科学特搜署
 			syn_bukharinist_subtype = {can_be_randomly_selected = no} #布哈林主义
+
 			#点
 			syn_islamic_communism_subtype = {can_be_randomly_selected = no} #伊斯兰马克思主义
 
@@ -488,6 +493,8 @@ ideologies = {
 			francoism_subtype = {can_be_randomly_selected = no} #佛朗哥主义
 			radsoc_guild_socialism_subtype = {can_be_randomly_selected = no} #行会社会主义
 			saavedrista_republicanism_subtype = {can_be_randomly_selected = no} #萨韦德拉共和主义
+			mutualism_subtype = {can_be_randomly_selected = no color = { 255 127 0 } } #互助主义
+			individualist_anarchism_subtype = {can_be_randomly_selected = no color = { 153 216 234 } } #个人无政府主义
 			
 			radsoc_socialist_confucianism_subtype = {can_be_randomly_selected = no} #社会主义儒学
 			radsoc_pan_asianism_subtype = {can_be_randomly_selected = no}
@@ -700,6 +707,7 @@ ideologies = {
 			socdem_waisi_movement_subtype = {can_be_randomly_selected = no} #瓦伊西运动
 			janismo_subtype = {can_be_randomly_selected = no} #雅尼奥主义
 			socdem_apartheid_socialism_subtype = {can_be_randomly_selected = no} #隔离社会主义
+			socdem_individualist_anarchism_subtype = {can_be_randomly_selected = no color = { 153 216 234 } } #个人无政府主义
 			
 			socdem_mao_zedong_thought_subtype = {can_be_randomly_selected = no} #温和农业主义
 			socdem_sangkum_subtype = { can_be_randomly_selected = no } #桑功主义
@@ -1264,9 +1272,9 @@ ideologies = {
 			authdem_Grand_Thai_nationalism_subtype = {can_be_randomly_selected = no} #泛泰主义
 			thaw_antoun_saadeh_thought_subtype = {can_be_randomly_selected = no} #解冻安东萨阿德思想
 			transitional_government_subtype = { can_be_randomly_selected = no } #过渡内阁
+			controlled_democracy_subtype = { can_be_randomly_selected = no } #指导式民主
 			autdem_revolutionary_nationalism_subtype = {can_be_randomly_selected = no} #革命民族主义
 			autdem_yugoslavism_subtype = {can_be_randomly_selected = no} #南斯拉夫主义
-			
 			
 			#点
 			new_legalism_subtype = {can_be_randomly_selected = no} #新法家
@@ -1451,7 +1459,6 @@ ideologies = {
 			pataut_controlled_democracy_subtype = { can_be_randomly_selected = no } #指导式民主
 			pataut_jihad_legionarism_subtype = { can_be_randomly_selected = no } #伊斯兰军团主义
 			generic_sssp_subtype = { can_be_randomly_selected = no } #科学特搜署
-			capooism_subtype = { can_be_randomly_selected = no } #咖波主义
 			
 			#点
 			absolute_monarchy_CN_subtype = {can_be_randomly_selected = no color = { 255 216 0 } } #绝对君主制
@@ -1463,6 +1470,7 @@ ideologies = {
 			#制作组彩蛋
 			hartmannism_subtype = { can_be_randomly_selected = no }  #哈特曼主义（制作组彩蛋）
 			paternal_koishism_subtype = { can_be_randomly_selected = no }  #恋式家长制（制作组彩蛋）
+			capooism_subtype = { can_be_randomly_selected = no }  #迦波主义（制作组彩蛋）
 
 			#大乐队时代
 			Ave_Mujica_subtype = {can_be_randomly_selected = no} #颂乐人偶体制（彩蛋）
@@ -1634,6 +1642,9 @@ ideologies = {
 			trujillato_subtype = {can_be_randomly_selected = no} #特鲁希略主义
 			nacismo_subtype = {can_be_randomly_selected = no} #纳西主义
 			lapuanliike_subtype = {can_be_randomly_selected = no} #拉普阿运动
+			natpop_regionalism_subtype = {can_be_randomly_selected = no} #后殖民时代地方主义
+			great_way_subtype = {can_be_randomly_selected = no} #大道
+			riksvitalism_subtype = {can_be_randomly_selected = no} #民族活力论
 
 			natpop_juche_subtype = {can_be_randomly_selected = no} #主体思想
 			natpop_survival_nationalism = {can_be_randomly_selected = no } #生存民族主义

@@ -12373,9 +12373,7 @@ focus = {
 		x = -1
 		y = 1
 
-		available = {
-			controls_state = 1045 #Attica
-		}
+		
 
 		ai_will_do = {
 			factor = 1
@@ -12402,7 +12400,7 @@ focus = {
 					limit = { NOT = { has_tech = radio_detection } }
 					set_technology = { radio_detection = 1 }
 				}
-				1045 = {
+				random_owned_controlled_state = {
 					add_building_construction = {
 						type = radar_station
 						level = 1
@@ -12906,9 +12904,7 @@ focus = {
 		x = 1
 		y = 1
 
-		available = {
-			1045 = { is_owned_and_controlled_by = ROOT } #Attica
-		}
+		
 
 		ai_will_do = {
 			factor = 1
@@ -12920,20 +12916,12 @@ focus = {
 
 		available_if_capitulated = yes
 
-		bypass = {
-			NOT = { owns_state = 1045 }
-		}
+		
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRE_athens_shipyard"
-			1045 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
-			}
+			add_one_random_dockyard = yes
+			add_one_random_dockyard = yes
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}

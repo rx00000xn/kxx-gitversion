@@ -406,10 +406,6 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideologies/subideologies/tot_revolution_nationale.png"
 	}
 	spriteType = {
-		name = "GFX_ideology_tot_shintaisei_subtype" #极权-新体制
-		texturefile = "gfx/interface/ideologies/subideologies/tot_shintaisei_group.png"
-	}	
-	spriteType = {
 		name = "GFX_ideology_anarcho_individualism_subtype" #鸡舍-无政府个人主义
 		texturefile = "gfx/interface/ideologies/subideologies/anarcho_individualism_group.png"
 	}	
@@ -549,7 +545,31 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_ideology_socdem_burnhamite_thought_subtype" #社民-温和伯纳姆思想
 		texturefile = "gfx/interface/ideologies/subideologies/socdem_burnhamite_thought_group.png"
-	}										
+	}
+	spriteType = {
+		name = "GFX_ideology_marlib_yugoslavism_subtype"  #市自-南斯拉夫主义
+		texturefile = "gfx/interface/ideologies/subideologies/marlib_yugoslavism_subtype.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_autdem_yugoslavism_subtype" #威民-南斯拉夫主义
+		texturefile = "gfx/interface/ideologies/subideologies/autdem_yugoslavism_subtype.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_syn_bukharinist_subtype" #工团-布哈林主义
+		texturefile = "gfx/interface/ideologies/subideologies/bukharinist_group.png"
+	}
+	SpriteType = {
+		name = "GFX_ideology_National_Tridemism_subtype" #极权-纬式国社理论
+		texturefile = "gfx/interface/ideologies/subideologies/National_Tridemism_group.png"
+	}
+	SpriteType = {
+		name = "GFX_ideology_National_Corporatist_System_subtype" #极权-团社体制
+		texturefile = "gfx/interface/ideologies/subideologies/National_Corporatist_System_group.png"
+	}
+	SpriteType = {
+		name = "GFX_ideology_capooism_subtype" #家独-咖波主义
+		texturefile = "gfx/interface/ideologies/subideologies/capooism_group.png"
+	}
 
 	SpriteType = {
 		name = "GFX_ideology_radsoc_Grand_Thai_nationalism_subtype" #鸡舍-泰式社会主义
@@ -571,6 +591,7 @@ spriteTypes = {
 		name = "GFX_ideology_pataut_Grand_Thai_nationalism_subtype" #家独-泛泰主义
 		texturefile = "gfx/interface/ideologies/subideologies/pataut_Grand_Thai_nationalism_group.png"
 	}	
+	
 
 	SpriteType = {
 		name = "GFX_ideology_socdem_vietnamese_republicanism_subtype" #社民-民权共和主义
@@ -579,10 +600,6 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_ideology_natpop_viet_natsoc_subtype" #民粹-越南国社主义
 		texturefile = "gfx/interface/ideologies/subideologies/natpop_viet_natsoc_group.png"
-	}
-	SpriteType = {
-		name = "GFX_ideology_capooism_subtype" #家独-咖波主义
-		texturefile = "gfx/interface/ideologies/subideologies/capooism_group.png"
 	}
 
 	frameAnimatedSpriteType = { #民粹-终末论
@@ -1005,15 +1022,11 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideologies/subideologies/player.png"
 	}
 	spriteType = {
-		name = "GFX_ideology_marlib_yugoslavism_subtype" 
-		texturefile = "gfx/interface/ideologies/subideologies/marlib_yugoslavism_subtype.png"
+		name = "GFX_ideology_tot_colonial_government" 
+		texturefile = "gfx/interface/ideologies/subideologies/tot_colonial_government.png"
 	}
 	spriteType = {
-		name = "GFX_ideology_autdem_yugoslavism_subtype" 
-		texturefile = "gfx/interface/ideologies/subideologies/autdem_yugoslavism_subtype.png"
-	}
-	spriteType = {
-		name = "GFX_ideology_syn_bukharinist_subtype" 
-		texturefile = "gfx/interface/ideologies/subideologies/bukharinist_group.png"
+		name = "GFX_ideology_tot_shintaisei_subtype" 
+		texturefile = "gfx/interface/ideologies/subideologies/tot_shintaisei_group.png"
 	}
 }

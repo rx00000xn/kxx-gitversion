@@ -78,35 +78,35 @@ add_ideas = {
 ### Starting party leaders
 ### Starting party leaders
 create_country_leader = {
-	name = "Petko Miletić"
-	picture = "gfx/leaders/SER/Portrait_SER_Petko_Miletic.png"
+	name = "武卡辛·马尔科维奇"
+	picture = "gfx/leaders/SER/Portrait_SER_Vukasin_Markovic.png"
 	expire = "1.1.1"
 	ideology = authcom_subtype
 }
 
 create_country_leader = {
-	name = "Sima Marković"
+	name = "西马·马尔科维奇"
 	picture = "gfx/leaders/SER/Portrait_SER_Sima_Markovic.png"
 	expire = "1.1.1"
 	ideology = syn_technocratic_socialism_subtype
 }
 
 create_country_leader = {
-	name = "Filip Filipović"
+	name = "菲利普·菲利波维奇"
 	picture = "gfx/leaders/SER/Portrait_SER_Filip_Filipovic.png"
 	expire = "1.1.1"
 	ideology = moderate_socialist_subtype
 }
 
 create_country_leader = {
-	name = "Živko Topalović"
+	name = "日夫科·托帕洛维奇"
 	picture = "gfx/leaders/SER/Portrait_SER_Zivko_Topalovic.png"
 	expire = "1.1.1"
 	ideology = popular_patriotism_subtype
 }
 
 create_country_leader = {
-	name = "Slobodan Jovanović"
+	name = "斯洛博丹·约万诺维奇"
 	desc = "POLITICS_SLOBODAN_JOVANOVIC_DESC"
 	picture = "gfx/leaders/SER/Portrait_SER_Slobodan_Jovanovic.png"
 	expire = "1.1.1"
@@ -114,21 +114,21 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Ljubomir Davidović"
+	name = "柳博米尔·达维多维奇"
 	picture = "gfx/leaders/SER/Portrait_SER_Ljubomir_Davidovic.png"
 	expire = "1.1.1"
 	ideology = marlib_national_liberalism_subtype
 }
 
 create_country_leader = {
-	name = "Nikola Uzunović"
+	name = "尼古拉·乌祖诺维奇"
 	picture = "gfx/leaders/SER/Portrait_SER_Nikola_Uzunovic.png"
 	expire = "1.1.1"
 	ideology = soccon_agrarianism_subtype
 }
 
 create_country_leader = {
-	name = "Petar Bojović"
+	name = "佩塔尔·博约维奇"
 	desc = "POLITICS_PETAR_BOJOVIC_DESC"
 	picture = "gfx/leaders/SER/Portrait_SER_Petar_Bojovic.png"
 	expire = "1.1.1"
@@ -136,14 +136,14 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Petar Živković"
+	name = "佩塔尔·日夫科维奇"
 	picture = "gfx/leaders/SER/Portrait_SER_Petar_Zivkovic.png"
 	expire = "1.1.1"
 	ideology = junta_subtype
 }
 
 create_country_leader = {
-	name = "Dragustin Keresovic"
+	name = "德拉古廷·克雷索维奇"
 	picture = "gfx/leaders/SER/Portrait_SER_Dragutin_Keserovic.png"
 	expire = "1.1.1"
 	ideology = militarism_subtype

@@ -9163,7 +9163,7 @@ country_event = {
 	
 	option = {
 		name = gre.505.a
-		set_country_leader_ideology = autdem_legionarism_subtype
+		set_country_leader_ideology = authdem_legionarism_subtype
 		
 	}
 	option = {
