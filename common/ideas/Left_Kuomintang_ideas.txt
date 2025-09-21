@@ -1201,29 +1201,17 @@ ideas = {
 				conscription_factor = -0.20
 			}
 		}
+		
 		CHI_Build_Upon_National_Marxism = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KR_CHI_Unrest_3"}
             allowed = { always = no }
-			picture = PV
+			picture = GRU_PV
 			allowed = { original_tag = CHI }
 			removal_cost = -1
 			modifier = {
 				political_power_gain = 0.1
 				totalist_drift = 0.05
-				industrial_capacity_factory = 0.15
-				industrial_capacity_dockyard = 0.15
-
-			}
-		}
-		CHI_Build_Upon_National_Marxism = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KR_CHI_Unrest_3"}
-            allowed = { always = no }
-			picture = PV
-			allowed = { original_tag = CHI }
-			removal_cost = -1
-			modifier = {
-				political_power_gain = 0.1
-				totalist_drift = 0.05
+				national_populist_drift = 0.05
 				industrial_capacity_factory = 0.15
 				industrial_capacity_dockyard = 0.15
 
@@ -1232,7 +1220,7 @@ ideas = {
 		CHI_Follow_Gobbels_Economic_Ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KR_CHI_Unrest_3"}
             allowed = { always = no }
-			picture = NATCORP_ECONOMICS
+			picture = GRU_NATCORP_ECONOMICS
 			allowed = { original_tag = CHI }
 			removal_cost = -1
 			modifier = {
@@ -1245,7 +1233,7 @@ ideas = {
 		CHI_Found_RTV = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KR_CHI_Unrest_3"}
             allowed = { always = no }
-			picture = synthwave
+			picture = GRU_SYNTHWAVE
 			allowed = { original_tag = CHI }
 			removal_cost = -1
 			modifier = {
@@ -1258,7 +1246,7 @@ ideas = {
 		CHI_Chinese_Corporatism = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KR_CHI_Unrest_3"}
             allowed = { always = no }
-			picture = FRA_corporate_syndie
+			picture = FRA_corporate_syndie_idea
 			allowed = { original_tag = CHI }
 			removal_cost = -1
 			modifier = {
@@ -1292,7 +1280,7 @@ ideas = {
 			allowed = { original_tag = CHI }
 			removal_cost = -1
 			modifier = {
-				conscription = 0.2
+				conscription = 0.02
 				conscription_factor = 0.2
 				army_org_factor = 0.15
 				army_morale_factor = 0.15
@@ -1315,7 +1303,7 @@ ideas = {
 		CHI_Collectivisation = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KR_CHI_Unrest_3"}
             allowed = { always = no }
-			picture = Collectivised_Agriculture_Idea
+			picture = GEO_collectivised_agriculture_idea
 			allowed = { original_tag = CHI }
 			removal_cost = -1
 			modifier = {
@@ -1411,7 +1399,7 @@ ideas = {
 		CHI_The_Red_Sun_Over_A_Black_Sky = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KR_CHI_Unrest_3"}
             allowed = { always = no }
-			picture = KR_CHI_high_popular_support
+			picture = CHI_high_popular_support
 			allowed = { original_tag = CHI }
 			removal_cost = -1
 			modifier = {
@@ -1428,7 +1416,7 @@ ideas = {
 
 			}
 		}
-		CHI_Unite_the_East = {
+		CHI_Expanding_Greater_Zhongguo = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KR_CHI_Unrest_3"}
             allowed = { always = no }
 			picture = CHI_soldier_flag
