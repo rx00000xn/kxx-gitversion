@@ -4815,7 +4815,40 @@ country_event = {#
 		id = shandong.465 #Red bandit
 		days = 2
 		}
+	}
+	option = {
+		name = "人民？那是什么？"
+		ai_chance = { base = 40 }
+		country_event = {
+		id = shandong.475 
+		days = 2
 		}
+	}
+}
+country_event = {#
+	id = shandong.475
+	immediate = { log = "[GetDateText]: [Root.GetName]: event shandong.455" }
+	title = "外国人的统治"
+	desc = "张宗昌手下的白俄雇佣军与日本浪人设法维持住了济南的稳定。"
+
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {		
+		name = "现在，这是我的地盘！"
+		create_country_leader = {
+			name = "鲍里斯·安年科夫"
+			picture = "gfx/leaders/RUS/Portrait_RUS_Boris_Annenkov.png"
+			expire = "1965.1.1"
+			ideology = pataut_cossack_subtype
+			traits = { hog_local_tyrant }
+		}
+		complete_national_focus = SQI_ronin_of_manshu
+	}
+		
+		
+	
 	}
 
 

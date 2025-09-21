@@ -4367,5 +4367,1234 @@ hidden_effect = {
 		country_event = shandong.473
 		}
 	}
+	focus = {
+		id = SQI_ronin_of_manshu
+		icon = GFX_goal_Generic_China_Decapitate_Tiger
+		x = 33
+		y = 0
+		cost = 3
+		available = {
+			always = no
+		}
+		completion_reward = {
+			add_stability = 0.15
+		}
+		
+	}
+    focus = {
+		id = MNS_blacked_dragons
+		icon = GFX_goal_Generic_China_Arm_Peasants
+		relative_position_id = SQI_ronin_of_manshu
+		x = -1
+		y = 1
+		cost = 3
+		prerequisite = {
+			focus = SQI_ronin_of_manshu
+		}
+		available_if_capitulated = yes
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_war_support = 0.1
+			
+			add_popularity = {
+	    		ideology = totalist
+				popularity = -0.1
+			}
+			add_popularity = {
+	    		ideology = national_populist
+				popularity = -0.1
+			}
+			add_popularity = {
+	    		ideology = authoritarian_democrat
+				popularity = -0.1
+			}
+			add_popularity = {
+	    		ideology = radical_socialist
+				popularity = -0.1
+			}
+			add_popularity = {
+	    		ideology = paternal_autocrat
+				popularity = 0.15
+			}
+			
+		}
+	}
+	focus = {
+		id = SQI_red_beards
+		icon = GFX_goal_GUA_Silence_People
+		relative_position_id = SQI_ronin_of_manshu
+		x = 1
+		y = 1
+		cost = 3
+		prerequisite = {
+			focus = SQI_ronin_of_manshu
+		}
+		available_if_capitulated = yes
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = { 
+			add_stability = 0.10
+			add_popularity = {
+	    		ideology = social_democrat
+				popularity = -0.1
+			}
+			add_popularity = {
+	    		ideology = social_liberal
+				popularity = -0.1
+			}
+			add_popularity = {
+	    		ideology = market_liberal
+				popularity = -0.1
+			}
+			add_popularity = {
+	    		ideology = social_conservative
+				popularity = -0.1
+			}
+			add_popularity = {
+	    		ideology = paternal_autocrat
+				popularity = 0.15
+			}
+			
+		}
+	}
+	focus = {
+		id = SQI_se_no
+		icon = GFX_goal_AUS_Industrialisms_Past_Present_Future
+		relative_position_id = SQI_ronin_of_manshu
+		x = 0
+		y = 2
+		cost = 5
+		prerequisite = {
+			focus = MNS_blacked_dragons
+		}
+		prerequisite = {
+			focus = SQI_red_beards
+		}
+		available_if_capitulated = yes
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	
+			add_political_power = 100
+			country_event = MNS.1
+		}
+	}
+	focus = {
+		id = MNS_asian_future
+		icon = GFX_goal_JAP_New_Order_East_Asia
+		relative_position_id = SQI_se_no
+		x = -5
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = SQI_se_no
+		}
+		available_if_capitulated = yes
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		mutually_exclusive = {
+			focus = MNS_yihequan_past
+		}
+		completion_reward = {
+			always = no
+		}
+	}
+	focus = {
+		id = MNS_yihequan_past
+		icon = GFX_TRM_Expand_Cossack_Rights
+		relative_position_id = SQI_se_no
+		x = 5
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = SQI_se_no
+		}
+		available_if_capitulated = yes
+		available = { 
+			always = no
+		}
+		bypass = { }    
+		mutually_exclusive = {
+			focus = MNS_asian_future
+		}    
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
 
+		}
+	}
+	focus = {
+		id = MNS_threekingdoms
+		icon = GFX_goal_ANQ_end_century_humiliation
+		relative_position_id = SQI_se_no
+		x = 0
+		y = 2
+		cost = 5
+		prerequisite = {
+			focus = MNS_yihequan_past
+			focus = MNS_asian_future
+		}
+		available_if_capitulated = yes
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = { 
+			add_war_support = 0.10
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			
+		}
+	}
+	focus = {
+		id = MNS_take_their_guns
+		icon = GFX_goal_AFG_Khyber_Gunsmithing
+		relative_position_id = MNS_threekingdoms
+		x = -1
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = MNS_threekingdoms
+		}
+		available_if_capitulated = yes
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+            	type = infantry_equipment
+           		amount = 3000
+            	producer = LEP
+            }
+            add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 1500
+				producer = QIE
+            }
+            add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 1000
+				producer = ANQ
+            }
+		}
+	}
+	focus = {
+		id = MNS_cut_their_lines
+		icon = GFX_focus_generic_reinforcing_the_supply_network
+		relative_position_id = MNS_threekingdoms
+		x = 1
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = MNS_threekingdoms
+		}
+		available_if_capitulated = yes
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = MNS_cut_their_lines
+		}
+	}
+	focus = {
+		id = MNS_burn_crops
+		icon = GFX_goal_LEP_collapse
+		relative_position_id = MNS_threekingdoms
+		x = 0
+		y = 2
+		cost = 2
+		prerequisite = {
+			focus = MNS_cut_their_lines
+		}
+		prerequisite = {
+			focus = MNS_take_their_guns
+		}
+		available_if_capitulated = yes
+		available = { 
+		
+		}
+		    
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			 create_wargoal = {
+				target = CHI
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = ANQ
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = LEP
+				type = annex_everything
+			}
+			every_state = {		
+				limit = {
+					OR = {
+						is_core_of = LEP
+						is_core_of = CHI
+						is_core_of = ANQ
+					}
+				}					
+				add_core_of = SQI
+			}
+		}
+	}
+	focus = {
+		id = MNS_shatter_tools
+		icon = GFX_goal_QIE_purge_zhili
+		relative_position_id = MNS_threekingdoms
+		x = -2
+		y = 2
+		cost = 2
+		prerequisite = {
+			focus = MNS_cut_their_lines
+		}
+		prerequisite = {
+			focus = MNS_take_their_guns
+		}
+		available_if_capitulated = yes
+		available = { 
+		
+		}
+		     
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+            create_wargoal = {
+				target = QIE
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = SHX
+				type = annex_everything
+			}
+			every_state = {		
+				limit = {
+					OR = {
+						is_core_of = QIE
+						is_core_of = SHX
+					}
+				}					
+				add_core_of = SQI
+			}
+		}
+	}
+	focus = {
+		id = MNS_cashier_swords
+		icon = GFX_goal_QIE_destroy_LEC
+		relative_position_id = MNS_threekingdoms
+		x = 2
+		y = 2
+		cost = 2
+		prerequisite = {
+			focus = MNS_cut_their_lines
+		}
+		prerequisite = {
+			focus = MNS_take_their_guns
+		}
+		available_if_capitulated = yes
+		available = { 
+		
+		}
+		  
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				target = LEC
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = GEA
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = HKC
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = POR
+				type = annex_everything
+			}
+			every_state = {		
+				limit = {
+					OR = {
+						is_core_of = HKC
+						is_core_of = LEC
+					}
+				}					
+				add_core_of = SQI
+			}
+			add_state_core = 996
+			add_state_core = 729
+			add_state_core = 744
+		}
+	}
+	focus = {
+		id = MNS_drive_bastards
+		icon = GFX_YUN_Goal_Secure_Southern_China
+		relative_position_id = MNS_threekingdoms
+		x = -1
+		y = 3
+		cost = 2
+		prerequisite = {
+			focus = MNS_burn_crops
+		}
+		prerequisite = {
+			focus = MNS_shatter_tools
+		}
+		available_if_capitulated = yes
+		available = { 
+		
+		}
+		      
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			create_wargoal = {
+				target = GXC
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = PRC
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = YUN
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = QIO
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = HNN
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = SZC
+				type = annex_everything
+			}
+			every_state = {		
+				limit = {
+					OR = {
+						is_core_of = QIO
+						is_core_of = SZC
+						is_core_of = HNN
+						is_core_of = YUN
+						is_core_of = PRC
+						is_core_of = GXC
+					}
+				}					
+				add_core_of = SQI
+			}
+		}
+	}
+	focus = {
+		id = MNS_castrate_robbers
+		icon = GFX_YUN_Goal_Secure_Western_China
+		relative_position_id = MNS_threekingdoms
+		x = 1
+		y = 3
+		cost = 2
+		prerequisite = {
+			focus = MNS_cashier_swords
+		}
+		prerequisite = {
+			focus = MNS_burn_crops
+		}
+		available_if_capitulated = yes
+		available = { 
+		
+		}
+		    
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+           create_wargoal = {
+				target = SIK
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = KUM
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = ETS
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = TIB
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = XSM
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = MON
+				type = annex_everything
+			}
+			
+			every_state = {		
+				limit = {
+					OR = {
+						is_core_of = MON
+						is_core_of = XSM
+						is_core_of = TIB
+						is_core_of = SIK
+						is_core_of = KUM
+						is_core_of = ETS
+					}
+				}					
+				add_core_of = SQI
+			}
+		}
+	}
+	focus = {
+		id = MNS_back_across_amur
+		icon = GFX_YUN_Goal_Secure_Northern_China
+		relative_position_id = MNS_threekingdoms
+		x = 0
+		y = 4
+		cost = 5
+		prerequisite = {
+			focus = MNS_castrate_robbers
+		}
+		prerequisite = {
+			focus = MNS_drive_bastards
+		}
+		available_if_capitulated = yes
+		available = { 
+		
+		}
+		bypass = { 
+		 }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			create_wargoal = {
+				target = FNG
+				type = annex_everything
+			}
+			
+			every_state = {		
+				limit = {
+					
+					is_core_of = FNG
+					
+				}					
+				add_core_of = SQI
+			}
+			hidden_effect = {
+				JAP = {
+					diplomatic_relation = {
+   						country = FNG
+   						relation = guarantee
+   						active = no
+  					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = SQI_raising_banners
+		icon = GFX_goal_JAP_greater_asian_sphere
+		relative_position_id = MNS_asian_future
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = MNS_asian_future
+		}
+		available_if_capitulated = yes
+		available = { 
+		
+		}
+		bypass = { 
+		 }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			add_ideas = MNS_raised_banners
+		}
+	}
+	focus = {
+		id = MNS_mongol_brothers
+		icon = GFX_goal_MON_nobility
+		relative_position_id = MNS_asian_future
+		x = -2
+		y = 2
+		cost = 5
+		prerequisite = {
+			focus = SQI_raising_banners
+		}
+		available_if_capitulated = yes
+		available = { 
+		
+		}
+		bypass = { 
+		 }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			add_ideas = MNS_pan_asian_unity
+		}
+	}
+	focus = {
+		id = MNS_noble_manchu
+		icon = GFX_goal_QIE_manchu_symbol
+		relative_position_id = MNS_asian_future
+		x = 0
+		y = 2
+		cost = 5
+		prerequisite = {
+			focus = SQI_raising_banners
+		}
+		available_if_capitulated = yes
+		available = { 
+		
+		}
+		bypass = { 
+		 }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	
+			add_ideas = MNS_noble_manchu
+		}
+	}
+	focus = {
+		id = MNS_friends_on_mountain
+		icon = GFX_YUN_Goal_Secure_Tibet
+		relative_position_id = MNS_asian_future
+		x = 2
+		y = 2
+		cost = 5
+		prerequisite = {
+			focus = SQI_raising_banners
+		}
+		available_if_capitulated = yes
+		available = { 
+		
+		}
+		bypass = { 
+		 }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	
+			add_political_power = 100
+			add_stability = 0.1
+			add_war_support = 0.1
+			increase_ruling_party_popularity_by_10 = yes
+		}
+	}
+	focus = {
+		id = MNS_japan_military
+		icon = GFX_goal_JAP_toseiha
+		relative_position_id = MNS_asian_future
+		x = 1
+		y = 3
+		cost = 5
+		prerequisite = {
+			focus = MNS_friends_on_mountain
+		}
+		prerequisite = {
+			focus = MNS_noble_manchu
+		}
+		available_if_capitulated = yes
+		available = { 
+		
+		}
+		bypass = { 
+		 }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	
+			add_ideas = MNS_japan_military
+		}
+	}
+	focus = {
+		id = MNS_japan_industry
+		icon = GFX_goal_JAP_Tuning_70_Million_Gears
+		relative_position_id = MNS_asian_future
+		x = 2
+		y = 4
+		cost = 5
+		
+		prerequisite = {
+			focus = MNS_japan_military
+		}
+		available_if_capitulated = yes
+		available = { 
+		
+		}
+		bypass = { 
+		 }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	
+			add_one_random_civilian_factory = yes
+			add_one_random_military_factory = yes
+			add_one_random_civilian_factory = yes
+			add_one_random_military_factory = yes
+		}
+	}
+	focus = {
+		id = SQI_hotline_fuji
+		icon = GFX_JAP_BLACKDRAG_uchida_faction-248360
+		relative_position_id = MNS_asian_future
+		x = -1
+		y = 3
+		cost = 5
+		prerequisite = {
+			focus = MNS_noble_manchu
+		}
+		prerequisite = {
+			focus = MNS_mongol_brothers
+		}
+		available_if_capitulated = yes
+		available = { 
+		
+		}
+		bypass = { 
+		 }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = { 
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+			add_equipment_to_stockpile = {
+            	type = infantry_equipment
+            	amount = 2000
+            	producer = JAP
+            }
+			swap_ideas = {
+				remove_idea = MNS_raised_banners
+				add_idea = MNS_raised_banners_2
+			}
+		}
+	}
+	focus = {
+		id = MNS_sidelining_warlords
+		icon = GFX_goal_FNG_End_Republican_Warlords
+		relative_position_id = MNS_asian_future
+		x = -2
+		y = 4
+		cost = 5
+		prerequisite = {
+			focus = SQI_hotline_fuji
+		}
+		available_if_capitulated = yes
+		available = { 
+		
+		}
+		bypass = { 
+		 }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = { 
+			swap_ideas = {
+				remove_idea = MNS_pan_asian_unity
+				add_idea = MNS_pan_asian_unity2
+			}
+		}
+	}
+	focus = {
+		id = MNS_chivalric_cavalry
+		icon = GFX_goal_TEX_cavalry_recon
+		relative_position_id = MNS_asian_future
+		x = 0
+		y = 4
+		cost = 5
+		prerequisite = {
+			focus = SQI_hotline_fuji
+		}
+		prerequisite = {
+			focus = MNS_japan_military
+		}
+		available_if_capitulated = yes
+		available = { 
+		
+		}
+		bypass = { 
+		 }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = { 
+			add_tech_bonus = {
+				bonus = 0.35
+				uses = 3
+				category = armor
+			}
+		
+			add_ideas = MNS_chivalric_cavalry
+		}
+	}
+	focus = {
+		id = SQI_five_races
+		icon = GFX_goal_ANQ_fengtian_loyalty
+		relative_position_id = MNS_asian_future
+		x = 0
+		y = 5
+		cost = 5
+		prerequisite = {
+			focus = MNS_chivalric_cavalry
+		}
+		prerequisite = {
+			focus = MNS_sidelining_warlords
+		}
+		prerequisite = {
+			focus = MNS_japan_industry
+		}
+		available_if_capitulated = yes
+		available = { 
+		
+		}
+		bypass = { 
+		 }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = { 
+			swap_ideas = {
+				remove_idea = MNS_pan_asian_unity2
+				add_idea = MNS_pan_asian_unity3
+			}
+		}
+	}
+	focus = {
+		id = MNS_rattling_sabers
+		icon = GFX_goal_DSR_Purge
+		relative_position_id = MNS_yihequan_past
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = MNS_yihequan_past
+		}
+		available_if_capitulated = yes
+		available = { 
+		
+		}
+		bypass = { 
+		 }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			add_ideas = MNS_rattling_sabres
+		}
+	}
+	focus = {
+		id = SQI_our_fair_due
+		icon = GFX_goal_NYC_criminal_empire
+		relative_position_id = MNS_yihequan_past
+		x = 0
+		y = 2
+		cost = 5
+		prerequisite = {
+			focus = MNS_rattling_sabers
+		}
+		available_if_capitulated = yes
+		available = { 
+		
+		}
+		bypass = { 
+		 }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			add_ideas = MNS_fair_due
+		}
+	}
+	focus = {
+		id = MNS_we_need_weapons
+		icon = GFX_goal_COL_Plunder_Armories
+		relative_position_id = MNS_yihequan_past
+		x = -2
+		y = 2
+		cost = 5
+		prerequisite = {
+			focus = MNS_rattling_sabers
+		}
+		available_if_capitulated = yes
+		available = { 
+		
+		}
+		bypass = { 
+		 }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			add_ideas = MNS_we_need_weapons
+		}
+	}
+	focus = {
+		id = MNS_tradition_of_cossacks
+		icon = GFX_DKB_Collab_Cossack
+		relative_position_id = MNS_yihequan_past
+		x = -1
+		y = 3
+		cost = 5
+		prerequisite = {
+			focus = MNS_we_need_weapons
+		}
+		prerequisite = {
+			focus = SQI_our_fair_due
+		}
+		available_if_capitulated = yes
+		available = { 
+		
+		}
+		bypass = { 
+		 }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			add_ideas = MNS_fair_due
+		}
+	}
+	focus = {
+		id = MNS_russian_support
+		icon = GFX_RUS_The_Might_Of_Russian_Army
+		relative_position_id = MNS_yihequan_past
+		x = -2
+		y = 4
+		cost = 5
+		prerequisite = {
+			focus = MNS_tradition_of_cossacks
+		}
+		
+		available_if_capitulated = yes
+		available = { 
+		
+		}
+		bypass = { 
+		 }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			add_ideas = MNS_fair_due
+		}
+	}
+	focus = {
+		id = SQI_land_they_stole
+		icon = GFX_goal_DSR_Wipe_the_slate_clean_burn_it_all_down
+		relative_position_id = MNS_yihequan_past
+		x = 2
+		y = 2
+		cost = 5
+		prerequisite = {
+		   focus = 	MNS_rattling_sabers
+		}
+		available_if_capitulated = yes
+		available = { 
+		
+		}
+		bypass = { 
+		 }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			add_ideas = MNS_landback
+		}
+	}
+	focus = {
+		id = MNS_rape_of_harbin
+		icon = GFX_goal_MON_mongol_plundernomics
+		relative_position_id = MNS_yihequan_past
+		x = 1
+		y = 3
+		cost = 5
+		prerequisite = {
+			focus = SQI_land_they_stole
+		}
+		prerequisite = {
+			focus = SQI_our_fair_due
+		}
+		available_if_capitulated = yes
+		
+		bypass = { 
+		 }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+           		type = infantry_equipment
+            	amount = 1800
+            	producer = ANQ
+            }
+			add_one_random_civilian_factory = yes
+			add_one_random_military_factory = yes
+            add_manpower = 2368
+		}
+	}
+	focus = {
+		id = SQI_warring_states
+		icon = GFX_DKB_Start_War
+		relative_position_id = MNS_yihequan_past
+		x = 0
+		y = 4
+		cost = 5
+		prerequisite = {
+			focus = MNS_rape_of_harbin
+		}
+		prerequisite = {
+			focus = MNS_tradition_of_cossacks
+		}
+		available_if_capitulated = yes
+		available = { 
+		
+		}
+		bypass = { 
+		 }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			add_ideas = MNS_situation_excellent
+		}
+	}
+	focus = {
+		id = SQI_defend_our_home
+		icon = GFX_focus_rus_cossack
+		relative_position_id = MNS_yihequan_past
+		x = 2
+		y = 4
+		cost = 5
+		prerequisite = {
+			focus = MNS_rape_of_harbin
+		}
+		available_if_capitulated = yes
+		available = { 
+		
+		}
+		bypass = { 
+		 }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = { 
+			swap_ideas = {
+				remove_idea = MNS_landback
+				add_idea = MNS_landback2
+			}
+		}
+	}
+	focus = {
+		id = MNS_render_unto_huangdi
+		icon = GFX_DKB_tsar_of_all_cossacks
+		relative_position_id = MNS_yihequan_past
+		x = 0
+		y = 5
+		cost = 5
+		prerequisite = {
+			focus = SQI_defend_our_home
+		}
+		prerequisite = {
+			focus = SQI_warring_states
+		}
+		prerequisite = {
+			focus = MNS_russian_support
+		}
+		available_if_capitulated = yes
+		available = { 
+		
+		}
+		bypass = { 
+		 }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			add_stability = 0.2
+			increase_ruling_party_popularity_by_10 = yes
+			add_offsite_building = { 
+			    type = industrial_complex 
+				level = 2
+			}
+			add_offsite_building = { 
+			    type = arms_factory 
+				level = 2
+			}
+		}
+	}
+	focus = {
+		id = SQI_victory_over_maozi
+		icon = GFX_goal_FNG_China_Reach
+		relative_position_id = MNS_threekingdoms
+		x = 0
+		y = 5
+		cost = 5
+		prerequisite = {
+			focus = SQI_five_races
+			focus = MNS_render_unto_huangdi
+		}
+		prerequisite = {
+			focus = MNS_back_across_amur
+		}
+		available = { 
+		   has_country_flag = has_united_china
+		}
+		      
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			add_stability = 0.12
+			add_war_support = 0.08
+			add_ideas = MNS_forward_march
+		}
+	}
+	focus = {
+		id = SQI_heilong_clique
+		icon = GFX_JAPTOSEIHA_form_the_greater_asia_association-248360
+		relative_position_id = MNS_threekingdoms
+		x = -1
+		y = 6
+		cost = 5
+		prerequisite = {
+			focus = SQI_victory_over_maozi
+		}
+		available = { 
+			has_completed_focus = MNS_asian_future
+		}
+		bypass = { 
+		 }        
+		ai_will_do = {
+			factor = 2
+		}
+	completion_reward = {
+        set_cosmetic_tag = MNS_pan_asia
+	every_state = {		
+		limit = {
+			
+			OR = {
+				is_on_continent = asia
+				is_on_continent = india
+			}
+		}					
+			add_core_of = SQI
+	}
+	}
+	}
+	focus = {
+		id = MNS_tsardom
+		icon = GFX_TRM_hail_tsar
+		relative_position_id = MNS_threekingdoms
+		x = 1
+		y = 6
+		cost = 5
+		prerequisite = {
+			focus = SQI_victory_over_maozi
+		}
+		available = { 
+			has_completed_focus = MNS_yihequan_past
+		}
+		bypass = { 
+		 }        
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+		set_cosmetic_tag = SQI_KITAI
+		every_state = {		
+			limit = {
+			OR = {
+				is_core_of = RUS
+				is_core_of = TRM
+				is_core_of = KHI
+				is_core_of = TRK
+				is_core_of = KYR
+				is_core_of = ALO
+				is_core_of = UZB
+				is_core_of = WHR
+				is_core_of = UKR
+				is_core_of = LIT
+				is_core_of = BAT
+				is_core_of = LAT
+				is_core_of = EST
+				is_core_of = POL
+				is_core_of = FIN
+				is_core_of = GAL
+				is_core_of = DKB
+				is_core_of = KLY
+				is_core_of = KUB
+				is_core_of = MTR
+				is_core_of = ARM
+				is_core_of = GEO
+				is_core_of = AZB
+			}
+		}					
+		add_core_of = SQI
+	}
+	
+	}
+		}
 }

@@ -1,138 +1,247 @@
 ###-Autonomous Army Territory Ideas-###
 ideas = {
 	country = {
-		MNS_forward_march = {
-			picture = MNS_forward_march
-			cancel = { has_country_flag = remove_idea }
-			modifier = { 
-				war_support_factor = 0.15
-				army_defence_factor = 0.05
-			}
-		}
+		
 		MNS_pan_asian_unity = {
-			picture = MNS_pan_asian_unity
+			picture = JAP_Reaching_Our_Destiny
 			cancel = { has_country_flag = remove_idea }
 			modifier = { 
-				army_defence_factor = 0.06
+				conscription = 0.015
+				experience_loss_factor = -0.15
+				army_defence_factor = 0.1
 			}
 		}
 		MNS_pan_asian_unity2 = {
-			picture = MNS_pan_asian_unity
+			picture = JAP_Reaching_Our_Destiny
 			cancel = { has_country_flag = remove_idea }
 			modifier = { 
-				army_defence_factor = 0.06
+				conscription = 0.015
+				experience_loss_factor = -0.15
+				army_defence_factor = 0.1
 				army_attack_factor = 0.06
-				army_morale_factor = 0.06
+				army_org_factor = 0.06
 			}
 		}
 		MNS_pan_asian_unity3 = {
-			picture = MNS_pan_asian_unity
+			picture = JAP_Reaching_Our_Destiny
 			cancel = { has_country_flag = remove_idea }
 			modifier = { 
-				army_defence_factor = 0.06
-				army_attack_factor = 0.06
-				army_morale_factor = 0.06
+				conscription = 0.015
+				experience_loss_factor = -0.15
+				army_defence_factor = 0.08
+				army_attack_factor = 0.08
+				army_org_factor = 0.16
 				conscription_factor = 0.05
 				local_resources_factor = 0.15
-				despotism_drift = 0.02
+				paternal_autocrat_drift = 0.05
 			}
 		}
 		MNS_raised_banners = {
-			picture = MNS_raised_banners
+			picture = JAP_Model_Colony
 			cancel = { has_country_flag = remove_idea }
 			modifier = { 
-				consumer_goods_expected_value = 0.075
-				research_speed_factor = 0.06
-			}
-		}
-		MNS_raised_banners_2 = {
-			picture = MNS_raised_banners
-			cancel = { has_country_flag = remove_idea }
-			modifier = { 
-				consumer_goods_expected_value = 0.025
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				consumer_goods_expected_value = -0.25
 				research_speed_factor = 0.1
 			}
 		}
+		MNS_raised_banners_2 = {
+			picture = JAP_Model_Colony
+			cancel = { has_country_flag = remove_idea }
+			modifier = { 
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				consumer_goods_expected_value = -0.25
+				research_speed_factor = 0.15
+				industrial_capacity_factory = 0.12
+				industrial_capacity_dockyard = 0.12
+				conscription_factor = 0.2
+			}
+		}
 		MNS_noble_manchu = {
-			picture = MNS_noble_manchu
+			picture = QIE_banners
 			cancel = { has_country_flag = remove_idea }
 			modifier = { 
 				weekly_manpower = 100
-				war_support_factor = 0.075
-				army_org_regain = 0.05
+				war_support_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				army_morale_factor = 0.15
+			}
+			targeted_modifier = {
+				tag = QIE
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
+				breakthrough_bonus_against = 0.15
+			}
+		}
+		MNS_japan_military = {
+			picture = JAP_New_Order
+			cancel = { has_country_flag = remove_idea }
+			modifier = { 
+				planning_speed = 0.2
+				max_planning = 0.2
+				experience_gain_army_factor = 0.05
+				army_speed_factor = 0.1
+				army_attack_speed_factor = 0.1
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+			}
+
+		}
+		MNS_chivalric_cavalry = {
+			picture = BBR_cavalry_focus_idea
+			cancel = { has_country_flag = remove_idea }
+			modifier = { 
+				motorized_attack_factor = 0.1
+				motorized_defence_factor = 0.1
+				mechanized_attack_factor = 0.1
+				mechanized_defence_factor = 0.1
+				army_armor_attack_factor = 0.1
+				army_armor_defence_factor = 0.1
+			}
+			equipment_bonus = {
+				armor = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
 			}
 		}
 		MNS_rattling_sabres = {
-			picture = MNS_rattling_sabres
+			picture = generic_iron_fist
 			cancel = { has_country_flag = remove_idea }
 			modifier = { 
 				weekly_manpower = 100
 				war_support_factor = 0.05
 				training_time_factor = -0.1
-				conscription_factor = 0.05
+				conscription = 0.05
+				cavalry_attack_factor = 0.1
+				cavalry_defence_factor = 0.1
 			}
 		}
 		MNS_fair_due = {
-			picture = MNS_fair_due
+			picture = GEO_cossak_resistance
 			cancel = { has_country_flag = remove_idea }
 			modifier = { 
-				local_resources_factor = 0.15
+				local_resources_factor = 0.1
+				production_factory_start_efficiency_factor = 0.08
+				production_factory_max_efficiency_factor = 0.08
 				production_factory_efficiency_gain_factor = 0.08
+				equipment_capture_factor = 0.25
+				supply_consumption_factor = -0.1
+				cavalry_attack_factor = 0.1
+				cavalry_defence_factor = 0.1
 			}
 		}
 		MNS_landback = {
-			picture = MNS_landback
+			picture = generic_shackles
 			cancel = { has_country_flag = remove_idea }
 			modifier = { 
 				political_power_gain = 0.05
 				stability_factor = -0.05
 				monthly_population = -0.05
 				army_speed_factor = 0.06
+				global_building_slots_factor = 0.12
+				production_speed_buildings_factor = 0.1
 			}
 		}
 		MNS_landback2 = {
-			picture = MNS_landback
+			picture = generic_shackles
 			cancel = { has_country_flag = remove_idea }
 			modifier = { 
 				political_power_gain = 0.15
 				army_speed_factor = 0.06
 				war_support_factor = 0.2
+				global_building_slots_factor = 0.12
+				production_speed_buildings_factor = 0.1
+				cavalry_attack_factor = 0.1
+				cavalry_defence_factor = 0.1
 			}
 		}
 		MNS_situation_excellent = {
-			picture = MNS_situation_excellent
+			picture = united_cossacks
 			cancel = { has_country_flag = remove_idea }
 			modifier = { 
 				army_speed_factor = 0.05
-				research_speed_factor = -0.05
+				research_speed_factor = 0.05
 				stability_factor = 0.06
 				production_speed_buildings_factor = 0.07
+				army_org_factor = 0.2
+				army_morale_factor = 0.2
+				attrition = -0.1
+				experience_loss_factor = -0.1
+				paternal_autocrat_drift = 0.05
 			}
 		}
-		MNS_control_time2 = {
+		MNS_we_need_weapons = {
+			picture = PAN_Guns_Panama
 			cancel = { has_country_flag = remove_idea }
 			modifier = { 
-				army_speed_factor = 0.06
-				production_speed_buildings_factor = 0.12
-				production_factory_efficiency_gain_factor = 0.08
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.15
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+				artillery_equipment = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+				support_equipment = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
 			}
 		}
-		MNS_control_time3 = {
+		MNS_tradition_of_cossacks = {
+			picture = DKB_cossack_state
 			cancel = { has_country_flag = remove_idea }
 			modifier = { 
-				army_speed_factor = 0.06
-				production_speed_buildings_factor = 0.12
-				production_factory_efficiency_gain_factor = 0.1
-				army_morale_factor = 0.06
+				army_speed_factor = 0.2
+				army_attack_speed_factor = 0.2
+				cavalry_attack_factor = 0.25
+				cavalry_defence_factor = 0.25
+				conscription = 0.02
+				conscription_factor = 0.2
 			}
+			
 		}
-		MNS_totalitarism = {
+		MNS_russian_support = {
+			picture = generic_moscow_accord_leader_realpolitik
 			cancel = { has_country_flag = remove_idea }
 			modifier = { 
-				political_power_gain = -0.12
-				research_speed_factor = 0.06
+				org_loss_when_moving = -0.25
+				breakthrough_factor = 0.1
+				recon_factor = 0.1
+				land_reinforce_rate = 0.1
+				cavalry_attack_factor = 0.1
+				cavalry_defence_factor = 0.1
+			}
+			
+		}
+		MNS_forward_march = {
+			picture = GEN_army_doctrine_off
+			cancel = { has_country_flag = remove_idea }
+			modifier = { 
+				war_support_factor = 0.15
+				army_strength_factor = 0.1
 			}
 		}
-		
+		MNS_cut_their_lines = {
+			picture = food_shortage
+			cancel = { has_country_flag = remove_idea }
+			modifier = { 
+				supply_consumption_factor = -0.15
+				supply_node_range = 0.15
+				no_supply_grace = 96
+			}
+		}
 	}
 }
