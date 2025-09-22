@@ -49,7 +49,7 @@ GXC_luxianzhinan = {
 			factor = 0
 		}
 		complete_effect = {
-			country_event = zhinan.1
+			country_event = zhinan.42
 		}
 	}
 }

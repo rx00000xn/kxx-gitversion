@@ -566,3 +566,16 @@ PAL_luxianzhinan = {
 		tag = PAL
 	}
 }
+GXC_luxianzhinan = {
+	icon = GFX_decision_category_border_conflicts
+
+	picture = GFX_decision_cat_picture_chi_political_support
+
+	allowed = {
+		original_tag = GXC
+	}
+
+	visible = {
+		tag = GXC
+	}
+}
