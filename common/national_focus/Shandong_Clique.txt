@@ -6207,7 +6207,7 @@ hidden_effect = {
 			factor = 2
 		}
 		completion_reward = {
-			add_ideas = MNS_fair_due
+			add_ideas = MNS_tradition_of_cossacks
 		}
 	}
 	focus = {
@@ -6231,7 +6231,7 @@ hidden_effect = {
 			factor = 2
 		}
 		completion_reward = {
-			add_ideas = MNS_fair_due
+			add_ideas = MNS_russian_support
 		}
 	}
 	focus = {
