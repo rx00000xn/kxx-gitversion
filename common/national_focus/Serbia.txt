@@ -6217,20 +6217,7 @@ focus_tree = {
       FOCUS_FILTER_ANNEXATION
     }
    
-  if = {
-    limit = {
-      OR = {
-        has_government = national_populist
-        has_government = paternal_autocrat
-      }
-      
-    }
   
-  country_event = {
-    id = serbia.102
-    days = 7
-  }
-}
 if = {
   limit = {
    has_completed_focus = SER_The_Vojvoda_Stands_Tall
@@ -15502,6 +15489,12 @@ relative_position_id = SER_protect_democracy
 			log = "[GetLogRoot]: Focus Completed SER_YUG_anti_partisanship"
 			increase_ruling_party_popularity_by_15 = yes
       add_political_power = 100
+      hidden_effect = {
+        country_event = {
+          id = serbia.102
+          days = 7
+        }
+      }
 		}
 	}
 
@@ -15970,6 +15963,12 @@ relative_position_id = SER_protect_democracy
 			swap_ideas = {
         remove_idea = SER_YUG_royal_federal_constitution3
         add_idea = SER_YUG_royal_federal_constitution4
+      }
+      hidden_effect = {
+        country_event = {
+          id = serbia.102
+          days = 7
+        }
       }
 		}
 	}

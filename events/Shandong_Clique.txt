@@ -4815,7 +4815,103 @@ country_event = {#
 		id = shandong.465 #Red bandit
 		days = 2
 		}
+	}
+	option = {
+		name = "人民？那是什么？"
+		ai_chance = { base = 40 }
+		country_event = {
+		id = shandong.475 
+		days = 2
 		}
 	}
+}
+country_event = {#
+	id = shandong.475
+	immediate = { log = "[GetDateText]: [Root.GetName]: event shandong.455" }
+	title = "外国人的统治"
+	desc = "张宗昌手下的白俄雇佣军与日本浪人设法维持住了济南的稳定。"
 
 
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {		
+		name = "现在，这是我的地盘！"
+		create_country_leader = {
+			name = "鲍里斯·安年科夫"
+			picture = "gfx/leaders/RUS/Portrait_RUS_Boris_Annenkov.png"
+			expire = "1965.1.1"
+			ideology = pataut_cossack_subtype
+			traits = { hog_local_tyrant }
+		}
+		complete_national_focus = SQI_ronin_of_manshu
+	}
+		
+		
+	
+}
+country_event = {#
+	id = shandong.476
+	immediate = { log = "[GetDateText]: [Root.GetName]: event shandong.455" }
+	title = "远道而来的流亡者"
+	desc = shandong.476.d
+	trigger = {
+		tag = SQI
+		TUR = {
+			OR = {
+				has_completed_focus = TUR_recover_from_the_disaster
+				has_completed_focus = TUR_OHF_revolution
+			}
+		}
+		has_completed_focus = SQI_Zhang_Zongchang
+	}
+
+	fire_only_once = yes
+	
+
+	option = {		
+		name = "关我什么事？"
+		
+	}
+	option = {		
+		name = "想办法干掉他们，顺便抢了他们的钱。"
+		hidden_effect = {
+			country_event = {
+				id = shandong.477
+				days = 2
+			}
+		}
+	}	
+}
+country_event = {#
+	id = shandong.477
+	immediate = { log = "[GetDateText]: [Root.GetName]: event shandong.455" }
+	title = "先下手为强"
+	desc = shandong.477.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {		
+		name = "完蛋了。"
+		create_country_leader = {
+			name = "阿里·侯赛因"
+			picture = "gfx/leaders/SQI/Portrait_SQI_Ali_Hussein.png"
+			expire = "1965.1.1"
+			ideology = islamism_subtype
+		}
+		create_country_leader = {
+			name = "阿里·侯赛因"
+			picture = "gfx/leaders/SQI/Portrait_SQI_Ali_Hussein.png"
+			expire = "1965.1.1"
+			ideology = soccon_islamism_subtype
+		}
+		add_soccon_to_coalition = yes
+		set_politics = {
+			ruling_party = authoritarian_democrat
+			elections_allowed = no
+		}
+		mark_focus_tree_layout_dirty = yes
+		set_country_flag = SQI_hidden_path_unlock
+		complete_national_focus = SQI_second_chance_of_ottoman_empire
+	}
+	
+}

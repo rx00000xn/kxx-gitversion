@@ -759,6 +759,7 @@ ideologies = {
 			social_Mygo_subtype = { can_be_randomly_selected = no } #高松灯思想（彩蛋）
 			socdem_kessoku_banndo_subtype = { can_be_randomly_selected = no } #纽带理想论（彩蛋）
 			socdem_Subaru_Awa_subtype = { can_be_randomly_selected = no } #安和昴方法（彩蛋）
+			socdem_anarcho_individualism_subtype = {can_be_randomly_selected = no} #个人无政府主义
 		}
 		dynamic_faction_names = {
 			"FACTION_NAME_SOCIAL_DEMOCRAT_1"
@@ -999,6 +1000,7 @@ ideologies = {
 
 			#制作组彩蛋
 			hayek_neoliberalism_subtype = {can_be_randomly_selected = no} #哈耶克新自由主义
+			marlib_chinese_federalism_subtype = {can_be_randomly_selected = no } #联省主义
 
 			#大乐队时代
 
@@ -1127,7 +1129,7 @@ ideologies = {
 
 			#大乐队时代
 			soccon_diamond_dust_subtype = { can_be_randomly_selected = no } #钻尘时代
-
+			soccon_chinese_federalism_subtype = {can_be_randomly_selected = no } #联省主义
 		}
 		dynamic_faction_names = {
 			"FACTION_NAME_SOCIAL_CONSERVATIVE_1"
@@ -1293,7 +1295,8 @@ ideologies = {
 			#大乐队时代
 			bangdreamism_subtype = {can_be_randomly_selected = no} #户山香澄思想（制作组彩蛋）
 			Mygo_subtype = {can_be_randomly_selected = no} #高松灯思想（彩蛋）
-
+			neo_tridemism_subtype = { can_be_randomly_selected = no } #新三民主义
+			authdem_new_live_movement_subtype = { can_be_randomly_selected = no } #新生活运动
 		}
 		dynamic_faction_names = {
 			"FACTION_NAME_AUTHORITARIAN_DEMOCRAT_1"
@@ -1478,6 +1481,8 @@ ideologies = {
 			Mashiroism_subtype = { can_be_randomly_selected = no }  #仓田真白理论（彩蛋）
 			LSD_Mashiroism_subtype = { can_be_randomly_selected = no }  #倉畾寘苩荲論（彩蛋）
 			pataut_rupa_subtype = {can_be_randomly_selected = no} #卢帕体制
+			pataut_new_live_movement_subtype = { can_be_randomly_selected = no } #新生活运动
+			pataut_neo_citizenism_subtype  = { can_be_randomly_selected = no } #新民主义
 		}
 		dynamic_faction_names = {
 			"FACTION_NAME_PATERNAL_AUTOCRAT_1"
@@ -1751,7 +1756,8 @@ ideologies = {
 			#大乐队时代
 			natpop_Ave_Mujica_subtype = { can_be_randomly_selected = no }  #颂乐人偶体制（彩蛋）
 			player_subtype = { can_be_randomly_selected = no }  #命运之歌剧（彩蛋）
-
+			natpop_chiangism_subtype = { can_be_randomly_selected = no }#蒋介石思想
+			natpop_new_live_movement_subtype = { can_be_randomly_selected = no }#新生活运动
 			
 		}
 		dynamic_faction_names = {
