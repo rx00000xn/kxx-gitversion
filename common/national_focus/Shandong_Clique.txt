@@ -1789,6 +1789,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
+		allow_branch = {
+			has_country_flag = SQI_hidden_path_unlock
+		}
 		available = {
 			always = no
 		}
@@ -2480,6 +2483,14 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 100
 			add_country_leader_trait = SQI_new_sultan
+			set_country_leader_name = {
+				ideology = authoritarian_democrat
+				name = "阿里一世"
+			}
+			set_country_leader_name = {
+				ideology = social_conservative
+				name = "阿里一世"
+			}
 		}
 	}
 	focus = {
