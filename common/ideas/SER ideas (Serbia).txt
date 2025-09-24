@@ -1202,6 +1202,17 @@ ideas = {
 				national_populist_drift = -0.03
 			}
 		}
+		SER_ideologically_charged_army = {
+			on_add = { log = "[GetLogRoot]: add idea SER_ideologically_charged_army" }
+			picture = YUG_all_yugoslavian_regiments
+			allowed = { always = no }
+			modifier = {
+				war_support_factor = 0.1
+				army_morale_factor = 0.1
+				army_leader_cost_factor = -0.8
+				national_populist_drift = -0.02
+			}
+		}
 		SER_peoples_army = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_ideologically_charged_army" }
 			picture = MEX_revolutionary_army

@@ -4171,8 +4171,7 @@ focus_tree = {
 			}
       add_stability = 0.1
 			hidden_effect = {
-        #就当什么也没看见，好吗？
-				country_event = { id = serbia.18 days = 90 random_days = 30 }
+				#country_event = { id = serbia.18 days = 90 random_days = 30 }
 			}
 		}
 	}
@@ -6681,7 +6680,7 @@ if = {
         name = SER_Invest_In_Zadrugar
         bonus = 0.5
         uses = 1
-        category = efficiency_tech
+        category = industry
       }
       random_owned_controlled_state = {
         prioritize = {
@@ -9777,7 +9776,7 @@ if = {
       add_stability = 0.1
      hidden_effect = {
       country_event = {
-        id = dhserbia.28
+        id = dhserbia.27
         days = 30
       }
      }
