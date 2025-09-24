@@ -7354,10 +7354,17 @@ focus = {
 			WHR_bsdp_in_power = yes
 			WHR_bsrh_in_power = yes
 		}
-		has_country_leader = {
-			name = "弗拉基米尔"
-			ruling_only = yes
+		OR = {
+			has_country_leader = {
+				name = "弗拉基米尔"
+				ruling_only = yes
+			}
+			has_country_leader = {
+				name = "Uladzimir"
+				ruling_only = yes
+			}
 		}
+		
 	}
 	prerequisite = {
 		focus = WHR_BSDP
@@ -7365,9 +7372,15 @@ focus = {
 	bypass = {
 		WHR_bsdp_in_power = yes
 		NOT = {
-			has_country_leader = {
-				name = "弗拉基米尔"
-				ruling_only = yes
+			OR = {
+				has_country_leader = {
+					name = "弗拉基米尔"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Uladzimir"
+					ruling_only = yes
+				}
 			}
 		}
 	}
@@ -8338,9 +8351,15 @@ focus = {
 	id = WHR_Sieradas_Report
 	icon = GFX_goal_agricultural_policies
 	available = {
-		has_country_leader = {
-			name = "弗拉基米尔"
-			ruling_only = yes
+		OR = {
+			has_country_leader = {
+				name = "弗拉基米尔"
+				ruling_only = yes
+			}
+			has_country_leader = {
+				name = "Uladzimir"
+				ruling_only = yes
+			}
 		}
 		OR = {
 			is_subject = no
@@ -8370,9 +8389,15 @@ focus = {
 		focus = WHR_kingdom
 	}
 	available = {
-		has_country_leader = {
-			name = "弗拉基米尔"
-			ruling_only = yes
+		OR = {
+			has_country_leader = {
+				name = "弗拉基米尔"
+				ruling_only = yes
+			}
+			has_country_leader = {
+				name = "Uladzimir"
+				ruling_only = yes
+			}
 		}
 		OR = {
 			is_subject = no
@@ -8413,9 +8438,15 @@ focus = {
 	}
 	
 	available = {
-		has_country_leader = {
-			name = "弗拉基米尔"
-			ruling_only = yes
+		OR = {
+			has_country_leader = {
+				name = "弗拉基米尔"
+				ruling_only = yes
+			}
+			has_country_leader = {
+				name = "Uladzimir"
+				ruling_only = yes
+			}
 		}
 		OR = {
 			is_subject = no
@@ -8457,9 +8488,15 @@ focus = {
 		factor = 50
 	}
 	available = {
-		has_country_leader = {
-			name = "弗拉基米尔"
-			ruling_only = yes
+		OR = {
+			has_country_leader = {
+				name = "弗拉基米尔"
+				ruling_only = yes
+			}
+			has_country_leader = {
+				name = "Uladzimir"
+				ruling_only = yes
+			}
 		}
 		OR = {
 			is_subject = no
@@ -8499,9 +8536,15 @@ focus = {
 		factor = 50
 	}
 	available = {
-		has_country_leader = {
-			name = "弗拉基米尔"
-			ruling_only = yes
+		OR = {
+			has_country_leader = {
+				name = "弗拉基米尔"
+				ruling_only = yes
+			}
+			has_country_leader = {
+				name = "Uladzimir"
+				ruling_only = yes
+			}
 		}
 		OR = {
 			is_subject = no
@@ -8538,9 +8581,15 @@ focus = {
 		has_country_flag = Sigismund_von_Hohenzollern_dead
 	}
 	available = {
-		has_country_leader = {
-			name = "弗拉基米尔"
-			ruling_only = yes
+		OR = {
+			has_country_leader = {
+				name = "弗拉基米尔"
+				ruling_only = yes
+			}
+			has_country_leader = {
+				name = "Uladzimir"
+				ruling_only = yes
+			}
 		}
 		OR = {
 			is_subject = no
@@ -8565,9 +8614,15 @@ focus = {
 		focus = WHR_liberalise_press
 	}
 	available = {
-		has_country_leader = {
-			name = "弗拉基米尔"
-			ruling_only = yes
+		OR = {
+			has_country_leader = {
+				name = "弗拉基米尔"
+				ruling_only = yes
+			}
+			has_country_leader = {
+				name = "Uladzimir"
+				ruling_only = yes
+			}
 		}
 		OR = {
 			is_subject = no
@@ -8597,9 +8652,15 @@ focus = {
 		focus = WHR_sigismund_negotiations
 	}
 	available = {
-		has_country_leader = {
-			name = "弗拉基米尔"
-			ruling_only = yes
+		OR = {
+			has_country_leader = {
+				name = "弗拉基米尔"
+				ruling_only = yes
+			}
+			has_country_leader = {
+				name = "Uladzimir"
+				ruling_only = yes
+			}
 		}
 		OR = {
 			is_subject = no

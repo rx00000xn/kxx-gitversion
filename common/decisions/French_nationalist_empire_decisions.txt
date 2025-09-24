@@ -586,18 +586,17 @@ FRG_switzerland_imperialate_decision = {
                                      state = 151
                                      state = 761 }
 		visible = {
-			has_completed_focus = FRG_conquest_2
-			
+			has_completed_focus = FRG_romandy
 		}
 		available = {
-			has_completed_focus = FRG_conquest_2
+			has_completed_focus = FRG_romandy
 			3 = { is_owned_and_controlled_by = ROOT }
                         151 = { is_owned_and_controlled_by = ROOT }
                         761 = { is_owned_and_controlled_by = ROOT }
 		}
 		fire_only_once = yes
-		cost = 50
-		days_remove = 12
+		cost = 0
+		days_remove = 1
 
 		ai_will_do = {
 			factor = 6
@@ -612,7 +611,53 @@ FRG_switzerland_imperialate_decision = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove FRG_switzerland_imperialate_decision"
 			clr_country_flag = FRG_imperialate
                         puppet = SWI
-                        SWI = { set_cosmetic_tag = FRG_ISW }
+                        SWI = { 
+                                set_cosmetic_tag = FRG_ISW 
+                                set_politics = {
+            	                        ruling_party = national_populist
+				        elections_allowed = no
+        	                } 
+                                add_popularity = {
+				        ideology = authoritarian_democrat
+				        popularity = 0.20
+			        }
+			        add_popularity = {
+				        ideology = market_liberal
+				        popularity = 0.12
+			        }
+                                add_popularity = {
+				        ideology = paternal_autocrat
+				        popularity = 0.4
+			        }
+                                set_party_name = {
+            	                        ideology = authoritarian_democrat
+            	                        long_name = "海尔维蒂行省政府"
+            	                        name = "海尔维蒂行省政府"
+        	                }
+			        set_party_name = {
+            	                        ideology = market_liberal
+            	                        long_name = "祇属于香奈儿的商业帝国分部"
+            	                        name = "祇属于香奈儿的商业帝国分部"
+        	                }
+			        set_party_name = {
+            	                        ideology = paternal_autocrat
+            	                        long_name = "法兰西瑞士驻军"
+            	                        name = "法兰西瑞士驻军"
+        	                }
+                                set_party_name = {
+            	                        ideology = national_populist
+            	                        long_name = "海尔维蒂行省政府"
+            	                        name = "海尔维蒂行省政府"
+        	                }
+                                create_country_leader = {
+            	                        name = "埃米尔.桑德雷尔"
+                                        long_name = "埃米尔.桑德雷尔"
+				        desc = ""
+            	                        picture = "gfx/leaders/SWI/Portrait_Switzerland_Emil_Sonderegger.png"
+            	                        expire = "1965.1.1"
+            	                        ideology = natpop_colonial_govt_subtype
+        	                }
+                        }
                         SWI = { transfer_state = 3
                                 transfer_state = 151
                                 transfer_state = 761 }
@@ -623,11 +668,11 @@ FRG_switzerland_imperialate_decision = {
 FRG_spain_imperialate_decision = {
 		icon = decision_cat_generic_purge
 		visible = {
-			has_completed_focus = FRG_conquest_2
+			has_completed_focus = FRG_iberian
 			
 		}
 		available = {
-			has_completed_focus = FRG_conquest_2
+			has_completed_focus = FRG_iberian
 			176 = { is_owned_and_controlled_by = ROOT }
                         41 = { is_owned_and_controlled_by = ROOT }
                         173 = { is_owned_and_controlled_by = ROOT }
@@ -635,8 +680,8 @@ FRG_spain_imperialate_decision = {
                         167 = { is_owned_and_controlled_by = ROOT }
 		}
 		fire_only_once = yes
-		cost = 50
-		days_remove = 12
+		cost = 0
+		days_remove = 1
 
 		ai_will_do = {
 			factor = 6
@@ -657,21 +702,191 @@ FRG_spain_imperialate_decision = {
                         puppet = IAR
                         BAS = { set_cosmetic_tag = FRG_BAS }
                         SPR = { set_cosmetic_tag = FRG_SPR }
-                        SPR = { remove_state_core = 165
-                                remove_state_core = 177 
-                                remove_state_core = 1313 }
+                        IAR = { set_cosmetic_tag = FRG_IAR }
+                        SPR = {
+                                set_party_name = {
+            	                        ideology = authoritarian_democrat
+            	                        long_name = "安达卢西亚行省政府"
+            	                        name = "安达卢西亚行省政府"
+        	                        }
+			        set_party_name = {
+            	                        ideology = market_liberal
+            	                        long_name = "祇属于香奈儿的商业帝国分部"
+            	                        name = "祇属于香奈儿的商业帝国分部"
+        	                        }
+			        set_party_name = {
+            	                        ideology = paternal_autocrat
+            	                        long_name = "法兰西安达卢西亚驻军"
+            	                        name = "法兰西安达卢西亚驻军"
+        	                        }
+			        set_party_name = {
+            	                        ideology = national_populist
+            	                        long_name = "安达卢西亚行省政府"
+            	                        name = "安达卢西亚行省政府"
+        	                        }
+                                }
+                        IAR = {
+                                set_party_name = {
+            	                        ideology = authoritarian_democrat
+            	                        long_name = "阿拉贡行省政府"
+            	                        name = "阿拉贡行省政府"
+        	                        }
+			        set_party_name = {
+            	                        ideology = market_liberal
+            	                        long_name = "祇属于香奈儿的商业帝国分部"
+            	                        name = "祇属于香奈儿的商业帝国分部"
+        	                        }
+			        set_party_name = {
+            	                        ideology = paternal_autocrat
+            	                        long_name = "法兰西阿拉贡驻军"
+            	                        name = "法兰西阿拉贡驻军"
+        	                        }
+			        set_party_name = {
+            	                        ideology = national_populist
+            	                        long_name = "法兰西阿拉贡驻军"
+            	                        name = "法兰西阿拉贡驻军"
+        	                        }
+                                }
+                        if = {
+                                limit = {
+                                        NOT = {
+                                                FRG = {
+                                                        has_completed_focus = FRG_Chanel_win
+                                                }
+                                        }
+                                }
+                                SPR = { 
+                                set_politics = {
+            	                        ruling_party = national_populist
+				        elections_allowed = no
+        	                        } 
+                                add_popularity = {
+				        ideology = authoritarian_democrat
+				        popularity = 0.23
+			                }
+			        add_popularity = {
+				        ideology = market_liberal
+				        popularity = 0.2
+			                }
+                                add_popularity = {
+				        ideology = paternal_autocrat
+				        popularity = 0.28
+			                }
+                                create_country_leader = {
+            	                        name = "安达卢西亚行省政府机构"
+				        desc = "POLITICS_SPR_COLONIAL_DESC_1"
+            	                        picture = "gfx/leaders/FRG/Portrait_FRG_Imperial_Regency.png"
+            	                        expire = "1965.1.1"
+            	                        ideology = natpop_colonial_govt_subtype
+                                        }
+                                }
+                                IAR = {
+                                set_politics = {
+            	                        ruling_party = paternal_autocrat
+				        elections_allowed = no
+        	                        } 
+                                create_country_leader = {
+            	                        name = "阿拉贡行省军政府"
+				        desc = "POLITICS_IAR_COLONIAL_DESC_1"
+            	                        picture = "gfx/leaders/FRG/Portrait_FRG_Imperial_Regency.png"
+            	                        expire = "1965.1.1"
+            	                        ideology = autocratic_colonial_govt_subtype
+                                        }
+                                add_popularity = {
+				        ideology = authoritarian_democrat
+				        popularity = 0.33
+			                }
+			        add_popularity = {
+				        ideology = market_liberal
+				        popularity = 0.15
+			                }
+                                add_popularity = {
+				        ideology = paternal_autocrat
+				        popularity = 0.2
+			                }
+                                }
+                        }
+                        else = {
+                                SPR = { 
+                                set_politics = {
+            	                        ruling_party = market_liberal
+				        elections_allowed = no
+        	                        } 
+                                create_country_leader = {
+            	                        name = "祇听命于香奈儿的商业董事会与安保雇佣兵团队"
+				        desc = "POLITICS_IAR_COLONIAL_DESC_2"
+            	                        picture = "gfx/leaders/FRG/Portrait_FRG_Imperial_Regency.png"
+            	                        expire = "1965.1.1"
+            	                        ideology = marlib_warlordism_subtype
+                                        }
+                                add_popularity = {
+				        ideology = authoritarian_democrat
+				        popularity = 0.22
+			                }
+			        add_popularity = {
+				        ideology = national_populist
+				        popularity = 0.2
+			                }
+                                add_popularity = {
+				        ideology = paternal_autocrat
+				        popularity = 0.28
+			                }
+                                }
+                                IAR = {
+                                set_politics = {
+            	                        ruling_party = market_liberal
+				        elections_allowed = no
+        	                        } 
+                                create_country_leader = {
+            	                        name = "阿拉贡商业董事会"
+				        desc = "POLITICS_IAR_COLONIAL_DESC_2"
+            	                        picture = "gfx/leaders/FRG/Portrait_FRG_Imperial_Regency.png"
+            	                        expire = "1965.1.1"
+            	                        ideology = marlib_colonial_govt_subtype
+                                        }
+                                add_popularity = {
+				        ideology = authoritarian_democrat
+				        popularity = 0.23
+			                }
+			        add_popularity = {
+				        ideology = national_populist
+				        popularity = 0.15
+			                }
+                                add_popularity = {
+				        ideology = paternal_autocrat
+				        popularity = 0.2
+			                }
+                                set_party_name = {
+            	                        ideology = authoritarian_democrat
+            	                        long_name = "阿拉贡行省政府"
+            	                        name = "阿拉贡行省政府"
+        	                        }
+			        set_party_name = {
+            	                        ideology = market_liberal
+            	                        long_name = "祇属于香奈儿的商业帝国分部"
+            	                        name = "祇属于香奈儿的商业帝国分部"
+        	                        }
+			        set_party_name = {
+            	                        ideology = paternal_autocrat
+            	                        long_name = "法兰西阿拉贡驻军"
+            	                        name = "法兰西阿拉贡驻军"
+        	                        }
+			        set_party_name = {
+            	                        ideology = national_populist
+            	                        long_name = "法兰西阿拉贡驻军"
+            	                        name = "法兰西阿拉贡驻军"
+        	                        }
+                                }
+                        }
                         BAS = { transfer_state = 172 }
                         IAR = { transfer_state = 940
+                                transfer_state = 165
                                 transfer_state = 166
+                                transfer_state = 167
                                 add_state_core = 940
-                                add_state_core = 166 }
-                        FRG = { transfer_state = 165
-                                transfer_state = 177
-                                transfer_state = 1313
                                 add_state_core = 165
-                                add_state_core = 177
-                                add_state_core = 1313 }
-            }
+                                add_state_core = 166
+                                add_state_core = 167 }
 	}
 
  FRG_italian_imperialate_decision = {
@@ -2161,11 +2376,9 @@ FRG_england_imperialate_decision = {
                      WAL = { load_focus_tree = { id = generic_focus } }
                      SCT = { load_focus_tree = { id = generic_focus } }
 
-                   }
-         }
-
-
-
+                        }
+                }
+        }
  }
 
 
@@ -2540,8 +2753,5 @@ FRG_attack_don_kuban_decision = {
 				}
 		}
             }
-
-
-
-
  }
+

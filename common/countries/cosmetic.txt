@@ -10898,6 +10898,25 @@ FRG_vidal = {
 	color = rgb {  17  159  252 }
 	color_ui = rgb {  17  159  252 }
 }
+
+#frg特殊傀儡
+NFA_MITTEL_01 = {
+    color = rgb { 30 54 103 }
+    color_ui = rgb { 34 62 119 }
+}
+FRG_ISW = {
+    color = rgb { 30 54 103 }
+    color_ui = rgb { 34 62 119 }
+}
+FRG_SPR = {
+    color = rgb { 30 54 103 }
+    color_ui = rgb { 34 62 119 }
+}
+FRG_BAS = {
+    color = rgb { 30 54 103 }
+    color_ui = rgb { 34 62 119 }
+}
+
 ###白鹅
 BLR_SR = {
 	color = rgb { 34 96 211 }
@@ -11200,6 +11219,8 @@ GRE_theocracy = {
 	color = rgb { 255 255 204 }
 	color_ui = rgb { 255 255 204 }
 }
+
+#lkmt扩展
 CHI_ALO_volkstaat = {
 	color = rgb { 74 74 74 }
 	color_ui = rgb { 74 74 74 }
