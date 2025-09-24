@@ -1440,5 +1440,19 @@ ideas = {
 				war_support_weekly = 0.005
 			}
 		}
+
+		CHI_Socialize_NBIS = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KR_CHI_Unrest_3"}
+            allowed = { always = no }
+			picture = CHI_high_popular_support
+			allowed = { original_tag = CHI }
+			removal_cost = -1
+			modifier = {
+				operative_slot = 2
+				agency_upgrade_time = -0.15
+				intel_network_gain_factor = 0.15
+				intelligence_agency_defense = 0.15
+			}
+		}
 	}
 }

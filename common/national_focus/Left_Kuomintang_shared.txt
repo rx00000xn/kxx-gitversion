@@ -22678,6 +22678,7 @@ focus = {
 		}
 		completion_reward = {
 		  custom_effect_tooltip = unlock_focuses
+		  remove_ideas = KR_CHI_Unrest_1
 		}	
 	}
 
@@ -22842,10 +22843,7 @@ focus = {
 		  FOCUS_FILTER_POLITICAL
 		}
 		completion_reward = {
-		   	upgrade_intelligence_agency = upgrade_anti_partisan
-      		upgrade_intelligence_agency = upgrade_commando_training
-      		upgrade_intelligence_agency = upgrade_form_department
-     		upgrade_intelligence_agency = upgrade_intelligence_agency
+		   add_ideas = CHI_Socialize_NBIS
 		}	
 	}
 
@@ -23129,7 +23127,7 @@ focus = {
 		  FOCUS_FILTER_POLITICAL
 		}
 		completion_reward = {
-		  add_ideas = CHI_Form_the_ACTU
+		  add_ideas = CHI_Developing_the_Motherland
 		}	
 	}
 

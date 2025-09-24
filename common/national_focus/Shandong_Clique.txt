@@ -1875,9 +1875,9 @@ focus_tree = {
 		
 		completion_reward = {
 			custom_effect_tooltip = "奥斯曼帝国的舰队将会到达。"
-			hidden_effect = {
-				load_naval_oob = OTT_naval
-			}
+			
+			load_oob = SQI_OTT_naval
+			
 		}
 	}
 	focus = {
@@ -5236,7 +5236,6 @@ hidden_effect = {
 		set_cosmetic_tag = SQI_REVREP
 		Outer_manchuria_cores = yes
 		add_ideas = SQI_on_our_great_road
-		country_event = shandong.473
 		}
 	}
 
@@ -5258,7 +5257,6 @@ hidden_effect = {
 		set_cosmetic_tag = SQI_REVREP
 		Outer_manchuria_cores = yes
 		add_ideas = SQI_on_our_great_road
-		country_event = shandong.473
 		}
 	}
 	focus = {
