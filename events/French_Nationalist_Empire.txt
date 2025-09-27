@@ -73,11 +73,13 @@ country_event = {
 			}
 			dismantle_faction = yes
 		}
-       
-        declare_war_on = {
+       FRA = {
+		declare_war_on = {
          	target = FRG
          	type = annex_everything
         }
+	   }
+        
     }
 	option = {	
         name = fne.21.b
@@ -141,11 +143,13 @@ country_event = {
 			}
 			dismantle_faction = yes
 		}
-       
-        declare_war_on = {
+       FRA = {
+		 declare_war_on = {
          	target = FRG
          	type = annex_everything
         }
+	   }
+       
     } 
 }
 
@@ -3384,6 +3388,9 @@ country_event = { #北方邻国开始行动
 	title = frg.106.t
 	desc = frg.106.d
 	trigger = {
+		FRG = {
+			has_completed_focus = FRG_iberian
+		}
 		OR = {
 			SPR = {
 				has_completed_focus = SPR_post_civil_war
@@ -3493,6 +3500,7 @@ country_event = { #北方邻国开始行动
 		}
 	}
 }
+
 
 country_event = { #重组法属西非
     id = frg.110 
@@ -3644,6 +3652,17 @@ country_event = { #重组法属赤道非洲
     title = frg.112.t
     desc = frg.112.d
     trigger = {
+		NOT = {
+			FRG = {
+				has_government = syndicalist
+				has_government = radical_socialist
+				has_government = social_democrat
+				has_country_leader = { ruling_only = yes name = "西蒙·萨比亚尼" }
+			}
+		}
+		FRG = {
+			has_completed_focus = FRG_africa
+		}
 		GAB = {
 			exists = yes 
 			is_puppet_of = FRG

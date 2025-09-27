@@ -40235,7 +40235,6 @@ focus = {
 		}
 		prerequisite = {
 			focus = FRA_Gamelin_yes
-			focus = FRA_Boncour_yes
 			focus = FRA_blum_yes
 		}
 		mutually_exclusive = {
@@ -40265,10 +40264,11 @@ focus = {
 			has_country_flag = FRA_Gamelin_01no
 			has_country_flag = FRA_Boncour_01no
 			has_country_flag = FRA_blum_01no
+			has_completed_focus = FRA_blum_no
+			has_completed_focus = FRA_Gamelin_no
 		}
 		prerequisite = {
 			focus = FRA_blum_no
-			focus = FRA_Boncour_no
 			focus = FRA_Gamelin_no
 		}
 		mutually_exclusive = {
@@ -40556,7 +40556,6 @@ focus = {
 		y = 8
 		prerequisite = {
 			focus = FRA_Arthuys_yes
-			focus = FRA_Thorez_yes
 			focus = FRA_deat_yes
 		}
 		available = {
@@ -40596,14 +40595,14 @@ focus = {
 		y = 8
 		prerequisite = {
 			focus = FRA_Arthuys_no
-			focus = FRA_Thorez_no
 			focus = FRA_deat_no
 		}
 		available = {
-			
-				has_country_flag = FRA_Arthuys_01no
-				has_country_flag = FRA_Thorez_01no
-				has_country_flag = FRA_deat_01no
+			has_completed_focus = FRA_Arthuys_no
+			has_completed_focus = FRA_deat_no
+			has_country_flag = FRA_Arthuys_01no
+			has_country_flag = FRA_Thorez_01no
+			has_country_flag = FRA_deat_01no
 			
 		
 		}

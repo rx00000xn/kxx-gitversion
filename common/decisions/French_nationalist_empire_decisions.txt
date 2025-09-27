@@ -706,8 +706,8 @@ FRG_spain_imperialate_decision = {
                         SPR = {
                                 set_party_name = {
             	                        ideology = authoritarian_democrat
-            	                        long_name = "安达卢西亚行省政府"
-            	                        name = "安达卢西亚行省政府"
+            	                        long_name = "卡斯蒂利亚行省政府"
+            	                        name = "卡斯蒂利亚行省政府"
         	                        }
 			        set_party_name = {
             	                        ideology = market_liberal
@@ -716,13 +716,13 @@ FRG_spain_imperialate_decision = {
         	                        }
 			        set_party_name = {
             	                        ideology = paternal_autocrat
-            	                        long_name = "法兰西安达卢西亚驻军"
-            	                        name = "法兰西安达卢西亚驻军"
+            	                        long_name = "法兰西卡斯蒂利亚驻军"
+            	                        name = "法兰西卡斯蒂利亚驻军"
         	                        }
 			        set_party_name = {
             	                        ideology = national_populist
-            	                        long_name = "安达卢西亚行省政府"
-            	                        name = "安达卢西亚行省政府"
+            	                        long_name = "卡斯蒂利亚行省政府"
+            	                        name = "卡斯蒂利亚行省政府"
         	                        }
                                 }
                         IAR = {
@@ -733,8 +733,8 @@ FRG_spain_imperialate_decision = {
         	                        }
 			        set_party_name = {
             	                        ideology = market_liberal
-            	                        long_name = "祇属于香奈儿的商业帝国分部"
-            	                        name = "祇属于香奈儿的商业帝国分部"
+            	                        long_name = "祇属于香奈儿的商业帝国分部/雇佣兵团队"
+            	                        name = "祇属于香奈儿的商业帝国分部/雇佣兵团队"
         	                        }
 			        set_party_name = {
             	                        ideology = paternal_autocrat
@@ -773,7 +773,7 @@ FRG_spain_imperialate_decision = {
 				        popularity = 0.28
 			                }
                                 create_country_leader = {
-            	                        name = "安达卢西亚行省政府机构"
+            	                        name = "卡斯蒂利亚行省政府机构"
 				        desc = "POLITICS_SPR_COLONIAL_DESC_1"
             	                        picture = "gfx/leaders/FRG/Portrait_FRG_Imperial_Regency.png"
             	                        expire = "1965.1.1"
@@ -813,11 +813,11 @@ FRG_spain_imperialate_decision = {
 				        elections_allowed = no
         	                        } 
                                 create_country_leader = {
-            	                        name = "祇听命于香奈儿的商业董事会与安保雇佣兵团队"
+            	                        name = "亚历杭德罗.勒鲁"
 				        desc = "POLITICS_IAR_COLONIAL_DESC_2"
-            	                        picture = "gfx/leaders/FRG/Portrait_FRG_Imperial_Regency.png"
+            	                        picture = "gfx/leaders/CNT/Portrait_CNT_Alejandro_Lerroux_Garcia.png"
             	                        expire = "1965.1.1"
-            	                        ideology = marlib_warlordism_subtype
+            	                        ideology = marlib_colonial_govt_subtype
                                         }
                                 add_popularity = {
 				        ideology = authoritarian_democrat
