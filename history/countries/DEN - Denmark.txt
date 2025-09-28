@@ -7,7 +7,6 @@ add_ideas = DEN_idea_outdated_navy
 add_ideas = DEN_idea_pacifist_accord
 
 country_event = { id = den.1000 days = 20 }
-country_event = { id = den.2 days = 40 }
 country_event = { id = den.4 days = 74 }
 country_event = { id = den.5 days = 137 }
 country_event = { id = den.20 days = 503 }
