@@ -570,27 +570,14 @@ spriteTypes = {
 		name = "GFX_ideology_capooism_subtype" #家独-咖波主义
 		texturefile = "gfx/interface/ideologies/subideologies/capooism_group.png"
 	}
-
-	SpriteType = {
-		name = "GFX_ideology_radsoc_Grand_Thai_nationalism_subtype" #鸡舍-泰式社会主义
-		texturefile = "gfx/interface/ideologies/subideologies/radsoc_Grand_Thai_nationalism_group.png"
-	}	
-	SpriteType = {
-		name = "GFX_ideology_socdem_Grand_Thai_nationalism_subtype" #社民-泰式社会主义
-		texturefile = "gfx/interface/ideologies/subideologies/socdem_Grand_Thai_nationalism_group.png"
-	}	
-	SpriteType = {
-		name = "GFX_ideology_marlib_Grand_Thai_nationalism_subtype" #市自-泛泰主义
-		texturefile = "gfx/interface/ideologies/subideologies/marlib_Grand_Thai_nationalism_group.png"
-	}	
-	SpriteType = {
-		name = "GFX_ideology_authdem_Grand_Thai_nationalism_subtype" #威民-泛泰主义
-		texturefile = "gfx/interface/ideologies/subideologies/authdem_Grand_Thai_nationalism_group.png"
-	}	
-	SpriteType = {
-		name = "GFX_ideology_pataut_Grand_Thai_nationalism_subtype" #家独-泛泰主义
-		texturefile = "gfx/interface/ideologies/subideologies/pataut_Grand_Thai_nationalism_group.png"
-	}	
+	spriteType = { #极权-社会主义殖民政府
+		name = "GFX_ideology_tot_colonial_government" 
+		texturefile = "gfx/interface/ideologies/subideologies/tot_colonial_government.png"
+	}
+	spriteType = { #极权-革命新体制
+		name = "GFX_ideology_tot_shintaisei_subtype" 
+		texturefile = "gfx/interface/ideologies/subideologies/tot_shintaisei_subtype.png"
+	}
 	
 
 	SpriteType = {
@@ -609,6 +596,62 @@ spriteTypes = {
 		animation_rate_fps = 15
 		looping = yes
 		play_on_show = yes
+	}
+
+	#红龙
+	SpriteType = {
+		name = "GFX_ideology_marlib_chinese_federalism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/soclib_chinese_federalism_group.png"
+	}
+		
+	SpriteType = {
+		name = "GFX_ideology_soccon_chinese_federalism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/soclib_chinese_federalism_group.png"
+	}
+
+	SpriteType = {
+		name = "GFX_ideology_natpop_chiangism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/natpop_chiangism.png"
+	}
+
+	SpriteType = {
+		name = "GFX_ideology_natpop_chiangism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/natpop_chiangism.png"
+	}
+
+	SpriteType = {
+		name = "GFX_ideology_neo_tridemism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/dai_jitao_thought.png"
+	}
+
+	SpriteType = {
+		name = "GFX_ideology_authdem_new_live_movement_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/natpop_new_life_movement.png"
+	}
+
+	SpriteType = {
+		name = "GFX_ideology_pataut_new_live_movement_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/new_life_movement.png"
+	}
+
+	SpriteType = {
+		name = "GFX_ideology_natpop_new_live_movement_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/natpop_new_life_movement.png"
+	}
+
+	SpriteType = {
+		name = "GFX_ideology_socdem_anarcho_individualism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/socdem_anarcho_individualism.png"
+	}
+		
+	SpriteType = {
+		name = "GFX_ideology_pataut_neo_citizenism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/pataut_neo_citizenism.png"
+	}
+		
+	SpriteType = {
+		name = "GFX_ideology_anarcho_tridemism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/anarcho_tridemism.png"
 	}
 
 
@@ -1021,59 +1064,5 @@ spriteTypes = {
 		name = "GFX_ideology_player_subtype" 
 		texturefile = "gfx/interface/ideologies/subideologies/player.png"
 	}
-	spriteType = {
-		name = "GFX_ideology_tot_colonial_government" 
-		texturefile = "gfx/interface/ideologies/subideologies/tot_colonial_government.png"
-	}
-	spriteType = {
-		name = "GFX_ideology_tot_shintaisei_subtype" 
-		texturefile = "gfx/interface/ideologies/subideologies/tot_shintaisei_group.png"
-	}
-	SpriteType = {
-	name = "GFX_ideology_marlib_chinese_federalism_subtype"
-	texturefile = "gfx/interface/ideologies/subideologies/soclib_chinese_federalism_group.png"
-	}
 	
-	SpriteType = {
-	name = "GFX_ideology_soccon_chinese_federalism_subtype"
-	texturefile = "gfx/interface/ideologies/subideologies/soclib_chinese_federalism_group.png"
-	}
-	SpriteType = {
-	name = "GFX_ideology_natpop_chiangism_subtype"
-	texturefile = "gfx/interface/ideologies/subideologies/natpop_chiangism.png"
-	}
-	SpriteType = {
-	name = "GFX_ideology_natpop_chiangism_subtype"
-	texturefile = "gfx/interface/ideologies/subideologies/natpop_chiangism.png"
-	}
-	SpriteType = {
-	name = "GFX_ideology_neo_tridemism_subtype"
-	texturefile = "gfx/interface/ideologies/subideologies/dai_jitao_thought.png"
-	}
-	SpriteType = {
-	name = "GFX_ideology_authdem_new_live_movement_subtype"
-	texturefile = "gfx/interface/ideologies/subideologies/natpop_new_life_movement.png"
-	}
-	SpriteType = {
-	name = "GFX_ideology_pataut_new_live_movement_subtype"
-	texturefile = "gfx/interface/ideologies/subideologies/new_life_movement.png"
-	}
-	SpriteType = {
-	name = "GFX_ideology_natpop_new_live_movement_subtype"
-	texturefile = "gfx/interface/ideologies/subideologies/natpop_new_life_movement.png"
-	}
-	SpriteType = {
-	name = "GFX_ideology_socdem_anarcho_individualism_subtype"
-	texturefile = "gfx/interface/ideologies/subideologies/socdem_anarcho_individualism.png"
-	}
-	
-	SpriteType = {
-	name = "GFX_ideology_pataut_neo_citizenism_subtype"
-	texturefile = "gfx/interface/ideologies/subideologies/pataut_neo_citizenism.png"
-	}
-	
-	SpriteType = {
-	name = "GFX_ideology_anarcho_tridemism_subtype"
-	texturefile = "gfx/interface/ideologies/subideologies/anarcho_tridemism.png"
-	}
 }
