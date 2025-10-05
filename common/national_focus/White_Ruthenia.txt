@@ -525,7 +525,7 @@ focus_tree = {
 		relative_position_id = WHR_global_belarus
 		x = 12
 		y = 4
-		cost = 1
+		cost = 5
 		ai_will_do = {
 			base = 100
 		}
@@ -686,7 +686,7 @@ focus_tree = {
 		relative_position_id = WHR_global_belarus
 		x = 10
 		y = 2
-		cost = 1
+		cost = 5
 		ai_will_do = {
 			base = 100
 		}
@@ -710,7 +710,7 @@ focus_tree = {
 		relative_position_id = WHR_federation_of_free_man
 		x = -1
 		y = 1
-		cost = 1
+		cost = 5
 		ai_will_do = {
 			base = 100
 		}
@@ -735,7 +735,7 @@ focus_tree = {
 		relative_position_id = WHR_federation_of_free_man
 		x = 1
 		y = 1
-		cost = 1
+		cost = 5
 		ai_will_do = {
 			base = 100
 		}
@@ -890,7 +890,7 @@ focus_tree = {
 		relative_position_id = WHR_federation_of_free_man
 		x = 0
 		y = 2
-		cost = 1
+		cost = 5
 		ai_will_do = {
 			base = 100
 		}
@@ -1290,7 +1290,7 @@ focus_tree = {
 		relative_position_id = WHR_global_belarus
 		x = 6
 		y = 2
-		cost = 1
+		cost = 5
 		ai_will_do = {
 			base = 100
 		}
@@ -1314,7 +1314,7 @@ focus_tree = {
 		relative_position_id = WHR_declare_ruthian_empire
 		x = 0
 		y = 2
-		cost = 1
+		cost = 5
 		ai_will_do = {
 			base = 100
 		}
@@ -1486,7 +1486,7 @@ focus_tree = {
 		relative_position_id = WHR_revolution_in_east_europe
 		x = 1
 		y = 1
-		cost = 1
+		cost = 5
 		ai_will_do = {
 			base = 100
 		}
@@ -1580,7 +1580,7 @@ focus_tree = {
 		relative_position_id = WHR_global_belarus
 		x = -2
 		y = 2
-		cost = 1
+		cost = 5
 		ai_will_do = {
 			base = 100
 		}
@@ -1608,7 +1608,7 @@ focus_tree = {
 		relative_position_id = WHR_restore_order_of_ostwall
 		x = -1
 		y = 1
-		cost = 1
+		cost = 5
 		ai_will_do = {
 			base = 100
 		}
@@ -1633,7 +1633,7 @@ focus_tree = {
 		relative_position_id = WHR_restore_order_of_ostwall
 		x = 1
 		y = 1
-		cost = 1
+		cost = 5
 		ai_will_do = {
 			base = 100
 		}
@@ -1698,7 +1698,7 @@ focus_tree = {
 		relative_position_id = WHR_restore_order_of_ostwall
 		x = 0
 		y = 2
-		cost = 1
+		cost = 5
 		ai_will_do = {
 			base = 100
 		}
@@ -1736,13 +1736,14 @@ focus_tree = {
 			add_war_support = 0.1
 		}
 	}
-	focus = {
+	
+focus = {
 		id = WHR_schzios
 		icon = GFX_goal_COR_Champion_Womens_Three_Movements 
 
 		x = -15
 		y = 20
-		cost = 1
+		cost = 4
 		ai_will_do = {
 			base = 100
 		}
@@ -1763,7 +1764,7 @@ focus_tree = {
 		relative_position_id = WHR_schzios
 		x = 6
 		y = 1
-		cost = 1
+		cost = 4
 		ai_will_do = {
 			base = 100
 		}
@@ -1785,7 +1786,7 @@ focus_tree = {
 		relative_position_id = WHR_call_of_antiquitian
 		x = -2
 		y = 1
-		cost = 1
+		cost = 4
 		ai_will_do = {
 			base = 100
 		}
@@ -1806,7 +1807,7 @@ focus_tree = {
 		relative_position_id = WHR_call_of_antiquitian
 		x = 0
 		y = 1
-		cost = 1
+		cost = 4
 		ai_will_do = {
 			base = 100
 		}
@@ -1827,7 +1828,7 @@ focus_tree = {
 		relative_position_id = WHR_call_of_antiquitian
 		x = 2
 		y = 1
-		cost = 1
+		cost = 4
 		ai_will_do = {
 			base = 100
 		}
@@ -1853,7 +1854,7 @@ focus_tree = {
 		relative_position_id = WHR_call_of_antiquitian
 		x = -1
 		y = 2
-		cost = 1
+		cost = 4
 		ai_will_do = {
 			base = 100
 		}
@@ -1883,7 +1884,7 @@ focus_tree = {
 		relative_position_id = WHR_call_of_antiquitian
 		x = 1
 		y = 2
-		cost = 1
+		cost = 4
 		ai_will_do = {
 			base = 100
 		}
@@ -1913,7 +1914,7 @@ focus_tree = {
 		relative_position_id = WHR_call_of_antiquitian
 		x = 0
 		y = 3
-		cost = 1
+		cost = 4
 		ai_will_do = {
 			base = 100
 		}
@@ -1941,7 +1942,7 @@ focus_tree = {
 		relative_position_id = WHR_call_of_antiquitian
 		x = -1
 		y = 4
-		cost = 1
+		cost = 4
 		ai_will_do = {
 			base = 100
 		}
@@ -2044,7 +2045,7 @@ focus_tree = {
 		relative_position_id = WHR_call_of_antiquitian
 		x = 1
 		y = 4
-		cost = 1
+		cost = 4
 		ai_will_do = {
 			base = 100
 		}
@@ -2098,7 +2099,7 @@ focus_tree = {
 		relative_position_id = WHR_call_of_antiquitian
 		x = -2
 		y = 5
-		cost = 1
+		cost = 4
 		ai_will_do = {
 			base = 100
 		}
@@ -2141,7 +2142,7 @@ focus_tree = {
 		relative_position_id = WHR_call_of_antiquitian
 		x = 0
 		y = 5
-		cost = 1
+		cost = 4
 		ai_will_do = {
 			base = 100
 		}
@@ -2168,7 +2169,7 @@ focus_tree = {
 		relative_position_id = WHR_call_of_antiquitian
 		x = 2
 		y = 5
-		cost = 1
+		cost = 4
 		ai_will_do = {
 			base = 100
 		}
@@ -2215,7 +2216,7 @@ every_state = {
 		relative_position_id = WHR_call_of_antiquitian
 		x = 0
 		y = 6
-		cost = 1
+		cost = 4
 		ai_will_do = {
 			base = 100
 		}
@@ -2242,7 +2243,7 @@ every_state = {
 		relative_position_id = WHR_schzios
 		x = 0
 		y = 1
-		cost = 1
+		cost = 4
 		ai_will_do = {
 			base = 100
 		}
@@ -2264,7 +2265,7 @@ every_state = {
 		relative_position_id = WHR_legacy_of_palemonids
 		x = -2
 		y = 1
-		cost = 1
+		cost = 4
 		ai_will_do = {
 			base = 100
 		}
@@ -2286,7 +2287,7 @@ every_state = {
 		relative_position_id = WHR_legacy_of_palemonids
 		x = 0
 		y = 1
-		cost = 1
+		cost = 4
 		ai_will_do = {
 			base = 100
 		}
@@ -2308,7 +2309,7 @@ every_state = {
 		relative_position_id = WHR_legacy_of_palemonids
 		x = 2
 		y = 1
-		cost = 1
+		cost = 4
 		ai_will_do = {
 			base = 100
 		}
@@ -2329,7 +2330,7 @@ every_state = {
 		relative_position_id = WHR_legacy_of_palemonids
 		x = -1
 		y = 2
-		cost = 1
+		cost = 4
 		ai_will_do = {
 			base = 100
 		}
@@ -2356,7 +2357,7 @@ every_state = {
 		relative_position_id = WHR_legacy_of_palemonids
 		x = 1
 		y = 2
-		cost = 1
+		cost = 4
 		ai_will_do = {
 			base = 100
 		}
@@ -2383,7 +2384,7 @@ every_state = {
 		relative_position_id = WHR_legacy_of_palemonids
 		x = 0
 		y = 3
-		cost = 1
+		cost = 4
 		ai_will_do = {
 			base = 100
 		}
@@ -2409,7 +2410,7 @@ every_state = {
 		relative_position_id = WHR_legacy_of_palemonids
 		x = -1
 		y = 4
-		cost = 1
+		cost = 4
 		ai_will_do = {
 			base = 100
 		}
@@ -2440,7 +2441,7 @@ every_state = {
 		relative_position_id = WHR_legacy_of_palemonids
 		x = 1
 		y = 4
-		cost = 1
+		cost = 4
 		ai_will_do = {
 			base = 100
 		}
@@ -2480,7 +2481,7 @@ every_state = {
 		relative_position_id = WHR_legacy_of_palemonids
 		x = -2
 		y = 5
-		cost = 1
+		cost = 4
 		ai_will_do = {
 			base = 100
 		}
@@ -2624,7 +2625,7 @@ every_state = {
 		relative_position_id = WHR_legacy_of_palemonids
 		x = 0
 		y = 5
-		cost = 1
+		cost = 4
 		ai_will_do = {
 			base = 100
 		}
@@ -2717,7 +2718,7 @@ every_state = {
 		relative_position_id = WHR_legacy_of_palemonids
 		x = 2
 		y = 5
-		cost = 1
+		cost = 4
 		ai_will_do = {
 			base = 100
 		}
@@ -2832,7 +2833,7 @@ every_state = {
 		relative_position_id = WHR_legacy_of_palemonids
 		x = 0
 		y = 6
-		cost = 1
+		cost = 4
 		ai_will_do = {
 			base = 100
 		}
@@ -2859,7 +2860,7 @@ every_state = {
 		relative_position_id = WHR_schzios
 		x = -6
 		y = 1
-		cost = 1
+		cost = 4
 		ai_will_do = {
 			base = 100
 		}
@@ -2881,7 +2882,7 @@ every_state = {
 		relative_position_id = WHR_finno_ugric_myth
 		x = -2
 		y = 1
-		cost = 1
+		cost = 4
 		ai_will_do = {
 			base = 100
 		}
@@ -2904,7 +2905,7 @@ every_state = {
 		relative_position_id = WHR_finno_ugric_myth
 		x = 0
 		y = 1
-		cost = 1
+		cost = 4
 		ai_will_do = {
 			base = 100
 		}
@@ -2925,7 +2926,7 @@ every_state = {
 		relative_position_id = WHR_finno_ugric_myth
 		x = 2
 		y = 1
-		cost = 1
+		cost = 4
 		ai_will_do = {
 			base = 100
 		}
@@ -2946,7 +2947,7 @@ every_state = {
 		relative_position_id = WHR_finno_ugric_myth
 		x = -1
 		y = 2
-		cost = 1
+		cost = 4
 		ai_will_do = {
 			base = 100
 		}
@@ -2973,7 +2974,7 @@ every_state = {
 		relative_position_id = WHR_finno_ugric_myth
 		x = 1
 		y = 2
-		cost = 1
+		cost = 4
 		ai_will_do = {
 			base = 100
 		}
@@ -3003,7 +3004,7 @@ every_state = {
 		relative_position_id = WHR_finno_ugric_myth
 		x = 0
 		y = 3
-		cost = 1
+		cost = 4
 		ai_will_do = {
 			base = 100
 		}
@@ -3030,7 +3031,7 @@ every_state = {
 		relative_position_id = WHR_finno_ugric_myth
 		x = 1
 		y = 4
-		cost = 1
+		cost = 4
 		ai_will_do = {
 			base = 100
 		}
@@ -3128,7 +3129,7 @@ every_state = {
 		relative_position_id = WHR_finno_ugric_myth
 		x = -1
 		y = 4
-		cost = 1
+		cost = 4
 		ai_will_do = {
 			base = 100
 		}
@@ -3189,7 +3190,7 @@ every_state = {
 		relative_position_id = WHR_finno_ugric_myth
 		x = -2
 		y = 5
-		cost = 1
+		cost = 4
 		ai_will_do = {
 			base = 100
 		}
@@ -3222,7 +3223,7 @@ every_state = {
 		relative_position_id = WHR_finno_ugric_myth
 		x = 0
 		y = 5
-		cost = 1
+		cost = 4
 		ai_will_do = {
 			base = 100
 		}
@@ -3256,7 +3257,7 @@ every_state = {
 		relative_position_id = WHR_finno_ugric_myth
 		x = 2
 		y = 5
-		cost = 1
+		cost = 4
 		ai_will_do = {
 			base = 100
 		}
@@ -3289,7 +3290,7 @@ every_state = {
 		relative_position_id = WHR_finno_ugric_myth
 		x = 0
 		y = 6
-		cost = 1
+		cost = 4
 		ai_will_do = {
 			base = 100
 		}
@@ -3384,7 +3385,7 @@ every_state = {
 		relative_position_id = WHR_global_belarus
 		x = -6
 		y = 2
-		cost = 1
+		cost = 5
 		ai_will_do = {
 			base = 100
 		}
@@ -3414,7 +3415,7 @@ every_state = {
 		relative_position_id = WHR_global_belarus
 		x = -8
 		y = 2
-		cost = 1
+		cost = 5
 		ai_will_do = {
 			base = 100
 		}
@@ -3441,7 +3442,7 @@ every_state = {
 		relative_position_id = WHR_kryvian_aryan_concept
 		x = -1
 		y = 1
-		cost = 1
+		cost = 5
 		ai_will_do = {
 			base = 100
 		}
@@ -3565,7 +3566,7 @@ every_state = {
 		relative_position_id = WHR_kryvian_aryan_concept
 		x = 1
 		y = 1
-		cost = 1
+		cost = 5
 		ai_will_do = {
 			base = 100
 		}
@@ -3633,7 +3634,7 @@ every_state = {
 		relative_position_id = WHR_kryvian_aryan_concept
 		x = 2
 		y = 2
-		cost = 1
+		cost = 5
 		ai_will_do = {
 			base = 100
 		}
@@ -3721,7 +3722,7 @@ every_state = {
 		relative_position_id = WHR_kryvian_aryan_concept
 		x = -2
 		y = 2
-		cost = 1
+		cost = 5
 		ai_will_do = {
 			base = 100
 		}
@@ -3810,7 +3811,7 @@ every_state = {
 		relative_position_id = WHR_kryvian_aryan_concept
 		x = 0
 		y = 2
-		cost = 1
+		cost = 5
 		ai_will_do = {
 			base = 100
 		}
