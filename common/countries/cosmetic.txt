@@ -10916,6 +10916,18 @@ FRG_BAS = {
     color = rgb { 30 54 103 }
     color_ui = rgb { 34 62 119 }
 }
+FRG_RNL = {
+    color = rgb { 30 54 103 }
+    color_ui = rgb { 34 62 119 }
+}
+FRG_NGF = {
+    color = rgb { 30 54 103 }
+    color_ui = rgb { 34 62 119 }
+}
+FRG_LOM = {
+    color = rgb { 30 54 103 }
+    color_ui = rgb { 34 62 119 }
+}
 
 ###白鹅
 BLR_SR = {

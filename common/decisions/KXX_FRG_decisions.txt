@@ -36,10 +36,56 @@ FRG_factionering = {
 			}
 		}
 		complete_effect = {
+			if = {
+				limit = {
+					NOT = {
+						FRG = {
+							OR = {
+								has_government = syndicalist
+								has_government = radical_socialist
+								has_government = social_democrat
+								has_country_leader = { ruling_only = yes name = "西蒙·萨比亚尼" }
+							}	
+						}
+					}
+				}
+			}
 			HOL ={
 				country_event = { id = frg.43 days = 8 }
+				}
+			else_if = {
+				limit = {
+					FRG = {
+							OR = {
+								has_government = syndicalist
+								has_government = radical_socialist
+								has_government = social_democrat
+								has_country_leader = { ruling_only = yes name = "西蒙·萨比亚尼" }
+							}	
+						}
+					country_exists = BEL
+					}
+				BEL = {
+					country_event = kxxfrance.1
+					}
+				}
+			else_if = {
+				limit = {
+					FRG = {
+							OR = {
+								has_government = syndicalist
+								has_government = radical_socialist
+								has_government = social_democrat
+								has_country_leader = { ruling_only = yes name = "西蒙·萨比亚尼" }
+							}	
+						}
+					country_exists = WLL
+					}
+				WLL = {
+					country_event = kxxfrance.1
+					}
+				}
 			}
-		}
 		ai_will_do = {
 			factor = 5
 		}
@@ -50,6 +96,7 @@ FRG_factionering = {
 		icon = GFX_decision_generic_nationalism
 		fire_only_once = yes
 		visible = {
+			has_completed_focus = FRG_comrades
 			NOT = {
 				FRG = {
 					OR = {
@@ -95,6 +142,7 @@ FRG_factionering = {
 		icon = GFX_decision_generic_nationalism
 		fire_only_once = yes
 		visible = {
+			has_completed_focus = FRG_comrades
 			is_faction_leader = yes
 			NOT = {
 				is_in_faction_with = SER
@@ -316,6 +364,7 @@ FRG_factionering = {
 		icon = GFX_decision_generic_nationalism
 		fire_only_once = yes
 		available = {
+			has_completed_focus = FRG_comrades
 			has_global_flag = spanish_civil_war
 		}
 		visible = {
@@ -358,6 +407,7 @@ FRG_factionering = {
 			}
 		}
 		visible = {
+			has_completed_focus = FRG_comrades
 			is_faction_leader = yes
 			NOT = {
 				is_in_faction_with = NOR
@@ -396,6 +446,7 @@ FRG_factionering = {
 			has_socialist_government = no
 		}
 		visible = {
+			has_completed_focus = FRG_comrades
 			NOT = {
 				is_in_faction_with = IRE
 				ENG = {

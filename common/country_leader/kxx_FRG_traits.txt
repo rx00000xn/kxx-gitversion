@@ -95,4 +95,17 @@ leader_traits = {
 		random = no
 		research_speed_factor = 0.3
 	}
+
+	#frg特殊傀儡
+	FRG_Schumann = {
+		random = no
+		stability_weekly = 0.0003
+		authoritarian_democrat_drift = 0.01
+	}
+	FRG_CAGED_BIRD = {
+		random = no
+		surrender_limit = 0.066
+		market_liberal_drift = 0.01
+		conscription = 0.03
+	}
 }

@@ -6969,7 +6969,10 @@ focus_tree = {
 				name = "嘉柏丽尔之眼"
 			}
 			hidden_effect = {
-				country_event = frg.31
+				country_event = {
+					id = frg.46
+					days = 15
+				}
 			}
 		}
 	}
@@ -13241,15 +13244,7 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			set_cosmetic_tag = FRG_Clara_Knecht
-			create_country_leader = {
-				name = "克拉拉·克内希特"
-				desc = ""
-				picture = "gfx/leaders/FRG/Portrait_FRG_Clara_Knecht.png"
-				expire = "1965.1.1"
-				ideology = spectral_state_subtype
-				traits = { FRG_shadow }
-			}
+			custom_effect_tooltip = unlock_focuses
 		}
 	}
 
@@ -14340,6 +14335,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = FRG_europe_tooltip_10
 			unlock_decision_tooltip = FRG_invite_hol 
+			unlock_decision_tooltip = FRG_lowland_imperialate_decision
 		}
 	}
 
@@ -14374,6 +14370,7 @@ focus_tree = {
 			hidden_effect = {
 				unlock_decision_tooltip = FRG_invite_ita
 			    unlock_decision_tooltip = FRG_invite_sic
+				unlock_decision_tooltip = FRG_italian_imperialate_decision
 				SRI = {
 					country_event = frg.103
 				}
@@ -14439,7 +14436,18 @@ focus_tree = {
 			factor = 20
 		}
 		available = {
-			has_global_flag = spanish_civil_war
+			OR = {
+				has_global_flag = spanish_civil_war
+				SPR = {
+					has_completed_focus = SPR_post_civil_war
+				}
+				CNT = {
+					has_completed_focus = CNT_election_success
+				}
+				CAR = {
+					has_completed_focus = CAR_restauracion
+				}
+			}
 		}
 		prerequisite = {
 			focus = FRG_comrades
@@ -14447,7 +14455,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = FRG_europe_tooltip_11
 			hidden_effect = {
-				unlock_decision_tooltip = FRG_invite_car
+				unlock_decision_tooltip = FRG_invite_spr
 				unlock_decision_tooltip = FRG_invite_por
 				country_event = frg.105
 			}
@@ -14537,6 +14545,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = FRG_europe_tooltip_13
 			unlock_decision_tooltip = FRG_invite_pol
+			unlock_decision_tooltip = FRG_rhineland_imperialate_decision
 			add_ideas = FRG_extreme_germanophobia
 			declare_war_on = {
          		target = GER
@@ -14652,7 +14661,7 @@ focus_tree = {
 			}
 			value = GFX_goal_NFA_France_Aux_Francais
 		}
-		cost = 3
+		cost = 15
 		relative_position_id = FRG_comrades
 		x = 0
 		y = 5

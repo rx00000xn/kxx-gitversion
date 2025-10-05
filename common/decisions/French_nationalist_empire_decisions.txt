@@ -26,15 +26,15 @@ FRG_cristal_nuit = {
           fire_only_once = yes           
           days_mission_timeout = 80              
           timeout_effect = {                      
-               add_political_power = -500
+               add_political_power = -200
                add_stability = -0.45
                add_war_support = -0.35
                custom_effect_tooltip = cristal_nuit_failure   
                remove_ideas = FRG_A_chaotic_government
-               country_event = { id = frg.22 }          
+               country_event = { id = frg.60 }          
           }
           complete_effect = {                    
-               add_political_power = 500
+               add_political_power = 200
                add_stability = 0.3
                               
           }
@@ -59,7 +59,7 @@ FRG_paris_nuit_decision = {
 		days_remove = 7
 
 		ai_will_do = {
-			factor = 6
+			factor = 7
 		}
 		
 		complete_effect = {
@@ -104,7 +104,7 @@ FRG_bordeaux_nuit_decision = {
 		days_remove = 7
 
 		ai_will_do = {
-			factor = 6
+			factor = 20
 		}
 		
 		complete_effect = {
@@ -149,7 +149,7 @@ FRG_marseille_nuit_decision = {
 		days_remove = 7
 
 		ai_will_do = {
-			factor = 6
+			factor = 15
 		}
 		
 		complete_effect = {
@@ -194,7 +194,7 @@ FRG_lyon_nuit_decision = {
 		days_remove = 7
 
 		ai_will_do = {
-			factor = 6
+			factor = 11
 		}
 		
 		complete_effect = {
@@ -887,25 +887,33 @@ FRG_spain_imperialate_decision = {
                                 add_state_core = 165
                                 add_state_core = 166
                                 add_state_core = 167 }
+		}
 	}
 
  FRG_italian_imperialate_decision = {
 		icon = decision_cat_generic_purge
 		visible = {
-			has_completed_focus = FRG_conquest_2
-			
+			has_completed_focus = FRG_italy
 		}
 		available = {
-			has_completed_focus = FRG_conquest_2
-			158 = { is_owned_and_controlled_by = ROOT }
+			has_completed_focus = FRG_italy
+			NOT = {
+				ITA = {
+					is_in_faction_with = FRG
+				}
+				SIC = {
+					is_in_faction_with = FRG
+				}
+			}
+						158 = { is_owned_and_controlled_by = ROOT }
                         159 = { is_owned_and_controlled_by = ROOT }
                         2 = { is_owned_and_controlled_by = ROOT }
                         117 = { is_owned_and_controlled_by = ROOT }
                         115 = { is_owned_and_controlled_by = ROOT }
 		}
 		fire_only_once = yes
-		cost = 50
-		days_remove = 12
+		cost = 0
+		days_remove = 1
 
 		ai_will_do = {
 			factor = 6
@@ -919,68 +927,110 @@ FRG_spain_imperialate_decision = {
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove FRG_italian_imperialate_decision"
 			clr_country_flag = FRG_imperialate
-
+			release = VNC
                         release = PAP
                         release = LOM
+						release = IIE
+						release = INA
+						release = VNC
                         puppet = PAP
                         puppet = LOM
-                     
-  
-                        
+						puppet = IIE
+						puppet = INA
+						puppet = VNC
+						PAP = { set_cosmetic_tag = FRG_PAP }
+                        LOM = { set_cosmetic_tag = FRG_LOM }
                         PAP = { transfer_state = 764
                                 transfer_state = 2
                                 transfer_state = 1149 
                                 add_state_core = 764
                                 add_state_core = 2
                                 add_state_core = 1149}
-
-                        PAP = { set_cosmetic_tag = FRG_PAP }
-
-                        LOM = { transfer_state = 159 }
-
-                        LOM = { set_cosmetic_tag = FRG_LOM }
-
-                        IIE = { transfer_state = 1004
-                                transfer_state = 161
+                        LOM = { transfer_state = 159 
+								transfer_state = 1004
+								add_state_core = 1004}
+						IIE = { transfer_state = 161
+								transfer_state = 162
                                 transfer_state = 157
                                 transfer_state = 1005
-                                add_state_core = 1004
                                 add_state_core = 161
                                 add_state_core = 157
+								add_state_core = 162
                                 add_state_core = 1005 }
-
-                        puppet = IIE
-
-                        INA = { transfer_state = 742
+						INA = { transfer_state = 742
                                 transfer_state = 117
                                 transfer_state = 837
                                 transfer_state = 1006
                                 transfer_state = 156
                                 transfer_state = 115
- 
                                 add_state_core = 742
                                 add_state_core = 117
                                 add_state_core = 837
                                 add_state_core = 1006
                                 add_state_core = 156
                                 add_state_core = 115 }
+						PAP = {
+							set_politics = {
+            	                ruling_party = national_populist
+				        		elections_allowed = no
+							}
+						}
+						LOM = {
+							    create_country_leader = {
+            	                        name = "米兰行省政府机构"
+				        				desc = "POLITICS_SPR_COLONIAL_DESC_1"
+            	                        picture = "gfx/leaders/FRG/Portrait_FRG_Imperial_Regency.png"
+            	                        expire = "1965.1.1"
+            	                        ideology = natpop_colonial_govt_subtype
+                                        }
+						}
+						LOM = {
+							set_politics = {
+            	                ruling_party = national_populist
+				        		elections_allowed = no
+							}
+						}
+						LOM = {
+							    create_country_leader = {
+            	                        name = "伦巴第行省政府机构"
+				        				desc = "POLITICS_SPR_COLONIAL_DESC_1"
+            	                        picture = "gfx/leaders/FRG/Portrait_FRG_Imperial_Regency.png"
+            	                        expire = "1965.1.1"
+            	                        ideology = natpop_colonial_govt_subtype
+                                        }
+						}
+                        IIE = {
+							set_politics = {
+            	                ruling_party = national_populist
+				        		elections_allowed = no
+							}
+						}
+						IIE = {
+							    create_country_leader = {
+            	                        name = "佛罗伦萨行省政府机构"
+				        				desc = "POLITICS_SPR_COLONIAL_DESC_1"
+            	                        picture = "gfx/leaders/FRG/Portrait_FRG_Imperial_Regency.png"
+            	                        expire = "1965.1.1"
+            	                        ideology = natpop_colonial_govt_subtype
+                                        }
+						}
+						INA = {
+							set_politics = {
+            	                ruling_party = national_populist
+				        		elections_allowed = no
+							}
+						}
+						INA = {
+							    create_country_leader = {
+            	                        name = "那不勒斯行省政府机构"
+				        				desc = "POLITICS_SPR_COLONIAL_DESC_1"
+            	                        picture = "gfx/leaders/FRG/Portrait_FRG_Imperial_Regency.png"
+            	                        expire = "1965.1.1"
+            	                        ideology = natpop_colonial_govt_subtype
+                                        }
+						}
+                        
 
-                        puppet = INA
-
-                        FRG = { transfer_state = 735
-                                transfer_state = 1003
-                                transfer_state = 762
-                                transfer_state = 158
-                                transfer_state = 162
-                                transfer_state = 838
-                                transfer_state = 1002
-                                add_state_core = 735
-                                add_state_core = 1003
-                                add_state_core = 762
-                                add_state_core = 158
-                                add_state_core = 162
-                                add_state_core = 838
-                                add_state_core = 1002 }
             }
 	}
 
@@ -988,12 +1038,12 @@ FRG_spain_imperialate_decision = {
 FRG_lowland_imperialate_decision = {
 		icon = decision_cat_generic_purge
 		visible = {
-			has_completed_focus = FRG_conquest_10
+			has_completed_focus = FRG_lowland
 			
 		}
 		available = {
-			has_completed_focus = FRG_conquest_10
-			6 = { is_owned_and_controlled_by = ROOT }
+			has_completed_focus = FRG_lowland
+						6 = { is_owned_and_controlled_by = ROOT }
                         34 = { is_owned_and_controlled_by = ROOT }
                         29 = { is_owned_and_controlled_by = ROOT }
                         741 = { is_owned_and_controlled_by = ROOT }
@@ -1005,8 +1055,8 @@ FRG_lowland_imperialate_decision = {
                         36 = { is_owned_and_controlled_by = ROOT }
 		}
 		fire_only_once = yes
-		cost = 50
-		days_remove = 12
+		cost = 0
+		days_remove = 1
 
 		ai_will_do = {
 			factor = 6
@@ -1021,8 +1071,7 @@ FRG_lowland_imperialate_decision = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove FRG_italian_imperialate_decision"
 			clr_country_flag = FRG_imperialate
 
-                        FRG = { transfer_state = 6
-                                transfer_state = 34
+                        FRG = { 
                                 transfer_state = 29
                                 transfer_state = 741
                                 transfer_state = 8
@@ -1033,8 +1082,7 @@ FRG_lowland_imperialate_decision = {
                                 transfer_state = 36
       
 
-                                add_state_core = 6
-                                add_state_core = 34
+                                
                                 add_state_core = 29
                                 add_state_core = 741
                                 add_state_core = 8
@@ -1047,23 +1095,24 @@ FRG_lowland_imperialate_decision = {
 	}
 
 
-FRG_german_imperialate_decision = {
+FRG_rhineland_imperialate_decision = {
 		icon = decision_cat_generic_purge
+
 		visible = { 
-			has_completed_focus = FRG_conquest_10
-			
+			has_completed_focus = FRG_Germany
 		}
+
 		available = {
-                        NOT = { country_exists = GER }
-			has_completed_focus = FRG_conquest_10
-			55 = { is_owned_and_controlled_by = ROOT }
-                        51 = { is_owned_and_controlled_by = ROOT }
-                        59 = { is_owned_and_controlled_by = ROOT }
-                        50 = { is_owned_and_controlled_by = ROOT }
+			NOT = { country_exists = GER }
+			has_completed_focus = FRG_Germany
+            55 = { is_owned_and_controlled_by = FRG }
+            51 = { is_owned_and_controlled_by = FRG }
+            59 = { is_owned_and_controlled_by = FRG }
+            50 = { is_owned_and_controlled_by = FRG }
 		}
 		fire_only_once = yes
-		cost = 50
-		days_remove = 12
+		cost = 0
+		days_remove = 1
 
 		ai_will_do = {
 			factor = 6
@@ -1077,37 +1126,365 @@ FRG_german_imperialate_decision = {
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove FRG_italian_imperialate_decision"
 			clr_country_flag = FRG_imperialate
-
+						release = WGR
+                        release = IBW
+						puppet = WGR
+						puppet = IBW
                         WGR = { transfer_state = 59
                                 transfer_state = 57
                                 transfer_state = 51
                                 transfer_state = 55
-                                transfer_state = 60 
+                                transfer_state = 60
+								transfer_state = 56 
                                 add_state_core = 59
                                 add_state_core = 57
                                 add_state_core = 51
                                 add_state_core = 55
+								add_state_core = 56
                                 add_state_core = 60 }
-
-                        puppet = WGR
-                        WGR = { set_cosmetic_tag = FRG_RNL }
-
+                        WGR = {
+                                set_cosmetic_tag = FRG_RNL
+						}
+						WGR = {
+								set_party_name = {
+            	                        ideology = paternal_autocrat
+            	                        long_name = "法兰西莱茵兰占领军"
+            	                        name = "法兰西莱茵兰占领军"
+        	                        }
+                                set_party_name = {
+            	                        ideology = market_liberal
+            	                        long_name = "祇属于香奈儿的商业帝国分部"
+            	                        name = "祇属于香奈儿的商业帝国分部"
+        	                        }
+                                set_party_name = {
+            	                        ideology = authoritarian_democrat
+            	                        long_name = "莱茵兰行省政府"
+            	                        name = "莱茵兰行省政府"
+        	                        }
+                                set_party_name = {
+            	                        ideology = national_populist
+            	                        long_name = "反法游击队"
+            	                        name = "反法游击队"
+        	                        }
+                                set_party_name = {
+            	                        ideology = totalist
+            	                        long_name = "反法游击队"
+            	                        name = "反法游击队"
+        	                        }
+                                set_party_name = {
+            	                        ideology = syndicalist 
+            	                        long_name = "反法游击队"
+            	                        name = "反法游击队"
+        	                        }
+                                }
                         IBW = { transfer_state = 780
                                 transfer_state = 50
                                 add_state_core = 780
                                 add_state_core = 50 }
-
-                        puppet = IBW
-
-                        FRG = { transfer_state = 42
-                                transfer_state = 781
-                                transfer_state = 56
-
-                                add_state_core = 42
-                                add_state_core = 781
-                                add_state_core = 56 }
-            }
-	}
+                        IBW = {
+                                set_party_name = {
+            	                        ideology = authoritarian_democrat
+            	                        long_name = "巴登-符腾堡行省政府"
+            	                        name = "巴登-符腾堡行省政府"
+        	                        }
+			        			set_party_name = {
+            	                        ideology = market_liberal
+            	                        long_name = "祇属于香奈儿的商业帝国分部"
+            	                        name = "祇属于香奈儿的商业帝国分部"
+        	                        }
+			        			set_party_name = {
+            	                        ideology = paternal_autocrat
+            	                        long_name = "法兰西巴登-符腾堡占领军"
+            	                        name = "法兰西巴登-符腾堡占领军"
+        	                        }
+                                set_party_name = {
+            	                        ideology = national_populist
+            	                        long_name = "反法游击队"
+            	                        name = "反法游击队"
+        	                        }
+                                set_party_name = {
+            	                        ideology = totalist
+            	                        long_name = "反法游击队"
+            	                        name = "反法游击队"
+        	                        }
+                                set_party_name = {
+            	                        ideology = syndicalist 
+            	                        long_name = "反法游击队"
+            	                        name = "反法游击队"
+        	                        }
+                        }
+                        if = {
+                                limit = {
+                                        NOT = {
+                                                FRG = {
+                                                        has_completed_focus = FRG_Chanel_win
+                                                }
+                                        }
+                                	}
+                                WGR = { 
+                                set_politics = {
+            	                        ruling_party = authoritarian_democrat
+				        				elections_allowed = no
+        	                        } 
+                                add_popularity = {
+				       				ideology = authoritarian_democrat
+				        			popularity = 0.16
+			                		}
+			        			add_popularity = {
+				        			ideology = market_liberal
+				        			popularity = 0.15
+			                		}
+                                add_popularity = {
+				        			ideology = paternal_autocrat
+				        			popularity = 0.18
+			                		}	
+                                create_country_leader = {
+            	                        name = "罗伯特.舒曼"
+				        				desc = "POLITICS_WGR_COLONIAL_DESC_1"
+            	                        picture = "gfx/leaders/FRG/Portrait_FRG_Maurice_Schumann.png"
+            	                        expire = "1965.1.1"
+            	                        ideology = colonial_govt_subtype
+										traits = { FRG_Schumann }
+                                        }
+                                	}
+                                IBW = {
+                                set_politics = {
+            	                        ruling_party = national_populist 
+				        				elections_allowed = no
+        	                        	} 
+                                create_country_leader = {
+            	                        name = "巴登-符腾堡行省政府机构"
+				        				desc = "POLITICS_IAR_COLONIAL_DESC_1"
+            	                        picture = "gfx/leaders/FRG/Portrait_FRG_Imperial_Regency.png"
+            	                        expire = "1965.1.1"
+            	                        ideology = natpop_colonial_govt_subtype
+                                        }
+								set_party_name = {
+            	                        ideology = national_populist
+            	                        long_name = "巴登-符腾堡行省政府"
+            	                        name = "巴登-符腾堡行省政府"
+        	                        }
+                                add_popularity = {
+				        				ideology = authoritarian_democrat
+				        				popularity = 0.3
+			                			}
+			        			add_popularity = {
+				        				ideology = market_liberal
+				        				popularity = 0.15
+			                			}
+                                add_popularity = {
+				        				ideology = paternal_autocrat
+				        				popularity = 0.23
+			                			}
+                                	}
+                        		}
+                        else_if = {
+								limit = {
+									FRG = {
+                                        has_completed_focus = FRG_Chanel_win
+                                    }
+									NOT = {
+                                        FRG = {
+                                            has_completed_focus = FRG_Appearing_from_the_shadow
+                                        }
+                                    }
+								}
+                                WGR = { 
+                                set_politics = {
+            	                        ruling_party = paternal_autocrat
+				        				elections_allowed = no
+        	                        } 
+                                set_party_name = {
+            	                        ideology = paternal_autocrat
+            	                        long_name = "法兰西情报总局莱茵兰驻地"
+            	                        name = "法兰西情报总局莱茵兰驻地"
+        	                        }
+                                set_party_name = {
+            	                        ideology = market_liberal
+            	                        long_name = "祇听命于香奈儿的法兰西情报总局的特务们"
+            	                        name = "祇听命于香奈儿的法兰西情报总局的特务们"
+        	                        }
+                                create_country_leader = {
+            	                        name = "拜伦.汉斯.京特.冯.丁克拉格"
+				        				desc = "POLITICS_WGR_COLONIAL_DESC_2"
+            	                        picture = "gfx/leaders/FRG/Portrait_FRG_Baron_Hans_Günther_Von_Dincklage.png"
+            	                        expire = "1965.1.1"
+            	                        ideology = pataut_security_state_subtype
+										traits = { FRG_CAGED_BIRD }
+                                        }
+                                add_popularity = {
+				        			ideology = authoritarian_democrat
+				        			popularity = 0.15
+			                		}
+			        			add_popularity = {
+				        			ideology = national_populist
+				        			popularity = 0.15
+			                		}
+                                add_popularity = {
+				        			ideology = paternal_autocrat
+				        			popularity = 0.3
+			                		}
+								}
+                                IBW = {
+                                set_politics = {
+            	                        ruling_party = market_liberal
+				        				elections_allowed = no
+        	                        } 
+                                create_country_leader = {
+            	                        name = "巴登-符腾堡商业董事会"
+				        				desc = "POLITICS_IAR_COLONIAL_DESC_2"
+            	                        picture = "gfx/leaders/FRG/Portrait_FRG_Imperial_Regency.png"
+            	                        expire = "1965.1.1"
+            	                        ideology = marlib_colonial_govt_subtype
+                                        }
+                                add_popularity = {
+				        				ideology = authoritarian_democrat
+				        				popularity = 0.23
+			                			}
+			        			add_popularity = {
+				        				ideology = national_populist
+				        				popularity = 0.15
+			                			}
+                                add_popularity = {
+				        				ideology = paternal_autocrat
+				        				popularity = 0.2
+			                			}
+                                }
+                        }
+						else_if = {
+								limit = {
+									FRG = {
+                                        has_completed_focus = FRG_Appearing_from_the_shadow
+										has_completed_focus = FRG_Chanel_win
+                                    }
+								}
+                                WGR = { 
+                                set_politics = {
+            	                        ruling_party = paternal_autocrat
+				        				elections_allowed = no
+        	                        } 
+                                set_party_name = {
+            	                        ideology = paternal_autocrat
+            	                        long_name = "法兰西情报总局莱茵兰驻地"
+            	                        name = "法兰西情报总局莱茵兰驻地"
+										}
+								set_party_name = {
+            	                        ideology = authoritarian_democrat
+            	                        long_name = "法兰西情报总局莱茵兰驻地"
+            	                        name = "法兰西情报总局莱茵兰驻地"
+										}
+								set_party_name = {
+            	                        ideology = social_conservative
+            	                        long_name = "乌合之众"
+            	                        name = "乌合之众"
+										}
+								set_party_name = {
+            	                        ideology = market_liberal
+            	                        long_name = "乌合之众"
+            	                        name = "乌合之众"
+										}
+								set_party_name = {
+            	                        ideology = social_liberal
+            	                        long_name = "乌合之众"
+            	                        name = "乌合之众"
+										}
+								set_party_name = {
+            	                        ideology = social_democrat
+            	                        long_name = "乌合之众"
+            	                        name = "乌合之众"
+										}
+								set_party_name = {
+            	                        ideology = radical_socialist
+            	                        long_name = "反法游击队"
+            	                        name = "反法游击队"
+										}
+                                create_country_leader = {
+            	                        name = "祇听命于克拉拉的伟大监管者"
+				        				desc = "POLITICS_WGR_COLONIAL_DESC_3"
+            	                        picture = "gfx/leaders/FRG/Portrait_FRG_Shadow.png"
+            	                        expire = "1965.1.1"
+            	                        ideology = spectral_state_subtype
+                                        }
+								add_popularity = {
+				        			ideology = paternal_autocrat
+				        			popularity = 0.82
+			                		}
+                                add_popularity = {
+				        			ideology = totalist
+				        			popularity = 0.05
+			                		}
+								add_popularity = {
+				        			ideology = syndicalist
+				        			popularity = 0.03
+			                		}
+			        			add_popularity = {
+				        			ideology = national_populist
+				        			popularity = 0.1
+			                		}
+								}
+                                IBW = {
+                                set_politics = {
+            	                        ruling_party = paternal_autocrat
+				        				elections_allowed = no
+        	                        } 
+                                create_country_leader = {
+            	                        name = "祇听命于克拉拉的伟大监管者"
+				        				desc = "POLITICS_IAR_COLONIAL_DESC_3"
+            	                        picture = "gfx/leaders/FRG/Portrait_FRG_Shadow.png"
+            	                        expire = "1965.1.1"
+            	                        ideology = spectral_state_subtype
+                                        }
+								set_party_name = {
+            	                        ideology = paternal_autocrat
+            	                        long_name = "法兰西情报总局巴登-符腾堡驻地"
+            	                        name = "法兰西情报总局巴登-符腾堡驻地"
+										}
+								set_party_name = {
+            	                        ideology = authoritarian_democrat
+            	                        long_name = "法兰西情报总局巴登-符腾堡驻地"
+            	                        name = "法兰西情报总局巴登-符腾堡驻地"
+										}
+								set_party_name = {
+            	                        ideology = social_conservative
+            	                        long_name = "乌合之众"
+            	                        name = "乌合之众"
+										}
+								set_party_name = {
+            	                        ideology = market_liberal
+            	                        long_name = "乌合之众"
+            	                        name = "乌合之众"
+										}
+								set_party_name = {
+            	                        ideology = social_liberal
+            	                        long_name = "乌合之众"
+            	                        name = "乌合之众"
+										}
+								set_party_name = {
+            	                        ideology = social_democrat
+            	                        long_name = "乌合之众"
+            	                        name = "乌合之众"
+										}
+								set_party_name = {
+            	                        ideology = radical_socialist
+            	                        long_name = "反法游击队"
+            	                        name = "反法游击队"
+										}
+                                add_popularity = {
+				        				ideology = paternal_autocrat
+				        				popularity = 0.82
+			                			}
+								add_popularity = {
+				        			ideology = totalist
+				        			popularity = 0.1
+			                			}
+								add_popularity = {
+				        			ideology = syndicalist
+				        			popularity = 0.1
+			                			}
+                                }
+                        }
+                }
+		}
 
 FRG_austria_imperialate_decision = {
 		icon = decision_cat_generic_purge

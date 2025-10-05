@@ -233,8 +233,8 @@ ideas = {
 			picture = HOL_welfare_state
 			allowed = { always = no }
 			modifier = {
-				consumer_goods_factor = 0.1
-				stability_factor = -0.04
+				consumer_goods_factor = -0.1
+				stability_factor = 0.04
 				production_speed_industrial_complex_factor = 0.05
 			}
 		}
@@ -281,7 +281,7 @@ ideas = {
 				}
 			}
 			modifier = {
-				consumer_goods_factor = -0.06
+				consumer_goods_factor = -0.12
 			}
 			targeted_modifier = {
 				tag = TUR

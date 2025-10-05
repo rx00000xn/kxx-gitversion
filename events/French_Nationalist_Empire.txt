@@ -1947,6 +1947,10 @@ country_event = {
 				id = frg_new.2
 				days = 25
 			}
+			declare_war_on = {
+         		target = FRG
+         		type = annex_everything
+        	}
 		}	
     }
 	option = {	
@@ -2017,6 +2021,12 @@ country_event = {
 				id = frg_new.2
 				days = 25
 			}
+			FRG = {
+		 		declare_war_on = {
+         			target = FRA
+         			type = annex_everything
+				}
+        	}
 		}
     } 
 }
@@ -2077,6 +2087,11 @@ country_event = {
 			annex_country = { target = FRA transfer_troops = yes }
 			NFA = { change_tag_from = ROOT } 
 		}
+		hidden_effect = {
+			FRG = {
+				dismantle_faction = yes
+			}
+		}
     }  
 	option = {	
         name = frg.30.c
@@ -2085,6 +2100,9 @@ country_event = {
 			target = NFA
 		}
 		hidden_effect = {
+			FRG = {
+				dismantle_faction = yes
+			}
 			NFA = {
 				leave_faction = yes
 			}
@@ -2921,6 +2939,453 @@ country_event = {
 	}
 }
 
+country_event = {  #克拉拉事件链开始
+	id = frg.46
+	immediate = {log = "[GetDateText]: [Root.GetName]: event frg_new.1 "}
+	title = frg.46.t
+	desc = frg.46.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+         
+
+	option = {
+		name = frg.46.a
+		ai_chance = {
+			factor = 50
+		}   
+		hidden_effect = {
+			country_event = {
+				id = frg.47
+				days = 7
+			}
+		}
+	}
+}
+
+country_event = {  #
+	id = frg.47
+	immediate = {log = "[GetDateText]: [Root.GetName]: event frg_new.1 "}
+	title = frg.47.t
+	desc = frg.47.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+         
+
+	option = {
+		name = frg.47.a
+		ai_chance = {
+			factor = 50
+		}   
+		hidden_effect = {
+			country_event = {
+				id = frg.48
+				days = 7
+			}
+		}
+	}
+}
+
+country_event = {  #
+	id = frg.48
+	immediate = {log = "[GetDateText]: [Root.GetName]: event frg_new.1 "}
+	title = frg.48.t
+	desc = frg.48.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+         
+
+	option = {
+		name = frg.48.a
+		ai_chance = {
+			factor = 50
+		}   
+		hidden_effect = {
+			country_event = {
+				id = frg.49
+				days = 4
+			}
+		}
+	}
+}
+
+
+country_event = {  #
+	id = frg.49
+	immediate = {log = "[GetDateText]: [Root.GetName]: event frg_new.1 "}
+	title = frg.49.t
+	desc = frg.49.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+         
+
+	option = {
+		name = frg.49.a
+		ai_chance = {
+			factor = 50
+		}   
+		hidden_effect = {
+			country_event = {
+				id = frg.50
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = {  #
+	id = frg.50
+	immediate = {log = "[GetDateText]: [Root.GetName]: event frg_new.1 "}
+	title = frg.50.t
+	desc = frg.50.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+         
+
+	option = {
+		name = frg.50.a
+		ai_chance = {
+			factor = 50
+		}   
+		hidden_effect = {
+			country_event = {
+				id = frg.52
+				days = 2
+			}
+		}
+	}
+
+	option = {
+		name = frg.50.b
+		ai_chance = {
+			factor = 50
+		}   
+		hidden_effect = {
+			country_event = {
+				id = frg.51
+				days = 2
+			}
+		}
+	}
+}
+
+country_event = {  #香奈儿存活
+	id = frg.51
+	immediate = {log = "[GetDateText]: [Root.GetName]: event frg_new.1 "}
+	title = frg.51.t
+	desc = frg.51.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+         
+
+	option = {
+		name = frg.51.a
+		ai_chance = {
+			factor = 50
+		} 
+		add_manpower = -1  	
+	}
+}
+
+country_event = {  #香奈儿死亡
+	id = frg.52
+	immediate = {log = "[GetDateText]: [Root.GetName]: event frg_new.1 "}
+	title = frg.52.t
+	desc = frg.52.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+         
+
+	option = {
+		name = frg.52.a
+		ai_chance = {
+			factor = 50
+		}   
+		add_manpower = -2
+		set_cosmetic_tag = FRG_Clara_Knecht
+		create_country_leader = {
+			name = "克拉拉·克内希特"
+			desc = ""
+			picture = "gfx/leaders/FRG/Portrait_FRG_Clara_Knecht.png"
+			expire = "1965.1.1"
+			ideology = spectral_state_subtype
+			traits = { FRG_shadow }
+		}	
+	}
+}
+
+
+#暂用红线事件
+country_event = { 
+	id = frg.60 #commuards has returned
+	immediate = {log = "[GetDateText]: [Root.GetName]: event frg.7 "}
+	title = frg.60.t
+	desc = frg.60.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+         
+
+	option = {
+		name = frg.60.a
+		dismantle_faction = yes
+		set_politics = {
+			ruling_party = radical_socialist
+			elections_allowed = no
+		}
+
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.2
+		}
+		add_popularity = {
+			ideology = syndicalist
+			popularity = 0.2
+		}
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.2
+		}
+		add_popularity = {
+			ideology = social_democrat
+			popularity = 0.2
+		}
+		add_popularity = {
+			ideology = national_populist
+			popularity = -0.5
+		}
+		create_country_leader = {	
+			name = "加斯东·维达尔"  # Gaston Vidal
+			picture = "gfx/leaders/FRA/Portrait_FRA_Gaston_Vidal.png"
+			expire = "1.1.1"
+			ideology = radsoc_red_junta_subtype
+		}
+		remove_all_ministers = yes
+		add_ideas = {
+			FRA_Guy_Mollet_hog_sde
+			FRA_Fernand_Despres_for_rso
+			FRA_Laurent_Casenove_eco_syn
+			FRA_Claudine_Chomat_sec_tot
+		}
+		set_party_name = {
+			ideology = totalist
+			long_name = "社会主义行动党"
+			name = "社会主义行动党"
+		}
+		set_party_name = {
+			ideology = syndicalist
+			long_name = "劳工总联合会"
+			name = "劳工总联合会"
+		}
+		set_party_name = {
+			ideology = radical_socialist
+			long_name = "临时政府/联邦无政府主义者联合会"
+			name = "临时政府/联邦无政府主义者联合会"
+		}
+		set_party_name = {
+			ideology = social_democrat
+			long_name = "工人国际法国支部"
+			name = "工人国际法国支部"
+		}
+		set_cosmetic_tag = FRG_commune
+		FRG = {
+			every_unit_leader = {	
+				set_nationality = NSW
+			}	
+		}
+		FRA = {
+			every_unit_leader = {	
+				set_nationality = FRG
+			}	
+		}
+		country_event = {
+			id = frg.61 
+			days = 2
+		}
+		remove_ideas = FRG_A_chaotic_government
+	}
+	
+	
+}
+country_event = { 
+	id = frg.61 #elections or not
+	immediate = {log = "[GetDateText]: [Root.GetName]: event frg.7 "}
+	title = frg.61.t
+	desc = frg.61.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+         
+
+	option = {
+		name = frg.61.a
+		set_country_flag = FRG_totalist_tip
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.1
+		}
+		add_popularity = {
+			ideology = social_democrat
+			popularity = 0.1
+		}
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.1
+		}
+		complete_national_focus = FRG_Crossroads_of_DestinyFRG_Reconstruction_of_the_Republic
+		country_event = {
+			id = frg.62
+			days = 7
+		}
+	}
+	option = {
+		name = frg.61.b
+		
+		set_country_flag = FRG_syndicalist_tip
+		add_popularity = {
+			ideology = syndicalist
+			popularity = 0.1
+		}
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.1
+		}
+		add_popularity = {
+			ideology = social_democrat
+			popularity = 0.1
+		}
+		complete_national_focus = FRG_Beats_Dictator_Severely
+		country_event = {
+			id = frg.63
+			days = 7
+		}
+	}
+	
+}
+country_event = { 
+	id = frg.62 #elections?
+	immediate = {log = "[GetDateText]: [Root.GetName]: event frg.7 "}
+	title = frg.62.t
+	desc = frg.62.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+         
+
+	option = {
+		name = frg.62.a
+		set_politics = {
+			ruling_party = totalist
+			elections_allowed = no
+		}
+		set_cosmetic_tag = FRA_Jacobin
+		
+	}
+	option = {
+		name = frg.62.b
+		set_politics = {
+			ruling_party = radical_socialist
+			elections_allowed = no
+		}
+		set_party_name = {
+			ideology = radical_socialist
+			long_name = "基督教劳联"
+			name = "基督教劳联"
+		}
+		set_party_name = {
+			ideology = social_democrat
+			long_name = "基督教劳联"
+			name = "基督教劳联"
+		}
+		create_country_leader = {
+			name = "加斯东·泰西耶"  # Gaston Tessier
+			picture = "gfx/leaders/FRA/Portrait_FRA_Gaston_Tessier.png"
+			expire = "1.1.1"
+			ideology = christian_socialism_subtype
+		}
+		create_country_leader = {
+			name = "加斯东·泰西耶"  # Gaston Tessier
+			picture = "gfx/leaders/FRA/Portrait_FRA_Gaston_Tessier.png"
+			expire = "1.1.1"
+			ideology = socdem_christian_socialism_subtype
+		}
+		set_cosmetic_tag = FRG_tessier
+	}
+	option = {
+		name = frg.62.c
+		set_politics = {
+			ruling_party = social_democrat
+			elections_allowed = no
+		}
+		set_party_name = {
+			ideology = social_democrat
+			long_name = "共和社会党"
+			name = "共和社会党"
+		}
+		create_country_leader = {	
+			name = "加斯东·维达尔"  # Gaston Vidal
+			picture = "gfx/leaders/FRA/Portrait_FRA_Gaston_Vidal.png"
+			expire = "1.1.1"
+			ideology = socdem_paternal_socialism_subtype
+		}
+		set_cosmetic_tag = FRG_vidal
+	}
+}
+country_event = { 
+	id = frg.63 #elections?
+	immediate = {log = "[GetDateText]: [Root.GetName]: event frg.7 "}
+	title = frg.63.t
+	desc = frg.63.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+         
+
+	option = {
+		name = frg.63.a
+		set_politics = {
+			ruling_party = syndicalist
+			elections_allowed = no
+		}
+		
+		
+	}
+	option = {
+		name = frg.63.b
+		set_politics = {
+			ruling_party = social_democrat
+			elections_allowed = no
+		}
+		
+	}
+	option = {
+		name = frg.63.c
+		set_politics = {
+			ruling_party = radical_socialist
+			elections_allowed = no
+		}
+		set_party_name = {
+			ideology = radical_socialist
+			long_name = "联邦无政府主义者联合会"
+			name = "联邦无政府主义者联合会"
+		}
+		create_country_leader = {
+			name = "达尼埃尔·介朗"
+			picture = "gfx/leaders/FRA/Portrait_France_Daniel_Guerin.png"
+			expire = "1.1.1"
+			ideology = anarcho_communism_subtype
+			traits = {}
+		}
+	}
+}
+
+#外交用事件
 country_event = { #反德外交方向
 	id = frg.100
 	immediate = { log = "[GetDateText]: [Root.GetName]: event frg.100" }
@@ -3034,22 +3499,16 @@ country_event = { #反德外交方向
 					}
 				}
 			ENG = {
-				is_faction_leader = yes
 				has_socialist_government = yes
 			}
 		}
-		if = {
-			limit = {
-				is_in_faction = yes
-			}
-			leave_faction = yes
-		}
-		ENG = {
-			add_to_faction = FRG
-		}
-		else = {
+		FRG = {
+			create_faction = "第三国际"
 			complete_national_focus = FRG_internationale
-		}	
+		}
+		FRG = {
+			add_to_faction = ENG
+		}
 	}
 }
 
@@ -3160,19 +3619,23 @@ country_event = { #日内瓦普通的一天
 						has_country_leader = { ruling_only = yes name = "西蒙·萨比亚尼" }
 					}
 				}
+			}
 		FRG = {transfer_state = 943}
 		FRG = { 
 			puppet = SWI
 	 		}
-		set_politics = {
+		SWI = {
+			set_politics = {
             	ruling_party = totalist
-        	} 
-        add_popularity {
+				elections_allowed = no
+        		}
+			add_popularity = {
 				ideology = totalist
 				popularity = 0.4
-			} 
+				}
+			complete_national_focus = SWI_referendum_syndicalism  
+        	}
 		}
-	}
 	option = {
 		name = frg.102.c
 		ai_chance = {
@@ -3271,6 +3734,23 @@ country_event = { #一位社会主义共和国边防部队士兵的日记
 				}
 			}
         add_war_support = 0.2
+		FRG = {
+			add_to_faction = SRI
+			}
+		SRI = {
+			create_wargoal = {
+				type = annex_everything
+				target = SIC
+				} 
+			create_wargoal = {
+				type = annex_everything
+				target = ITA
+				}
+			create_wargoal = {
+				type = annex_everything
+				target = PAP
+				}  
+			}
 		}
 	}
 country_event = { #海峡两岸
@@ -3422,6 +3902,7 @@ country_event = { #北方邻国开始行动
 			}
 			SPR = {
 				has_completed_focus = SPR_post_civil_war
+				is_in_faction_with = FRG
 			}
 			CAR = { exists = no }
 			CNT = { exists = no }
@@ -3459,8 +3940,10 @@ country_event = { #北方邻国开始行动
 		FRG = {
 			unlock_decision_tooltip = FRG_spain_imperialate_decision
 			if = {
-				CAR = {
-					has_completed_focus = CAR_restauracion
+				limit = {
+					CAR = {
+						has_completed_focus = CNT_election_success
+					}
 				}
 			create_wargoal = {
 				type = annex_everything
@@ -3468,8 +3951,10 @@ country_event = { #北方邻国开始行动
 				}
 			}
 		else_if = {
-			CNT = {
+			limit = {
+				CNT = {
 					has_completed_focus = CNT_election_success
+					}
 				}
 		create_wargoal = {
 			type = annex_everything
@@ -3485,18 +3970,54 @@ country_event = { #北方邻国开始行动
 		}   
 		trigger = {
 			FRG = {
-				has_government = syndicalist
-				has_government = radical_socialist
-				has_government = social_democrat
-				has_country_leader = { ruling_only = yes name = "西蒙·萨比亚尼" }
-			}
+					OR = {
+						has_government = syndicalist
+						has_government = radical_socialist
+						has_government = social_democrat
+						has_country_leader = { ruling_only = yes name = "西蒙·萨比亚尼" }
+					}
+				}
 			CNT = {
-					has_completed_focus = CNT_election_success
+				has_completed_focus = CNT_election_success
 				}
 			}
-        add_political_power = 100
-		ENG = {
+		add_war_support = 0.2
+		FRG = {
 			add_to_faction = CNT
+		}
+	}
+	option = {
+		name = frg.106.e
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			NOT = {
+				FRG = {
+					OR = {
+						has_government = syndicalist
+						has_government = radical_socialist
+						has_government = social_democrat
+						has_country_leader = { ruling_only = yes name = "西蒙·萨比亚尼" }
+					}
+				}
+			}
+			SPR = {
+				has_completed_focus = SPR_post_civil_war
+			}
+			NOT = {
+				SPR = {
+					is_in_faction_with = FRG
+				}
+			}
+			CAR = { exists = no }
+			CNT = { exists = no }
+		}
+		FRG = {
+			create_wargoal = {
+			type = annex_everything
+			target = SPR
+				}
 		}
 	}
 }
@@ -3543,9 +4064,9 @@ country_event = { #重组法属西非
 				popularity = 0.14
 			}
         	create_country_leader = {
-            	name = "法兰西西非殖民局"
+            	name = "乔治.比多"
 				desc = "POLITICS_SEN_COLONIAL_DESC"
-            	picture = "gfx/leaders/FRG/Portrait_FRG_Imperial_Regency.png"
+            	picture = "gfx/leaders/FRG/Portrait_FRG_Georges_Bidault.png"
             	expire = "1965.1.1"
             	ideology = colonial_govt_subtype
         	}
