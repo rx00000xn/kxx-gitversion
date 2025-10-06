@@ -10047,6 +10047,10 @@ FORM_GDC = {
 	color = rgb { 195 198 124 }
 	color_ui = rgb { 195 198 124 }
 }
+SQI_IJA = {
+	color = rgb { 255 200 200 }
+	color_ui = rgb { 255 255 255 }
+} 
 #我的第三十七年（待开发希腊内容）
 TUR_byron = {
 	color = rgb { 195 198 124 }

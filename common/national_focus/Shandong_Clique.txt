@@ -5955,6 +5955,9 @@ hidden_effect = {
 		}
 		completion_reward = {	
 			add_ideas = MNS_japan_military
+			hidden_effect = {
+				country_event = KXXJAP.9
+			}
 		}
 	}
 	focus = {
@@ -6401,6 +6404,14 @@ hidden_effect = {
 			add_stability = 0.12
 			add_war_support = 0.08
 			add_ideas = MNS_forward_march
+			if = {
+				limit = { 
+					SQI = {
+						has_country_flag = SQI_IJA_take_over
+					}
+				}
+				set_cosmetic_tag = HANJIAN
+			}
 		}
 	}
 	focus = {
@@ -6415,6 +6426,9 @@ hidden_effect = {
 		}
 		available = { 
 			has_completed_focus = MNS_asian_future
+			NOT = { 
+				has_country_flag = SQI_IJA_take_over
+			} 
 		}
 		bypass = { 
 		 }        
