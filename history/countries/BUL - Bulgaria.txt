@@ -123,7 +123,7 @@ country_event = { id = bulgariaflavour.14 days = 702 }
 set_research_slots = 3
 set_convoys = 40
 set_country_flag = BUL_liberal_government
-
+add_soclib_to_coalition = yes
 set_stability = 0.65
 set_war_support = 0.40
 
@@ -156,10 +156,10 @@ set_popularities = {
 	radical_socialist = 4
 	syndicalist = 4
 	social_democrat = 6
-	social_liberal = 3
+	social_liberal = 13
 	market_liberal = 11
 	social_conservative = 21
-	authoritarian_democrat = 40
+	authoritarian_democrat = 30
 	paternal_autocrat = 8
 	national_populist = 3
 }

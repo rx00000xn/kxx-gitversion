@@ -1100,6 +1100,7 @@ country_event = { #Syndicalist state restructuring
 			expire = "1.1.1"
 			ideology = anarcho_bolshevism_subtype
 		}
+		set_country_flag = BUL_anarchoids
 		set_politics = {
 			ruling_party = totalist
 			elections_allowed = no
@@ -1107,6 +1108,7 @@ country_event = { #Syndicalist state restructuring
 	}
 	option = { #This will take some time
 		name = bulgaria.36.e
+		set_country_flag = BUL_tankie_w
 		add_popularity = {
 			ideology = totalist
 			popularity = 0.1
@@ -1460,7 +1462,11 @@ country_event = { #Post-war government shift
 	mean_time_to_happen = {
 		days = 7
 	}
-
+	immediate = {
+		hidden_effect = {
+			complete_national_focus = BUL_balkan_war_defeat
+		}
+	}
 	option = { #The Agrarians take power!
 		name = bulgaria.46.a
 		ai_chance = {
@@ -1665,7 +1671,7 @@ country_event = { #Post-war government shift
 
 		set_country_flag = BUL_broad_socialist_government
 
-		add_ideas = BUL_rebuilding_the_state_idea
+		
 
 		remove_ideas = BUL_asserting_the_tsars_power_idea
 	}
@@ -1771,7 +1777,7 @@ country_event = { #Post-war government shift
 
 		set_country_flag = BUL_radical_democrat_government
 
-		add_ideas = BUL_rebuilding_the_state_idea
+		
 
 		remove_ideas = BUL_asserting_the_tsars_power_idea
 	}
@@ -4108,7 +4114,6 @@ country_event = { #Syndicalist Coup
 
 		remove_ideas = BUL_asserting_the_tsars_power_idea
 
-		add_ideas = BUL_restructuring_the_state_idea
 
 		if = {
 			limit = { has_unit_leader = 76891 }
@@ -4119,10 +4124,7 @@ country_event = { #Syndicalist Coup
 		}
 
 		hidden_effect = {
-			country_event = {
-				id = bulgaria.36
-				days = 3
-			}
+			
 			news_event = {
 				id = worldnews.144
 				days = 2
@@ -6489,17 +6491,165 @@ country_event = { #
 	}
 }
 country_event = { # 
+	id = bulgaria_foreign_events.6
+	title = bulgaria_foreign_events.6.t
+	desc = bulgaria_foreign_events.6.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { # yes
+		name = bulgaria_foreign_events.6.a
+		
+	}
+	option = { # yes
+		name = bulgaria_foreign_events.6.b
+		
+	}
+}
+country_event = { #collapse of liberal union 
 	id = bulgaria_foreign_events.7
 	title = bulgaria_foreign_events.7.t
 	desc = bulgaria_foreign_events.7.d
 	is_triggered_only = yes
-	
+	fire_only_once = yes
 	option = { # yes
 		name = bulgaria_foreign_events.7.a
-		
+		set_politics = {
+			ruling_party = authoritarian_democrat
+			elections_allowed = yes
+		}
 	}
 	option = { # yes
 		name = bulgaria_foreign_events.7.b
+		set_politics = {
+			ruling_party = social_liberal
+			elections_allowed = yes
+		}
+		clr_country_flag = BUL_liberal_government
+		remove_all_ministers = yes
+		add_ideas = {
+			BUL_Atanas_Burov_hog_sli
+			BUL_Stoyan_Danev_for_sli
+			BUL_Aleksandar_Tsankov_eco_sli
+			BUL_Mihail_Madzharov_sec_sli
+		}
+		add_popularity = {
+			ideology = social_liberal
+			popularity = 0.2
+		}
+	}
+}
+country_event = { #agrians
+	id = bulgaria_foreign_events.8
+	title = bulgaria_foreign_events.8.t
+	desc = bulgaria_foreign_events.8.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		hidden_effect = {
+			set_party_name = { 
+				ideology = social_liberal
+				long_name = BUL_bzns_soclib_long
+				name = BUL_bzns_soclib
+			}
+			set_party_name = { 
+				ideology = social_conservative
+				long_name = BUL_its_just_bzns_party_long
+				name = BUL_its_just_bzns_party
+			}
+		}
+	}
+	option = { # yes
+		name = bulgaria_foreign_events.8.a
+		complete_national_focus = BUL_right_mandate
+		add_soclib_to_coalition = yes
+	}
+	option = { # yes
+		name = bulgaria_foreign_events.8.b
+		set_politics = {
+			ruling_party = social_liberal
+			elections_allowed = yes
+		}
+		complete_national_focus = BUL_left_mandate
+		create_country_leader = {
+			name = "Dimitar Gichev"
+			picture = "gfx/leaders/BUL/Portrait_BUL_Dimitar_Gichev.png"
+			expire = "1.1.1"
+			ideology = soclib_agrarianism_subtype
+		}
+		add_soccon_to_coalition = yes
+		add_popularity = {
+			ideology = social_liberal
+			popularity = 0.2
+		}
+	}
+}
+
+country_event = { #
+	id = bulgaria_foreign_events.9
+	title = bulgaria_foreign_events.9.t
+	desc = bulgaria_foreign_events.9.d
+	is_triggered_only = yes
+	
+	option = { # yes
+		name = bulgaria_foreign_events.9.a
+		remove_all_ministers = yes
+		add_ideas = {
+			BUL_Bogdan_Filov_hog_pau
+			BUL_Andrey_Toshev_for_pau
+			BUL_Georgi_Kyoseivanov_eco_pau
+			BUL_Pencho_Zlatev_sec_pau
+		}
+
+		set_politics = {
+			ruling_party = paternal_autocrat
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = paternal_autocrat
+			popularity = 0.2
+		}
+		add_popularity = {
+			ideology = national_populist
+			popularity = -0.2
+		}
+		set_country_flag = BUL_absolutist_government
+		if = {
+			limit = {
+				has_idea = BUL_ministry_of_national_economy_idea_vel
+			}
+			swap_ideas = {
+				remove_idea = BUL_ministry_of_national_economy_idea_vel
+				add_idea = BUL_ministry_of_national_economy_idea_zla
+			}
+		}
+		if = {
+			limit = {
+				has_idea = BUL_yellow_unions_vel
+			}
+			swap_ideas = {
+				remove_idea = BUL_yellow_unions_vel
+				add_idea = BUL_yellow_unions_zla
+			}
+		}
+		if = {
+			limit = {
+				has_idea = BUL_general_directorate_of_renewal_idea_vel
+			}
+			swap_ideas = {
+				remove_idea = BUL_general_directorate_of_renewal_idea_vel
+				add_idea = BUL_general_directorate_of_renewal_idea_zla_2
+			}
+		}
+		if = {
+			limit = {
+				has_idea = BUL_new_welded_state_vel_2
+			}
+			swap_ideas = {
+				remove_idea = BUL_new_welded_state_vel_2
+				add_idea = BUL_new_welded_state_zla_2
+			}
+		}
 		
 	}
+	
 }
