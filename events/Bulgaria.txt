@@ -3775,6 +3775,7 @@ country_event = { #Death of Ferdinand I, ascension of Boris III
 				id = worldnews.142
 				days = 2
 			}
+			country_event = { id = bulgaria.125 days = 30  }
 		}
 	}
 
@@ -3822,6 +3823,7 @@ country_event = { #Death of Ferdinand I, ascension of Boris III
 				id = worldnews.142
 				days = 2
 			}
+			country_event = { id = bulgaria.125 days = 30  }
 		}
 	}
 
@@ -5475,6 +5477,23 @@ country_event = { #Potential Coup
 			}
 		}
 	}
+	option = {
+		name = bulgaria.125.e #bulgarists
+		trigger = {
+			has_country_flag = BUL_ready_to_be_based
+		}
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = { rule = BUL_politics option = BUL_POLITIC_PATAUT }
+					has_game_rule = { rule = BUL_politics option = BUL_POLITIC_SYNDIE }
+				}
+			}
+		}
+		country_event = kxbul.14
+	}
 }
 
 country_event = { #Anger against Agrarians
@@ -6536,6 +6555,7 @@ country_event = { #collapse of liberal union
 			ideology = social_liberal
 			popularity = 0.2
 		}
+		
 	}
 }
 country_event = { #agrians

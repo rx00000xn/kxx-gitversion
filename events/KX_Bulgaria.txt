@@ -335,11 +335,11 @@ country_event = { #Derzhavin Wins Seat in Parliament
 				random = 600
 			}
 			
-			country_event = {
-				id = kxbul.13
-				days = 100
-				random = 600
-			}
+			#country_event = {
+			#	id = kxbul.13
+			#	days = 100
+			#	random = 600
+			#}
 		}
 	}
 }
@@ -357,6 +357,7 @@ country_event = { #Rising Tatar sympathy in the government
 
 	option = { #Must be the work of Ishaki
 		name = kxbul.11.a
+		set_country_flag = BUL_ready_to_be_based
 	}
 }
 
@@ -681,7 +682,18 @@ country_event = { #
 	desc = kxbul.25.d
 
 	is_triggered_only = yes
-	
+	immediate = {
+		set_party_name = { 
+			ideology = syndicalist
+			long_name = bulgarist_party_long 
+			name = bulgarist_party 
+		}
+		set_party_name = { 
+			ideology = radical_socialist
+			long_name = bulgarist_party_long 
+			name = bulgarist_party 
+		}
+	}
 	fire_only_once = yes
 
 	option = { #...what now?

@@ -3335,7 +3335,9 @@ focus_tree = {
 			focus = BUL_right_mandate
 			focus = BUL_left_mandate
 		}
-		
+		available = {
+			BUL_agrarians_in_power = no
+		}
 		ai_will_do = { factor = 20 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BUL_cultural_autonomy"
@@ -3437,7 +3439,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
     	available = {
 			OR = {
-				has_completed_focus = BUL_the_agrarians
+				BUL_agrarians_in_power = yes
 				has_completed_focus = BUL_georgievsorganicstate
 			}
 			
@@ -6358,7 +6360,7 @@ focus_tree = {
 		}
 		
 		available = {
-			has_completed_focus = BUL_left_pivot
+			BUL_has_socialist_rule = yes
 			RUS = {
 				has_socialist_government = no
 			}
@@ -8241,7 +8243,7 @@ focus = {
 		}
 		available = {
 			OR = {
-				has_completed_focus = BUL_the_absolutists_have_seized_power
+				BUL_absolutists_in_power = yes
 				has_completed_focus = BUL_lukovsmilitantstate
 				has_completed_focus = BUL_young_officers
 			}
@@ -9198,6 +9200,8 @@ focus = {
     prerequisite = {
       focus = BUL_socialist_orthodoxy
 	  focus = BUL_agrarian_syndicalism
+	  focus = NBUL_laughter_and_tears
+	  focus = NBUL_total_war_for_bread
     }
     available = {
       BUL_has_socialist_rule = yes
@@ -9618,8 +9622,10 @@ focus = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 		prerequisite = {
-			focus = BUL_agrarian_syndicalism
 			focus = BUL_socialist_orthodoxy
+			focus = BUL_agrarian_syndicalism
+			focus = NBUL_laughter_and_tears
+			focus = NBUL_total_war_for_bread
 		}
 		ai_will_do = { factor = 20 }
 		completion_reward = {
@@ -9984,8 +9990,10 @@ focus = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		prerequisite = {
-			focus = BUL_agrarian_syndicalism
 			focus = BUL_socialist_orthodoxy
+			focus = BUL_agrarian_syndicalism
+			focus = NBUL_laughter_and_tears
+			focus = NBUL_total_war_for_bread
 		}
 		ai_will_do = {
 			factor = 40
@@ -16409,8 +16417,7 @@ focus = {
 			has_socialist_government = yes
 		}
 		prerequisite = { 
-			focus = BUL_Legacy_Of_Waisi_Movement
-			focus = BUL_Left_SR_Doctrine
+			focus = BUL_Soltangaliev_Doctrine
 		}
 		ai_will_do = {
 			factor = 80
@@ -16434,7 +16441,6 @@ focus = {
 		}
 		prerequisite = { 
 			focus = BUL_Soltangaliev_Doctrine 
-			focus = BUL_Left_SR_Doctrine
 		}
 		ai_will_do = {
 			factor = 80
@@ -17647,21 +17653,19 @@ focus = {
 		}
 
 		completion_reward = {
-			country_event = bulgaria.17
-			swap_ideas = {
-				remove_idea = peacetime
-				add_idea = full_armament_level
-			}
-			swap_ideas = {
-				remove_idea = interventionist_market
-				add_idea = laissez_faire_cap
-			}
+			increase_mobilisation = yes
+			increase_conscription = yes
+			
 			add_popularity = {
 			    ideology = totalist
 				popularity = -0.1
 			}
 			add_popularity = {
 			    ideology = syndicalist
+				popularity = -0.1
+			}
+			add_popularity = {
+			    ideology = radical_socialist
 				popularity = -0.1
 			}
 			add_popularity = {
