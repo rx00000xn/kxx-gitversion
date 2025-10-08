@@ -465,9 +465,7 @@ country_event = {
 
 	is_triggered_only = yes
 	fire_only_once = yes
-    immediate = {
-		mark_focus_tree_layout_dirty = yes
-	}     
+         
 
 	option = {
 		name = frg.12.a
@@ -589,7 +587,7 @@ country_event = {
 			set_country_flag = FRA_ribes_ousted
 		}
 	}
-
+	mark_focus_tree_layout_dirty = yes
 	
 }
 country_event = { 
@@ -656,6 +654,9 @@ country_event = {
 
 	option = {
 		name = frg.15.a
+		trigger = { 
+			is_ai = no
+		}
 		add_stability = -0.05
 		hidden_effect = {
 			if = {
@@ -682,11 +683,16 @@ country_event = {
 					days = 7
 				}
 			}
+		}	
+	}	
+
+	option = {
+		name = frg.15.b
+		trigger = { 
+			is_ai = yes
 		}
-		
-	}
-	
-	
+		add_stability = -0.05
+	}	
 }
 country_event = {  #甘莫林专属事件-可疑的举动
 	id = frg.16 #thorez seizes control
@@ -1953,6 +1959,22 @@ country_event = {
          		target = FRG
          		type = annex_everything
         	}
+			declare_war_on = {
+         		target = BRI
+         		type = annex_everything
+        	}
+			declare_war_on = {
+         		target = NRM
+         		type = annex_everything
+        	}
+			declare_war_on = {
+         		target = OCC
+         		type = annex_everything
+        	}
+			declare_war_on = {
+         		target = LRE
+         		type = annex_everything
+        	}
 		}	
     }
 	option = {	
@@ -2023,11 +2045,25 @@ country_event = {
 				id = frg_new.2
 				days = 25
 			}
-			FRG = {
-		 		declare_war_on = {
-         			target = FRA
-         			type = annex_everything
-				}
+			declare_war_on = {
+         		target = FRG
+         		type = annex_everything
+        	}
+			declare_war_on = {
+         		target = BRI
+         		type = annex_everything
+        	}
+			declare_war_on = {
+         		target = NRM
+         		type = annex_everything
+        	}
+			declare_war_on = {
+         		target = OCC
+         		type = annex_everything
+        	}
+			declare_war_on = {
+         		target = LRE
+         		type = annex_everything
         	}
 		}
     } 
@@ -3403,11 +3439,7 @@ country_event = { #反德外交方向
 				factor = 0.5
 			}
 		}
-		if = {
-			limit = { is_faction_leader = yes }
-			set_faction_name = "大陆轴心"
-		}
-		else = {
+		FRG = {
 			create_faction = "大陆轴心"
 			complete_national_focus = FRG_be_independent
 		}
@@ -3436,16 +3468,10 @@ country_event = { #反德外交方向
 			    }
 			}
 		}
-		if = {
-			limit = {
-				is_in_faction = yes
-			}
-			leave_faction = yes
-		}
 		RUS = {
 			add_to_faction = FRG
 		}
-		else = {
+		FRG = {
 			complete_national_focus = FRG_ally_russia
 		}
 	}
@@ -3473,16 +3499,10 @@ country_event = { #反德外交方向
 				has_socialist_government = no
 			}
 		}
-		if = {
-			limit = {
-				is_in_faction = yes
-			}
-			leave_faction = yes
-		}
 		CAN = {
 			add_to_faction = FRG
 		}
-		else = {
+		FRG = {
 			complete_national_focus = FRG_be_english
 		}
 	}
@@ -3563,6 +3583,10 @@ country_event = { #里昂平常的一天
 					}
 			}
 		}
+		FRG = { transfer_state = 943 }
+		FRG = { 
+			add_state_core = 943
+			}
 		SWI = {
 				country_event = { id = frg.102 days = 4 }
 			}
@@ -3824,7 +3848,6 @@ country_event = { #确保后花园稳定
 					}
 				}
 			}
-		}
 		create_wargoal = {
 			type = annex_everything
 			target = CNT
@@ -3833,6 +3856,10 @@ country_event = { #确保后花园稳定
 			type = annex_everything
 			target = CAR
 		}
+		FRG = {
+				set_country_flag = FRG_SPR_alliged
+		}
+	}
 	option = {
 		name = frg.105.b
 		ai_chance = {
@@ -3845,23 +3872,23 @@ country_event = { #确保后花园稳定
 						has_government = radical_socialist
 						has_government = social_democrat
 						has_country_leader = { ruling_only = yes name = "西蒙·萨比亚尼" }
-					}
+				}
 			}
 		}
 		CNT = {
-				add_equipment_to_stockpile = {
+			add_equipment_to_stockpile = {
 					type = infantry_equipment
 					amount = 2000
 					producer = FRG
 				}
-				add_ideas = internationale_support
+			add_ideas = internationale_support
+		}
 	}
 	option = {
 		name = frg.105.c
 		ai_chance = {
 			factor = 0
-			}   
-		}
+		}   
 	}
 }
 country_event = { #北方邻国开始行动
@@ -3874,8 +3901,9 @@ country_event = { #北方邻国开始行动
 			has_completed_focus = FRG_iberian
 		}
 		OR = {
-			SPR = {
-				has_completed_focus = SPR_post_civil_war
+			custom_trigger_tooltip = {
+				tooltip = SPR_post_civil_war_tt
+				always = no
 			}
 			CNT = {
 				has_completed_focus = CNT_election_success
@@ -3908,7 +3936,7 @@ country_event = { #北方邻国开始行动
 			}
 			CAR = { exists = no }
 			CNT = { exists = no }
-			}
+		}
 		FRG = {
 			unlock_decision_tooltip = FRG_spain_imperialate_decision
 			annex_country = { target = SPR transfer_troops = yes }

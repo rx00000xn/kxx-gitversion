@@ -40913,6 +40913,10 @@ focus = {
 				}
 				custom_effect_tooltip = FRG_Gamelin_yes_tooltip
 				hidden_effect = {
+					country_event = {
+						id = frg.15
+						days = 30
+					}
 					remove_ideas = FRG_large_tear
 					set_politics = {
 						ruling_party = social_democrat

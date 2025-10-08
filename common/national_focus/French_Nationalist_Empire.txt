@@ -13676,6 +13676,7 @@ focus_tree = {
 			add_state_core = 42
 			add_state_core = 781
 			add_state_core = 8
+			add_state_core = 735
 			add_state_core = 741
 			add_state_core = 34
 			add_state_core = 6
@@ -14291,6 +14292,7 @@ focus_tree = {
 			focus = FRG_world
 		}
 		completion_reward = {
+			custom_effect_tooltip = FRG_europe_tooltip_total_1
 			custom_effect_tooltip = FRG_europe_tooltip_8
 			unlock_decision_tooltip = FRG_invite_ser
 			unlock_decision_tooltip = FRG_invite_ire
@@ -14454,10 +14456,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			custom_effect_tooltip = FRG_europe_tooltip_11
+			country_event = frg.105
 			hidden_effect = {
 				unlock_decision_tooltip = FRG_invite_spr
 				unlock_decision_tooltip = FRG_invite_por
-				country_event = frg.105
 			}
 		}
 	}
@@ -14543,14 +14545,19 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			custom_effect_tooltip = FRG_europe_tooltip_13
+			custom_effect_tooltip = FRG_europe_tooltip_19
 			unlock_decision_tooltip = FRG_invite_pol
 			unlock_decision_tooltip = FRG_rhineland_imperialate_decision
-			add_ideas = FRG_extreme_germanophobia
-			declare_war_on = {
-         		target = GER
-         		type = annex_everything
-        	} 
+			unlock_decision_tooltip = FRG_bavaria_imperialate_decision
+			unlock_decision_tooltip = FRG_schleswig_holstein_imperialate_decision
+			unlock_decision_tooltip = FRG_berlin_imperialate_decision
+			hidden_effect = {
+				add_ideas = FRG_extreme_germanophobia
+				declare_war_on = {
+         			target = GER
+         			type = annex_everything
+        		}
+			} 
 		}
 	}
 
@@ -14586,6 +14593,7 @@ focus_tree = {
 			focus = FRG_Germany
 		}
 		completion_reward = {
+			unlock_decision_tooltip = FRG_austria_imperialate_decision
 			declare_war_on = {
          		target = AUS
          		type = annex_everything
@@ -14608,6 +14616,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			custom_effect_tooltip = FRG_europe_tooltip_18
+			unlock_decision_tooltip = FRG_illyria_imperialate_decision
 		}
 	}
 
@@ -14789,6 +14798,14 @@ focus_tree = {
 		}
 		completion_reward = {
 			custom_effect_tooltip = FRG_europe_tooltip_17
+			unlock_decision_tooltip = FRG_tunisia_imperialate_decision
+			hidden_effect = {
+				add_state_core = 459
+				add_state_core = 460
+				add_state_core = 805
+				add_state_core = 513
+				add_state_core = 514
+			}
 		}
 	}
 

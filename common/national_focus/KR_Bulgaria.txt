@@ -19799,6 +19799,7 @@ focus = {
 				has_war_with = SER
 				NOT = { country_exists = SER }
 				has_subject = SER
+				has_country_flag = BUL_surrender_no_war
 			}
 			
 		}
