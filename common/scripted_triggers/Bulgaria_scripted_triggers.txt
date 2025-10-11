@@ -14,6 +14,14 @@ BUL_has_zveno_rule = {
 				has_government = paternal_autocrat
 				has_country_flag = BUL_zveno_is_pataut
 			}
+			AND = {
+				has_government = social_democrat
+				has_country_flag = kazasov_zveno
+			}
+			AND = {
+				has_government = radical_socialist
+				has_country_flag = kazasov_zveno
+			}
 		}
 	}
 }
@@ -69,7 +77,6 @@ BUL_has_liberal_rule = {
 BUL_has_democrat_rule = {
 	custom_trigger_tooltip = {
 		tooltip = BUL_radical_democrat_government
-		
 		has_government = market_liberal
 		
 	}

@@ -1280,14 +1280,11 @@ ideas = {
 			picture = UK_economy_syn_idea
 			allowed = { always = no }
 			modifier = {
-				political_power_gain = -0.25
+				political_power_gain = 0.25
 				production_speed_buildings_factor = 0.15
-				weekly_manpower = -100
+				weekly_manpower = 100
 			}
-			on_remove = {
-				log = "[GetDateText]: [Root.GetName]: remove idea BUL_build_for_fatherland"
-				country_event = { id = bulgaria.64 days = 3 }
-			}
+			
 		}
 
 		BUL_mass_housing = {

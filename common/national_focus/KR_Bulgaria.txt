@@ -2953,6 +2953,7 @@ focus_tree = {
     
     available = {
       BUL_has_liberal_rule = yes
+	  has_government = market_liberal
     }
     relative_position_id = BUL_tarnovo_constitution
     x = 3
@@ -9607,7 +9608,7 @@ focus = {
 				ideology = totalist
 				popularity = 0.05
 			}
-      set_politics = {ruling_party = syndicalist}
+			
 		}
 	}
 
@@ -9636,23 +9637,7 @@ focus = {
 			770 = { increase_state_category_by_one_level = yes } #Pleven
 			771 = { increase_state_category_by_one_level = yes } #Varna
 			990 = { increase_state_category_by_one_level = yes } #Vidin
-			if = {
-				limit = {
-					has_completed_focus = BUL_integrate_ikonomov
-					has_completed_focus = BUL_empower_zpk
-					has_completed_focus = BUL_french_practices
-				}
-				remove_ideas = BUL_royalist_resistance_worse_2
-			}
-			else_if = {
-				limit = {
-					has_completed_focus = BUL_overthrow_royal_memorials
-					has_completed_focus = BUL_perfect_democracy
-					has_completed_focus = BUL_organise_youth
-					has_completed_focus = BUL_mass_volunteer_work
-				}
-				remove_ideas = BUL_royalist_resistance_worse_2
-			}
+			
 		}
 	}
 
@@ -10026,7 +10011,7 @@ focus = {
 		ai_will_do = { factor = 20 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BUL_integrate_ikonomov"
-			
+			add_tot_to_coalition = yes
 			add_popularity = {
 				ideology = totalist
 				popularity = 0.05
@@ -10254,20 +10239,7 @@ focus = {
 					instant_build = yes
 				}
 			}
-			add_timed_idea = {
-				idea = BUL_build_for_fatherland
-				days = 550
-			}
-			if = { #check if this is the final focus the player needs to complete in the RadSoc tree, and if it is, remove royalist resistance
-				limit = {
-					has_completed_focus = BUL_dimitrov_constitution
-					has_completed_focus = BUL_ds_establishment
-					has_completed_focus = BUL_agricultural_collectives
-					has_completed_focus = BUL_anti_clericalism
-					has_completed_focus = BUL_minority_integration
-				}
-				remove_ideas = BUL_royalist_resistance_worse_2
-			}
+			add_ideas = BUL_build_for_fatherland
 		}
 	}
 focus = {
@@ -10870,7 +10842,6 @@ focus = {
     available = {
       OR = {
         has_government = social_democrat
-        has_government = market_liberal
         has_government = social_liberal
       }
     }
@@ -13566,10 +13537,160 @@ focus = {
       has_country_flag = georgiev_zveno
     }
     relative_position_id = BUL_leadership_question
-    x = -3
+    x = -2
     y = 1
     completion_reward = {
       custom_effect_tooltip = unlock_focuses
+    }
+  }
+  focus = {
+    id = BUL_kazasovssocialpatroicism
+    icon = GFX_goal_BUL_kazasovssocialpatroicism
+    cost = 3
+    prerequisite = {
+      focus = BUL_leadership_question
+    }
+    available = {
+      BUL_has_zveno_rule = yes
+      has_country_flag = kazasov_zveno
+    }
+    bypass = {
+      has_country_flag = kazasov_zveno
+    }
+    relative_position_id = BUL_leadership_question
+    x = -6
+    y = 1
+    completion_reward = {
+      custom_effect_tooltip = unlock_focuses
+    }
+  }
+  focus = {
+    id = BUL_socdem_allies
+    icon = GFX_goal_NIC_Victory_Social_Democracy
+    cost = 3
+    prerequisite = {
+      focus = BUL_kazasovssocialpatroicism
+    }
+    available = {
+      BUL_has_zveno_rule = yes
+    }
+    
+    relative_position_id = BUL_kazasovssocialpatroicism
+    x = -1
+    y = 1
+    completion_reward = {
+      add_popularity = {
+        ideology = syndicalist
+        popularity = 0.1
+      }
+	  add_popularity = {
+        ideology = radical_socialist
+        popularity = 0.1
+      }
+	add_political_power = 100
+	  add_synd_to_coalition = yes
+	  add_radsoc_to_coalition = yes
+	  add_ideas = BUL_ally_left
+    }
+  }
+  focus = {
+    id = BUL_army_loyalty
+    icon = GFX_focus_HOL_deal_with_right
+    cost = 3
+    prerequisite = {
+      focus = BUL_socdem_allies
+    }
+    available = {
+      BUL_has_zveno_rule = yes
+    }
+    
+    relative_position_id = BUL_kazasovssocialpatroicism
+    x = -1
+    y = 2
+    completion_reward = {
+      add_ideas = BUL_army_loyalty
+	  	set_party_name = {
+			ideology = paternal_autocrat
+			name = BUL_national_populist_party
+			long_name = BUL_national_populist_party_long
+		}
+	  add_popularity = {
+        ideology = paternal_autocrat
+        popularity = 0.1
+      }
+	  add_popularity = {
+        ideology = national_populist
+        popularity = 0.1
+      }
+	  add_pataut_to_coalition = yes
+	   add_natpop_to_coalition = yes
+	   add_command_power = 50
+	   add_manpower = 5000
+    }
+  }
+  focus = {
+    id = BUL_unity_government
+    icon = GFX_goal_HOL_list_left
+    cost = 3
+    prerequisite = {
+      focus = BUL_popular_wishes
+    }
+    available = {
+      BUL_has_zveno_rule = yes
+    }
+    
+    relative_position_id = BUL_kazasovssocialpatroicism
+    x = 1
+    y = 2
+    completion_reward = {
+      	add_ideas = BUL_unity_government
+		add_stability = 0.1
+		add_war_support = 0.1
+    }
+  }
+  focus = {
+    id = BUL_socialist_dictatorship
+    icon = GFX_goal_COR_Socialist_Knife
+    cost = 3
+    prerequisite = {
+      focus = BUL_army_loyalty
+    }
+	prerequisite = {
+      focus = BUL_unity_government
+    }
+    available = {
+      BUL_has_zveno_rule = yes
+    }
+    
+    relative_position_id = BUL_kazasovssocialpatroicism
+    x = 0
+    y = 3
+    completion_reward = {
+      add_ideas = BUL_socialist_dictatorship
+    }
+  }
+  focus = {
+    id = BUL_popular_wishes
+    icon = GFX_goal_GUA_People_Army
+    cost = 3
+    prerequisite = {
+      focus = BUL_kazasovssocialpatroicism
+    }
+    available = {
+      BUL_has_zveno_rule = yes
+    }
+    
+    relative_position_id = BUL_kazasovssocialpatroicism
+    x = 1
+    y = 1
+    completion_reward = {
+      add_research_slot = 1
+	   add_popularity = {
+        ideology = social_democrat
+        popularity = 0.1
+      }
+	  add_one_random_civilian_factory = yes
+	  add_one_random_civilian_factory = yes
     }
   }
   focus = {
@@ -13577,15 +13698,17 @@ focus = {
     icon = GFX_goal_BUL_finish_the_monarchists
     cost = 3
     prerequisite = {
-      focus = BUL_georgievsorganicstate
-      focus = BUL_lukovsmilitantstate
+      focus = BUL_socialist_dictatorship
+      focus = BUL_strong_bulgaria
+	  focus = BUL_militarian_state
+	  focus = BUL_eternal_dictatorship
     }
     available = {
       BUL_has_zveno_rule = yes
     }
     relative_position_id = BUL_leadership_question
     x = 0
-    y = 2
+    y = 5
     completion_reward = {
       add_political_power = 50
       add_popularity = {
@@ -13705,11 +13828,185 @@ focus = {
     x = 0
     y = 1
     completion_reward = {
+	  add_ideas = BUL_a_technocratic_society
       add_research_slot = 1
       add_stability = 0.02
       random_owned_state = {
         add_extra_state_shared_building_slots = 2
       }
+    }
+  }
+  focus = {
+    id = BUL_strong_bulgaria
+    icon = GFX_goal_MNT_sofia
+    cost = 3
+    available = {
+      BUL_has_zveno_rule = yes
+      has_country_flag = georgiev_zveno
+    }
+    prerequisite = {
+      focus = BUL_integrate_loyal_totalists
+    }
+	prerequisite = {
+      focus = BUL_a_technocratic_society
+    }
+    relative_position_id = BUL_the_bulgarian_culture
+    x = -1
+    y = 2
+    completion_reward = {
+     add_ideas = BUL_strong_bulgaria
+    }
+  }
+  focus = {
+    id = BUL_velchevmoderateautocracy
+    icon = GFX_goal_BUL_velchevmoderateautocracy
+    cost = 3
+    prerequisite = {
+      focus = BUL_leadership_question
+    }
+    available = {
+      BUL_has_zveno_rule = yes
+      has_country_flag = BUL_zveno_is_pataut
+    }
+    bypass = {
+      has_country_flag = BUL_zveno_is_pataut
+    }
+    relative_position_id = BUL_leadership_question
+    x = 6
+    y = 1
+    completion_reward = {
+      custom_effect_tooltip = unlock_focuses
+    }
+  }
+  focus = {
+    id = BUL_national_comittee
+    icon = GFX_RUS_Transitional_Council
+    cost = 3
+    prerequisite = {
+      focus = BUL_velchevmoderateautocracy
+    }
+    available = {
+      BUL_has_zveno_rule = yes
+    }
+    
+    relative_position_id = BUL_velchevmoderateautocracy
+    x = -1
+    y = 1
+    completion_reward = {
+      add_natpop_to_coalition = yes
+	  add_popularity = {
+        ideology = paternal_autocrat
+        popularity = 0.1
+      }
+	  add_political_power = 100
+	  add_ideas = BUL_national_comittee
+    }
+  }
+  focus = {
+    id = BUL_enforce_military_league
+    icon = GFX_focus_BUL_cooperate_with_the_zveno
+    cost = 3
+    prerequisite = {
+      focus = BUL_velchevmoderateautocracy
+    }
+    available = {
+      BUL_has_zveno_rule = yes
+    }
+    
+    relative_position_id = BUL_velchevmoderateautocracy
+    x = 1
+    y = 1
+    completion_reward = {
+      add_ideas = BUL_enforce_military_league
+	  add_manpower = 5000
+	  add_command_power = 50
+	  
+    }
+  }
+  focus = {
+    id = BUL_volunteer_forces
+    icon = GFX_goal_AST_expand_the_militia
+    cost = 3
+    prerequisite = {
+      focus = BUL_national_comittee
+    }
+    available = {
+      BUL_has_zveno_rule = yes
+    }
+    
+    relative_position_id = BUL_velchevmoderateautocracy
+    x = -1
+    y = 2
+    completion_reward = {
+      add_manpower = 10000
+		custom_effect_tooltip = "组建六支国家志愿者连。"
+      		division_template = {
+				name = "Bălgarska Natsionalna Dobrovolchеska Rota No.4093"
+				division_names_group = BUL_INF_01
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+					infantry = { x = 2 y = 0 }
+					infantry = { x = 2 y = 1 }
+					infantry = { x = 2 y = 2 }
+				}
+			}
+			hidden_effect = {
+				random_owned_controlled_state = {
+					prioritize = { 106 }
+					limit = { valid_state_for_spawning_friendly_unit = yes }
+					create_unit = {
+						division = "division_template = \"Vŭorŭzheno opŭlchenie 'Ohrana'\" start_experience_factor = 0.3 start_equipment_factor = 1"
+						owner = ROOT
+						count = 6
+					}
+				}
+			}
+    }
+  }
+  focus = {
+    id = BUL_gun_guide_state
+    icon = GFX_focus_BUL_bulgarian_administration_of_the_balkans
+    cost = 3
+    prerequisite = {
+      focus = BUL_enforce_military_league
+    }
+    available = {
+      BUL_has_zveno_rule = yes
+    }
+    
+    relative_position_id = BUL_velchevmoderateautocracy
+    x = 1
+    y = 2
+    completion_reward = {
+		add_research_slot = 1
+		add_war_support = 0.1
+		add_ideas = BUL_gun_guide_state
+    }
+  }
+  focus = {
+    id = BUL_eternal_dictatorship
+    icon = GFX_goal_KR_ideology_paternal_autocrat
+    cost = 3
+    prerequisite = {
+      focus = BUL_volunteer_forces
+    }
+	prerequisite = {
+      focus = BUL_gun_guide_state
+    }
+    available = {
+      BUL_has_zveno_rule = yes
+    }
+    
+    relative_position_id = BUL_velchevmoderateautocracy
+    x = 0
+    y = 3
+    completion_reward = {
+      add_ideas = BUL_eternal_dictatorship
     }
   }
   focus = {
@@ -13727,7 +14024,7 @@ focus = {
       has_country_flag = lukov_zveno
     }
     relative_position_id = BUL_leadership_question
-    x = 3
+    x = 2
     y = 1
     completion_reward = {
       custom_effect_tooltip = unlock_focuses
@@ -13767,6 +14064,7 @@ focus = {
     x = 0
     y = 1
     completion_reward = {
+		add_ideas = BUL_full_militarization_of_society
       random_owned_controlled_state = {
         limit = {
           free_building_slots = {
@@ -13834,6 +14132,28 @@ focus = {
     completion_reward = {
       add_research_slot = 1
       add_war_support = 0.05
+	  add_ideas = BUL_develop_the_bulgarian_spirit
+    }
+  }
+  focus = {
+    id = BUL_militarian_state
+    icon = GFX_BUL_bulgarian_officer
+    cost = 3
+    prerequisite = {
+      focus = BUL_full_militarization_of_society
+    }
+	prerequisite = {
+      focus = BUL_develop_the_bulgarian_spirit
+    }
+    available = {
+      BUL_has_zveno_rule = yes
+      has_country_flag = lukov_zveno
+    }
+    relative_position_id = BUL_the_eternal_enemy
+    x = -1
+    y = 2
+    completion_reward = {
+      add_ideas = BUL_militarian_state
     }
   }
   focus = {
@@ -13841,12 +14161,11 @@ focus = {
     icon = GFX_goal_BUL_New_Empire
     cost = 3
     prerequisite = {
-      focus = BUL_integrate_loyal_totalists
-      focus = BUL_develop_the_bulgarian_spirit
+      focus = BUL_finish_the_monarchists
     }
     relative_position_id = BUL_a_technocratic_society
-    x = 5
-    y = 1
+    x = 4
+    y = 3
     mutually_exclusive = {
       focus = BUL_yugoslavism
       focus = BUL_stay_neutral
@@ -14585,16 +14904,15 @@ focus = {
     icon = GFX_goal_BUL_Yugo_Dream
     cost = 3
     prerequisite = {
-      focus = BUL_full_militarization_of_society
-      focus = BUL_a_technocratic_society
+      focus = BUL_finish_the_monarchists
     }
     relative_position_id = BUL_a_technocratic_society
     mutually_exclusive = {
       focus = BUL_stay_neutral
       focus = BUL_third_empire
     }
-    x = -1
-    y = 1
+    x = -2
+    y = 3
     available = {
       is_subject = no
     }
@@ -14791,16 +15109,11 @@ focus = {
       focus = BUL_third_empire
     }
     prerequisite = {
-      focus = BUL_full_militarization_of_society
-      focus = BUL_a_technocratic_society
-    }
-    prerequisite = {
-      focus = BUL_integrate_loyal_totalists
-      focus = BUL_develop_the_bulgarian_spirit
+      focus = BUL_finish_the_monarchists
     }
     relative_position_id = BUL_finish_the_monarchists
     x = 0
-    y = 2
+    y = 1
     available = {
       has_war = no
       is_subject = no
