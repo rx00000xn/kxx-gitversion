@@ -10047,10 +10047,6 @@ FORM_GDC = {
 	color = rgb { 195 198 124 }
 	color_ui = rgb { 195 198 124 }
 }
-SQI_IJA = {
-	color = rgb { 255 200 200 }
-	color_ui = rgb { 255 255 255 }
-} 
 #我的第三十七年（待开发希腊内容）
 TUR_byron = {
 	color = rgb { 195 198 124 }
@@ -10875,8 +10871,8 @@ FRG_Promised_land = {
 	color_ui = rgb { 139 26 26 }
 }
 FRG_New_Eden = {
-	color = rgb { 230 230 250 }
-	color_ui = rgb { 230 230 250 }
+	color = rgb { 45 86 186 }
+	color_ui = rgb { 45 86 186 }
 }
 FRG_Clara_Knecht = {
     color = rgb { 45 45 45 }
@@ -10908,6 +10904,10 @@ NFA_MITTEL_01 = {
     color = rgb { 30 54 103 }
     color_ui = rgb { 34 62 119 }
 }
+FRG_TUN = {
+    color = rgb { 30 54 103 }
+    color_ui = rgb { 34 62 119 }
+}
 FRG_ISW = {
     color = rgb { 30 54 103 }
     color_ui = rgb { 34 62 119 }
@@ -10932,6 +10932,27 @@ FRG_LOM = {
     color = rgb { 30 54 103 }
     color_ui = rgb { 34 62 119 }
 }
+FRG_BAY = {
+    color = rgb { 30 54 103 }
+    color_ui = rgb { 34 62 119 }
+}
+FRG_VEN = {
+    color = rgb { 30 54 103 }
+    color_ui = rgb { 34 62 119 }
+}
+FRG_WLS = {
+    color = rgb { 30 54 103 }
+    color_ui = rgb { 34 62 119 }
+}
+FRG_SCO = {
+    color = rgb { 30 54 103 }
+    color_ui = rgb { 34 62 119 }
+}
+FRG_WAF = {
+    color = rgb { 30 54 103 }
+    color_ui = rgb { 34 62 119 }
+}
+
 
 ###白鹅
 BLR_SR = {

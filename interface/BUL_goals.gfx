@@ -1,0 +1,11 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_goal_BUL_kazasovssocialpatroicism"
+		texturefile = "gfx/interface/goals/BUL/BUL_kazasovssocialpatroicism.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_BUL_velchevmoderateautocracy"
+		texturefile = "gfx/interface/goals/BUL/BUL_velchevmoderateautocracy.png"
+	}
+	
+}

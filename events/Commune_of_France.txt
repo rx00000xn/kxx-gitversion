@@ -9379,7 +9379,7 @@ country_event = { #militant leader
 			name = "皮埃尔·德里厄·拉罗谢尔"
 			picture = "gfx/leaders/FRA/Portrait_Pierre_Drieu_La_Rochelle.png"
 			expire = "1.1.1"
-			ideology = sorelianism_subtype
+			ideology = sorelian_bolshevism_subtype
 			traits = {}
 		}
 		meta_effect = {

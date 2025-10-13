@@ -907,14 +907,7 @@ focus_tree = {
 				}
 				set_country_flag = BUL_industry_level_4
 			}
-			country_event = bulgariaflavour.4
-			hidden_effect = {
-				activate_mission = BUL_great_etatist_project_mission
-				set_country_flag = { flag = BUL_first_etatist_project_year days = 365 value = 1 }
-			}
-			custom_effect_tooltip = tooltip_white_line
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = BUL_aleksandar_tsankov
+			
 		}
 	}
 
@@ -2746,6 +2739,12 @@ focus_tree = {
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_the_liberals_in_power"
       custom_effect_tooltip = unlock_focuses
+	  hidden_effect = {
+		country_event = {
+			id = bulgaria_foreign_events.7
+			days = 7
+		}
+	  }
     }
   }
 
@@ -2786,9 +2785,7 @@ focus_tree = {
     prerequisite = {
       focus = BUL_never_another_georgiev
     }
-    available = {
-      BUL_has_liberal_rule = yes
-    }
+    
     relative_position_id = BUL_tarnovo_constitution
     x = 2
     y = 8
@@ -2901,9 +2898,11 @@ focus_tree = {
     prerequisite = {
       focus = BUL_liberal_nationalism
     }
-    available = {
-      BUL_has_liberal_rule = yes
-    }
+   available = {
+			NOT = {
+				has_completed_focus = BUL_the_agrarians
+			}
+		}
     relative_position_id = BUL_tarnovo_constitution
     x = 4
     y = 8
@@ -2923,8 +2922,10 @@ focus_tree = {
       focus = BUL_liberal_nationalism
     }
     available = {
-      BUL_has_liberal_rule = yes
-    }
+			NOT = {
+				has_completed_focus = BUL_the_agrarians
+			}
+		}
     relative_position_id = BUL_tarnovo_constitution
     x = 6
     y = 8
@@ -2952,6 +2953,7 @@ focus_tree = {
     
     available = {
       BUL_has_liberal_rule = yes
+	  has_government = market_liberal
     }
     relative_position_id = BUL_tarnovo_constitution
     x = 3
@@ -3050,18 +3052,7 @@ focus_tree = {
 			else = {
 				add_ideas = BUL_military_league_curtailed
 			}
-			if = {
-				limit = { has_character = BUL_pencho_zlatev }
-				retire_character = BUL_pencho_zlatev
-			}
-			if = {
-				limit = { has_character = BUL_kimon_georgiev }
-				retire_character = BUL_kimon_georgiev
-			}
-			if = {
-				limit = { has_character = BUL_hristo_lukov }
-				retire_character = BUL_hristo_lukov
-			}
+			
 		}
 	}
 
@@ -3280,7 +3271,6 @@ focus_tree = {
 		available = {
 			OR = {
         has_government = social_democrat
-        has_government = market_liberal
         has_government = social_liberal
       }
 		}
@@ -3312,7 +3302,11 @@ focus_tree = {
 			focus = BUL_electoralism
 		}
 		available = {
-			BUL_has_liberal_rule = yes
+			OR = {
+				has_government = market_liberal
+				BUL_has_liberal_rule = yes
+			}
+			
 		}
 		ai_will_do = { factor = 20 }
 		completion_reward = {
@@ -3343,12 +3337,25 @@ focus_tree = {
 			focus = BUL_left_mandate
 		}
 		available = {
-			
+			BUL_agrarians_in_power = no
 		}
 		ai_will_do = { factor = 20 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BUL_cultural_autonomy"
-			country_event = bulgaria.49
+			if = {
+				limit = {
+					has_completed_focus = BUL_left_mandate
+				}
+				add_ideas = BUL_natper_autonomy
+			}
+			else_if = {
+				limit = {
+					has_completed_focus = BUL_right_mandate
+				}
+				add_ideas = BUL_territorial_autonomies
+			}
+			custom_effect_tooltip = "该国策效果取决于政府的意识形态。"
+			
 		}
 	}
 
@@ -3417,16 +3424,7 @@ focus_tree = {
 				remove_idea = BUL_tarnovo_constitution_idea
 				add_idea = BUL_tarnovo_constitution_idea_2
 			}
-			if = {
-				limit = {
-					has_completed_focus = BUL_balkan_war_victory
-					NOT = {
-						has_country_flag = BUL_balkan_peace_loss
-						has_completed_focus = BUL_war_reparations_investment_fund
-					}
-				}
-				unlock_decision_tooltip = BUL_Balkan_Union
-			}
+			
 		}
 	}
 
@@ -3442,7 +3440,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
     	available = {
 			OR = {
-				has_completed_focus = BUL_the_agrarians
+				BUL_agrarians_in_power = yes
 				has_completed_focus = BUL_georgievsorganicstate
 			}
 			
@@ -4812,22 +4810,11 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BUL_anti_partisanship"
 			set_party_name = {
-				ideology = authoritarian_democrat
+				ideology = paternal_autocrat
 				long_name = BUL_royal_authoritarian_democrat_party_long
 				name = BUL_royal_authoritarian_democrat_party
 			}
-			hidden_effect = {
-				set_party_name = {
-					ideology = social_conservative
-					long_name = BUL_national_liberal_party_long
-					name = BUL_national_liberal_party
-				}
-				set_party_name = {
-					ideology = market_liberal
-					long_name = BUL_democratic_party_long
-					name = BUL_democratic_party
-				}
-			}
+			
 			add_popularity = {
 				ideology = authoritarian_democrat
 				popularity = 0.1
@@ -5461,6 +5448,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BUL_international_alliances"
 			add_war_support = 0.1
+			add_ideas = BUL_prussia_of_the_balkans_idea
 		}
 	}
 
@@ -6180,22 +6168,17 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_YUG_special_relationship"
-      if = {
-        limit = {
-          has_government = social_liberal
-        }
-        country_event = serbia.100
-      }
+      
       
 				INT = {
-					give_guarantee = SER
-					give_military_access = SER
+					give_guarantee = BUL
+					give_military_access = BUL
 					diplomatic_relation = {
-						country = SER
+						country = BUL
 						relation = non_aggression_pact
 					}
 				}
-				SER = {
+				BUL = {
 					give_military_access = INT
 				}
 				add_ideas = SER_YUG_special_relationship_idea
@@ -6378,7 +6361,7 @@ focus_tree = {
 		}
 		
 		available = {
-			has_completed_focus = BUL_left_pivot
+			BUL_has_socialist_rule = yes
 			RUS = {
 				has_socialist_government = no
 			}
@@ -8261,7 +8244,7 @@ focus = {
 		}
 		available = {
 			OR = {
-				has_completed_focus = BUL_the_absolutists_have_seized_power
+				BUL_absolutists_in_power = yes
 				has_completed_focus = BUL_lukovsmilitantstate
 				has_completed_focus = BUL_young_officers
 			}
@@ -9181,6 +9164,7 @@ focus = {
     }
     available = {
       BUL_has_socialist_rule = yes
+	  has_completed_focus = BUL_restructuring_the_state
     }
     relative_position_id = BUL_left_pivot
     x = 1
@@ -9217,6 +9201,8 @@ focus = {
     prerequisite = {
       focus = BUL_socialist_orthodoxy
 	  focus = BUL_agrarian_syndicalism
+	  focus = NBUL_laughter_and_tears
+	  focus = NBUL_total_war_for_bread
     }
     available = {
       BUL_has_socialist_rule = yes
@@ -9622,7 +9608,7 @@ focus = {
 				ideology = totalist
 				popularity = 0.05
 			}
-      set_politics = {ruling_party = syndicalist}
+			
 		}
 	}
 
@@ -9637,8 +9623,10 @@ focus = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 		prerequisite = {
-			focus = BUL_agrarian_syndicalism
 			focus = BUL_socialist_orthodoxy
+			focus = BUL_agrarian_syndicalism
+			focus = NBUL_laughter_and_tears
+			focus = NBUL_total_war_for_bread
 		}
 		ai_will_do = { factor = 20 }
 		completion_reward = {
@@ -9649,23 +9637,7 @@ focus = {
 			770 = { increase_state_category_by_one_level = yes } #Pleven
 			771 = { increase_state_category_by_one_level = yes } #Varna
 			990 = { increase_state_category_by_one_level = yes } #Vidin
-			if = {
-				limit = {
-					has_completed_focus = BUL_integrate_ikonomov
-					has_completed_focus = BUL_empower_zpk
-					has_completed_focus = BUL_french_practices
-				}
-				remove_ideas = BUL_royalist_resistance_worse_2
-			}
-			else_if = {
-				limit = {
-					has_completed_focus = BUL_overthrow_royal_memorials
-					has_completed_focus = BUL_perfect_democracy
-					has_completed_focus = BUL_organise_youth
-					has_completed_focus = BUL_mass_volunteer_work
-				}
-				remove_ideas = BUL_royalist_resistance_worse_2
-			}
+			
 		}
 	}
 
@@ -10003,8 +9975,10 @@ focus = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		prerequisite = {
-			focus = BUL_agrarian_syndicalism
 			focus = BUL_socialist_orthodoxy
+			focus = BUL_agrarian_syndicalism
+			focus = NBUL_laughter_and_tears
+			focus = NBUL_total_war_for_bread
 		}
 		ai_will_do = {
 			factor = 40
@@ -10037,7 +10011,7 @@ focus = {
 		ai_will_do = { factor = 20 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BUL_integrate_ikonomov"
-			
+			add_tot_to_coalition = yes
 			add_popularity = {
 				ideology = totalist
 				popularity = 0.05
@@ -10265,20 +10239,7 @@ focus = {
 					instant_build = yes
 				}
 			}
-			add_timed_idea = {
-				idea = BUL_build_for_fatherland
-				days = 550
-			}
-			if = { #check if this is the final focus the player needs to complete in the RadSoc tree, and if it is, remove royalist resistance
-				limit = {
-					has_completed_focus = BUL_dimitrov_constitution
-					has_completed_focus = BUL_ds_establishment
-					has_completed_focus = BUL_agricultural_collectives
-					has_completed_focus = BUL_anti_clericalism
-					has_completed_focus = BUL_minority_integration
-				}
-				remove_ideas = BUL_royalist_resistance_worse_2
-			}
+			add_ideas = BUL_build_for_fatherland
 		}
 	}
 focus = {
@@ -10881,7 +10842,6 @@ focus = {
     available = {
       OR = {
         has_government = social_democrat
-        has_government = market_liberal
         has_government = social_liberal
       }
     }
@@ -10928,9 +10888,7 @@ focus = {
 	prerequisite = {
       focus = BUL_privatisation
     }
-    available = {
-      BUL_has_broad_socialists = yes
-    }
+    
     relative_position_id = BUL_tarnovo_constitution
     x = 5
     y = 9
@@ -10956,8 +10914,10 @@ focus = {
       focus = BUL_free_trade_unions
     }
     available = {
-      BUL_has_broad_socialists = yes
-    }
+			NOT = {
+				has_completed_focus = BUL_the_agrarians
+			}
+		}
     relative_position_id = BUL_tarnovo_constitution
     x = -4
     y = 8
@@ -10983,9 +10943,7 @@ focus = {
 	prerequisite = {
       focus = BUL_progressive_income_tax
     }
-    available = {
-      BUL_has_broad_socialists = yes
-    }
+   
     relative_position_id = BUL_tarnovo_constitution
     x = -3
     y = 9
@@ -11035,9 +10993,11 @@ focus = {
 	prerequisite = {
       focus = BUL_grain_trade_monopoly
     }
-    available = {
-      BUL_has_democrat_rule = yes
-    }
+   available = {
+			NOT = {
+				has_completed_focus = BUL_the_agrarians
+			}
+		}
      relative_position_id = BUL_tarnovo_constitution
     x = -2
     y = 8
@@ -11060,9 +11020,7 @@ focus = {
     prerequisite = {
       focus = BUL_never_another_georgiev
     }
-    available = {
-      BUL_has_democrat_rule = yes
-    }
+    
     relative_position_id = BUL_tarnovo_constitution
     x = 0
     y = 8
@@ -11085,13 +11043,7 @@ focus = {
       focus = BUL_support_the_bulgarian_womens_union
       focus = BUL_educational_development
     }
-    available = {
-      OR = {
-        has_government = social_democrat
-        has_government = market_liberal
-        has_government = social_liberal
-      }
-    }
+   
     bypass = {
       has_cosmetic_tag = BUL_republic
     }
@@ -11558,12 +11510,7 @@ focus = {
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_agrarian_alliance"
       clr_country_flag = cannot_have_extensive_conscription
-      if = {
-        limit = {
-          has_idea = BUL_rebuilding_the_state_idea3
-        }
-        remove_ideas = BUL_rebuilding_the_state_idea3
-      }
+      
       add_political_power = 100
       add_stability = 0.10
     }
@@ -11580,23 +11527,18 @@ focus = {
 		y = 1
 
 		
-		bypass = {
-			is_subject = yes
-			OR = {
-				has_socialist_government = yes
-				has_country_leader = { character = BUL_alexander_stamboliyski }
-			}
-		}
-		available = {
-			custom_override_tooltip = {
-				tooltip = tooltip_focus_unlocked_by_event
-				always = no
-			}
-		}
+		
 		ai_will_do = { factor = 20 }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed BUL_front_republic"
-			custom_effect_tooltip = tooltip_focus_unlocked_by_event
+			set_cosmetic_tag = BUL_republic
+			create_country_leader = {
+				name = "亚历山大·斯坦博利斯基"
+				picture = "gfx/leaders/BUL/Portrait_BUL_Aleksandar_Stamboliyski.png"
+				expire = "1.1.1"
+				ideology = soccon_agrarianism_subtype
+			}
+			increase_ruling_party_popularity_by_10 = yes
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -11626,7 +11568,7 @@ focus = {
 			log = "[GetLogRoot]: Focus Completed BUL_reunite_party"
 			add_ideas = BUL_consolidation_of_power_1
 			add_popularity = {
-				ideology = authoritarian_democrat
+				ideology = social_conservative
 				popularity = 0.1
 			}
 			add_popularity = {
@@ -11719,7 +11661,7 @@ focus = {
 			add_political_power = 50
 			add_war_support = 0.1
 			add_popularity = {
-				ideology = social_conservative
+				ideology = paternal_autocrat
 				popularity = -0.1
 			}
 			if = {
@@ -11769,15 +11711,7 @@ focus = {
 				remove_idea = BUL_consolidation_of_power_1
 				add_idea = BUL_consolidation_of_power_2
 			}
-			if = {
-				limit = {
-					has_completed_focus = BUL_land_socialization
-					has_completed_focus = BUL_overthrow_royal_memorials
-					has_completed_focus = BUL_organise_youth
-					has_completed_focus = BUL_mass_volunteer_work
-				}
-				remove_ideas = BUL_royalist_resistance_worse_2
-			}
+			
 		}
 	}
 
@@ -12886,13 +12820,12 @@ focus = {
     available = {
       has_country_flag = BUL_based_path
       is_subject = no
-      has_government = national_populist
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_our_roots"
       add_ideas = BUL_bulgarian_destiny
       add_popularity = {
-        ideology = national_populist
+        ideology = totalist
         popularity = 0.1
       }
     }
@@ -12971,15 +12904,7 @@ focus = {
 				remove_idea = BUL_military_league
 				add_idea = BUL_military_league_empowered
 			}
-			if = {
-				limit = {
-					OR = {
-						has_country_leader = { character = BUL_ferdinand_sakskoburggotski }
-						has_country_leader = { character = BUL_boris_sakskoburggotski }
-					}
-				}
-				country_event = bulgaria.37
-			}
+			
 		}
 	}
 
@@ -13058,6 +12983,7 @@ focus = {
 			else = {
 				custom_effect_tooltip = BUL_pars_not_toto_focus_effect
 			}
+			add_to_variable = { BUL_velchev_points = 1 }
 		}
 	}
 
@@ -13081,15 +13007,7 @@ focus = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BUL_ministry_of_national_economy"
 			add_ideas = BUL_ministry_of_national_economy_idea
-			if = {
-				limit = {
-					OR = {
-						has_country_leader = { character = BUL_ferdinand_sakskoburggotski }
-						has_country_leader = { character = BUL_boris_sakskoburggotski }
-					}
-				}
-				country_event = bulgaria.34
-			}
+			
 		}
 	}
 
@@ -13181,6 +13099,7 @@ focus = {
 			else = {
 				custom_effect_tooltip = BUL_ministry_of_national_economy_focus_effect
 			}
+			add_to_variable = { BUL_velchev_points = 1 }
 		}
 	}
 
@@ -13204,15 +13123,7 @@ focus = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BUL_general_directorate_of_renewal"
 			add_ideas = BUL_general_directorate_of_renewal_idea
-			if = {
-				limit = {
-					OR = {
-						has_country_leader = { character = BUL_ferdinand_sakskoburggotski }
-						has_country_leader = { character = BUL_boris_sakskoburggotski }
-					}
-				}
-				country_event = bulgaria.35
-			}
+			
 		}
 	}
 
@@ -13311,6 +13222,7 @@ focus = {
 			else = {
 				custom_effect_tooltip = BUL_general_directorate_of_renewal_focus_effect
 			}
+			add_to_variable = { BUL_velchev_points = 1 }
 		}
 	}
 
@@ -13418,6 +13330,7 @@ focus = {
 			else = {
 				custom_effect_tooltip = BUL_centralization_zveno_focus_effect
 			}
+			add_to_variable = { BUL_velchev_points = 1 }
 		}
 	}
 
@@ -13449,31 +13362,26 @@ focus = {
 				has_completed_focus = BUL_centralization_zveno
 			}
 		}
-		bypass = {
-			NOT = {
-				has_country_leader = { character = BUL_ferdinand_sakskoburggotski }
-				has_country_leader = { character = BUL_boris_sakskoburggotski }
-			}
-		}
+		
 		select_effect = {
 			log = "[GetDateText]: [Root.GetName]: Select Focus BUL_cessation_orchestra"
 			if = {
 				limit = {
-					check_variable = { BUL_velchev_points = BUL_zlatev_points }
+					check_variable = { BUL_velchev_points < 3  }
 				}
-				country_event = { id = bulgaria.38 days = 14 }
+				country_event = { id = bulgaria_foreign_events.9 days = 14 }
 			}
 		}
 		ai_will_do = { factor = 20 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BUL_cessation_orchestra"
+			
 			add_popularity = {
-				ideology = paternal_autocrat
-				popularity = 0.1
+				ideology = national_populist
+				popularity = 0.15
 			}
-			
-			
-			
+
+
 		}
 	}
   focus = {
@@ -13629,10 +13537,160 @@ focus = {
       has_country_flag = georgiev_zveno
     }
     relative_position_id = BUL_leadership_question
-    x = -3
+    x = -2
     y = 1
     completion_reward = {
       custom_effect_tooltip = unlock_focuses
+    }
+  }
+  focus = {
+    id = BUL_kazasovssocialpatroicism
+    icon = GFX_goal_BUL_kazasovssocialpatroicism
+    cost = 3
+    prerequisite = {
+      focus = BUL_leadership_question
+    }
+    available = {
+      BUL_has_zveno_rule = yes
+      has_country_flag = kazasov_zveno
+    }
+    bypass = {
+      has_country_flag = kazasov_zveno
+    }
+    relative_position_id = BUL_leadership_question
+    x = -6
+    y = 1
+    completion_reward = {
+      custom_effect_tooltip = unlock_focuses
+    }
+  }
+  focus = {
+    id = BUL_socdem_allies
+    icon = GFX_goal_NIC_Victory_Social_Democracy
+    cost = 3
+    prerequisite = {
+      focus = BUL_kazasovssocialpatroicism
+    }
+    available = {
+      BUL_has_zveno_rule = yes
+    }
+    
+    relative_position_id = BUL_kazasovssocialpatroicism
+    x = -1
+    y = 1
+    completion_reward = {
+      add_popularity = {
+        ideology = syndicalist
+        popularity = 0.1
+      }
+	  add_popularity = {
+        ideology = radical_socialist
+        popularity = 0.1
+      }
+	add_political_power = 100
+	  add_synd_to_coalition = yes
+	  add_radsoc_to_coalition = yes
+	  add_ideas = BUL_ally_left
+    }
+  }
+  focus = {
+    id = BUL_army_loyalty
+    icon = GFX_focus_HOL_deal_with_right
+    cost = 3
+    prerequisite = {
+      focus = BUL_socdem_allies
+    }
+    available = {
+      BUL_has_zveno_rule = yes
+    }
+    
+    relative_position_id = BUL_kazasovssocialpatroicism
+    x = -1
+    y = 2
+    completion_reward = {
+      add_ideas = BUL_army_loyalty
+	  	set_party_name = {
+			ideology = paternal_autocrat
+			name = BUL_national_populist_party
+			long_name = BUL_national_populist_party_long
+		}
+	  add_popularity = {
+        ideology = paternal_autocrat
+        popularity = 0.1
+      }
+	  add_popularity = {
+        ideology = national_populist
+        popularity = 0.1
+      }
+	  add_pataut_to_coalition = yes
+	   add_natpop_to_coalition = yes
+	   add_command_power = 50
+	   add_manpower = 5000
+    }
+  }
+  focus = {
+    id = BUL_unity_government
+    icon = GFX_goal_HOL_list_left
+    cost = 3
+    prerequisite = {
+      focus = BUL_popular_wishes
+    }
+    available = {
+      BUL_has_zveno_rule = yes
+    }
+    
+    relative_position_id = BUL_kazasovssocialpatroicism
+    x = 1
+    y = 2
+    completion_reward = {
+      	add_ideas = BUL_unity_government
+		add_stability = 0.1
+		add_war_support = 0.1
+    }
+  }
+  focus = {
+    id = BUL_socialist_dictatorship
+    icon = GFX_goal_COR_Socialist_Knife
+    cost = 3
+    prerequisite = {
+      focus = BUL_army_loyalty
+    }
+	prerequisite = {
+      focus = BUL_unity_government
+    }
+    available = {
+      BUL_has_zveno_rule = yes
+    }
+    
+    relative_position_id = BUL_kazasovssocialpatroicism
+    x = 0
+    y = 3
+    completion_reward = {
+      add_ideas = BUL_socialist_dictatorship
+    }
+  }
+  focus = {
+    id = BUL_popular_wishes
+    icon = GFX_goal_GUA_People_Army
+    cost = 3
+    prerequisite = {
+      focus = BUL_kazasovssocialpatroicism
+    }
+    available = {
+      BUL_has_zveno_rule = yes
+    }
+    
+    relative_position_id = BUL_kazasovssocialpatroicism
+    x = 1
+    y = 1
+    completion_reward = {
+      add_research_slot = 1
+	   add_popularity = {
+        ideology = social_democrat
+        popularity = 0.1
+      }
+	  add_one_random_civilian_factory = yes
+	  add_one_random_civilian_factory = yes
     }
   }
   focus = {
@@ -13640,15 +13698,17 @@ focus = {
     icon = GFX_goal_BUL_finish_the_monarchists
     cost = 3
     prerequisite = {
-      focus = BUL_georgievsorganicstate
-      focus = BUL_lukovsmilitantstate
+      focus = BUL_socialist_dictatorship
+      focus = BUL_strong_bulgaria
+	  focus = BUL_militarian_state
+	  focus = BUL_eternal_dictatorship
     }
     available = {
       BUL_has_zveno_rule = yes
     }
     relative_position_id = BUL_leadership_question
     x = 0
-    y = 2
+    y = 5
     completion_reward = {
       add_political_power = 50
       add_popularity = {
@@ -13768,11 +13828,185 @@ focus = {
     x = 0
     y = 1
     completion_reward = {
+	  add_ideas = BUL_a_technocratic_society
       add_research_slot = 1
       add_stability = 0.02
       random_owned_state = {
         add_extra_state_shared_building_slots = 2
       }
+    }
+  }
+  focus = {
+    id = BUL_strong_bulgaria
+    icon = GFX_goal_MNT_sofia
+    cost = 3
+    available = {
+      BUL_has_zveno_rule = yes
+      has_country_flag = georgiev_zveno
+    }
+    prerequisite = {
+      focus = BUL_integrate_loyal_totalists
+    }
+	prerequisite = {
+      focus = BUL_a_technocratic_society
+    }
+    relative_position_id = BUL_the_bulgarian_culture
+    x = -1
+    y = 2
+    completion_reward = {
+     add_ideas = BUL_strong_bulgaria
+    }
+  }
+  focus = {
+    id = BUL_velchevmoderateautocracy
+    icon = GFX_goal_BUL_velchevmoderateautocracy
+    cost = 3
+    prerequisite = {
+      focus = BUL_leadership_question
+    }
+    available = {
+      BUL_has_zveno_rule = yes
+      has_country_flag = BUL_zveno_is_pataut
+    }
+    bypass = {
+      has_country_flag = BUL_zveno_is_pataut
+    }
+    relative_position_id = BUL_leadership_question
+    x = 6
+    y = 1
+    completion_reward = {
+      custom_effect_tooltip = unlock_focuses
+    }
+  }
+  focus = {
+    id = BUL_national_comittee
+    icon = GFX_RUS_Transitional_Council
+    cost = 3
+    prerequisite = {
+      focus = BUL_velchevmoderateautocracy
+    }
+    available = {
+      BUL_has_zveno_rule = yes
+    }
+    
+    relative_position_id = BUL_velchevmoderateautocracy
+    x = -1
+    y = 1
+    completion_reward = {
+      add_natpop_to_coalition = yes
+	  add_popularity = {
+        ideology = paternal_autocrat
+        popularity = 0.1
+      }
+	  add_political_power = 100
+	  add_ideas = BUL_national_comittee
+    }
+  }
+  focus = {
+    id = BUL_enforce_military_league
+    icon = GFX_focus_BUL_cooperate_with_the_zveno
+    cost = 3
+    prerequisite = {
+      focus = BUL_velchevmoderateautocracy
+    }
+    available = {
+      BUL_has_zveno_rule = yes
+    }
+    
+    relative_position_id = BUL_velchevmoderateautocracy
+    x = 1
+    y = 1
+    completion_reward = {
+      add_ideas = BUL_enforce_military_league
+	  add_manpower = 5000
+	  add_command_power = 50
+	  
+    }
+  }
+  focus = {
+    id = BUL_volunteer_forces
+    icon = GFX_goal_AST_expand_the_militia
+    cost = 3
+    prerequisite = {
+      focus = BUL_national_comittee
+    }
+    available = {
+      BUL_has_zveno_rule = yes
+    }
+    
+    relative_position_id = BUL_velchevmoderateautocracy
+    x = -1
+    y = 2
+    completion_reward = {
+      add_manpower = 10000
+		custom_effect_tooltip = "组建六支国家志愿者连。"
+      		division_template = {
+				name = "Bălgarska Natsionalna Dobrovolchеska Rota No.4093"
+				division_names_group = BUL_INF_01
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+					infantry = { x = 2 y = 0 }
+					infantry = { x = 2 y = 1 }
+					infantry = { x = 2 y = 2 }
+				}
+			}
+			hidden_effect = {
+				random_owned_controlled_state = {
+					prioritize = { 106 }
+					limit = { valid_state_for_spawning_friendly_unit = yes }
+					create_unit = {
+						division = "division_template = \"Vŭorŭzheno opŭlchenie 'Ohrana'\" start_experience_factor = 0.3 start_equipment_factor = 1"
+						owner = ROOT
+						count = 6
+					}
+				}
+			}
+    }
+  }
+  focus = {
+    id = BUL_gun_guide_state
+    icon = GFX_focus_BUL_bulgarian_administration_of_the_balkans
+    cost = 3
+    prerequisite = {
+      focus = BUL_enforce_military_league
+    }
+    available = {
+      BUL_has_zveno_rule = yes
+    }
+    
+    relative_position_id = BUL_velchevmoderateautocracy
+    x = 1
+    y = 2
+    completion_reward = {
+		add_research_slot = 1
+		add_war_support = 0.1
+		add_ideas = BUL_gun_guide_state
+    }
+  }
+  focus = {
+    id = BUL_eternal_dictatorship
+    icon = GFX_goal_KR_ideology_paternal_autocrat
+    cost = 3
+    prerequisite = {
+      focus = BUL_volunteer_forces
+    }
+	prerequisite = {
+      focus = BUL_gun_guide_state
+    }
+    available = {
+      BUL_has_zveno_rule = yes
+    }
+    
+    relative_position_id = BUL_velchevmoderateautocracy
+    x = 0
+    y = 3
+    completion_reward = {
+      add_ideas = BUL_eternal_dictatorship
     }
   }
   focus = {
@@ -13790,7 +14024,7 @@ focus = {
       has_country_flag = lukov_zveno
     }
     relative_position_id = BUL_leadership_question
-    x = 3
+    x = 2
     y = 1
     completion_reward = {
       custom_effect_tooltip = unlock_focuses
@@ -13830,6 +14064,7 @@ focus = {
     x = 0
     y = 1
     completion_reward = {
+		add_ideas = BUL_full_militarization_of_society
       random_owned_controlled_state = {
         limit = {
           free_building_slots = {
@@ -13897,6 +14132,28 @@ focus = {
     completion_reward = {
       add_research_slot = 1
       add_war_support = 0.05
+	  add_ideas = BUL_develop_the_bulgarian_spirit
+    }
+  }
+  focus = {
+    id = BUL_militarian_state
+    icon = GFX_BUL_bulgarian_officer
+    cost = 3
+    prerequisite = {
+      focus = BUL_full_militarization_of_society
+    }
+	prerequisite = {
+      focus = BUL_develop_the_bulgarian_spirit
+    }
+    available = {
+      BUL_has_zveno_rule = yes
+      has_country_flag = lukov_zveno
+    }
+    relative_position_id = BUL_the_eternal_enemy
+    x = -1
+    y = 2
+    completion_reward = {
+      add_ideas = BUL_militarian_state
     }
   }
   focus = {
@@ -13904,16 +14161,11 @@ focus = {
     icon = GFX_goal_BUL_New_Empire
     cost = 3
     prerequisite = {
-      focus = BUL_full_militarization_of_society
-      focus = BUL_a_technocratic_society
-    }
-    prerequisite = {
-      focus = BUL_integrate_loyal_totalists
-      focus = BUL_develop_the_bulgarian_spirit
+      focus = BUL_finish_the_monarchists
     }
     relative_position_id = BUL_a_technocratic_society
-    x = 5
-    y = 1
+    x = 4
+    y = 3
     mutually_exclusive = {
       focus = BUL_yugoslavism
       focus = BUL_stay_neutral
@@ -14652,20 +14904,15 @@ focus = {
     icon = GFX_goal_BUL_Yugo_Dream
     cost = 3
     prerequisite = {
-      focus = BUL_full_militarization_of_society
-      focus = BUL_a_technocratic_society
-    }
-    prerequisite = {
-      focus = BUL_integrate_loyal_totalists
-      focus = BUL_develop_the_bulgarian_spirit
+      focus = BUL_finish_the_monarchists
     }
     relative_position_id = BUL_a_technocratic_society
     mutually_exclusive = {
       focus = BUL_stay_neutral
       focus = BUL_third_empire
     }
-    x = -1
-    y = 1
+    x = -2
+    y = 3
     available = {
       is_subject = no
     }
@@ -14862,16 +15109,11 @@ focus = {
       focus = BUL_third_empire
     }
     prerequisite = {
-      focus = BUL_full_militarization_of_society
-      focus = BUL_a_technocratic_society
-    }
-    prerequisite = {
-      focus = BUL_integrate_loyal_totalists
-      focus = BUL_develop_the_bulgarian_spirit
+      focus = BUL_finish_the_monarchists
     }
     relative_position_id = BUL_finish_the_monarchists
     x = 0
-    y = 2
+    y = 1
     available = {
       has_war = no
       is_subject = no
@@ -14931,7 +15173,7 @@ focus = {
     available = {
       has_country_flag = BUL_based_path
       is_subject = no
-      has_government = national_populist
+
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_our_roots"
@@ -14961,7 +15203,7 @@ focus = {
     available = {
       has_country_flag = BUL_based_path
       is_subject = no
-      has_government = national_populist
+
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_our_roots"
@@ -14991,7 +15233,7 @@ focus = {
     available = {
       has_country_flag = BUL_based_path
       is_subject = no
-      has_government = national_populist
+
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_modernize_feudalism"
@@ -15018,13 +15260,13 @@ focus = {
     available = {
       has_country_flag = BUL_based_path
       is_subject = no
-      has_government = national_populist
+
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_bulgar_identity"
       add_stability = 0.15
       add_popularity = {
-        ideology = national_populist
+        ideology = totalist
         popularity = 0.15
       }
       country_event = kxbul.5
@@ -15046,7 +15288,6 @@ focus = {
     available = {
       has_country_flag = BUL_based_path
       is_subject = no
-      has_government = national_populist
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_steppe_prepared_cossacks"
@@ -15069,52 +15310,59 @@ focus = {
     available = {
       has_country_flag = BUL_based_path
       is_subject = no
-      has_government = national_populist
+
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_lay_claim_to_old"
       add_war_support = 0.25
-      add_state_core = 202
-      add_state_core = 1240
-      add_state_core = 1241
-      add_state_core = 1237
-      add_state_core = 203
-      add_state_core = 1233
-      add_state_core = 1238
-      add_state_core = 259
-      add_state_core = 1243
-      add_state_core = 225
-      add_state_core = 226
-      add_state_core = 1232
-      add_state_core = 197
-      add_state_core = 196
-      add_state_core = 1220
-      add_state_core = 137
-      add_state_core = 1221
-      add_state_core = 1234
-      add_state_core = 200
-      add_state_core = 221
-      add_state_core = 228
-      add_state_core = 1239
-      add_state_core = 227
-      add_state_core = 1231
-      add_state_core = 1227
-      add_state_core = 234
-      add_state_core = 1263
-      add_state_core = 218
-      add_state_core = 1265
-      add_state_core = 245
-      add_state_core = 238
-      add_state_core = 1264
-      add_state_core = 1226
-      add_state_core = 235
-      add_state_core = 1188
-      add_state_core = 1187
-      add_state_core = 1282
-      add_state_core = 1283
-      add_state_core = 1284
-      add_state_core = 1285
-      add_state_core = 1286
+      every_state = {
+			limit = {
+				is_core_of = ROM
+			}
+			BUL = { 
+				add_state_core = PREV 
+			}
+		}
+		every_state = {
+			limit = {
+				is_core_of = TRS
+			}
+			BUL = { 
+				add_state_core = PREV 
+			}
+		}
+		every_state = {
+			limit = {
+				is_core_of = UKR
+			}
+			BUL = { 
+				add_state_core = PREV 
+			}
+		}
+		every_state = {
+			limit = {
+				is_core_of = DKB
+			}
+			BUL = { 
+				add_state_core = PREV 
+			}
+		}
+		every_state = {
+			limit = {
+				is_core_of = KUB
+			}
+			BUL = { 
+				add_state_core = PREV 
+			}
+		}
+		every_state = {
+			limit = {
+				is_core_of = ABK
+			}
+			BUL = { 
+				add_state_core = PREV 
+			}
+		}
     }
   }
   focus = {
@@ -15136,7 +15384,7 @@ focus = {
     available = {
       has_country_flag = BUL_based_path
       is_subject = no
-      has_government = national_populist
+
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_unified_hordes"
@@ -15178,7 +15426,7 @@ focus = {
     available = {
       has_country_flag = BUL_based_path
       is_subject = no
-      has_government = national_populist
+
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_a_khan_reborn"
@@ -15221,7 +15469,6 @@ focus = {
     available = {
       has_country_flag = BUL_based_path
       is_subject = no
-      has_government = national_populist
       country_exists = SER
       NOT = {
         owns_state = 106
@@ -15303,7 +15550,7 @@ focus = {
     available = {
       has_country_flag = BUL_based_path
       is_subject = no
-      has_government = national_populist
+
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_a_khan_reborn"
@@ -15344,7 +15591,9 @@ focus = {
       focus = BUL_a_khan_reborn
     }
     mutually_exclusive = {
-      focus = BUL_european_tengri
+      focus = BUL_islamic_bulgaria
+	  focus = BUL_european_tengri
+	  focus = BUL_free_religions
     }
     ai_will_do = {
       factor = 100
@@ -15352,7 +15601,6 @@ focus = {
     available = {
       has_country_flag = BUL_based_path
       is_subject = no
-      has_government = national_populist
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_state_atheism"
@@ -15363,6 +15611,8 @@ focus = {
         remove_idea = BUL_bulgarian_ambition
       }
       custom_effect_tooltip = BUL_atheism
+	  set_country_flag = BUL_atheism_embrace
+
     }
   }
   focus = {
@@ -15383,11 +15633,12 @@ focus = {
     }
     mutually_exclusive = {
       focus = BUL_state_atheism
+	  focus = BUL_islamic_bulgaria
+	  focus = BUL_free_religions
     }
     available = {
       has_country_flag = BUL_based_path
       is_subject = no
-      has_government = national_populist
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_european_tengri"
@@ -15398,6 +15649,86 @@ focus = {
         remove_idea = BUL_bulgarian_ambition
       }
       custom_effect_tooltip = BUL_tengri
+	  set_country_flag = BUL_tengri_embrace
+
+    }
+  }
+  focus = {
+    id = BUL_islamic_bulgaria
+    icon = GFX_goal_AFG_islamic_revolution
+    x = -4
+    y = 5
+    relative_position_id = BUL_ideals_of_bulgarism
+    cost = 3
+    prerequisite = {
+      focus = BUL_toss_orthodoxy
+    }
+    prerequisite = {
+      focus = BUL_a_khan_reborn
+    }
+    ai_will_do = {
+      factor = 100
+    }
+    mutually_exclusive = {
+      focus = BUL_state_atheism
+	  focus = BUL_european_tengri
+	  focus = BUL_free_religions
+    }
+	
+    available = {
+      has_country_flag = BUL_based_path
+      is_subject = no
+    }
+    completion_reward = {
+      log = "[GetDateText]: [Root.GetName]: Focus BUL_european_tengri"
+      add_stability = 0.05
+      add_political_power = 200
+      swap_ideas = {
+        add_idea = BUL_bulgarian_ambition_islam
+        remove_idea = BUL_bulgarian_ambition
+      }
+      custom_effect_tooltip = BUL_christianity
+	  set_country_flag = BUL_islam_embrace
+    }
+  }
+   focus = {
+    id = BUL_free_religions
+    icon = GFX_goal_CZE_provincial_assembly
+    x = 4
+    y = 5
+    relative_position_id = BUL_ideals_of_bulgarism
+    cost = 3
+    prerequisite = {
+      focus = BUL_toss_orthodoxy
+    }
+    prerequisite = {
+      focus = BUL_a_khan_reborn
+    }
+    ai_will_do = {
+      factor = 100
+    }
+    mutually_exclusive = {
+      focus = BUL_state_atheism
+	  focus = BUL_european_tengri
+	  focus = BUL_islamic_bulgaria
+    }
+    available = {
+      has_country_flag = BUL_based_path
+      is_subject = no
+    }
+    completion_reward = {
+      log = "[GetDateText]: [Root.GetName]: Focus BUL_european_tengri"
+      add_stability = 0.15
+      add_political_power = 75
+      swap_ideas = {
+        add_idea = BUL_bulgarian_ambition_free
+        remove_idea = BUL_bulgarian_ambition
+      }
+      custom_effect_tooltip = BUL_free_religion
+	  set_country_flag = BUL_islam_embrace
+	  set_country_flag = BUL_tengri_embrace
+	  set_country_flag = BUL_atheism_embrace
+
     }
   }
   focus = {
@@ -15416,7 +15747,7 @@ focus = {
     available = {
       has_country_flag = BUL_based_path
       is_subject = no
-      has_government = national_populist
+
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_revolutionize_incendiary_warfare"
@@ -15450,7 +15781,6 @@ focus = {
     available = {
       has_country_flag = BUL_based_path
       is_subject = no
-      has_government = national_populist
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_field_medicine_trials"
@@ -15480,7 +15810,7 @@ focus = {
     available = {
       has_country_flag = BUL_based_path
       is_subject = no
-      has_government = national_populist
+
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_field_medicine_trials"
@@ -15518,11 +15848,12 @@ focus = {
     available = {
       has_country_flag = BUL_based_path
       is_subject = no
-      has_government = national_populist
+
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_intentions_of_restoration"
       add_war_support = 0.25
+	  add_state_claim = 1187
       add_state_claim = 232
       add_state_claim = 787
       add_state_claim = 233
@@ -15573,13 +15904,15 @@ focus = {
     prerequisite = {
       focus = BUL_state_atheism
       focus = BUL_european_tengri
+	  focus = BUL_islamic_bulgaria
+	  focus = BUL_free_religions
     }
     ai_will_do = {
       factor = 75
     }
     available = {
       is_subject = no
-      has_government = national_populist
+
     }
     will_lead_to_war_with = DKB
     completion_reward = {
@@ -15681,7 +16014,7 @@ focus = {
         }
       }
       is_subject = no
-      has_government = national_populist
+
     }
     will_lead_to_war_with = UKR
     completion_reward = {
@@ -15741,7 +16074,7 @@ focus = {
         }
       }
       is_subject = no
-      has_government = national_populist
+
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_restoration_of_volga_bulgaria"
@@ -15984,10 +16317,10 @@ focus = {
         add_stability = 0.3
         add_war_support = 0.3
         set_politics = {
-          ruling_party = national_populist
+          ruling_party = totalist
         }
         add_popularity = {
-          ideology = national_populist
+          ideology = totalist
           popularity = 0.5
         }
         create_country_leader = {
@@ -15995,7 +16328,7 @@ focus = {
           desc = "POLITICS_ISHAKI_DESC"
           picture = "gfx/leaders/BUL/BUL_Gajaz_Ishaki.png"
           expire = "1.1.1"
-          ideology = natpop_neo_feudalism_subtype
+          ideology = tot_national_mysticism_subtype
         }
       }
       249 = {
@@ -16008,7 +16341,7 @@ focus = {
       hidden_effect = {
         country_event = {
           id = kxbul.3
-          days = 365
+          days = 60
         }
       }
     }
@@ -16030,7 +16363,7 @@ focus = {
     }
     available = {
       is_subject = no
-      has_government = national_populist
+
     }
     ai_will_do = {
       factor = 75
@@ -16078,7 +16411,6 @@ focus = {
     }
     available = {
       is_subject = no
-      has_government = national_populist
     }
     prerequisite = {
       focus = BUL_attack_russia
@@ -16160,10 +16492,9 @@ focus = {
       hidden_effect = {
         create_country_leader = {
           name = "库布拉特汗二世"  # Khan Kubrat II
-          desc = "POLITICS_ISHAKI_DESC"
-          picture = "gfx/leaders/BUL/BUL_Gajaz_Ishaki.png"
+          picture = "gfx/leaders/BUL/Portrait_BUL_NS_Derzhavin.png"
           expire = "1.1.1"
-          ideology = natpop_neo_feudalism_subtype
+          ideology = tot_national_mysticism_subtype
           traits = {}
         }
       }
@@ -16176,9 +16507,7 @@ focus = {
         set_cosmetic_tag = BUL_old_great_bulgaria
       }
       hidden_effect = {
-        set_popularities = {
-          national_populist = 100
-        }
+       
         country_event = {
           id = kxbul.22
           days = 3
@@ -16193,7 +16522,7 @@ focus = {
 		y = 25
 		cost = 3
 		available = {
-			always = no
+			has_country_flag = BUL_has_intergrate_volga_bulgaria
 		}
 		ai_will_do = {
 			factor = 100
@@ -16201,7 +16530,11 @@ focus = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TTR_MSK_In_Power"
-			custom_effect_tooltip = unlock_focuses
+			hidden_effect = {
+				country_event = kxbul.25
+			}
+			add_ideas = BUL_tatar_homes
+
 		}
 	}
 	focus = {
@@ -16214,10 +16547,7 @@ focus = {
 		prerequisite = {
 			focus = BUL_MSK_In_Power
 		}
-		available = {
-			has_socialist_government = yes
-			1199 = { is_owned_and_controlled_by = ROOT }
-		}
+		
 		ai_will_do = {
 			factor = 100
 		}
@@ -16236,7 +16566,7 @@ focus = {
 					instant_build = yes
 				}
 			}
-			
+			add_ideas = BUL_heavy_engineering_funding
 		}
 	}
 	
@@ -16249,8 +16579,7 @@ focus = {
 		y = 2
 		cost = 1
 		available = {
-			has_socialist_government = yes
-			has_country_flag = TTR_ally_waisi_movement
+			has_government = totalist
 		}
 
 		prerequisite = { focus = BUL_Nationalize_Oil_Fields }
@@ -16290,7 +16619,7 @@ focus = {
 		y = 2
 		cost = 1
 		available = {
-			has_country_leader = { name = "Ğälimcan Ibrahimov" ruling_only = yes }
+			has_government = syndicalist
 		}
 
 		prerequisite = { focus = BUL_Nationalize_Oil_Fields }
@@ -16320,7 +16649,7 @@ focus = {
 		y = 2
 		cost = 1
 		available = {
-			has_country_leader = { name = "Mirsäyet Soltanğäliev" ruling_only = yes }
+			has_government = radical_socialist
 		}
 
 		prerequisite = { focus = BUL_Nationalize_Oil_Fields }
@@ -16363,8 +16692,7 @@ focus = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TTR_Nationalize_Key_Industries"
-			add_one_random_civilian_factory = yes
-			add_one_random_military_factory = yes
+			add_ideas = BUL_tatar_prosperity
 		}
 	}
 	focus = {
@@ -16388,15 +16716,7 @@ focus = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TTR_Revolutionary_Potential_Of_The_Peasants"
-			if = {
-				limit = {
-					has_completed_focus = BUL_Left_SR_Doctrine
-				}
-				add_ideas = TTR_land_socialization
-			}
-			else = {
-				add_ideas = TTR_land_nationalization
-			}
+			add_ideas = TTR_land_nationalization
 		}
 	}
 	focus = {
@@ -16410,8 +16730,7 @@ focus = {
 			has_socialist_government = yes
 		}
 		prerequisite = { 
-			focus = BUL_Legacy_Of_Waisi_Movement
-			focus = BUL_Left_SR_Doctrine
+			focus = BUL_Soltangaliev_Doctrine
 		}
 		ai_will_do = {
 			factor = 80
@@ -16435,7 +16754,6 @@ focus = {
 		}
 		prerequisite = { 
 			focus = BUL_Soltangaliev_Doctrine 
-			focus = BUL_Left_SR_Doctrine
 		}
 		ai_will_do = {
 			factor = 80
@@ -16455,32 +16773,7 @@ focus = {
 		x = 3
 		y = 3
 		cost = 3
-		available = {
-			has_country_leader = { name = "Ğälimcan Ibrahimov" ruling_only = yes }
-			BKN = { 
-				owns_state = 651
-				NOT = { is_subject_of = RUS }
-			}
-		}
-		bypass = {
-			if = {
-				limit = { is_subject_of = RUS }
-				OR = {
-					owns_state = 651
-					RUS = { owns_state = 651 }
-					BKN = { is_subject_of = RUS }
-				}
-			}
-			else = {
-				owns_state = 651
-				BKN = {
-					OR = {
-						is_subject_of = ROOT
-						exists = no
-					}
-				}
-			}
-		}
+		
 		prerequisite = {
 			focus = BUL_Left_SR_Doctrine
 		}
@@ -16490,29 +16783,7 @@ focus = {
 		will_lead_to_war_with = BKN
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TTR_Bashkir_Propaganda"			
-			every_state = {
-				limit = {
-					OR = {
-						state = 651
-						state = 1197
-						state = 1194
-					}
-				}
-				if = {
-					limit = { is_claim_or_core_of_ROOT = no }
-					add_claim_by = ROOT
-				}
-			}
-			if = {
-				limit = { 
-					has_country_flag = TTR_soviets_support_ibrahimov 
-					651 = { is_owned_by = RUS }
-				}
-				RUS = { country_event = tatsoc.52 }
-			}
-			else = {
-				BKN = { country_event = tatsoc.54 }
-			}
+			add_ideas = BUL_tatar_mobilization
 		}
 	}
 	focus = {
@@ -16522,9 +16793,7 @@ focus = {
 		x = 3
 		y = 5
 		cost = 3
-		available = {
-			has_country_leader = { name = "Ğälimcan Ibrahimov" ruling_only = yes }
-		}
+		
 		prerequisite = {
 			focus = BUL_Bashkir_Propaganda
 		}
@@ -16536,6 +16805,7 @@ focus = {
 			log = "[GetDateText]: [Root.GetName]: Focus TTR_National_Narodism"
 			add_popularity = { ideology = syndicalist popularity = 0.10 }
 			add_stability = 0.10
+			add_research_slot_until_five = yes
 		}
 	}
 	focus = {
@@ -16545,26 +16815,7 @@ focus = {
 		x = 4
 		y = 4
 		cost = 3
-		available = {
-			has_country_leader = { name = "Ğälimcan Ibrahimov" ruling_only = yes }
-			if = {
-				limit = { is_subject_of = RUS }
-				OR = {
-					owns_state = 651
-					RUS = { owns_state = 651 }
-					BKN = { is_subject_of = RUS }
-				}
-			}
-			else = {
-				owns_state = 651
-				BKN = {
-					OR = {
-						is_subject_of = ROOT
-						exists = no
-					}
-				}
-			}
-		}
+		
 		prerequisite = {
 			focus = BUL_Bashkir_Propaganda
 		}
@@ -16574,52 +16825,17 @@ focus = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TTR_Left_Idel_Ural"
-			every_state = {
-				limit = {
-					OR = {
-						state = 256
-						state = 1193
-						state = 399
-						state = 251
-						state = 652
-						state = 1207
-						state = 1224
-						state = 236
-						state = 651
-						state = 1194
-						state = 1195
-					}
-					is_claim_or_core_of_ROOT = no
-				}
-				add_claim_by = ROOT
-			}
-			if = {
-				limit = { is_subject_of = RUS }
-				RUS = { 
-					country_event = tatsoc.31
-				}
-			}
-			else = {
-				set_cosmetic_tag = TTR_IDU				
-			}
+			add_ideas = BUL_tatar_bulgarian_unity_idea
 		}
 	}
 	focus = {
 		id = BUL_5_States_Of_Russia
-		icon = GFX_TTR_Five_Muslim_States_Russia
+		icon = GFX_goal_POL_slavic_union
 		relative_position_id = BUL_MSK_In_Power
 		x = 4
 		y = 6
 		cost = 3
-		available = {
-			has_country_leader = { name = "Ğälimcan Ibrahimov" ruling_only = yes }
-			if = {
-				limit = {
-					NOT = { has_cosmetic_tag = TTR_IDU }
-				}
-				is_subject = no
-			}
-		}
+		
 		prerequisite = { focus = BUL_Left_Idel_Ural }
 		prerequisite = { focus = BUL_National_Narodism }
 		ai_will_do = {
@@ -16628,10 +16844,259 @@ focus = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TTR_5_States_Of_Russia"
-			activate_targeted_decision = { target = ROOT decision = TTR_crimea_state }
-			activate_targeted_decision = { target = ROOT decision = TTR_caucasus_state }
-			activate_targeted_decision = { target = ROOT decision = TTR_kazakhstan_state }
-			activate_targeted_decision = { target = ROOT decision = TTR_turkestan_state }
+			set_cosmetic_tag = BUL_bulgar_panslav
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = RUS
+						is_claimed_by = RUS
+						is_core_of = TRM
+						is_claimed_by = TRM
+						is_core_of = UKR
+						is_claimed_by = UKR
+						is_core_of = WHR
+						is_claimed_by = WHR
+						is_core_of = SER
+						is_claimed_by = SER
+						is_core_of = CZE
+						is_claimed_by = CZE
+						is_core_of = SVK
+						is_claimed_by = SVK
+						is_core_of = POL
+						is_claimed_by = POL
+						is_core_of = GAL
+						is_claimed_by = GAL						
+						is_core_of = SLO
+						is_claimed_by = SLO
+						is_core_of = CRO
+						is_claimed_by = CRO
+						is_core_of = BOS
+						is_claimed_by = BOS
+						is_core_of = MNT
+						is_claimed_by = MNT
+					    }
+				    }
+				add_core_of = ROOT
+			    }							
+				48 = { add_core_of = ROOT 
+				         }
+				211 = { add_core_of = ROOT 
+				         }
+				212 = { add_core_of = ROOT 
+				         }
+				77 = { add_core_of = ROOT 
+				         }
+				184 = { add_core_of = ROOT 
+				         }
+				769 = { add_core_of = ROOT 
+				         }
+				1089 = { add_core_of = ROOT 
+				         }
+				106 = { add_core_of = ROOT 
+				         }
+				1271 = { add_core_of = ROOT 
+				         }
+				841 = { add_core_of = ROOT 
+				         }
+				1090 = { add_core_of = ROOT 
+				         }
+				770 = { add_core_of = ROOT 
+				         }
+				771 = { add_core_of = ROOT 
+				         }
+				772 = { add_core_of = ROOT 
+				         }
+
+				1222 = { add_core_of = ROOT 
+				         }
+				
+				1269 = { add_core_of = ROOT 
+				         }
+				107 = { add_core_of = ROOT 
+				         }
+				765 = { add_core_of = ROOT 
+				         }
+				108 = { add_core_of = ROOT 
+				         }
+				767 = { add_core_of = ROOT 
+				         }
+				
+				109 = { add_core_of = ROOT 
+				         }
+				1142 = { add_core_of = ROOT 
+				         }
+				1105 = { add_core_of = ROOT 
+				         }
+				1206 = { add_core_of = ROOT 
+				         }
+				103 = { add_core_of = ROOT 
+				         }
+				163 = { add_core_of = ROOT 
+				         }
+				1143 = { add_core_of = ROOT 
+				         }
+				1141 = { add_core_of = ROOT 
+				         }
+				104 = { add_core_of = ROOT 
+				         }
+				1145 = { add_core_of = ROOT 
+				         }
+				1098 = { add_core_of = ROOT 
+				         }
+				1270 = { add_core_of = ROOT 
+				         }
+				1099 = { add_core_of = ROOT 
+				         }
+				1102 = { add_core_of = ROOT 
+				         }
+				794 = { add_core_of = ROOT 
+				         }
+				1128 = { add_core_of = ROOT 
+				         }
+				105 = { add_core_of = ROOT 
+				         }
+				1097 = { add_core_of = ROOT 
+				         }	
+				#捷克
+				1139 = { add_core_of = ROOT 
+				         }
+				1133 = { add_core_of = ROOT 
+				         }
+				1130 = { add_core_of = ROOT 
+				         }
+				786 = { add_core_of = ROOT 
+				         }
+				9 = { add_core_of = ROOT 
+				         }
+				1132 = { add_core_of = ROOT 
+				         }
+				71 = { add_core_of = ROOT 
+				         }
+				75 = { add_core_of = ROOT 
+				         }
+				74 = { add_core_of = ROOT 
+				         }
+				1131 = { add_core_of = ROOT 
+				         }
+				1138 = { add_core_of = ROOT 
+				         }
+				69 = { add_core_of = ROOT 
+				         }
+				1129 = { add_core_of = ROOT 
+				         }
+				1134 = { add_core_of = ROOT 
+				         }
+				#斯洛伐克
+				1123 = { add_core_of = ROOT 
+				         }
+				70 = { add_core_of = ROOT 
+				         } 
+				1120 = { add_core_of = ROOT 
+				         } 
+				664 = { add_core_of = ROOT 
+				         } 
+				1121 = { add_core_of = ROOT 
+				         } 
+				1119 = { add_core_of = ROOT 
+				         } 
+				73 = { add_core_of = ROOT 
+				         } 
+				1136 = { add_core_of = ROOT 
+				         } 
+				1135 = { add_core_of = ROOT 
+				         }
+				1122 = { add_core_of = ROOT 
+				         }	
+				#斯洛文尼亚
+				736 = { add_core_of = ROOT 
+				         }
+				1100 = { add_core_of = ROOT 
+				         }
+				1144 = { add_core_of = ROOT 
+				         }
+				102 = { add_core_of = ROOT 
+				         }
+				1104 = { add_core_of = ROOT 
+				         }
+				1272 = { add_core_of = ROOT 
+				         }
+				1103 = { add_core_of = ROOT 
+				         }
+				1101 = { add_core_of = ROOT 
+				         }
+				#伏伊伏丁那
+				45 = { add_core_of = ROOT }
+				#西巴纳特
+				875 = { add_core_of = ROOT }
+				#卡林西亚（原奥地利领土）	   
+				835 = { add_claim_by = ROOT }
+				#波兹南
+				86 = { add_core_of = ROOT }
+				#西里西亚
+				66 = { add_core_of = ROOT }
+				67 = { add_core_of = ROOT }
+				#波美拉尼亚
+				63 = { add_core_of = ROOT }
+				62 = { add_claim_by = ROOT }
+				#但泽
+				776 = { add_core_of = ROOT }
+				#马祖里亚
+				777 = { add_core_of = ROOT }
+				#诺伊马尔克
+				68 = { add_core_of = ROOT }
+				#梅克伦堡
+				61 = { add_claim_by = ROOT }
+				#柏林
+				64 = { add_claim_by = ROOT }
+				#萨克森
+				65 = { add_claim_by = ROOT }
+				#萨哈林岛
+				537 = { add_core_of = ROOT }
+				#千岛群岛
+				555 = { add_core_of = ROOT }
+				#立陶宛
+				94 = { add_core_of = ROOT }
+				96 = { add_core_of = ROOT }
+			    #大顿河军团
+				1231 = { add_core_of = ROOT }
+				1263 = { add_core_of = ROOT }
+				218 = { add_core_of = ROOT }
+				1265 = { add_core_of = ROOT }
+				1264 = { add_core_of = ROOT }
+				1226 = { add_core_of = ROOT }
+				237 = { add_core_of = ROOT }
+				238 = { add_core_of = ROOT }
+				245 = { add_core_of = ROOT }
+				1266 = { add_core_of = ROOT }
+                #库班
+				234 = { add_core_of = ROOT }
+				235 = { add_core_of = ROOT }
+				1227 = { add_core_of = ROOT }
+			    #北高加索   
+				1186 = { add_core_of = ROOT }
+				1187 = { add_core_of = ROOT }
+				1189 = { add_core_of = ROOT }
+				233 = { add_core_of = ROOT }
+				787 = { add_core_of = ROOT }
+				1191 = { add_core_of = ROOT }
+				232 = { add_core_of = ROOT }
+				every_state = {
+					limit = {						
+						is_core_of = GEO
+					}
+					add_core_of = ROOT
+				}	
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = BUL
+							is_claimed_by = BUL
+						}
+						
+						is_owned_by_ROOT_or_subject = yes
+					}
+					transfer_state_to = BUL
+				}
 		}
 	}
 	focus = {
@@ -16641,9 +17106,7 @@ focus = {
 		x = 0
 		y = 4
 		cost = 3
-		available = {
-			has_country_leader = { name = "Mirsäyet Soltanğäliev" ruling_only = yes }
-		}
+		
 		prerequisite = { focus = BUL_Revolutionary_Jadidism }
 		prerequisite = { focus = BUL_Memory_Of_Vakhitov }
 		prerequisite = { focus = BUL_Soltangaliev_Doctrine }
@@ -16654,12 +17117,7 @@ focus = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TTR_Prophet_Of_Marxist_Islam"
 			add_ideas = TTR_islamic_socialism
-			hidden_effect = {
-				if = {
-					limit = { is_subject_of = RUS }
-					RUS = { country_event = tatsoc.23 }
-				}
-			}
+			
 		}
 	}
 	
@@ -16670,9 +17128,7 @@ focus = {
 		x = -3
 		y = 3
 		cost = 3
-		available = {
-			has_country_leader = { name = "Ğaynan Wäisi" ruling_only = yes }
-		}
+		
 		prerequisite = {
 			focus = BUL_Legacy_Of_Waisi_Movement
 		}
@@ -16688,14 +17144,12 @@ focus = {
 	}
 	focus = {
 		id = BUL_Power_to_Sardar
-		icon = GFX_TTR_Power_Sardar
+		icon = GFX_RUS_Integrate_Green_Armies
 		relative_position_id = BUL_MSK_In_Power
 		x = -3
 		y = 5
 		cost = 3
-		available = {
-			has_country_leader = { name = "Ğaynan Wäisi" ruling_only = yes }
-		}
+		
 		prerequisite = { focus = BUL_True_Faith }
 		ai_will_do = {
 			factor = 80
@@ -16703,8 +17157,7 @@ focus = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TTR_Power_to_Sardar"
-			increase_ruling_party_popularity_by_10 = yes
-			add_stability = 0.10
+			add_ideas = TTR_green_armies_2
 		}
 	}
 	focus = {
@@ -16714,9 +17167,7 @@ focus = {
 		x = -4
 		y = 4
 		cost = 3
-		available = {
-			has_country_leader = { name = "Ğaynan Wäisi" ruling_only = yes }
-		}
+		
 		prerequisite = {
 			focus = BUL_True_Faith
 		}
@@ -16737,9 +17188,7 @@ focus = {
 		x = -4
 		y = 6
 		cost = 3
-		available = {
-			has_country_leader = { name = "Ğaynan Wäisi" ruling_only = yes }
-		}
+		
 		prerequisite = { focus = BUL_Power_to_Sardar }
 		prerequisite = { focus = BUL_Sharia_Law_Waisi }
 		ai_will_do = {
@@ -16748,41 +17197,220 @@ focus = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TTR_Waisi_Warriors_Of_Allah"
-			add_war_support = 0.10
-			swap_ideas = {
-				remove_idea = TTR_green_armies_1
-				add_idea = TTR_green_armies_2
-			}
-			add_one_random_military_factory = yes 
-			if = {
-				limit = {
-					NOT = { has_template = "Allah's Warriors" }
-				}					
-				division_template = {
-					name = "Allah's Warriors"
-					division_names_group = TTR_MIL_01
-					regiments = {
-						irregular_infantry = { x = 0 y = 0 }
-						irregular_infantry = { x = 0 y = 1 }
-						irregular_infantry = { x = 0 y = 2 }
-						irregular_infantry = { x = 0 y = 3 }
-					}
-					support = {
-						recon = { x = 0 y = 0 }
-					}
+			set_cosmetic_tag = BUL_bulgar_islam
+			every_state = {
+				limit = { is_core_of = OMA }
+				add_core_of = BUL
+		}
+		create_wargoal = { type = annex_everything target = OMA }
+		every_state = {
+				limit = { is_core_of = JBS }
+				add_core_of = BUL
+		}
+		create_wargoal = { type = annex_everything target = JBS }
+		every_state = {
+				limit = { is_core_of = SAU }
+				add_core_of = BUL
+		}
+		create_wargoal = { type = annex_everything target = SAU }
+		every_state = {
+				limit = { is_core_of = YEM }
+				add_core_of = BUL
+		}
+		create_wargoal = { type = annex_everything target = YEM }
+		every_state = {
+				limit = { is_core_of = PER }
+				add_core_of = BUL
+		}
+		create_wargoal = { type = annex_everything target = PER }
+		every_state = {
+				limit = { is_core_of = AFG }
+				add_core_of = BUL
+		}
+		create_wargoal = { type = annex_everything target = AFG }
+		every_state = {
+				limit = { is_core_of = SUD }
+				add_core_of = BUL
+		}
+		create_wargoal = { type = annex_everything target = SUD }
+		every_state = {
+				limit = { is_core_of = AZE }
+				add_core_of = BUL
+		}
+		create_wargoal = { type = annex_everything target = AZE }
+		every_state = {
+				limit = { is_core_of = EGY }
+				add_core_of = BUL
+		}
+		create_wargoal = { type = annex_everything target = EGY }
+		every_state = {
+				limit = { is_core_of = LBA }
+				add_core_of = BUL
+		}
+		create_wargoal = { type = annex_everything target = LBA }
+		every_state = {
+				limit = { is_core_of = TRP }
+				add_core_of = BUL
+		}
+		create_wargoal = { type = annex_everything target = TRP }
+		every_state = {
+				limit = { is_core_of = TUN }
+				add_core_of = BUL
+		}
+		create_wargoal = { type = annex_everything target = TUN }
+		every_state = {
+				limit = { is_core_of = ALG }
+				add_core_of = BUL
+		}
+		create_wargoal = { type = annex_everything target = ALG }
+		every_state = {
+				limit = { is_core_of = MOR }
+				add_core_of = BUL
+		}
+		create_wargoal = { type = annex_everything target = MOR }
+		every_state = {
+				limit = { is_core_of = MRT }
+				add_core_of = BUL
+		}
+		create_wargoal = { type = annex_everything target = MRT }
+		create_wargoal = { type = annex_everything target = NFA }
+		every_state = {
+				limit = { is_core_of = ERI }
+				add_core_of = BUL
+		}
+		create_wargoal = { type = annex_everything target = ERI }
+		every_state = {
+				limit = { is_core_of = DJI }
+				add_core_of = BUL
+		}
+		create_wargoal = { type = annex_everything target = DJI }
+		every_state = {
+				limit = { is_core_of = UZB }
+				add_core_of = BUL
+		}
+		create_wargoal = { type = annex_everything target = UZB }
+		every_state = {
+				limit = { is_core_of = KHI }
+				add_core_of = BUL
+		}
+		create_wargoal = { type = annex_everything target = KHI }
+		every_state = {
+				limit = { is_core_of = TRK }
+				add_core_of = BUL
+		}
+		create_wargoal = { type = annex_everything target = TRK }
+		every_state = {
+				limit = { is_core_of = KYR }
+				add_core_of = BUL
+		}
+		create_wargoal = { type = annex_everything target = KYR }
+		every_state = {
+				limit = { is_core_of = ALO }
+				add_core_of = BUL
+		}
+		create_wargoal = { type = annex_everything target = ALO }
+		every_state = {
+				limit = { is_core_of = NER }
+				add_core_of = BUL
+		}
+		create_wargoal = { type = annex_everything target = NER }
+		every_state = {
+				limit = { is_core_of = MAL }
+				add_core_of = BUL
+		}
+		create_wargoal = { type = annex_everything target = MAL }
+		every_state = {
+				limit = { is_core_of = WAD }
+				add_core_of = BUL
+		}
+		create_wargoal = { type = annex_everything target = WAD }
+		every_state = {
+				limit = { is_core_of = BFA }
+				add_core_of = BUL
+		}
+		create_wargoal = { type = annex_everything target = BFA }
+		every_state = {
+				limit = { is_core_of = SEN }
+				add_core_of = BUL
+		}
+		create_wargoal = { type = annex_everything target = SEN }
+		every_state = {
+				limit = { is_core_of = GNA }
+				add_core_of = BUL
+		}
+		create_wargoal = { type = annex_everything target = GNA }
+		every_state = {
+				limit = { is_core_of = CVG }
+				add_core_of = BUL
+		}
+		create_wargoal = { type = annex_everything target = CVG }
+		every_state = {
+				limit = { is_core_of = SIE }
+				add_core_of = BUL
+		}
+		create_wargoal = { type = annex_everything target = SIE }
+		every_state = {
+				limit = { is_core_of = ALB }
+				add_core_of = BUL
+		}
+		create_wargoal = { type = annex_everything target = ALB }
+		every_state = {
+				limit = { is_core_of = BOS }
+				add_core_of = BUL
+		}
+		create_wargoal = { type = annex_everything target = BOS }
+		every_state = {
+				limit = { is_core_of = SIK }
+				add_core_of = BUL
+		}
+		create_wargoal = { type = annex_everything target = SIK }
+		every_state = {
+				limit = { is_core_of = MTR }
+				add_core_of = BUL
+		}
+		create_wargoal = { type = annex_everything target = MTR }
+		every_state = {
+			limit = {
+				OR = {
+					is_core_of = SOM
+					is_claimed_by = SOM
 				}
 			}
-			249 = {
-				create_unit = {
-					division = "division_template = \"Allah's Warriors\" start_experience_factor = 0.2"
-					owner = PREV
-					count = 4
+			add_core_of = BUL
+		}
+		create_wargoal = { type = annex_everything target = SOM }
+		
+		
+			819 = {	add_core_of = BUL }
+			352 = {	add_core_of = BUL }
+			350 = {	add_core_of = BUL }
+			450 = {	add_core_of = BUL }
+			905 = { add_core_of = BUL }
+			989 = { add_core_of = BUL }
+			965 = { add_core_of = BUL }
+			834 = { add_core_of = BUL }
+			1219 = { add_core_of = BUL }
+			444 = {	add_core_of = BUL }
+			443 = {	add_core_of = BUL }
+			445 = { add_core_of = BUL }
+			442 = { add_core_of = BUL }
+			891 = { add_core_of = BUL }
+			441 = { add_core_of = BUL }
+			1208 = { add_core_of = BUL }
+			583 = { add_core_of = BUL }
+			588 = { add_core_of = BUL }
+			708 = {	add_core_of = BUL }
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = BUL
+							is_claimed_by = BUL
+						}
+						
+						is_owned_by_ROOT_or_subject = yes
+					}
+					transfer_state_to = BUL
 				}
-			}
-			if = {
-				limit = { is_subject_of = RUS }
-				activate_targeted_decision = { target = RUS decision = TTR_remove_russians }			
-			}
 		}
 	}
 	
@@ -16794,10 +17422,6 @@ focus = {
 		x = 1
 		y = 6
 		cost = 3
-		available = {
-			has_socialist_government = yes
-			NOT = { is_subject_of = RUS }
-		}
 		prerequisite = {
 			focus = BUL_Power_to_Sardar
 			focus = BUL_Soviet_Turan
@@ -16809,8 +17433,7 @@ focus = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TTR_From_Shackles_Of_Russification"
-			add_stability = 0.05
-			add_ideas = TTR_reverse_russification
+			add_ideas = BUL_tatar_prussians
 		}
 	}
 	focus = {
@@ -16820,12 +17443,11 @@ focus = {
 		x = -1
 		y = 6
 		cost = 3
-		available = {
-			has_country_leader = { name = "Mirsäyet Soltanğäliev" ruling_only = yes }
-		}
+		
 		prerequisite = {
-			focus = BUL_Challenge_Russian_Hegemony
+			focus = BUL_Power_to_Sardar
 			focus = BUL_Soviet_Turan
+			focus = BUL_National_Narodism
 		}
 		ai_will_do = {
 			factor = 80
@@ -16833,8 +17455,7 @@ focus = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TTR_Propaganda_Of_Deeds"
-			increase_ruling_party_popularity_by_10 = yes
-			add_war_support = 0.05
+			add_ideas = BUL_defense_of_tatarstan
 		}
 	}
 	
@@ -16846,11 +17467,7 @@ focus = {
 		x = 0
 		y = 5
 		cost = 3
-		available = {
-			has_country_leader = { name = "Mirsäyet Soltanğäliev" ruling_only = yes }
-			NOT = { has_country_flag = TTR_russia_blocked_turan }
-			is_subject_of = RUS
-		}
+		
 		prerequisite = {
 			focus = BUL_Prophet_Of_Marxist_Islam
 		}
@@ -16867,87 +17484,315 @@ focus = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TTR_Soviet_Turan"
-			get_current_government_type = yes
-			RUS = {
-				set_autonomy = {
-					target = ROOT
-					autonomy_state = kr_soviet_republic_not_equal
-					end_wars = no
-				}
-				every_owned_state = {
-					limit = {
-						OR = {
-							state = 256
-							state = 1193
-							state = 399
-							state = 251
-							state = 652
-							state = 1207
-							state = 1224
-							state = 236
-							state = 651
-							state = 1194
-							state = 1195
-							state = 1208
-						}
-						NOT = { is_owned_by = ROOT }
-					}
-					transfer_state_to = ROOT
-					add_claim_by = ROOT
-				}
-				every_other_country = {
-					limit = {
-						OR = {
-							tag = BKN
-							is_central_asian_tag = yes
-						}
-						is_subject_of = PREV
-					}
-					ROOT = {
-						annex_country = { target = PREV transfer_troops = yes }
-					}
-				}
-			}
-			restore_previous_government_type = yes
-			turkestan_set_potential_national_government = yes
-			turkestan_enable_all_demand_submission_decisions = yes
-			if = {
-				limit = { can_declare_war_on = ORE }
-				activate_targeted_decision = { decision = turkestan_attack_decision target = ORE }
-			}
-			if = {
-				limit = { can_declare_war_on = URL }
-				activate_targeted_decision = { decision = turkestan_attack_decision target = URL }
-			}
-			if = {
-				limit = { can_declare_war_on = BKN }
-				activate_targeted_decision = { decision = turkestan_attack_decision target = BKN }
-			}
-			hidden_effect = {
-				every_other_country = {
-					limit = {
-						is_central_asian_tag = yes
-						NOT = {	
-							tag = URL
-							tag = SMR
-							tag = ORE
-						}
-					}
-					add_to_array = { ROOT.turkestan_possible_targets_array = THIS }
-				}
+			set_cosmetic_tag = BUL_bulgar_turan
+			#khiva
+				1275 = { add_core_of = ROOT 
+				         }
+				584 = { add_core_of = ROOT 
+				         }
+				1281 = { add_core_of = ROOT 
+				         }
+				861 = { add_core_of = ROOT 
+				         }
+				#kokand
+				1278 = { add_core_of = ROOT 
+				         }
+				585 = { add_core_of = ROOT 
+				         }
+				1209 = { add_core_of = ROOT 
+				         }
+				1211 = { add_core_of = ROOT 
+				         }
+				1042 = { add_core_of = ROOT 
+				         }
+				712 = { add_core_of = ROOT 
+				         }
+				407 = { add_core_of = ROOT 
+				         }
+				1279 = { add_core_of = ROOT 
+				         }
+				1196 = { add_core_of = ROOT 
+				         }
+				586 = { add_core_of = ROOT 
+				         }
+				#bukhara
+				1276 = { add_core_of = ROOT 
+				         }
+				405 = { add_core_of = ROOT 
+				         }
+				1277 = { add_core_of = ROOT 
+				         }
+				732 = { add_core_of = ROOT 
+				         }
+				1210 = { add_core_of = ROOT 
+				         }
+				#alash autonomy
+				587 = { add_core_of = ROOT 
+				         }
+				406 = { add_core_of = ROOT 
+				         }
+				1208 = { add_core_of = ROOT 
+				         }
+				402 = { add_core_of = ROOT 
+				         }
+				1212 = { add_core_of = ROOT 
+				         }
+				1203 = { add_core_of = ROOT 
+				         }
+				590 = { add_core_of = ROOT 
+				         }
+				589 = { add_core_of = ROOT 
+				         }
+				810 = { add_core_of = ROOT 
+				         }
+				404 = { add_core_of = ROOT 
+				         }
+				583= { add_core_of = ROOT 
+				         }
+				588= { add_core_of = ROOT 
+				         }
+				1224= { add_core_of = ROOT 
+				         }
+            #新疆
+				287 = { add_core_of = ROOT 
+				         }
+				897 = { add_core_of = ROOT 
+				         }
+				619 = { add_core_of = ROOT 
+				         }
+				1095 = { add_core_of = ROOT 
+				         }
+				617 = { add_core_of = ROOT 
+				         }
+				618 = { add_core_of = ROOT 
+				         }   
+				1083 = { add_core_of = ROOT 
+				         }
+				1085 = { add_core_of = ROOT 
+				         }
+            #伊朗阿富汗
+				267 = { add_core_of = ROOT 
+				         }
+				1217 = { add_core_of = ROOT 
+				         }
+				416 = { add_core_of = ROOT 
+				         }
+				418 = { add_core_of = ROOT 
+				         }
+				804 = { add_core_of = ROOT 
+				         }
+				417 = { add_core_of = ROOT 
+				         }
+				419 = { add_core_of = ROOT 
+				         }
+				420 = { add_core_of = ROOT 
+				         }
+				819 = { add_claim_by = ROOT }
+				421 = { add_claim_by = ROOT }
+				266 = { add_claim_by = ROOT }
+				415 = { add_claim_by = ROOT }				
+			#土耳其
+				184 = { add_core_of = ROOT 
+				         }
+				187 = { add_core_of = ROOT 
+				         }
+				341 = { add_core_of = ROOT 
+				         }
+				773 = { add_core_of = ROOT 
+				         }
+				340 = { add_core_of = ROOT 
+				         }
+				339 = { add_core_of = ROOT 
+				         }
+				342 = { add_core_of = ROOT 
+				         }
+				164 = { add_core_of = ROOT 
+				         }
+				343 = { add_core_of = ROOT 
+				         }
+				346 = { add_core_of = ROOT 
+				         }
+				49 = { add_core_of = ROOT 
+				         }
+				356 = { add_core_of = ROOT 
+				         }
+				344 = { add_core_of = ROOT 
+				         }
+				345 = { add_core_of = ROOT 
+				         }
+				355 = { add_core_of = ROOT 
+				         }
+				183 = { add_core_of = ROOT 
+				         }
+				354	= { add_core_of = ROOT 
+				         }
+				1001 = { add_core_of = ROOT 
+				         }
+				350	= { add_core_of = ROOT 
+				         }
+				352	= { add_core_of = ROOT 
+				         }
+				1213 = { add_core_of = ROOT 
+				         }
+				1000 = { add_core_of = ROOT 
+				         }
+				212 = { add_core_of = ROOT 
+				         }
+				1089 = { add_core_of = ROOT 
+				         }
+				211 = { add_core_of = ROOT 
+				         }
+				771 = { add_core_of = ROOT 
+				         }
+				77 = { add_core_of = ROOT 
+				         }
+				731 = { add_core_of = ROOT 
+				         }
+				769 = { add_core_of = ROOT 
+				         }
+				989 = { add_core_of = ROOT 
+				         }
+				106 = { add_claim_by = ROOT }
+				1271 = { add_claim_by = ROOT }
+				765 = { add_claim_by = ROOT }		
+            #阿塞拜疆
+				1298 = { add_core_of = ROOT 
+				         }
+				998 = { add_core_of = ROOT 
+				         }
+				1300 = { add_core_of = ROOT 
+				         }
+				229 = { add_core_of = ROOT 
+				         }
+				990 = { add_core_of = ROOT 
+				         }
+				1081 = { add_core_of = ROOT 
+				         }
+				1301 = { add_core_of = ROOT 
+				         }
+				1267 = { add_core_of = ROOT 
+				         }
+				1304 = { add_core_of = ROOT 
+				         }
+				230 = { add_claim_by = ROOT }
+				1299 = { add_claim_by = ROOT }
+				1303 = { add_claim_by = ROOT }
+				1302 = { add_claim_by = ROOT }
+			#顿河高加索
+			    232 = { add_core_of = ROOT 
+				         }
+				787 = { add_claim_by = ROOT }
+				1191 = { add_core_of = ROOT 
+				         }
+				233 = { add_core_of = ROOT 
+				         }
+				1186 = { add_core_of = ROOT 
+				         }
+				1189 = { add_core_of = ROOT 
+				         }
+				1187 = { add_core_of = ROOT 
+				         }
+				1266 = { add_core_of = ROOT 
+				         }
+				237 = { add_core_of = ROOT 
+				         }
+				236 = { add_core_of = ROOT 
+				         }
+				217 = { add_core_of = ROOT 
+				         }
+				401 = { add_core_of = ROOT 
+				         }
+				1207 = { add_core_of = ROOT 
+				         }
+			#鞑靼斯坦
+			    1197 = { add_core_of = ROOT 
+				         }
+				1193 = { add_core_of = ROOT 
+				         }
+				1198 = { add_core_of = ROOT 
+				         }
+				256 = { add_core_of = ROOT 
+				         }
+				250 = { add_core_of = ROOT 
+				         }
+				249 = { add_core_of = ROOT 
+				         }
+				1199 = { add_core_of = ROOT 
+				         }
+				251 = { add_core_of = ROOT 
+				         }
+				652 = { add_core_of = ROOT 
+				         }
+				651 = { add_core_of = ROOT 
+				         }
+				1194 = { add_core_of = ROOT 
+				         }
+				1195 = { add_core_of = ROOT 
+				         }
+				573 = { add_core_of = ROOT 
+				         }
+				582 = { add_core_of = ROOT 
+				         }
+			#西伯利亚老家
+				572 = { add_core_of = ROOT 
+				         }
+				403 = { add_core_of = ROOT 
+				         }
+				571 = { add_core_of = ROOT 
+				         }
+				570 = { add_core_of = ROOT 
+				         }
+				578 = { add_core_of = ROOT 
+				         }
+				40 = { add_core_of = ROOT 
+				         }
+				1292 = { add_core_of = ROOT 
+				         }
+				654 = { add_core_of = ROOT 
+				         }
+				569 = { add_core_of = ROOT 
+				         }
+				575 = { add_core_of = ROOT 
+				         }
+				1293 = { add_core_of = ROOT 
+				         }
+				568 = { add_core_of = ROOT 
+				         }
+				811 = { add_core_of = ROOT 
+				         }
+				576 = { add_core_of = ROOT 
+				         }
+				516 = { add_core_of = ROOT 
+				         }
+				567 = { add_core_of = ROOT 
+				         }
+				566 = { add_core_of = ROOT 
+				         }
+				644 = { add_core_of = ROOT 
+				         }
+				574 = { add_core_of = ROOT 
+				         }
+				565 = { add_core_of = ROOT 
+				         }
+				329 = { add_core_of = ROOT 
+				         }
+				1084 = { add_core_of = ROOT 
+				         }	
+			#克里木
+				1221 = { add_core_of = ROOT }
+				137 = { add_core_of = ROOT }
+				1220 = { add_core_of = ROOT }
 				every_state = {
-					limit = { 
+					limit = {
 						OR = {
-							is_claim_or_core_of_ROOT = yes
-							is_central_asia = yes
-							region = 221
+							is_core_of = BUL
+							is_claimed_by = BUL
 						}
+						
+						is_owned_by_ROOT_or_subject = yes
 					}
-					remove_claim_by = RUS
-					set_variable = { ambition_area_@RUS = 0 }
-					set_variable = { ambition_area_@ROOT = 1 }
+					transfer_state_to = BUL
 				}
-			}
 		}
 	}
 
@@ -17121,21 +17966,19 @@ focus = {
 		}
 
 		completion_reward = {
-			country_event = bulgaria.17
-			swap_ideas = {
-				remove_idea = peacetime
-				add_idea = full_armament_level
-			}
-			swap_ideas = {
-				remove_idea = interventionist_market
-				add_idea = laissez_faire_cap
-			}
+			increase_mobilisation = yes
+			increase_conscription = yes
+			
 			add_popularity = {
 			    ideology = totalist
 				popularity = -0.1
 			}
 			add_popularity = {
 			    ideology = syndicalist
+				popularity = -0.1
+			}
+			add_popularity = {
+			    ideology = radical_socialist
 				popularity = -0.1
 			}
 			add_popularity = {
@@ -19265,7 +20108,13 @@ focus = {
 			date > 1938.1.1
 		}
 		bypass = {
-			has_war_with = SER
+			OR = {
+				has_war_with = SER
+				NOT = { country_exists = SER }
+				has_subject = SER
+				has_country_flag = BUL_surrender_no_war
+			}
+			
 		}
 		ai_will_do = { factor = 30 }
 		completion_reward = {
@@ -19512,10 +20361,17 @@ focus = {
     }
 		
 		available = {
-			has_global_flag = balkan_war_ended
+			OR = {
+				has_country_flag = BUL_surrender_no_war
+				has_country_flag = BUL_balkan_peace_loss
+			}
+			
 		}
 		bypass = {
-			has_global_flag = balkan_war_ended
+			OR = {
+				has_country_flag = BUL_surrender_no_war
+				has_country_flag = BUL_balkan_peace_loss
+			}
 		}
 		ai_will_do = { factor = 20 }
 		completion_reward = {
