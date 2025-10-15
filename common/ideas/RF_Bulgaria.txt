@@ -147,15 +147,14 @@ ideas = {
 		}
 		BUL_watchful_eye3 = {
 			picture = BUL_watchful_eye
-			
 			modifier = { 
-				cic_to_overlord_factor = 0.2
-				mic_to_overlord_factor = 0.2
-				extra_trade_to_overlord_factor = 0.2
-				political_power_gain = -0.5
+				conversion_cost_civ_to_mil_factor = -0.2
+				conversion_cost_miv_to_cil_factor = -0.2
+				trade_opinion_factor = 0.2
+				political_power_gain = 0.15
 				stability_factor = 0.1
-				production_speed_buildings_factor = 0.1
-				consumer_goods_expected_value = -0.05
+				production_speed_buildings_factor = 0.15
+				consumer_goods_expected_value = -0.1
 			}
 		}
 		BUL_better_than_belgrade = {

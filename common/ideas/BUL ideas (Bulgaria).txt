@@ -1383,7 +1383,7 @@ ideas = {
 			allowed = { always = no }
 			modifier = {
 				political_power_factor = 0.15
-				authoritarian_democrat_drift = 0.05
+				social_conservative_drift = 0.05
 			}
 		}
 
@@ -1500,17 +1500,14 @@ ideas = {
 			modifier = {
 				stability_weekly = 0.002
 				conscription_factor = 0.05
+				compliance_growth = 0.15
 			}
 		}
 		BUL_defender_of_balkans = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_defender_of_balkans" }
 			picture = bul_bulgarian_irredentism
 			allowed = { always = no }
-			cancel = {
-				NOT = {
-					has_dynamic_modifier = { modifier = BUL_balkan_union }
-				}
-			}
+			
 			modifier = {
 				army_org_factor = 0.05
 				conscription = 0.02
@@ -1520,16 +1517,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_defender_of_balkans_oth" }
 			picture = advisors_bulgaria
 			allowed = { always = no }
-			cancel = {
-				OR = {
-					NOT = {
-						has_dynamic_modifier = { modifier = BUL_balkan_union }
-					}
-					NOT = {
-						is_in_faction_with = BUL
-					}
-				}
-			}
+			
 			modifier = {
 				conscription_factor = -0.1
 				army_core_defence_factor = 0.1
@@ -1539,11 +1527,6 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_balkans_peace" }
 			picture = generic_desertion
 			allowed = { always = no }
-			cancel = {
-				NOT = {
-					has_dynamic_modifier = { modifier = BUL_balkan_union }
-				}
-			}
 			modifier = {
 				stability_factor = 0.2
 			}

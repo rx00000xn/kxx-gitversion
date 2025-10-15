@@ -136,6 +136,14 @@ defined_text = {
 		localization_key = SHE_SWTH
 	}
 	##############################################
+	#越南
+	text = {
+		trigger = {
+		  tag = VIN
+		}
+		localization_key = EM_OR_LEADER
+	}
+
 	#塞尔维亚
 	text = {
 		trigger = {
@@ -787,6 +795,14 @@ defined_text = {
 		localization_key = SHE_SWTH_2
 	}
 	#################################################
+	#越南
+	text = {
+		trigger = {
+		  tag = VIN
+		}
+		localization_key = EM_OR_LEADER2
+	}
+
 	#塞尔维亚
 	text = {
 		trigger = {
@@ -1490,6 +1506,86 @@ defined_text = {
 		localization_key = GRU_LC_MOLOTOV
 	}
 	############################################################
+	#越南
+	text = {
+		trigger = {
+		  has_idea = VIN_Nguyen_Tuong_Long_hog_sli
+		}
+		localization_key = VIN_Nguyen_Tuong_Long_hog_sli
+	  }
+	  text = {
+		trigger = {
+		  has_idea = VIN_Bui_Quang_Chieu_hog_mli
+		}
+		localization_key = VIN_Bui_Quang_Chieu_hog_mli
+	  }
+	  text = {
+		trigger = {
+		  has_idea = VIN_Ngo_Dinh_Diem_hog_ade
+		}
+		localization_key = VIN_Ngo_Dinh_Diem_hog_ade
+	  }
+	  text = {
+		trigger = {
+		  has_idea = VIN_Pham_Qhuyn_hog_sco
+		}
+		localization_key = VIN_Pham_Qhuyn_hog_sco
+	  }
+	  text = {
+		trigger = {
+		  has_idea = VIN_Tran_Trong_Kim_hog_sco
+		}
+		localization_key = VIN_Tran_Trong_Kim_hog_sco
+	  }
+	  text = {
+		trigger = {
+		  has_idea = VIN_Nguyen_Tai_Hoc_hog_sde
+		}
+		localization_key = VIN_Nguyen_Tai_Hoc_hog_sde
+	  }
+	  text = {
+		trigger = {
+		  has_idea = VIN_Henriette_Bui_Quang_Chieu_hog_mli
+		}
+		localization_key = VIN_Henriette_Bui_Quang_Chieu_hog_mli
+	  }
+	  text = {
+		trigger = {
+		  has_idea = VIN_Nguyen_Tuong_Tam_hog_sli
+		}
+		localization_key = VIN_Nguyen_Tuong_Tam_hog_sli
+	  }
+	  text = {
+		trigger = {
+		  has_idea = VIN_Nguyen_Phan_Long_hog_mli
+		}
+		localization_key = VIN_Nguyen_Phan_Long_hog_mli
+	  }
+	  text = {
+		trigger = {
+		  has_idea = VIN_Nguyen_Phuc_Buu_Dinh_hog_pau
+		}
+		localization_key = VIN_Nguyen_Phuc_Buu_Dinh_hog_pau
+	  }
+	  text = {
+		trigger = {
+		  has_idea = VIN_Le_Van_Vien_hog_pau
+		}
+		localization_key = VIN_Le_Van_Vien_hog_pau
+	  }
+	  text = {
+		trigger = {
+		  has_idea = VIN_Duong_Van_Duong_hog_pau
+		}
+		localization_key = VIN_Duong_Van_Duong_hog_pau
+	  }
+	  text = {
+		trigger = {
+		  has_idea = VIN_Huynh_Phu_So_hog_npo
+		}
+		localization_key = VIN_Huynh_Phu_So_hog_npo
+	  }
+
 	#塞尔维亚
 	text = {
 		trigger = {
@@ -2623,6 +2719,86 @@ defined_text = {
 		localization_key = GFX_Portrait_SHE_Regency
 	}
 	##############################################
+	#越南
+	text = {
+		trigger = {
+		  has_idea = VIN_Nguyen_Tuong_Long_hog_sli
+		}
+		localization_key = GFX_Portrait_Vietnam_Nguyen_Tuong_Long
+	  }
+	  text = {
+		trigger = {
+		  has_idea = VIN_Bui_Quang_Chieu_hog_mli
+		}
+		localization_key = GFX_Portrait_INC_Bui_Quang_Chieu
+	  }
+	  text = {
+		trigger = {
+		  has_idea = VIN_Ngo_Dinh_Diem_hog_ade
+		}
+		localization_key = GFX_Portrait_Vietnam_Ngo_Din_Diem
+	  }
+	  text = {
+		trigger = {
+		  has_idea = VIN_Pham_Qhuyn_hog_sco
+		}
+		localization_key = GFX_Portrait_Vietnam_Pham_Quynh
+	  }
+	  text = {
+		trigger = {
+		  has_idea = VIN_Tran_Trong_Kim_hog_sco
+		}
+		localization_key = GFX_Portrait_Vietnam_Tran_Trong_Kim
+	  }
+	  text = {
+		trigger = {
+		  has_idea = VIN_Nguyen_Tai_Hoc_hog_sde
+		}
+		localization_key = GFX_Portrait_INC_Nguyen_Tai_Hoc
+	  }
+	  text = {
+		trigger = {
+		  has_idea = VIN_Henriette_Bui_Quang_Chieu_hog_mli
+		}
+		localization_key = GFX_Portrait_Vietnam_Henriette_Bui_Quang_Chieu
+	  }
+	  text = {
+		trigger = {
+		  has_idea = VIN_Nguyen_Tuong_Tam_hog_sli
+		}
+		localization_key = GFX_Portrait_Vietnam_Nguyen_Tuong_Tam
+	  }
+	  text = {
+		trigger = {
+		  has_idea = VIN_Nguyen_Phan_Long_hog_mli
+		}
+		localization_key = GFX_Portrait_Vietnam_Nguyen_Phan_Long
+	  }
+	  text = {
+		trigger = {
+		  has_idea = VIN_Nguyen_Phuc_Buu_Dinh_hog_pau
+		}
+		localization_key = GFX_Portrait_Vietnam_Buu_Loc
+	  }
+	  text = {
+		trigger = {
+		  has_idea = VIN_Le_Van_Vien_hog_pau
+		}
+		localization_key = GFX_Portrait_Vietnam_Le_Van_Vien
+	  }
+	  text = {
+		trigger = {
+		  has_idea = VIN_Duong_Van_Duong_hog_pau
+		}
+		localization_key = GFX_Portrait_Vietnam_Duong_Van_Duong
+	  }
+	  text = {
+		trigger = {
+		  has_idea = VIN_Huynh_Phu_So_hog_npo
+		}
+		localization_key = GFX_Portrait_Vietnam_Huynh_Phu_So
+	}
+
 	#塞尔维亚
 	text = {
 		trigger = {

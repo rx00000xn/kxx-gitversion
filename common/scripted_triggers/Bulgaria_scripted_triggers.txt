@@ -49,7 +49,7 @@ BUL_agrarians_in_power = {
 	custom_trigger_tooltip = {
 		tooltip = BUL_agrarian_government
 		has_government = social_conservative
-		NOT = { has_country_flag = BUL_liberals_is_soccon }
+		
 	}
 }
 

@@ -1079,7 +1079,7 @@ country_event = { #Syndicalist state restructuring
 		remove_all_ministers = yes
 		add_ideas = {
 			BUL_Rafael_Kamhi_hog_rso
-			
+			BUL_Dimitar_Vlahov_for_rso
 			BUL_Smile_Vojdanov_eco_rso
 			BUL_Hristo_Tatarchev_sec_rso
 		}
@@ -1100,12 +1100,6 @@ country_event = { #Syndicalist state restructuring
 		add_popularity = {
 			ideology = totalist
 			popularity = 0.1
-		}
-		create_country_leader = {
-			name = "瓦西尔·伊克诺莫夫"
-			picture = "gfx/leaders/BUL/Portrait_BUL_Vasil_Ikonomov.png"
-			expire = "1.1.1"
-			ideology = anarcho_bolshevism_subtype
 		}
 		set_country_flag = BUL_anarchoids
 		set_politics = {
@@ -1131,6 +1125,17 @@ country_event = { #Syndicalist state restructuring
 			ruling_party = totalist
 			elections_allowed = no
 		}
+		create_country_leader = {
+			name = "维尔科·契尔文科夫"
+			picture = "gfx/leaders/BUL/Portrait_BUL_Valko_Chervenkov.png"
+			expire = "1.1.1"
+			ideology = hardliner_bolshevism_subtype
+		}
+			set_party_name = {
+				ideology = totalist
+				long_name = BUL_communist_party_long
+				name = BUL_communist_party
+			}
 		remove_all_ministers = yes
 		add_ideas = {
 			BUL_Anton_Yugov_hog_tot
@@ -1920,7 +1925,7 @@ country_event = { #Accepting Bulgaria?
 	option = { #Sure!
 		name = bulgaria.49.a
 		ai_chance = {
-			factor = 30
+			factor = 50
 			modifier = {
 				factor = 0.5
 				has_political_power < 0
@@ -1943,7 +1948,7 @@ country_event = { #Accepting Bulgaria?
 	option = { #Absolutely not
 		name = bulgaria.49.b
 		ai_chance = {
-			factor = 70
+			factor = 50
 			modifier = {
 				factor = 0
 				has_game_rule = {
@@ -2084,6 +2089,9 @@ country_event = { #Boris's coup
 		SER = { has_country_flag = SER_accepted_bulgaria_union }
 		has_government = social_conservative
 		has_idea = BUL_Aleksandar_Stamboliyski_hog_sco
+		NOT = {
+			has_cosmetic_tag = BUL_republic
+		}
 	}
 	
 	option = { #We must save Bulgaria
@@ -5533,26 +5541,126 @@ country_event = { #Anger against Agrarians
 	}
 	
 	option = {
-		name = bulgaria.126.a #Absolutist coup
-		ai_chance = {
-			factor = 50
-			modifier = {
-				factor = 0 
-				has_game_rule = { rule = BUL_politics option = BUL_POLITIC_SOCCON }
-			}
+		name = bulgaria.126.a #tsankov coup
+		create_country_leader = {
+			name = "亚历山大·灿科夫"
+			picture = "gfx/leaders/BUL/Portrait_BUL_Alexander_Tsankov.png"
+			expire = "1.1.1"
+			ideology = transitional_government_subtype
 		}
-		country_event = bulgaria.90
+		set_politics = {
+			ruling_party = authoritarian_democrat
+			elections_allowed = no
+		}
+		increase_ruling_party_popularity_by_15 = yes
+			set_party_name = {
+				ideology = authoritarian_democrat
+				long_name = "临时政府"
+				name = "临时政府"
+			}
+			remove_all_ministers = yes
+			add_ideas = {
+				BUL_Atanas_Burov_hog_sli
+				BUL_Stancho_Cholakov_for_npo
+				BUL_Aleksandar_Tsankov_eco_sli
+				BUL_Aleksandar_Girginov_sec_ade
+			}
+			
 	}
 	option = {
-		name = bulgaria.126.b #It was nothing
-		ai_chance = {
-			factor = 50
-			modifier = {
-				factor = 0 
-				has_game_rule = { rule = BUL_politics option = BUL_POLITIC_PATAUT }
+		name = bulgaria.126.b #ultranat coup
+			create_country_leader = {
+				name = "伊万·多切夫"
+				desc = "POLITICS_DOCHEV_DESC"
+				picture = "gfx/leaders/BUL/Portrait_BUL_Ivan_Dochev.png"
+				expire = "1.1.1" 
+				ideology = legionarism_subtype
 			}
+		set_politics = {
+			ruling_party = national_populist
+			elections_allowed = no
 		}
-		add_political_power = -50
+		increase_ruling_party_popularity_by_15 = yes
+			set_party_name = {
+				ideology = national_populist
+				long_name = BUL_legion_party_long
+				name = BUL_legion_party
+			}
+			remove_all_ministers = yes
+			add_ideas = {
+				BUL_Petar_Todorov_hog_npo
+				BUL_Andrey_Toshev_for_pau
+				BUL_Kosta_Boyadzhiev_eco_npo
+				BUL_Ivan_Harizanov_sec_npo
+			}
+	}
+	option = {
+		name = bulgaria.126.c #fatherland front
+			create_country_leader = {
+				name = "雷科·达斯卡洛夫"
+				picture = "gfx/leaders/BUL/Portrait_BUL_Rayko_Daskalov_General.png"
+				expire = "1.1.1" 
+				ideology = socdem_agrarianism_subtype
+			}
+		set_politics = {
+			ruling_party = social_democrat
+			elections_allowed = no
+		}
+		set_country_flag = soc_dems_are_socialists
+		increase_ruling_party_popularity_by_15 = yes
+		set_country_flag = BUL_another_agrarian_w
+			set_party_name = {
+				ideology = syndicalist
+				long_name = BUL_fatherland_front_party_long
+				name = BUL_fatherland_front_party
+			}
+			set_party_name = {
+				ideology = radical_socialist
+				long_name = BUL_fatherland_front_party_long
+				name = BUL_fatherland_front_party
+			}
+			set_party_name = {
+				ideology = social_democrat
+				long_name = BUL_fatherland_front_party_long
+				name = BUL_fatherland_front_party
+			}
+			set_party_name = {
+				ideology = social_liberal
+				long_name = BUL_fatherland_front_party_long
+				name = BUL_fatherland_front_party
+			}
+			set_party_name = {
+				ideology = market_liberal
+				long_name = BUL_fatherland_front_party_long
+				name = BUL_fatherland_front_party
+			}
+			set_party_name = {
+				ideology = social_conservative
+				long_name = BUL_fatherland_front_party_long
+				name = BUL_fatherland_front_party
+			}
+			add_synd_to_coalition = yes
+			add_radsoc_to_coalition = yes
+			add_soclib_to_coalition = yes
+			add_marlib_to_coalition = yes
+			add_soccon_to_coalition = yes
+			set_cosmetic_tag = BUL_agarian
+			remove_all_ministers = yes
+			add_ideas = {
+				BUL_Georgi_Mihov_Dimitrov_hog_sco
+				BUL_Traicho_Kostov_for_syn
+				BUL_Aleksandar_Obbov_eco_sco
+				BUL_Hristo_Tatarchev_sec_rso
+			}
+	}
+	option = {
+		name = bulgaria.126.e #stays
+		
+	}
+
+	option = {
+		name = bulgaria.126.f #chaos - esoterics
+		#insert event later
 	}
 }
 	
@@ -6676,10 +6784,36 @@ country_event = { #agrians
 	fire_only_once = yes
 	immediate = {
 		hidden_effect = {
+			set_cosmetic_tag = BUL_agarian
+			set_party_name = { 
+				ideology = totalist
+				long_name = BUL_bzns_tot_long
+				name = BUL_bzns_tot
+			}
+			set_party_name = { 
+				ideology = radical_socialist
+				long_name = BUL_bzns_radsoc_long
+				name = BUL_bzns_radsoc
+			}
+			set_party_name = { 
+				ideology = social_democrat
+				long_name = BUL_bzns_socdem_long
+				name = BUL_bzns_socdem
+			}
 			set_party_name = { 
 				ideology = social_liberal
 				long_name = BUL_bzns_soclib_long
 				name = BUL_bzns_soclib
+			}
+			set_party_name = { 
+				ideology = market_liberal
+				long_name = BUL_bzns_marlib_long
+				name = BUL_bzns_marlib
+			}
+			set_party_name = { 
+				ideology = authoritarian_democrat
+				long_name = BUL_bzns_authdem_long
+				name = BUL_bzns_authdem
 			}
 			set_party_name = { 
 				ideology = social_conservative
@@ -6709,6 +6843,101 @@ country_event = { #agrians
 		add_soccon_to_coalition = yes
 		add_popularity = {
 			ideology = social_liberal
+			popularity = 0.2
+		}
+	}
+	option = { # yes
+		name = bulgaria_foreign_events.8.c
+		set_politics = {
+			ruling_party = social_democrat
+			elections_allowed = yes
+		}
+		#complete_national_focus = BUL_left_mandate
+		create_country_leader = {
+			name = "科斯塔·托多罗夫"
+			picture = "gfx/leaders/BUL/Portrait_BUL_Kosta_Todorov.png"
+			expire = "1.1.1"
+			ideology = socdem_narodism_subtype
+		}
+		add_soccon_to_coalition = yes
+		add_popularity = {
+			ideology = social_democrat
+			popularity = 0.2
+		}
+	}
+	option = { # yese
+		name = bulgaria_foreign_events.8.e
+		set_politics = {
+			ruling_party = authoritarian_democrat
+			elections_allowed = yes
+		}
+		#complete_national_focus = BUL_left_mandate
+		create_country_leader = {
+			name = "康斯坦丁·托莫夫"
+			picture = "gfx/leaders/BUL/Portrait_BUL_Konstantin_Kotsev_Tomov.png"
+			expire = "1.1.1"
+			ideology = authdem_agrarianism_subtype
+		}
+		add_soccon_to_coalition = yes
+		add_popularity = {
+			ideology = authoritarian_democrat
+			popularity = 0.2
+		}
+	}
+	option = { # yese
+		name = bulgaria_foreign_events.8.f
+		set_politics = {
+			ruling_party = market_liberal
+			elections_allowed = yes
+		}
+		#complete_national_focus = BUL_left_mandate
+		create_country_leader = {
+			name = "格奥尔基·马尔科夫"
+			picture = "gfx/leaders/BUL/Portrait_BUL_Georgi_Markov_kxx.png"
+			expire = "1.1.1"
+			ideology = marlib_agrarianism_subtype
+		}
+		add_soccon_to_coalition = yes
+		add_popularity = {
+			ideology = market_liberal
+			popularity = 0.2
+		}
+	}
+	option = { # yese
+		name = bulgaria_foreign_events.8.g
+		set_politics = {
+			ruling_party = radical_socialist
+			elections_allowed = yes
+		}
+		#complete_national_focus = BUL_left_mandate
+		create_country_leader = {
+			name = "格奥尔基·特雷科夫"
+			picture = "gfx/leaders/BUL/Portrait_BUL_Georgi_Traykov.png"
+			expire = "1.1.1"
+			ideology = agrarian_socialism_subtype
+		}
+		add_soccon_to_coalition = yes
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.2
+		}
+	}
+	option = { # yese
+		name = bulgaria_foreign_events.8.h
+		set_politics = {
+			ruling_party = totalist
+			elections_allowed = yes
+		}
+		#complete_national_focus = BUL_left_mandate
+		create_country_leader = {
+			name = "米哈伊尔·吉诺夫斯基"
+			picture = "gfx/leaders/BUL/Portrait_BUL_Mihail_Genovski.png"
+			expire = "1.1.1"
+			ideology = tot_agrarian_socialism_subtype
+		}
+		add_soccon_to_coalition = yes
+		add_popularity = {
+			ideology = totalist
 			popularity = 0.2
 		}
 	}
@@ -6782,4 +7011,40 @@ country_event = { #
 		drop_cosmetic_tag = yes
 	}
 	
+}
+country_event = { # 
+	id = bulgaria_foreign_events.10
+	title = bulgaria_foreign_events.10.t
+	desc = bulgaria_foreign_events.10.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { # yes
+		name = bulgaria_foreign_events.10.a
+		set_politics = {
+			ruling_party = totalist
+			elections_allowed = yes
+		}
+		create_country_leader = {
+			name = "马琳娜·蒂梅瓦"
+			picture = "gfx/leaders/BUL/Portrait_BUL_Malina_Timeva.png"
+			expire = "1.1.1"
+			ideology = socialist_security_state_subtype
+		}
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.2
+		}
+			set_party_name = {
+				ideology = totalist
+				long_name = BUL_communist_party_long
+				name = BUL_communist_party
+			}
+		set_cosmetic_tag = SOV_union_yezhov
+		set_country_flag = BUL_cheka_coup
+		mark_focus_tree_layout_dirty = yes
+	}
+	option = { # yes
+		name = bulgaria_foreign_events.10.b
+		
+	}
 }
