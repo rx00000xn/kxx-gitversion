@@ -5548,10 +5548,12 @@ country_event = { #Anger against Agrarians
 			expire = "1.1.1"
 			ideology = transitional_government_subtype
 		}
+		set_country_flag = BUL_tsankov_victory
 		set_politics = {
 			ruling_party = authoritarian_democrat
 			elections_allowed = no
 		}
+		set_cosmetic_tag = BUL_natgov
 		increase_ruling_party_popularity_by_15 = yes
 			set_party_name = {
 				ideology = authoritarian_democrat
@@ -5645,7 +5647,7 @@ country_event = { #Anger against Agrarians
 			add_soclib_to_coalition = yes
 			add_marlib_to_coalition = yes
 			add_soccon_to_coalition = yes
-			set_cosmetic_tag = BUL_agarian
+			set_cosmetic_tag = BUL_ff
 			remove_all_ministers = yes
 			add_ideas = {
 				BUL_Georgi_Mihov_Dimitrov_hog_sco
@@ -7156,7 +7158,7 @@ country_event = { #
 		}
 	}
 	option = { # yes
-		name = bulgaria_foreign_events.12.c
+		name = bulgaria_foreign_events.13.c
 		create_country_leader = {
 			name = "亚历山大·灿科夫"
 			picture = "gfx/leaders/BUL/Portrait_BUL_Alexander_Tsankov.png"
@@ -7225,7 +7227,7 @@ country_event = { #
 	option = { # yes
 		name = bulgaria_foreign_events.15.b
 		create_country_leader = {
-			name = "托多尔·亚历山大罗夫"
+			name = "托多尔·亚历山德罗夫"
 			picture = "gfx/leaders/BUL/Portrait_BUL_Todor_Alexanderov.png"
 			expire = "1.1.1"
 			ideology = pataut_right_syndicalism_subtype

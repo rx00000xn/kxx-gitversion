@@ -19629,6 +19629,7 @@ focus = {
 			}
 			add_ideas = BUL_lucky_clover
 			
+			
 		}
 	}
 	focus = {
