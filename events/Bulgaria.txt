@@ -5580,6 +5580,7 @@ country_event = { #Anger against Agrarians
 			ruling_party = national_populist
 			elections_allowed = no
 		}
+		
 		increase_ruling_party_popularity_by_15 = yes
 			set_party_name = {
 				ideology = national_populist
@@ -6466,10 +6467,10 @@ country_event = { # puppet monarchy?
 		name = zveno.3.b
 		
 		create_country_leader = {
-		name = "基里尔一世"
-		picture = "gfx/leaders/BUL/Portrait_BUL_Prince_Kyril.png"
-		expire = "1.1.1" 
-		ideology = militarism_subtype
+			name = "基里尔一世"
+			picture = "gfx/leaders/BUL/Portrait_BUL_Prince_Kyril.png"
+			expire = "1.1.1" 
+			ideology = militarism_subtype
 		}
 		
 		add_stability = 0.05
@@ -6621,6 +6622,10 @@ country_event = { # become radsoc?
 			ideology = radical_socialist
 			popularity = 0.25
 		}
+		add_synd_to_coalition = yes
+		add_socdem_to_coalition = yes
+		add_pataut_to_coalition = yes
+	   	add_natpop_to_coalition = yes
 	}
 }
 country_event = { # 
@@ -7046,5 +7051,214 @@ country_event = { #
 	option = { # yes
 		name = bulgaria_foreign_events.10.b
 		
+	}
+}
+country_event = { # 
+	id = bulgaria_foreign_events.11
+	title = bulgaria_foreign_events.11.t
+	desc = bulgaria_foreign_events.11.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { # yes
+		name = bulgaria_foreign_events.11.a
+		
+		create_country_leader = {
+			name = "佩塔尔·加布罗夫斯基"
+			picture = "gfx/leaders/BUL/Portrait_BUL_Petar_Gabrovski.png"
+			expire = "1.1.1"
+			ideology = ultranationalism_proto_subtype
+		}
+		set_party_name = {
+			ideology = national_populist
+			long_name = BUL_ratniks_party_long
+			name = BUL_ratniks_party
+		}
+		set_cosmetic_tag = BUL_ratnik
+	}
+	option = { # yes
+		name = bulgaria_foreign_events.11.b
+		create_country_leader = {
+			name = "赫里斯托·昆切夫"
+			picture = "gfx/leaders/BUL/Portrait_BUL_Hristo_Kunchev.png"
+			expire = "1.1.1"
+			ideology = savinkovism_subtype
+		}
+		set_party_name = {
+			ideology = national_populist
+			long_name = BUL_savinkov_party_long
+			name = BUL_savinkov_party
+		}
+		set_cosmetic_tag = BUL_savinkov
+	}
+	option = { # yes
+		name = bulgaria_foreign_events.11.c
+		set_cosmetic_tag = BUL_legionary
+	}
+}
+country_event = { # 
+	id = bulgaria_foreign_events.12
+	title = bulgaria_foreign_events.12.t
+	desc = bulgaria_foreign_events.12.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { # yes
+		name = bulgaria_foreign_events.12.a
+		
+	}
+	option = { # yes
+		name = bulgaria_foreign_events.12.b
+		create_country_leader = {
+			name = "亚历山大·灿科夫"
+			picture = "gfx/leaders/BUL/Portrait_BUL_Alexander_Tsankov.png"
+			expire = "1.1.1"
+			ideology = marlib_popular_patriotism_subtype
+		}
+		set_politics = {
+			ruling_party = market_liberal
+			elections_allowed = no
+		}
+	}
+	option = { # yes
+		name = bulgaria_foreign_events.12.c
+		create_country_leader = {
+			name = "亚历山大·灿科夫"
+			picture = "gfx/leaders/BUL/Portrait_BUL_Alexander_Tsankov.png"
+			expire = "1.1.1"
+			ideology = soccon_popular_patriotism_subtype
+		}
+		set_politics = {
+			ruling_party = social_conservative
+			elections_allowed = no
+		}
+	}
+}
+country_event = { # 
+	id = bulgaria_foreign_events.13
+	title = bulgaria_foreign_events.13.t
+	desc = bulgaria_foreign_events.13.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { # yes
+		name = bulgaria_foreign_events.13.a
+		
+	}
+	option = { # yes
+		name = bulgaria_foreign_events.13.b
+		create_country_leader = {
+			name = "亚历山大·灿科夫"
+			picture = "gfx/leaders/BUL/Portrait_BUL_Alexander_Tsankov.png"
+			expire = "1.1.1"
+			ideology = pataut_paternal_socialism_subtype
+		}
+		set_politics = {
+			ruling_party = paternal_autocrat
+			elections_allowed = no
+		}
+	}
+	option = { # yes
+		name = bulgaria_foreign_events.12.c
+		create_country_leader = {
+			name = "亚历山大·灿科夫"
+			picture = "gfx/leaders/BUL/Portrait_BUL_Alexander_Tsankov.png"
+			expire = "1.1.1"
+			ideology = natpop_paternal_socialism_subtype
+		}
+		set_politics = {
+			ruling_party = national_populist
+			elections_allowed = no
+		}
+	}
+}
+country_event = { # 
+	id = bulgaria_foreign_events.14
+	title = bulgaria_foreign_events.14.t
+	desc = bulgaria_foreign_events.14.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { # yes
+		name = bulgaria_foreign_events.14.a
+		create_country_leader = {
+			name = "伊万·米哈伊洛夫"
+			picture = "gfx/leaders/BUL/MAC_ivan_mihajlov.png"
+			expire = "1.1.1"
+			ideology = militarism_subtype
+		}
+		set_politics = {
+			ruling_party = national_populist
+			elections_allowed = no
+		}
+		set_cosmetic_tag = BUL_IMRO
+		set_party_name = {
+			ideology = national_populist
+			long_name = BUL_IMRO_party_long
+			name = BUL_IMRO_party
+		}
+		set_party_name = {
+			ideology = paternal_autocrat
+			long_name = BUL_IMRO_party_long
+			name = BUL_IMRO_party
+		}
+		set_party_name = {
+			ideology = syndicalist
+			long_name = BUL_IMRO_party_long
+			name = BUL_IMRO_party
+		}
+		set_party_name = {
+			ideology = totalist
+			long_name = BUL_IMRO_party_long
+			name = BUL_IMRO_party
+		}
+	}
+	
+	
+}
+country_event = { # 
+	id = bulgaria_foreign_events.15
+	title = bulgaria_foreign_events.15.t
+	desc = bulgaria_foreign_events.15.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { # yes
+		name = bulgaria_foreign_events.15.a
+		
+	}
+	option = { # yes
+		name = bulgaria_foreign_events.15.b
+		create_country_leader = {
+			name = "托多尔·亚历山大罗夫"
+			picture = "gfx/leaders/BUL/Portrait_BUL_Todor_Alexanderov.png"
+			expire = "1.1.1"
+			ideology = pataut_right_syndicalism_subtype
+		}
+		set_politics = {
+			ruling_party = paternal_autocrat
+			elections_allowed = no
+		}
+	}
+	option = { # yes
+		name = bulgaria_foreign_events.15.c
+		create_country_leader = {
+			name = "帕维尔·沙特夫"
+			picture = "gfx/leaders/BUL/Portrait_BUL_Pavel_Shatev.png"
+			expire = "1.1.1"
+			ideology = anarcho_syndicalist_subtype
+		}
+		set_politics = {
+			ruling_party = syndicalist
+			elections_allowed = no
+		}
+	}
+	option = { # yes
+		name = bulgaria_foreign_events.15.e
+		create_country_leader = {
+			name = "梅托迪·沙托洛夫"
+			picture = "gfx/leaders/BUL/Portrait_BUL_Metodi_Shatorov.png"
+			expire = "1.1.1"
+			ideology = national_communism_subtype
+		}
+		set_politics = {
+			ruling_party = totalist
+			elections_allowed = no
+		}
 	}
 }

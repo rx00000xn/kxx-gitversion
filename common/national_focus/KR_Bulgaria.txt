@@ -15612,21 +15612,550 @@ focus = {
     }
   }
   #NatPop
-
-	focus = {
-		id = BUL_young_officers
+  	focus = {
+		id = BUL_natpop
 		icon = GFX_goal_national_populism
 		cost = 3
     
-		x = 30
-		y = 22
+		x = 40
+		y = 12
 
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BUL_young_officers"
-			add_political_power = 100
-			add_manpower = 10000
-			set_variable = { BUL_Legion_AI_attack_Var = 1 }
+			
+			add_ideas = BUL_legionary_revolution
+			
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = BUL_savinovists
+		icon = GFX_RUS_Promote_Party_Unity
+		cost = 3
+   		x = 6
+		y = 1
+		relative_position_id = BUL_natpop
+		prerequisite = {
+			focus = BUL_natpop
+		}
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BUL_young_officers"
+			
+			add_ideas = BUL_legionary_revolution
+			
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = BUL_national_politics_association
+		icon = GFX_RUS_Transitional_Council
+		cost = 3
+   		x = 0
+		y = 1
+		relative_position_id = BUL_savinovists
+		prerequisite = {
+			focus = BUL_savinovists
+		}
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BUL_young_officers"
+			
+			add_ideas = BUL_legionary_revolution
+			
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = BUL_ataka
+		icon = GFX_RUS_Focus_On_Savinkovites
+		cost = 3
+   		x = -1
+		y = 2
+		relative_position_id = BUL_savinovists
+		prerequisite = {
+			focus = BUL_national_politics_association
+		}
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BUL_young_officers"
+			
+			add_ideas = BUL_legionary_revolution
+			
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = BUL_populist_economy
+		icon = GFX_RUS_State_Regulation_Act
+		cost = 3
+   		x = 1
+		y = 2
+		relative_position_id = BUL_savinovists
+		prerequisite = {
+			focus = BUL_national_politics_association
+		}
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BUL_young_officers"
+			
+			add_ideas = BUL_legionary_revolution
+			
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = BUL_ban_parlamentrism
+		icon = GFX_goal_NFA_end_parliamentarism
+		cost = 3
+   		x = 0
+		y = 3
+		relative_position_id = BUL_savinovists
+		prerequisite = {
+			focus = BUL_ataka
+		}
+		prerequisite = {
+			focus = BUL_populist_economy
+		}
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BUL_young_officers"
+			
+			add_ideas = BUL_legionary_revolution
+			
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = BUL_young_nationalists
+		icon = GFX_RUS_combat
+		cost = 3
+   		x = -1
+		y = 4
+		relative_position_id = BUL_savinovists
+		prerequisite = {
+			focus = BUL_ban_parlamentrism
+		}
+		prerequisite = {
+			focus = BUL_macedonian_refugees
+		}
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BUL_young_officers"
+			
+			add_ideas = BUL_legionary_revolution
+			
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = BUL_militarize_labor
+		icon = GFX_goal_COL_Militarist_Programmes
+		cost = 3
+   		x = 1
+		y = 4
+		relative_position_id = BUL_savinovists
+		prerequisite = {
+			focus = BUL_ban_parlamentrism
+		}
+		prerequisite = {
+			focus = BUL_russian_supports
+		}
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BUL_young_officers"
+			
+			add_ideas = BUL_legionary_revolution
+			
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = BUL_bulgarian_vozd
+		icon = GFX_goal_BUL_bulgarian_vozd
+		cost = 3
+   		x = -1
+		y = 5
+		relative_position_id = BUL_savinovists
+		prerequisite = {
+			focus = BUL_young_nationalists
+		}
+		prerequisite = {
+			focus = BUL_militarize_labor
+		}
+		mutually_exclusive = {
+			focus = BUL_second_chance_for_savinkov
+		}
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BUL_young_officers"
+			
+			add_ideas = BUL_legionary_revolution
+			
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = BUL_second_chance_for_savinkov 
+		icon = GFX_RUS_Cult_Of_Personality
+		cost = 3
+   		x = 1
+		y = 5
+		relative_position_id = BUL_savinovists
+		prerequisite = {
+			focus = BUL_young_nationalists
+		}
+		prerequisite = {
+			focus = BUL_militarize_labor
+		}
+		mutually_exclusive = {
+			focus = BUL_bulgarian_vozd
+		}
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BUL_young_officers"
+			set_cosmetic_tag = RUS_vozhdct
+			create_country_leader = {
+				name = "鲍里斯·萨文科夫"
+				desc = "POLITICS_BORIS_SAVINKOV_DESC"
+				picture = "gfx/leaders/RUS/Portrait_RUS_Boris_Savinkov.png"
+				expire = "1.1.1"
+				ideology = savinkovism_subtype
+				traits = {}
+			}
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = BUL_slavic_brotherhood
+		icon = GFX_goal_AUS_south_slavs
+		cost = 3
+   		x = 2
+		y = 1
+		relative_position_id = BUL_savinovists
+		prerequisite = {
+			focus = BUL_savinovists
+		}
+		
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BUL_young_officers"
+			
+			add_ideas = BUL_legionary_revolution
+			
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = BUL_erdicrate_judos
+		icon = GFX_goal_BUL_the_eternal_enemy
+		cost = 3
+   		x = 3
+		y = 2
+		relative_position_id = BUL_savinovists
+		prerequisite = {
+			focus = BUL_slavic_brotherhood
+		}
+		
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BUL_young_officers"
+			
+			add_ideas = BUL_legionary_revolution
+			
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = BUL_russian_supports
+		icon = GFX_RUS_Indivisible_Russia
+		cost = 3
+   		x = 2
+		y = 3
+		relative_position_id = BUL_savinovists
+		prerequisite = {
+			focus = BUL_slavic_brotherhood
+		}
+		
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BUL_young_officers"
+			
+			add_ideas = BUL_legionary_revolution
+			
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = BUL_ratniks
+		icon = GFX_goal_BUL_ratniks
+		cost = 3
+   		x = -6
+		y = 1
+		relative_position_id = BUL_natpop
+		prerequisite = {
+			focus = BUL_natpop
+		}
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BUL_young_officers"
+			
+			add_ideas = BUL_legionary_revolution
+			
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = BUL_priminal_order
+		icon = GFX_goal_BUL_modern_feudalism
+		cost = 3
+   		x = 0
+		y = 1
+		relative_position_id = BUL_ratniks
+		prerequisite = {
+			focus = BUL_ratniks
+		}
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BUL_young_officers"
+			
+			add_ideas = BUL_legionary_revolution
+			
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = BUL_nationalize_all_industry
+		icon = GFX_goal_generic_takeover_industries
+		cost = 3
+   		x = -1
+		y = 2
+		relative_position_id = BUL_ratniks
+		prerequisite = {
+			focus = BUL_priminal_order
+		}
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BUL_young_officers"
+			
+			add_ideas = BUL_legionary_revolution
+			
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = BUL_destroy_democracy
+		icon = GFX_goal_FRA_democratic_error
+		cost = 3
+   		x = 1
+		y = 2
+		relative_position_id = BUL_ratniks
+		prerequisite = {
+			focus = BUL_priminal_order
+		}
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BUL_young_officers"
+			
+			add_ideas = BUL_legionary_revolution
+			
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = BUL_agrarian_commune_corportism
+		icon = GFX_goal_AUS_agrarian_populism
+		cost = 3
+   		x = 0
+		y = 3
+		relative_position_id = BUL_ratniks
+		prerequisite = {
+			focus = BUL_nationalize_all_industry
+		}
+		prerequisite = {
+			focus = BUL_destroy_democracy
+		}
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BUL_young_officers"
+			
+			add_ideas = BUL_legionary_revolution
+			
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = BUL_anti_capitalism
+		icon = GFX_goal_RUS_crush_capitalists
+		cost = 3
+   		x = -1
+		y = 4
+		relative_position_id = BUL_ratniks
+		prerequisite = {
+			focus = BUL_agrarian_commune_corportism
+		}
+		prerequisite = {
+			focus = BUL_war_worship
+		}
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BUL_young_officers"
+			
+			add_ideas = BUL_legionary_revolution
+			
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = BUL_a_strong_hand
+		icon = GFX_goal_NIC_Strong_Presidency
+		cost = 3
+   		x = 1
+		y = 4
+		relative_position_id = BUL_ratniks
+		prerequisite = {
+			focus = BUL_agrarian_commune_corportism
+		}
+		prerequisite = {
+			focus = BUL_unleash_bulgarianness
+		}
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BUL_young_officers"
+			
+			add_ideas = BUL_legionary_revolution
+			
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = BUL_march_forward
+		icon = GFX_goal_generic_deadly_attack
+		cost = 3
+   		x = -1
+		y = 5
+		relative_position_id = BUL_ratniks
+		prerequisite = {
+			focus = BUL_anti_capitalism
+		}
+		prerequisite = {
+			focus = BUL_a_strong_hand
+		}
+		mutually_exclusive = {
+			focus = BUL_hun_hordes_tradition
+		}
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BUL_young_officers"
+			
+			add_ideas = BUL_legionary_revolution
+			
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = BUL_hun_hordes_tradition
+		icon = GFX_goal_MON_new_mongol_horde
+		cost = 3
+   		x = 1
+		y = 5
+		relative_position_id = BUL_ratniks
+		prerequisite = {
+			focus = BUL_anti_capitalism
+		}
+		prerequisite = {
+			focus = BUL_a_strong_hand
+		}
+		mutually_exclusive = {
+			focus = BUL_march_forward
+		}
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BUL_young_officers"
+			create_country_leader = {
+				name = "迪米特尔·瑟塞洛夫"
+				picture = "gfx/leaders/BUL/Portrait_BUL_Dimitur_Susulov.png"
+				expire = "1.1.1" 
+				ideology = natpop_neo_feudalism_subtype
+			}
+			set_cosmetic_tag = BUL_hunnic
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = BUL_loyal_to_church
+		icon = GFX_goal_MNT_orthodoxy
+		cost = 3
+   		x = -2
+		y = 1
+		relative_position_id = BUL_ratniks
+		prerequisite = {
+			focus = BUL_ratniks
+		}
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BUL_young_officers"
+			
+			add_ideas = BUL_legionary_revolution
+			
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = BUL_freemasons
+		icon = GFX_goal_LIB_freemason_coup
+		cost = 3
+   		x = -3
+		y = 2
+		relative_position_id = BUL_ratniks
+		prerequisite = {
+			focus = BUL_loyal_to_church
+		}
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BUL_young_officers"
+			
+			add_ideas = BUL_legionary_revolution
+			
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = BUL_war_worship
+		icon = GFX_focus_BUL_bulgarian_administration_of_the_balkans
+		cost = 3
+   		x = -2
+		y = 3
+		relative_position_id = BUL_ratniks
+		prerequisite = {
+			focus = BUL_loyal_to_church
+		}
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BUL_young_officers"
+			
+			add_ideas = BUL_legionary_revolution
+			
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = BUL_young_officers
+		icon = GFX_goal_ROM_Second_Legionary_Victory
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = BUL_natpop
+		ai_will_do = { factor = 100 }
+		prerequisite = {
+			focus = BUL_natpop
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus BUL_young_officers"
+			
+			add_ideas = BUL_legionary_revolution
+			
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -15637,12 +16166,13 @@ focus = {
 		cost = 2
 
 		relative_position_id = BUL_young_officers
-		x = 0
+		x = -2
 		y = 1
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		prerequisite = {
 			focus = BUL_young_officers
+			focus = BUL_ratniks
 		}
 		available = {
 			has_government = national_populist
@@ -15694,6 +16224,7 @@ focus = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		prerequisite = {
 			focus = BUL_young_officers
+			focus = BUL_savinovists
 		}
 		available = {
 			has_government = national_populist
@@ -15885,7 +16416,7 @@ focus = {
 		cost = 3
 
 		relative_position_id = BUL_young_officers
-		x = -2
+		x = 0
 		y = 1
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -15898,8 +16429,10 @@ focus = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BUL_legionary_revolution"
-			add_ideas = BUL_legionary_revolution
-			BUL_AI_increase_legion_war_chance = yes
+			swap_ideas = {
+				remove_idea = BUL_legionary_revolution
+				add_idea = BUL_legionary_revolution_2
+			}
 		}
 	}
 
@@ -15938,7 +16471,7 @@ focus = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		prerequisite = {
-			focus = BUL_legionary_revolution
+			focus = BUL_macedonia_intervention
 		}
 		available = {
 			has_government = national_populist
@@ -15994,7 +16527,7 @@ focus = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		prerequisite = {
-			focus = BUL_legionary_revolution
+			focus = BUL_macedonia_intervention
 		}
 		available = {
 			has_government = national_populist
@@ -16002,11 +16535,9 @@ focus = {
 		ai_will_do = { factor = 70 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BUL_unleash_bulgarianness"
-			swap_ideas = {
-				remove_idea = BUL_legionary_revolution
-				add_idea = BUL_legionary_revolution_2
-			}
-			BUL_AI_increase_legion_war_chance = yes
+			
+			add_political_power = 100
+			add_manpower = 10000
 		}
 	}
 
@@ -16052,6 +16583,9 @@ focus = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		prerequisite = {
 			focus = BUL_society_ceaseless_war
+		}
+		prerequisite = {
+			focus = BUL_macedonian_refugees
 		}
 		available = {
 			has_government = national_populist
@@ -16167,15 +16701,13 @@ focus = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BUL_tsar_kyril"
-			remove_ideas = BUL_royalist_resistance
+			set_cosmetic_tag = BUL_legionary_tsardom
 			
-			effect_tooltip = {
-				drop_cosmetic_tag = yes
-				add_country_leader_role = {
-					character = BUL_kyril_sakskoburggotski
-					country_leader = { ideology = national_populist_subtype }
-					promote_leader = yes
-				}
+			create_country_leader = {
+				name = "基里尔一世"
+				picture = "gfx/leaders/BUL/Portrait_BUL_Prince_Kyril.png"
+				expire = "1.1.1" 
+				ideology = legionarism_subtype
 			}
 		}
 	}
@@ -19083,7 +19615,7 @@ focus = {
 		id = BUL_tsankov_coup
 		icon = GFX_goal_BUL_tsankov_coup
 		cost = 3
-		x = 50
+		x = 60
 		y = 12
 		available = {
 			has_country_flag = BUL_tsankov_victory
@@ -19178,13 +19710,36 @@ focus = {
 			focus = BUL_popular_social_movement
 		}
 		completion_reward = {
-			add_political_power = 50
-			add_popularity = {
-			  ideology = social_democrat
-				popularity = 0.1
+			create_country_leader = {
+				name = "亚历山大·灿科夫"
+				picture = "gfx/leaders/BUL/Portrait_BUL_Alexander_Tsankov.png"
+				expire = "1.1.1"
+				ideology = soclib_popular_patriotism_subtype
 			}
-			add_ideas = BUL_lucky_clover
-			
+			set_politics = {
+				ruling_party = social_liberal
+				elections_allowed = no
+			}
+			set_party_name = {
+				ideology = social_democrat
+				long_name = BUL_democratic_alliance_party_long
+				name = BUL_democratic_alliance_party
+			}
+			set_party_name = {
+				ideology = social_liberal
+				long_name = BUL_democratic_alliance_party_long
+				name = BUL_democratic_alliance_party
+			}
+			set_party_name = {
+				ideology = market_liberal
+				long_name = BUL_democratic_alliance_party_long
+				name = BUL_democratic_alliance_party
+			}
+			set_party_name = {
+				ideology = social_conservative
+				long_name = BUL_democratic_alliance_party_long
+				name = BUL_democratic_alliance_party
+			}
 		}
 	}
 	focus = {
@@ -19502,13 +20057,22 @@ focus = {
 			focus = BUL_democracy_agreement
 		}
 		completion_reward = {
-			add_political_power = 50
-			add_popularity = {
-			  ideology = social_democrat
-				popularity = 0.1
+			set_country_leader_ideology = authdem_paternal_socialism_subtype
+			set_party_name = {
+				ideology = authoritarian_democrat
+				long_name = BUL_popular_social_movement_party_long
+				name = BUL_popular_social_movement_party
 			}
-			add_ideas = BUL_lucky_clover
-			
+			set_party_name = {
+				ideology = paternal_autocrat
+				long_name = BUL_popular_social_movement_party_long
+				name = BUL_popular_social_movement_party
+			}
+			set_party_name = {
+				ideology = national_populist
+				long_name = BUL_popular_social_movement_party_long
+				name = BUL_popular_social_movement_party
+			}
 		}
 	}
 	focus = {
@@ -19653,10 +20217,10 @@ focus = {
 
 	focus = {
 		id = BUL_imro
-		icon = GFX_goal_national_populism
+		icon = GFX_focus_BUL_support_macedonian_organizations
 		cost = 3
-		x = 50
-		y = 21
+		x = 80
+		y = 12
 		
 		completion_reward = {
 			add_political_power = 50
@@ -19669,8 +20233,686 @@ focus = {
 		}
 	}
 	focus = {
+		id = BUL_revanchism
+		icon = GFX_focus_BUL_condemn_macedonian_organizations
+		cost = 3
+		relative_position_id = BUL_imro
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = BUL_shatev
+			focus = BUL_shatrov
+			focus = BUL_mihailov
+			focus = BUL_alexanderov
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+			  ideology = social_democrat
+				popularity = 0.1
+			}
+			add_ideas = BUL_lucky_clover
+			
+		}
+	}
+	focus = {
+		id = BUL_study_their_tactics
+		icon = GFX_goal_FRA_Revolutionary_Guerilla_Tactics
+		cost = 3
+		relative_position_id = BUL_imro
+		x = 0
+		y = 3
+		prerequisite = {
+			focus = BUL_revanchism
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+			  ideology = social_democrat
+				popularity = 0.1
+			}
+			add_ideas = BUL_lucky_clover
+			
+		}
+	}
+	focus = {
+		id = BUL_liberty_or_death
+		icon = GFX_goal_SER_macedonia_in_flames
+		cost = 3
+		relative_position_id = BUL_imro
+		x = 0
+		y = 4
+		prerequisite = {
+			focus = BUL_study_their_tactics
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+			  ideology = social_democrat
+				popularity = 0.1
+			}
+			add_ideas = BUL_lucky_clover
+			
+		}
+	}
+	focus = {
+		id = BUL_shatev
+		icon = GFX_goal_KR_ideology_syndicalist
+		cost = 3
+		relative_position_id = BUL_imro
+		x = -3
+		y = 1
+		prerequisite = {
+			focus = BUL_imro
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+			  ideology = social_democrat
+				popularity = 0.1
+			}
+			add_ideas = BUL_lucky_clover
+			
+		}
+	}
+	focus = {
+		id = BUL_mihailov
+		icon = GFX_goal_KR_ideology_national_populist
+		cost = 3
+		relative_position_id = BUL_imro
+		x = 3
+		y = 1
+		prerequisite = {
+			focus = BUL_imro
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+			  ideology = social_democrat
+				popularity = 0.1
+			}
+			add_ideas = BUL_lucky_clover
+			
+		}
+	}
+	focus = {
+		id = BUL_alexanderov
+		icon = GFX_goal_KR_ideology_paternal_autocrat
+		cost = 3
+		relative_position_id = BUL_imro
+		x = 9
+		y = 1
+		prerequisite = {
+			focus = BUL_imro
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+			  ideology = social_democrat
+				popularity = 0.1
+			}
+			add_ideas = BUL_lucky_clover
+			
+		}
+	}
+	focus = {
+		id = BUL_infitrate_outlands
+		icon = GFX_goal_SER_contact_brothers
+		cost = 3
+		relative_position_id = BUL_imro
+		x = 6
+		y = 2
+		prerequisite = {
+			focus = BUL_shatev
+			focus = BUL_shatrov
+			focus = BUL_mihailov
+			focus = BUL_alexanderov
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+			  ideology = social_democrat
+				popularity = 0.1
+			}
+			add_ideas = BUL_lucky_clover
+			
+		}
+	}
+	focus = {
+		id = BUL_support_okrahana
+		icon = GFX_goal_generic_paramilitary
+		cost = 3
+		relative_position_id = BUL_infitrate_outlands
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = BUL_infitrate_outlands
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+			  ideology = social_democrat
+				popularity = 0.1
+			}
+			add_ideas = BUL_lucky_clover
+			
+		}
+	}
+	focus = {
+		id = BUL_spread_chaos
+		icon = GFX_goal_FOP_Sow_Organized_Illegalist_Chaos
+		cost = 3
+		relative_position_id = BUL_infitrate_outlands
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = BUL_support_okrahana
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+			  ideology = social_democrat
+				popularity = 0.1
+			}
+			add_ideas = BUL_lucky_clover
+			
+		}
+	}
+	focus = {
+		id = BUL_united_organization
+		icon = GFX_goal_FSA_control_congress
+		cost = 3
+		relative_position_id = BUL_alexanderov
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = BUL_alexanderov
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+			  ideology = social_democrat
+				popularity = 0.1
+			}
+			add_ideas = BUL_lucky_clover
+			
+		}
+	}
+	focus = {
+		id = BUL_negociate_with_left
+		icon = GFX_goal_CAN_young_communist_league
+		cost = 3
+		relative_position_id = BUL_alexanderov
+		x = -1
+		y = 2
+		prerequisite = {
+			focus = BUL_united_organization
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+			  ideology = social_democrat
+				popularity = 0.1
+			}
+			add_ideas = BUL_lucky_clover
+			
+		}
+	}
+	focus = {
+		id = BUL_end_mihailov_madness
+		icon = GFX_HOL_crackdown_natpop
+		cost = 3
+		relative_position_id = BUL_alexanderov
+		x = -1
+		y = 3
+		prerequisite = {
+			focus = BUL_negociate_with_left
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+			  ideology = social_democrat
+				popularity = 0.1
+			}
+			add_ideas = BUL_lucky_clover
+			
+		}
+	}
+	focus = {
+		id = BUL_seek_army_support
+		icon = GFX_goal_ARG_Secure_Military_Apparatus
+		cost = 3
+		relative_position_id = BUL_alexanderov
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = BUL_alexanderov
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+			  ideology = social_democrat
+				popularity = 0.1
+			}
+			add_ideas = BUL_lucky_clover
+			
+		}
+	}
+	focus = {
+		id = BUL_rebuild_economy
+		icon = GFX_goal_NFA_People_Corporatism
+		cost = 3
+		relative_position_id = BUL_alexanderov
+		x = 1
+		y = 2
+		prerequisite = {
+			focus = BUL_seek_army_support
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+			  ideology = social_democrat
+				popularity = 0.1
+			}
+			add_ideas = BUL_lucky_clover
+			
+		}
+	}
+	focus = {
+		id = BUL_revolution_propaganda
+		icon = GFX_goal_NFA_national_propaganda
+		cost = 3
+		relative_position_id = BUL_alexanderov
+		x = 1
+		y = 3
+		prerequisite = {
+			focus = BUL_rebuild_economy
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+			  ideology = social_democrat
+				popularity = 0.1
+			}
+			add_ideas = BUL_lucky_clover
+			
+		}
+	}
+	focus = {
+		id = BUL_fight_for_nation
+		icon = GFX_goal_generic_army_training
+		cost = 3
+		relative_position_id = BUL_alexanderov
+		x = 0
+		y = 4
+		prerequisite = {
+			focus = BUL_end_mihailov_madness
+		}
+		prerequisite = {
+			focus = BUL_revolution_propaganda
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+			  ideology = social_democrat
+				popularity = 0.1
+			}
+			add_ideas = BUL_lucky_clover
+			
+		}
+	}
+	focus = {
+		id = BUL_expand_pirin_garrison
+		icon = GFX_BUL_bulgarian_government
+		cost = 3
+		relative_position_id = BUL_mihailov
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = BUL_mihailov
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+			  ideology = social_democrat
+				popularity = 0.1
+			}
+			add_ideas = BUL_lucky_clover
+			
+		}
+	}
+	focus = {
+		id = BUL_digging_in
+		icon = GFX_goal_ALB_Bunker
+		cost = 3
+		relative_position_id = BUL_mihailov
+		x = -1
+		y = 2
+		prerequisite = {
+			focus = BUL_expand_pirin_garrison
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+			  ideology = social_democrat
+				popularity = 0.1
+			}
+			add_ideas = BUL_lucky_clover
+			
+		}
+	}
+	focus = {
+		id = BUL_bul_mac_uniy
+		icon = GFX_goal_ALB_Vanguard
+		cost = 3
+		relative_position_id = BUL_mihailov
+		x = -1
+		y = 3
+		prerequisite = {
+			focus = BUL_digging_in
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+			  ideology = social_democrat
+				popularity = 0.1
+			}
+			add_ideas = BUL_lucky_clover
+			
+		}
+	}
+	focus = {
+		id = BUL_intergrate_natpop
+		icon = GFX_focus_HOL_deal_with_right
+		cost = 3
+		relative_position_id = BUL_mihailov
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = BUL_mihailov
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+			  ideology = social_democrat
+				popularity = 0.1
+			}
+			add_ideas = BUL_lucky_clover
+			
+		}
+	}
+	focus = {
+		id = BUL_purge_national_traitors
+		icon = GFX_goal_COR_purge_jacob
+		cost = 3
+		relative_position_id = BUL_mihailov
+		x = 1
+		y = 2
+		prerequisite = {
+			focus = BUL_intergrate_natpop
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+			  ideology = social_democrat
+				popularity = 0.1
+			}
+			add_ideas = BUL_lucky_clover
+			
+		}
+	}
+	focus = {
+		id = BUL_cloak_and_dagger
+		icon = GFX_goal_purge_opposition
+		cost = 3
+		relative_position_id = BUL_mihailov
+		x = 1
+		y = 3
+		prerequisite = {
+			focus = BUL_purge_national_traitors
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+			  ideology = social_democrat
+				popularity = 0.1
+			}
+			add_ideas = BUL_lucky_clover
+			
+		}
+	}
+	focus = {
+		id = BUL_king_of_macedonia
+		icon = GFX_goal_AUS_Bruder_Blut_Thron
+		cost = 3
+		relative_position_id = BUL_mihailov
+		x = 0
+		y = 4
+		prerequisite = {
+			focus = BUL_bul_mac_uniy
+		}
+		prerequisite = {
+			focus = BUL_cloak_and_dagger
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+			  ideology = social_democrat
+				popularity = 0.1
+			}
+			add_ideas = BUL_lucky_clover
+			
+		}
+	}
+	focus = {
+		id = BUL_council_for_mac_liberation
+		icon = GFX_goal_HOL_council_communism
+		cost = 3
+		relative_position_id = BUL_imro
+		x = -6
+		y = 2
+		prerequisite = {
+			focus = BUL_shatev
+			focus = BUL_shatrov
+			focus = BUL_mihailov
+			focus = BUL_alexanderov
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+			  ideology = social_democrat
+				popularity = 0.1
+			}
+			add_ideas = BUL_lucky_clover
+			
+		}
+	}
+	focus = {
+		id = BUL_hristo_botev_radio
+		icon = GFX_goal_generic_radar_instillation
+		cost = 3
+		relative_position_id = BUL_council_for_mac_liberation
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = BUL_council_for_mac_liberation
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+			  ideology = social_democrat
+				popularity = 0.1
+			}
+			add_ideas = BUL_lucky_clover
+			
+		}
+	}
+	focus = {
+		id = BUL_army_bulgarians
+		icon = GFX_goal_BUL_citizen_rifles
+		cost = 3
+		relative_position_id = BUL_council_for_mac_liberation
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = BUL_hristo_botev_radio
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+			  ideology = social_democrat
+				popularity = 0.1
+			}
+			add_ideas = BUL_lucky_clover
+			
+		}
+	}
+	focus = {
+		id = BUL_experience_of_slav_brothers
+		icon = GFX_goal_WHR_Cooperate_Ukrainian_Georgian_Brothers
+		cost = 3
+		relative_position_id = BUL_shatev
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = BUL_shatev
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+			  ideology = social_democrat
+				popularity = 0.1
+			}
+			add_ideas = BUL_lucky_clover
+			
+		}
+	}
+	focus = {
+		id = BUL_dye_red_cross_black
+		icon = GFX_goal_WHR_Paint_Red_Cross_Black
+		cost = 3
+		relative_position_id = BUL_shatev
+		x = -1
+		y = 2
+		prerequisite = {
+			focus = BUL_experience_of_slav_brothers
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+			  ideology = social_democrat
+				popularity = 0.1
+			}
+			add_ideas = BUL_lucky_clover
+			
+		}
+	}
+	focus = {
+		id = BUL_national_unite
+		icon = GFX_goal_NGR_federalism
+		cost = 3
+		relative_position_id = BUL_shatev
+		x = -1
+		y = 3
+		prerequisite = {
+			focus = BUL_dye_red_cross_black
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+			  ideology = social_democrat
+				popularity = 0.1
+			}
+			add_ideas = BUL_lucky_clover
+			
+		}
+	}
+	focus = {
+		id = BUL_legacy_of_thesaluoniki_boaters
+		icon = GFX_goal_WHR_Peace_Villages_War_Palaces
+		cost = 3
+		relative_position_id = BUL_shatev
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = BUL_shatev
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+			  ideology = social_democrat
+				popularity = 0.1
+			}
+			add_ideas = BUL_lucky_clover
+			
+		}
+	}
+	focus = {
+		id = BUL_establish_communes
+		icon = GFX_goal_POL_Establish_New_Communes
+		cost = 3
+		relative_position_id = BUL_shatev
+		x = 1
+		y = 2
+		prerequisite = {
+			focus = BUL_legacy_of_thesaluoniki_boaters
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+			  ideology = social_democrat
+				popularity = 0.1
+			}
+			add_ideas = BUL_lucky_clover
+			
+		}
+	}
+	focus = {
+		id = BUL_decentralize_industry
+		icon = GFX_SOV_decentralize_syndicates
+		cost = 3
+		relative_position_id = BUL_shatev
+		x = 1
+		y = 3
+		prerequisite = {
+			focus = BUL_establish_communes
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+			  ideology = social_democrat
+				popularity = 0.1
+			}
+			add_ideas = BUL_lucky_clover
+			
+		}
+	}
+	focus = {
+		id = BUL_red_and_black_flag
+		icon = GFX_goal_NIC_Socialist_Revolution
+		cost = 3
+		relative_position_id = BUL_shatev
+		x = 0
+		y = 4
+		prerequisite = {
+			focus = BUL_national_unite
+		}
+		prerequisite = {
+			focus = BUL_decentralize_industry
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+			  ideology = social_democrat
+				popularity = 0.1
+			}
+			add_ideas = BUL_lucky_clover
+			
+		}
+	}
+	focus = {
 		id = BUL_shatrov
-		icon = GFX_goal_national_populism
+		icon = GFX_goal_KR_ideology_totalist
 		cost = 3
 		relative_position_id = BUL_imro
 		x = -9
@@ -19690,7 +20932,7 @@ focus = {
 	}
 	focus = {
 		id = BUL_intergrate_commie
-		icon = GFX_goal_national_populism
+		icon = GFX_BBR_new_communist_league
 		cost = 3
 		relative_position_id = BUL_shatrov
 		x = -1
@@ -19710,7 +20952,7 @@ focus = {
 	}
 	focus = {
 		id = BUL_embrace_communism
-		icon = GFX_goal_national_populism
+		icon = GFX_SOV_coop
 		cost = 3
 		relative_position_id = BUL_shatrov
 		x = -1
@@ -19730,7 +20972,7 @@ focus = {
 	}
 	focus = {
 		id = BUL_everyone_equal
-		icon = GFX_goal_national_populism
+		icon = GFX_goal_CSA_equality
 		cost = 3
 		relative_position_id = BUL_shatrov
 		x = -1
@@ -19750,7 +20992,7 @@ focus = {
 	}
 	focus = {
 		id = BUL_formalize_okharana
-		icon = GFX_goal_national_populism
+		icon = GFX_goal_CRE_organize_partisans
 		cost = 3
 		relative_position_id = BUL_shatrov
 		x = 1
@@ -19770,7 +21012,7 @@ focus = {
 	}
 	focus = {
 		id = BUL_seize_royal_property
-		icon = GFX_goal_national_populism
+		icon = GFX_TRM_Seize_Means_Production
 		cost = 3
 		relative_position_id = BUL_shatrov
 		x = 1
@@ -19790,7 +21032,7 @@ focus = {
 	}
 	focus = {
 		id = BUL_push_for_industrialize
-		icon = GFX_goal_national_populism
+		icon = GFX_goal_syndicalist_industry
 		cost = 3
 		relative_position_id = BUL_shatrov
 		x = 1
@@ -19810,7 +21052,7 @@ focus = {
 	}
 	focus = {
 		id = BUL_leninism_autonomy
-		icon = GFX_goal_national_populism
+		icon = GFX_goal_ALB_Communist_Internationalism
 		cost = 3
 		relative_position_id = BUL_shatrov
 		x = 0
