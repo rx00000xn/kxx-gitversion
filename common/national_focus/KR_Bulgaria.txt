@@ -11510,7 +11510,7 @@ focus = {
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_agrarian_alliance"
       clr_country_flag = cannot_have_extensive_conscription
-      
+      country_event = bulgaria_foreign_events.8
       add_political_power = 100
       add_stability = 0.10
     }
@@ -11522,7 +11522,7 @@ focus = {
       focus = BUL_agrarian_alliance
     }   
     available = {
-      BUL_agrarians_in_power = yes
+      has_government = totalist
     }
     relative_position_id = BUL_agrarian_alliance
     x = -12
@@ -11532,11 +11532,8 @@ focus = {
       factor = 50
     }
     completion_reward = {
-      log = "[GetDateText]: [Root.GetName]: Focus BUL_agrarian_alliance"
-      clr_country_flag = cannot_have_extensive_conscription
-      
-      add_political_power = 100
-      add_stability = 0.10
+      log = "[GetDateText]: [Root.GetName]: Focus BUL_agrarian_alliance" 
+      add_ideas = BUL_banu_tot_pol
     }
   }
   focus = {
@@ -11557,8 +11554,15 @@ focus = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_agrarian_alliance"
-      clr_country_flag = cannot_have_extensive_conscription
-      
+      add_synd_to_coalition = yes
+      add_popularity = {
+        ideology = syndicalist
+        popularity = 0.1
+      }
+	  add_popularity = {
+        ideology = totalist
+        popularity = 0.1
+      }
       add_political_power = 100
       add_stability = 0.10
     }
@@ -11581,10 +11585,10 @@ focus = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_agrarian_alliance"
-      clr_country_flag = cannot_have_extensive_conscription
-      
-      add_political_power = 100
-      add_stability = 0.10
+      swap_ideas = {
+		remove_idea = BUL_banu_tot_pol
+		add_idea = BUL_banu_tot_pol2
+	  }
     }
   }
    focus = {
@@ -11608,10 +11612,7 @@ focus = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_agrarian_alliance"
-      clr_country_flag = cannot_have_extensive_conscription
-      
-      add_political_power = 100
-      add_stability = 0.10
+      add_ideas = BUL_expand_youth_union
     }
   }
   focus = {
@@ -11634,10 +11635,7 @@ focus = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_agrarian_alliance"
-      clr_country_flag = cannot_have_extensive_conscription
-      
-      add_political_power = 100
-      add_stability = 0.10
+      add_ideas = BUL_agraian_corportism
     }
   }
   
@@ -11664,10 +11662,10 @@ focus = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_agrarian_alliance"
-      clr_country_flag = cannot_have_extensive_conscription
-      
-      add_political_power = 100
-      add_stability = 0.10
+      swap_ideas = {
+		remove_idea = BUL_banu_tot_pol2
+		add_idea = BUL_banu_tot_pol3
+	  }
     }
   }
   focus = {
@@ -11690,10 +11688,8 @@ focus = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_agrarian_alliance"
-      clr_country_flag = cannot_have_extensive_conscription
-      
-      add_political_power = 100
-      add_stability = 0.10
+		add_one_random_civilian_factory = yes
+		add_one_random_military_factory = yes
     }
   }
   focus = {
@@ -11703,7 +11699,7 @@ focus = {
       focus = BUL_agrarian_alliance
     }   
     available = {
-      BUL_agrarians_in_power = yes
+      has_government = radical_socialist
     }
     relative_position_id = BUL_agrarian_alliance
     x = -8
@@ -11714,10 +11710,7 @@ focus = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_agrarian_alliance"
-      clr_country_flag = cannot_have_extensive_conscription
-      
-      add_political_power = 100
-      add_stability = 0.10
+     	add_ideas = BUL_banu_radsoc_pol
     }
   }
   focus = {
@@ -11738,8 +11731,16 @@ focus = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_agrarian_alliance"
-      clr_country_flag = cannot_have_extensive_conscription
-      
+      add_synd_to_coalition = yes
+	  add_tot_to_coalition = yes
+	  add_popularity = {
+        ideology = syndicalist
+        popularity = 0.1
+      }
+	  add_popularity = {
+        ideology = totalist
+        popularity = 0.1
+      }
       add_political_power = 100
       add_stability = 0.10
     }
@@ -11762,10 +11763,7 @@ focus = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_agrarian_alliance"
-      clr_country_flag = cannot_have_extensive_conscription
-      
-      add_political_power = 100
-      add_stability = 0.10
+      add_ideas = BUL_collectivize_progress
     }
   }
   focus = {
@@ -11789,10 +11787,16 @@ focus = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_agrarian_alliance"
-      clr_country_flag = cannot_have_extensive_conscription
-      
-      add_political_power = 100
-      add_stability = 0.10
+      add_popularity = {
+        ideology = social_conservative
+        popularity = -0.15
+      }
+	  add_popularity = {
+        ideology = radical_socialist
+        popularity = 0.1
+      }
+	  add_war_support = 0.1
+	  add_command_power = 25
     }
   }
   focus = {
@@ -11816,10 +11820,10 @@ focus = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_agrarian_alliance"
-      clr_country_flag = cannot_have_extensive_conscription
-      
-      add_political_power = 100
-      add_stability = 0.10
+      swap_ideas = {
+		remove_idea = BUL_banu_radsoc_pol
+		add_idea = BUL_banu_radsoc_pol2
+	  }
     }
   }
   focus = {
@@ -11843,10 +11847,7 @@ focus = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_agrarian_alliance"
-      clr_country_flag = cannot_have_extensive_conscription
-      
-      add_political_power = 100
-      add_stability = 0.10
+     	add_ideas = BUL_voice_of_farmer
     }
   }
   focus = {
@@ -11873,10 +11874,10 @@ focus = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_agrarian_alliance"
-      clr_country_flag = cannot_have_extensive_conscription
-      
-      add_political_power = 100
-      add_stability = 0.10
+      swap_ideas = {
+		remove_idea = BUL_banu_radsoc_pol2
+		add_idea = BUL_banu_radsoc_pol3
+	  }
     }
   }
   focus = {
@@ -11886,7 +11887,7 @@ focus = {
       focus = BUL_agrarian_alliance
     }   
     available = {
-      BUL_agrarians_in_power = yes
+      has_government = social_liberal
     }
     relative_position_id = BUL_agrarian_alliance
     x = -4
@@ -11897,10 +11898,7 @@ focus = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_agrarian_alliance"
-      clr_country_flag = cannot_have_extensive_conscription
-      
-      add_political_power = 100
-      add_stability = 0.10
+      add_ideas = BUL_banu_soclib_pol
     }
   }
   focus = {
@@ -11921,8 +11919,25 @@ focus = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_agrarian_alliance"
-      clr_country_flag = cannot_have_extensive_conscription
-      
+      add_socdem_to_coalition = yes
+	  add_marlib_to_coalition = yes
+      add_soccon_to_coalition = yes
+	  add_popularity = {
+        ideology = social_democrat
+        popularity = 0.1
+      }
+	  add_popularity = {
+        ideology = social_liberal
+        popularity = 0.1
+      }
+	  add_popularity = {
+        ideology = market_liberal
+        popularity = 0.1
+      }
+	  add_popularity = {
+        ideology = social_conservative
+        popularity = 0.1
+      }
       add_political_power = 100
       add_stability = 0.10
     }
@@ -11946,10 +11961,7 @@ focus = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_agrarian_alliance"
-      clr_country_flag = cannot_have_extensive_conscription
-      
-      add_political_power = 100
-      add_stability = 0.10
+		add_ideas = BUL_restrict_capital
     }
   }
  focus = {
@@ -11973,10 +11985,8 @@ focus = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_agrarian_alliance"
-      clr_country_flag = cannot_have_extensive_conscription
-      
-      add_political_power = 100
-      add_stability = 0.10
+		add_one_random_civilian_factory = yes
+		add_one_random_civilian_factory = yes
     }
   }
   focus = {
@@ -12000,10 +12010,7 @@ focus = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_agrarian_alliance"
-      clr_country_flag = cannot_have_extensive_conscription
-      
-      add_political_power = 100
-      add_stability = 0.10
+      add_ideas = BUL_restore_constitution
     }
   }
   focus = {
@@ -12027,10 +12034,10 @@ focus = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_agrarian_alliance"
-      clr_country_flag = cannot_have_extensive_conscription
-      
-      add_political_power = 100
-      add_stability = 0.10
+      swap_ideas = {
+		remove_idea = BUL_banu_soclib_pol
+		add_idea = BUL_banu_soclib_pol2
+	  }
     }
   }
   
@@ -12058,10 +12065,10 @@ focus = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_agrarian_alliance"
-      clr_country_flag = cannot_have_extensive_conscription
-      
-      add_political_power = 100
-      add_stability = 0.10
+     swap_ideas = {
+		remove_idea = BUL_banu_soclib_pol2
+		add_idea = BUL_banu_soclib_pol3
+	  }
     }
   }
   focus = {
@@ -12071,7 +12078,7 @@ focus = {
       focus = BUL_agrarian_alliance
     }   
     available = {
-      BUL_agrarians_in_power = yes
+      has_government = social_democrat
     }
     relative_position_id = BUL_agrarian_alliance
     x = 4
@@ -12082,10 +12089,7 @@ focus = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_agrarian_alliance"
-      clr_country_flag = cannot_have_extensive_conscription
-      
-      add_political_power = 100
-      add_stability = 0.10
+      add_ideas = BUL_banu_socdem_pol
     }
   }
   focus = {
@@ -12095,7 +12099,7 @@ focus = {
       focus = BUL_agrarian_alliance
     }   
     available = {
-      BUL_agrarians_in_power = yes
+      has_government = market_liberal
     }
     relative_position_id = BUL_agrarian_alliance
     x = 8
@@ -12106,10 +12110,7 @@ focus = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_agrarian_alliance"
-      clr_country_flag = cannot_have_extensive_conscription
-      
-      add_political_power = 100
-      add_stability = 0.10
+      add_ideas = BUL_banu_marlib_pol
     }
   }
   focus = {
@@ -12119,7 +12120,7 @@ focus = {
       focus = BUL_agrarian_alliance
     }   
     available = {
-      BUL_agrarians_in_power = yes
+      has_government = authoritarian_democrat
     }
     relative_position_id = BUL_agrarian_alliance
     x = 12
@@ -12130,10 +12131,7 @@ focus = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_agrarian_alliance"
-      clr_country_flag = cannot_have_extensive_conscription
-      
-      add_political_power = 100
-      add_stability = 0.10
+      add_ideas = BUL_banu_authdem_pol
     }
   }
   focus = {
@@ -12154,8 +12152,20 @@ focus = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_agrarian_alliance"
-      clr_country_flag = cannot_have_extensive_conscription
-      
+      add_pataut_to_coalition = yes
+      add_natpop_to_coalition = yes
+	  add_popularity = {
+		ideology = authoritarian_democrat
+		popularity = 0.1
+	  }
+	  add_popularity = {
+		ideology = paternal_autocrat
+		popularity = 0.1
+	  }
+	  add_popularity = {
+		ideology = national_populist
+		popularity = 0.1
+	  }
       add_political_power = 100
       add_stability = 0.10
     }
@@ -12178,10 +12188,7 @@ focus = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_agrarian_alliance"
-      clr_country_flag = cannot_have_extensive_conscription
-      
-      add_political_power = 100
-      add_stability = 0.10
+      add_ideas = BUL_rebuild_military_union
     }
   }
   focus = {
@@ -12205,10 +12212,8 @@ focus = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_agrarian_alliance"
-      clr_country_flag = cannot_have_extensive_conscription
-      
-      add_political_power = 100
-      add_stability = 0.10
+      add_one_random_military_factory = yes
+	  add_one_random_military_factory = yes
     }
   }
   focus = {
@@ -12232,10 +12237,10 @@ focus = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_agrarian_alliance"
-      clr_country_flag = cannot_have_extensive_conscription
-      
-      add_political_power = 100
-      add_stability = 0.10
+      swap_ideas = {
+		remove_idea = BUL_banu_authdem_pol
+		add_idea = BUL_banu_authdem_pol2
+	  }
     }
   }
   focus = {
@@ -12259,10 +12264,7 @@ focus = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_agrarian_alliance"
-      clr_country_flag = cannot_have_extensive_conscription
-      
-      add_political_power = 100
-      add_stability = 0.10
+      add_ideas = BUL_remilitarize
     }
   }
   focus = {
@@ -12289,10 +12291,10 @@ focus = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_agrarian_alliance"
-      clr_country_flag = cannot_have_extensive_conscription
-      
-      add_political_power = 100
-      add_stability = 0.10
+      swap_ideas = {
+		remove_idea = BUL_banu_authdem_pol2
+		add_idea = BUL_banu_authdem_pol3
+	  }
     }
   }
   focus = {
@@ -12313,8 +12315,25 @@ focus = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_agrarian_alliance"
-      clr_country_flag = cannot_have_extensive_conscription
-      
+      add_socdem_to_coalition = yes
+	  add_soclib_to_coalition = yes
+      add_soccon_to_coalition = yes
+	  add_popularity = {
+        ideology = social_democrat
+        popularity = 0.1
+      }
+	  add_popularity = {
+        ideology = social_liberal
+        popularity = 0.1
+      }
+	  add_popularity = {
+        ideology = market_liberal
+        popularity = 0.1
+      }
+	  add_popularity = {
+        ideology = social_conservative
+        popularity = 0.1
+      }
       add_political_power = 100
       add_stability = 0.10
     }
@@ -12337,10 +12356,21 @@ focus = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_agrarian_alliance"
-      clr_country_flag = cannot_have_extensive_conscription
+      add_popularity = {
+        ideology = totalist
+        popularity = 0.1
+      }
+	  add_popularity = {
+        ideology = syndicalist
+        popularity = 0.1
+      }
+	  add_popularity = {
+        ideology = radical_socialist
+        popularity = 0.1
+      }
       
-      add_political_power = 100
-      add_stability = 0.10
+      add_one_random_civilian_factory = yes
+	  add_one_random_civilian_factory = yes
     }
   }
   focus = {
@@ -12364,10 +12394,10 @@ focus = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_agrarian_alliance"
-      clr_country_flag = cannot_have_extensive_conscription
-      
-      add_political_power = 100
-      add_stability = 0.10
+      swap_ideas = {
+		remove_idea = BUL_banu_marlib_pol
+		add_idea = BUL_banu_marlib_pol2
+	  }
     }
   }
    focus = {
@@ -12391,10 +12421,7 @@ focus = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_agrarian_alliance"
-      clr_country_flag = cannot_have_extensive_conscription
-      
-      add_political_power = 100
-      add_stability = 0.10
+      add_ideas = BUL_unite_againist_tyranny
     }
   }
   focus = {
@@ -12419,10 +12446,7 @@ focus = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_agrarian_alliance"
-      clr_country_flag = cannot_have_extensive_conscription
-      
-      add_political_power = 100
-      add_stability = 0.10
+      add_ideas = BUL_green_front
     }
   }
   focus = {
@@ -12449,10 +12473,10 @@ focus = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_agrarian_alliance"
-      clr_country_flag = cannot_have_extensive_conscription
-      
-      add_political_power = 100
-      add_stability = 0.10
+      swap_ideas = {
+		remove_idea = BUL_banu_marlib_pol2
+		add_idea = BUL_banu_marlib_pol3
+	  }
     }
   }
   focus = {
@@ -12473,10 +12497,10 @@ focus = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_agrarian_alliance"
-      clr_country_flag = cannot_have_extensive_conscription
-      
-      add_political_power = 100
-      add_stability = 0.10
+      swap_ideas = {
+		remove_idea = BUL_banu_socdem_pol
+		add_idea = BUL_banu_socdem_pol2
+	  }
     }
   }
   focus = {
@@ -12497,10 +12521,10 @@ focus = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_agrarian_alliance"
-      clr_country_flag = cannot_have_extensive_conscription
-      
-      add_political_power = 100
-      add_stability = 0.10
+      create_intelligence_agency = yes
+	  upgrade_intelligence_agency = upgrade_commando_training
+	  upgrade_intelligence_agency = upgrade_decryption_boost
+	  upgrade_intelligence_agency = upgrade_form_department
     }
   }
   focus = {
@@ -12524,10 +12548,7 @@ focus = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_agrarian_alliance"
-      clr_country_flag = cannot_have_extensive_conscription
-      
-      add_political_power = 100
-      add_stability = 0.10
+      add_ideas = BUL_socialize_land
     }
   }
   focus = {
@@ -12551,8 +12572,10 @@ focus = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_agrarian_alliance"
-      clr_country_flag = cannot_have_extensive_conscription
-      
+       add_popularity = {
+        ideology = social_democrat
+        popularity = 0.1
+      }
       add_political_power = 100
       add_stability = 0.10
     }
@@ -12578,10 +12601,7 @@ focus = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_agrarian_alliance"
-      clr_country_flag = cannot_have_extensive_conscription
-      
-      add_political_power = 100
-      add_stability = 0.10
+		add_ideas = BUL_release_terror
     }
   }
   focus = {
@@ -12608,10 +12628,10 @@ focus = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_agrarian_alliance"
-      clr_country_flag = cannot_have_extensive_conscription
-      
-      add_political_power = 100
-      add_stability = 0.10
+      swap_ideas = {
+		remove_idea = BUL_banu_socdem_pol2
+		add_idea = BUL_banu_socdem_pol3
+	  }
     }
   }
   focus = {
@@ -12621,7 +12641,7 @@ focus = {
       focus = BUL_agrarian_alliance
     }   
     available = {
-      BUL_agrarians_in_power = yes
+      has_government = social_conservative
     }
     relative_position_id = BUL_agrarian_alliance
     x = 0
@@ -12632,10 +12652,7 @@ focus = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_agrarian_alliance"
-      clr_country_flag = cannot_have_extensive_conscription
-      
-      add_political_power = 100
-      add_stability = 0.10
+      add_ideas = BUL_banu_soccon_pol
     }
   }
    focus = {
@@ -12656,10 +12673,10 @@ focus = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_agrarian_alliance"
-      clr_country_flag = cannot_have_extensive_conscription
-      
-      add_political_power = 100
-      add_stability = 0.10
+      swap_ideas = {
+		remove_idea = BUL_banu_soccon_pol
+		add_idea = BUL_banu_soccon_pol2
+	  }
     }
   }
   focus = {
@@ -12680,10 +12697,7 @@ focus = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_agrarian_alliance"
-      clr_country_flag = cannot_have_extensive_conscription
-      
-      add_political_power = 100
-      add_stability = 0.10
+      add_ideas = BUL_control_grain_trade
     }
   }
   focus = {
@@ -12707,10 +12721,10 @@ focus = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_agrarian_alliance"
-      clr_country_flag = cannot_have_extensive_conscription
-      
-      add_political_power = 100
-      add_stability = 0.10
+     	swap_ideas = {
+			remove_idea = BUL_banu_soccon_pol2
+			add_idea = BUL_banu_soccon_pol3
+		}
     }
   }
   
@@ -12735,10 +12749,8 @@ focus = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_agrarian_alliance"
-      clr_country_flag = cannot_have_extensive_conscription
-      
-      add_political_power = 100
-      add_stability = 0.10
+      add_manpower = 50000
+	  army_experience = 25
     }
   }
   focus = {
@@ -12762,10 +12774,7 @@ focus = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_agrarian_alliance"
-      clr_country_flag = cannot_have_extensive_conscription
-      
-      add_political_power = 100
-      add_stability = 0.10
+      add_ideas = BUL_seize_church_property
     }
   }
   focus = {
@@ -12792,8 +12801,10 @@ focus = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_agrarian_alliance"
-      clr_country_flag = cannot_have_extensive_conscription
-      
+      add_popularity = {
+        ideology = social_conservative
+        popularity = 0.1
+      }
       add_political_power = 100
       add_stability = 0.10
     }
@@ -19629,7 +19640,7 @@ focus = {
 			}
 			add_ideas = BUL_lucky_clover
 			
-			
+
 		}
 	}
 	focus = {

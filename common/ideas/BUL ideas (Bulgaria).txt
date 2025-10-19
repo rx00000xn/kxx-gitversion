@@ -1573,6 +1573,428 @@ ideas = {
 				land_doctrine_cost_factor = -0.1
 			}
 		}
+		BUL_banu_tot_pol = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_AUS_military_cooperation" }
+			picture = generic_totalist_revolution
+			name = "农民联盟—土地与劳动派主导"
+			allowed = { always = no }
+			modifier = {
+				political_power_cost = -0.1
+				production_factory_efficiency_gain_factor = 0.05
+				totalist_drift = 0.05
+			}
+		}
+		BUL_banu_tot_pol2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_AUS_military_cooperation" }
+			picture = generic_totalist_revolution
+			name = "农民联盟—土地与劳动派主导"
+			allowed = { always = no }
+			modifier = {
+				political_power_cost = -0.1
+				production_factory_efficiency_gain_factor = 0.1
+				totalist_drift = 0.05
+				stability_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+			}
+		}
+		BUL_banu_tot_pol3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_AUS_military_cooperation" }
+			picture = generic_totalist_revolution
+			name = "农民联盟—土地与劳动派主导"
+			allowed = { always = no }
+			modifier = {
+				political_power_cost = -0.1
+				production_factory_efficiency_gain_factor = 0.1
+				totalist_drift = 0.05
+				stability_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				global_building_slots_factor = 0.1
+				supply_consumption_factor = -0.1
+				industrial_capacity_factory = 0.1
+			}
+		}
+		BUL_banu_radsoc_pol = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_AUS_military_cooperation" }
+			picture = generic_radical_socialist_revolution
+			name = "农民联盟—反对派联盟主导"
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = 0.1
+				industrial_capacity_factory = 0.05
+				radical_socialist_drift = 0.05
+			}
+		}
+		BUL_banu_radsoc_pol2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_AUS_military_cooperation" }
+			picture = generic_radical_socialist_revolution
+			name = "农民联盟—反对派联盟主导"
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = 0.1
+				industrial_capacity_factory = 0.1
+				radical_socialist_drift = 0.05
+				war_stability_factor = 0.15
+				line_change_production_efficiency_factor = 0.1
+
+			}
+		}
+		BUL_banu_radsoc_pol3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_AUS_military_cooperation" }
+			picture = generic_radical_socialist_revolution
+			name = "农民联盟—反对派联盟主导"
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = 0.1
+				industrial_capacity_factory = 0.1
+				radical_socialist_drift = 0.05
+				war_stability_factor = 0.15
+				line_change_production_efficiency_factor = 0.1
+				conscription = 0.02
+				conscription_factor = 0.2
+				max_command_power = 200
+			}
+		}
+		BUL_banu_soclib_pol = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_AUS_military_cooperation" }
+			picture = generic_liberalism
+			name = "农民联盟—燕街1号主导"
+			allowed = { always = no }
+			modifier = {
+				political_power_factor = 0.1
+				production_speed_buildings_factor = 0.05
+				social_liberal_drift = 0.05
+			}
+		}
+		BUL_banu_soclib_pol2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_AUS_military_cooperation" }
+			picture = generic_liberalism
+			name = "农民联盟—燕街1号主导"
+			allowed = { always = no }
+			modifier = {
+				political_power_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				social_liberal_drift = 0.05
+				production_speed_arms_factory_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+			}
+		}
+		BUL_banu_soclib_pol3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_AUS_military_cooperation" }
+			picture = generic_liberalism
+			name = "农民联盟—燕街1号主导"
+			allowed = { always = no }
+			modifier = {
+				political_power_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				social_liberal_drift = 0.05
+				production_speed_arms_factory_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+				army_org_factor = 0.1
+				consumer_goods_factor = -0.1
+				consumer_goods_expected_value = -0.1
+			}
+		}
+		BUL_banu_soccon_pol = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_AUS_military_cooperation" }
+			picture = generic_traditional_values
+			name = "农民联盟—联合派主导"
+			allowed = { always = no }
+			modifier = {
+				political_power_cost = -0.1
+				global_building_slots_factor = 0.1
+				social_conservative_drift = 0.05
+			}
+		}
+		BUL_banu_soccon_pol2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_AUS_military_cooperation" }
+			picture = generic_traditional_values
+			name = "农民联盟—联合派主导"
+			allowed = { always = no }
+			modifier = {
+				political_power_cost = -0.1
+				global_building_slots_factor = 0.2
+				social_conservative_drift = 0.05
+				compliance_growth = 0.15
+				production_factory_start_efficiency_factor = 0.1
+			}
+		}
+		BUL_banu_soccon_pol3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_AUS_military_cooperation" }
+			picture = generic_traditional_values
+			name = "农民联盟—联合派主导"
+			allowed = { always = no }
+			modifier = {
+				political_power_cost = -0.1
+				global_building_slots_factor = 0.2
+				social_conservative_drift = 0.05
+				compliance_growth = 0.15
+				production_factory_start_efficiency_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				line_change_production_efficiency_factor = 0.1
+			}
+		}
+		BUL_banu_socdem_pol = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_AUS_military_cooperation" }
+			picture = generic_social_democracy
+			name = "农民联盟—正午派主导"
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = 0.1
+				production_factory_max_efficiency_factor = 0.05
+				social_democrat_drift = 0.05
+			}
+		}
+		BUL_banu_socdem_pol2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_AUS_military_cooperation" }
+			picture = generic_social_democracy
+			name = "农民联盟—正午派主导"
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				social_democrat_drift = 0.05
+				attrition = -0.1
+				command_power_gain = 0.15
+			}
+		}
+		BUL_banu_socdem_pol3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_AUS_military_cooperation" }
+			picture = generic_social_democracy
+			name = "农民联盟—正午派主导"
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				social_democrat_drift = 0.05
+				attrition = -0.1
+				command_power_gain = 0.15
+				army_org_factor = 0.1
+				army_morale_factor = 0.1
+				army_attack_factor = 0.05
+			}
+		}
+		BUL_banu_marlib_pol = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_AUS_military_cooperation" }
+			picture = generic_economic_liberalism
+			name = "农民联盟—马尔科夫派主导"
+			allowed = { always = no }
+			modifier = {
+				political_power_factor = 0.1
+				consumer_goods_factor = -0.1
+				market_liberal_drift = 0.05
+			}
+		}
+		BUL_banu_marlib_pol2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_AUS_military_cooperation" }
+			picture = generic_economic_liberalism
+			name = "农民联盟—马尔科夫派主导"
+			allowed = { always = no }
+			modifier = {
+				political_power_factor = 0.1
+				consumer_goods_factor = -0.2
+				market_liberal_drift = 0.05
+				supply_consumption_factor = -0.1
+				no_supply_grace = 24
+			}
+		}
+		BUL_banu_marlib_pol3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_AUS_military_cooperation" }
+			picture = generic_economic_liberalism
+			name = "农民联盟—马尔科夫派主导"
+			allowed = { always = no }
+			modifier = {
+				political_power_factor = 0.1
+				consumer_goods_factor = -0.2
+				market_liberal_drift = 0.05
+				supply_consumption_factor = -0.1
+				no_supply_grace = 24
+				production_speed_buildings_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+			}
+		}
+		BUL_banu_authdem_pol = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_AUS_military_cooperation" }
+			picture = generic_iron_fist
+			name = "农民联盟—奥兰治派主导"
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				authoritarian_democrat = 0.05
+			}
+		}
+		BUL_banu_authdem_pol2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_AUS_military_cooperation" }
+			picture = generic_iron_fist
+			name = "农民联盟—奥兰治派主导"
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.15
+				war_support_factor = 0.15
+				authoritarian_democrat = 0.05
+				conscription = 0.02
+				conscription_factor = 0.2
+			}
+		}
+		BUL_banu_authdem_pol3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_AUS_military_cooperation" }
+			picture = generic_iron_fist
+			name = "农民联盟—奥兰治派主导"
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.15
+				war_support_factor = 0.15
+				authoritarian_democrat = 0.05
+				conscription = 0.02
+				conscription_factor = 0.2
+				breakthrough_factor = 0.1
+				recon_factor = 0.1
+				land_reinforce_rate = 0.1
+			}
+		}
+		BUL_expand_youth_union = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_AUS_military_cooperation" }
+			picture = HOL_unemployed_conscription
+			allowed = { always = no }
+			modifier = {
+				weekly_manpower = 100
+				conscription = 0.01
+				conscription_factor = 0.1
+			}
+		}
+		BUL_agraian_corportism = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_AUS_military_cooperation" }
+			picture = NFA_agrarian_paternalism
+			allowed = { always = no }
+			modifier = {
+				global_building_slots = 1
+				supply_consumption_factor = -0.1
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		BUL_voice_of_farmer = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_AUS_military_cooperation" }
+			picture = collectivist_media
+			allowed = { always = no }
+			modifier = {
+				line_change_production_efficiency_factor = 0.1
+				industrial_capacity_factory = 0.1
+				consumer_goods_expected_value = -0.1
+			}
+		}
+		BUL_collectivize_progress = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_AUS_military_cooperation" }
+			picture = agricultural_collectivization
+			allowed = { always = no }
+			modifier = {
+				monthly_population = 0.5
+				production_speed_arms_factory_factor = 0.15
+				production_speed_industrial_complex_factor = 0.15
+			}
+		}
+		BUL_restrict_capital = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_AUS_military_cooperation" }
+			picture = Capital_Outflow
+			allowed = { always = no }
+			modifier = {
+				global_building_slots_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				min_export = -0.1
+			}
+		}
+		BUL_restore_constitution = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_AUS_military_cooperation" }
+			picture = Constitution
+			allowed = { always = no }
+			modifier = {
+				stability_weekly = 0.002
+				industrial_capacity_factory = 0.1
+				conscription_factor = 0.1
+			}
+		}
+		BUL_control_grain_trade = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_AUS_military_cooperation" }
+			picture = RUS_land_reforms
+			allowed = { always = no }
+			modifier = {
+				supply_consumption_factor = -0.1
+				supply_node_range = 0.1
+				no_supply_grace = 24
+			}
+		}
+		BUL_seize_church_property = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_AUS_military_cooperation" }
+			picture = NOR_state_church_disbanded
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_expected_value = -0.1
+				consumer_goods_factor = -0.1
+				industrial_capacity_factory = 0.1
+			}
+		}
+		BUL_socialize_land = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_AUS_military_cooperation" }
+			picture = MEX_archaic_agrarianism_made_modern
+			allowed = { always = no }
+			modifier = {
+				global_building_slots = 1
+				supply_consumption_factor = -0.1
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		BUL_release_terror = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_AUS_military_cooperation" }
+			picture = terror_in_the_knight
+			allowed = { always = no }
+			modifier = {
+				army_attack_against_major_factor = 0.1
+				army_attack_against_minor_factor = 0.1
+				attrition = -0.1
+			}
+		}
+		BUL_unite_againist_tyranny = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_AUS_military_cooperation" }
+			picture = generic_communard_spirit
+			allowed = { always = no }
+			modifier = {
+				army_org_factor = 0.1
+				army_morale_factor = 0.1
+				org_loss_when_moving = -0.1
+			}
+		}
+		BUL_green_front = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_AUS_military_cooperation" }
+			picture = farmer_labor_alliance
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = 0.15
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+			}
+		}
+		BUL_rebuild_military_union = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_AUS_military_cooperation" }
+			picture = bul_zveno
+			allowed = { always = no }
+			modifier = {
+				conscription = 0.01
+				conscription_factor = 0.1
+				army_org_factor = 0.1
+			}
+		}
+		BUL_remilitarize = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_AUS_military_cooperation" }
+			picture = bul_national_industry
+			allowed = { always = no }
+			modifier = {
+				global_building_slots_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+
+			}
+		}
 	}
 
 ##############
