@@ -10683,6 +10683,20 @@ focus = {
 		completion_reward = {
 			add_ideas = SER_YUG_yugosphere_idea
 			create_faction = BUL_yugosphere
+			hidden_effect = {
+				if = {
+					limit = {
+						has_completed_focus = BUL_noon_at_helm
+						RUS = {							
+							psr_in_power = no
+						}
+					}
+					country_event = {
+						id = bulgaria_foreign_events.16
+						days = 30
+					}
+				}
+			}
 		}
 	} 
   
@@ -20233,7 +20247,9 @@ focus = {
 		cost = 3
 		x = 80
 		y = 12
-		
+		available = {
+			has_country_flag = BUL_IMRO_coup
+		}
 		completion_reward = {
 			add_political_power = 50
 			add_popularity = {
@@ -23669,14 +23685,19 @@ focus = {
 		}
 		available = {
 			is_subject = no
+			SER = {
+				NOT = {
+					has_completed_focus = SER_develop_macedonia
+				}
+			}
 		}
 		
 		ai_will_do = { factor = 30 }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed BUL_support_imro"
+			custom_effect_tooltip = BUL_IMRO_might_backfire
 			SER = {
-				add_political_power = -50
-				add_stability = -0.05
+				country_event = serbia.23
 			}
 		}
 	}
@@ -23778,7 +23799,62 @@ focus = {
 			
 		}
 	}
+	focus = {
+		id = BUL_odrysia_legacy
+		icon = GFX_goal_ALB_Thraco_Dacians
+		cost = 3
 
+		relative_position_id = BUL_establish_itro
+		x = 0
+		y = 2
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {
+			focus = BUL_strengthen_thracian_identity
+		}
+		available = {
+			is_subject = no
+			has_country_flag = BUL_IMRO_coup
+		
+		}
+		mutually_exclusive = {
+			focus = BUL_declare_balkan_socialist_federation
+		}
+		ai_will_do = { factor = 15 }
+		bypass_if_unavailable = yes
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed BUL_strengthen_thracian_identity"
+			
+		}
+	}
+	focus = {
+		id = BUL_declare_balkan_socialist_federation
+		icon = GFX_focus_BUL_balkan_federation_of_socialist_republics
+		cost = 3
+
+		relative_position_id = BUL_establish_itro
+		x = 2
+		y = 2
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = {
+			focus = BUL_strengthen_thracian_identity
+		}
+		available = {
+			is_subject = no
+			has_country_flag = BUL_IMRO_coup
+		
+		}
+		mutually_exclusive = {
+			focus = BUL_odrysia_legacy
+		}
+		ai_will_do = { factor = 15 }
+		bypass_if_unavailable = yes
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed BUL_strengthen_thracian_identity"
+			
+		}
+	}
 	focus = {
 		id = BUL_report_serbian_atrocities
 		icon = GFX_goal_big_news

@@ -14292,7 +14292,6 @@ focus_tree = {
 			focus = FRG_world
 		}
 		completion_reward = {
-			custom_effect_tooltip = FRG_europe_tooltip_total_1
 			custom_effect_tooltip = FRG_europe_tooltip_8
 			unlock_decision_tooltip = FRG_invite_ser
 			unlock_decision_tooltip = FRG_invite_ire
@@ -14337,7 +14336,13 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = FRG_europe_tooltip_10
 			unlock_decision_tooltip = FRG_invite_hol 
-			unlock_decision_tooltip = FRG_lowland_imperialate_decision
+			hidden_effect = {
+				FRG = { 
+                	add_state_core = 7
+                	add_state_core = 866
+                	add_state_core = 36 
+				}
+			}
 		}
 	}
 
@@ -14369,10 +14374,10 @@ focus_tree = {
 		
 		completion_reward = {
 			custom_effect_tooltip = FRG_europe_tooltip_9
+			unlock_decision_tooltip = FRG_invite_ita
+			unlock_decision_tooltip = FRG_invite_sic
+			unlock_decision_tooltip = FRG_italian_imperialate_decision
 			hidden_effect = {
-				unlock_decision_tooltip = FRG_invite_ita
-			    unlock_decision_tooltip = FRG_invite_sic
-				unlock_decision_tooltip = FRG_italian_imperialate_decision
 				SRI = {
 					country_event = frg.103
 				}
@@ -14594,10 +14599,17 @@ focus_tree = {
 		}
 		completion_reward = {
 			unlock_decision_tooltip = FRG_austria_imperialate_decision
+			unlock_decision_tooltip = FRG_bohemia_imperialate_decision
+			unlock_decision_tooltip = FRG_hungry_imperialate_decision
 			declare_war_on = {
          		target = AUS
          		type = annex_everything
-        	} 
+        	}
+		bypass = {
+			FRG = {
+				has_war_with = AUS
+				}
+			} 
 		}
 	}
 
@@ -14616,7 +14628,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			custom_effect_tooltip = FRG_europe_tooltip_18
-			unlock_decision_tooltip = FRG_illyria_imperialate_decision
+			unlock_decision_tooltip = FRG_ukraine_imperialate_decision
+			unlock_decision_tooltip = FRG_baltic_imperialate_decision
+			unlock_decision_tooltip = FRG_donkuban_imperialate_decision
 		}
 	}
 
@@ -14648,6 +14662,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			custom_effect_tooltip = FRG_europe_tooltip_16
+			unlock_decision_tooltip = FRG_illyria_imperialate_decision
 		}
 	}
 
@@ -14732,7 +14747,16 @@ focus_tree = {
 			focus = FRG_french_might
 		}
 		completion_reward = {
-			
+			every_country = {
+				limit = {
+					is_subject_of = FRG
+					capital_scope = { is_on_continent = europe }
+				}
+				add_ideas = FRA_EUROPE
+			}
+			FRG = {
+				add_ideas = FRA_EUROPE
+			}
 		}
 	}
 
@@ -14845,6 +14869,8 @@ focus_tree = {
 			focus = FRG_colony
 		}
 		completion_reward = {
+			custom_effect_tooltip = FRG_europe_tooltip_20
+			unlock_decision_tooltip = FRG_intervene_in_the_CIV
 			country_event = frg.110
 		}
 	}

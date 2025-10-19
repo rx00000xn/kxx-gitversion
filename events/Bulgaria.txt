@@ -5666,7 +5666,139 @@ country_event = { #Anger against Agrarians
 		#insert event later
 	}
 }
-	
+country_event = { #rome shit
+	id = bulgaria.127
+	immediate = { log = "[GetDateText]: [Root.GetName]: event gre.319" }
+	title = bulgaria.127.t
+	desc = bulgaria.127.d
+	picture = GFX_Latin_Empire
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = bulgaria.127.a
+		ai_chance = {
+			factor = 100
+		}
+		add_political_power = 10
+		add_stability = 0.01
+	}
+	option = {
+		name = bulgaria.127.b
+		ai_chance = {
+			factor = 0
+		}
+		add_state_core = 460
+		add_state_core = 459
+		add_state_core = 805
+		add_state_core = 461
+		add_state_core = 290
+		add_state_core = 114
+		add_state_core = 1002
+		add_state_core = 1
+		add_state_core = 177
+		add_state_core = 179
+		add_state_core = 112
+		add_state_core = 181
+		add_state_core = 180
+		add_state_core = 171
+		add_state_core = 793
+		add_state_core = 174
+		add_state_core = 951
+		add_state_core = 170
+		add_state_core = 1316
+		add_state_core = 169
+		add_state_core = 118
+		add_state_core = 173
+		add_state_core = 795
+		add_state_core = 175
+		add_state_core = 41
+		add_state_core = 176
+		add_state_core = 172
+		add_state_core = 940
+		add_state_core = 166
+		add_state_core = 167
+		add_state_core = 168
+		add_state_core = 165
+		add_state_core = 1313
+		add_state_core = 942
+		add_state_core = 1235
+		add_state_core = 39
+		add_state_core = 759
+		add_state_core = 783
+		add_state_core = 160
+		add_state_core = 151
+		add_state_core = 761
+		add_state_core = 3
+		add_state_core = 760
+		add_state_core = 943
+		add_state_core = 764
+		add_state_core = 1005
+		add_state_core = 157
+		add_state_core = 1236
+		add_state_core = 162
+		add_state_core = 161
+		add_state_core = 1004
+		add_state_core = 159
+		add_state_core = 838
+		add_state_core = 158
+		add_state_core = 1003
+		add_state_core = 762
+		add_state_core = 21
+		add_state_core = 763
+		add_state_core = 735
+		add_state_core = 20
+		add_state_core = 32
+		add_state_core = 26
+		add_state_core = 25
+		add_state_core = 23
+		add_state_core = 19
+		add_state_core = 984
+		add_state_core = 1334
+		add_state_core = 31
+		add_state_core = 817
+		add_state_core = 22
+		add_state_core = 983
+		add_state_core = 14
+		add_state_core = 30
+		add_state_core = 33
+		add_state_core = 27
+		add_state_core = 785
+		add_state_core = 18
+		add_state_core = 16
+		add_state_core = 15
+		add_state_core = 24
+		add_state_core = 980
+		add_state_core = 17
+		add_state_core = 1315
+		add_state_core = 1317
+		add_state_core = 122
+		add_state_core = 1225
+		add_state_core = 123
+		add_state_core = 127
+		add_state_core = 338
+		add_state_core = 126
+		add_state_core = 125
+		add_state_core = 129
+		add_state_core = 128
+		add_state_core = 132
+		add_state_core = 130
+		add_state_core = 131
+		add_state_core = 462
+		add_state_core = 1318
+	    add_state_core = 513
+		add_state_core = 1343
+	    add_state_core = 1337
+		add_state_core = 1336
+	    add_state_core = 1342
+		add_state_core = 1341
+	    add_state_core = 1340
+		add_state_core = 1338
+	    add_state_core = 1344
+		add_state_core = 1339
+	}
+}		
 	
 ################################
 ### Bulgarian Flavour Events ###
@@ -7210,6 +7342,7 @@ country_event = { #
 			long_name = BUL_IMRO_party_long
 			name = BUL_IMRO_party
 		}
+		set_country_flag = BUL_IMRO_coup
 	}
 	
 	
@@ -7262,5 +7395,116 @@ country_event = { #
 			ruling_party = totalist
 			elections_allowed = no
 		}
+	}
+}
+country_event = { # 
+	id = bulgaria_foreign_events.16
+	title = bulgaria_foreign_events.16.t
+	desc = bulgaria_foreign_events.16.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { # yes
+		name = bulgaria_foreign_events.16.a
+			set_cosmetic_tag = RUS_PSR_1
+			for_each_scope_loop = {
+				array = RUS.RUS_starting_states_array
+				add_core_of = ROOT
+			}
+			every_state = {
+				limit = {
+					is_core_of = DKB
+				}
+				BUL = { 
+					add_state_core = PREV 
+				}
+			}
+			every_state = {
+				limit = {
+					is_core_of = KUB
+				}
+				BUL = { 
+					add_state_core = PREV 
+				}
+			}
+			every_state = {
+				limit = {
+					is_core_of = MTR
+				}
+				BUL = { 
+					add_state_core = PREV 
+				}
+			}
+			every_state = {
+				limit = {
+					is_core_of = KLY
+				}
+				BUL = { 
+					add_state_core = PREV 
+				}
+			}
+	}
+	option = { # yes
+		name = bulgaria_foreign_events.16.b
+			set_cosmetic_tag = RUS_PSR_1
+			for_each_scope_loop = {
+				array = RUS.RUS_starting_states_array
+				add_core_of = ROOT
+			}
+			every_state = {
+				limit = {
+					is_core_of = DKB
+				}
+				BUL = { 
+					add_state_core = PREV 
+				}
+			}
+			every_state = {
+				limit = {
+					is_core_of = KUB
+				}
+				BUL = { 
+					add_state_core = PREV 
+				}
+			}
+			every_state = {
+				limit = {
+					is_core_of = MTR
+				}
+				BUL = { 
+					add_state_core = PREV 
+				}
+			}
+			every_state = {
+				limit = {
+					is_core_of = KLY
+				}
+				BUL = { 
+					add_state_core = PREV 
+				}
+			}
+			every_state = {
+				limit = {
+					is_core_of = UKR
+				}
+				BUL = { 
+					add_state_core = PREV 
+				}
+			}
+			every_state = {
+				limit = {
+					is_core_of = WHR
+				}
+				BUL = { 
+					add_state_core = PREV 
+				}
+			}
+			every_state = {
+				limit = {
+					is_core_of = GEO
+				}
+				BUL = { 
+					add_state_core = PREV 
+				}
+			}
 	}
 }

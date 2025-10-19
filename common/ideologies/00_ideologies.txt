@@ -557,6 +557,7 @@ ideologies = {
 			radsoc_sssp_subtype = { can_be_randomly_selected = no }  #科学特搜署
 			buddhist_anarchism_subtype = { can_be_randomly_selected = no }  #佛教无政府主义
 			vedas_socialism_subtype = { can_be_randomly_selected = no } #吠陀社会主义
+			esoteric_anarchism_subtype = { can_be_randomly_selected = no color = { 91 9 76 } }  #神秘无政府主义
 
 
 			#点
@@ -1277,6 +1278,7 @@ ideologies = {
 			controlled_democracy_subtype = { can_be_randomly_selected = no } #指导式民主
 			thaw_antoun_saadeh_thought_subtype = {can_be_randomly_selected = no} #解冻安东萨阿德思想
 			transitional_government_subtype = { can_be_randomly_selected = no } #过渡内阁
+			controlled_democracy_subtype = { can_be_randomly_selected = no } #指导式民主
 			autdem_revolutionary_nationalism_subtype = {can_be_randomly_selected = no} #革命民族主义
 			autdem_yugoslavism_subtype = {can_be_randomly_selected = no} #南斯拉夫主义
 			neo_tridemism_subtype = { can_be_randomly_selected = no } #新三民主义
