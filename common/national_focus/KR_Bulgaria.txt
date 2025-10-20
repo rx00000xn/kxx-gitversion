@@ -5095,10 +5095,7 @@ focus_tree = {
 				remove_idea = BUL_disciplined_state_2
 				add_idea = BUL_disciplined_state_3
 			}
-			swap_ideas = {
-				remove_idea = BUL_state_protection_act
-				add_idea = BUL_state_protection_act_2
-			}
+			add_ideas = BUL_state_protection_act_2
 		}
 	}
 
@@ -19647,14 +19644,8 @@ focus = {
 		}
 		
 		completion_reward = {
-			add_political_power = 50
-			add_popularity = {
-			  ideology = social_democrat
-				popularity = 0.1
-			}
-			add_ideas = BUL_lucky_clover
-			
-
+			add_political_power = 100
+			add_stability = 0.1
 		}
 	}
 	focus = {
@@ -19669,13 +19660,27 @@ focus = {
 		}
 		
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 200
 			add_popularity = {
-			  ideology = social_democrat
+			  	ideology = totalist
+				popularity = -0.1
+			}
+			add_popularity = {
+			  	ideology = syndicalist
+				popularity = -0.1
+			}
+			add_popularity = {
+			  	ideology = radical_socialist
+				popularity = -0.1
+			}
+			add_popularity = {
+			  	ideology = authoritarian_democrat
 				popularity = 0.1
 			}
-			add_ideas = BUL_lucky_clover
-			
+			add_popularity = {
+			  	ideology = social_liberal
+				popularity = 0.1
+			}
 		}
 	}
 	focus = {
@@ -19690,13 +19695,19 @@ focus = {
 		}
 		
 		completion_reward = {
-			add_political_power = 50
 			add_popularity = {
-			  ideology = social_democrat
+			  	ideology = authoritarian_democrat
 				popularity = 0.1
 			}
-			add_ideas = BUL_lucky_clover
-			
+			add_popularity = {
+			  	ideology = social_liberal
+				popularity = 0.1
+			}
+			add_popularity = {
+			  	ideology = social_conservative
+				popularity = -0.2
+			}
+			add_stability = 0.2
 		}
 	}
 	focus = {
@@ -19713,12 +19724,7 @@ focus = {
 			focus = BUL_pacify_rural
 		}
 		completion_reward = {
-			add_political_power = 50
-			add_popularity = {
-			  ideology = social_democrat
-				popularity = 0.1
-			}
-			add_ideas = BUL_lucky_clover
+			add_ideas = BUL_stablize_regime
 			
 		}
 	}
@@ -19766,6 +19772,10 @@ focus = {
 				long_name = BUL_democratic_alliance_party_long
 				name = BUL_democratic_alliance_party
 			}
+			swap_ideas = {
+				remove_idea = BUL_stablize_regime
+				add_idea = BUL_da
+			}
 		}
 	}
 	focus = {
@@ -19780,13 +19790,20 @@ focus = {
 		}
 		
 		completion_reward = {
-			add_political_power = 50
+			add_marlib_to_coalition = yes
+			add_soccon_to_coalition = yes
 			add_popularity = {
-			  ideology = social_democrat
+			  	ideology = market_liberal
 				popularity = 0.1
 			}
-			add_ideas = BUL_lucky_clover
-			
+			add_popularity = {
+			  	ideology = social_conservative
+				popularity = 0.1
+			}
+			swap_ideas = {
+				remove_idea = BUL_da
+				add_idea = BUL_da2
+			}
 		}
 	}
 	focus = {
@@ -19800,13 +19817,7 @@ focus = {
 		}
 		
 		completion_reward = {
-			add_political_power = 50
-			add_popularity = {
-			  ideology = social_democrat
-				popularity = 0.1
-			}
-			add_ideas = BUL_lucky_clover
-			
+			add_ideas = BUL_boris_crown_prince
 		}
 	}
 	focus = {
@@ -19821,13 +19832,14 @@ focus = {
 		}
 		
 		completion_reward = {
-			add_political_power = 50
+			add_socdem_to_coalition = yes
 			add_popularity = {
 			  ideology = social_democrat
 				popularity = 0.1
 			}
-			add_ideas = BUL_lucky_clover
-			
+			add_political_power = 100
+			add_war_support = 0.1
+			add_stability = 0.1
 		}
 	}
 	focus = {
@@ -19847,13 +19859,10 @@ focus = {
 			focus = BUL_patrioc_socdem
 		}
 		completion_reward = {
-			add_political_power = 50
-			add_popularity = {
-			  ideology = social_democrat
-				popularity = 0.1
+			swap_ideas = {
+				remove_idea = BUL_da2
+				add_idea = BUL_da3
 			}
-			add_ideas = BUL_lucky_clover
-			
 		}
 	}
 	focus = {
@@ -19873,12 +19882,10 @@ focus = {
 			focus = BUL_patrioc_socdem
 		}
 		completion_reward = {
-			add_political_power = 50
-			add_popularity = {
-			  ideology = social_democrat
-				popularity = 0.1
+			swap_ideas = {
+				remove_idea = BUL_da3
+				add_idea = BUL_da4
 			}
-			add_ideas = BUL_lucky_clover
 			
 		}
 	}
@@ -19897,13 +19904,8 @@ focus = {
 		}
 		
 		completion_reward = {
-			add_political_power = 50
-			add_popularity = {
-			  ideology = social_democrat
-				popularity = 0.1
-			}
-			add_ideas = BUL_lucky_clover
-			
+			add_ideas = BUL_shield_of_fatherland
+			country_event = bulgaria_foreign_events.12
 		}
 	}
 	focus = {
@@ -19919,13 +19921,9 @@ focus = {
 		}
 		
 		completion_reward = {
-			add_political_power = 50
-			add_popularity = {
-			  ideology = social_democrat
-				popularity = 0.1
-			}
-			add_ideas = BUL_lucky_clover
-			
+			add_political_power = 100
+			increase_ruling_party_popularity_by_10 = yes
+			add_command_power = 50
 		}
 	}
 	focus = {
@@ -19940,13 +19938,7 @@ focus = {
 		}
 		
 		completion_reward = {
-			add_political_power = 50
-			add_popularity = {
-			  ideology = social_democrat
-				popularity = 0.1
-			}
-			add_ideas = BUL_lucky_clover
-			
+			add_ideas = BUL_belgium_of_the_balkans
 		}
 	}
 	focus = {
@@ -19961,13 +19953,7 @@ focus = {
 		}
 		
 		completion_reward = {
-			add_political_power = 50
-			add_popularity = {
-			  ideology = social_democrat
-				popularity = 0.1
-			}
-			add_ideas = BUL_lucky_clover
-			
+			add_ideas = BUL_state_protection_act
 		}
 	}
 	focus = {
@@ -19984,12 +19970,8 @@ focus = {
 			focus = BUL_national_protection_act
 		}
 		completion_reward = {
-			add_political_power = 50
-			add_popularity = {
-			  ideology = social_democrat
-				popularity = 0.1
-			}
-			add_ideas = BUL_lucky_clover
+			
+			add_ideas = BUL_supreme_economy_council
 			
 		}
 	}
@@ -20007,12 +19989,8 @@ focus = {
 			focus = BUL_national_protection_act
 		}
 		completion_reward = {
-			add_political_power = 50
-			add_popularity = {
-			  ideology = social_democrat
-				popularity = 0.1
-			}
-			add_ideas = BUL_lucky_clover
+			
+			add_ideas = BUL_white_terror
 			
 		}
 	}
@@ -20030,13 +20008,8 @@ focus = {
 			focus = BUL_national_protection_act
 		}
 		completion_reward = {
-			add_political_power = 50
-			add_popularity = {
-			  ideology = social_democrat
-				popularity = 0.1
-			}
-			add_ideas = BUL_lucky_clover
-			
+			add_country_leader_trait = BUL_bloody_professor
+			add_stability = 0.1
 		}
 	}
 	focus = {
@@ -20060,12 +20033,8 @@ focus = {
 			focus = BUL_hail_to_vozd
 		}
 		completion_reward = {
-			add_political_power = 50
-			add_popularity = {
-			  ideology = social_democrat
-				popularity = 0.1
-			}
-			add_ideas = BUL_lucky_clover
+			
+			add_ideas = BUL_saa
 			
 		}
 	}
@@ -20099,6 +20068,10 @@ focus = {
 				long_name = BUL_popular_social_movement_party_long
 				name = BUL_popular_social_movement_party
 			}
+			swap_ideas = {
+				remove_idea = BUL_stablize_regime
+				add_idea = BUL_psm
+			}
 		}
 	}
 	focus = {
@@ -20113,13 +20086,14 @@ focus = {
 		}
 		
 		completion_reward = {
-			add_political_power = 50
+			add_pataut_to_coalition = yes
 			add_popularity = {
-			  ideology = social_democrat
+			  ideology = paternal_autocrat
 				popularity = 0.1
 			}
-			add_ideas = BUL_lucky_clover
-			
+			add_manpower = 10000
+			add_war_support = 0.1
+			army_experience = 50
 		}
 	}
 	focus = {
@@ -20134,13 +20108,15 @@ focus = {
 		}
 		
 		completion_reward = {
-			add_political_power = 50
+			add_natpop_to_coalition = yes
 			add_popularity = {
-			  ideology = social_democrat
+			  	ideology = national_populist
 				popularity = 0.1
 			}
-			add_ideas = BUL_lucky_clover
-			
+			swap_ideas = {
+				remove_idea = BUL_psm
+				add_idea = BUL_psm2
+			}
 		}
 	}
 	focus = {
@@ -20155,12 +20131,8 @@ focus = {
 		}
 		
 		completion_reward = {
-			add_political_power = 50
-			add_popularity = {
-			  ideology = social_democrat
-				popularity = 0.1
-			}
-			add_ideas = BUL_lucky_clover
+			
+			add_ideas = BUL_boris_crown_prince_bad
 			
 		}
 	}
@@ -20181,13 +20153,10 @@ focus = {
 			focus = BUL_absolutist_support
 		}
 		completion_reward = {
-			add_political_power = 50
-			add_popularity = {
-			  ideology = social_democrat
-				popularity = 0.1
+			swap_ideas = {
+				remove_idea = BUL_psm2
+				add_idea = BUL_psm3
 			}
-			add_ideas = BUL_lucky_clover
-			
 		}
 	}
 	focus = {
@@ -20207,12 +20176,10 @@ focus = {
 			focus = BUL_absolutist_support
 		}
 		completion_reward = {
-			add_political_power = 50
-			add_popularity = {
-			  ideology = social_democrat
-				popularity = 0.1
+			swap_ideas = {
+				remove_idea = BUL_psm3
+				add_idea = BUL_psm4
 			}
-			add_ideas = BUL_lucky_clover
 			
 		}
 	}
@@ -20231,13 +20198,9 @@ focus = {
 		}
 		
 		completion_reward = {
-			add_political_power = 50
-			add_popularity = {
-			  ideology = social_democrat
-				popularity = 0.1
-			}
-			add_ideas = BUL_lucky_clover
 			
+			add_ideas = BUL_hail_to_vozd
+			country_event = bulgaria_foreign_events.13
 		}
 	}
 

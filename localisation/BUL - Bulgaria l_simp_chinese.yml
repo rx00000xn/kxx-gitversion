@@ -1446,6 +1446,7 @@
  BUL_ff:0 "保加利亚民主共和国"
  BUL_ff_ADJ:0 "保加利亚"
  BUL_ff_DEF:0 "保加利亚民主共和国"
+ bulgaria.89.g:0 "农业联盟夺取了权力！"
  bulgaria_foreign_events.11.t: "军团的地位受到挑战"
  bulgaria_foreign_events.11.d: "别急"
  bulgaria_foreign_events.11.a: "保加利亚前线战士联盟"
@@ -1475,3 +1476,4 @@
  bulgaria_foreign_events.16.a: "我们将继承同志们的愿景，解放全俄罗斯！"
  bulgaria_foreign_events.16.b: "分部也别落下！"
  BUL_IMRO_might_backfire:"§R假如IMRO势力过于强大且政府试图打压它，可能会造成严重的后果！§!"
+ BUL_bloody_professor:"血腥教授"

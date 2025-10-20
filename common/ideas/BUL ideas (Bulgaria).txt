@@ -97,12 +97,6 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_boris_crown_prince" }
 			picture = bul_tsar_boris_positive
 			allowed = { always = no }
-			available = {
-				
-			}
-			cancel = {
-				is_subject = yes
-			}
 			modifier = {
 				stability_factor = 0.05
 			}
@@ -112,12 +106,6 @@ ideas = {
 			name = BUL_boris_crown_prince
 			picture = bul_tsar_boris_negative
 			allowed = { always = no }
-			available = {
-				
-			}
-			cancel = {
-				is_subject = yes
-			}
 			modifier = {
 				stability_factor = -0.10
 			}
@@ -131,8 +119,9 @@ ideas = {
 			}
 			modifier = {
 				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
 				resistance_growth = -0.25
-				compliance_gain = -0.05
+				compliance_gain = 0.05
 			}
 		}
 		BUL_state_protection_act_2 = {
@@ -695,7 +684,7 @@ ideas = {
 			picture = bul_national_industry
 			allowed = { always = no }
 			modifier = {
-				production_factory_max_efficiency_factor = 0.15
+				production_factory_max_efficiency_factor = 0.25
 			}
 		}
 
@@ -1993,6 +1982,241 @@ ideas = {
 				production_speed_buildings_factor = 0.1
 				production_speed_arms_factory_factor = 0.1
 
+			}
+		}
+		BUL_stablize_regime = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_AUS_military_cooperation" }
+			picture = HON_bad_stability
+			allowed = { always = no }
+			modifier = {
+				political_power_cost = -0.1
+				stability_factor = 0.1
+				war_support_factor = 0.1
+			}
+		}
+		BUL_da = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_AUS_military_cooperation" }
+			picture = RUS_Democracy_Light
+			allowed = { always = no }
+			modifier = {
+				political_power_cost = -0.1
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				social_liberal_drift = 0.05
+				market_liberal_drift = 0.05
+				social_conservative_drift = 0.05
+				social_democrat_drift = 0.05
+				party_popularity_stability_factor = 0.2
+				production_speed_arms_factory_factor = 0.15
+				production_speed_industrial_complex_factor = 0.15
+			}
+		}
+		BUL_da2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_AUS_military_cooperation" }
+			picture = RUS_Democracy_Light
+			allowed = { always = no }
+			modifier = {
+				political_power_cost = -0.1
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				social_liberal_drift = 0.05
+				market_liberal_drift = 0.05
+				social_conservative_drift = 0.05
+				social_democrat_drift = 0.05
+				party_popularity_stability_factor = 0.2
+				production_speed_arms_factory_factor = 0.15
+				production_speed_industrial_complex_factor = 0.15
+				production_factory_start_efficiency_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+
+			}
+		}
+		BUL_da3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_AUS_military_cooperation" }
+			picture = RUS_Democracy_Light
+			allowed = { always = no }
+			modifier = {
+				political_power_cost = -0.1
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				social_liberal_drift = 0.05
+				market_liberal_drift = 0.05
+				social_conservative_drift = 0.05
+				social_democrat_drift = 0.05
+				party_popularity_stability_factor = 0.2
+				production_speed_arms_factory_factor = 0.15
+				production_speed_industrial_complex_factor = 0.15
+				production_factory_start_efficiency_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				line_change_production_efficiency_factor = 0.1
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+			}
+		}
+		BUL_da4 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_AUS_military_cooperation" }
+			picture = RUS_Democracy_Light
+			allowed = { always = no }
+			modifier = {
+				political_power_cost = -0.1
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				social_liberal_drift = 0.05
+				market_liberal_drift = 0.05
+				social_conservative_drift = 0.05
+				social_democrat_drift = 0.05
+				party_popularity_stability_factor = 0.2
+				production_speed_arms_factory_factor = 0.15
+				production_speed_industrial_complex_factor = 0.15
+				production_factory_start_efficiency_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				line_change_production_efficiency_factor = 0.1
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				global_building_slots_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				consumer_goods_factor = -0.1
+			}
+		}
+		BUL_psm = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_AUS_military_cooperation" }
+			picture = generic_government
+			allowed = { always = no }
+			modifier = {
+				political_power_cost = -0.1
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				authoritarian_democrat_drift = 0.05
+				paternal_autocrat_drift = 0.05
+				national_populist_drift = 0.05
+				conscription = 0.02
+				conscription_factor = 0.2
+				monthly_population = 0.5
+			}
+		}
+		BUL_psm2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_AUS_military_cooperation" }
+			picture = generic_government
+			allowed = { always = no }
+			modifier = {
+				political_power_cost = -0.1
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				authoritarian_democrat_drift = 0.05
+				paternal_autocrat_drift = 0.05
+				national_populist_drift = 0.05
+				conscription = 0.02
+				conscription_factor = 0.2
+				monthly_population = 0.5
+				consumer_goods_expected_value = -0.1
+				consumer_goods_factor = -0.1
+				industrial_capacity_factory = 0.1
+			}
+		}
+		BUL_psm3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_AUS_military_cooperation" }
+			picture = generic_government
+			allowed = { always = no }
+			modifier = {
+				political_power_cost = -0.1
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				authoritarian_democrat_drift = 0.05
+				paternal_autocrat_drift = 0.05
+				national_populist_drift = 0.05
+				conscription = 0.02
+				conscription_factor = 0.2
+				monthly_population = 0.5
+				consumer_goods_expected_value = -0.1
+				consumer_goods_factor = -0.1
+				industrial_capacity_factory = 0.1
+				army_org_factor = 0.1
+				army_morale_factor = 0.1
+				org_loss_when_moving = -0.1
+			}
+		}
+		BUL_psm4 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_AUS_military_cooperation" }
+			picture = generic_government
+			allowed = { always = no }
+			modifier = {
+				political_power_cost = -0.1
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				authoritarian_democrat_drift = 0.05
+				paternal_autocrat_drift = 0.05
+				national_populist_drift = 0.05
+				conscription = 0.02
+				conscription_factor = 0.2
+				monthly_population = 0.5
+				consumer_goods_expected_value = -0.1
+				consumer_goods_factor = -0.1
+				industrial_capacity_factory = 0.1
+				army_org_factor = 0.1
+				army_morale_factor = 0.1
+				org_loss_when_moving = -0.1
+				compliance_growth = 0.1
+				resistance_target = -0.1
+				required_garrison_factor = -0.1
+
+			}
+		}
+		BUL_shield_of_fatherland = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_AUS_military_cooperation" }
+			picture = guns_shield
+			allowed = { always = no }
+			modifier = {
+				army_core_attack_factor = 0.15
+				army_core_defence_factor = 0.15
+				attrition = -0.1
+				supply_consumption_factor = -0.1
+			}
+		}
+		BUL_hail_to_vozd = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_AUS_military_cooperation" }
+			picture = death_men
+			allowed = { always = no }
+			modifier = {
+				army_attack_against_major_factor = 0.1
+				army_attack_against_minor_factor = 0.1
+				breakthrough_factor = 0.1
+				recon_factor = 0.1
+			}
+		}
+		BUL_supreme_economy_council = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_AUS_military_cooperation" }
+			picture = generic_autarky
+			allowed = { always = no }
+			modifier = {
+				global_building_slots = 2
+				production_speed_buildings_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+			}
+		}
+		BUL_white_terror = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_AUS_military_cooperation" }
+			picture = HUN_white_terror_idea
+			allowed = { always = no }
+			modifier = {
+				war_support_weekly = 0.002
+				army_infantry_attack_factor = 0.1
+				army_infantry_defence_factor = 0.1
+				experience_loss_factor = -0.1
+			}
+		}
+		BUL_saa = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_AUS_military_cooperation" }
+			picture = generic_government_reconciliation
+			allowed = { always = no }
+			modifier = {
+				stability_weekly = 0.002
+				party_popularity_stability_factor = 0.2
+				war_stability_factor = 0.2
+				research_speed_factor = 0.1
 			}
 		}
 	}
