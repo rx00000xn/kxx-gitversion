@@ -169,6 +169,86 @@ scripted_gui = {
 				}
 			}
 
+			#越南
+			Nguyen_Tuong_Long_visible = {
+				AND = {
+				  has_country_flag = KXX_HOG_veiw
+				  has_idea = VIN_Nguyen_Tuong_Long_hog_sli
+				}
+			  }
+			  Bui_Quang_Chieu_visible = {
+				AND = {
+				  has_country_flag = KXX_HOG_veiw
+				  has_idea = VIN_Bui_Quang_Chieu_hog_mli
+				}
+			  }
+			  Ngo_Dinh_Diem_visible = {
+				AND = {
+				  has_country_flag = KXX_HOG_veiw
+				  has_idea = VIN_Ngo_Dinh_Diem_hog_ade
+				}
+			  }
+			  Pham_Qhuyn_visible = {
+				AND = {
+				  has_country_flag = KXX_HOG_veiw
+				  has_idea = VIN_Pham_Qhuyn_hog_sco
+				}
+			  }
+			  Tran_Trong_Kim_visible = {
+				AND = {
+				  has_country_flag = KXX_HOG_veiw
+				  has_idea = VIN_Tran_Trong_Kim_hog_sco
+				}
+			  }
+			  Nguyen_Tai_Hoc_visible = {
+				AND = {
+				  has_country_flag = KXX_HOG_veiw
+				  has_idea = VIN_Nguyen_Tai_Hoc_hog_sde
+				}
+			  }
+			  Henriette_Bui_Quang_Chieu_visible = {
+				AND = {
+				  has_country_flag = KXX_HOG_veiw
+				  has_idea = VIN_Henriette_Bui_Quang_Chieu_hog_mli
+				}
+			  }
+			  Nguyen_Tuong_Tam_visible = {
+				AND = {
+				  has_country_flag = KXX_HOG_veiw
+				  has_idea = VIN_Nguyen_Tuong_Tam_hog_sli
+				}
+			  }
+			  Nguyen_Phan_Long_visible = {
+				AND = {
+				  has_country_flag = KXX_HOG_veiw
+				  has_idea = VIN_Nguyen_Phan_Long_hog_mli
+				}
+			  }
+			  Nguyen_Phuc_Buu_Dinh_visible = {
+				AND = {
+				  has_country_flag = KXX_HOG_veiw
+				  has_idea = VIN_Nguyen_Phuc_Buu_Dinh_hog_pau
+				}
+			  }
+			  Le_Van_Vien_visible = {
+				AND = {
+				  has_country_flag = KXX_HOG_veiw
+				  has_idea = VIN_Le_Van_Vien_hog_pau
+				}
+			  }
+			  Duong_Van_Duong_visible = {
+				AND = {
+				  has_country_flag = KXX_HOG_veiw
+				  has_idea = VIN_Duong_Van_Duong_hog_pau
+				}
+			  }
+			  Huynh_Phu_So_visible = {
+				AND = {
+				  has_country_flag = KXX_HOG_veiw
+				  has_idea = VIN_Huynh_Phu_So_hog_npo
+				}
+			  }
+
 			#塞尔维亚
 			Draza_Mihailovics_visible = { #德拉查·米哈伊洛维奇
 				AND = {

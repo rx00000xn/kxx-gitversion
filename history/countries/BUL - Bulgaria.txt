@@ -163,30 +163,28 @@ set_popularities = {
 	paternal_autocrat = 8
 	national_populist = 3
 }
-
 create_country_leader = {
-	name = "Valko Chervenkov"
-	picture = "gfx/leaders/BUL/Portrait_BUL_Valko_Chervenkov.png"
+	name = "瓦西尔·伊克诺莫夫"
+	picture = "gfx/leaders/BUL/Portrait_BUL_Vasil_Ikonomov.png"
 	expire = "1.1.1"
-	ideology = hardliner_bolshevism_subtype
+	ideology = anarcho_bolshevism_subtype
 }
-
 create_country_leader = {
-	name = "Manol Vasev"
+	name = "马诺尔·瓦谢夫"
 	picture = "gfx/leaders/BUL/Portrait_BUL_Manol_Vasev.png"
 	expire = "1.1.1"
 	ideology = agrarian_syndicalism_subtype
 }
 
 create_country_leader = {
-	name = "Georgi Dimitrov"
+	name = "格奥尔基·季米特洛夫"
 	picture = "gfx/leaders/BUL/Portrait_BUL_Georgi_Dimitrov_kr.png"
 	expire = "1.1.1"
 	ideology = radsoc_communism_subtype
 }
 
 create_country_leader = {
-	name = "Ferdinand I"
+	name = "斐迪南一世"
 	desc = "POLITICS_FERDINAND_I_DESC"
 	picture = "gfx/leaders/BUL/Portrait_BUL_Ferdinand_I_KX.png"
 	expire = "1.1.1"
@@ -194,7 +192,7 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Ferdinand I"
+	name = "斐迪南一世"
 	desc = "POLITICS_FERDINAND_I_DESC"
 	picture = "gfx/leaders/BUL/Portrait_BUL_Ferdinand_I_KX.png"
 	expire = "1.1.1"
@@ -202,7 +200,7 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Ferdinand I"
+	name = "斐迪南一世"
 	desc = "POLITICS_FERDINAND_I_DESC"
 	picture = "gfx/leaders/BUL/Portrait_BUL_Ferdinand_I_KX.png"
 	expire = "1.1.1"
@@ -210,14 +208,14 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Ferdinand I"
+	name = "斐迪南一世"
 	desc = "POLITICS_FERDINAND_I_DESC"
 	picture = "gfx/leaders/BUL/Portrait_BUL_Ferdinand_I_KX.png"
 	expire = "1.1.1"
 	ideology = soccon_agrarianism_subtype
 }
 create_country_leader = {
-	name = "Ferdinand I"
+	name = "斐迪南一世"
 	desc = "POLITICS_FERDINAND_I_DESC"
 	picture = "gfx/leaders/BUL/Portrait_BUL_Ferdinand_I_KX.png"
 	expire = "1.1.1"
@@ -225,7 +223,7 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Ferdinand I"
+	name = "斐迪南一世"
 	desc = "POLITICS_FERDINAND_I_DESC"
 	picture = "gfx/leaders/BUL/Portrait_BUL_Ferdinand_I_KX.png"
 	expire = "1.1.1"
@@ -233,7 +231,7 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Kimon Georgiev Stoyanov"
+	name = "基蒙·格奥尔基耶夫·斯托亚诺夫"
 	desc = "POLITICS_GEORGIEV_DESC"
 	picture = "gfx/leaders/BUL/Portrait_BUL_Kimon_Griogiev.png"
 	expire = "1.1.1"

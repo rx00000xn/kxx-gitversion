@@ -99,7 +99,7 @@ leader_traits = {
 	#frg特殊傀儡
 	FRG_Schumann = {
 		random = no
-		stability_weekly = 0.0003
+		stability_factor = 0.1
 		authoritarian_democrat_drift = 0.01
 	}
 	FRG_CAGED_BIRD = {
@@ -107,5 +107,21 @@ leader_traits = {
 		surrender_limit = 0.066
 		market_liberal_drift = 0.01
 		conscription = 0.03
+	}
+	FRG_Amiot = {
+		random = no
+		production_factory_max_efficiency_factor = 0.088
+		production_factory_efficiency_gain_factor = 0.088
+	}
+	FRG_Wertheimer = {
+		random = no
+		add_stability = 0.15
+		production_factory_max_efficiency_factor = 0.12
+		production_factory_efficiency_gain_factor = 0.12
+	}
+	FRG_Bohemian_industrial_magnate = {
+		random = no
+		industrial_capacity_factory = 0.08
+		production_speed_buildings_factor = 0.1
 	}
 }

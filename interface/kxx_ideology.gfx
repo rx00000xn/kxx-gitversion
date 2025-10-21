@@ -576,7 +576,7 @@ spriteTypes = {
 	}
 	spriteType = { #极权-革命新体制
 		name = "GFX_ideology_tot_shintaisei_subtype" 
-		texturefile = "gfx/interface/ideologies/subideologies/tot_shintaisei_group.png"
+		texturefile = "gfx/interface/ideologies/subideologies/tot_shintaisei_subtype.png"
 	}
 	
 
@@ -587,6 +587,10 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_ideology_natpop_viet_natsoc_subtype" #民粹-越南国社主义
 		texturefile = "gfx/interface/ideologies/subideologies/natpop_viet_natsoc_group.png"
+	}
+	SpriteType = {
+		name = "GFX_ideology_esoteric_anarchism_subtype" #民粹-神秘无政府主义
+		texturefile = "gfx/interface/ideologies/subideologies/esoteric_anarchism_group.png"
 	}
 
 	frameAnimatedSpriteType = { #民粹-终末论

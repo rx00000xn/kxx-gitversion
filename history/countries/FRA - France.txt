@@ -268,10 +268,6 @@ add_ideas = {
   FRA_communard_spirit_idea
   partial_economic_mobilisation
   THINT_exact_vengeance
-  FRA_les_grand_travaux
-  FRA_rural_religious_question
-  FRA_divided_defenders
-  FRA_tempered_revanchism
   FRA_Maurice_Gamelin_cos
 }
 create_country_leader = {
@@ -333,7 +329,7 @@ create_country_leader = {
   ideology = crime_syndicate_subtype
 }
 create_country_leader = {
-  name = "科洛内尔·雷米"  # Colonel Rémy
+  name = "吉尔伯特·雷诺"  # Colonel Rémy
   picture = "gfx/leaders/FRA/Portrait_FRA_Gilbert_Renault_KX.png"
   expire = "1.1.1"
   ideology = maurrassism_subtype
@@ -682,6 +678,22 @@ create_corps_commander = {
   planning_skill = 2
   logistics_skill = 3
   id = 5771
+}
+create_field_marshal = {
+	name = "阿尔弗雷德·图尼"  
+	portrait_path = "gfx/leaders/FRG/Portrait_FRG_Alfred_Touny.png"
+	traits = {
+	  war_hero
+	  organizer
+	  urban_assault_specialist
+	  skirmisher
+	  guerilla_fighter
+	}
+	skill = 4
+	attack_skill = 1
+	defense_skill = 4
+	planning_skill = 1
+	logistics_skill = 3
 }
 create_corps_commander = {
   name = "勒内·比奈"  # René Binet
