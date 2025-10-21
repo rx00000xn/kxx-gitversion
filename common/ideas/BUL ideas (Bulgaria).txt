@@ -98,7 +98,9 @@ ideas = {
 			picture = bul_tsar_boris_positive
 			allowed = { always = no }
 			modifier = {
-				stability_factor = 0.05
+				stability_factor = 0.10
+				political_power_factor = 0.1
+				consumer_goods_expected_value = -0.1
 			}
 		}
 		BUL_boris_crown_prince_bad = {
@@ -107,7 +109,9 @@ ideas = {
 			picture = bul_tsar_boris_negative
 			allowed = { always = no }
 			modifier = {
-				stability_factor = -0.10
+				stability_factor = 0.10
+				political_power_cost = -0.1
+				industrial_capacity_factory = 0.1
 			}
 		}
 		BUL_state_protection_act = {
@@ -1065,7 +1069,7 @@ ideas = {
 		}
 		BUL_legionary_revolution = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_legionary_revolution" }
-			picture = bul_ratniks
+			picture = BRG_Legionary_Struggle
 			allowed = { always = no }
 			modifier = {
 				conscription = 0.02
@@ -1075,7 +1079,7 @@ ideas = {
 		BUL_legionary_revolution_2 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_legionary_revolution_2" }
 			name = BUL_legionary_revolution
-			picture = bul_ratniks
+			picture = BRG_Legionary_Struggle
 			allowed = { always = no }
 			modifier = {
 				conscription = 0.02
@@ -1086,7 +1090,7 @@ ideas = {
 		BUL_legionary_revolution_3 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_legionary_revolution_3" }
 			name = BUL_legionary_revolution
-			picture = bul_ratniks
+			picture = BRG_Legionary_Struggle
 			allowed = { always = no }
 			modifier = {
 				conscription = 0.03
@@ -1449,13 +1453,13 @@ ideas = {
 		}
 
 		#Chetnik idea
-		CHT_uprising = {
+		BUL_support_resistance = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CHT_uprising" }
-			picture = CHT_chetnik_resistance
+			picture = advisors_bulgaria
 			allowed = { always = no }
 			modifier = {
 				conscription_factor = 0.1
-				army_core_defence_factor = 0.30
+				army_core_defence_factor = 0.10
 				army_morale_factor = 0.15
 			}
 		}
@@ -1998,6 +2002,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_AUS_military_cooperation" }
 			picture = RUS_Democracy_Light
 			allowed = { always = no }
+			name = "民主协议"
 			modifier = {
 				political_power_cost = -0.1
 				stability_factor = 0.1
@@ -2015,6 +2020,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_AUS_military_cooperation" }
 			picture = RUS_Democracy_Light
 			allowed = { always = no }
+			name = "民主协议"
 			modifier = {
 				political_power_cost = -0.1
 				stability_factor = 0.1
@@ -2036,6 +2042,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_AUS_military_cooperation" }
 			picture = RUS_Democracy_Light
 			allowed = { always = no }
+			name = "民主协议"
 			modifier = {
 				political_power_cost = -0.1
 				stability_factor = 0.1
@@ -2059,6 +2066,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_AUS_military_cooperation" }
 			picture = RUS_Democracy_Light
 			allowed = { always = no }
+			name = "民主协议"
 			modifier = {
 				political_power_cost = -0.1
 				stability_factor = 0.1
@@ -2085,6 +2093,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_AUS_military_cooperation" }
 			picture = generic_government
 			allowed = { always = no }
+			name = "人民社会运动"
 			modifier = {
 				political_power_cost = -0.1
 				stability_factor = 0.1
@@ -2100,6 +2109,7 @@ ideas = {
 		BUL_psm2 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_AUS_military_cooperation" }
 			picture = generic_government
+			name = "人民社会运动"
 			allowed = { always = no }
 			modifier = {
 				political_power_cost = -0.1
@@ -2120,6 +2130,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_AUS_military_cooperation" }
 			picture = generic_government
 			allowed = { always = no }
+			name = "人民社会运动"
 			modifier = {
 				political_power_cost = -0.1
 				stability_factor = 0.1
@@ -2142,6 +2153,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_AUS_military_cooperation" }
 			picture = generic_government
 			allowed = { always = no }
+			name = "人民社会运动"
 			modifier = {
 				political_power_cost = -0.1
 				stability_factor = 0.1
@@ -2217,6 +2229,359 @@ ideas = {
 				party_popularity_stability_factor = 0.2
 				war_stability_factor = 0.2
 				research_speed_factor = 0.1
+			}
+		}
+		BUL_communist_imro = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = UKR_communism_in_20_years
+			allowed = { always = no }
+			name = "共产派主导"
+            modifier = {	
+				production_factory_start_efficiency_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+			}
+			
+		}
+		BUL_communist_imro2 = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = UKR_communism_in_20_years
+			allowed = { always = no }
+			name = "共产派主导"
+            modifier = {	
+				production_factory_start_efficiency_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				line_change_production_efficiency_factor = 0.1
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+			}
+			
+		}
+		BUL_communist_imro3 = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = UKR_communism_in_20_years
+			allowed = { always = no }
+			name = "共产派主导"
+            modifier = {	
+				production_factory_start_efficiency_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				line_change_production_efficiency_factor = 0.1
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				consumer_goods_factor = -0.15
+				consumer_goods_expected_value = -0.15
+				totalist_drift = 0.05
+			}
+			
+		}
+		BUL_syndicalist_imro = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = orthodox_syndicalism
+			allowed = { always = no }
+			name = "工团派主导"
+            modifier = {	
+				production_speed_buildings_factor = 0.1
+				production_speed_arms_factory_factor = 0.15
+				production_speed_industrial_complex_factor = 0.15
+			}
+		}
+		BUL_syndicalist_imro2 = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = orthodox_syndicalism
+			allowed = { always = no }
+			name = "工团派主导"
+            modifier = {	
+				production_speed_buildings_factor = 0.1
+				production_speed_arms_factory_factor = 0.15
+				production_speed_industrial_complex_factor = 0.15
+				army_org_factor = 0.1
+				army_morale_factor = 0.1
+				supply_consumption_factor = -0.1
+
+			}
+		}
+		BUL_syndicalist_imro3 = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = orthodox_syndicalism
+			allowed = { always = no }
+			name = "工团派主导"
+            modifier = {	
+				production_speed_buildings_factor = 0.1
+				production_speed_arms_factory_factor = 0.15
+				production_speed_industrial_complex_factor = 0.15
+				army_org_factor = 0.1
+				army_morale_factor = 0.1
+				supply_consumption_factor = -0.1
+				attrition = -0.1
+				supply_node_range = 0.15
+				syndicalist_drift = 0.05
+			}
+		}
+		BUL_natpop_imro = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = generic_ultranationalism
+			allowed = { always = no }
+			name = "民粹派主导"
+            modifier = {	
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				army_speed_factor = 0.1
+
+			}
+		}
+		BUL_natpop_imro2 = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = generic_ultranationalism
+			allowed = { always = no }
+			name = "民粹派主导"
+            modifier = {	
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				army_speed_factor = 0.1
+				command_power_gain = 0.15
+				max_command_power = 150
+				training_time_army_factor = -0.1
+			}
+		}
+		BUL_natpop_imro3 = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = generic_ultranationalism
+			allowed = { always = no }
+			name = "民粹派主导"
+            modifier = {	
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				army_speed_factor = 0.1
+				command_power_gain = 0.15
+				max_command_power = 150
+				training_time_army_factor = -0.1
+				command_power_gain_mult = 0.15
+				max_command_power_mult = 0.15
+				national_populist_drift = 0.05
+			}
+		}
+		BUL_pataut_imro = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = authority_caesar
+			allowed = { always = no }
+			name = "专制派主导"
+            modifier = {	
+				conscription = 0.02
+				conscription_factor = 0.2
+				monthly_population = 0.5
+			}
+		}
+		BUL_pataut_imro2 = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = authority_caesar
+			allowed = { always = no }
+			name = "专制派主导"
+            modifier = {	
+				conscription = 0.02
+				conscription_factor = 0.2
+				monthly_population = 0.5
+				production_speed_buildings_factor = 0.1
+				industrial_capacity_factory = 0.1
+				no_supply_grace = 96
+			}
+		}
+		BUL_pataut_imro3 = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = authority_caesar
+			allowed = { always = no }
+			name = "专制派主导"
+            modifier = {	
+				conscription = 0.02
+				conscription_factor = 0.2
+				monthly_population = 0.5
+				production_speed_buildings_factor = 0.1
+				industrial_capacity_factory = 0.1
+				no_supply_grace = 96
+				recon_factor = 0.1
+				land_reinforce_rate = 0.1
+				paternal_autocrat_drift = 0.05
+			}
+		}
+		BUL_formalize_okharana = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = GEN_army_special_forces
+			allowed = { always = no }
+            modifier = {	
+				conscription = 0.02
+				conscription_factor = 0.2
+				army_infantry_attack_factor = 0.15
+				army_infantry_defence_factor = 0.15
+				org_loss_when_moving = -0.15
+				breakthrough_factor = 0.1
+				recon_factor = 0.1
+				land_reinforce_rate = 0.1
+			}
+		}
+		BUL_push_for_industrialize = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = GRU_heavy_industry
+			allowed = { always = no }
+            modifier = {	
+				industrial_capacity_factory = 0.1
+				production_factory_start_efficiency_factor = 0.12
+				production_factory_max_efficiency_factor = 0.12
+				production_factory_efficiency_gain_factor = 0.12
+			}
+		}
+		BUL_dye_red_cross_black = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = WHR_anarchist_red_cross
+			allowed = { always = no }
+            modifier = {	
+				experience_loss_factor = -0.15
+				monthly_population = 0.5
+				attrition = -0.1
+				supply_consumption_factor = -0.1
+			}
+		}
+		BUL_decentralize_industry = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = decentralized_planning
+			allowed = { always = no }
+            modifier = {	
+				global_building_slots_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_supply_node_factor = 0.1
+				production_speed_infrastructure_factor = 0.1
+				consumer_goods_expected_value = -0.15
+				consumer_goods_factor = -0.15
+			}
+		}
+		BUL_digging_in = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = ALB_bunker
+			allowed = { always = no }
+            modifier = {	
+				army_attack_speed_factor = 0.1
+				dig_in_speed_factor = 0.15
+				max_dig_in_factor = 0.15
+				army_strength_factor = 0.1
+				terrain_penalty_reduction = 0.1
+				equipment_capture_factor = 0.15
+				pocket_penalty = -0.15
+				production_speed_bunker_factor = 0.15
+			}
+		}
+		BUL_cloak_and_dagger = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = CSA_spy_cat
+			allowed = { always = no }
+            modifier = {	
+				operative_slot = 4
+				intel_network_gain_factor = 0.2
+				intel_from_operatives_factor = 0.25
+				resistance_target = -0.25
+			}
+		}
+		BUL_united_organization = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = GAL_shattered_unity
+			allowed = { always = no }
+            modifier = {	
+				stability_weekly = 0.005
+				war_support_weekly = 0.005
+				research_speed_factor = 0.15
+				political_power_factor = 0.15
+			}
+		}
+		BUL_rebuild_economy = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = state_economy
+			allowed = { always = no }
+            modifier = {	
+				local_resources_factor = 0.15
+				production_lack_of_resource_penalty_factor = 0.15
+				global_building_slots = 2
+				military_industrial_organization_funds_gain = 0.15
+				military_industrial_organization_industrial_manufacturer_assign_cost = -0.15
+				military_industrial_organization_research_bonus = 0.15
+				military_factory_donations = 2
+				industrial_factory_donations = 2
+			}
+		}
+		BUL_hristo_botev_radio = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = radio_propaganda
+			allowed = { always = no }
+            modifier = {	
+				
+			}
+			targeted_modifier = {
+				tag = SER
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
+				breakthrough_bonus_against = 0.15
+			}
+			targeted_modifier = {
+				tag = GRE
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
+				breakthrough_bonus_against = 0.15
+			}
+			targeted_modifier = {
+				tag = ROM
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
+				breakthrough_bonus_against = 0.15
+			}
+			targeted_modifier = {
+				tag = TUR
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
+				breakthrough_bonus_against = 0.15
+			}
+		}
+		BUL_army_bulgarians = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = army_cooperation
+			allowed = { always = no }
+            modifier = {	
+				conscription = 0.02
+				conscription_factor = 0.2
+				weekly_manpower = 500
+				required_garrison_factor = -0.15
+			}
+		}
+		BUL_support_okrahana = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = GEN_army_core
+			allowed = { always = no }
+            modifier = {	
+				army_infantry_attack_factor = 0.1
+				army_infantry_defence_factor = 0.1
+				planning_speed = 0.15
+				max_planning = 0.15
+			}
+		}
+		BUL_spread_chaos = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = generic_broken_champagne
+			allowed = { always = no }
+            modifier = {	
+				breakthrough_factor = 0.1
+				recon_factor = 0.1
+				land_reinforce_rate = 0.1
+				attrition = -0.1
+			}
+		}
+		BUL_revanchism = { 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SER_balkan_democracy_1" }
+			picture = bul_imro
+			allowed = { always = no }
+            modifier = {	
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				army_org_factor = 0.1
+				army_morale_factor = 0.1
 			}
 		}
 	}

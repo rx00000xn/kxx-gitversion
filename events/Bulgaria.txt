@@ -1106,6 +1106,7 @@ country_event = { #Syndicalist state restructuring
 			ruling_party = totalist
 			elections_allowed = no
 		}
+		set_cosmetic_tag = BUL_yugo_free_anarchism
 		remove_all_ministers = yes
 		add_ideas = {
 			BUL_Anton_Yugov_hog_tot
@@ -6769,6 +6770,14 @@ country_event = {
 		ai_chance = { factor = 0 }
 		every_state = {
 			limit = {
+				is_claimed_by = SLO
+			}
+			BUL = { 
+				add_state_core = PREV 
+			}
+		}
+		every_state = {
+			limit = {
 				is_core_of = HUN
 			}
 			BUL = { 
@@ -7405,11 +7414,17 @@ country_event = { #
 		}
 	}
 }
-country_event = { # 
+country_event = { #imro coups
 	id = bulgaria_foreign_events.14
 	title = bulgaria_foreign_events.14.t
 	desc = bulgaria_foreign_events.14.d
-	is_triggered_only = yes
+	 trigger = {
+		tag = BUL
+		check_variable = {
+			var = imro_influence
+			value > 101
+		}
+	}
 	fire_only_once = yes
 	option = { # yes
 		name = bulgaria_foreign_events.14.a
@@ -7445,6 +7460,8 @@ country_event = { #
 			name = BUL_IMRO_party
 		}
 		set_country_flag = BUL_IMRO_coup
+		set_country_flag = BUL_imro_off
+		complete_national_focus = BUL_imro
 	}
 	
 	
