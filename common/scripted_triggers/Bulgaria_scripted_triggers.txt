@@ -23,6 +23,10 @@ BUL_has_zveno_rule = {
 				has_country_flag = kazasov_zveno
 			}
 		}
+		NOT = {
+			has_country_flag = BUL_IMRO_coup
+			has_country_flag = BUL_tsankov_victory
+		}
 	}
 }
 
@@ -33,6 +37,9 @@ BUL_has_socialist_rule = {
 		BUL_has_zveno_rule = no
 		NOT = {
 			has_country_flag = BUL_based_path
+			has_country_flag = BUL_IMRO_coup
+			has_country_flag = BUL_banu_is_tot
+			has_country_flag = BUL_banu_is_radsoc
 		}
 	}
 }
@@ -41,15 +48,25 @@ BUL_has_broad_socialists = {
 	custom_trigger_tooltip = {
 		tooltip = BUL_broad_socialist_government
 		has_government = social_democrat
-		NOT = { has_country_flag = soc_dems_are_socialists }
+		NOT = { 
+			has_country_flag = soc_dems_are_socialists 
+			has_country_flag = BUL_banu_is_socdem
+		}
 	}
 }
 
 BUL_agrarians_in_power = {
 	custom_trigger_tooltip = {
 		tooltip = BUL_agrarian_government
-		has_government = social_conservative
-		
+		OR = {
+			has_government = social_conservative
+			has_country_flag = BUL_banu_is_authdem
+			has_country_flag = BUL_banu_is_socdem
+			has_country_flag = BUL_banu_is_soclib
+			has_country_flag = BUL_banu_is_marlib
+			has_country_flag = BUL_banu_is_radsoc
+			has_country_flag = BUL_banu_is_tot
+		}
 	}
 }
 
@@ -58,6 +75,10 @@ BUL_absolutists_in_power = {
 		tooltip = BUL_absolutist_government
 		has_government = paternal_autocrat
 		NOT = { has_country_flag = BUL_zveno_is_pataut }
+		NOT = {
+			has_country_flag = BUL_IMRO_coup
+			has_country_flag = BUL_tsankov_victory
+		}
 	}
 }
 
@@ -71,6 +92,10 @@ BUL_has_liberal_rule = {
 				has_country_flag = BUL_liberals_is_soccon
 			}
 		}
+		NOT = {
+			has_country_flag = BUL_tsankov_victory
+			has_country_flag = BUL_banu_is_authdem
+		}
 	}
 }
 
@@ -78,6 +103,9 @@ BUL_has_democrat_rule = {
 	custom_trigger_tooltip = {
 		tooltip = BUL_radical_democrat_government
 		has_government = market_liberal
-		
+		NOT = {
+			has_country_flag = BUL_tsankov_victory
+			has_country_flag = BUL_banu_is_marlib
+		}
 	}
 }

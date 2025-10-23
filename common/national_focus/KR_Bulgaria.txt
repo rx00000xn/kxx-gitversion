@@ -6832,6 +6832,8 @@ focus_tree = {
 			}
 			set_country_flag = BUL_has_formed_sov
 			mark_focus_tree_layout_dirty = yes
+			RUS_enable_integration = yes
+			ROOT = { save_global_event_target_as = soviet_russia }
 			if = {
 				limit = {
 					has_country_flag = BUL_anarchoids
@@ -15626,16 +15628,19 @@ focus = {
 		id = BUL_natpop
 		icon = GFX_goal_national_populism
 		cost = 3
-    
+		available = {
+			has_country_flag = BUL_legionary_coup
+		}
 		x = 40
 		y = 12
 
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BUL_young_officers"
-			
-			add_ideas = BUL_legionary_revolution
-			
+			add_ideas = BUL_legion_start
+			hidden_effect = {
+				country_event = bulgaria_foreign_events.11
+			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -15649,12 +15654,16 @@ focus = {
 		prerequisite = {
 			focus = BUL_natpop
 		}
+		available = {
+			has_country_flag = BUL_populist_victory
+		}
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BUL_young_officers"
-			
-			add_ideas = BUL_legionary_revolution
-			
+			swap_ideas = {
+				remove_idea = BUL_legion_start
+				add_idea = BUL_populist_revolution
+			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -15671,9 +15680,10 @@ focus = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BUL_young_officers"
-			
-			add_ideas = BUL_legionary_revolution
-			
+			swap_ideas = {
+				remove_idea = BUL_populist_revolution
+				add_idea = BUL_populist_revolution2
+			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -15690,9 +15700,10 @@ focus = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BUL_young_officers"
-			
-			add_ideas = BUL_legionary_revolution
-			
+			swap_ideas = {
+				remove_idea = BUL_populist_revolution2
+				add_idea = BUL_populist_revolution3
+			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -15710,7 +15721,7 @@ focus = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BUL_young_officers"
 			
-			add_ideas = BUL_legionary_revolution
+			add_ideas = BUL_populist_economy
 			
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -15731,9 +15742,10 @@ focus = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BUL_young_officers"
-			
-			add_ideas = BUL_legionary_revolution
-			
+			swap_ideas = {
+				remove_idea = BUL_populist_economy
+				add_idea = BUL_populist_economy2
+			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -15754,7 +15766,7 @@ focus = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BUL_young_officers"
 			
-			add_ideas = BUL_legionary_revolution
+			add_ideas = BUL_young_nationalists
 			
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -15775,8 +15787,11 @@ focus = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BUL_young_officers"
-			
-			add_ideas = BUL_legionary_revolution
+			swap_ideas = {
+				remove_idea = BUL_populist_economy2
+				add_idea = BUL_populist_economy3
+			}
+			add_ideas = BUL_militarize_labor
 			
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -15800,8 +15815,8 @@ focus = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BUL_young_officers"
-			
-			add_ideas = BUL_legionary_revolution
+			add_stability = 0.1
+			add_ideas = BUL_bulgarian_vozd
 			
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -15834,6 +15849,36 @@ focus = {
 				ideology = savinkovism_subtype
 				traits = {}
 			}
+			RUS_enable_integration = yes
+			ROOT = { save_global_event_target_as = russia }
+			swap_ideas = {
+				remove_idea = BUL_russian_supports
+				add_idea = BUL_russian_exile
+			}
+			every_state = {
+				limit = {
+					is_core_of = RUS
+				}
+				BUL = { 
+					add_state_core = PREV 
+				}
+			}
+			every_state = {
+				limit = {
+					is_core_of = TRM
+				}
+				BUL = { 
+					add_state_core = PREV 
+				}
+			}
+			create_wargoal = {
+				target = RUS
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = TRM
+				type = annex_everything
+			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -15851,9 +15896,13 @@ focus = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BUL_young_officers"
-			
-			add_ideas = BUL_legionary_revolution
-			
+			add_popularity = {
+				ideology = national_populist
+				popularity = 0.1
+			}
+			add_stability = 0.1
+			add_war_support = 0.1
+			add_political_power = 100
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -15871,9 +15920,10 @@ focus = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BUL_young_officers"
-			
-			add_ideas = BUL_legionary_revolution
-			
+			add_manpower = -10000
+			add_one_random_civilian_factory = yes
+			add_one_random_civilian_factory = yes
+			add_one_random_civilian_factory = yes
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -15891,9 +15941,7 @@ focus = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BUL_young_officers"
-			
-			add_ideas = BUL_legionary_revolution
-			
+			add_ideas = BUL_russian_supports
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -15907,12 +15955,16 @@ focus = {
 		prerequisite = {
 			focus = BUL_natpop
 		}
+		available = {
+			has_country_flag = BUL_ratnik_victory
+		}
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BUL_young_officers"
-			
-			add_ideas = BUL_legionary_revolution
-			
+			swap_ideas = {
+				remove_idea = BUL_legion_start
+				add_idea = BUL_ratnik_revolution
+			}			
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -15929,9 +15981,10 @@ focus = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BUL_young_officers"
-			
-			add_ideas = BUL_legionary_revolution
-			
+			swap_ideas = {
+				remove_idea = BUL_ratnik_revolution
+				add_idea = BUL_ratnik_revolution2
+			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -15948,9 +16001,7 @@ focus = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BUL_young_officers"
-			
-			add_ideas = BUL_legionary_revolution
-			
+			add_ideas = BUL_ratnik_economy
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -15967,9 +16018,10 @@ focus = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BUL_young_officers"
-			
-			add_ideas = BUL_legionary_revolution
-			
+			swap_ideas = {
+				remove_idea = BUL_ratnik_revolution2
+				add_idea = BUL_ratnik_revolution3
+			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -15989,9 +16041,11 @@ focus = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BUL_young_officers"
-			
-			add_ideas = BUL_legionary_revolution
-			
+			swap_ideas = {
+				remove_idea = BUL_ratnik_economy
+				add_idea = BUL_ratnik_economy2
+			}
+			add_ideas = BUL_agrarian_commune_corportism
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -16011,9 +16065,10 @@ focus = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BUL_young_officers"
-			
-			add_ideas = BUL_legionary_revolution
-			
+			swap_ideas = {
+				remove_idea = BUL_ratnik_economy2
+				add_idea = BUL_ratnik_economy3
+			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -16033,9 +16088,14 @@ focus = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BUL_young_officers"
-			
-			add_ideas = BUL_legionary_revolution
-			
+			add_one_random_military_factory = yes
+			add_one_random_military_factory = yes
+			add_ideas = BUL_a_strong_hand
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 1500
+				producer = BUL
+			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -16058,9 +16118,8 @@ focus = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BUL_young_officers"
-			
-			add_ideas = BUL_legionary_revolution
-			
+			add_ideas = BUL_ratnik_state
+			add_stability = 0.1
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -16090,6 +16149,255 @@ focus = {
 				ideology = natpop_neo_feudalism_subtype
 			}
 			set_cosmetic_tag = BUL_hunnic
+			add_ideas = BUL_new_hun_horde
+			every_state = {
+				limit = {
+					is_core_of = RUS
+				}
+				BUL = { 
+					add_state_core = PREV 
+				}
+			}
+			every_state = {
+				limit = {
+					is_core_of = SIK
+				}
+				BUL = { 
+					add_state_core = PREV 
+				}
+			}
+			every_state = {
+				limit = {
+					is_core_of = ETS
+				}
+				BUL = { 
+					add_state_core = PREV 
+				}
+			}
+			every_state = {
+				limit = {
+					is_core_of = KUM
+				}
+				BUL = { 
+					add_state_core = PREV 
+				}
+			}
+			every_state = {
+				limit = {
+					is_core_of = FNG
+				}
+				BUL = { 
+					add_state_core = PREV 
+				}
+			}
+			every_state = {
+				limit = {
+					is_core_of = TRM
+				}
+				BUL = { 
+					add_state_core = PREV 
+				}
+			}
+			every_state = {
+				limit = {
+					is_core_of = ALO
+				}
+				BUL = { 
+					add_state_core = PREV 
+				}
+			}
+			every_state = {
+				limit = {
+					is_core_of = XSM
+				}
+				BUL = { 
+					add_state_core = PREV 
+				}
+			}
+			every_state = {
+				limit = {
+					is_core_of = DKB
+				}
+				BUL = { 
+					add_state_core = PREV 
+				}
+			}
+			every_state = {
+				limit = {
+					is_core_of = KUB
+				}
+				BUL = { 
+					add_state_core = PREV 
+				}
+			}
+			every_state = {
+				limit = {
+					is_core_of = MTR
+				}
+				BUL = { 
+					add_state_core = PREV 
+				}
+			}
+			every_state = {
+				limit = {
+					is_core_of = KLY
+				}
+				BUL = { 
+					add_state_core = PREV 
+				}
+			}
+			every_state = {
+				limit = {
+					is_core_of = EST
+				}
+				BUL = { 
+					add_state_core = PREV 
+				}
+			}
+			every_state = {
+				limit = {
+					is_core_of = LAT
+				}
+				BUL = { 
+					add_state_core = PREV 
+				}
+			}
+			every_state = {
+				limit = {
+					is_core_of = LIT
+				}
+				BUL = { 
+					add_state_core = PREV 
+				}
+			}
+			every_state = {
+				limit = {
+					is_core_of = BAT
+				}
+				BUL = { 
+					add_state_core = PREV 
+				}
+			}
+			every_state = {
+				limit = {
+					is_core_of = WHR
+				}
+				BUL = { 
+					add_state_core = PREV 
+				}
+			}
+			every_state = {
+				limit = {
+					is_core_of = UKR
+				}
+				BUL = { 
+					add_state_core = PREV 
+				}
+			}
+			every_state = {
+				limit = {
+					is_core_of = POL
+				}
+				BUL = { 
+					add_state_core = PREV 
+				}
+			}
+			every_state = {
+				limit = {
+					is_core_of = GER
+				}
+				BUL = { 
+					add_state_core = PREV 
+				}
+			}
+			every_state = {
+				limit = {
+					is_core_of = GAL
+				}
+				BUL = { 
+					add_state_core = PREV 
+				}
+			}
+			every_state = {
+				limit = {
+					is_core_of = ROM
+				}
+				BUL = { 
+					add_state_core = PREV 
+				}
+			}
+			every_state = {
+				limit = {
+					is_core_of = HUN
+				}
+				BUL = { 
+					add_state_core = PREV 
+				}
+			}
+			every_state = {
+				limit = {
+					is_core_of = AUS
+				}
+				BUL = { 
+					add_state_core = PREV 
+				}
+			}
+			every_state = {
+				limit = {
+					is_core_of = CZE
+				}
+				BUL = { 
+					add_state_core = PREV 
+				}
+			}
+			every_state = {
+				limit = {
+					is_core_of = DEN
+				}
+				BUL = { 
+					add_state_core = PREV 
+				}
+			}
+			every_state = {
+				limit = {
+					is_core_of = TRK
+				}
+				BUL = { 
+					add_state_core = PREV 
+				}
+			}
+			every_state = {
+				limit = {
+					is_core_of = MON
+				}
+				BUL = { 
+					add_state_core = PREV 
+				}
+			}
+			every_state = {
+				limit = {
+					is_core_of = KHI
+				}
+				BUL = { 
+					add_state_core = PREV 
+				}
+			}
+			every_state = {
+				limit = {
+					is_core_of = KYR
+				}
+				BUL = { 
+					add_state_core = PREV 
+				}
+			}
+			every_state = {
+				limit = {
+					is_core_of = UZB
+				}
+				BUL = { 
+					add_state_core = PREV 
+				}
+			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -16106,9 +16414,13 @@ focus = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BUL_young_officers"
-			
-			add_ideas = BUL_legionary_revolution
-			
+			add_popularity = {
+				ideology = national_populist
+				popularity = 0.1
+			}
+			add_stability = 0.1
+			add_war_support = 0.1
+			add_political_power = 100
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -16125,9 +16437,7 @@ focus = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BUL_young_officers"
-			
-			add_ideas = BUL_legionary_revolution
-			
+			add_ideas = BUL_freemasons
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -16144,9 +16454,14 @@ focus = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BUL_young_officers"
-			
-			add_ideas = BUL_legionary_revolution
-			
+			add_one_random_military_factory = yes
+			add_one_random_military_factory = yes
+			add_one_random_military_factory = yes
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 2000
+				producer = BUL
+			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -16161,11 +16476,15 @@ focus = {
 		prerequisite = {
 			focus = BUL_natpop
 		}
+		available = {
+			has_country_flag = BUL_legion_victory
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BUL_young_officers"
-			
-			add_ideas = BUL_legionary_revolution
-			
+			swap_ideas = {
+				remove_idea = BUL_legion_start
+				add_idea = BUL_legionary_revolution
+			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -16205,20 +16524,11 @@ focus = {
 		will_lead_to_war_with = SER
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BUL_macedonia_intervention"
-			SER_IMRO_disable_rebellion = yes
 			declare_war_on = {
 				target = SER
 				type = annex_everything
 			}
-			annex_country = {
-				target = MAC
-				transfer_troops = no
-			}
-			MAC = { MAC_ivan_mihajlov = { set_nationality = ROOT } }
-			SER = { country_event = serbia.310 }
-			country_event = bulgaria.53
-			custom_effect_tooltip = BUL_macedonia_intervention_tt
-			clear_variable = BUL_Legion_AI_attack_Var
+			
 		}
 	}
 
@@ -16284,7 +16594,7 @@ focus = {
 				amount = 2500
 				producer = BUL
 			}
-			BUL_AI_increase_legion_war_chance = yes
+			add_ideas = BUL_mass_remilitarization
 		}
 	}
 
@@ -16416,7 +16726,6 @@ focus = {
 					}
 				}
 			}
-			BUL_AI_increase_legion_war_chance = yes
 		}
 	}
 
@@ -16493,9 +16802,9 @@ focus = {
 				ideology = national_populist
 				popularity = 0.1
 			}
-			add_stability = -0.1
-			BUL_reduce_national_catastrophe = yes
-			BUL_AI_increase_legion_war_chance = yes
+			add_stability = 0.1
+			add_war_support = 0.1
+			add_political_power = 100
 		}
 	}
 
@@ -16522,7 +16831,7 @@ focus = {
 			add_stability = -0.1
 			add_one_random_military_factory = yes
 			add_one_random_military_factory = yes
-			BUL_AI_increase_legion_war_chance = yes
+			add_ideas = BUL_primitive_resource_accumulation
 		}
 	}
 
@@ -16545,7 +16854,7 @@ focus = {
 		ai_will_do = { factor = 70 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BUL_unleash_bulgarianness"
-			
+			add_ideas = BUL_unleash_bulgarianness
 			add_political_power = 100
 			add_manpower = 10000
 		}
@@ -16577,7 +16886,7 @@ focus = {
 				remove_idea = BUL_legionary_economics
 				add_idea = BUL_legionary_economics_2
 			}
-			BUL_AI_increase_legion_war_chance = yes
+			add_ideas = BUL_society_ceaseless_war
 		}
 	}
 
@@ -16649,7 +16958,7 @@ focus = {
 				remove_idea = BUL_legionary_revolution_2
 				add_idea = BUL_legionary_revolution_3
 			}
-			BUL_AI_increase_legion_war_chance = yes
+
 		}
 	}
 
@@ -16679,7 +16988,7 @@ focus = {
 		ai_will_do = { factor = 70 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BUL_abolish_monarchy"
-			remove_ideas = BUL_royalist_resistance
+			add_ideas = BUL_legionary_state
 			add_stability = 0.1
 			
 		}
@@ -16712,7 +17021,7 @@ focus = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BUL_tsar_kyril"
 			set_cosmetic_tag = BUL_legionary_tsardom
-			
+			add_ideas = BUL_legionary_kingdom
 			create_country_leader = {
 				name = "基里尔一世"
 				picture = "gfx/leaders/BUL/Portrait_BUL_Prince_Kyril.png"
@@ -19870,6 +20179,9 @@ focus = {
 		prerequisite = {
 			focus = BUL_patrioc_socdem
 		}
+		available = {
+			has_completed_focus = BUL_puppet_parlament
+		}
 		completion_reward = {
 			swap_ideas = {
 				remove_idea = BUL_da3
@@ -20164,6 +20476,9 @@ focus = {
 		prerequisite = {
 			focus = BUL_absolutist_support
 		}
+		available = {
+			has_completed_focus = BUL_de_socialize_union
+		}
 		completion_reward = {
 			swap_ideas = {
 				remove_idea = BUL_psm3
@@ -20204,6 +20519,12 @@ focus = {
 		}
 		completion_reward = {
 			custom_effect_tooltip = tooltip_focus_unlocked_by_event
+			hidden_effect = {
+				country_event = {
+					id = bulgaria_foreign_events.15
+					days = 1
+				}
+			}
 		}
 	}
 	focus = {
@@ -20272,6 +20593,9 @@ focus = {
 		prerequisite = {
 			focus = BUL_imro
 		}
+		available = {
+			has_government = syndicalist
+		}
 		completion_reward = {
 			add_political_power = 100
 			add_stability = 0.1
@@ -20288,6 +20612,9 @@ focus = {
 		prerequisite = {
 			focus = BUL_imro
 		}
+		available = {
+			has_government = national_populist
+		}
 		completion_reward = {
 			add_political_power = 100
 			add_stability = 0.1
@@ -20303,6 +20630,9 @@ focus = {
 		y = 1
 		prerequisite = {
 			focus = BUL_imro
+		}
+		available = {
+			has_government = paternal_autocrat
 		}
 		completion_reward = {
 			add_political_power = 100
@@ -20816,6 +21146,9 @@ focus = {
 		y = 1
 		prerequisite = {
 			focus = BUL_imro
+		}
+		available = {
+			has_government = totalist
 		}
 		completion_reward = {
 			add_political_power = 100
@@ -23549,6 +23882,7 @@ focus = {
 				country_event = serbia.23
 			}
 			set_variable = { imro_influence = 4 }
+			unlock_decision_tooltip = BUL_IMRO_decision
 		}
 	}
 
@@ -23688,6 +24022,9 @@ focus = {
 				}
 				add_core_of = BUL
 			}
+			add_state_core = 340
+			add_state_core = 341
+			add_state_core = 773
 		}
 	}
 	focus = {
@@ -23724,7 +24061,55 @@ focus = {
 		}
 		every_state = {
 			limit = {
+				is_core_of = SLO
+			}
+			BUL = { 
+				add_state_core = PREV 
+			}
+		}
+		every_state = {
+			limit = {
+				is_core_of = BOS
+			}
+			BUL = { 
+				add_state_core = PREV 
+			}
+		}
+		every_state = {
+			limit = {
+				is_core_of = ALB
+			}
+			BUL = { 
+				add_state_core = PREV 
+			}
+		}
+		every_state = {
+			limit = {
+				is_core_of = MNT
+			}
+			BUL = { 
+				add_state_core = PREV 
+			}
+		}
+		every_state = {
+			limit = {
 				is_core_of = HUN
+			}
+			BUL = { 
+				add_state_core = PREV 
+			}
+		}
+		every_state = {
+			limit = {
+				is_core_of = CRO
+			}
+			BUL = { 
+				add_state_core = PREV 
+			}
+		}
+		every_state = {
+			limit = {
+				is_core_of = SER
 			}
 			BUL = { 
 				add_state_core = PREV 

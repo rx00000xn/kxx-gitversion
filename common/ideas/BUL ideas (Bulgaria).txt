@@ -1056,15 +1056,15 @@ ideas = {
 		}
 
 		#Natpop ideas
-		BUL_royalist_resistance = {
+		BUL_legion_start = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_royalist_resistance" }
 			picture = ast_abandon_the_westminster_system
 			allowed = { always = no }
-			available = {
-				
-			}
+			name = "民族革命"
 			modifier = {
-				stability_weekly = -0.003
+				conscription = 0.02
+				training_time_army_factor = -0.15
+				stability_weekly = 0.003
 			}
 		}
 		BUL_legionary_revolution = {
@@ -1072,8 +1072,10 @@ ideas = {
 			picture = BRG_Legionary_Struggle
 			allowed = { always = no }
 			modifier = {
-				conscription = 0.02
+				conscription = 0.03
 				training_time_army_factor = -0.15
+				army_morale_factor = 0.15
+				stability_weekly = 0.003
 			}
 		}
 		BUL_legionary_revolution_2 = {
@@ -1082,9 +1084,15 @@ ideas = {
 			picture = BRG_Legionary_Struggle
 			allowed = { always = no }
 			modifier = {
-				conscription = 0.02
+				conscription = 0.03
 				training_time_army_factor = -0.15
-				army_morale_factor = 0.1
+				army_morale_factor = 0.15
+				stability_weekly = 0.003
+				army_org_factor = 0.1
+				experience_loss_factor = -0.1
+				conscription_factor = 0.15
+				breakthrough_factor = 0.1
+				recon_factor = 0.1
 			}
 		}
 		BUL_legionary_revolution_3 = {
@@ -1094,8 +1102,14 @@ ideas = {
 			allowed = { always = no }
 			modifier = {
 				conscription = 0.03
-				training_time_army_factor = -0.15
+				training_time_army_factor = -0.2
 				army_morale_factor = 0.15
+				stability_weekly = 0.003
+				army_org_factor = 0.15
+				experience_loss_factor = -0.15
+				conscription_factor = 0.2
+				breakthrough_factor = 0.15
+				recon_factor = 0.15
 			}
 		}
 		BUL_legionary_economics = {
@@ -1103,8 +1117,10 @@ ideas = {
 			picture = bul_nationalized_industry
 			allowed = { always = no }
 			modifier = {
-				production_speed_arms_factory_factor = 0.1
+				production_speed_arms_factory_factor = 0.2
 				production_factory_start_efficiency_factor = 0.05
+				conscription_factor = 0.1
+				resistance_target = -0.05
 			}
 		}
 		BUL_legionary_economics_2 = {
@@ -1115,7 +1131,12 @@ ideas = {
 			modifier = {
 				production_speed_arms_factory_factor = 0.2
 				production_factory_start_efficiency_factor = 0.05
-				conscription_factor = 0.05
+				conscription_factor = 0.1
+				resistance_target = -0.05
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
 			}
 		}
 		BUL_legionary_economics_3 = {
@@ -1124,13 +1145,390 @@ ideas = {
 			picture = bul_nationalized_industry
 			allowed = { always = no }
 			modifier = {
-				production_speed_arms_factory_factor = 0.2
-				production_factory_start_efficiency_factor = 0.05
+				production_speed_arms_factory_factor = 0.25
+				production_factory_start_efficiency_factor = 0.15
 				conscription_factor = 0.1
-				resistance_target = -0.05
+				resistance_target = -0.1
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.15
 			}
 		}
-
+		BUL_primitive_resource_accumulation = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_legionary_economics_3" }
+			picture = slave_economy
+			allowed = { always = no }
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				global_building_slots_factor = 0.1
+				global_building_slots = 1
+				consumer_goods_expected_value = -0.15
+			}
+		}
+		BUL_society_ceaseless_war = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_legionary_economics_3" }
+			picture = SER_Warrior_nation
+			allowed = { always = no }
+			modifier = {
+				army_speed_factor = 0.1
+				attrition = -0.1
+				army_infantry_attack_factor = 0.15
+				army_infantry_defence_factor = 0.15
+			}
+		}
+		BUL_unleash_bulgarianness = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_legionary_economics_3" }
+			picture = bul_the_fate_of_the_balkans
+			allowed = { always = no }
+			modifier = {
+				planning_speed = 0.15
+				max_planning = 0.15
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+			}
+		}
+		BUL_mass_remilitarization = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_legionary_economics_3" }
+			picture = bul_bulgarian_irredentism
+			allowed = { always = no }
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				production_speed_arms_factory_factor = 0.12
+				industrial_capacity_factory = 0.1
+				consumer_goods_factor = -0.15
+			}
+		}
+		BUL_legionary_state = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_legionary_economics_3" }
+			picture = Legionary_values
+			name = "民族军团国"
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = 0.15
+				stability_factor = 0.1
+				national_populist_drift = 0.05
+				conscription = 0.02
+			}
+		}
+		BUL_legionary_kingdom = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_legionary_economics_3" }
+			picture = Legionary_values
+			name = "民族军团沙皇国"
+			allowed = { always = no }
+			modifier = {
+				political_power_factor = 0.1
+				war_support_factor = 0.1
+				national_populist_drift = 0.05
+				industrial_capacity_factory = 0.1
+			}
+		}
+		BUL_ratnik_revolution = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_royalist_resistance" }
+			picture = bul_ratniks
+			name = "拉特尼克革命"
+			modifier = {
+				conscription = 0.02
+				training_time_army_factor = -0.3
+				stability_weekly = 0.003
+				conscription_factor = 0.2
+			}
+		}
+		BUL_ratnik_revolution2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_royalist_resistance" }
+			picture = bul_ratniks
+			name = "拉特尼克革命"
+			modifier = {
+				conscription = 0.02
+				training_time_army_factor = -0.3
+				stability_weekly = 0.003
+				conscription_factor = 0.2
+				army_strength_factor = 0.1
+				army_org_factor = 0.1
+				army_infantry_attack_factor = 0.1
+				army_infantry_defence_factor = 0.1
+			}
+		}
+		BUL_ratnik_revolution3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_royalist_resistance" }
+			picture = bul_ratniks
+			name = "拉特尼克革命"
+			modifier = {
+				conscription = 0.02
+				training_time_army_factor = -0.3
+				stability_weekly = 0.005
+				conscription_factor = 0.2
+				army_strength_factor = 0.15
+				army_org_factor = 0.15
+				army_infantry_attack_factor = 0.15
+				army_infantry_defence_factor = 0.15
+			}
+		}
+		BUL_ratnik_economy = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_royalist_resistance" }
+			picture = KTG_Industrial_Crisis_Factories
+			name = "战争经济"
+			modifier = {
+				conscription = 0.02
+				production_factory_start_efficiency_factor = 0.1
+				line_change_production_efficiency_factor = 0.1
+				resistance_target = -0.1
+			}
+		}
+		BUL_ratnik_economy2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_royalist_resistance" }
+			picture = KTG_Industrial_Crisis_Factories
+			name = "战争经济"
+			modifier = {
+				conscription = 0.02
+				production_factory_start_efficiency_factor = 0.1
+				line_change_production_efficiency_factor = 0.1
+				resistance_target = -0.1
+				industrial_capacity_factory = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				production_lack_of_resource_penalty_factor = -0.1
+			}
+		}
+		BUL_ratnik_economy3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_royalist_resistance" }
+			picture = KTG_Industrial_Crisis_Factories
+			name = "战争经济"
+			modifier = {
+				conscription = 0.02
+				production_factory_start_efficiency_factor = 0.15
+				line_change_production_efficiency_factor = 0.15
+				resistance_target = -0.1
+				industrial_capacity_factory = 0.1
+				production_factory_max_efficiency_factor = 0.15
+				production_factory_efficiency_gain_factor = 0.15
+				production_lack_of_resource_penalty_factor = -0.15
+			}
+		}
+		BUL_agrarian_commune_corportism = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_legionary_economics_3" }
+			picture = SER_corporatism
+			allowed = { always = no }
+			modifier = {
+				global_building_slots = 2
+				global_building_slots_factor = 0.2
+				consumer_goods_expected_value = -0.1
+				consumer_goods_factor = -0.1
+			}
+		}
+		BUL_a_strong_hand = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_legionary_economics_3" }
+			picture = generic_strong_chairman
+			allowed = { always = no }
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				local_resources_factor = 0.15
+				army_org_factor = 0.1
+				army_morale_factor = 0.1
+			}
+		}
+		BUL_freemasons = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_legionary_economics_3" }
+			picture = generic_abolished_parliament
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = 0.1
+				production_speed_industrial_complex_factor = 0.1
+				research_speed_factor = 0.1
+				monthly_population = 0.5
+			}
+		}
+		BUL_ratnik_state = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_legionary_economics_3" }
+			picture = generic_assassination
+			name = "战士之国"
+			allowed = { always = no }
+			modifier = {
+				political_power_cost = -0.1
+				war_support_factor = 0.1
+				supply_consumption_factor = -0.1
+				national_populist_drift = 0.05
+			}
+		}
+		BUL_new_hun_horde = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_legionary_economics_3" }
+			picture = MON_True_Khanate
+			allowed = { always = no }
+			name = "新匈奴部落"
+			modifier = {
+				cavalry_attack_factor = 0.3
+				cavalry_defence_factor = 0.3
+				army_speed_factor = 0.15
+				national_populist_drift = 0.05
+			}
+		}
+		BUL_populist_revolution = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_legionary_economics_3" }
+			picture = RUS_svobodniks
+			allowed = { always = no }
+			name = "民粹革命"
+			modifier = {
+				conscription = 0.02
+				training_time_army_factor = -0.15
+				stability_weekly = 0.005
+				supply_consumption_factor = -0.1
+			}
+		}
+		BUL_populist_revolution2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_legionary_economics_3" }
+			picture = RUS_svobodniks
+			allowed = { always = no }
+			name = "民粹革命"
+			modifier = {
+				conscription = 0.02
+				training_time_army_factor = -0.15
+				stability_weekly = 0.005
+				supply_consumption_factor = -0.1
+				supply_node_range = 0.1
+				no_supply_grace = 24
+				attrition = -0.1
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		BUL_populist_revolution3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_legionary_economics_3" }
+			picture = RUS_svobodniks
+			allowed = { always = no }
+			name = "民粹革命"
+			modifier = {
+				conscription = 0.02
+				training_time_army_factor = -0.15
+				stability_weekly = 0.005
+				supply_consumption_factor = -0.15
+				supply_node_range = 0.15
+				no_supply_grace = 48
+				attrition = -0.15
+				production_speed_buildings_factor = 0.15
+			}
+		}
+		BUL_populist_economy = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_royalist_resistance" }
+			picture = RUS_newrussia
+			name = "民粹经济"
+			modifier = {
+				global_building_slots = 1
+				global_building_slots_factor = 0.1
+				production_speed_arms_factory_factor = 0.15
+				production_speed_industrial_complex_factor = 0.15
+			}
+		}
+		BUL_populist_economy2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_royalist_resistance" }
+			picture = RUS_newrussia
+			name = "民粹经济"
+			modifier = {
+				global_building_slots = 1
+				global_building_slots_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_supply_node_factor = 0.1
+				production_speed_infrastructure_factor = 0.1
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+			}
+		}
+		BUL_populist_economy3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_royalist_resistance" }
+			picture = RUS_newrussia
+			name = "民粹经济"
+			modifier = {
+				global_building_slots = 2
+				global_building_slots_factor = 0.2
+				production_speed_arms_factory_factor = 0.15
+				production_speed_industrial_complex_factor = 0.15
+				production_speed_supply_node_factor = 0.1
+				production_speed_infrastructure_factor = 0.1
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.1
+			}
+		}
+		BUL_militarize_labor = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_royalist_resistance" }
+			picture = RUS_Rangers
+			modifier = {
+				army_infantry_attack_factor = 0.1
+				army_infantry_defence_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+			}
+		}
+		BUL_young_nationalists = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_royalist_resistance" }
+			picture = RUS_republican_guard
+			modifier = {
+				weekly_manpower = 500
+				conscription = 0.02
+				conscription_factor = 0.2
+				experience_loss_factor = -0.1
+			}
+		}
+		BUL_russian_supports = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_royalist_resistance" }
+			picture = RUS_the_russian_cause
+			modifier = {
+				army_armor_attack_factor = 0.1
+				army_armor_defence_factor = 0.1
+			}
+			equipment_bonus = {
+				armor = {
+					build_cost_ic = -0.1
+					reliability = 0.1
+					instant = yes
+				}
+			}
+		}
+		BUL_bulgarian_vozd = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_royalist_resistance" }
+			picture = RUS_pale_horse_idea
+			modifier = {
+				political_power_factor = 0.15
+				war_stability_factor = 0.25
+				national_populist_drift = 0.05
+				army_attack_factor = 0.1
+			}
+		}
+		BUL_russian_exile = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_royalist_resistance" }
+			picture = RUS_fighting_for_savinkov
+			modifier = {
+				army_armor_attack_factor = 0.1
+				army_armor_defence_factor = 0.1
+			}
+			equipment_bonus = {
+				armor = {
+					build_cost_ic = -0.1
+					reliability = 0.1
+					instant = yes
+				}
+				infantry_equipment = {
+					build_cost_ic = -0.1
+					reliability = 0.1
+					instant = yes
+				}
+				artillery_equipment = {
+					build_cost_ic = -0.1
+					reliability = 0.1
+					instant = yes
+				}
+			}
+			targeted_modifier = {
+				tag = RUS
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
+				breakthrough_bonus_against = 0.15
+			}
+			targeted_modifier = {
+				tag = TRM
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
+				breakthrough_bonus_against = 0.15
+			}
+		}
 		#FF ideas
 		BUL_royalist_resistance_worse = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_royalist_resistance_worse" }

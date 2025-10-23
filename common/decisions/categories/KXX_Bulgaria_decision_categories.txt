@@ -1,0 +1,12 @@
+
+BUL_IMRO_decision = {
+	icon = generic_propaganda
+	visible_when_empty = yes
+	allowed = {
+		tag = BUL
+	}
+	visible = {
+		tag = BUL
+		has_completed_focus = BUL_support_imro
+	}
+}

@@ -555,13 +555,7 @@ ideas = {
 		BUL_rebuilding_the_state_idea = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_rebuilding_the_state_idea"}
 			allowed = { always = no }
-			available = {
-				OR = {
-					has_government = social_democrat
-					has_government = market_liberal
-					has_government = social_conservative
-				}
-			}
+			
 			picture = WHR_anarchy_aftermath
 			modifier = {
 				political_power_cost = 0.35
@@ -573,13 +567,7 @@ ideas = {
 		BUL_rebuilding_the_state_idea2 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_rebuilding_the_state_idea2"}
 			allowed = { always = no }
-			available = {
-				OR = {
-					has_government = social_democrat
-					has_government = market_liberal
-					has_government = social_conservative
-				}
-			}
+			
 			picture = WHR_anarchy_aftermath
 			modifier = {
 				political_power_cost = 0.35
@@ -591,13 +579,7 @@ ideas = {
 		BUL_rebuilding_the_state_idea3 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_rebuilding_the_state_idea3"}
 			allowed = { always = no }
-			available = {
-				OR = {
-					has_government = social_democrat
-					has_government = market_liberal
-					has_government = social_conservative
-				}
-			}
+			
 			picture = WHR_anarchy_aftermath
 			modifier = {
 				political_power_cost = 0.35

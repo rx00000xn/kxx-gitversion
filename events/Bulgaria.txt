@@ -2295,7 +2295,7 @@ country_event = { #Government destabilisation
 
 		set_country_flag = BUL_broad_socialist_government
 
-		add_ideas = BUL_rebuilding_the_state_idea
+
 
 		remove_ideas = BUL_asserting_the_tsars_power_idea
 
@@ -2366,7 +2366,7 @@ country_event = { #Government destabilisation
 
 		set_country_flag = BUL_radical_democrat_government
 
-		add_ideas = BUL_rebuilding_the_state_idea
+
 
 		remove_ideas = BUL_asserting_the_tsars_power_idea
 
@@ -5685,7 +5685,7 @@ country_event = { #Anger against Agrarians
 			ruling_party = national_populist
 			elections_allowed = no
 		}
-		
+		set_country_flag = BUL_legionary_coup
 		increase_ruling_party_popularity_by_15 = yes
 			set_party_name = {
 				ideology = national_populist
@@ -7074,16 +7074,14 @@ country_event = { #agrians
 	}
 	option = { # yes
 		name = bulgaria_foreign_events.8.a
-		complete_national_focus = BUL_right_mandate
-		add_soclib_to_coalition = yes
 	}
 	option = { # yes
 		name = bulgaria_foreign_events.8.b
+		set_country_flag = BUL_banu_is_soclib
 		set_politics = {
 			ruling_party = social_liberal
 			elections_allowed = yes
 		}
-		complete_national_focus = BUL_left_mandate
 		create_country_leader = {
 			name = "迪米塔尔·基切夫"
 			picture = "gfx/leaders/BUL/Portrait_BUL_Dimitar_Gichev.png"
@@ -7102,6 +7100,7 @@ country_event = { #agrians
 			ruling_party = social_democrat
 			elections_allowed = yes
 		}
+		set_country_flag = BUL_banu_is_socdem
 		#complete_national_focus = BUL_left_mandate
 		create_country_leader = {
 			name = "科斯塔·托多罗夫"
@@ -7121,6 +7120,7 @@ country_event = { #agrians
 			ruling_party = authoritarian_democrat
 			elections_allowed = yes
 		}
+		set_country_flag = BUL_banu_is_authdem
 		#complete_national_focus = BUL_left_mandate
 		create_country_leader = {
 			name = "康斯坦丁·托莫夫"
@@ -7140,6 +7140,7 @@ country_event = { #agrians
 			ruling_party = market_liberal
 			elections_allowed = yes
 		}
+		set_country_flag = BUL_banu_is_marlib
 		#complete_national_focus = BUL_left_mandate
 		create_country_leader = {
 			name = "格奥尔基·马尔科夫"
@@ -7159,6 +7160,7 @@ country_event = { #agrians
 			ruling_party = radical_socialist
 			elections_allowed = yes
 		}
+		set_country_flag = BUL_banu_is_radsoc
 		#complete_national_focus = BUL_left_mandate
 		create_country_leader = {
 			name = "格奥尔基·特雷科夫"
@@ -7178,6 +7180,7 @@ country_event = { #agrians
 			ruling_party = totalist
 			elections_allowed = yes
 		}
+		set_country_flag = BUL_banu_is_tot
 		#complete_national_focus = BUL_left_mandate
 		create_country_leader = {
 			name = "米哈伊尔·吉诺夫斯基"
@@ -7306,7 +7309,6 @@ country_event = { #
 	fire_only_once = yes
 	option = { # yes
 		name = bulgaria_foreign_events.11.a
-		
 		create_country_leader = {
 			name = "佩塔尔·加布罗夫斯基"
 			picture = "gfx/leaders/BUL/Portrait_BUL_Petar_Gabrovski.png"
@@ -7319,6 +7321,7 @@ country_event = { #
 			name = BUL_ratniks_party
 		}
 		set_cosmetic_tag = BUL_ratnik
+		set_country_flag = BUL_ratnik_victory
 	}
 	option = { # yes
 		name = bulgaria_foreign_events.11.b
@@ -7334,10 +7337,13 @@ country_event = { #
 			name = BUL_savinkov_party
 		}
 		set_cosmetic_tag = BUL_savinkov
+		set_country_flag = BUL_populist_victory
 	}
 	option = { # yes
 		name = bulgaria_foreign_events.11.c
-		set_cosmetic_tag = BUL_legionary
+		set_cosmetic_tag = BUL_legionary	
+		set_country_flag = BUL_legion_victory
+		
 	}
 }
 country_event = { # 
