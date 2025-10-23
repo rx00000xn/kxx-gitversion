@@ -324,6 +324,11 @@ country_event = { #Tōhōkai Take Over in Japan
 			expire = "1965.1.1"
 			ideology = natsynd_subtype
 		}
+		set_party_name = {
+			ideology = totalist
+			long_name = "东方会"
+			name = "东方会"
+		}		
 		hidden_effect = {
 			drop_cosmetic_tag = yes
 			set_cosmetic_tag = JAP_state
@@ -449,6 +454,11 @@ country_event = { #Syndicalist Socdem
 			expire = "1965.1.1"
 			ideology = natsynd_subtype
 			}
+		set_party_name = {
+			ideology = totalist
+			long_name = "东方会"
+			name = "东方会"
+		}			
 		create_country_leader = {
 			name = "永田铁山"
 			picture = "gfx/leaders/JAP/Portrait_JAP_Nagata_Tetsuzan.png"

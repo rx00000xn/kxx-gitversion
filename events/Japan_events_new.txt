@@ -376,6 +376,17 @@ country_event = { #Kokumin Domei Choices
 			election_frequency = 48
 			elections_allowed = yes
 		}
+		set_party_name = {
+			ideology = national_populist
+			long_name = "国民同盟"
+			name = "国民同盟"
+		}
+		create_country_leader = {
+			name = "中野正刚"
+			picture = "gfx/leaders/JAP/Portrait_JAP_Nakano_Seigo.png"
+			expire = "1965.1.1"
+			ideology = right_syndicalism_subtype
+		}		
 		add_popularity = {
 			ideology = national_populist
 			popularity = 0.3
@@ -3133,7 +3144,7 @@ country_event = { #leftist Election
 			picture = "gfx/leaders/JAP/Portrait_JAP_Nakano_Seigo.png"
 			expire = "1965.1.1"
 			ideology = natsynd_subtype
-		}
+		}		
 		set_politics = {
 			ruling_party = totalist
 			elections_allowed = no
