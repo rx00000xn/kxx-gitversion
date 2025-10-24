@@ -227,6 +227,19 @@ ideologies = {
 			jun_zheng_ji_quan_subtype = {can_be_randomly_selected = no} #军政极权主义
 			sorelian_marketism_subtype = {can_be_randomly_selected = no} #市场索雷尔主义
 
+			#印度重置
+			samyavada_subtype = { can_be_randomly_selected = no } #前进共产主义
+			hindu_maximism_subtype = { can_be_randomly_selected = no } #印式准则主义
+			tot_radical_humanism_subtype = { can_be_randomly_selected = no } #新人文主义
+			tot_khaksarism_subtype = { can_be_randomly_selected = no } #喀克萨主义
+			saffron_syndicalism_subtype = { can_be_randomly_selected = no } #藏红花工团主义
+			bagha_jatin_spirit_subtype = { can_be_randomly_selected = no } #巴加·贾廷精神
+			tot_self_respect_movement_subtype = { can_be_randomly_selected = no } #自尊运动
+			hindu_communism_subtype = { can_be_randomly_selected = no } #印度教共产主义
+			bapuwadi_subtype = { can_be_randomly_selected = no } #国父主义
+			martial_vedanta_subtype = { can_be_randomly_selected = no } #军事吠檀多
+			naxalism_subtype = { can_be_randomly_selected = no } #纳萨尔主义
+
 			#制作组彩蛋
 			Maximism_subtype = { can_be_randomly_selected = no }  #众生平等主义（制作组彩蛋）
 			Messiahism_subtype = { can_be_randomly_selected = no }  #弥赛亚情结（制作组彩蛋）
@@ -361,6 +374,14 @@ ideologies = {
 			#点
 			syn_islamic_communism_subtype = {can_be_randomly_selected = no} #伊斯兰马克思主义
 
+			#印度重置
+			chiro_bidroha_subtype = { can_be_randomly_selected = no } #永恒反叛
+			vedic_socialism_subtype = { can_be_randomly_selected = no } #吠陀社会主义
+			self_respect_movement_subtype = { can_be_randomly_selected = no } #自尊运动
+			syn_ambedkharism_subtype = { can_be_randomly_selected = no } #安贝德卡主义
+			syn_nehruism_subtype = { can_be_randomly_selected = no } #尼赫鲁主义
+			syn_theosophy_subtype = { can_be_randomly_selected = no } #神智学
+			sampoorna_kranti_subtype = { can_be_randomly_selected = no } #全面革命
 
 			#制作组彩蛋
 
@@ -556,7 +577,6 @@ ideologies = {
 			radsoc_boer_nationalism_subtype = {can_be_randomly_selected = no} #布尔民族主义
 			radsoc_sssp_subtype = { can_be_randomly_selected = no }  #科学特搜署
 			buddhist_anarchism_subtype = { can_be_randomly_selected = no }  #佛教无政府主义
-			vedas_socialism_subtype = { can_be_randomly_selected = no } #吠陀社会主义
 			esoteric_anarchism_subtype = { can_be_randomly_selected = no color = { 91 9 76 } }  #神秘无政府主义
 
 
@@ -569,6 +589,20 @@ ideologies = {
 			radsoc_datong_shu_thought_subtype = {can_be_randomly_selected = no} #大同书思想
 			mao_ze_dong_thought_subtype = {can_be_randomly_selected = no} #毛泽东思想
 			radsoc_new_democracy_subtype = {can_be_randomly_selected = no} #新民主主义
+
+			#印度重置
+			revolution_of_psyche_subtype = { can_be_randomly_selected = no } #心灵革命
+			integral_yoga_subtype = { can_be_randomly_selected = no } #整体瑜伽
+			radsoc_vedic_socialism_subtype = { can_be_randomly_selected = no } #吠陀社会主义
+			radsoc_composite_nationalism_subtype = { can_be_randomly_selected = no } #复合民族主义
+			radsoc_brahma_kumaris_subtype = { can_be_randomly_selected = no } #梵天·库玛丽
+			radsoc_transcendental_meditation_subtype = { can_be_randomly_selected = no } #超觉静坐
+			radsoc_vahinis_subtype = { can_be_randomly_selected = no } #思想溪流
+			radsoc_self_respect_movement_subtype = { can_be_randomly_selected = no } #自尊运动
+			radsoc_sikhism_subtype = { can_be_randomly_selected = no } #锡克教
+			ambedkharism_subtype = { can_be_randomly_selected = no } #安贝德卡主义
+			radical_humanism_subtype = { can_be_randomly_selected = no } #新人文主义
+			nehruism_subtype = { can_be_randomly_selected = no } #尼赫鲁主义
 
 			#制作组彩蛋
 
@@ -886,6 +920,11 @@ ideologies = {
 			soclib_lianshengism_subtype = {can_be_randomly_selected = no} #联省主义
 			soclib_lu_xun_thought_subtype = {can_be_randomly_selected = no} #鲁迅思想
 
+			#印度重置
+			soclib_gandhism_subtype = {can_be_randomly_selected = no} #甘地主义
+			soclib_composite_nationalism_subtype = {can_be_randomly_selected = no} #复合民族主义
+			prabodhon_subtype = {can_be_randomly_selected = no} #启蒙主义
+
 			#制作组彩蛋
 
 			#大乐队时代
@@ -999,6 +1038,8 @@ ideologies = {
 			#点
 			marlib_lianshengism_subtype = {can_be_randomly_selected = no} #联省主义
 
+			#印度重置
+			marlib_composite_nationalism_subtype = {can_be_randomly_selected = no } #复合民族主义
 
 			#制作组彩蛋
 			hayek_neoliberalism_subtype = {can_be_randomly_selected = no} #哈耶克新自由主义
@@ -1126,6 +1167,11 @@ ideologies = {
 			#点
 			traditional_tridemism_subtype = {can_be_randomly_selected = no} #传统三民主义
 			soccon_lianshengism_subtype = {can_be_randomly_selected = no} #联省主义	 
+
+			#印度重置 
+			soccon_gandhism_subtype = {can_be_randomly_selected = no } #甘地主义
+			composite_nationalism_subtype = {can_be_randomly_selected = no } #复合民族主义
+			soccon_integral_humanism_subtype = {can_be_randomly_selected = no } #整体人文主义
 
 			
 			#制作组彩蛋
@@ -1290,6 +1336,12 @@ ideologies = {
 			autdem_technocratic_tridemism_subtype = {can_be_randomly_selected = no} #技官三民主义
 			authdem_lianshengism_subtype = {can_be_randomly_selected = no} #联省主义
 			authdem_chiangism_subtype = {can_be_randomly_selected = no} #蒋介石思想
+
+			#印度重置
+			khaksarism_subtype = { can_be_randomly_selected = no } #喀克萨主义
+			authdem_hindutva_subtype = { can_be_randomly_selected = no } #印度教民族主义
+			integral_humanism_subtype = { can_be_randomly_selected = no } #整体人文主义
+			sikhism_subtype = { can_be_randomly_selected = no } #锡克教
 
 			#制作组彩蛋
 			Tao_Fuism_subtype = {can_be_randomly_selected = no} #七日来复（制作组彩蛋）
@@ -1474,6 +1526,8 @@ ideologies = {
 			pataut_yan_xishan_thought_subtype = {can_be_randomly_selected = no} #阎锡山思想
 			buddhist_autocrat_subtype = {can_be_randomly_selected = no} #佛教神权制
 
+			#印度重置
+			pataut_hindutva_subtype  = { can_be_randomly_selected = no } #印度教民族主义
 
 			#制作组彩蛋
 			hartmannism_subtype = { can_be_randomly_selected = no }  #哈特曼主义（制作组彩蛋）
@@ -1754,6 +1808,17 @@ ideologies = {
 			CN_integralism_group_subtype = {can_be_randomly_selected = no} #中式整合主义
 			islamic_three_subtype = {can_be_randomly_selected = no} #伊斯兰三民主义
 			islamic_chang_subtype = {can_be_randomly_selected = no} #伊斯兰长生天主义
+
+			#印度重置
+			hindu_revivalism_subtype = { can_be_randomly_selected = no } #印度教复兴主义
+			aghori_yoga_subtype = { can_be_randomly_selected = no } #阿格里瑜伽
+			hindu_rashtra_subtype = { can_be_randomly_selected = no } #印度教国家
+			brahma_kumaris_subtype = { can_be_randomly_selected = no } #梵天·库玛丽
+			transcendental_meditation_subtype = { can_be_randomly_selected = no } #超觉静坐
+			thugee_cult_subtype = { can_be_randomly_selected = no } #图基教
+			natpop_sikhism_subtype = { can_be_randomly_selected = no } #锡克教
+			indigenous_ariosophy_subtype = { can_be_randomly_selected = no } #本土雅利安秘学
+			vahinis_subtype = { can_be_randomly_selected = no } #思想溪流
 
 			#制作组彩蛋
 			genshitism_subtype = { can_be_randomly_selected = no color = { 248 248 248 } }  #原神启动（制作组彩蛋）
