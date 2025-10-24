@@ -1,0 +1,4670 @@
+focus_tree = {
+	id = CEY_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = CEY
+		}
+	}
+
+    default = no
+	continuous_focus_position = { x = 100 y = 2500 }
+
+    #殖民政府
+
+focus = {
+    id = CEY_Pearl_of_the_Indian_Ocean
+    icon = GFX_ourcurrentproblems
+   
+    x = 15
+    y = 1
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_Connections_with_the_home_country
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Pearl_of_the_Indian_Ocean
+    prerequisite = { focus = CEY_Pearl_of_the_Indian_Ocean }
+    x = -2
+    y = 1
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_Looking_towards_the_subcontinent
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Pearl_of_the_Indian_Ocean
+        prerequisite = { focus = CEY_Pearl_of_the_Indian_Ocean }
+    x = 0
+    y = 1
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_Suspicious_movements_in_the_dark
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Pearl_of_the_Indian_Ocean
+    prerequisite = { focus = CEY_Pearl_of_the_Indian_Ocean }
+    x = 2
+    y = 1
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_Another_year_of_peace_and_quiet
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Pearl_of_the_Indian_Ocean
+    prerequisite = { focus = CEY_Looking_towards_the_subcontinent }
+    prerequisite = { focus = CEY_Suspicious_movements_in_the_dark }
+    prerequisite = { focus = CEY_Connections_with_the_home_country }
+    x = 0
+    y = 2
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_Disaster_is_imminent
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Pearl_of_the_Indian_Ocean
+    prerequisite = { focus = CEY_Another_year_of_peace_and_quiet }
+    x = 0
+    y = 3
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_Running_short_of_money
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Pearl_of_the_Indian_Ocean
+    prerequisite = { focus = CEY_Disaster_is_imminent }
+    x = -1
+    y = 4
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_People_are_about_to_make_a_fuss
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Pearl_of_the_Indian_Ocean
+    prerequisite = { focus = CEY_Disaster_is_imminent }
+    x = 1
+    y = 4
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_Emergency_meeting
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Pearl_of_the_Indian_Ocean
+    prerequisite = { focus = CEY_People_are_about_to_make_a_fuss }
+    prerequisite = { focus = CEY_Running_short_of_money }
+    x = 0
+    y = 5
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_Temporary_levy_of_taxes
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Pearl_of_the_Indian_Ocean
+    prerequisite = { focus = CEY_Running_short_of_money }
+    x = -2
+    y = 5
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_Suppressing_the_masses
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Pearl_of_the_Indian_Ocean
+    prerequisite = { focus = CEY_People_are_about_to_make_a_fuss }
+    x = 2
+    y = 5
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_What_about_Ceylon 
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Pearl_of_the_Indian_Ocean
+    prerequisite = { focus = CEY_Suppressing_the_masses }
+    prerequisite = { focus = CEY_Temporary_levy_of_taxes }
+    prerequisite = { focus = CEY_Emergency_meeting }
+    x = 0
+    y = 6
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_I_control_my_own_destiny
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Pearl_of_the_Indian_Ocean
+    prerequisite = { focus = CEY_What_about_Ceylon }
+    x = 4
+    y = 7
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_I_control_my_own_destiny_1
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Pearl_of_the_Indian_Ocean
+    prerequisite = { focus = CEY_I_control_my_own_destiny }
+    x = 3
+    y = 8
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_I_control_my_own_destiny_2
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Pearl_of_the_Indian_Ocean
+    prerequisite = { focus = CEY_I_control_my_own_destiny }
+    x = 5
+    y = 8
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_I_control_my_own_destiny_3
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Pearl_of_the_Indian_Ocean
+    prerequisite = { focus = CEY_I_control_my_own_destiny_2 }
+    prerequisite = { focus = CEY_I_control_my_own_destiny_1 }
+    x = 4
+    y = 9
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_Only_Heaven_knows 
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Pearl_of_the_Indian_Ocean
+    prerequisite = { focus = CEY_What_about_Ceylon }
+    x = -4
+    y = 7
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_Wilhelm_Karl_Keppler_win
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Pearl_of_the_Indian_Ocean
+    prerequisite = { focus = CEY_Only_Heaven_knows }
+    x = -6
+    y = 8
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_Adam_von_Trott_zu_Solz_win 
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Pearl_of_the_Indian_Ocean
+    prerequisite = { focus = CEY_Only_Heaven_knows }
+    x = -4
+    y = 8
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_Elite_Territory 
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Pearl_of_the_Indian_Ocean
+    prerequisite = { focus = CEY_Adam_von_Trott_zu_Solz_win }
+    x = -3
+    y = 9
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_governance_of_the_benevolent 
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Pearl_of_the_Indian_Ocean
+    prerequisite = { focus = CEY_Adam_von_Trott_zu_Solz_win }
+    x = -5
+    y = 9
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_For_the_Freedom_of_All 
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Pearl_of_the_Indian_Ocean
+    prerequisite = { focus = CEY_The_governance_of_the_benevolent }
+    prerequisite = { focus = CEY_Elite_Territory }
+    x = -4
+    y = 10
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_common_prosperity_of_nations 
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Pearl_of_the_Indian_Ocean
+    prerequisite = { focus = CEY_Efficiency_comes_first }
+    prerequisite = { focus = CEY_For_the_Freedom_of_All }
+    prerequisite = { focus = CEY_Expand_the_religious_order }
+    x = -4
+    y = 11
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_common_prosperity_of_nations_1
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Pearl_of_the_Indian_Ocean
+    prerequisite = { focus = CEY_The_common_prosperity_of_nations }
+    x = -5
+    y = 12
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_common_prosperity_of_nations_2
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Pearl_of_the_Indian_Ocean
+    prerequisite = { focus = CEY_The_common_prosperity_of_nations }
+    x = -3
+    y = 12
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_common_prosperity_of_nations_3
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Pearl_of_the_Indian_Ocean
+    prerequisite = { focus = CEY_The_common_prosperity_of_nations_1 }
+    prerequisite = { focus = CEY_The_common_prosperity_of_nations_2 }
+    x = -4
+    y = 13
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_Jakob_Wilhelm_Hauer_win 
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Pearl_of_the_Indian_Ocean
+    prerequisite = { focus = CEY_Only_Heaven_knows }
+    x = -2
+    y = 8
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_Introducing_German_funded_enterprises
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Pearl_of_the_Indian_Ocean
+    prerequisite = { focus = CEY_Wilhelm_Karl_Keppler_win }
+    x = -7
+    y = 9
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_Enterprise_subsidies 
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Pearl_of_the_Indian_Ocean
+    prerequisite = { focus = CEY_Introducing_German_funded_enterprises }
+    x = -8
+    y = 10
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_Efficiency_comes_first 
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Pearl_of_the_Indian_Ocean
+    prerequisite = { 
+        focus = CEY_Introducing_German_funded_enterprises
+        focus = CEY_The_governance_of_the_benevolent
+         }
+    x = -6
+    y = 10
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_Flexible_exploitation 
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Pearl_of_the_Indian_Ocean
+    prerequisite = { focus = CEY_Introducing_German_funded_enterprises }
+    x = -10
+    y = 10
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_Country_of_Investors 
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Pearl_of_the_Indian_Ocean
+    prerequisite = { focus = CEY_Efficiency_comes_first }
+    prerequisite = { focus = CEY_Enterprise_subsidies }
+    prerequisite = { focus = CEY_Flexible_exploitation }
+    x = -9
+    y = 11
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_Country_of_Investors_1
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Pearl_of_the_Indian_Ocean
+    prerequisite = { focus = CEY_The_Country_of_Investors }
+    x = -8
+    y = 12
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_Country_of_Investors_2
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Pearl_of_the_Indian_Ocean
+    prerequisite = { focus = CEY_The_Country_of_Investors }
+    x = -10
+    y = 12
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_Country_of_Investors_3
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Pearl_of_the_Indian_Ocean
+    prerequisite = { focus = CEY_The_Country_of_Investors_1 }
+    prerequisite = { focus = CEY_The_Country_of_Investors_2 }
+    x = -9
+    y = 13
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_Our_identity  
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Pearl_of_the_Indian_Ocean
+    prerequisite = { focus = CEY_Jakob_Wilhelm_Hauer_win }
+    x = -1
+    y = 9
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_Expand_the_religious_order 
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Pearl_of_the_Indian_Ocean
+    prerequisite = { 
+        focus = CEY_Our_identity
+        focus = CEY_Elite_Territory
+         }
+    x = -2
+    y = 10
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_Voluntarism 
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Pearl_of_the_Indian_Ocean
+    prerequisite = { focus = CEY_Our_identity }
+    x = 0
+    y = 10
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_Germano_Aryan_ideology 
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Pearl_of_the_Indian_Ocean
+    prerequisite = { focus = CEY_Our_identity }
+    x = 2
+    y = 10
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_Call_of_Kin  
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Pearl_of_the_Indian_Ocean
+    prerequisite = { focus = CEY_Expand_the_religious_order }
+    prerequisite = { focus = CEY_Voluntarism }
+    prerequisite = { focus = CEY_Germano_Aryan_ideology }
+    x = 1
+    y = 11
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_Call_of_Kin_1
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Pearl_of_the_Indian_Ocean
+    prerequisite = { focus = CEY_The_Call_of_Kin }
+    x = 2
+    y = 12
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_Call_of_Kin_2
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Pearl_of_the_Indian_Ocean
+    prerequisite = { focus = CEY_The_Call_of_Kin }
+    x = 0
+    y = 12
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_Call_of_Kin_3
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Pearl_of_the_Indian_Ocean
+    prerequisite = { focus = CEY_The_Call_of_Kin_1 }
+    prerequisite = { focus = CEY_The_Call_of_Kin_2 }
+    x = 1
+    y = 13
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+#独立
+
+focus = {
+    id = CEY_Ceylon_freedom
+    icon = GFX_ourcurrentproblems
+   
+    x = 33
+    y = 1
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = { has_country_flag = CEY_independence }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+#国民大会
+focus = {
+    id = CEY_The_Ceylon_National_Congress_wins
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Ceylon_freedom
+    prerequisite = { focus = CEY_Ceylon_freedom }
+    x = 0
+    y = 1
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_Ceylon_National_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_Ceylon_National_Congress_wins_1
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_Ceylon_National_Congress_wins
+    prerequisite = { focus = CEY_The_Ceylon_National_Congress_wins }
+    x = -1
+    y = 1
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_Ceylon_National_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_Ceylon_National_Congress_wins_2
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_Ceylon_National_Congress_wins
+    prerequisite = { focus = CEY_The_Ceylon_National_Congress_wins }
+    x = 1
+    y = 1
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_Ceylon_National_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_Ceylon_National_Congress_wins_3
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_Ceylon_National_Congress_wins
+    prerequisite = { focus = CEY_The_Ceylon_National_Congress_wins_1 }
+    prerequisite = { focus = CEY_The_Ceylon_National_Congress_wins_2 }
+    mutually_exclusive = { 
+        focus = CEY_The_Ceylon_National_Congress_wins_4
+        focus = CEY_The_Ceylon_National_Congress_wins_5
+    }
+    x = 0
+    y = 2
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_Ceylon_National_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_Ceylon_National_Congress_wins_31
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_Ceylon_National_Congress_wins_3
+    prerequisite = { focus = CEY_The_Ceylon_National_Congress_wins_3 }
+    x = -2
+    y = 1
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_Ceylon_National_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_Ceylon_National_Congress_wins_33
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_Ceylon_National_Congress_wins_3
+    prerequisite = { focus = CEY_The_Ceylon_National_Congress_wins_3 }
+    x = 2
+    y = 1
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_Ceylon_National_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_Ceylon_National_Congress_wins_32
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_Ceylon_National_Congress_wins_3
+    prerequisite = { focus = CEY_The_Ceylon_National_Congress_wins_3 }
+    x = 0
+    y = 1
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_Ceylon_National_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_Ceylon_National_Congress_wins_34
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_Ceylon_National_Congress_wins_3
+    prerequisite = { focus = CEY_The_Ceylon_National_Congress_wins_31 }
+    prerequisite = { focus = CEY_The_Ceylon_National_Congress_wins_32 }
+    x = -1
+    y = 2
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_Ceylon_National_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_Ceylon_National_Congress_wins_35
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_Ceylon_National_Congress_wins_3
+    prerequisite = { focus = CEY_The_Ceylon_National_Congress_wins_33 }
+    prerequisite = { focus = CEY_The_Ceylon_National_Congress_wins_32 }
+    x = 1
+    y = 2
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_Ceylon_National_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_Ceylon_National_Congress_wins_36
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_Ceylon_National_Congress_wins_3
+    prerequisite = { focus = CEY_The_Ceylon_National_Congress_wins_34 }
+    prerequisite = { focus = CEY_The_Ceylon_National_Congress_wins_35 }
+    x = 0
+    y = 3
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_Ceylon_National_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_Ceylon_National_Congress_wins_37
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_Ceylon_National_Congress_wins_3
+    prerequisite = { focus = CEY_The_Ceylon_National_Congress_wins_36 }
+    x = -1
+    y = 4
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_Ceylon_National_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_Ceylon_National_Congress_wins_38
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_Ceylon_National_Congress_wins_3
+    prerequisite = { focus = CEY_The_Ceylon_National_Congress_wins_36 }
+    x = 1
+    y = 4
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_Ceylon_National_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_Ceylon_National_Congress_wins_391
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_Ceylon_National_Congress_wins_3
+    prerequisite = { focus = CEY_The_Ceylon_National_Congress_wins_38 }
+    x = 1
+    y = 5
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_Ceylon_National_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_Ceylon_National_Congress_wins_392
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_Ceylon_National_Congress_wins_3
+    prerequisite = { focus = CEY_The_Ceylon_National_Congress_wins_37 }
+    x = -1
+    y = 5
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_Ceylon_National_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_Ceylon_National_Congress_wins_39
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_Ceylon_National_Congress_wins_3
+    prerequisite = { focus = CEY_The_Ceylon_National_Congress_wins_391 }
+    prerequisite = { focus = CEY_The_Ceylon_National_Congress_wins_392 }
+    x = 0
+    y = 6
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_Ceylon_National_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_Ceylon_National_Congress_wins_4
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_Ceylon_National_Congress_wins
+    prerequisite = { focus = CEY_The_Ceylon_National_Congress_wins_1 }
+    prerequisite = { focus = CEY_The_Ceylon_National_Congress_wins_2 }
+    mutually_exclusive = { 
+        focus = CEY_The_Ceylon_National_Congress_wins_3
+        focus = CEY_The_Ceylon_National_Congress_wins_5
+    }
+    x = -6
+    y = 2
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_Ceylon_National_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_Ceylon_National_Congress_wins_41
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_Ceylon_National_Congress_wins_4
+    prerequisite = { focus = CEY_The_Ceylon_National_Congress_wins_4 }
+    x = 0
+    y = 1
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_Ceylon_National_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_Ceylon_National_Congress_wins_42
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_Ceylon_National_Congress_wins_4
+    prerequisite = { focus = CEY_The_Ceylon_National_Congress_wins_41 }
+    x = -1
+    y = 2
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_Ceylon_National_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_Ceylon_National_Congress_wins_43
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_Ceylon_National_Congress_wins_4
+    prerequisite = { focus = CEY_The_Ceylon_National_Congress_wins_41 }
+    x = 1
+    y = 2
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_Ceylon_National_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_Ceylon_National_Congress_wins_44
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_Ceylon_National_Congress_wins_4
+    prerequisite = { focus = CEY_The_Ceylon_National_Congress_wins_42 }
+    prerequisite = { focus = CEY_The_Ceylon_National_Congress_wins_43 }
+    x = 0
+    y = 3
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_Ceylon_National_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_Ceylon_National_Congress_wins_45
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_Ceylon_National_Congress_wins_4
+    prerequisite = { focus = CEY_The_Ceylon_National_Congress_wins_42 }
+    prerequisite = { focus = CEY_The_Ceylon_National_Congress_wins_43 }
+    x = -2
+    y = 3
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_Ceylon_National_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_Ceylon_National_Congress_wins_46
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_Ceylon_National_Congress_wins_4
+    prerequisite = { focus = CEY_The_Ceylon_National_Congress_wins_42 }
+    prerequisite = { focus = CEY_The_Ceylon_National_Congress_wins_43 }
+    x = 2
+    y = 3
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_Ceylon_National_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_Ceylon_National_Congress_wins_47
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_Ceylon_National_Congress_wins_4
+    prerequisite = { focus = CEY_The_Ceylon_National_Congress_wins_44 }
+    prerequisite = { focus = CEY_The_Ceylon_National_Congress_wins_45 }
+    x = -1
+    y = 4
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_Ceylon_National_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_Ceylon_National_Congress_wins_48
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_Ceylon_National_Congress_wins_4
+    prerequisite = { focus = CEY_The_Ceylon_National_Congress_wins_46 }
+    prerequisite = { focus = CEY_The_Ceylon_National_Congress_wins_44 }
+    x = 1
+    y = 4
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_Ceylon_National_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_Ceylon_National_Congress_wins_49
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_Ceylon_National_Congress_wins_4
+    prerequisite = { focus = CEY_The_Ceylon_National_Congress_wins_491 }
+    prerequisite = { focus = CEY_The_Ceylon_National_Congress_wins_492 }
+    x = 0
+    y = 6
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_Ceylon_National_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_Ceylon_National_Congress_wins_492
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_Ceylon_National_Congress_wins_4
+    prerequisite = { focus = CEY_The_Ceylon_National_Congress_wins_48 }
+    x = 1
+    y = 5
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_Ceylon_National_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_Ceylon_National_Congress_wins_491
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_Ceylon_National_Congress_wins_4
+    prerequisite = { focus = CEY_The_Ceylon_National_Congress_wins_47 }
+    x = -1
+    y = 5
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_Ceylon_National_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_Ceylon_National_Congress_wins_5
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_Ceylon_National_Congress_wins
+    prerequisite = { focus = CEY_The_Ceylon_National_Congress_wins_1 }
+    prerequisite = { focus = CEY_The_Ceylon_National_Congress_wins_2 }
+    mutually_exclusive = { 
+        focus = CEY_The_Ceylon_National_Congress_wins_3
+        focus = CEY_The_Ceylon_National_Congress_wins_4
+    }
+    x = 6
+    y = 2
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_Ceylon_National_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_Ceylon_National_Congress_wins_51
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_Ceylon_National_Congress_wins_5
+    prerequisite = { focus = CEY_The_Ceylon_National_Congress_wins_5 }
+    x = 0
+    y = 1
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_Ceylon_National_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_Ceylon_National_Congress_wins_52
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_Ceylon_National_Congress_wins_5
+    prerequisite = { focus = CEY_The_Ceylon_National_Congress_wins_51 }
+    x = -1
+    y = 2
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_Ceylon_National_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_Ceylon_National_Congress_wins_53
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_Ceylon_National_Congress_wins_5
+    prerequisite = { focus = CEY_The_Ceylon_National_Congress_wins_51 }
+    x = 1
+    y = 2
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_Ceylon_National_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_Ceylon_National_Congress_wins_54
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_Ceylon_National_Congress_wins_5
+    prerequisite = { focus = CEY_The_Ceylon_National_Congress_wins_52 }
+    prerequisite = { focus = CEY_The_Ceylon_National_Congress_wins_53 }
+    x = 0
+    y = 3
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_Ceylon_National_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_Ceylon_National_Congress_wins_55
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_Ceylon_National_Congress_wins_5
+    prerequisite = { focus = CEY_The_Ceylon_National_Congress_wins_52 }
+    prerequisite = { focus = CEY_The_Ceylon_National_Congress_wins_53 }
+    x = -2
+    y = 3
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_Ceylon_National_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_Ceylon_National_Congress_wins_56
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_Ceylon_National_Congress_wins_5
+    prerequisite = { focus = CEY_The_Ceylon_National_Congress_wins_52 }
+    prerequisite = { focus = CEY_The_Ceylon_National_Congress_wins_53 }
+    x = 2
+    y = 3
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_Ceylon_National_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_Ceylon_National_Congress_wins_57
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_Ceylon_National_Congress_wins_5
+    prerequisite = { focus = CEY_The_Ceylon_National_Congress_wins_54 }
+    prerequisite = { focus = CEY_The_Ceylon_National_Congress_wins_55 }
+    x = -1
+    y = 4
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_Ceylon_National_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_Ceylon_National_Congress_wins_58
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_Ceylon_National_Congress_wins_5
+    prerequisite = { focus = CEY_The_Ceylon_National_Congress_wins_56 }
+    prerequisite = { focus = CEY_The_Ceylon_National_Congress_wins_54 }
+    x = 1
+    y = 4
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_Ceylon_National_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_Ceylon_National_Congress_wins_59
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_Ceylon_National_Congress_wins_5
+    prerequisite = { focus = CEY_The_Ceylon_National_Congress_wins_591 }
+    prerequisite = { focus = CEY_The_Ceylon_National_Congress_wins_592 }
+    x = 0
+    y = 6
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_Ceylon_National_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_Ceylon_National_Congress_wins_592
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_Ceylon_National_Congress_wins_5
+    prerequisite = { focus = CEY_The_Ceylon_National_Congress_wins_58 }
+    x = 1
+    y = 5
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_Ceylon_National_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_Ceylon_National_Congress_wins_591
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_Ceylon_National_Congress_wins_5
+    prerequisite = { focus = CEY_The_Ceylon_National_Congress_wins_57 }
+    x = -1
+    y = 5
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_Ceylon_National_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+#泰米尔大会
+focus = {
+    id = CEY_The_All_Ceylon_Tamil_Congress_wins
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Ceylon_freedom
+    prerequisite = { focus = CEY_Ceylon_freedom }
+    x = 0
+    y = 1
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_All_Ceylon_Tamil_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_Crack_down_on_colonizers
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_All_Ceylon_Tamil_Congress_wins
+    prerequisite = { focus = CEY_The_All_Ceylon_Tamil_Congress_wins }
+    x = -1
+    y = 1
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_All_Ceylon_Tamil_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_Monitor_the_Sinhalese
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_All_Ceylon_Tamil_Congress_wins
+    prerequisite = { focus = CEY_The_All_Ceylon_Tamil_Congress_wins }
+    x = 1
+    y = 1
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_All_Ceylon_Tamil_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_All_Ceylon_Tamil_Congress_wins_3
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_All_Ceylon_Tamil_Congress_wins
+    prerequisite = { focus = CEY_Crack_down_on_colonizers }
+    prerequisite = { focus = CEY_Monitor_the_Sinhalese }
+    x = 0
+    y = 2
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_All_Ceylon_Tamil_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_All_Ceylon_Tamil_Congress_wins_4
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_All_Ceylon_Tamil_Congress_wins
+    prerequisite = { focus = CEY_The_All_Ceylon_Tamil_Congress_wins_3 }
+    x = -4
+    y = 3
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_All_Ceylon_Tamil_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_All_Ceylon_Tamil_Congress_wins_41
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_All_Ceylon_Tamil_Congress_wins_4
+    prerequisite = { focus = CEY_The_All_Ceylon_Tamil_Congress_wins_4 }
+    x = -2
+    y = 1
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_All_Ceylon_Tamil_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_All_Ceylon_Tamil_Congress_wins_42
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_All_Ceylon_Tamil_Congress_wins_4
+    prerequisite = { focus = CEY_The_All_Ceylon_Tamil_Congress_wins_41 }
+    x = -3
+    y = 2
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_All_Ceylon_Tamil_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_All_Ceylon_Tamil_Congress_wins_43
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_All_Ceylon_Tamil_Congress_wins_4
+    prerequisite = { focus = CEY_The_All_Ceylon_Tamil_Congress_wins_4 }
+    x = 0
+    y = 1
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_All_Ceylon_Tamil_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_All_Ceylon_Tamil_Congress_wins_44
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_All_Ceylon_Tamil_Congress_wins_4
+    prerequisite = { focus = CEY_The_All_Ceylon_Tamil_Congress_wins_43 }
+    x = 1
+    y = 2
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_All_Ceylon_Tamil_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_All_Ceylon_Tamil_Congress_wins_45
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_All_Ceylon_Tamil_Congress_wins_4
+    prerequisite = { focus = CEY_The_All_Ceylon_Tamil_Congress_wins_43 }
+    x = -1
+    y = 2
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_All_Ceylon_Tamil_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_All_Ceylon_Tamil_Congress_wins_46
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_All_Ceylon_Tamil_Congress_wins_4
+    prerequisite = { focus = CEY_The_All_Ceylon_Tamil_Congress_wins_44 }
+    prerequisite = { focus = CEY_The_All_Ceylon_Tamil_Congress_wins_45 }
+    x = 0
+    y = 3
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_All_Ceylon_Tamil_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_All_Ceylon_Tamil_Congress_wins_47
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_All_Ceylon_Tamil_Congress_wins_4
+    prerequisite = { focus = CEY_The_All_Ceylon_Tamil_Congress_wins_42 }
+    x = -2
+    y = 3
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_All_Ceylon_Tamil_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_All_Ceylon_Tamil_Congress_wins_48
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_All_Ceylon_Tamil_Congress_wins_4
+    prerequisite = { focus = CEY_The_All_Ceylon_Tamil_Congress_wins_47 }
+    prerequisite = { focus = CEY_The_All_Ceylon_Tamil_Congress_wins_46 }
+    x = -1
+    y = 4
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_All_Ceylon_Tamil_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_All_Ceylon_Tamil_Congress_wins_5
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_All_Ceylon_Tamil_Congress_wins
+    prerequisite = { focus = CEY_The_All_Ceylon_Tamil_Congress_wins_3 }
+    x = 4
+    y = 3
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_All_Ceylon_Tamil_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_All_Ceylon_Tamil_Congress_wins_51
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_All_Ceylon_Tamil_Congress_wins_5
+    prerequisite = { focus = CEY_The_All_Ceylon_Tamil_Congress_wins_5 }
+    x = 2
+    y = 1
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_All_Ceylon_Tamil_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_All_Ceylon_Tamil_Congress_wins_52
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_All_Ceylon_Tamil_Congress_wins_5
+    prerequisite = { focus = CEY_The_All_Ceylon_Tamil_Congress_wins_51 }
+    x = 3
+    y = 2
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_All_Ceylon_Tamil_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_All_Ceylon_Tamil_Congress_wins_53
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_All_Ceylon_Tamil_Congress_wins_5
+    prerequisite = { focus = CEY_The_All_Ceylon_Tamil_Congress_wins_5 }
+    x = 0
+    y = 1
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_All_Ceylon_Tamil_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_All_Ceylon_Tamil_Congress_wins_54
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_All_Ceylon_Tamil_Congress_wins_5
+    prerequisite = { focus = CEY_The_All_Ceylon_Tamil_Congress_wins_53 }
+    x = -1
+    y = 2
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_All_Ceylon_Tamil_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_All_Ceylon_Tamil_Congress_wins_55
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_All_Ceylon_Tamil_Congress_wins_5
+    prerequisite = { focus = CEY_The_All_Ceylon_Tamil_Congress_wins_53 }
+    x = 1
+    y = 2
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_All_Ceylon_Tamil_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_All_Ceylon_Tamil_Congress_wins_56
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_All_Ceylon_Tamil_Congress_wins_5
+    prerequisite = { focus = CEY_The_All_Ceylon_Tamil_Congress_wins_54 }
+    prerequisite = { focus = CEY_The_All_Ceylon_Tamil_Congress_wins_55 }
+    x = 0
+    y = 3
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_All_Ceylon_Tamil_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_All_Ceylon_Tamil_Congress_wins_57
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_All_Ceylon_Tamil_Congress_wins_5
+    prerequisite = { focus = CEY_The_All_Ceylon_Tamil_Congress_wins_52 }
+    x = 2
+    y = 3
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_All_Ceylon_Tamil_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_All_Ceylon_Tamil_Congress_wins_58
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_All_Ceylon_Tamil_Congress_wins_5
+    prerequisite = { focus = CEY_The_All_Ceylon_Tamil_Congress_wins_57 }
+    prerequisite = { focus = CEY_The_All_Ceylon_Tamil_Congress_wins_56 }
+    x = 1
+    y = 4
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_All_Ceylon_Tamil_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_All_Ceylon_Tamil_Congress_wins_6
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_All_Ceylon_Tamil_Congress_wins
+    prerequisite = { focus = CEY_The_All_Ceylon_Tamil_Congress_wins_3 }
+    x = 0
+    y = 3
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_All_Ceylon_Tamil_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_All_Ceylon_Tamil_Congress_wins_61
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_All_Ceylon_Tamil_Congress_wins
+    prerequisite = { focus = CEY_The_All_Ceylon_Tamil_Congress_wins_6 }
+    x = 2
+    y = 4
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_All_Ceylon_Tamil_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_All_Ceylon_Tamil_Congress_wins_62
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_All_Ceylon_Tamil_Congress_wins
+    prerequisite = { focus = CEY_The_All_Ceylon_Tamil_Congress_wins_6 }
+    x = -2
+    y = 4
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_All_Ceylon_Tamil_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_All_Ceylon_Tamil_Congress_wins_63
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_All_Ceylon_Tamil_Congress_wins
+    prerequisite = { focus = CEY_The_All_Ceylon_Tamil_Congress_wins_6 }
+    x = 0
+    y = 4
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_All_Ceylon_Tamil_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_All_Ceylon_Tamil_Congress_wins_64
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_All_Ceylon_Tamil_Congress_wins
+    prerequisite = { focus = CEY_The_All_Ceylon_Tamil_Congress_wins_63 }
+    x = -1
+    y = 5
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_All_Ceylon_Tamil_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_All_Ceylon_Tamil_Congress_wins_65
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_All_Ceylon_Tamil_Congress_wins
+    prerequisite = { focus = CEY_The_All_Ceylon_Tamil_Congress_wins_63 }
+    x = 1
+    y = 5
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_All_Ceylon_Tamil_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_All_Ceylon_Tamil_Congress_wins_66
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_All_Ceylon_Tamil_Congress_wins
+    prerequisite = { focus = CEY_The_All_Ceylon_Tamil_Congress_wins_64 }
+    prerequisite = { focus = CEY_The_All_Ceylon_Tamil_Congress_wins_65 }
+    x = 0
+    y = 6
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_All_Ceylon_Tamil_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_All_Ceylon_Tamil_Congress_wins_67
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_All_Ceylon_Tamil_Congress_wins
+    prerequisite = { focus = CEY_The_All_Ceylon_Tamil_Congress_wins_62 }
+    x = -2
+    y = 6
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_All_Ceylon_Tamil_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_All_Ceylon_Tamil_Congress_wins_68
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_All_Ceylon_Tamil_Congress_wins
+    prerequisite = { focus = CEY_The_All_Ceylon_Tamil_Congress_wins_61 }
+    x = 2
+    y = 6
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_All_Ceylon_Tamil_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_All_Ceylon_Tamil_Congress_wins_69
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_All_Ceylon_Tamil_Congress_wins
+    prerequisite = { focus = CEY_The_All_Ceylon_Tamil_Congress_wins_66 }
+    prerequisite = { focus = CEY_The_All_Ceylon_Tamil_Congress_wins_67 }
+    prerequisite = { focus = CEY_The_All_Ceylon_Tamil_Congress_wins_68 }
+    x = 0
+    y = 7
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    allow_branch = {
+        has_country_flag = The_All_Ceylon_Tamil_Congress_wins
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+#统一战线
+focus = {
+    id = CEY_The_cry_of_the_people
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Ceylon_freedom
+    prerequisite = { focus = CEY_Ceylon_freedom }
+    x = 0
+    y = 1
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        has_country_flag = CEY_The_cry_of_the_people
+    }
+    
+    allow_branch = {
+        has_country_flag = The_United_Front_Returns
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_Nationalize_private_enterprises
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_cry_of_the_people
+    prerequisite = { focus = CEY_The_cry_of_the_people }
+    x = -1
+    y = 1
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_Quell_ethnic_hatred
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_cry_of_the_people
+    prerequisite = { focus = CEY_The_cry_of_the_people }
+    x = 1
+    y = 1
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_United_congress
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_cry_of_the_people
+    prerequisite = { focus = CEY_Quell_ethnic_hatred }
+    prerequisite = { focus = CEY_Nationalize_private_enterprises }
+    x = 0
+    y = 2
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_People_of_high_morality
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_cry_of_the_people
+    prerequisite = { focus = CEY_United_congress }
+    x = -3
+    y = 3
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_Crack_down_on_immoral_industries
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_cry_of_the_people
+    prerequisite = { focus = CEY_People_of_high_morality }
+    x = -3
+    y = 4
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_Appeal_for_virtue
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_cry_of_the_people
+    prerequisite = { focus = CEY_People_of_high_morality }
+
+    x = -4
+    y = 5
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_Ensure_adequate_food_and_clothing
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_cry_of_the_people
+    prerequisite = { focus = CEY_People_of_high_morality }
+
+    x = -2
+    y = 5
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_Promote_national_integration
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_cry_of_the_people
+    prerequisite = { focus = CEY_Crack_down_on_immoral_industries }
+    prerequisite = { focus = CEY_Appeal_for_virtue }
+    prerequisite = { focus = CEY_Ensure_adequate_food_and_clothing }
+    x = -3
+    y = 6
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_Subsidize_local_trade_unions
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_cry_of_the_people
+    prerequisite = { 
+        focus = CEY_Promote_national_integration 
+        focus = CEY_Collective_operation_of_enterprises
+        }
+
+    x = -2
+    y = 7
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_Land_to_the_noble_minded
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_cry_of_the_people
+    prerequisite = { focus = CEY_Promote_national_integration }
+
+    x = -4
+    y = 7
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_A_pure_Ceylon
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_cry_of_the_people
+    prerequisite = { focus = CEY_Subsidize_local_trade_unions }
+    prerequisite = { focus = CEY_Land_to_the_noble_minded }
+    x = -3
+    y = 8
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_Standard_bearer_of_communism
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_cry_of_the_people
+    prerequisite = { focus = CEY_United_congress }
+    x = 3
+    y = 3
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_Reeducation_camp_for_reactionaries
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_cry_of_the_people
+    prerequisite = { focus = CEY_Standard_bearer_of_communism }
+    x = 3
+    y = 4
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {Establish_the_Workers_and_Peasants_Red_Guards
+    id = CEY_Standard_bearer_of_communism2
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_cry_of_the_people
+    prerequisite = { focus = CEY_Standard_bearer_of_communism }
+
+    x = 4
+    y = 5
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {Establish_rural_collective_communes
+    id = CEY_Standard_bearer_of_communism3
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_cry_of_the_people
+    prerequisite = { focus = CEY_Standard_bearer_of_communism }
+
+    x = 2
+    y = 5
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_Efficient_planned_economy
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_cry_of_the_people
+    prerequisite = { focus = CEY_Reeducation_camp_for_reactionaries }
+    prerequisite = { focus = CEY_Standard_bearer_of_communism2 }
+    prerequisite = { focus = CEY_Standard_bearer_of_communism3 }
+    x = 3
+    y = 6
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_Dissolve_the_concept_of_nation
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_cry_of_the_people
+    prerequisite = { 
+        focus = CEY_Efficient_planned_economy 
+        focus = CEY_Rural_autonomous_communes
+        }
+    x = 2
+    y = 7
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {Local_democratic_reforms
+    id = CEY_Standard_bearer_of_communism6
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_cry_of_the_people
+    prerequisite = { focus = CEY_Efficient_planned_economy }
+
+    x = 4
+    y = 7
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_Standard_bearer_of_communism7
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_cry_of_the_people
+    prerequisite = { focus = CEY_Dissolve_the_concept_of_nation }
+    prerequisite = { focus = CEY_Standard_bearer_of_communism6 }
+    x = 3
+    y = 8
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_Pioneer_of_world_revolution
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_cry_of_the_people
+    prerequisite = { focus = CEY_United_congress }
+    x = 0
+    y = 4
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_Establish_a_central_trade_union
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_cry_of_the_people
+    prerequisite = { focus = CEY_United_congress }
+    x = 0
+    y = 5
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_Collective_operation_of_enterprises
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_cry_of_the_people
+    prerequisite = { focus = CEY_Establish_a_central_trade_union }
+    x = -1
+    y = 6
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_Rural_autonomous_communes
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_cry_of_the_people
+    prerequisite = { focus = CEY_Establish_a_central_trade_union }
+    x = 1
+    y = 6
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_Launch_an_offensive_against_reactionaries_in_South_Asia
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_cry_of_the_people
+    prerequisite = { focus = CEY_Collective_operation_of_enterprises }
+    prerequisite = { focus = CEY_Rural_autonomous_communes }
+    x = 0
+    y = 7
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+focus = {
+    id = CEY_The_workers_fortress_of_world_revolution
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_The_cry_of_the_people
+    prerequisite = { focus = CEY_Subsidize_local_trade_unions }
+    prerequisite = { focus = CEY_Dissolve_the_concept_of_nation }
+    prerequisite = { focus = CEY_Launch_an_offensive_against_reactionaries_in_South_Asia }
+    x = 0
+    y = 8
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+        
+    }
+    
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+#僧罗迦 
+focus = {
+    id = CEY_Victory_of_the_Sinhalese
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Ceylon_freedom
+    prerequisite = { focus = CEY_Ceylon_freedom }
+    x = 0
+    y = 1
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+
+    }
+    
+    allow_branch = {
+        has_country_flag = The_Sinhala_Congress_emerges
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+    
+focus = {
+    id = CEY_Support_Tamil_national_autonomy
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Victory_of_the_Sinhalese
+    prerequisite = { focus = CEY_Victory_of_the_Sinhalese }
+    x = 0
+    y = 1
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+
+    }
+    
+    allow_branch = {
+        
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+    
+focus = {
+    id = CEY_Elevate_the_status_of_Buddhism
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Victory_of_the_Sinhalese
+    prerequisite = { focus = CEY_Support_Tamil_national_autonomy }
+    x = 1
+    y = 2
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+
+    }
+    
+    allow_branch = {
+        
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+    
+focus = {
+    id = CEY_Crack_down_on_the_spread_of_Christianity
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Victory_of_the_Sinhalese
+    prerequisite = { focus = CEY_Support_Tamil_national_autonomy }
+    x = -1
+    y = 2
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+
+    }
+    
+    allow_branch = {
+        
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+    
+focus = {
+    id = CEY_March_towards_the_future
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Victory_of_the_Sinhalese
+    prerequisite = { focus = CEY_Elevate_the_status_of_Buddhism }
+    prerequisite = { focus = CEY_Crack_down_on_the_spread_of_Christianity }
+    x = 0
+    y = 3
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+
+    }
+    
+    allow_branch = {
+        
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+    
+focus = {
+    id = CEY_Buddhist_believers
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Victory_of_the_Sinhalese
+    prerequisite = { focus = CEY_March_towards_the_future }
+    x = -5
+    y = 4
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+
+    }
+    
+    allow_branch = {
+        
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+    
+focus = {
+    id = CEY_Lay_down_the_butchers_knife
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Victory_of_the_Sinhalese
+    prerequisite = { focus = CEY_Buddhist_believers }
+    x = -4
+    y = 5
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+
+    }
+    
+    allow_branch = {
+        
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+    
+focus = {
+    id = CEY_Redeem_the_impoverished_masses
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Victory_of_the_Sinhalese
+    prerequisite = { focus = CEY_Buddhist_believers }
+    x = -6
+    y = 5
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+
+    }
+    
+    allow_branch = {
+        
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+    
+focus = {
+    id = CEY_Encourage_the_spread_of_Buddhism
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Victory_of_the_Sinhalese
+    prerequisite = { focus = CEY_March_towards_the_future }
+    x = -5
+    y = 6
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+
+    }
+    
+    allow_branch = {
+        
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+    
+focus = {
+    id = CEY_Encourage_national_reconciliation
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Victory_of_the_Sinhalese
+    prerequisite = { focus = CEY_Lay_down_the_butchers_knife }
+    x = -4
+    y = 7
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+
+    }
+    
+    allow_branch = {
+        
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+    
+focus = {
+    id = CEY_Restrict_unscrupulous_enterprises
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Victory_of_the_Sinhalese
+    prerequisite = { focus = CEY_Redeem_the_impoverished_masses }
+    x = -6
+    y = 7
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+
+    }
+    
+    allow_branch = {
+        
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+    
+focus = {
+    id = CEY_Step_into_the_mortal_world
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Victory_of_the_Sinhalese
+    prerequisite = { focus = CEY_Encourage_the_spread_of_Buddhism }
+    prerequisite = { focus = CEY_Restrict_unscrupulous_enterprises }
+    prerequisite = { focus = CEY_Encourage_national_reconciliation }
+    x = -5
+    y = 8
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+
+    }
+    
+    allow_branch = {
+        
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+    
+focus = {
+    id = CEY_Those_in_high_positions
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Victory_of_the_Sinhalese
+    prerequisite = { focus = CEY_Step_into_the_mortal_world }
+    x = -3
+    y = 9
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+
+    }
+    
+    allow_branch = {
+        
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+    
+focus = {
+    id = CEY_In_the_city
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Victory_of_the_Sinhalese
+    prerequisite = { focus = CEY_Step_into_the_mortal_world }
+    x = -5
+    y = 9
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+
+    }
+    
+    allow_branch = {
+        
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+    
+focus = {
+    id = CEY_In_the_fields
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Victory_of_the_Sinhalese
+    prerequisite = { focus = CEY_Step_into_the_mortal_world }
+    x = -7
+    y = 9
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+
+    }
+    
+    allow_branch = {
+        
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+    
+focus = {
+    id = CEY_Buddhist_holy_land_in_South_Asia
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Victory_of_the_Sinhalese
+    prerequisite = { focus = CEY_Those_in_high_positions }
+    prerequisite = { focus = CEY_In_the_city }
+    prerequisite = { focus = CEY_In_the_fields }
+    x = -5
+    y = 10
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+
+    }
+    
+    allow_branch = {
+        
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+#
+focus = {
+    id = CEY_A_nation_under_the_protection_of_Buddhism
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Victory_of_the_Sinhalese
+    prerequisite = { focus = CEY_March_towards_the_future }
+    x = 5
+    y = 4
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+
+    }
+    
+    allow_branch = {
+        
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+    
+focus = {
+    id = CEY_Drive_out_the_Tamil_people
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Victory_of_the_Sinhalese
+    prerequisite = { focus = CEY_A_nation_under_the_protection_of_Buddhism }
+    x = 4
+    y = 5
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+
+    }
+    
+    allow_branch = {
+        
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+    
+focus = {
+    id = CEY_Collude_with_local_enterprises
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Victory_of_the_Sinhalese
+    prerequisite = { focus = CEY_A_nation_under_the_protection_of_Buddhism }
+    x = 6
+    y = 5
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+
+    }
+    
+    allow_branch = {
+        
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+    
+focus = {
+    id = CEY_Exploit_the_cloak_of_Buddhism
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Victory_of_the_Sinhalese
+    prerequisite = { focus = CEY_March_towards_the_future }
+    x = 5
+    y = 6
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+
+    }
+    
+    allow_branch = {
+        
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+    
+focus = {
+    id = CEY_pure_Ceylon
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Victory_of_the_Sinhalese
+    prerequisite = { focus = CEY_Drive_out_the_Tamil_people }
+    x = 4
+    y = 7
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+
+    }
+    
+    allow_branch = {
+        
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+    
+focus = {
+    id = CEY_Franchise_rights_of_temples
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Victory_of_the_Sinhalese
+    prerequisite = { focus = CEY_Collude_with_local_enterprises }
+    x = 6
+    y = 7
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+
+    }
+    
+    allow_branch = {
+        
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+    
+focus = {
+    id = CEY_Patron_of_corruption
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Victory_of_the_Sinhalese
+    prerequisite = { focus = CEY_Exploit_the_cloak_of_Buddhism }
+    prerequisite = { focus = CEY_Franchise_rights_of_temples }
+    prerequisite = { focus = CEY_pure_Ceylon }
+    x = 5
+    y = 8
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+
+    }
+    
+    allow_branch = {
+        
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+    
+focus = {
+    id = CEY_Delegate_power_to_local_gentry
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Victory_of_the_Sinhalese
+    prerequisite = { focus = CEY_Patron_of_corruption }
+    x = 3
+    y = 9
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+
+    }
+    
+    allow_branch = {
+        
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+    
+focus = {
+    id = CEY_Exterminate_communists
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Victory_of_the_Sinhalese
+    prerequisite = { focus = CEY_Patron_of_corruption }
+    x = 5
+    y = 9
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+
+    }
+    
+    allow_branch = {
+        
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+    
+focus = {
+    id = CEY_Corporatist_economy
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Victory_of_the_Sinhalese
+    prerequisite = { focus = CEY_Patron_of_corruption }
+    x = 7
+    y = 9
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+
+    }
+    
+    allow_branch = {
+        
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+    
+focus = {
+    id = CEY_The_chief_abbot_of_Ceylon
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Victory_of_the_Sinhalese
+    prerequisite = { focus = CEY_Delegate_power_to_local_gentry }
+    prerequisite = { focus = CEY_Exterminate_communists }
+    prerequisite = { focus = CEY_Corporatist_economy }
+    x = 5
+    y = 10
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+
+    }
+    
+    allow_branch = {
+        
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+    
+focus = {
+    id = CEY_Deliver_all_suffering_beings
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Victory_of_the_Sinhalese
+    prerequisite = { focus = CEY_March_towards_the_future }
+    x = 0
+    y = 4
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+
+    }
+    
+    allow_branch = {
+        
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+    
+focus = {
+    id = CEY_Resolve_national_conflicts
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Victory_of_the_Sinhalese
+    prerequisite = { focus = CEY_Deliver_all_suffering_beings }
+    x = -2
+    y = 5
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+
+    }
+    
+    allow_branch = {
+        
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+    
+focus = {
+    id = CEY_Crack_down_on_local_tyrants_and_evil_gentry
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Victory_of_the_Sinhalese
+    prerequisite = { focus = CEY_Deliver_all_suffering_beings }
+    x = 0
+    y = 5
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+
+    }
+    
+    allow_branch = {
+        
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+    
+focus = {
+    id = CEY_Promote_the_spirit_of_Buddhism
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Victory_of_the_Sinhalese
+    prerequisite = { focus = CEY_Deliver_all_suffering_beings }
+    x = 2
+    y = 5
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+
+    }
+    
+    allow_branch = {
+        
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+    
+focus = {
+    id = CEY_Land_redistribution
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Victory_of_the_Sinhalese
+    prerequisite = { focus = CEY_Resolve_national_conflicts }
+    prerequisite = { focus = CEY_Crack_down_on_local_tyrants_and_evil_gentry }
+    x = -1
+    y = 6
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+
+    }
+    
+    allow_branch = {
+        
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+    
+focus = {
+    id = CEY_Safeguard_workers_rights
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Victory_of_the_Sinhalese
+    prerequisite = { focus = CEY_Promote_the_spirit_of_Buddhism }
+    prerequisite = { focus = CEY_Crack_down_on_local_tyrants_and_evil_gentry }
+    x = 1
+    y = 6
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+
+    }
+    
+    allow_branch = {
+        
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+    
+focus = {
+    id = CEY_The_socialist_nature_of_Buddhism
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Victory_of_the_Sinhalese
+    prerequisite = { focus = CEY_Land_redistribution }
+    prerequisite = { focus = CEY_Safeguard_workers_rights }
+    x = 0
+    y = 7
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+
+    }
+    
+    allow_branch = {
+        
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+    
+focus = {
+    id = CEY_Socialized_enterprises
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Victory_of_the_Sinhalese
+    prerequisite = { focus = CEY_The_socialist_nature_of_Buddhism }
+    x = -1
+    y = 8
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+
+    }
+    
+    allow_branch = {
+        
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+    
+focus = {
+    id = CEY_Enlighten_reactionary_forces
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Victory_of_the_Sinhalese
+    prerequisite = { focus = CEY_The_socialist_nature_of_Buddhism }
+    x = 1
+    y = 8
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+
+    }
+    
+    allow_branch = {
+        
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+    
+focus = {
+    id = CEY_Spread_the_radiance_of_Buddhism
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Victory_of_the_Sinhalese
+    prerequisite = { focus = CEY_Enlighten_reactionary_forces }
+    prerequisite = { focus = CEY_Socialized_enterprises }
+    x = 0
+    y = 9
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+
+    }
+    
+    allow_branch = {
+        
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+    
+focus = {
+    id = CEY_The_people_are_finally_liberated
+    icon = GFX_ourcurrentproblems
+    relative_position_id = CEY_Victory_of_the_Sinhalese
+    prerequisite = { focus = CEY_Spread_the_radiance_of_Buddhism }
+    x = 0
+    y = 10
+    cost = 2
+    ai_will_do = {
+        factor = 10
+    }
+    available = {
+
+    }
+    
+    allow_branch = {
+        
+    }
+    completion_reward = {
+        hidden_effect = {
+            
+        }
+        add_stability = 0.05
+        add_war_support = 0.05
+        }
+    }
+
+
+}

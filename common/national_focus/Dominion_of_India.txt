@@ -1,0 +1,6442 @@
+###########################
+# India Focus Tree
+# By Rylock
+###########################
+
+focus_tree = {
+	id = delhi_focus
+
+	country = {
+		factor = 0
+
+		modifier = {
+			add = 20
+			tag = DEH
+		}
+	}
+
+	default = no
+
+	continuous_focus_position = { x = 50 y = 1000 }
+
+	#Industry Branch
+
+	focus = {
+		id = DEH_Industry1_focus #Industry Tech
+		icon = GFX_goal_CAN_Support_British_Industrialists
+		x = 2
+		y = 0
+		cost = 7
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_Industry1_focus"
+			add_tech_bonus = {
+				name = DEH_Industry1_focus
+				bonus = 1
+				uses = 2
+				category = industry
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = DEH_economyreform1
+		icon = GFX_RUS_Agricultural_Adjustment_Act
+		prerequisite = { focus = DEH_Industry1_focus }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = DEH_1936_election
+				has_country_flag = DEH_1936_election_held
+			}
+		}
+		relative_position_id = DEH_Industry1_focus
+		x = -2
+		y = 1
+		cost = 7
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_economyreform1"
+			country_event = delhi.11
+		}
+	}
+
+	focus = {
+		id = DEH_economyreform2
+		icon = GFX_MAF_workplace_regulations
+		relative_position_id = DEH_Industry1_focus
+		x = -2
+		y = 2
+		prerequisite = { focus = DEH_economyreform1 }
+		cost = 7
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_economyreform2"
+			swap_ideas = {
+				remove_idea = DEH_backwards_economy_1
+				add_idea = DEH_backwards_economy_2
+			}
+			country_event = delhi.12
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = DEH_digging
+		icon = GFX_goal_SKM_Bhotang_Mine
+		cost = 7
+		relative_position_id = DEH_Industry1_focus
+		x = 0
+		y = 1
+		prerequisite = { focus = DEH_Industry1_focus }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_digging"
+			add_tech_bonus = {
+				name = DEH_digging
+				bonus = 1
+				technology = excavation1
+				technology = excavation2
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = DEH_railroads1
+		icon = GFX_goal_NIC_Pacific_Rail_Expansion
+		prerequisite = { focus = DEH_Industry1_focus }
+		relative_position_id = DEH_Industry1_focus
+		x = 2
+		y = 1
+		cost = 7
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		complete_tooltip = {
+			add_building_construction = {
+				type = infrastructure
+				level = 3
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 3
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_railroads1"
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = DEH_railroads2
+		icon = GFX_goal_ROM_Railway_Investments
+		prerequisite = { focus = DEH_railroads1 }
+		relative_position_id = DEH_Industry1_focus
+		x = 2
+		y = 2
+		cost = 7
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		complete_tooltip = {
+			add_building_construction = {
+				type = infrastructure
+				level = 3
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 3
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_railroads2"
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = DEH_construction1_focus
+		icon = GFX_RUS_Begin_Industrialization
+		prerequisite = { focus = DEH_economyreform2 }
+		prerequisite = { focus = DEH_railroads2 }
+		relative_position_id = DEH_Industry1_focus
+		x = -1
+		y = 3
+		cost = 7
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_construction1_focus"
+			random_owned_state = {
+				prioritize = { 439 } #Delhi
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = DEH_construction2_focus
+		icon = GFX_RUS_Moderate_Industrialization
+		prerequisite = { focus = DEH_construction1_focus }
+		relative_position_id = DEH_Industry1_focus
+		x = -1
+		y = 4
+		cost = 7
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = industrial_complex
+				level = 3
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_construction2_focus"
+			random_owned_state = {
+				prioritize = { 438 } #Lucknow
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = DEH_construction3_focus
+		icon = GFX_RUS_The_Industry_Needs_Men
+		prerequisite = { focus = DEH_construction2_focus }
+		relative_position_id = DEH_Industry1_focus
+		x = -1
+		y = 5
+		cost = 7
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = industrial_complex
+				level = 3
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_construction3_focus"
+			random_owned_state = {
+				prioritize = { 891 } #Lahore
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = DEH_production1 #military
+		icon = GFX_goal_POL_Munitions_Districts
+		prerequisite = { focus = DEH_railroads2 }
+		prerequisite = { focus = DEH_economyreform2 }
+		relative_position_id = DEH_Industry1_focus
+		x = 1
+		y = 3
+		cost = 7
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_production1"
+			random_owned_state = {
+				prioritize = { 439 } #Delhi
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = DEH_production2
+		icon = GFX_goal_NIC_Military_Industry
+		prerequisite = { focus = DEH_production1 }
+		relative_position_id = DEH_Industry1_focus
+		x = 1
+		y = 4
+		cost = 7
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = arms_factory
+				level = 3
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_production2"
+			random_owned_state = {
+				prioritize = { 438 } #Lucknow
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = DEH_production3
+		icon = GFX_GRU_CORPORATE_MILITARY_INDUSTRIAL_COMPLEX
+		prerequisite = { focus = DEH_production2 }
+		relative_position_id = DEH_Industry1_focus
+		x = 1
+		y = 5
+		cost = 7
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = arms_factory
+				level = 3
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_production3"
+			random_owned_state = {
+				prioritize = { 428 } #Gujarat
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = DEH_new_economy
+		icon = GFX_goal_CAN_securing_our_jewel
+		cost = 7.00
+		prerequisite = { focus = DEH_production3 }
+		prerequisite = { focus = DEH_construction3_focus }
+		relative_position_id = DEH_Industry1_focus
+		x = 0
+		y = 6
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_new_economy"
+			remove_ideas = DEH_backwards_economy_2
+		}
+	}
+
+
+	# Technology Branch
+	focus = {
+		id = DEH_ISAC
+		icon = GFX_goal_CAN_isac
+		x = 31
+		y = 0
+		cost = 7
+		available = {
+			is_in_faction_with = ENT
+			custom_trigger_tooltip = {
+				tooltip = DEH_ISAC_has_formed
+				has_global_flag = CAN_isac_created
+			}
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		bypass = {
+			OR = {
+				NOT = { is_in_faction_with = ENT }
+				AND = {
+					date > 1938.1.1
+					NOT = { has_global_flag = CAN_isac_created }
+				}
+			}
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_ISAC"
+			if = {
+				limit = {
+					has_global_flag = CAN_isac_created
+					NOT = { is_in_tech_sharing_group = entente_research }
+				}
+				add_to_tech_sharing_group = entente_research
+			}
+			add_tech_bonus = {
+				name = DEH_ISAC
+				bonus = 1
+				uses = 1
+				category = electronics
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = DEH_ISAC2
+		icon = GFX_goal_computer_focus
+		prerequisite = { focus = DEH_ISAC }
+		relative_position_id = DEH_ISAC
+		x = 0
+		y = 1
+		cost = 7
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_ISAC2"
+			add_tech_bonus = {
+				name = DEH_ISAC2
+				bonus = 1
+				uses = 2
+				category = computing_tech
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = DEH_ISAC3
+		icon = GFX_goal_generic_population_transfer
+		prerequisite = { focus = DEH_ISAC2 }
+		relative_position_id = DEH_ISAC
+		available = {
+			OR = {
+				has_idea = DEH_trade_unions_banned
+				has_idea = DEH_workers_protected
+				has_idea = DEH_support_unions
+			}
+		}
+		x = 0
+		y = 2
+		cost = 7
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_ISAC3"
+			add_research_slot = 1
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = DEH_ISAC4 #tech slot again
+		icon = GFX_goal_AUS_big_brain
+		prerequisite = { focus = DEH_ISAC3 }
+		prerequisite = { focus = DEH_unifyindia }
+		relative_position_id = DEH_ISAC
+		x = 0
+		y = 4
+		cost = 7
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_ISAC4"
+			add_research_slot = 1
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = DEH_ISACnuke
+		icon = GFX_goal_UMN_uranium_diplomacy
+		prerequisite = { focus = DEH_ISAC4 }
+		x = 31
+		y = 5
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = { has_tech = atomic_research }
+					NOT = { is_researching_technology = atomic_research }
+				}
+				add_tech_bonus = {
+					bonus = 0.5
+					uses = 1
+					technology = atomic_research
+				}
+			}
+			else = {
+				add_breakthrough_progress = {
+					specialization = specialization_nuclear
+					value = 0.5
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = DEH_ISACrocket
+		icon = GFX_goal_SKM_Rocket_Mail
+		prerequisite = { focus = DEH_ISAC4 }
+		relative_position_id = DEH_ISAC
+		x = 2
+		y = 5
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_ISACrocket"
+			add_tech_bonus = {
+				name = DEH_ISACrocket
+				bonus = 1
+				uses = 2
+				category = rocketry
+			}
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.5
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+
+	# Army Branch
+	focus = {
+		id = DEH_armyreform1
+		icon = GFX_goal_british_india_army
+		x = 8
+		y = 0
+		cost = 7
+
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_armyreform1"
+			army_experience = 20
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
+	}
+
+	focus = {
+		id = DEH_princearmyreform
+		icon = GFX_PRF_unite_princes
+		prerequisite = { focus = DEH_armyreform1 }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = DEH_1936_election
+				has_country_flag = DEH_1936_election_held
+			}
+		}
+		relative_position_id = DEH_armyreform1
+		x = 1
+		y = 1
+		cost = 7
+
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_princearmyreform"
+			country_event = delhi.100
+		}
+	}
+
+	focus = {
+		id = DEH_diarchy
+		icon = GFX_goal_VIN_two_streams_become_one
+		prerequisite = { focus = DEH_armyreform1 }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = DEH_1936_election
+				has_country_flag = DEH_1936_election_held
+			}
+		}
+		relative_position_id = DEH_armyreform1
+		x = -1
+		y = 1
+		cost = 7
+
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_diarchy"
+			country_event = delhi.10
+		}
+	}
+
+	focus = {
+		id = DEH_doctrine
+		icon = GFX_goal_NEE_joint_entente_excercises
+		prerequisite = { focus = DEH_princearmyreform }
+		prerequisite = { focus = DEH_diarchy }
+		relative_position_id = DEH_armyreform1
+		x = 0
+		y = 2
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_doctrine"
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.75
+				uses = 1
+				category = land_doctrine
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = DEH_motorized_focus
+		icon = GFX_focus_rus_motorised
+		prerequisite = { focus = DEH_doctrine }
+		bypass = { has_tech = motorised_infantry }
+		relative_position_id = DEH_armyreform1
+		x = -1
+		y = 3
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_motorized_focus"
+			add_tech_bonus = {
+				name = DEH_motorized_focus
+				bonus = 1
+				uses = 1
+				technology = motorised_infantry
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = DEH_armor1
+		icon = GFX_goal_VIN_armor_experiment
+		prerequisite = { focus = DEH_motorized_focus }
+		relative_position_id = DEH_armyreform1
+		x = -1
+		y = 4
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_armor1"
+			add_tech_bonus = {
+				name = DEH_armor1
+				bonus = 1
+				uses = 1
+				category = armor
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = DEH_armor2
+		icon = GFX_goal_NEE_armored_spearhead
+		prerequisite = { focus = DEH_armor1 }
+		relative_position_id = DEH_armyreform1
+		x = -1
+		y = 5
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_armor2"
+			add_tech_bonus = {
+				name = DEH_armor2
+				bonus = 1
+				uses = 1
+				category = armor
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = DEH_infantry_focus
+		icon = GFX_goal_AFG_british_protectorate
+		prerequisite = { focus = DEH_doctrine }
+		relative_position_id = DEH_armyreform1
+		x = 1
+		y = 3
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_infantry_focus"
+			add_tech_bonus = {
+				name = DEH_infantry_focus
+				bonus = 1
+				uses = 2
+				category = infantry_weapons
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = DEH_arty
+		icon = GFX_goal_KSV_rail_gun
+		prerequisite = { focus = DEH_infantry_focus }
+		relative_position_id = DEH_armyreform1
+		x = 1
+		y = 4
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_arty"
+			add_tech_bonus = {
+				name = DEH_arty
+				bonus = 1
+				uses = 1
+				category = artillery
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = DEH_gurkha
+		icon = GFX_goal_SKM_Gurkha
+		prerequisite = { focus = DEH_arty }
+		relative_position_id = DEH_armyreform1
+		x = 1
+		y = 5
+		cost = 7
+
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_gurkha"
+			add_tech_bonus = {
+				name = DEH_gurkha
+				bonus = 1
+				uses = 2
+				technology = paratroopers
+				technology = paratroopers2
+				technology = marines
+				technology = marines2
+				technology = tech_mountaineers
+				technology = tech_mountaineers2
+			}
+			custom_effect_tooltip = tooltip_white_line
+			random_owned_controlled_state = {
+				prioritize = { 435 438 891 }
+				limit = {
+					is_core_of = ROOT
+					can_construct_building = land_facility
+				}
+				construct_building_in_random_province = { land_facility = 1 }
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+
+	# Navy Branch
+	focus = {
+		id = DEH_naval_effort
+		icon = GFX_goal_british_india_navy
+		x = 16
+		y = 0
+		cost = 7
+
+		available = {
+			any_owned_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		complete_tooltip = {
+			navy_experience = 25
+			add_extra_state_shared_building_slots = 4
+			add_building_construction = {
+				type = dockyard
+				level = 4
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_naval_effort"
+			navy_experience = 25
+			if = {
+				limit = {
+					NOT = {
+						any_owned_state = {
+							dockyard > 0
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
+				random_owned_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+				set_country_flag = naval_effort_built
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = naval_effort_built }
+					any_owned_state = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+				}
+				random_owned_state = {
+					limit = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+				set_country_flag = naval_effort_built
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = naval_effort_built }
+					NOT = {
+						any_owned_state = {
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+				}
+				random_state = {
+					limit = {
+						controller = { tag = ROOT }
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = dockyard
+						level = 4
+						instant_build = yes
+					}
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_NAVY_BONUS FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = DEH_old_canada_ships
+		icon = GFX_goal_NIC_buy_ship
+		prerequisite = { focus = DEH_naval_effort }
+		relative_position_id = DEH_naval_effort
+		x = 0
+		y = 1
+		cost = 7
+
+		available = {
+			owns_state = 443
+			controls_state = 443
+			has_political_power > 50
+			is_in_faction_with = ENT
+			any_owned_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		bypass = {
+			OR = {
+				NOT = { is_in_faction_with = ENT }
+				NOT = { owns_state = 443 }
+			}
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_old_canada_ships"
+			add_political_power = -50
+			country_event = delhi.160
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = DEH_flexible_navy
+		icon = GFX_goal_generic_naval_command
+		prerequisite = { focus = DEH_old_canada_ships }
+		mutually_exclusive = { focus = DEH_large_navy }
+		relative_position_id = DEH_naval_effort
+		x = -1
+		y = 2
+		cost = 7
+
+		available = {
+			any_owned_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_flexible_navy"
+			add_doctrine_cost_reduction = {
+				name = AUS_flexible_navy
+				cost_reduction = 0.5
+				uses = 2
+				technology = convoy_interdiction_ti
+				technology = unrestricted_submarine_warfare
+				technology = wolfpacks
+				technology = advanced_submarine_warfare
+				technology = combined_operations_raiding
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = DEH_large_navy
+		icon = GFX_MAF_naval_aerial_observation
+		prerequisite = { focus = DEH_old_canada_ships }
+		mutually_exclusive = { focus = DEH_flexible_navy }
+		relative_position_id = DEH_naval_effort
+		x = 1
+		y = 2
+		cost = 7
+
+		available = {
+			any_owned_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_large_navy"
+			add_doctrine_cost_reduction = {
+	name = naval_doc_bonus
+	cost_reduction = 0.5
+	uses = 2
+	category = naval_doctrine
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = DEH_submarine_effort
+		icon = GFX_goal_AUS_unrestricted_submarine_warfare
+		prerequisite = {
+			focus = DEH_flexible_navy
+			focus = DEH_large_navy
+		}
+		relative_position_id = DEH_naval_effort
+		x = -1
+		y = 3
+		cost = 7
+
+		available = {
+			any_owned_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_submarine_effort"
+			add_tech_bonus = {
+				name = DEH_submarine_effort
+				bonus = 1
+				uses = 1
+				category = ss_tech
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = DEH_cruiser_effort
+		icon = GFX_goal_CRO_cruiser_keeps
+		prerequisite = {
+			focus = DEH_large_navy
+			focus = DEH_flexible_navy
+		}
+		relative_position_id = DEH_naval_effort
+		x = 1
+		y = 3
+		cost = 7
+
+		available = {
+			any_owned_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_cruiser_effort"
+			add_tech_bonus = {
+				name = DEH_cruiser_effort
+				bonus = 1
+				uses = 1
+				category = cl_tech
+				category = ca_tech
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = DEH_destroyer_effort
+		icon = GFX_goal_CRO_destroyer_enterprise
+		prerequisite = { focus = DEH_submarine_effort }
+		relative_position_id = DEH_naval_effort
+		x = -1
+		y = 4
+		cost = 7
+
+		available = {
+			any_owned_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_destroyer_effort"
+			add_tech_bonus = {
+				name = DEH_destroyer_effort
+				bonus = 1
+				uses = 1
+				category = dd_tech
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = DEH_capital_ships_effort
+		icon = GFX_goal_NFA_unchallenged_fleet
+		prerequisite = { focus = DEH_cruiser_effort }
+		relative_position_id = DEH_naval_effort
+		x = 1
+		y = 4
+		cost = 7
+
+		available = {
+			any_owned_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_capital_ships_effort"
+			navy_experience = 25
+			add_tech_bonus = {
+				name = DEH_capital_ships_effort
+				bonus = 1
+				uses = 1
+				category = ca_tech
+				category = bb_tech
+				category = cv_tech
+			}
+		}
+		search_filters = { FOCUS_FILTER_NAVY_BONUS FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = DEH_rearm_marine
+		icon = GFX_goal_generic_marines2
+		prerequisite = { focus = DEH_capital_ships_effort }
+		prerequisite = { focus = DEH_destroyer_effort }
+		available = {
+			has_war = no
+			is_in_faction = yes
+			controls_state = 429 #Bombay
+			429 = { is_core_of = DEH }
+			controls_state = 443 #Sindh
+			431 = { is_core_of = DEH } #West Bengal
+			427 = { is_core_of = DEH } #Hyderabad
+		}
+		relative_position_id = DEH_naval_effort
+		x = 0
+		y = 5
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_rearm_marine"
+			country_event = delhi.161
+			custom_effect_tooltip = tooltip_white_line
+			random_owned_controlled_state = {
+				prioritize = { 443 428 431 }
+				limit = {
+					is_core_of = ROOT
+					can_construct_building = naval_facility
+				}
+				construct_building_in_random_province = { naval_facility = 1 }
+			}
+		}
+	}
+
+
+	# Air Force Branch
+
+	focus = {
+		id = DEH_aviation_effort
+		icon = GFX_goal_british_india_air_force
+		x = 12
+		y = 0
+		cost = 7
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		complete_tooltip = {
+			air_experience = 25
+			if = {
+				limit = { has_country_flag = aviation_effort_AB }
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_doctrine_cost_reduction = {
+				name = air_doc_bonus
+				cost_reduction = 0.75
+				uses = 1
+				category = air_doctrine
+			}
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_aviation_effort"
+			air_experience = 25
+
+			if = {
+				limit = {
+					capital_scope = {
+						NOT = {
+							free_building_slots = {
+								building = air_base
+								size > 1
+							}
+						}
+					}
+				}
+				random_owned_state = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = aviation_effort_AB }
+				}
+			}
+			if = {
+				limit = {
+					capital_scope = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+				}
+				capital_scope = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = aviation_effort_AB }
+				}
+			}
+			add_doctrine_cost_reduction = {
+				name = air_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY FOCUS_FILTER_AIRFORCE_BONUS }
+	}
+
+	focus = {
+		id = DEH_lalroy
+		icon = GFX_goal_KSV_rule_from_the_air
+		prerequisite = { focus = DEH_aviation_effort }
+		relative_position_id = DEH_aviation_effort
+		x = 0
+		y = 1
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_lalroy"
+			add_ace = {
+				name = "Indra"
+				surname = "Lal Roy"
+				callsign = "Laddy"
+				type = fighter_genius
+			}
+			air_experience = 25
+		}
+		search_filters = { FOCUS_FILTER_AIRFORCE_BONUS }
+	}
+
+	focus = {
+		id = DEH_fighter_focus
+		icon = GFX_HUN_fighters
+		prerequisite = { focus = DEH_lalroy }
+		mutually_exclusive = { focus = DEH_bomber_focus }
+		relative_position_id = DEH_aviation_effort
+		x = -1
+		y = 2
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_fighter_focus"
+			add_tech_bonus = {
+				name = DEH_fighter_focus
+				bonus = 1
+				uses = 2
+				category = light_fighter
+				category = cat_heavy_fighter
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = DEH_bomber_focus
+		icon = GFX_MON_bomber_focus
+		prerequisite = { focus = DEH_lalroy }
+		mutually_exclusive = { focus = DEH_fighter_focus }
+		relative_position_id = DEH_aviation_effort
+		x = 1
+		y = 2
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_bomber_focus"
+			add_tech_bonus = {
+				name = DEH_bomber_focus
+				bonus = 1
+				uses = 2
+				category = tactical_bomber
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = DEH_aviation_effort_2
+		icon = GFX_goal_generic_airports
+		prerequisite = { focus = DEH_bomber_focus focus = DEH_fighter_focus }
+		relative_position_id = DEH_aviation_effort
+		x = 0
+		y = 3
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		complete_tooltip = {
+			air_experience = 25
+			if = { limit = { has_country_flag = aviation_effort_2_AB }
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_doctrine_cost_reduction = {
+				name = air_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_aviation_effort_2"
+			air_experience = 25
+			if = {
+				limit = {
+					capital_scope = {
+						NOT = {
+							free_building_slots = {
+								building = air_base
+								size > 1
+							}
+						}
+					}
+				}
+				random_owned_state = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = aviation_effort_2_AB }
+				}
+			}
+			if = {
+				limit = {
+					capital_scope = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+				}
+				capital_scope = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = aviation_effort_2_AB }
+				}
+			}
+			add_doctrine_cost_reduction = {
+				name = air_doc_bonus
+				cost_reduction = 0.5
+				uses = 2
+				category = air_doctrine
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY FOCUS_FILTER_AIRFORCE_BONUS }
+	}
+
+	focus = {
+		id = DEH_CAS_effort
+		icon = GFX_goal_USA_organic_air_support
+		prerequisite = { focus = DEH_aviation_effort_2 }
+		relative_position_id = DEH_aviation_effort
+		x = -1
+		y = 4
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_CAS_effort"
+			add_tech_bonus = {
+				name = DEH_CAS_effort
+				bonus = 1
+				uses = 1
+				category = cas_bomber
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = DEH_NAV_effort
+		icon = GFX_goal_FIU_naval_bomber
+		prerequisite = { focus = DEH_aviation_effort_2 }
+		relative_position_id = DEH_aviation_effort
+		x = 1
+		y = 4
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_NAV_effort"
+			add_tech_bonus = {
+				name = DEH_NAV_effort
+				bonus = 1
+				uses = 1
+				category = naval_bomber
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = DEH_expand_indian_air_force
+		icon = GFX_goal_CZE_air_industry
+		prerequisite = { focus = DEH_NAV_effort }
+		prerequisite = { focus = DEH_CAS_effort }
+		available = {
+			has_idea = DEH_unitedindia
+		}
+		relative_position_id = DEH_aviation_effort
+		x = 0
+		y = 5
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_expand_indian_air_force"
+			air_experience = 50
+			add_ideas = DEH_riaf
+			custom_effect_tooltip = tooltip_white_line
+			random_owned_controlled_state = {
+				prioritize = { 435 438 891 }
+				limit = {
+					is_core_of = ROOT
+					can_construct_building = air_facility
+				}
+				construct_building_in_random_province = { air_facility = 1 }
+			}
+		}
+		search_filters = { FOCUS_FILTER_AIRFORCE_BONUS }
+	}
+
+
+	# Foreign Policy Branch
+
+	focus = {
+		id = DEH_prepare1
+		icon = GFX_goal_india_dominion
+		available = {
+			date > 1937.1.1
+		}
+		x = 26
+		y = 0
+		cost = 7
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		bypass = {
+			NOT = { country_exists = PRF }
+			NOT = { country_exists = BHC }
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_prepare1"
+			add_political_power = 150
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = DEH_prepare2
+		icon = GFX_goal_CAN_militarism
+		relative_position_id = DEH_prepare1
+		x = 0
+		y = 1
+		cost = 7
+		prerequisite = { focus = DEH_prepare1 }
+
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 0
+				has_war = no
+				has_army_manpower = { size < 275000 }
+			}
+			modifier = {
+				factor = 3
+				OR = {
+					has_war_with = PRF
+					has_war_with = BHC
+				}
+			}
+		}
+
+		bypass = {
+			NOT = { country_exists = PRF }
+			NOT = { country_exists = BHC }
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_prepare2"
+			add_timed_idea = { idea = DEH_war_fever days = 365 }
+			add_stability = 0.10
+		}
+		search_filters = { FOCUS_FILTER_STABILITY }
+	}
+
+	focus = {
+		id = DEH_fortify_princely_border
+		icon = GFX_goal_generic_india_fortify_against_princes
+		cost = 7
+		prerequisite = { focus = DEH_prepare1 }
+		relative_position_id = DEH_prepare1
+		x = 2
+		y = 1
+
+		available = {
+			NOT = { has_war_with = PRF }
+			NOT = { has_war_with = BHC }
+			owns_state = 437 #Indore
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		bypass = {
+			OR = {
+				NOT = { owns_state = 437 } #Lahore
+				owns_state = 893 #Nagpur
+			}
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_fortify_princely_border"
+			437 = {
+				add_building_construction = {
+					type = bunker
+					province = 8076
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 12080
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 2105
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 11995
+					level = 2
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = { owns_state = 428 }
+				428 = {
+					add_building_construction = {
+						type = bunker
+						province = 11952
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = DEH_fortify_commune_border
+		icon = GFX_goal_generic_india_fortify_against_bharat
+		cost = 7
+		prerequisite = { focus = DEH_prepare1 }
+		relative_position_id = DEH_prepare1
+		x = -2
+		y = 1
+
+		available = {
+			NOT = { has_war_with = PRF }
+			NOT = { has_war_with = BHC }
+			438 = { is_owned_and_controlled_by = DEH }
+			1057 = { is_owned_and_controlled_by = DEH }
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		bypass = {
+			OR = {
+				NOT = { owns_state = 438 } #Lucknow
+				NOT = { owns_state = 1057 } #Bagelkhand
+				owns_state = 436 #Jabalpur
+				owns_state = 435 #Bihar
+			}
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_fortify_commune_border"
+			438 = {
+				add_building_construction = {
+					type = bunker
+					province = 1569
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 2005
+					level = 2
+					instant_build = yes
+				}
+			}
+			1057 = {
+				add_building_construction = {
+					type = bunker
+					province = 7938
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 4410
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 10801
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = DEH_invadeBHC
+		icon = GFX_goal_generic_india_attack_bharat
+		will_lead_to_war_with = BHC
+		available = {
+			is_subject = no
+			has_army_manpower = { size > 299999 }
+			can_declare_war_on = 431.owner #Calcutta
+		}
+		prerequisite = { focus = DEH_prepare2 }
+		mutually_exclusive = { focus = DEH_revoltBHC }
+		relative_position_id = DEH_prepare1
+		x = -3
+		y = 2
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.75
+				432 = { is_owned_and_controlled_by = BHC } #Assam
+				431 = { is_owned_and_controlled_by = BHC } #Calcutta
+			}
+			modifier = {
+				factor = 2
+				431 = {
+					owner = {
+						set_temp_variable = { strength = num_divisions }
+						clamp_temp_variable = { var = strength min = 1 }
+						if = {
+							limit = { NEP = { is_ally_of_PREV = yes } }
+							add_to_temp_variable = { strength = NEP.num_divisions }
+						}
+						if = {
+							limit = { BRM = { is_ally_of_PREV = yes } }
+							add_to_temp_variable = { strength = BRM.num_divisions }
+						}
+						set_temp_variable = { my_strength = ROOT.num_divisions }
+						clamp_temp_variable = { var = my_strength min = 1 }
+						if = {
+							limit = { AFG = { is_ally_of_ROOT = yes } }
+							add_to_temp_variable = { my_strength = AFG.num_divisions }
+						}
+						if = {
+							limit = { NEP = { is_ally_of_ROOT = yes } }
+							add_to_temp_variable = { my_strength = NEP.num_divisions }
+						}
+						divide_temp_variable = { strength = my_strength }
+						check_variable = { strength < 0.75 }
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				431 = {
+					owner = {
+						set_temp_variable = { strength = num_divisions }
+						clamp_temp_variable = { var = strength min = 1 }
+						if = {
+							limit = { NEP = { is_ally_of_PREV = yes } }
+							add_to_temp_variable = { strength = NEP.num_divisions }
+						}
+						if = {
+							limit = { BRM = { is_ally_of_PREV = yes } }
+							add_to_temp_variable = { strength = BRM.num_divisions }
+						}
+						set_temp_variable = { my_strength = ROOT.num_divisions }
+						clamp_temp_variable = { var = my_strength min = 1 }
+						if = {
+							limit = { AFG = { is_ally_of_ROOT = yes } }
+							add_to_temp_variable = { my_strength = AFG.num_divisions }
+						}
+						if = {
+							limit = { NEP = { is_ally_of_ROOT = yes } }
+							add_to_temp_variable = { my_strength = NEP.num_divisions }
+						}
+						divide_temp_variable = { strength = my_strength }
+						check_variable = { strength < 0.9 }
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				431 = {
+					owner = {
+						set_temp_variable = { strength = num_divisions }
+						clamp_temp_variable = { var = strength min = 1 }
+						if = {
+							limit = { NEP = { is_ally_of_PREV = yes } }
+							add_to_temp_variable = { strength = NEP.num_divisions }
+						}
+						if = {
+							limit = { BRM = { is_ally_of_PREV = yes } }
+							add_to_temp_variable = { strength = BRM.num_divisions }
+						}
+						set_temp_variable = { my_strength = ROOT.num_divisions }
+						clamp_temp_variable = { var = my_strength min = 1 }
+						if = {
+							limit = { AFG = { is_ally_of_ROOT = yes } }
+							add_to_temp_variable = { my_strength = AFG.num_divisions }
+						}
+						if = {
+							limit = { NEP = { is_ally_of_ROOT = yes } }
+							add_to_temp_variable = { my_strength = NEP.num_divisions }
+						}
+						divide_temp_variable = { strength = my_strength }
+						check_variable = { strength > 1.0 }
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				431 = {
+					owner = {
+						set_temp_variable = { strength = num_divisions }
+						clamp_temp_variable = { var = strength min = 1 }
+						if = {
+							limit = { NEP = { is_ally_of_PREV = yes } }
+							add_to_temp_variable = { strength = NEP.num_divisions }
+						}
+						if = {
+							limit = { BRM = { is_ally_of_PREV = yes } }
+							add_to_temp_variable = { strength = BRM.num_divisions }
+						}
+						set_temp_variable = { my_strength = ROOT.num_divisions }
+						clamp_temp_variable = { var = my_strength min = 1 }
+						if = {
+							limit = { AFG = { is_ally_of_ROOT = yes } }
+							add_to_temp_variable = { my_strength = AFG.num_divisions }
+						}
+						if = {
+							limit = { NEP = { is_ally_of_ROOT = yes } }
+							add_to_temp_variable = { my_strength = NEP.num_divisions }
+						}
+						divide_temp_variable = { strength = my_strength }
+						check_variable = { strength > 1.5 }
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				has_war_with = PRF
+				PRF = { has_capitulated = no }
+				any_controlled_state = {
+					any_neighbor_state = {
+						is_controlled_by = PRF
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				has_war = yes
+				surrender_progress > 0.05
+			}
+			modifier = {
+				factor = 0
+				has_war = yes
+				431 = { is_owned_by = BHC }
+				BHC = {
+					NOT = {
+						has_war_with = PRF
+						surrender_progress > 0.35
+					}
+				}
+			}
+			modifier = {
+				factor = 5
+				431 = { is_owned_by = BHC }
+				PRF = { has_war_with = BHC }
+			}
+			modifier = {
+				factor = 2
+				431 = { is_owned_by = BHC }
+				BHC = { has_war_with = SIA }
+			}
+			modifier = {
+				factor = 3
+				431 = { is_owned_by = BHC }
+				NOT = { country_exists = PRF }
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_country_flag = PRF_unholy_deal_yes
+					has_country_flag = PRF_unholy_deal_maybe
+				}
+			}
+		}
+
+		bypass = {
+			owns_state = 431
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_invadeBHC"
+			random_country = {
+				limit = { owns_state = 431 }
+				ROOT = {
+					declare_war_on = {
+						target = PREV
+						type = annex_everything
+					}
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+	}
+
+	focus = {
+		id = DEH_revoltBHC
+		icon = GFX_goal_generic_india_assam_revolt
+		will_lead_to_war_with = BHC
+		available = {
+			is_subject = no
+			has_army_manpower = { size > 299999 }
+			432 = { is_owned_and_controlled_by = BHC } #Assam
+			431 = { is_owned_and_controlled_by = BHC } #Calcutta
+			can_declare_war_on = BHC
+		}
+		prerequisite = { focus = DEH_prepare2 }
+		mutually_exclusive = { focus = DEH_invadeBHC }
+		relative_position_id = DEH_prepare1
+		x = -1
+		y = 2
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 2
+				BHC = {
+					set_temp_variable = { strength = num_divisions }
+					clamp_temp_variable = { var = strength min = 1 }
+					if = {
+						limit = { NEP = { is_ally_of_PREV = yes } }
+						add_to_temp_variable = { strength = NEP.num_divisions }
+					}
+					if = {
+						limit = { BRM = { is_ally_of_PREV = yes } }
+						add_to_temp_variable = { strength = BRM.num_divisions }
+					}
+					set_temp_variable = { my_strength = ROOT.num_divisions }
+					clamp_temp_variable = { var = my_strength min = 1 }
+					if = {
+						limit = { AFG = { is_ally_of_ROOT = yes } }
+						add_to_temp_variable = { my_strength = AFG.num_divisions }
+					}
+					if = {
+						limit = { NEP = { is_ally_of_ROOT = yes } }
+						add_to_temp_variable = { my_strength = NEP.num_divisions }
+					}
+					divide_temp_variable = { strength = my_strength }
+					check_variable = { strength < 0.75 }
+				}
+			}
+			modifier = {
+				factor = 2
+				BHC = {
+					set_temp_variable = { strength = num_divisions }
+					clamp_temp_variable = { var = strength min = 1 }
+					if = {
+						limit = { NEP = { is_ally_of_PREV = yes } }
+						add_to_temp_variable = { strength = NEP.num_divisions }
+					}
+					if = {
+						limit = { BRM = { is_ally_of_PREV = yes } }
+						add_to_temp_variable = { strength = BRM.num_divisions }
+					}
+					set_temp_variable = { my_strength = ROOT.num_divisions }
+					clamp_temp_variable = { var = my_strength min = 1 }
+					if = {
+						limit = { AFG = { is_ally_of_ROOT = yes } }
+						add_to_temp_variable = { my_strength = AFG.num_divisions }
+					}
+					if = {
+						limit = { NEP = { is_ally_of_ROOT = yes } }
+						add_to_temp_variable = { my_strength = NEP.num_divisions }
+					}
+					divide_temp_variable = { strength = my_strength }
+					check_variable = { strength < 0.90 }
+				}
+			}
+			modifier = {
+				factor = 0.5
+				BHC = {
+					set_temp_variable = { strength = num_divisions }
+					clamp_temp_variable = { var = strength min = 1 }
+					if = {
+						limit = { NEP = { is_ally_of_PREV = yes } }
+						add_to_temp_variable = { strength = NEP.num_divisions }
+					}
+					if = {
+						limit = { BRM = { is_ally_of_PREV = yes } }
+						add_to_temp_variable = { strength = BRM.num_divisions }
+					}
+					set_temp_variable = { my_strength = ROOT.num_divisions }
+					clamp_temp_variable = { var = my_strength min = 1 }
+					if = {
+						limit = { AFG = { is_ally_of_ROOT = yes } }
+						add_to_temp_variable = { my_strength = AFG.num_divisions }
+					}
+					if = {
+						limit = { NEP = { is_ally_of_ROOT = yes } }
+						add_to_temp_variable = { my_strength = NEP.num_divisions }
+					}
+					divide_temp_variable = { strength = my_strength }
+					check_variable = { strength > 1.0 }
+				}
+			}
+			modifier = {
+				factor = 0.5
+				BHC = {
+					set_temp_variable = { strength = num_divisions }
+					clamp_temp_variable = { var = strength min = 1 }
+					if = {
+						limit = { NEP = { is_ally_of_PREV = yes } }
+						add_to_temp_variable = { strength = NEP.num_divisions }
+					}
+					if = {
+						limit = { BRM = { is_ally_of_PREV = yes } }
+						add_to_temp_variable = { strength = BRM.num_divisions }
+					}
+					set_temp_variable = { my_strength = ROOT.num_divisions }
+					clamp_temp_variable = { var = my_strength min = 1 }
+					if = {
+						limit = { AFG = { is_ally_of_ROOT = yes } }
+						add_to_temp_variable = { my_strength = AFG.num_divisions }
+					}
+					if = {
+						limit = { NEP = { is_ally_of_ROOT = yes } }
+						add_to_temp_variable = { my_strength = NEP.num_divisions }
+					}
+					divide_temp_variable = { strength = my_strength }
+					check_variable = { strength > 1.5 }
+				}
+			}
+			modifier = {
+				factor = 0
+				has_war_with = PRF
+				PRF = { has_capitulated = no }
+				any_controlled_state = {
+					any_neighbor_state = {
+						is_controlled_by = PRF
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				has_war = yes
+				surrender_progress > 0.05
+			}
+			modifier = {
+				factor = 0
+				has_war = yes
+				NOT = {
+					BHC = {
+						OR = {
+							has_war_with = PRF
+							surrender_progress > 0.35
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 5
+				BHC = { has_war_with = PRF }
+			}
+			modifier = {
+				factor = 2
+				BHC = { has_war_with = SIA }
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_country_flag = PRF_unholy_deal_yes
+					has_country_flag = PRF_unholy_deal_maybe
+				}
+			}
+		}
+
+		bypass = {
+			owns_state = 431
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_revoltBHC"
+			declare_war_on = { target = BHC type = annex_everything }
+			custom_effect_tooltip = DEH_BHC_revolters
+			set_state_controller = 432
+			hidden_effect = { load_oob = DEH_BHC_revolters }
+		}
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+	}
+
+	focus = {
+		id = DEH_invadePRF
+		icon = GFX_goal_generic_india_attack_princes
+		will_lead_to_war_with = PRF
+		available = {
+			is_subject = no
+			has_army_manpower = { size > 299999 }
+			can_declare_war_on = 427.owner #Hyderabad
+		}
+		prerequisite = { focus = DEH_prepare2 }
+		mutually_exclusive = { focus = DEH_revoltPRF }
+		relative_position_id = DEH_prepare1
+		x = 1
+		y = 2
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.75
+				427 = { is_owned_and_controlled_by = PRF }
+				867 = { is_owned_and_controlled_by = PRF }
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					ROOT_is_threatened = yes
+					var:427.owner = { default_attack_AI_trigger_FROM = yes }
+				}
+			}
+			modifier = {
+				factor = 0
+				is_in_faction_with = ENT
+				ENT = { ROOT_is_threatened = yes }
+			}
+			modifier = {
+				factor = 0
+				320 = { is_owned_and_controlled_by = PRF } #Madras
+			}
+			modifier = {
+				factor = 5
+				427 = { is_owned_by = PRF }
+				BHC = { has_war_with = PRF }
+			}
+			modifier = {
+				factor = 3
+				427 = { is_owned_by = PRF }
+				NOT = { country_exists = BHC }
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_country_flag = PRF_unholy_deal_yes
+					has_country_flag = PRF_unholy_deal_maybe
+				}
+			}
+		}
+
+		bypass = {
+			owns_state = 427
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_invadePRF"
+			random_country = {
+				limit = { owns_state = 427 }
+				ROOT = {
+					declare_war_on = {
+						target = PREV
+						type = annex_everything
+					}
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+	}
+
+	focus = {
+		id = DEH_revoltPRF
+		icon = GFX_goal_generic_india_travancore_revolt
+		will_lead_to_war_with = PRF
+		available = {
+			is_subject = no
+			has_army_manpower = { size > 299999 }
+			427 = { is_owned_and_controlled_by = PRF }
+			867 = { is_owned_and_controlled_by = PRF }
+			can_declare_war_on = PRF
+		}
+		prerequisite = { focus = DEH_prepare2 }
+		mutually_exclusive = { focus = DEH_invadePRF }
+		relative_position_id = DEH_prepare1
+		x = 3
+		y = 2
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.75
+				427 = { is_owned_and_controlled_by = PRF }
+				867 = { is_owned_and_controlled_by = PRF }
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					ROOT_is_threatened = yes
+					PRF = { default_attack_AI_trigger_FROM = yes }
+				}
+			}
+			modifier = {
+				factor = 0
+				is_in_faction_with = ENT
+				ENT = { ROOT_is_threatened = yes }
+			}
+			modifier = {
+				factor = 5
+				BHC = { has_war_with = PRF }
+			}
+			modifier = {
+				factor = 3
+				NOT = { country_exists = BHC }
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_country_flag = PRF_unholy_deal_yes
+					has_country_flag = PRF_unholy_deal_maybe
+				}
+			}
+		}
+
+		bypass = {
+			owns_state = 427
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_revoltPRF"
+			declare_war_on = { target = PRF type = annex_everything }
+			custom_effect_tooltip = DEH_PRF_revolters
+			set_state_controller = 867
+			hidden_effect = { load_oob = DEH_PRF_revolters }
+		}
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+	}
+
+	focus = {
+		id = DEH_unifyindia
+		icon = GFX_goal_british_india_restored
+		available = {
+			PRF = { exists = no }
+			BHC = { exists = no }
+			441 = { is_owned_and_controlled_by = DEH } #Calcutta
+			439 = { is_owned_and_controlled_by = DEH } #Delhi
+			427 = { is_owned_and_controlled_by = DEH } #Hyderabad
+		}
+		x = 26
+		y = 3
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_unifyindia"
+			add_ideas = DEH_unitedindia
+			add_stability = 0.10
+			add_political_power = 150
+			hidden_effect = {
+				news_event = { id = worldnews.72 }
+			}
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+
+	focus = {
+		id = DEH_madras
+		icon = GFX_goal_mysore
+		prerequisite = { focus = DEH_unifyindia }
+		will_lead_to_war_with = MAD
+		available = {
+			has_war = no
+			owns_state = 427 #Hyderabad
+			OR = {
+				320 = { NOT = { is_core_of = DEH } }
+				country_exists = MAD
+				country_exists = TRV
+				country_exists = MYS
+			}
+		}
+		relative_position_id = DEH_unifyindia
+		cost = 7
+		x = -3
+		y = 1
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				ROOT_is_threatened = yes
+				OR = {
+					can_declare_war_on = MAD
+					can_declare_war_on = TRV
+					can_declare_war_on = MYS
+				}
+			}
+			modifier = {
+				factor = 0
+				can_declare_war_on = MAD
+				MAD = { default_attack_AI_trigger_FROM = yes }
+			}
+			modifier = {
+				factor = 0
+				can_declare_war_on = TRV
+				TRV = { default_attack_AI_trigger_FROM = yes }
+			}
+			modifier = {
+				factor = 0
+				can_declare_war_on = MYS
+				MYS = { default_attack_AI_trigger_FROM = yes }
+			}
+		}
+
+		bypass = {
+			320 = { is_core_of = DEH }
+			NOT = { country_exists = MAD }
+			NOT = { country_exists = TRV }
+			NOT = { country_exists = MYS }
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_madras"
+			add_state_core = 320
+			add_state_core = 1095
+			if = {
+				limit = { country_exists = MAD }
+				MAD = { country_event = { id = prf.191 days = 1 } }
+			}
+			if = {
+				limit = { country_exists = MYS }
+				MYS = { country_event = { id = prf.191 days = 2 } }
+			}
+			if = {
+				limit = { country_exists = TRV }
+				TRV = { country_event = { id = prf.191 days = 3 } }
+			}
+		}
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+	}
+
+	focus = {
+		id = DEH_nepal
+		icon = GFX_goal_nepal
+		prerequisite = { focus = DEH_unifyindia }
+		will_lead_to_war_with = NEP
+		available = {
+			has_war = no
+			owns_state = 438 #Lucknow
+		}
+		relative_position_id = DEH_unifyindia
+		cost = 7
+		x = -5
+		y = 1
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				ROOT_is_threatened = yes
+			}
+			modifier = {
+				factor = 0
+				var:323.owner = { default_attack_AI_trigger_FROM = yes }
+			}
+		}
+
+		bypass = {
+			owns_state = 814 #Uttarakhand
+			owns_state = 887 #Muzaffarpur
+			owns_state = 888 #Sikkim
+			814 = { is_core_of = DEH }
+			887 = { is_core_of = DEH }
+			888 = { is_core_of = DEH }
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_nepal"
+			add_state_core = 814
+			add_state_core = 887
+			add_state_core = 888
+			if = {
+				limit = {
+					NEP = {
+						OR = {
+							AND = {
+								owns_state = 814
+								controls_state = 814
+							}
+							AND = {
+								owns_state = 888
+								controls_state = 888
+							}
+							AND = {
+								owns_state = 887
+								controls_state = 887
+							}
+						}
+					}
+				}
+				country_event = prf.187
+			}
+		}
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+	}
+
+	focus = {
+		id = DEH_siam
+		icon = GFX_YUN_Goal_The_Siamese_Threat
+		prerequisite = { focus = DEH_burma }
+		will_lead_to_war_with = SIA
+		available = {
+			has_war = no
+			is_subject = no
+			SIA = {
+				NOT = { is_subject_of = DEH }
+				NOT = { is_in_faction_with = DEH }
+				any_owned_state = { is_core_of = BRM }
+			}
+			OR = {
+				owns_state = 288 #Burma
+				BRM = { is_subject_of = DEH }
+			}
+		}
+		relative_position_id = DEH_unifyindia
+		cost = 7
+		x = -5
+		y = 3
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				ROOT_is_threatened = yes
+			}
+			modifier = {
+				factor = 0
+				SIA = { default_attack_AI_trigger_FROM = yes }
+			}
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_siam"
+			add_political_power = 100
+			SIA = { country_event = delhi.106 }
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = DEH_goa
+		icon = GFX_goal_portugal
+		prerequisite = { focus = DEH_nepal }
+		prerequisite = { focus = DEH_madras }
+		available = {
+			has_war = no
+			OR = {
+				owns_state = 425 #Mysore
+				owns_state = 868 #Kolhapur
+			}
+		}
+		relative_position_id = DEH_unifyindia
+		cost = 5
+		x = -7
+		y = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		bypass = {
+			321 = {
+				is_owned_by = DEH
+				is_core_of = DEH
+			}
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_goa"
+			add_state_core = 321 #Goa
+			random_country = {
+				limit = {
+					owns_state = 321
+					NOT = { tag = DEH }
+					NOT = { is_in_faction_with = DEH }
+					OR = {
+						is_actual_major = no
+						AND = {
+							has_war = yes
+							any_enemy_country = { is_actual_major = yes }
+						}
+					}
+				}
+				country_event = prf.198
+			}
+		}
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+	}
+
+	focus = {
+		id = DEH_ceylon
+		icon = GFX_goal_ceylon
+		prerequisite = { focus = DEH_nepal }
+		prerequisite = { focus = DEH_madras }
+		will_lead_to_war_with = CEY
+		available = {
+			has_war = no
+			owns_state = 423 #Madurai
+		}
+		relative_position_id = DEH_unifyindia
+		cost = 7
+		x = -3
+		y = 2
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				ROOT_is_threatened = yes
+			}
+			modifier = {
+				factor = 0
+				var:422.owner = { default_attack_AI_trigger_FROM = yes }
+			}
+		}
+		bypass = {
+			422 = {
+				is_owned_by = DEH
+				is_core_of = DEH
+			}
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_ceylon"
+			add_state_claim = 422 #Ceylon
+			add_state_claim = 733 #Andaman
+			add_state_claim = 281 #Maldiven
+			if = {
+				limit = {
+					OR = {
+						GER = { owns_state = 422 }
+						GER = { owns_state = 733 }
+						GER = { owns_state = 281 }
+						CEY = { is_subject_of = GER }
+					}
+					GER = {
+						has_war = yes
+						any_enemy_country = { is_actual_major = yes }
+					}
+					NOT = { is_in_faction_with = DEH }
+				}
+				GER = { country_event = prf.194 }
+			}
+			if = {
+				limit = {
+					OR = {
+						GER = { owns_state = 422 }
+						GER = { owns_state = 733 }
+						GER = { owns_state = 281 }
+						CEY = { is_subject_of = GER }
+					}
+					GER = { is_in_faction_with = DEH }
+				}
+				GER = { country_event = prf.195 }
+			}
+			if = {
+				limit = {
+					CEY = {
+						owns_state = 422
+						NOT = { is_subject_of = GER }
+					}
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = CEY
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+	}
+
+	focus = {
+		id = DEH_burma
+		icon = GFX_YUN_Goal_Exploit_Burma
+		prerequisite = { focus = DEH_nepal }
+		prerequisite = { focus = DEH_madras }
+		will_lead_to_war_with = BRM
+		available = {
+			has_war = no
+			owns_state = 430 #East Bengal
+			BRM = { NOT = { is_subject_of = DEH } }
+		}
+		relative_position_id = DEH_unifyindia
+		cost = 7
+		x = -5
+		y = 2
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					has_government = authoritarian_democrat
+					has_government = paternal_autocrat
+					has_government = national_populist
+				}
+			}
+			modifier = {
+				factor = 0
+				ROOT_is_threatened = yes
+			}
+			modifier = {
+				var:288.owner = { default_attack_AI_trigger_FROM = yes }
+			}
+		}
+
+		bypass = {
+			OR = {
+				BRM = { is_subject_of = DEH }
+				288 = {
+					is_owned_by = DEH
+					is_core_of = DEH
+				}
+			}
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_burma"
+			every_state = {
+				limit = {
+					is_core_of = BRM
+					NOT = { is_core_of = ROOT }
+				}
+				add_core_of = ROOT
+			}
+			every_state = {
+				limit = {
+					is_claimed_by = BRM
+					is_not_claim_or_core_of_ROOT = yes
+				}
+				add_claim_by = ROOT
+			}
+			if = {
+				limit = { country_exists = BRM }
+				create_wargoal = {
+					type = annex_everything
+					target = BRM
+				}
+			}
+			if = {
+				limit = {
+					NOT = { country_exists = BRM }
+					NOT = { owns_state = 288 }
+				}
+				random_country = {
+					limit = { owns_state = 288 }
+					DEH = {
+						create_wargoal = {
+							type = take_core_state
+							target = PREV
+						}
+					}
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+	}
+
+
+	# Domestic Policy Branch
+	focus = {
+		id = DEH_industryreformact #bombay plan
+		icon = GFX_goal_NEE_Nationalize_Key_Industries_Railways
+		relative_position_id = DEH_unifyindia
+		x = -1
+		y = 1
+		prerequisite = { focus = DEH_unifyindia }
+		cost = 7
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_industryreformact"
+			country_event = delhi.13
+		}
+	}
+
+	focus = {
+		id = DEH_movies
+		icon = GFX_goal_CAN_canadian_film_industry
+		relative_position_id = DEH_unifyindia
+		x = -1
+		y = 2
+		prerequisite = { focus = DEH_industryreformact }
+		cost = 4
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_movies"
+			add_stability = 0.05
+		}
+		search_filters = { FOCUS_FILTER_STABILITY }
+	}
+
+	focus = {
+		id = DEH_unifyindia_2
+		icon = GFX_PRF_new_india
+		prerequisite = { focus = DEH_movies }
+		available = {
+			OR = {
+				is_subject = no
+				is_subject_of = GBR
+			}
+			custom_trigger_tooltip = {
+				tooltip = DEH_all_india_owned
+				NOT = {
+					DEH = {
+						any_of = {
+							array = core_states
+							var:v = {
+								NOT = {
+									state = 422 #Ceylon
+									state = 281 #Maldives
+									state = 733 #Andaman Islands
+									is_owned_by = DEH
+								}
+							}
+						}
+					}
+					PRF = {
+						any_of = {
+							array = core_states
+							var:v = {
+								NOT = {
+									state = 422 #Ceylon
+									state = 281 #Maldives
+									state = 733 #Andaman Islands
+									is_owned_by = DEH
+								}
+							}
+						}
+					}
+					BHC = {
+						any_of = {
+							array = core_states
+							var:v = {
+								NOT = {
+									state = 422 #Ceylon
+									state = 281 #Maldives
+									state = 733 #Andaman Islands
+									is_owned_by = DEH
+								}
+							}
+						}
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = DEH_all_india_cored
+				NOT = {
+					PRF = {
+						any_of = {
+							array = core_states
+							var:v = {
+								NOT = {
+									state = 422 #Ceylon
+									state = 281 #Maldives
+									state = 733 #Andaman Islands
+									is_core_of = DEH
+								}
+							}
+						}
+					}
+					BHC = {
+						any_of = {
+							array = core_states
+							var:v = {
+								NOT = {
+									state = 422 #Ceylon
+									state = 281 #Maldives
+									state = 733 #Andaman Islands
+									is_core_of = DEH
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		relative_position_id = DEH_unifyindia
+		x = -1
+		y = 3
+		cost = 7
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_unifyindia_2"
+			add_political_power = 150
+			custom_effect_tooltip = DEH_becomes_india
+			if = {
+				limit = {
+					NOT = {
+						has_country_leader = {
+							name = "Winston Churchill"
+							ruling_only = yes
+						}
+					}
+				}
+				set_cosmetic_tag = DEH_IND
+			}
+			every_state = {
+				limit = { is_core_of = PRF }
+				remove_core_of = PRF
+			}
+			every_state = {
+				limit = { is_core_of = BHC }
+				remove_core_of = BHC
+			}
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = DEH_princely_officers
+		icon = GFX_DEH_integrate_PRF
+		cost = 7.00
+		prerequisite = { focus = DEH_unifyindia }
+		relative_position_id = DEH_unifyindia
+		x = 1
+		y = 1
+
+		available = {
+			owns_state = 443 #Hyderabad
+			NOT = { country_exists = PRF }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_princely_officers"
+			country_event = delhi.300
+		}
+	}
+
+	focus = {
+		id = DEH_PRFreform1
+		icon = GFX_goal_generic_india_integrate_bombay
+		relative_position_id = DEH_unifyindia
+		x = 1
+		y = 2
+		cost = 7
+		prerequisite = { focus = DEH_princely_officers }
+		available = {
+			owns_state = 429 #Bombay
+			controls_state = 429
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		bypass = {
+			429 = { is_core_of = DEH }
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_PRFreform1"
+			add_political_power = 100
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = DEH_PRFreform2
+		icon = GFX_goal_generic_india_integrate_deccan
+		relative_position_id = DEH_unifyindia
+		x = 1
+		y = 3
+		cost = 7
+		prerequisite = { focus = DEH_PRFreform1 }
+		available = {
+			owns_state = 427 #Hyderabad
+			controls_state = 427
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		bypass = {
+			427 = { is_core_of = DEH }
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_PRFreform2"
+			add_political_power = 100
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = DEH_bhartiya_officers
+		icon = GFX_PRF_integrate_BHC
+		cost = 7.00
+		prerequisite = { focus = DEH_unifyindia }
+		relative_position_id = DEH_unifyindia
+		x = 3
+		y = 1
+
+		available = {
+			owns_state = 431 #West Bengal
+			NOT = { country_exists = BHC }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_bhartiya_officers"
+			country_event = delhi.301
+		}
+	}
+
+	focus = {
+		id = DEH_industry_question
+		icon = GFX_focus_rus_industry2
+		cost = 7.00
+		prerequisite = {
+			focus = DEH_bhartiya_officers
+		}
+		relative_position_id = DEH_unifyindia
+		x = 3
+		y = 2
+
+		available = {
+			OR = {
+				owns_state = 431 #West Bengal
+				owns_state = 430 #East Bengal
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		bypass = {
+			431 = { is_core_of = ROOT }
+			430 = { is_core_of = ROOT }
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_industry_question"
+			add_political_power = 100
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = DEH_assam_question
+		icon = GFX_PRF_plantations
+		cost = 7.00
+		prerequisite = {
+			focus = DEH_industry_question
+		}
+		relative_position_id = DEH_unifyindia
+		x = 3
+		y = 3
+
+		available = {
+			OR = {
+				owns_state = 432 #Assam
+				owns_state = 434 #Manipur
+				owns_state = 858 #Tawang
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		bypass = {
+			432 = { is_core_of = DEH }
+			434 = { is_core_of = DEH }
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_assam_question"
+			add_political_power = 100
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = DEH_orissa_question
+		icon = GFX_PRF_zamindar
+		cost = 7.00
+		prerequisite = {
+			focus = DEH_industry_question
+		}
+		relative_position_id = DEH_unifyindia
+		x = 5
+		y = 3
+
+		available = {
+			OR = {
+				owns_state = 426 #Orissa
+				owns_state = 436 #Jabalpur
+				owns_state = 889 #Vizagapatnam
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		bypass = {
+			426 = { is_core_of = DEH }
+			436 = { is_core_of = DEH }
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus DEH_orissa_question"
+			add_political_power = 100
+			add_stability = 0.05
+		}
+	}
+
+    #甘加·辛格大君#
+    focus = {
+    id = DEH_NEW_YEAR
+    icon = GFX_DEH_NEW_YEAR
+    x = 11
+    y = 8
+    cost = 1
+    
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Ganga_Canal
+    icon = GFX_DEH_Ganga_Canal
+    x = -1
+    y = 1
+    relative_position_id = DEH_NEW_YEAR
+    prerequisite = {
+			focus = DEH_NEW_YEAR
+		}
+    cost = 1
+    
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_lAND_REFORM
+    icon = GFX_DEH_lAND_REFORM
+    x = 1
+    y = 1
+    relative_position_id = DEH_NEW_YEAR
+    prerequisite = {
+			focus = DEH_NEW_YEAR
+		}
+    cost = 1
+    
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_NEW_SETTLEMENTS
+    icon = GFX_NEW_SETTLEMENTS
+    x = -1
+    y = 1
+    relative_position_id = DEH_lAND_REFORM
+    prerequisite = {
+			focus = DEH_Ganga_Canal
+            focus = DEH_lAND_REFORM
+		}
+    cost = 1
+    
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_RAILWAY_STATION
+    icon = GFX_RAILWAY_STATION
+    x = -2
+    y = 1
+    relative_position_id = DEH_NEW_SETTLEMENTS
+    prerequisite = {
+			focus = DEH_NEW_SETTLEMENTS
+		}
+    cost = 1
+    
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_POWER_GRID
+    icon = GFX_POWER_GRID
+    x = 0
+    y = 1
+    relative_position_id = DEH_NEW_SETTLEMENTS
+    prerequisite = {
+			focus = DEH_NEW_SETTLEMENTS
+		}
+    cost = 1
+    
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_INTRODUCE_INVESTMENTS
+    icon = GFX_INTRODUCE_INVESTMENTS
+    x = 2
+    y = 1
+    relative_position_id = DEH_NEW_SETTLEMENTS
+    prerequisite = {
+			focus = DEH_NEW_SETTLEMENTS
+		}
+    cost = 1
+    
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_EXPAND_ARMY
+    icon = GFX_EXPAND_ARMY
+    x = -1
+    y = 1
+    relative_position_id = DEH_RAILWAY_STATION
+    prerequisite = {
+			focus = DEH_RAILWAY_STATION
+		}
+    cost = 1
+    
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_IMPROVE_PRISON
+    icon = GFX_IMPROVE_PRISON
+    x = 0
+    y = 1
+    relative_position_id = DEH_POWER_GRID
+    prerequisite = {
+			focus = DEH_POWER_GRID
+		}
+    cost = 1
+    
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_BUY_WEAPON
+    icon = GFX_BUY_WEAPON
+    x = 1
+    y = 1
+    relative_position_id = DEH_INTRODUCE_INVESTMENTS
+    prerequisite = {
+			focus = DEH_INTRODUCE_INVESTMENTS
+		}
+    cost = 1
+    
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_keep_RULE
+    icon = GFX_keep_RULE
+    x = 0
+    y = 1
+    relative_position_id = DEH_IMPROVE_PRISON
+    prerequisite = {
+			focus = DEH_IMPROVE_PRISON
+            focus = DEH_EXPAND_ARMY
+            focus = DEH_BUY_WEAPON
+
+		}
+    cost = 1
+    
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_critical_hit
+    icon = GFX_critical_hit
+    x = 0
+    y = 1
+    relative_position_id = DEH_keep_RULE
+    prerequisite = {
+			focus = DEH_keep_RULE
+		}
+    cost = 1
+    
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Dobry_Maharadża
+    icon = GFX_Dobry_Maharadża
+    x = -5
+    y = 1
+    relative_position_id = DEH_critical_hit
+    prerequisite = {
+			focus = DEH_critical_hit
+		}
+    cost = 1
+    mutually_exclusive = { focus = DEH_Winston_Churchill }
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Winston_Churchill
+    icon = GFX_Winston_Churchill
+    x = 5
+    y = 1
+    relative_position_id = DEH_critical_hit
+    prerequisite = {
+			focus = DEH_critical_hit
+		}
+    cost = 1
+    mutually_exclusive = { focus = DEH_Dobry_Maharadża }
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_save_situation
+    icon = GFX_save_situation
+    x = -2
+    y = 1
+    relative_position_id = DEH_Dobry_Maharadża
+    prerequisite = {
+			focus = DEH_Dobry_Maharadża
+		}
+    cost = 1
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_support_puppet
+    icon = GFX_support_puppet
+    x = 0
+    y = 1
+    relative_position_id = DEH_Dobry_Maharadża
+    prerequisite = {
+			focus = DEH_Dobry_Maharadża
+		}
+    cost = 1
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_woo_local
+    icon = GFX_woo_local
+    x = 2
+    y = 1
+    relative_position_id = DEH_Dobry_Maharadża
+    prerequisite = {
+			focus = DEH_Dobry_Maharadża
+		}
+    cost = 1
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_rebuild_army
+    icon = GFX_rebuild_army
+    x = -1
+    y = 1
+    relative_position_id = DEH_save_situation
+    prerequisite = {
+			focus = DEH_save_situation
+		}
+    cost = 1
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_war_recovery
+    icon = GFX_war_recovery
+    x = 1
+    y = 1
+    relative_position_id = DEH_save_situation
+    prerequisite = {
+			focus = DEH_save_situation
+		}
+    cost = 1
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_control_local
+    icon = GFX_control_local
+    x = -1
+    y = 1
+    relative_position_id = DEH_woo_local
+    prerequisite = {
+			focus = DEH_woo_local
+		}
+    cost = 1
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_devolop_land
+    icon = GFX_devolop_land
+    x = 1
+    y = 1
+    relative_position_id = DEH_woo_local
+    prerequisite = {
+			focus = DEH_woo_local
+		}
+    cost = 1
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_clean_border
+    icon = GFX_clean_border
+    x = 0
+    y = 2
+    relative_position_id = DEH_support_puppet
+    prerequisite = {
+			focus = DEH_support_puppet
+		}
+    cost = 1
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_call_britain
+    icon = GFX_call_britain
+    x = 1
+    y = 1
+    relative_position_id = DEH_rebuild_army
+    prerequisite = {
+			focus = DEH_rebuild_army
+			focus = DEH_war_recovery
+		}
+    cost = 1
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_temporary_security
+    icon = GFX_temporary_security
+    x = 1
+    y = 1
+    relative_position_id = DEH_control_local
+    prerequisite = {
+			focus = DEH_control_local
+			focus = DEH_devolop_land
+		}
+    cost = 1
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_promote_india
+    icon = GFX_promote_india
+    x = 1
+    y = 1
+    relative_position_id = DEH_call_britain
+    prerequisite = {
+			focus = DEH_call_britain
+			focus = DEH_clean_border
+		}
+    cost = 1
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_delhi_plan
+    icon = GFX_delhi_plan
+    x = -1
+    y = 1
+    relative_position_id = DEH_temporary_security
+    prerequisite = {
+			focus = DEH_temporary_security
+			focus = DEH_clean_border
+		}
+    cost = 1
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_delhi_declaration
+    icon = GFX_delhi_declaration
+    x = -1
+    y = 1
+    relative_position_id = DEH_delhi_plan
+    prerequisite = {
+			focus = DEH_promote_india
+			focus = DEH_delhi_plan
+		}
+    cost = 1
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_iron_hand
+    icon = GFX_iron_hand
+    x = -2
+    y = 1
+    relative_position_id = DEH_Winston_Churchill
+    prerequisite = {
+			focus = DEH_Winston_Churchill
+		}
+    cost = 1
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_governor_first
+    icon = GFX_governor_first
+    x = 0
+    y = 1
+    relative_position_id = DEH_Winston_Churchill
+    prerequisite = {
+			focus = DEH_Winston_Churchill
+		}
+    cost = 1
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_imperial_propaganda
+    icon = GFX_imperial_propaganda
+    x = 2
+    y = 1
+    relative_position_id = DEH_Winston_Churchill
+    prerequisite = {
+			focus = DEH_Winston_Churchill
+		}
+    cost = 1
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_colonial_army
+    icon = GFX_colonial_army
+    x = -1
+    y = 1
+    relative_position_id = DEH_iron_hand
+    prerequisite = {
+			focus = DEH_iron_hand
+		}
+    cost = 1
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_colonial_economy
+    icon = GFX_colonial_economy
+    x = 1
+    y = 1
+    relative_position_id = DEH_iron_hand
+    prerequisite = {
+			focus = DEH_iron_hand
+		}
+    cost = 1
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_control_afghanistan
+    icon = GFX_control_afghanistan
+    x = -1
+    y = 1
+    relative_position_id = DEH_imperial_propaganda
+    prerequisite = {
+			focus = DEH_imperial_propaganda
+		}
+    cost = 1
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_price_scissors
+    icon = GFX_price_scissors
+    x = 1
+    y = 1
+    relative_position_id = DEH_imperial_propaganda
+    prerequisite = {
+			focus = DEH_imperial_propaganda
+		}
+    cost = 1
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_fleet_expansion
+    icon = GFX_fleet_expansion
+    x = 0
+    y = 2
+    relative_position_id = DEH_governor_first
+    prerequisite = {
+			focus = DEH_governor_first
+		}
+    cost = 1
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_britain_fist
+    icon = GFX_britain_fist
+    x = 1
+    y = 1
+    relative_position_id = DEH_colonial_army
+    prerequisite = {
+			focus = DEH_colonial_army
+			focus = DEH_colonial_economy
+		}
+    cost = 1
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_britain_first
+    icon = GFX_britain_first
+    x = 1
+    y = 1
+    relative_position_id = DEH_control_afghanistan
+    prerequisite = {
+			focus = DEH_control_afghanistan
+			focus = DEH_price_scissors
+		}
+    cost = 1
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_empire_flag
+    icon = GFX_empire_flag
+    x = 1
+    y = 1
+    relative_position_id = DEH_britain_fist
+    prerequisite = {
+			focus = DEH_britain_fist
+			focus = DEH_fleet_expansion
+		}
+    cost = 1
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_deal_untouchables
+    icon = GFX_deal_untouchables
+    x = -1
+    y = 1
+    relative_position_id = DEH_britain_first
+    prerequisite = {
+			focus = DEH_britain_first
+			focus = DEH_fleet_expansion
+		}
+    cost = 1
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_bright_pearl
+    icon = GFX_bright_pearl
+    x = -1
+    y = 1
+    relative_position_id = DEH_deal_untouchables
+    prerequisite = {
+			focus = DEH_empire_flag
+			focus = DEH_deal_untouchables
+		}
+    cost = 1
+    completion_reward = {
+        
+    }
+}
+#国民工党#
+focus = {
+    id = DEH_nlo_victory
+    icon = GFX_nlo_victory
+    x = 25
+    y = 8
+    cost = 1
+    
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Gurusaday_Dutt
+    icon = GFX_Gurusaday_Dutt
+    x = -5
+    y = 1
+    relative_position_id = DEH_nlo_victory
+    cost = 1
+        prerequisite = {
+			focus = DEH_nlo_victory
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_GMalcolm_Lyall_Darling
+    icon = GFX_Malcolm_Lyall_Darling
+    x = 0
+    y = 1
+    relative_position_id = DEH_nlo_victory
+    cost = 1
+        prerequisite = {
+			focus = DEH_nlo_victory
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Beresford_Craddock
+    icon = GFX_Beresford_Craddock
+    x = 5
+    y = 1
+    relative_position_id = DEH_nlo_victory
+    cost = 1
+        prerequisite = {
+			focus = DEH_nlo_victory
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_build_community
+    icon = GFX_build_community
+    x = 0
+    y = 1
+    relative_position_id = DEH_Gurusaday_Dutt
+    cost = 1
+        prerequisite = {
+			focus = DEH_Gurusaday_Dutt
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_skils_training
+    icon = GFX_skils_training
+    x = -2
+    y = 1
+    relative_position_id = DEH_Gurusaday_Dutt
+    cost = 1
+        prerequisite = {
+			focus = DEH_Gurusaday_Dutt
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_administrative_man
+    icon = GFX_administrative_man
+    x = 2
+    y = 1
+    relative_position_id = DEH_Gurusaday_Dutt
+    cost = 1
+        prerequisite = {
+			focus = DEH_Gurusaday_Dutt
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_mobilize_women
+    icon = GFX_mobilize_women
+    x = -1
+    y = 1
+    relative_position_id = DEH_build_community
+    cost = 1
+        prerequisite = {
+			focus = DEH_build_community
+			focus = DEH_skils_training
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_labor_dignity
+    icon = GFX_labor_dignity
+    x = 1
+    y = 1
+    relative_position_id = DEH_build_community
+    cost = 1
+        prerequisite = {
+			focus = DEH_build_community
+			focus = DEH_administrative_man
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_improve_countryside
+    icon = GFX_improve_countryside
+    x = -1
+    y = 1
+    relative_position_id = DEH_labor_dignity
+    cost = 1
+        prerequisite = {
+			focus = DEH_labor_dignity
+			focus = DEH_mobilize_women
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_minor_right
+    icon = GFX_minor_right
+    x = -1
+    y = 1
+    relative_position_id = DEH_mobilize_women
+    cost = 1
+        prerequisite = {
+			focus = DEH_mobilize_women
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_worker_law
+    icon = GFX_worker_law
+    x = 1
+    y = 1
+    relative_position_id = DEH_labor_dignity
+    cost = 1
+        prerequisite = {
+			focus = DEH_labor_dignity
+			focus = DEH_mobilize_women
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_folk_revival
+    icon = GFX_folk_revival
+    x = 0
+    y = 1
+    relative_position_id = DEH_improve_countryside
+    cost = 1
+        prerequisite = {
+			focus = DEH_improve_countryside
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_cooperative_movement
+    icon = GFX_cooperative_movement
+    x = -1
+    y = 1
+    relative_position_id = DEH_GMalcolm_Lyall_Darling
+    cost = 1
+        prerequisite = {
+			focus = DEH_GMalcolm_Lyall_Darling
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_bridging_contradictions
+    icon = GFX_bridging_contradictions
+    x = 1
+    y = 1
+    relative_position_id = DEH_GMalcolm_Lyall_Darling
+    cost = 1
+        prerequisite = {
+			focus = DEH_GMalcolm_Lyall_Darling
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_focus_agriculture
+    icon = GFX_focus_agriculture
+    x = -1
+    y = 1
+    relative_position_id = DEH_bridging_contradictions
+    cost = 1
+        prerequisite = {
+			focus = DEH_bridging_contradictions
+			focus = DEH_cooperative_movement
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_focus_countryside
+    icon = GFX_focus_countryside
+    x = -1
+    y = 1
+    relative_position_id = DEH_cooperative_movement
+    cost = 1
+        prerequisite = {
+			focus = DEH_cooperative_movement
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_focus_farmer
+    icon = GFX_focus_farmer
+    x = 1
+    y = 1
+    relative_position_id = DEH_bridging_contradictions
+    cost = 1
+        prerequisite = {
+			focus = DEH_bridging_contradictions
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_reform_bank
+    icon = GFX_reform_bank
+    x = -1
+    y = 1
+    relative_position_id = DEH_focus_agriculture
+    cost = 1
+        prerequisite = {
+			focus = DEH_focus_agriculture
+			focus = DEH_focus_countryside
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_usury_problem
+    icon = GFX_usury_problem
+    x = 1
+    y = 1
+    relative_position_id = DEH_focus_agriculture
+    cost = 1
+        prerequisite = {
+			focus = DEH_focus_agriculture
+			focus = DEH_focus_farmer
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_beauty_india
+    icon = GFX_beauty_india
+    x = 0
+    y = 1
+    relative_position_id = DEH_reform_bank
+    cost = 1
+        prerequisite = {
+			focus = DEH_reform_bank
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_harmony_southasia
+    icon = GFX_harmony_southasia
+    x = 0
+    y = 1
+    relative_position_id = DEH_usury_problem
+    cost = 1
+        prerequisite = {
+			focus = DEH_usury_problem
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_eliminate_customs
+    icon = GFX_eliminate_customs
+    x = 0
+    y = 1
+    relative_position_id = DEH_Beresford_Craddock
+    cost = 1
+        prerequisite = {
+			focus = DEH_Beresford_Craddock
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_prohibit_alcohol
+    icon = GFX_prohibit_alcohol
+    x = -1
+    y = 1
+    relative_position_id = DEH_eliminate_customs
+    cost = 1
+        prerequisite = {
+			focus = DEH_eliminate_customs
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_improve_sanitary
+    icon = GFX_improve_sanitary
+    x = 1
+    y = 1
+    relative_position_id = DEH_eliminate_customs
+    cost = 1
+        prerequisite = {
+			focus = DEH_eliminate_customs
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_cultural_hierarchy
+    icon = GFX_cultural_hierarchy
+    x = 1
+    y = 1
+    relative_position_id = DEH_prohibit_alcohol
+    cost = 1
+        prerequisite = {
+			focus = DEH_prohibit_alcohol
+			focus = DEH_improve_sanitary
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_racial_separation
+    icon = GFX_racial_separation
+    x = -1
+    y = 1
+    relative_position_id = DEH_prohibit_alcohol
+    cost = 1
+        prerequisite = {
+			focus = DEH_prohibit_alcohol
+			focus = DEH_improve_sanitary
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_class_curing
+    icon = GFX_class_curing
+    x = 1
+    y = 1
+    relative_position_id = DEH_improve_sanitary
+    cost = 1
+        prerequisite = {
+			focus = DEH_prohibit_alcohol
+			focus = DEH_improve_sanitary
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_follow_empire
+    icon = GFX_follow_empire
+    x = 0
+    y = 1
+    relative_position_id = DEH_cultural_hierarchy
+    cost = 1
+        prerequisite = {
+			focus = DEH_cultural_hierarchy
+			focus = DEH_racial_separation
+			focus = DEH_class_curing
+		}
+    completion_reward = {
+        
+    }
+}
+
+#大君胜利#
+focus = {
+    id = DEH_maharaja_victory
+    icon = GFX_maharaja_victory
+    x = 28
+    y = 15
+    cost = 1
+    
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Ripudaman_Singh
+    icon = GFX_Ripudaman_Singh
+    x = -6
+    y = 1
+    relative_position_id = DEH_maharaja_victory
+    cost = 1
+        prerequisite = {
+			focus = DEH_maharaja_victory
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Digvijaysinhji_Ranjitsinhji_Jadeja
+    icon = GFX_Digvijaysinhji_Ranjitsinhji_Jadeja
+    x = 0
+    y = 1
+    relative_position_id = DEH_maharaja_victory
+    cost = 1
+        prerequisite = {
+			focus = DEH_maharaja_victory
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Jiwajirao_Scindia
+    icon = GFX_Jiwajirao_Scindia
+    x = 6
+    y = 1
+    relative_position_id = DEH_maharaja_victory
+    cost = 1
+        prerequisite = {
+			focus = DEH_maharaja_victory
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_law_reform
+    icon = GFX_law_reform
+    x = -1
+    y = 1
+    relative_position_id = DEH_Ripudaman_Singh
+    cost = 1
+        prerequisite = {
+			focus = DEH_Ripudaman_Singh
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_India_center
+    icon = GFX_India_center
+    x = 1
+    y = 1
+    relative_position_id = DEH_Ripudaman_Singh
+    cost = 1
+        prerequisite = {
+			focus = DEH_Ripudaman_Singh
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_protect_religion
+    icon = GFX_protect_religion
+    x = -1
+    y = 1
+    relative_position_id = DEH_India_center
+    cost = 1
+        prerequisite = {
+			focus = DEH_India_center
+			focus = DEH_law_reform
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_self_insurance
+    icon = GFX_self_insurance
+    x = -1
+    y = 1
+    relative_position_id = DEH_law_reform
+    cost = 1
+        prerequisite = {
+			focus = DEH_India_center
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_consolidate_foundation
+    icon = GFX_consolidate_foundation
+    x = 1
+    y = 1
+    relative_position_id = DEH_India_center
+    cost = 1
+        prerequisite = {
+			focus = DEH_India_center
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_glorious_isolation
+    icon = GFX_glorious_isolation
+    x = 0
+    y = 1
+    relative_position_id = DEH_self_insurance
+    cost = 1
+        prerequisite = {
+			focus = DEH_self_insurance
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_build_india
+    icon = GFX_build_india
+    x = 0
+    y = 1
+    relative_position_id = DEH_consolidate_foundation
+    cost = 1
+        prerequisite = {
+			focus = DEH_consolidate_foundation
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_local_talents
+    icon = GFX_local_talents
+    x = 0
+    y = 1
+    relative_position_id = DEH_protect_religion
+    cost = 1
+        prerequisite = {
+			focus = DEH_protect_religion
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_more_autonomy
+    icon = GFX_more_autonomy
+    x = 0
+    y = 1
+    relative_position_id = DEH_local_talents
+    cost = 1
+        prerequisite = {
+			focus = DEH_local_talents
+			focus = DEH_build_india
+			focus = DEH_glorious_isolation
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_relieve_people
+    icon = GFX_relieve_people
+    x = 0
+    y = 1
+    relative_position_id = DEH_Digvijaysinhji_Ranjitsinhji_Jadeja
+    cost = 1
+        prerequisite = {
+			focus = DEH_Digvijaysinhji_Ranjitsinhji_Jadeja
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_stabilize_situation
+    icon = GFX_stabilize_situation
+    x = -2
+    y = 1
+    relative_position_id = DEH_Digvijaysinhji_Ranjitsinhji_Jadeja
+    cost = 1
+        prerequisite = {
+			focus = DEH_Digvijaysinhji_Ranjitsinhji_Jadeja
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_solve_economy
+    icon = GFX_solve_economy
+    x = 2
+    y = 1
+    relative_position_id = DEH_Digvijaysinhji_Ranjitsinhji_Jadeja
+    cost = 1
+        prerequisite = {
+			focus = DEH_Digvijaysinhji_Ranjitsinhji_Jadeja
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_introduce_poles
+    icon = GFX_introduce_poles
+    x = -1
+    y = 1
+    relative_position_id = DEH_relieve_people
+    cost = 1
+        prerequisite = {
+			focus = DEH_relieve_people
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_limited_cooperation
+    icon = GFX_limited_cooperation
+    x = 1
+    y = 1
+    relative_position_id = DEH_relieve_people
+    cost = 1
+        prerequisite = {
+			focus = DEH_relieve_people
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_diplomacy_importance
+    icon = GFX_diplomacy_importance
+    x = -1
+    y = 1
+    relative_position_id = DEH_limited_cooperation
+    cost = 1
+        prerequisite = {
+			focus = DEH_introduce_poles
+			focus = DEH_limited_cooperation
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_shelter_talents
+    icon = GFX_shelter_talents
+    x = -1
+    y = 1
+    relative_position_id = DEH_introduce_poles
+    cost = 1
+        prerequisite = {
+			focus = DEH_introduce_poles
+			focus = DEH_limited_cooperation
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_sports_construction
+    icon = GFX_sports_construction
+    x = 1
+    y = 1
+    relative_position_id = DEH_limited_cooperation
+    cost = 1
+        prerequisite = {
+			focus = DEH_introduce_poles
+			focus = DEH_limited_cooperation
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_common_divisor
+    icon = GFX_common_divisor
+    x = 0
+    y = 1
+    relative_position_id = DEH_diplomacy_importance
+    cost = 1
+        prerequisite = {
+			focus = DEH_diplomacy_importance
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_devolop_princestate
+    icon = GFX_devolop_princestate
+    x = -1.5
+    y = 1
+    relative_position_id = DEH_Jiwajirao_Scindia
+    cost = 1
+        prerequisite = {
+			focus = DEH_Jiwajirao_Scindia
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_premodernity
+    icon = GFX_premodernity
+    x = 0
+    y = 1
+    relative_position_id = DEH_Jiwajirao_Scindia
+    cost = 1
+        prerequisite = {
+			focus = DEH_Jiwajirao_Scindia
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_federal_autonomy
+    icon = GFX_federal_autonomy
+    x = 1.5
+    y = 1
+    relative_position_id = DEH_Jiwajirao_Scindia
+    cost = 1
+        prerequisite = {
+			focus = DEH_Jiwajirao_Scindia
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_petticoat_influence
+    icon = GFX_petticoat_influence
+    x = -1.5
+    y = 1
+    relative_position_id = DEH_federal_autonomy
+    cost = 1
+        prerequisite = {
+			focus = DEH_federal_autonomy
+			focus = DEH_devolop_princestate
+			focus = DEH_premodernity
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_group_politics
+    icon = GFX_group_politics
+    x = -2.5
+    y = 1
+    relative_position_id = DEH_petticoat_influence
+    cost = 1
+        prerequisite = {
+			focus = DEH_petticoat_influence
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_found_party
+    icon = GFX_found_party
+    x = -1
+    y = 1
+    relative_position_id = DEH_petticoat_influence
+    cost = 1
+        prerequisite = {
+			focus = DEH_petticoat_influence
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_develop_fractions
+    icon = GFX_develop_fractions
+    x = 1
+    y = 1
+    relative_position_id = DEH_petticoat_influence
+    cost = 1
+        prerequisite = {
+			focus = DEH_petticoat_influence
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_political_machine
+    icon = GFX_political_machine
+    x = 2.5
+    y = 1
+    relative_position_id = DEH_petticoat_influence
+    cost = 1
+        prerequisite = {
+			focus = DEH_petticoat_influence
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_so_india
+    icon = GFX_group_politics
+    x = 2.5
+    y = 1
+    relative_position_id = DEH_group_politics
+    cost = 1
+        prerequisite = {
+			focus = DEH_group_politics
+			focus = DEH_found_party
+			focus = DEH_develop_fractions
+			focus = DEH_political_machine
+		}
+    completion_reward = {
+        
+    }
+}
+#穆斯林#
+focus = {
+    id = DEH_Muslim
+    icon = GFX_Muslim
+    x = 15
+    y = 22
+    cost = 1
+        prerequisite = {
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Khaksar
+    icon = GFX_Khaksar
+    x = -10
+    y = 1
+    relative_position_id = DEH_Muslim
+    cost = 1
+        prerequisite = {
+			focus = DEH_Muslim
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Anti_Partition
+    icon = GFX_Anti_Partition
+    x = -4
+    y = 1
+    relative_position_id = DEH_Khaksar
+    cost = 1
+        prerequisite = {
+			focus = DEH_Khaksar
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Interfaith_Unity
+    icon = GFX_Interfaith_Unity
+    x = 0
+    y = 1
+    relative_position_id = DEH_Khaksar
+    cost = 1
+        prerequisite = {
+			focus = DEH_Khaksar
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Khaksar_movement
+    icon = GFX_Khaksar_movement
+    x = 4
+    y = 1
+    relative_position_id = DEH_Khaksar
+    cost = 1
+        prerequisite = {
+			focus = DEH_Khaksar
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Scientific_Koran
+    icon = GFX_Scientific_Koran
+    x = 1
+    y = 1
+    relative_position_id = DEH_Interfaith_Unity
+    cost = 1
+        prerequisite = {
+			focus = DEH_Interfaith_Unity
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Cambridge_talent
+    icon = GFX_Cambridge_talent
+    x = -1
+    y = 1
+    relative_position_id = DEH_Interfaith_Unity
+    cost = 1
+        prerequisite = {
+			focus = DEH_Interfaith_Unity
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Kashmir_March
+    icon = GFX_Kashmir_March
+    x = -1
+    y = 1
+    relative_position_id = DEH_Anti_Partition
+    cost = 1
+        prerequisite = {
+			focus = DEH_Anti_Partition
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Assassination_Attempt
+    icon = GFX_Assassination_Attempt
+    x = 1
+    y = 1
+    relative_position_id = DEH_Anti_Partition
+    cost = 1
+        prerequisite = {
+			focus = DEH_Anti_Partition
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_unification_uniform
+    icon = GFX_unification_uniform
+    x = -1
+    y = 1
+    relative_position_id = DEH_Khaksar_movement
+    cost = 1
+        prerequisite = {
+			focus = DEH_Khaksar_movement
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_hold_spade
+    icon = GFX_hold_spade
+    x = 1
+    y = 1
+    relative_position_id = DEH_Khaksar_movement
+    cost = 1
+        prerequisite = {
+			focus = DEH_Khaksar_movement
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_religion_league
+    icon = GFX_religion_league
+    x = 1
+    y = 1
+    relative_position_id = DEH_Kashmir_March
+    cost = 1
+        prerequisite = {
+			focus = DEH_Kashmir_March
+		    focus = DEH_Assassination_Attempt
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Theistic_Evolution
+    icon = GFX_Theistic_Evolution
+    x = 1
+    y = 1
+    relative_position_id = DEH_Cambridge_talent
+    cost = 1
+        prerequisite = {
+			focus = DEH_Cambridge_talent
+		    focus = DEH_Scientific_Koran
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_islam_rivival
+    icon = GFX_islam_rivival
+    x = 1
+    y = 1
+    relative_position_id = DEH_unification_uniform
+    cost = 1
+        prerequisite = {
+			focus = DEH_unification_uniform
+		    focus = DEH_hold_spade
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_islam_anarchy
+    icon = GFX_islam_anarchy
+    x = 2
+    y = 1
+    relative_position_id = DEH_religion_league
+    cost = 1
+        prerequisite = {
+			focus = DEH_religion_league
+		    focus = DEH_Theistic_Evolution
+		}
+		mutually_exclusive = { focus = DEH_islam_democracy }
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_islam_democracy
+    icon = GFX_islam_democracy
+    x = 2
+    y = 1
+    relative_position_id = DEH_Theistic_Evolution
+    cost = 1
+        prerequisite = {
+			focus = DEH_islam_rivival
+		    focus = DEH_Theistic_Evolution
+		}
+		mutually_exclusive = { focus = DEH_islam_anarchy }
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Caliphal_Succession
+    icon = GFX_Caliphal_Succession
+    x = 0
+    y = 1
+    relative_position_id = DEH_Muslim
+    cost = 1
+        prerequisite = {
+			focus = DEH_Muslim
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Caesaropapism
+    icon = GFX_Caesaropapism
+    x = -2
+    y = 1
+    relative_position_id = DEH_Caliphal_Succession
+    cost = 1
+        prerequisite = {
+			focus = DEH_Caliphal_Succession
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Interfaith_Dialogue
+    icon = GFX_Interfaith_Dialogue
+    x = 0
+    y = 1
+    relative_position_id = DEH_Caliphal_Succession
+    cost = 1
+        prerequisite = {
+			focus = DEH_Caliphal_Succession
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Civil_Advocacy
+    icon = GFX_Civil_Advocacy
+    x = 2
+    y = 1
+    relative_position_id = DEH_Caliphal_Succession
+    cost = 1
+        prerequisite = {
+			focus = DEH_Caliphal_Succession
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Quranic_Pedagogy
+    icon = GFX_Quranic_Pedagogy
+    x = -1
+    y = 1
+    relative_position_id = DEH_Caesaropapism
+    cost = 1
+        prerequisite = {
+			focus = DEH_Caesaropapism
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_religion_organization
+    icon = GFX_religion_organization
+    x = 1
+    y = 1
+    relative_position_id = DEH_Caesaropapism
+    cost = 1
+        prerequisite = {
+			focus = DEH_Caesaropapism
+            focus = DEH_Interfaith_Dialogue		
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Calendar_Reform
+    icon = GFX_Calendar_Reform
+    x = 1
+    y = 1
+    relative_position_id = DEH_Interfaith_Dialogue
+    cost = 1
+        prerequisite = {
+	        focus = DEH_Interfaith_Dialogue	
+			focus = DEH_Civil_Advocacy			
+
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Nonviolent_Resistance
+    icon = GFX_Nonviolent_Resistance
+    x = 1
+    y = 1
+    relative_position_id = DEH_Civil_Advocacy	
+    cost = 1
+        prerequisite = {
+			focus = DEH_Civil_Advocacy			
+
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Caliphal_Authority
+    icon = GFX_Caliphal_Authority
+    x = 1
+    y = 1
+    relative_position_id = DEH_Quranic_Pedagogy
+    cost = 1
+        prerequisite = {
+			focus = DEH_Quranic_Pedagogy
+			focus = DEH_religion_organization			
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Tehrik
+    icon = GFX_Tehrik
+    x = 1
+    y = 1
+    relative_position_id = DEH_religion_organization	
+    cost = 1
+        prerequisite = {
+			focus = DEH_Calendar_Reform
+			focus = DEH_religion_organization			
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Rabwah
+    icon = GFX_Rabwah
+    x = 1
+    y = 1
+    relative_position_id = DEH_Calendar_Reform
+    cost = 1
+        prerequisite = {
+			focus = DEH_Calendar_Reform
+			focus = DEH_Nonviolent_Resistance		
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_European_Mission
+    icon = GFX_European_Mission
+    x = 1
+    y = 1
+    relative_position_id = DEH_Caliphal_Authority
+    cost = 1
+        prerequisite = {
+			focus = DEH_Caliphal_Authority
+			focus = DEH_Tehrik		
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Ahrar_Mission
+    icon = GFX_Ahrar_Mission
+    x = -1
+    y = 1
+    relative_position_id = DEH_Rabwah
+    cost = 1
+        prerequisite = {
+			focus = DEH_Rabwah
+			focus = DEH_Tehrik		
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_islam_goldenday
+    icon = GFX_islam_goldenday
+    x = 1
+    y = 1
+    relative_position_id = DEH_European_Mission
+    cost = 1
+        prerequisite = {
+			focus = DEH_European_Mission
+			focus = DEH_Ahrar_Mission		
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_jihad
+    icon = GFX_jihad
+    x = 9
+    y = 1
+    relative_position_id = DEH_Muslim
+    cost = 1
+        prerequisite = {
+			focus = DEH_Muslim
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Anti_Colonialism
+    icon = GFX_jihad
+    x = -2
+    y = 1
+    relative_position_id = DEH_jihad
+    cost = 1
+        prerequisite = {
+			focus = DEH_jihad
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_steal_weapon
+    icon = GFX_jihad
+    x = -1
+    y = 1
+    relative_position_id = DEH_Anti_Colonialism
+    cost = 1
+        prerequisite = {
+			focus = DEH_Anti_Colonialism
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_robber
+    icon = GFX_jihad
+    x = 1
+    y = 1
+    relative_position_id = DEH_Anti_Colonialism
+    cost = 1
+        prerequisite = {
+			focus = DEH_Anti_Colonialism
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_carrot_stick
+    icon = GFX_jihad
+    x = 0
+    y = 1
+    relative_position_id = DEH_jihad
+    cost = 1
+        prerequisite = {
+			focus = DEH_jihad
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Sharia_Implementation
+    icon = GFX_jihad
+    x = 2
+    y = 1
+    relative_position_id = DEH_jihad
+    cost = 1
+        prerequisite = {
+			focus = DEH_jihad
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Cultural_Resistance
+    icon = GFX_jihad
+    x = -1
+    y = 1
+    relative_position_id = DEH_Sharia_Implementation
+    cost = 1
+        prerequisite = {
+			focus = DEH_Sharia_Implementation
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Guerrilla_Warfare
+    icon = GFX_jihad
+    x = 1
+    y = 1
+    relative_position_id = DEH_Sharia_Implementation
+    cost = 1
+        prerequisite = {
+			focus = DEH_Sharia_Implementation
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_External_Alliances
+    icon = GFX_jihad
+    x = -1
+    y = 1
+    relative_position_id = DEH_Guerrilla_Warfare
+    cost = 1
+        prerequisite = {
+			focus = DEH_Guerrilla_Warfare
+			focus = DEH_Cultural_Resistance
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_big_jihad
+    icon = GFX_jihad
+    x = 1
+    y = 1
+    relative_position_id = DEH_steal_weapon
+    cost = 1
+        prerequisite = {
+			focus = DEH_steal_weapon
+			focus = DEH_robber
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_stick
+    icon = GFX_jihad
+    x = 0
+    y = 2
+    relative_position_id = DEH_carrot_stick
+    cost = 1
+        prerequisite = {
+			focus = DEH_carrot_stick
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Bannu_Resolution
+    icon = GFX_jihad
+    x = 0
+    y = 1
+    relative_position_id = DEH_stick
+    cost = 1
+        prerequisite = {
+			focus = DEH_stick
+			focus = DEH_big_jihad
+			focus = DEH_External_Alliances
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Orthodox_Pashtunistan
+    icon = GFX_jihad
+    x = -2
+    y = 1
+    relative_position_id = DEH_Bannu_Resolution
+    cost = 1
+        prerequisite = {
+			focus = DEH_Bannu_Resolution
+		}
+	mutually_exclusive = { focus = DEH_make_myself }
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_make_myself
+    icon = GFX_jihad
+    x = 2
+    y = 1
+    relative_position_id = DEH_Bannu_Resolution
+    cost = 1
+        prerequisite = {
+			focus = DEH_Bannu_Resolution
+		}
+		mutually_exclusive = { focus = DEH_Orthodox_Pashtunistan }
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Barakzai
+    icon = GFX_jihad
+    x = -1
+    y = 1
+    relative_position_id = DEH_Orthodox_Pashtunistan
+    cost = 1
+        prerequisite = {
+			focus = DEH_Orthodox_Pashtunistan
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_empire_glory
+    icon = GFX_jihad
+    x = 1
+    y = 1
+    relative_position_id = DEH_Orthodox_Pashtunistan
+    cost = 1
+        prerequisite = {
+			focus = DEH_Orthodox_Pashtunistan
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Tribal_Uprising
+    icon = GFX_jihad
+    x = -1
+    y = 1
+    relative_position_id = DEH_make_myself
+    cost = 1
+        prerequisite = {
+			focus = DEH_make_myself
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_islam_glory
+    icon = GFX_jihad
+    x = 1
+    y = 1
+    relative_position_id = DEH_make_myself
+    cost = 1
+        prerequisite = {
+			focus = DEH_make_myself
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Bengali_Sages_Awakening
+    icon = GFX_jihad
+    x = 40
+    y = 0
+    cost = 1
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Anonymous_Dedication_Pact
+    icon = GFX_jihad
+    x = -1
+    y = 1
+    relative_position_id = DEH_Bengali_Sages_Awakening
+    cost = 1
+        prerequisite = {
+			focus = DEH_Bengali_Sages_Awakening
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Oxbridge-Delhi_Nexus
+    icon = GFX_jihad
+    x = 1
+    y = 1
+    relative_position_id = DEH_Bengali_Sages_Awakening
+    cost = 1
+        prerequisite = {
+			focus = DEH_Bengali_Sages_Awakening
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_VC_Honors
+    icon = GFX_jihad
+    x = -1
+    y = 1
+    relative_position_id = DEH_Anonymous_Dedication_Pact
+    cost = 1
+        prerequisite = {
+			focus = DEH_Anonymous_Dedication_Pact
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Imperial_Civilizing_Mission
+    icon = GFX_jihad
+    x = 1
+    y = 1
+    relative_position_id = DEH_Anonymous_Dedication_Pact
+    cost = 1
+        prerequisite = {
+			focus = DEH_Anonymous_Dedication_Pact
+			focus = DEH_Oxbridge-Delhi_Nexus
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Raj-Era_Renaissance
+    icon = GFX_jihad
+    x = 1
+    y = 1
+    relative_position_id = DEH_Oxbridge-Delhi_Nexus
+    cost = 1
+        prerequisite = {
+			focus = DEH_Oxbridge-Delhi_Nexus
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Lathbury_Ideological_Fortress
+    icon = GFX_jihad
+    x = -1
+    y = 1
+    relative_position_id = DEH_VC_Honors
+    cost = 1
+        prerequisite = {
+			focus = DEH_VC_Honors
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Dual_Rule_Sword-Quill
+    icon = GFX_jihad
+    x = -1
+    y = 1
+    relative_position_id = DEH_Imperial_Civilizing_Mission
+    cost = 1
+        prerequisite = {
+			focus = DEH_Imperial_Civilizing_Mission
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_CBE_Collaborators
+    icon = GFX_jihad
+    x = 1
+    y = 1
+    relative_position_id = DEH_Imperial_Civilizing_Mission
+    cost = 1
+        prerequisite = {
+			focus = DEH_Imperial_Civilizing_Mission
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Ciceros_Charter_Oath
+    icon = GFX_jihad
+    x = 1
+    y = 1
+    relative_position_id = DEH_Raj-Era_Renaissance
+    cost = 1
+        prerequisite = {
+			focus = DEH_Raj-Era_Renaissance
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Gurkha_Blades_Bengali_Pens
+    icon = GFX_jihad
+    x = 1
+    y = 1
+    relative_position_id = DEH_Dual_Rule_Sword-Quill
+    cost = 1
+        prerequisite = {
+			focus = DEH_Dual_Rule_Sword-Quill
+			focus = DEH_CBE_Collaborators
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Perpetual_Thames-Ganges
+    icon = GFX_jihad
+    x = 0
+    y = 1
+    relative_position_id = DEH_Gurkha_Blades_Bengali_Pens
+    cost = 1
+        prerequisite = {
+			focus = DEH_Gurkha_Blades_Bengali_Pens
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Last_Nawab_Oath
+    icon = GFX_jihad
+    x = 49
+    y = 0
+    cost = 1
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Round_Table_Compact
+    icon = GFX_jihad
+    x = -2
+    y = 1
+    relative_position_id = DEH_Last_Nawab_Oath
+    cost = 1
+        prerequisite = {
+			focus = DEH_Last_Nawab_Oath
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Chamber_of_Princes_Mandate
+    icon = GFX_jihad
+    x = 0
+    y = 1
+    relative_position_id = DEH_Last_Nawab_Oath
+    cost = 1
+        prerequisite = {
+			focus = DEH_Last_Nawab_Oath
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Veteran_of_england
+    icon = GFX_jihad
+    x = 2
+    y = 1
+    relative_position_id = DEH_Last_Nawab_Oath
+    cost = 1
+        prerequisite = {
+			focus = DEH_Last_Nawab_Oath
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Mountbatten-Bhopal_Ties
+    icon = GFX_jihad
+    x = 1
+    y = 1
+    relative_position_id = DEH_Veteran_of_england
+    cost = 1
+        prerequisite = {
+			focus = DEH_Veteran_of_england
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Princely_Armies_Integration
+    icon = GFX_jihad
+    x = -1
+    y = 1
+    relative_position_id = DEH_Veteran_of_england
+    cost = 1
+        prerequisite = {
+			focus = DEH_Veteran_of_england
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Resist_Jinnah_Will
+    icon = GFX_jihad
+    x = 0
+    y = 2
+    relative_position_id = DEH_Chamber_of_Princes_Mandate
+    cost = 1
+        prerequisite = {
+			focus = DEH_Chamber_of_Princes_Mandate
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Knightly_Order_Network
+    icon = GFX_jihad
+    x = -1
+    y = 1
+    relative_position_id = DEH_Round_Table_Compact
+    cost = 1
+        prerequisite = {
+			focus = DEH_Round_Table_Compact
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Begum_Succession_Plot
+    icon = GFX_jihad
+    x = 1
+    y = 1
+    relative_position_id = DEH_Round_Table_Compact
+    cost = 1
+        prerequisite = {
+			focus = DEH_Round_Table_Compact
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Air_Commodore_Wings
+    icon = GFX_jihad
+    x = -1
+    y = 1
+    relative_position_id = DEH_Resist_Jinnah_Will
+    cost = 1
+        prerequisite = {
+			focus = DEH_Resist_Jinnah_Will
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_KStJ_Holy_Shield
+    icon = GFX_jihad
+    x = 1
+    y = 1
+    relative_position_id = DEH_Resist_Jinnah_Will
+    cost = 1
+        prerequisite = {
+			focus = DEH_Resist_Jinnah_Will
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Crown_of_the_Indies
+    icon = GFX_jihad
+    x = 1
+    y = 1
+    relative_position_id = DEH_Air_Commodore_Wings
+    cost = 1
+        prerequisite = {
+			focus = DEH_Air_Commodore_Wings
+			focus = DEH_KStJ_Holy_Shield
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Last_Maharaja_Gamble
+    icon = GFX_jihad
+    x = 58
+    y = 0
+    cost = 1
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Churchill-Singh_Pact
+    icon = GFX_jihad
+    x = -2
+    y = 1
+    relative_position_id = DEH_Last_Maharaja_Gamble
+    cost = 1
+        prerequisite = {
+			focus = DEH_Last_Maharaja_Gamble
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_All-India_Federation_Plan
+    icon = GFX_jihad
+    x = 0
+    y = 1
+    relative_position_id = DEH_Last_Maharaja_Gamble
+    cost = 1
+        prerequisite = {
+			focus = DEH_Last_Maharaja_Gamble
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Poonch_Rebellion_Crackdown
+    icon = GFX_jihad
+    x = 2
+    y = 1
+    relative_position_id = DEH_Last_Maharaja_Gamble
+    cost = 1
+        prerequisite = {
+			focus = DEH_Last_Maharaja_Gamble
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Kashmiri_State_Army
+    icon = GFX_jihad
+    x = 1
+    y = 1
+    relative_position_id = DEH_Churchill-Singh_Pact
+    cost = 1
+        prerequisite = {
+			focus = DEH_Churchill-Singh_Pact
+			focus = DEH_All-India_Federation_Plan
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Dogra_Royal_Guard
+    icon = GFX_jihad
+    x = 1
+    y = 1
+    relative_position_id = DEH_All-India_Federation_Plan
+    cost = 1
+        prerequisite = {
+			focus = DEH_Poonch_Rebellion_Crackdown
+			focus = DEH_All-India_Federation_Plan
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Imperial_Cadet_Corps_Legacy
+    icon = GFX_jihad
+    x = 1
+    y = 1
+    relative_position_id = DEH_Kashmiri_State_Army
+    cost = 1
+        prerequisite = {
+			focus = DEH_Kashmiri_State_Army
+			focus = DEH_Dogra_Royal_Guard
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Rolls-Royce_Silver_Ghosts
+    icon = GFX_jihad
+    x = -1
+    y = 1
+    relative_position_id = DEH_Imperial_Cadet_Corps_Legacy
+    cost = 1
+        prerequisite = {
+			focus = DEH_Imperial_Cadet_Corps_Legacy
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Silver_Anson_Recon_Wing
+    icon = GFX_jihad
+    x = 1
+    y = 1
+    relative_position_id = DEH_Imperial_Cadet_Corps_Legacy
+    cost = 1
+        prerequisite = {
+			focus = DEH_Imperial_Cadet_Corps_Legacy
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_1939_constitution
+    icon = GFX_jihad
+    x = 0
+    y = 1
+    relative_position_id = DEH_Rolls-Royce_Silver_Ghosts
+    cost = 1
+        prerequisite = {
+			focus = DEH_Rolls-Royce_Silver_Ghosts
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Resist_Accession_Act
+    icon = GFX_jihad
+    x = 0
+    y = 1
+    relative_position_id = DEH_Silver_Anson_Recon_Wing
+    cost = 1
+        prerequisite = {
+			focus = DEH_Silver_Anson_Recon_Wing
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Crowned_Jammu-Kashmir
+    icon = GFX_jihad
+    x = 1
+    y = 1
+    relative_position_id = DEH_1939_constitution
+    cost = 1
+        prerequisite = {
+			focus = DEH_1939_constitution
+			focus = DEH_Resist_Accession_Act
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_recreat_history
+    icon = GFX_jihad
+    x = 40
+    y = 8
+    cost = 1
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_reject_red
+    icon = GFX_jihad
+    x = -1
+    y = 1
+    relative_position_id = DEH_recreat_history
+    cost = 1
+        prerequisite = {
+			focus = DEH_recreat_history
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Establishing_New_Mercury
+    icon = GFX_jihad
+    x = 1
+    y = 1
+    relative_position_id = DEH_recreat_history
+    cost = 1
+        prerequisite = {
+			focus = DEH_recreat_history
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Aryan_group_Support
+    icon = GFX_jihad
+    x = 1
+    y = 1
+    relative_position_id = DEH_reject_red
+    cost = 1
+        prerequisite = {
+			focus = DEH_reject_red
+			focus = DEH_Establishing_New_Mercury
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Collaborating_with_Oriental_Economist
+    icon = GFX_jihad
+    x = -1
+    y = 1
+    relative_position_id = DEH_reject_red
+    cost = 1
+        prerequisite = {
+			focus = DEH_reject_red
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Marriage_with_Savitri_Devi
+    icon = GFX_jihad
+    x = 1
+    y = 1
+    relative_position_id = DEH_Establishing_New_Mercury
+    cost = 1
+        prerequisite = {
+			focus = DEH_Establishing_New_Mercury
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Spreading_Aryan_Racism
+    icon = GFX_jihad
+    x = 1
+    y = 1
+    relative_position_id = DEH_Collaborating_with_Oriental_Economist
+    cost = 1
+        prerequisite = {
+			focus = DEH_Collaborating_with_Oriental_Economist
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Alliance_with_Subhas_Chandra_Bose
+    icon = GFX_jihad
+    x = -1
+    y = 1
+    relative_position_id = DEH_Marriage_with_Savitri_Devi
+    cost = 1
+        prerequisite = {
+			focus = DEH_Marriage_with_Savitri_Devi
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Formation_of_the_Indian_National_Army
+    icon = GFX_jihad
+    x = 0
+    y = 2
+    relative_position_id = DEH_Aryan_group_Support
+    cost = 1
+        prerequisite = {
+			focus = DEH_Aryan_group_Support
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Astrologer
+    icon = GFX_jihad
+    x = -1
+    y = 1
+    relative_position_id = DEH_Spreading_Aryan_Racism
+    cost = 1
+        prerequisite = {
+			focus = DEH_Spreading_Aryan_Racism
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Printing_Savitri_Writings
+    icon = GFX_jihad
+    x = 1
+    y = 1
+    relative_position_id = DEH_Alliance_with_Subhas_Chandra_Bose
+    cost = 1
+        prerequisite = {
+			focus = DEH_Alliance_with_Subhas_Chandra_Bose
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Aryan_Renaissance
+    icon = GFX_jihad
+    x = 2
+    y = 1
+    relative_position_id = DEH_Astrologer
+    cost = 1
+        prerequisite = {
+			focus = DEH_Astrologer
+			focus = DEH_Formation_of_the_Indian_National_Army
+			focus = DEH_Printing_Savitri_Writings
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_INA_Propaganda_Legacy
+    icon = GFX_jihad
+    x = 49
+    y = 8
+    cost = 1
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Launching_Vedic_Origins_Initiative
+    icon = GFX_jihad
+    x = -1
+    y = 1
+    relative_position_id = DEH_INA_Propaganda_Legacy
+    cost = 1
+        prerequisite = {
+			focus = DEH_INA_Propaganda_Legacy
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Founding_Institute_for_Rewriting_Indian_History
+    icon = GFX_jihad
+    x = 1
+    y = 1
+    relative_position_id = DEH_INA_Propaganda_Legacy
+    cost = 1
+        prerequisite = {
+			focus = DEH_INA_Propaganda_Legacy
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Reclaim_Indian_History
+    icon = GFX_jihad
+    x = -1
+    y = 1
+    relative_position_id = DEH_Launching_Vedic_Origins_Initiative
+    cost = 1
+        prerequisite = {
+			focus = DEH_Launching_Vedic_Origins_Initiative
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Vatican_Vedic_Genesis
+    icon = GFX_jihad
+    x = 1
+    y = 1
+    relative_position_id = DEH_Launching_Vedic_Origins_Initiative
+    cost = 1
+        prerequisite = {
+			focus = DEH_Launching_Vedic_Origins_Initiative
+			focus = DEH_Founding_Institute_for_Rewriting_Indian_History
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Kaaba_Inscription_Forgery
+    icon = GFX_jihad
+    x = 1
+    y = 1
+    relative_position_id = DEH_Founding_Institute_for_Rewriting_Indian_History
+    cost = 1
+        prerequisite = {
+			focus = DEH_Launching_Vedic_Origins_Initiative
+			focus = DEH_Founding_Institute_for_Rewriting_Indian_History
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Adoption_by_Right-Wing_Hindu_Groups
+    icon = GFX_jihad
+    x = -1
+    y = 1
+    relative_position_id = DEH_Reclaim_Indian_History
+    cost = 1
+        prerequisite = {
+			focus = DEH_Reclaim_Indian_History
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Global_Kshatriya_Empire
+    icon = GFX_jihad
+    x = 1
+    y = 1
+    relative_position_id = DEH_Reclaim_Indian_History
+    cost = 1
+        prerequisite = {
+			focus = DEH_Reclaim_Indian_History
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_brainwash_people
+    icon = GFX_jihad
+    x = 1
+    y = 1
+    relative_position_id = DEH_Kaaba_Inscription_Forgery
+    cost = 1
+        prerequisite = {
+			focus = DEH_Kaaba_Inscription_Forgery
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_indian_greatwar
+    icon = GFX_jihad
+    x = -1
+    y = 1
+    relative_position_id = DEH_Kaaba_Inscription_Forgery
+    cost = 1
+        prerequisite = {
+			focus = DEH_Kaaba_Inscription_Forgery
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_Vedic_Planetary_Unity
+    icon = GFX_jihad
+    x = 0
+    y = 2
+    relative_position_id = DEH_Vatican_Vedic_Genesis
+    cost = 1
+        prerequisite = {
+			focus = DEH_Vatican_Vedic_Genesis
+			focus = DEH_indian_greatwar
+			focus = DEH_Global_Kshatriya_Empire
+		}
+    completion_reward = {
+        
+    }
+}
+focus = {
+    id = DEH_no_more_kaliyuga
+    icon = GFX_jihad
+    x = 0
+    y = 1
+    relative_position_id = DEH_Vedic_Planetary_Unity
+    cost = 1
+        prerequisite = {
+			focus = DEH_Vedic_Planetary_Unity
+		}
+    completion_reward = {
+        
+    }
+}
+}
+

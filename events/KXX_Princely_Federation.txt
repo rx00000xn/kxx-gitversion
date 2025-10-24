@@ -1,0 +1,1325 @@
+﻿###########################
+# Princely Federation Events
+###########################
+# By 西西弗斯
+###########################
+
+
+add_namespace = prfline
+
+add_namespace = prffocus
+
+### 国策事件
+country_event = {
+	id = prffocus.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event prffocus.1" }
+	title = prffocus.1.t
+	desc = prffocus.1.d
+	picture = GFX_report_event_PRF_palace
+
+	is_triggered_only = yes
+	
+
+	option = {
+		name = prffocus.1.a
+		add_stability = -0.05
+		add_ideas = PRF_Our_Loyalty_to_the_Landlords
+	}
+	option = {
+		name = prffocus.1.b
+		add_stability = 0.05
+		add_ideas = PRF_The_Promise_of_Moderating_Land_Reform
+	}
+}
+country_event = {
+	id = prffocus.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event prffocus.2" }
+	title = prffocus.2.t
+	desc = prffocus.2.d
+	picture = GFX_report_event_PRF_palace
+
+	is_triggered_only = yes
+	
+
+	option = {
+		name = prffocus.2.a
+		add_stability = -0.05
+		add_political_power = 90
+		add_popularity = {
+			ideology = social_conservative
+			popularity = 0.2
+		}
+		add_popularity = {
+			ideology = paternal_autocrat
+			popularity = 0.2
+		}
+		add_pataut_to_coalition = yes
+	}
+	option = {
+		name = prffocus.2.b
+		add_stability = 0.05
+		add_popularity = {
+			ideology = social_conservative
+			popularity = 0.1
+		}
+	}
+}
+country_event = {
+	id = prffocus.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event prffocus.3" }
+	title = prffocus.3.t
+	desc = prffocus.3.d
+	picture = GFX_report_event_PRF_palace
+
+	is_triggered_only = yes
+	
+
+	option = {
+		name = prffocus.3.a
+		add_political_power = 90
+		add_ideas = PRF_Independent_India
+	}
+	option = {
+		name = prffocus.3.b
+		add_stability = -0.05
+		CAN = {
+			puppet = PRF
+		}
+		add_ideas = PRF_A_deal_with_British_and_French_exiles
+		hidden_effect = {
+			set_popularities = {
+					totalist = 0
+					syndicalist = 0
+					radical_socialist = 3
+					social_democrat = 2
+					social_liberal = 6
+					market_liberal = 6
+					social_conservative = 44
+					authoritarian_democrat = 15
+					paternal_autocrat = 12
+					national_populist = 12
+			}
+			set_politics = {
+			ruling_party = social_conservative
+			elections_allowed = no
+			}
+		}
+	}
+}
+
+### FLAVOR EVENTS
+
+### POLITICAL FOCUS EVENTS
+#起义！？
+country_event = {
+	id = prfline.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event prfline.1" }
+	title = prfline.1.t
+	desc = prfline.1.d
+	picture = GFX_report_event_PRF_palace
+
+	is_triggered_only = yes
+	
+
+	option = {
+		name = prfline.1.a
+		add_stability = -0.05
+		country_event = {
+				id = prfline.2
+				days = 7
+			}
+	}
+}
+#德国佬来了！？
+country_event = {
+	id = prfline.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event prfline.2" }
+	title = prfline.2.t
+	desc = prfline.2.d
+	picture = GFX_report_event_PRF_palace
+
+	is_triggered_only = yes
+
+	option = {
+		name = prfline.2.a
+		ai_chance = { factor = 10 }
+		set_country_flag = GER_aid
+		hidden_effect = {
+			country_event = {
+				id = prfline.4
+				days = 7
+			}
+		}
+	}
+	option = {
+		name = prfline.2.b
+		add_stability = -0.05
+		ai_chance = { factor = 50 }
+		hidden_effect = {
+			country_event = {
+				id = prfline.4
+				days = 7
+			}
+		}
+	}
+	option = {
+		name = prfline.2.c
+		add_stability = 0
+		ai_chance = { factor = 30 }
+		hidden_effect = {
+			country_event = {
+				id = prfline.3
+				days = 7
+			}
+		}
+	}
+}
+#日本人来了！？
+country_event = {
+	id = prfline.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event prfline.3" }
+	title = prfline.3.t
+	desc = prfline.3.d
+	picture = GFX_report_event_PRF_palace
+
+	is_triggered_only = yes
+
+	option = {
+		name = prfline.3.a
+		ai_chance = { factor = 30 }
+		set_country_flag = JAP_aid
+		hidden_effect = {
+			country_event = {
+				id = prfline.4
+				days = 7
+			}
+		}
+	}
+	option = {
+		name = prfline.3.b
+		ai_chance = { factor = 70 }
+		add_stability = 0.05
+		hidden_effect = {
+			country_event = {
+				id = prfline.4
+				days = 7
+			}
+		}
+	}
+}
+
+#我们的帮手
+country_event = {
+	id = prfline.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event prfline.4" }
+	title = prfline.4.t
+	desc = prfline.4.d
+	picture = GFX_report_event_PRF_palace
+
+	is_triggered_only = yes
+
+	option = {
+		name = prfline.4.a
+		set_country_flag = army_aid
+		ai_chance = { factor = 70 }
+			country_event = {
+				id = prfline.5
+				days = 7
+			}
+		
+	}
+	option = {
+		name = prfline.4.b
+		ai_chance = { factor = 10 }
+		set_country_flag = Razakar_aid
+			country_event = {
+				id = prfline.5
+				days = 7
+			}
+		
+	}
+	option = {
+		name = prfline.4.c
+		trigger = {
+        OR = {
+			has_country_flag = GER_aid
+			has_country_flag = JAP_aid
+		}
+        }
+		country_event = {
+			id = prfline.5
+			days = 7
+		}
+		ai_chance = { factor = 30 }
+		set_country_flag = foreign_aid
+	}
+	option = {
+		ai_chance = { factor = 30 }
+		name = prfline.4.f
+		country_event = {
+			id = prfline.5
+			days = 7
+		}
+	}
+}
+#作战会议
+country_event = {
+	id = prfline.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event prfline.5" }
+	title = prfline.5.t
+	desc = prfline.5.d
+	
+
+	is_triggered_only = yes
+
+	
+
+	option = {
+		name = prfline.5.a
+		country_event = {
+			id = prfline.6
+			days = 7
+		}
+	}
+}
+
+#铁路异动
+country_event = {
+	id = prfline.6
+	immediate = { log = "[GetDateText]: [Root.GetName]: event prfline.6" }
+	title = prfline.6.t
+	desc = prfline.6.d
+	
+
+	is_triggered_only = yes
+
+	
+
+	option = {#关我屁事
+		name = prfline.6.a
+		ai_chance = { factor = 70 }
+		country_event = {
+			id = prfline.7
+			days = 7
+		}
+	}
+	option = {#小心为妙
+		name = prfline.6.b
+		ai_chance = { factor = 20 }
+		country_event = {
+			id = prfline.8
+			days = 7
+		}
+	}
+}
+
+#铁路遇袭
+country_event = {
+	id = prfline.7
+	immediate = { log = "[GetDateText]: [Root.GetName]: event prfline.7" }
+	title = prfline.7.t
+	desc = prfline.7.d
+	
+
+	is_triggered_only = yes
+
+	
+
+	option = {#完犊子了
+		name = prfline.7.a
+		country_event = {
+			id = prfline.43
+			days = 7
+		}
+	}
+}
+
+#亲征还是等待？
+country_event = {
+	id = prfline.8
+	immediate = { log = "[GetDateText]: [Root.GetName]: event prfline.8" }
+	title = prfline.8.t
+	desc = prfline.8.d
+	
+
+	is_triggered_only = yes
+	option = {#御驾亲征！
+		name = prfline.8.a
+		country_event = {
+			id = prfline.9
+			days = 7
+		}
+
+	}
+	
+	option = {#稳住阵脚
+		name = prfline.8.b
+		country_event = {
+			id = prfline.44
+			days = 7
+		}
+	}
+}
+
+#起义胜利
+country_event = {
+	id = prfline.43
+	immediate = { log = "[GetDateText]: [Root.GetName]: event prfline.43" }
+	title = prfline.43.t
+	desc = prfline.43.d
+	
+
+	is_triggered_only = yes
+
+	
+
+	option = {
+		name = prfline.43.a
+		set_country_flag = PRF_Uprising_victory
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+
+#起义失败
+country_event = {
+	id = prfline.44
+	immediate = { log = "[GetDateText]: [Root.GetName]: event prfline.44" }
+	title = prfline.44.t
+	desc = prfline.44.d
+	
+
+	is_triggered_only = yes
+
+	
+
+	option = {
+		name = prfline.44.a
+		set_country_flag = PRF_Uprising_lost
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+
+#浑水摸鱼的成功！
+country_event = {
+	id = prfline.9
+	immediate = { log = "[GetDateText]: [Root.GetName]: event prfline.9" }
+	title = prfline.9.t
+	desc = prfline.9.d
+	
+
+	is_triggered_only = yes
+
+	
+
+	option = {
+		name = prfline.9.a
+		set_country_flag = PRF_CAIO
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+
+#英国佬的要价
+country_event = {
+	id = prfline.10
+	immediate = { log = "[GetDateText]: [Root.GetName]: event prfline.10" }
+	title = prfline.10.t
+	desc = prfline.10.d
+	
+
+	is_triggered_only = yes
+
+	
+
+	option = {
+		name = prfline.10.a
+		country_event = {
+			id = prfline.16
+			days = 10
+		}
+	}
+}
+
+#起义军的选举
+country_event = {
+	id = prfline.11
+	immediate = { log = "[GetDateText]: [Root.GetName]: event prfline.11" }
+	title = prfline.11.t
+	desc = prfline.11.d
+	
+
+	is_triggered_only = yes
+
+	
+
+	option = {
+		name = prfline.11.a
+		add_political_power = 100
+	}
+}
+
+#统一后王公议会的汴京
+country_event = {
+	id = prfline.12
+	immediate = { log = "[GetDateText]: [Root.GetName]: event prfline.12" }
+	title = prfline.12.t
+	desc = prfline.12.d
+	
+
+	is_triggered_only = yes
+
+	
+
+	option = {
+		name = prfline.12.a
+		add_stability = 0.05
+		country_event ={
+			id = prfline.13
+			days = 7		
+		}
+	}
+	option = {
+		name = prfline.12.b
+		add_stability = 0.05
+		country_event ={
+			id = prfline.14
+			days = 7		
+		}
+	}
+}
+#人情债
+country_event = {
+	id = prfline.13
+	immediate = { log = "[GetDateText]: [Root.GetName]: event prfline.13" }
+	title = prfline.13.t
+	desc = prfline.13.d
+	
+
+	is_triggered_only = yes
+
+	
+
+	option = {
+		name = prfline.13.a
+		if = {
+			limit = {
+				has_country_flag = JAP_aid
+			}
+			country_event = {
+			id = prfline.32
+			days = 7		
+		    }
+	    }
+		if = {
+			limit = {
+				has_country_flag = Razakar_aid
+			}
+			country_event = {
+			id = prfline.31
+			days = 7		
+		    }
+	    }
+		if = {
+			limit = {
+				has_country_flag = GER_aid
+			}
+			country_event = {
+			id = prfline.30
+			days = 7		
+		    }
+	    }
+		if = {
+			limit = {
+				has_country_flag = army_aid
+			}
+			country_event = {
+			id = prfline.29
+			days = 7		
+		    }
+	    }
+		else = {
+			country_event = {
+			id = prfline.14
+			days = 7		
+		    }
+	    }
+	}
+	option = {
+		name = prfline.13.b
+		add_stability = 0.05
+		country_event = {
+			id = prfline.14
+			days = 7		
+		}
+	}
+}
+#统一后的放权？
+country_event = {
+	id = prfline.14
+	immediate = { log = "[GetDateText]: [Root.GetName]: event prfline.14" }
+	title = prfline.14.t
+	desc = prfline.14.d
+	
+
+	is_triggered_only = yes
+
+	
+
+	option = {
+		name = prfline.14.a
+		add_stability = 0.01
+		country_event = {
+			id = prfline.25
+			days = 7		
+		}
+	}
+	option = {
+		name = prfline.14.b
+		add_stability = -0.03
+		country_event = {
+			id = prfline.24
+			days = 7		
+		}
+	}
+}
+#起义后选举
+country_event = {
+	id = prfline.15
+	immediate = { log = "[GetDateText]: [Root.GetName]: event prfline.15" }
+	title = prfline.15.t
+	desc = prfline.15.d
+	
+
+	is_triggered_only = yes
+
+	
+
+	option = {
+		name = prfline.15.a
+		add_stability = 0.03
+		set_country_flag = PRF_The_Autonomy_Party_Wins
+		mark_focus_tree_layout_dirty = yes
+	}
+	option = {
+		name = prfline.15.b
+		add_stability = 0.03
+		set_country_flag = PRF_Labour_Party_wins
+		mark_focus_tree_layout_dirty = yes
+	}
+	option = {
+		name = prfline.15.c
+		add_stability = 0.03
+		set_country_flag = PRF_Dravidian_alliance_wins
+		mark_focus_tree_layout_dirty = yes
+	}
+	option = {
+		name = prfline.15.e
+		add_stability = 0.03
+		set_country_flag = PRF_The_Worker_Peasant_Party_Wins
+		mark_focus_tree_layout_dirty = yes
+	}
+	option = {
+		name = prfline.15.f
+		add_stability = 0.03
+		set_country_flag = PRF_The_Victory_of_the_Community
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+#民愤
+country_event = {
+	id = prfline.16
+	immediate = { log = "[GetDateText]: [Root.GetName]: event prfline.16" }
+	title = prfline.16.t
+	desc = prfline.16.d
+	
+
+	is_triggered_only = yes
+
+	
+
+	option = {
+		name = prfline.16.a
+		country_event = {
+			id = prfline.18
+			days = 7		
+		}
+	}
+	option = {
+		name = prfline.16.b
+		country_event = {
+			id = prfline.17
+			days = 7		
+		}
+	}
+}
+#（市民）印度的未来
+country_event = {
+	id = prfline.17
+	immediate = { log = "[GetDateText]: [Root.GetName]: event prfline.17" }
+	title = prfline.17.t
+	desc = prfline.17.d
+	
+
+	is_triggered_only = yes
+
+	
+
+	option = {
+		name = prfline.17.a
+		set_country_flag = PRF_The_Victory_of_the_Citizens
+		set_country_flag = Thomas_Robert
+		mark_focus_tree_layout_dirty = yes
+	}
+	option = {
+		name = prfline.17.b
+		set_country_flag = PRF_The_Victory_of_the_Citizens
+		set_country_flag = Patrick_Kelly
+		mark_focus_tree_layout_dirty = yes
+	}
+	option = {
+		name = prfline.17.c
+		set_country_flag = PRF_The_Victory_of_the_Citizens
+		set_country_flag = Francis_Younghusband
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+#暴动
+country_event = {
+	id = prfline.18
+	immediate = { log = "[GetDateText]: [Root.GetName]: event prfline.18" }
+	title = prfline.18.t
+	desc = prfline.18.d
+	
+
+	is_triggered_only = yes
+
+	
+
+	option = {
+		name = prfline.18.a
+		add_stability = -0.03
+		country_event = {
+			id = prfline.38
+			days = 7		
+		}
+	}
+}
+#灵性社团
+country_event = {
+	id = prfline.19
+	immediate = { log = "[GetDateText]: [Root.GetName]: event prfline.19" }
+	title = prfline.19.t
+	desc = prfline.19.d
+	
+
+	is_triggered_only = yes
+
+	
+
+	option = {
+		name = prfline.19.a
+		add_stability = 0
+	}
+	option = {
+		name = prfline.19.b
+		add_stability = 0
+	}
+}
+#工农党
+country_event = {
+	id = prfline.20
+	immediate = { log = "[GetDateText]: [Root.GetName]: event prfline.20" }
+	title = prfline.20.t
+	desc = prfline.20.d
+	
+
+	is_triggered_only = yes
+
+	
+
+	option = {
+		name = prfline.20.a
+		add_stability = 0
+	}
+	option = {
+		name = prfline.20.b
+		add_stability = 0
+	}
+	option = {
+		name = prfline.20.c
+		add_stability = 0
+	}
+}
+#进步联盟
+country_event = {
+	id = prfline.21
+	immediate = { log = "[GetDateText]: [Root.GetName]: event prfline.21" }
+	title = prfline.21.t
+	desc = prfline.21.d
+	
+
+	is_triggered_only = yes
+
+	
+
+	option = {
+		name = prfline.21.a
+		add_stability = 0
+	}
+	option = {
+		name = prfline.21.b
+		add_stability = 0
+	}
+	option = {
+		name = prfline.21.c
+		add_stability = 0
+	}
+}
+#独立工党
+country_event = {
+	id = prfline.22
+	immediate = { log = "[GetDateText]: [Root.GetName]: event prfline.22" }
+	title = prfline.22.t
+	desc = prfline.22.d
+	
+
+	is_triggered_only = yes
+
+	
+
+	option = {
+		name = prfline.22.a
+		add_stability = 0
+	}
+	option = {
+		name = prfline.22.b
+		add_stability = 0
+	}
+	option = {
+		name = prfline.22.c
+		add_stability = 0
+	}
+}
+#自治党
+country_event = {
+	id = prfline.23
+	immediate = { log = "[GetDateText]: [Root.GetName]: event prfline.23" }
+	title = prfline.23.t
+	desc = prfline.23.d
+	
+
+	is_triggered_only = yes
+
+	
+
+	option = {
+		name = prfline.23.a
+		add_stability = 0
+	}
+	option = {
+		name = prfline.23.b
+		add_stability = 0
+	}
+	option = {
+		name = prfline.23.c
+		add_stability = 0
+	}
+}
+#什么样的王公来领导我们？
+country_event = {
+	id = prfline.24
+	immediate = { log = "[GetDateText]: [Root.GetName]: event prfline.24" }
+	title = prfline.24.t
+	desc = prfline.24.d
+	
+
+	is_triggered_only = yes
+
+	
+
+	option = {
+		name = prfline.24.a
+		add_stability = 0
+		set_country_flag = PRF_The_Prince_achieves_a_complete_victory
+		country_event = {
+			id = prfline.36
+			days = 7
+	}
+	}
+	option = {
+		name = prfline.24.b
+		add_stability = 0
+		set_country_flag = PRF_Nizam_hold_power
+		country_event = {
+			id = prfline.37
+			days = 7		
+		}
+	}
+}
+#王公联盟的民主选举
+country_event = {
+	id = prfline.25
+	immediate = { log = "[GetDateText]: [Root.GetName]: event prfline.25" }
+	title = prfline.25.t
+	desc = prfline.25.d
+	
+
+	is_triggered_only = yes
+
+	
+
+	option = {
+		name = prfline.25.a
+		add_stability = 0.06
+		country_event = {
+			id = prfline.35
+			days = 7
+		}
+	}
+}
+#对外国友人的馈赠
+country_event = {
+	id = prfline.26
+	immediate = { log = "[GetDateText]: [Root.GetName]: event prfline.26" }
+	title = prfline.26.t
+	desc = prfline.26.d
+	
+
+	is_triggered_only = yes
+
+	
+
+	option = {
+		name = prfline.26.a
+		add_stability = 0
+		if = {
+			limit = {
+				has_country_flag = GER_aid
+				has_country_flag = foreign_aid
+			}
+			GER = { add_to_faction = PRF }
+		}
+		if = {
+			limit = {
+				has_country_flag = JAP_aid
+				has_country_flag = foreign_aid
+			}
+			JAP = { add_to_faction = PRF }
+		}
+		else = {
+            add_political_power = 150 
+        }
+	}
+	option = {
+		name = prfline.26.b
+		add_stability = 0
+		if = {
+			limit = {
+				has_country_flag = GER_aid
+				has_country_flag = foreign_aid
+			}
+			
+			add_ideas = PRF_GER_influence
+		}
+		if = {
+			limit = {
+				has_country_flag = JAP_aid
+				has_country_flag = foreign_aid
+			}
+			add_ideas = PRF_JAP_influence
+		}
+	}
+}
+#安抚拉卡扎尔
+country_event = {
+	id = prfline.27
+	immediate = { log = "[GetDateText]: [Root.GetName]: event prfline.27" }
+	title = prfline.27.t
+	desc = prfline.27.d
+	
+
+	is_triggered_only = yes
+
+	
+
+	option = {
+		name = prfline.27.a
+		add_stability = -0.1
+		add_political_power = -30	
+		army_experience = 40
+	}
+}
+#安抚军队
+country_event = {
+	id = prfline.28
+	immediate = { log = "[GetDateText]: [Root.GetName]: event prfline.28" }
+	title = prfline.28.t
+	desc = prfline.28.d
+	
+
+	is_triggered_only = yes
+
+	
+
+	option = {
+		name = prfline.28.a
+		add_stability = -0.05
+		army_experience = 20
+	}
+}
+#军队哗变
+country_event = {
+	id = prfline.29
+	immediate = { log = "[GetDateText]: [Root.GetName]: event prfline.29" }
+	title = prfline.29.t
+	desc = prfline.29.d
+	
+
+	is_triggered_only = yes
+
+	
+
+	option = {
+		name = prfline.29.a
+		add_stability = -0.05
+		country_event = {
+			id = prfline.34
+			days = 7
+		}
+	}
+}
+#德国政变
+country_event = {
+	id = prfline.30
+	immediate = { log = "[GetDateText]: [Root.GetName]: event prfline.30" }
+	title = prfline.30.t
+	desc = prfline.30.d
+	
+
+	is_triggered_only = yes
+
+	
+
+	option = {
+		name = prfline.30.a
+		add_stability = -0.05
+		set_country_flag = PRF_The_colonizers_return_in_force
+		clr_country_flag = GER_aid
+		set_country_flag = GER_rule
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+#拉扎卡尔骚动
+country_event = {
+	id = prfline.31
+	immediate = { log = "[GetDateText]: [Root.GetName]: event prfline.31" }
+	title = prfline.31.t
+	desc = prfline.31.d
+	
+
+	is_triggered_only = yes
+
+	
+
+	option = {
+		name = prfline.31.a
+		add_stability = -0.05
+		country_event = {
+			id = prfline.33
+			days = 7
+		}
+	}
+}
+#日军政变
+country_event = {
+	id = prfline.32
+	immediate = { log = "[GetDateText]: [Root.GetName]: event prfline.32" }
+	title = prfline.32.t
+	desc = prfline.32.d
+	
+
+	is_triggered_only = yes
+
+	
+
+	option = {
+		name = prfline.32.a
+		add_stability = -0.05
+		set_country_flag = PRF_The_colonizers_return_in_force
+		clr_country_flag = JAP_aid
+		set_country_flag = JAP_rule
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+#矛盾重重的组织
+country_event = {
+	id = prfline.33
+	immediate = { log = "[GetDateText]: [Root.GetName]: event prfline.33" }
+	title = prfline.33.t
+	desc = prfline.33.d
+	
+
+	is_triggered_only = yes
+
+	
+
+	option = {
+		name = prfline.33.a
+		add_stability = -0.1
+		country_event = {
+			id = prfline.43
+			days = 7
+		}
+	}
+	option = {
+		name = prfline.33.b
+		add_stability = -0.05
+		country_event = {
+			id = prfline.41
+			days = 7
+		}
+	}
+}
+#谈判
+country_event = {
+	id = prfline.34
+	immediate = { log = "[GetDateText]: [Root.GetName]: event prfline.34" }
+	title = prfline.34.t
+	desc = prfline.34.d
+	
+
+	is_triggered_only = yes
+
+	
+
+	option = {
+		name = prfline.34.a
+		add_stability = -0.05
+		country_event = {
+			id = prfline.43
+			days = 7
+		}
+	}
+	option = {
+		name = prfline.34.b
+		add_stability = 0.05
+		country_event = {
+			id = prfline.40
+			days = 7
+		}
+	}
+}
+#民主选举
+country_event = {
+	id = prfline.35
+	immediate = { log = "[GetDateText]: [Root.GetName]: event prfline.35" }
+	title = prfline.35.t
+	desc = prfline.35.d
+	
+
+	is_triggered_only = yes
+
+	
+
+	option = {
+		name = prfline.35.a
+		add_stability = 0.05
+		set_country_flag = PRF_Democracy_Triumphs
+		set_country_flag = Madapati_Hanumantha_Rao
+		mark_focus_tree_layout_dirty = yes 
+	}
+	option = {
+		name = prfline.35.b
+		add_stability = 0.05
+		set_country_flag = PRF_Democracy_Triumphs
+		set_country_flag = R_S_Ramakrishna_Ranga_Rao
+		mark_focus_tree_layout_dirty = yes 
+	}
+	option = {
+		name = prfline.35.c
+		add_stability = 0.05
+		set_country_flag = PRF_Democracy_Triumphs
+		set_country_flag = Muhammad_Ahmad_Said_Khan_Chhatari
+		mark_focus_tree_layout_dirty = yes 
+	}
+	option = {
+		name = prfline.35.e
+		add_stability = 0.05
+		set_country_flag = PRF_Democracy_Triumphs
+		set_country_flag = C_P_Ramaswami_Iyer
+		mark_focus_tree_layout_dirty = yes 
+	}
+}
+#联邦的未来
+country_event = {
+	id = prfline.36
+	immediate = { log = "[GetDateText]: [Root.GetName]: event prfline.36" }
+	title = prfline.36.t
+	desc = prfline.36.d
+	
+
+	is_triggered_only = yes
+
+	
+
+	option = {
+		name = prfline.36.a
+		add_stability = 0
+		set_country_flag = Salvador_III
+	}
+	option = {
+		name = prfline.36.b
+		add_stability = 0
+		set_country_flag = Mirza_Bedar_Bukht
+	}
+	option = {
+		name = prfline.36.c
+		add_stability = 0.05
+		set_country_flag = Jayachamarajendra_Wadiyar
+	}
+}
+#新王公
+country_event = {
+	id = prfline.37
+	immediate = { log = "[GetDateText]: [Root.GetName]: event prfline.37" }
+	title = prfline.37.t
+	desc = prfline.37.d
+	
+
+	is_triggered_only = yes
+
+	
+
+	option = {
+		name = prfline.37.a
+		add_stability = -0.05
+	}
+	option = {
+		name = prfline.37.b
+		add_stability = -0.05
+	}
+	option = {
+		name = prfline.37.c
+		add_stability = -0.05
+	}
+	option = {
+		name = prfline.37.e
+		add_stability = -0.05
+	}
+}
+#英国佬滚蛋了！
+country_event = {
+	id = prfline.38
+	immediate = { log = "[GetDateText]: [Root.GetName]: event prfline.38" }
+	title = prfline.38.t
+	desc = prfline.38.d
+	
+
+	is_triggered_only = yes
+
+	
+
+	option = {
+		name = prfline.38.a
+		add_stability = 0.05
+		set_country_flag = PRF_Religious_India
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+#属于人民的未来
+country_event = {
+	id = prfline.39
+	immediate = { log = "[GetDateText]: [Root.GetName]: event prfline.39" }
+	title = prfline.39.t
+	desc = prfline.39.d
+	
+
+	is_triggered_only = yes
+
+	
+
+	option = {
+		name = prfline.39.a
+		add_stability = 0.05
+		set_country_flag = Dada_Lekhraj
+	}
+	option = {
+		name = prfline.39.b
+		add_stability = 0.05
+		set_country_flag = Maharishi_Maheshi_Yogi
+	}
+	option = {
+		name = prfline.39.c
+		add_stability = 0.05
+		set_country_flag = Sathya_Sai_Baba
+	}
+}
+#军队政变
+country_event = {
+	id = prfline.40
+	immediate = { log = "[GetDateText]: [Root.GetName]: event prfline.40" }
+	title = prfline.40.t
+	desc = prfline.40.d
+	
+
+	is_triggered_only = yes
+
+	
+
+	option = {
+		name = prfline.40.a
+		add_stability = 0.05
+		set_country_flag = Dada_Lekhraj
+	}
+	option = {
+		name = prfline.40.b
+		add_stability = 0.05
+		set_country_flag = Maharishi_Maheshi_Yogi
+	}
+	option = {
+		name = prfline.40.c
+		add_stability = 0.05
+		set_country_flag = Sathya_Sai_Baba
+	}
+}
+#英国佬滚蛋了！
+country_event = {
+	id = prfline.41
+	immediate = { log = "[GetDateText]: [Root.GetName]: event prfline.41" }
+	title = prfline.41.t
+	desc = prfline.41.d
+	
+
+	is_triggered_only = yes
+
+	
+
+	option = {
+		name = prfline.41.a
+		add_stability = -0.05
+		country_event = {
+			id = prfline.42
+			days = 7
+		}
+	}
+}
+#英国佬滚蛋了！
+country_event = {
+	id = prfline.42
+	immediate = { log = "[GetDateText]: [Root.GetName]: event prfline.42" }
+	title = prfline.42.t
+	desc = prfline.42.d
+	
+
+	is_triggered_only = yes
+
+	
+
+	option = {
+		name = prfline.42.a
+	}
+	option = {
+		name = prfline.42.b
+	}
+}
+
+### WAR EVENTS

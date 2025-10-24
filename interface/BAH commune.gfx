@@ -1,0 +1,7 @@
+spriteTypes = {
+	####goals
+	spriteType = {
+		name = "GFX_ourcurrentproblems"
+		texturefile = "gfx/interface/goals/BAH/goal_generic_preserve_communism.dds"
+	}
+}
