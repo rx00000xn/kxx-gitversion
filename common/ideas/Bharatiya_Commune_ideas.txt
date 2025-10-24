@@ -7,9 +7,10 @@ ideas = {
 	##############
 
 	country = {
+		#消极国防
 		BHC_Passive_national_defense = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_Passive_national_defense"}
-			allowed = { always = no }
+			allowed = { always = yes }
 			picture = generic_agrarian_society
 			modifier = {
 				war_support_factor = -0.2
@@ -19,9 +20,10 @@ ideas = {
 				production_speed_industrial_complex_factor = 0.05
 			}
 		}
+		#不充分的自给自足
 		BHC_Inadequate_self_sufficiency = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_Inadequate_self_sufficiency"}
-			allowed = { always = no }
+			allowed = { always = yes }
 			picture = generic_agrarian_society
 			modifier = {
 				consumer_goods_factor = 0.2
@@ -31,9 +33,10 @@ ideas = {
 				production_factory_max_efficiency_factor = -0.1
 			}
 		}
+		#混乱的国民大会
 		BHC_Chaotic_National_Congress  = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_Chaotic_National_Congress "}
-			allowed = { always = no }
+			allowed = { always = yes }
 			modifier = {
 				political_power_cost = 0.25
 				stability_factor = -0.20
@@ -42,9 +45,10 @@ ideas = {
 			}
 			picture = generic_disjointed_gov
 		}
+		#歌颂祖国
 		BHC_Praise_the_Motherland  = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_Praise_the_Motherland "}
-			allowed = { always = no }
+			allowed = { always = yes }
 			modifier = {
 				political_power_gain = 0.1
 				army_morale_factor = 0.10
@@ -53,14 +57,5639 @@ ideas = {
 			}
 			picture = UK_military_loyal_idea
 		}
+		#圣雄守望
 		BHC_the_vigil  = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_Praise_the_Motherland "}
-			allowed = { always = no }
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_the_vigil "}
+			allowed = { always = yes }
 			modifier = {
 				political_power_cost = -0.1
 			}
 			picture = UK_military_loyal_idea
 		}
+		#喂饱人民 
+		BHC_Feed_the_people  = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_Feed_the_people "}
+			allowed = { always = yes }
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.1
+				consumer_goods_factor = 0.1
+			}
+			picture = UK_military_loyal_idea
+		}
+		BHC_Feed_the_people_1  = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_Feed_the_people_1 "}
+			allowed = { always = yes }
+			name = 喂饱人民
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.1
+				line_change_production_efficiency_factor = 0.05
+		        production_factory_efficiency_gain_factor = 0.1
+				consumer_goods_factor = 0
+				conscription_factor = 0.1
+			}
+			picture = UK_military_loyal_idea
+		}
+		BHC_Feed_the_people_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_Feed_the_people_2 "}
+			allowed = { always = yes }
+			name = 喂饱人民
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.1
+				line_change_production_efficiency_factor = 0.1
+		        production_factory_efficiency_gain_factor = 0.1
+				consumer_goods_factor = -0.1
+				conscription_factor = 0.1
+				industrial_capacity_factory = 0.05
+			}
+			picture = UK_military_loyal_idea
+		}
+		#国防状态 National_defense_status
+		BHC_National_defense_status = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_National_defense_status "}
+			allowed = { always = yes }
+			name = 国防状态
+			modifier = {
+				political_power_cost = 0.1 
+				industrial_capacity_factory = 0.15
+			}
+			picture = UK_military_loyal_idea
+		}
+		BHC_National_defense_status_1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_National_defense_status "}
+			allowed = { always = yes }
+			name = 国防状态
+			modifier = {
+				political_power_cost = 0.1
+				industrial_capacity_factory = 0.15
+				local_building_slots_factor = 0.09
+			}
+			picture = UK_military_loyal_idea
+		}
+		BHC_National_defense_status_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_National_defense_status "}
+			allowed = { always = yes }
+			name = 国防状态
+			modifier = {
+				political_power_cost = -0.2
+				industrial_capacity_factory = 0.15
+				production_factory_max_efficiency_factor = 0.1
+				local_building_slots_factor = 0.14
+			}
+			picture = UK_military_loyal_idea
+		}
+		#地区委员会 Regional_Committee
+		BHC_Regional_Committee = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_Regional_Committee"}
+			allowed = { always = yes }
+			picture = generic_agrarian_society
+			name = 地区委员会
+			modifier = {
+				consumer_goods_factor = 0.2
+				local_building_slots_factor = -0.2
+				industrial_capacity_factory = -0.05
+				production_speed_buildings_factor = -0.05
+				production_factory_max_efficiency_factor = 0
+			}
+		}
+		BHC_Regional_Committee_1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_Regional_Committee_1"}
+			allowed = { always = yes }
+			picture = generic_agrarian_society
+			name = 地区委员会
+			modifier = {
+				consumer_goods_factor = 0.1
+				local_building_slots_factor = 0
+				industrial_capacity_factory = 0.05
+				production_speed_buildings_factor = 0.5
+				production_factory_max_efficiency_factor = 0
+			}
+		}
+		#国货优先 Prioritize_domestic_products
+		BHC_Prioritize_domestic_products = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_Prioritize_domestic_products"}
+			allowed = { always = yes }
+			picture = generic_agrarian_society
+			name = 国货优先
+			modifier = {
+				consumer_goods_factor = -0.1
+				political_power_cost = 0.05
+			}
+		}
+		#农业改革
+		BHC_agrarian_reform = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_agrarian_reform"}
+			allowed = { always = yes }
+			picture = generic_agrarian_society
+			name = 农业改革
+			modifier = {
+				consumer_goods_factor = 0.1
+				political_power_cost = 0.05
+			}
+		}
+		BHC_agrarian_reform_1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_agrarian_reform_1"}
+			allowed = { always = yes }
+			picture = generic_agrarian_society
+			name = 农业改革
+			modifier = {
+				consumer_goods_factor = 0.05
+				political_power_cost = 0
+				production_factory_start_efficiency_factor = 0.1
+			}
+		}
+		#唯生产力论
+		BHC_Productivism = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_Productivism"}
+			allowed = { always = yes }
+			picture = generic_agrarian_society
+			name = 唯生产力论
+			modifier = {
+				consumer_goods_factor = 0.1
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		BHC_Productivism_1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_Productivism_1"}
+			allowed = { always = yes }
+			picture = generic_agrarian_society
+			name = 唯生产力论
+			modifier = {
+				consumer_goods_factor = 0.1
+				production_speed_buildings_factor = 0.15
+				industrial_capacity_factory = 0.1
+			}
+		}
+		BHC_Productivism_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_Productivism_2"}
+			allowed = { always = yes }
+			picture = generic_agrarian_society
+			name = 唯生产力论
+			modifier = {
+				consumer_goods_factor = 0.15
+				production_speed_buildings_factor = 0.3
+				industrial_capacity_factory = 0.2
+			}
+		}
+		BHC_Productivism_3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_Productivism_3"}
+			allowed = { always = yes }
+			picture = generic_agrarian_society
+			name = 唯生产力论
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.2
+				industrial_capacity_factory = 0.2
+                repair_speed_industrial_complex_factor = 0.2
+		        repair_speed_arms_factory_factor = 0.3
+				add_stability = -0.1
+			}
+		}
+		#自给自足 
+		BHC_Fully_self_sufficient = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_Fully_self_sufficient"}
+			allowed = { always = yes }
+			picture = generic_agrarian_society
+			name = 自给自足
+			modifier = {
+				local_resources_factor = 0.1
+				monthly_population = 0.3
+			}
+		}
+		BHC_Fully_self_sufficient_1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_Fully_self_sufficient_1"}
+			allowed = { always = yes }
+			picture = generic_agrarian_society
+			name = 自给自足
+			modifier = {
+				local_resources_factor = 0.1
+				monthly_population = 0.3
+				local_building_slots_factor = 0.1
+			}
+		}
+		#规划委员会 Plan_the_territory
+		BHC_Plan_the_territory = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_Plan_the_territory"}
+			allowed = { always = yes }
+			picture = generic_agrarian_society
+			name = 规划委员会
+			modifier = {
+				production_speed_buildings_factor = 0.1
+			}
+		}
+
+	##############
+	# 军事
+	##############
+
+		#重视火力
+    	BHC_Song_of_the_Artillery = {
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea PRF_Song_of_the_Artillery_1"}
+        removal_cost = -1
+        picture = Industrial_Investment
+			name = 重视火力
+        modifier = {
+        army_artillery_attack_factor = 0.05 
+        }
+        equipment_bonus = {
+            artillery = {
+                build_cost_ic = -0.3
+				soft_attack = -0.1
+				instant = yes
+                }
+				
+			
+            }
+        }
+        
+    	BHC_Song_of_the_Artillery_1 = {
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea PRF_Song_of_the_Artillery_1"}
+        removal_cost = -1
+        picture = Industrial_Investment
+			name = 重视火力
+        modifier = {
+			
+        army_artillery_attack_factor = 0.05
+		ground_attack_factor = 0.05
+		air_cas_present_factor = 0.1
+            
+        }
+        equipment_bonus = {
+            artillery = {
+                build_cost_ic = -0.3
+				soft_attack = -0.1
+				instant = yes
+                }
+			CAS_equipment = {
+                build_cost_ic = -0.15
+				soft_attack = 0.05
+				hard_attack = 0.05
+				instant = yes
+                }
+            }
+        }
+        #公社军队
+    	BHC_Commune_Army = {
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_Commune_Army"}
+        removal_cost = -1
+        picture = Industrial_Investment
+			name = 公社军队
+        modifier = {
+			
+        experience_gain_army = 0.1
+		experience_gain_army_factor = 0.2
+		land_doctrine_cost_factor = -0.05
+            
+        }
+	    }
+    	BHC_Commune_Army_1 = {
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_Commune_Army_1"}
+        removal_cost = -1
+        picture = Industrial_Investment
+			name = 公社军队
+        modifier = {
+			military_leader_cost_factor = -0.2
+            experience_gain_army = 0.1
+			experience_gain_army_factor = 0.2
+			land_doctrine_cost_factor = -0.05
+			planning_speed = 0.2
+        }
+	    }
+    	BHC_Commune_Army_2 = {
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_Commune_Army_2"}
+        removal_cost = -1
+        picture = Industrial_Investment
+			name = 公社军队
+        modifier = {
+			military_leader_cost_factor = -0.2
+            experience_gain_army = 0.1
+			army_attack_factor = 0.1
+			army_defence_factor = 0.05
+			experience_gain_army_factor = 0.2
+			land_doctrine_cost_factor = -0.05
+			planning_speed = 0.2
+			mechanized_attack_factor = 0.1
+			mechanized_defence_factor = 0.05
+        }
+	    }
+		#后勤改良 
+    	BHC_Logistics_improvement = {
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_Logistics_improvement"}
+        removal_cost = -1
+        picture = Industrial_Investment
+			name = 后勤改良
+        modifier = {
+			no_supply_grace = 48
+			army_morale_factor = 0.2
+		    org_loss_when_moving = -0.2
+            supply_consumption_factor = -0.3
+			army_morale_factor = 0.2
+			out_of_supply_factor = -0.2
+        }
+	    }
+		#装甲战 
+    	BHC_Armored_warfare = {
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_Armored_warfare"}
+        removal_cost = -1
+        picture = Industrial_Investment
+			name = 装甲战
+        modifier = {
+			army_armor_attack_factor = 0.1
+			army_armor_defence_factor = 0.05
+        }
+		equipment_bonus = {
+			armor = {
+				build_cost_ic = -0.15
+                reliability = -0.1
+				maximum_speed = 0.3
+				instant = yes
+			}
+		}
+	    }
+		#战术优化 
+    	BHC_Tactical_optimization = {
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_Tactical_optimization"}
+        removal_cost = -1
+        picture = Industrial_Investment
+			name = 战术优化
+        modifier = {
+			land_reinforce_rate = 0.1
+			max_planning = 0.15
+            coordination_bonus = 0.15
+			land_reinforce_rate = 0.05
+        }
+	    }
+    	BHC_Tactical_optimization_1 = {
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_Tactical_optimization_1"}
+        removal_cost = -1
+        picture = Industrial_Investment
+			name = 战术优化
+		    modifier = {
+				land_reinforce_rate = 0.1
+				max_planning = 0.15
+				coordination_bonus = 0.15
+				land_reinforce_rate = 0.05
+				army_infantry_attack_factor = 0.15
+				army_infantry_defence_factor = 0.05
+                }
+		}
+		#特种战争 
+    	BHC_Special_warfare = {
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_Special_warfare"}
+        removal_cost = -1
+        picture = Industrial_Investment
+			name = 特种战争
+            modifier = {
+				special_forces_min = 40
+				special_forces_cap = 0.2
+				special_forces_attack_factor = 0.1
+				special_forces_defence_factor = 0.1
+				special_forces_no_supply_grace = 36
+        	}
+	    }
+	    #海军设计局 
+    	BHC_Naval_Design_Bureau = {
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_Naval_Design_Bureau"}
+        removal_cost = -1
+        picture = Industrial_Investment
+		name = 海军设计局
+            modifier = {
+				experience_gain_navy_factor = 0.2
+				experience_gain_navy = 0.1
+        	}
+	    }
+    	BHC_Naval_Design_Bureau_1 = {
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_Naval_Design_Bureau_1"}
+        removal_cost = -1
+        picture = Industrial_Investment
+		name = 海军设计局
+            modifier = {
+				experience_gain_navy_factor = 0.2
+				experience_gain_navy = 0.1
+				navy_submarine_attack_factor = 0.1
+				navy_capital_ship_attack_factor = 0.05
+				navy_screen_attack_factor = 0.05
+				navy_screen_defence_factor = 0.05
+				naval_morale_factor = 0.1
+				naval_speed_factor = 0.05
+				navy_max_range_factor = 0.1
+				naval_strike_agility_factor = 0.05
+				screening_efficiency = 0.05
+				naval_coordination = 0.05
+        	}
+	    }
+    	BHC_Naval_Design_Bureau_2 = {
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_Naval_Design_Bureau_2"}
+        removal_cost = -1
+        picture = Industrial_Investment
+		name = 海军设计局
+            modifier = {
+				experience_gain_navy_factor = 0.2
+				experience_gain_navy = 0.1
+				navy_submarine_attack_factor = 0.15
+				navy_capital_ship_attack_factor = 0.1
+				navy_screen_attack_factor = 0.1
+				navy_screen_defence_factor = 0.1
+				naval_morale_factor = 0.1
+				naval_speed_factor = 0.1
+				navy_max_range_factor = 0.1
+				naval_strike_agility_factor = 0.1
+				screening_efficiency = 0.1
+				naval_coordination = 0.1
+				positioning = 0.1
+        	}
+	    }
+		#海军陆战队
+		BHC_marine_plans = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_marine_plans"}
+			available = {
+				is_faction_leader = yes
+				ENG = { exists = yes }
+			}
+			picture = CAN_reclaimation_focus_idea
+			allowed = { always = no }
+			name = 海军陆战队
+            modifier = {
+				amphibious_invasion = 0.10
+				invasion_preparation = -0.10
+				naval_invasion_capacity = 2
+			}
+		}
+		BHC_marine_plans_1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_marine_plans_1"}
+			available = {
+				is_faction_leader = yes
+				ENG = { exists = yes }
+			}
+			picture = CAN_reclaimation_focus_idea
+			allowed = { always = no }
+			name = 海军陆战队
+            modifier = {
+				amphibious_invasion = 0.20
+				invasion_preparation = -0.20
+				naval_invasion_capacity = 4
+			}
+		}
+		#
+    	BHC_Naval_production_engineering = {
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_Naval_production_engineering"}
+        removal_cost = -1
+        picture = Industrial_Investment
+		name = 海军专项工程
+            research_bonus = {
+				naval_equipment = 0.05
+			}
+			equipment_bonus = {
+				convoy = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				submarine = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				destroyer = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				ship_hull_cruiser = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				capital_ship = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				ship_hull_heavy = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				carrier = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+	    }
+    	BHC_Naval_production_engineering_1 = {
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_Naval_production_engineering_1"}
+        removal_cost = -1
+        picture = Industrial_Investment
+  		name = 海军专项工程
+        research_bonus = {
+				naval_equipment = 0.15
+			}
+			equipment_bonus = {
+				convoy = {
+					build_cost_ic = -0.2
+					instant = yes
+				}
+				submarine = {
+					build_cost_ic = -0.2
+					instant = yes
+				}
+				destroyer = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+				ship_hull_cruiser = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+				capital_ship = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				ship_hull_heavy = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				carrier = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}
+	    }
+		#空军
+    	BHC_Integrate_the_local_aircraft_manufacturing_industry = {
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_Integrate_the_local_aircraft_manufacturing_industry"}
+        picture = Industrial_Investment
+		name = 整合本土航空工业
+		modifier = {
+			production_speed_air_base_factor = 0.1
+		}
+		equipment_bonus = {
+				CAS_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				fighter_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				strat_bomber_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				tac_bomber_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+        }
+    	BHC_Integrate_the_local_aircraft_manufacturing_industry_1 = {
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_Integrate_the_local_aircraft_manufacturing_industry_1"}
+        picture = Industrial_Investment
+		name = 整合本土航空工业
+		modifier = {
+			production_speed_air_base_factor = 0.15
+			production_speed_radar_station_factor = 0.1
+		}
+		equipment_bonus = {
+				CAS_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				fighter_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				cv_fighter_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				strat_bomber_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				tac_bomber_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				cv_CAS_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				nav_bomber_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+        }
+    	BHC_Integrate_the_local_aircraft_manufacturing_industry_2 = {
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_Integrate_the_local_aircraft_manufacturing_industry_2"}
+        picture = Industrial_Investment
+		name = 整合本土航空工业
+		modifier = {
+			production_speed_radar_station_factor = 0.1
+			production_speed_air_base_factor = 0.15
+		}
+		equipment_bonus = {
+				CAS_equipment = {
+					build_cost_ic = -0.1
+					air_range = 0.07
+					instant = yes
+				}
+				fighter_equipment = {
+					build_cost_ic = -0.1
+					air_range = 0.07
+					instant = yes
+				}
+				cv_fighter_equipment = {
+					build_cost_ic = -0.1
+					air_range = 0.07
+					instant = yes
+				}
+				strat_bomber_equipment = {
+					build_cost_ic = -0.1
+					air_range = 0.07
+					instant = yes
+				}
+				tac_bomber_equipment = {
+					build_cost_ic = -0.1
+					air_range = 0.07
+					instant = yes
+				}
+				cv_CAS_equipment = {
+					build_cost_ic = -0.1
+					air_range = 0.07
+					instant = yes
+				}
+				nav_bomber_equipment = {
+					build_cost_ic = -0.1
+					air_range = 0.07
+					instant = yes
+				}
+			}
+        }
+    
+    BHC_Invest_in_Air_Force_research_and_development = {
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_Invest_in_Air_Force_research_and_development"}
+        removal_cost = -1
+        picture = Industrial_Investment
+		name = 空军研究投资
+        modifier = {
+			experience_gain_air = 0.1
+			experience_gain_air_factor = 0.1
+			air_doctrine_cost_factor = -0.05
+            }
+			#research_bonus = {
+				#air_equipment = 0.2
+			#}
+		}
+    BHC_Invest_in_Air_Force_research_and_development_1 = {
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_Invest_in_Air_Force_research_and_development_1"}
+        removal_cost = -1
+        picture = Industrial_Investment
+		name = 空军研究投资
+        modifier = {
+			experience_gain_air = 0.1
+			experience_gain_air_factor = 0.1
+			air_doctrine_cost_factor = -0.05
+            }
+			research_bonus = {
+				air_equipment = 0.2
+			}
+		}
+    BHC_Invest_in_Air_Force_research_and_development_2 = {
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_Invest_in_Air_Force_research_and_development_2"}
+        removal_cost = -1
+        picture = Industrial_Investment
+		name = 空军研究投资
+        modifier = {
+			experience_gain_air = 0.1
+			experience_gain_air_factor = 0.1
+			air_doctrine_cost_factor = -0.05
+            }
+			research_bonus = {
+				air_equipment = 0.2
+			}
+			equipment_bonus = {
+				fighter_equipment = {
+				    air_attack = 0.1
+				    maximum_speed = 0.05
+				    air_agility = 0.1
+				    instant = yes
+			    }
+				CAS_equipment = {
+				    air_ground_attack = 0.05
+		            naval_strike_attack = 0.05
+				instant = yes
+			    }
+		    }
+		}
+		
+    BHC_ACE_of_republic = { #航校
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_ACE_of_republic"}
+        removal_cost = -1
+        picture = Industrial_Investment
+		name = 共和国战争王牌
+        modifier = {
+			experience_gain_air = 0.2
+			experience_gain_air_factor = 0.1
+			air_doctrine_cost_factor = -0.05
+			air_ace_generation_chance_factor = 0.2
+		    air_superiority_bonus_in_combat = 0.1
+		    air_mission_xp_gain_factor = 0.1
+            }
+		}
+    BHC_Aviation_education_School = { #航校
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_Aviation_education_School"}
+        removal_cost = -1
+        picture = Industrial_Investment
+		name = 共和国航校教育
+        modifier = {
+			experience_gain_air = 0.2
+			experience_gain_air_factor = 0.1
+			air_doctrine_cost_factor = -0.05
+            }
+		}
+    BHC_Guard_the_sky = { 
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_Guard_the_sky"}
+        removal_cost = -1
+        picture = Industrial_Investment
+		name = 守望天空
+        modifier = {
+			air_night_penalty = -0.1
+			air_weather_penalty = -0.1
+			air_accidents_factor = -0.2
+			air_training_xp_gain_factor = 0.1
+			strategic_bomb_visibility = -0.1
+			air_strategic_bomber_bombing_factor = 0.1
+			air_nav_efficiency = 0.05
+			air_superiority_efficiency = 0.05
+			air_intercept_efficiency = 0.1
+			air_mission_efficiency = 0.1
+			air_cas_efficiency = 0.1
+			air_escort_efficiency = 0.1
+			army_bonus_air_superiority_factor = 0.1
+            }
+		}
+    BHC_Specialized_combat_forces = { 
+		on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_Specialized_combat_forces"}
+        removal_cost = -1
+        picture = Industrial_Investment
+		name = 专业化作战部队
+        modifier = {
+		special_forces_min = 30
+		special_forces_cap = 0.1
+		special_forces_attack_factor = 0.1
+		special_forces_defence_factor = 0.1
+		special_forces_no_supply_grace = 48
+            }
+		}
+
+			
+		BHC_local_culture_protection = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_local_culture_protection"}
+			allowed = { always = no }
+			name = 保护地方文化
+            modifier = {
+				local_resources_factor = 0.1
+				resistance_target = -0.05
+				compliance_growth = 0.1
+				global_building_slots_factor = 0.1
+				monthly_population = 0.2
+				production_speed_buildings_factor = 0.05
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_ideal_of_commune = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_local_culture_protection"}
+			allowed = { always = no }
+			name = 公社理想
+            modifier = {
+				conscription_factor = 0.1
+				political_power_factor = 0.1
+				war_support_factor = 0.05
+				war_support_weekly = 0.002
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_ideal_of_commune_2 = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_local_culture_protection"}
+			allowed = { always = no }
+			name = 公社理想
+            modifier = {
+				conscription_factor = 0.1
+				political_power_factor = 0.1
+				war_support_factor = 0.1
+				war_support_weekly = 0.005
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_nehrus_command = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_local_culture_protection"}
+			allowed = { always = no }
+			name = 尼赫鲁的指挥
+            modifier = {
+				political_power_gain = 0.1
+				production_factory_start_efficiency_factor = 0.05
+				social_democrat_drift = 0.02
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_nehrus_command_2 = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_local_culture_protection"}
+			allowed = { always = no }
+			name = 尼赫鲁的指挥
+            modifier = {
+				political_power_gain = 0.1
+				stability_factor = 0.1
+				stability_weekly = 0.002
+				production_factory_start_efficiency_factor = 0.1
+				line_change_production_efficiency_factor = 0.1
+				social_democrat_drift = 0.02
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_nehrus_command_3 = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_local_culture_protection"}
+			allowed = { always = no }
+			name = 尼赫鲁的指挥
+            modifier = {
+				political_power_gain = 0.15
+				stability_factor = 0.1
+				stability_weekly = 0.005
+				production_factory_start_efficiency_factor = 0.1
+				line_change_production_efficiency_factor = 0.1
+				consumer_goods_factor = -0.1
+				industrial_capacity_factory = 0.05
+				social_democrat_drift = 0.04
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_nehrus_command_4 = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_local_culture_protection"}
+			allowed = { always = no }
+			name = 尼赫鲁的指挥
+            modifier = {
+				political_power_gain = 0.15
+				stability_factor = 0.15
+				stability_weekly = 0.005
+				production_factory_start_efficiency_factor = 0.15
+				line_change_production_efficiency_factor = 0.15
+				production_factory_max_efficiency_factor = 0.1
+				consumer_goods_factor = -0.15
+				industrial_capacity_factory = 0.15
+				social_democrat_drift = 0.04
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_gandhis_ideal = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_gandhis_ideal"}
+			allowed = { always = no }
+			name = 圣雄之愿
+            modifier = {
+				war_support_factor = -0.05
+				production_speed_infrastructure_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				required_garrison_factor = -0.05
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_our_mahatma = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_our_mahatma"}
+			allowed = { always = no }
+			name = 我们的圣雄
+            modifier = {
+				production_speed_infrastructure_factor = 0.05
+				production_speed_industrial_complex_factor = 0.05
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.15
+				supply_consumption_factor = -0.1
+				stability_factor = 0.1
+				industrial_capacity_factory = 0.1
+				required_garrison_factor = -0.05
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_wisdom = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_wisdom"}
+			allowed = { always = no }
+			name = 自由之地
+            modifier = {
+				political_power_cost = -0.1
+				political_power_factor = 0.05
+				consumer_goods_factor = -0.1
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_wisdom_2 = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_local_culture_protection"}
+			allowed = { always = no }
+			name = 自由之地
+            modifier = {
+				political_power_cost = -0.15
+				political_power_factor = 0.1
+				consumer_goods_factor = -0.1
+				party_popularity_stability_factor = 0.1
+				research_speed_factor = 0.05
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_wisdom_3 = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_local_culture_protection"}
+			allowed = { always = no }
+			name = 自由之地
+            modifier = {
+				political_power_cost = -0.15
+				political_power_factor = 0.1
+				production_factory_max_efficiency_factor = 0.05
+				consumer_goods_factor = -0.15
+				party_popularity_stability_factor = 0.15
+				research_speed_factor = 0.05
+				production_lack_of_resource_penalty_factor = -0.1
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_wisdom_4 = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_local_culture_protection"}
+			allowed = { always = no }
+			name = 自由之地
+            modifier = {
+				political_power_cost = -0.15
+				political_power_factor = 0.1
+				production_factory_max_efficiency_factor = 0.15
+				production_factory_efficiency_gain_factor = 0.1
+				consumer_goods_factor = -0.25
+				consumer_goods_expected_value = -0.05
+				party_popularity_stability_factor = 0.15
+				research_speed_factor = 0.15
+				compliance_gain = 0.002
+				production_lack_of_resource_penalty_factor = -0.1
+				social_liberal_drift = 0.03
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_end_of_oppression = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_local_culture_protection"}
+			allowed = { always = no }
+			name = 压迫不再
+            modifier = {
+				stability_factor = -0.05
+				stability_weekly = -0.001
+				industrial_capacity_factory = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				production_speed_buildings_factor = 0.05
+				global_building_slots_factor = 0.1
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_end_of_oppression_2 = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_local_culture_protection"}
+			allowed = { always = no }
+			name = 压迫不再
+            modifier = {
+				industrial_capacity_factory = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				global_building_slots_factor = 0.1
+				production_speed_infrastructure_factor = 0.1
+				political_power_cost = -0.05
+				conscription_factor = 0.1
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_end_of_oppression_3 = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_local_culture_protection"}
+			allowed = { always = no }
+			name = 迈向辉煌
+            modifier = {
+				industrial_capacity_factory = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				global_building_slots_factor = 0.1
+				production_speed_infrastructure_factor = 0.1
+				research_speed_factor = 0.05
+				political_power_cost = -0.05
+				conscription_factor = 0.1
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_end_of_oppression_4 = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_local_culture_protection"}
+			allowed = { always = no }
+			name = 迈向辉煌
+            modifier = {
+				industrial_capacity_factory = 0.15
+				production_factory_efficiency_gain_factor = 0.15
+				production_speed_buildings_factor = 0.15
+				global_building_slots_factor = 0.15
+				production_speed_infrastructure_factor = 0.15
+				research_speed_factor = 0.15
+				political_power_cost = -0.05
+				conscription_factor = 0.1
+				min_export = 0.1
+				trade_laws_cost_factor = -0.2
+				trade_opinion_factor = 0.2
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_national_ideal = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_local_culture_protection"}
+			allowed = { always = no }
+			name = 国民理想
+            modifier = {
+				war_support_factor = 0.05
+				economy_cost_factor = -0.2
+				conscription = 0.01
+				mobilization_speed = 0.2
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_national_ideal_2 = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_local_culture_protection"}
+			allowed = { always = no }
+			name = 国民理想
+            modifier = {
+				economy_cost_factor = -0.2
+				conscription = 0.01
+				mobilization_speed = 0.15
+				consumer_goods_expected_value = -0.05
+				production_factory_max_efficiency_factor = 0.15
+				resistance_growth_on_our_occupied_states = 0.1
+				compliance_growth_on_our_occupied_states = -0.1
+				land_reinforce_rate = 0.05
+				attrition = -0.15
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_malaviyas = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_local_culture_protection"}
+			allowed = { always = no }
+			name = 宪政之始
+            modifier = {
+				political_power_cost = 0.05
+				stability_factor = 0.1
+				drift_defence_factor = 0.1
+				conscription_factor = 0.1
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_malaviyas_2 = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_local_culture_protection"}
+			allowed = { always = no }
+			name = 宪政之始
+            modifier = {
+				political_power_cost = 0.03
+				stability_factor = 0.1
+				war_support_factor = 0.05
+				drift_defence_factor = 0.1
+				conscription_factor = 0.1
+				conscription = 0.01
+				subversive_activites_upkeep = -0.1
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_malaviyas_3 = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_local_culture_protection"}
+			allowed = { always = no }
+			name = 宪政之始
+            modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				drift_defence_factor = 0.1
+				conscription_factor = 0.1
+				conscription = 0.01
+                production_speed_buildings_factor = 0.05
+				industrial_capacity_factory = 0.05
+				subversive_activites_upkeep = -0.1
+				offensive_war_stability_factor = 0.15
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_malaviyas_4 = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_local_culture_protection"}
+			allowed = { always = no }
+			name = 宪政之始
+            modifier = {
+				stability_factor = 0.15
+				war_support_factor = 0.15
+				drift_defence_factor = 0.1
+				conscription_factor = 0.15
+				consumer_goods_expected_value = -0.05
+				conscription = 0.02
+                production_speed_buildings_factor = 0.1
+				command_power_gain = 0.2
+				max_command_power = 50
+				industrial_capacity_factory = 0.1
+				subversive_activites_upkeep = -0.2
+				offensive_war_stability_factor = 0.15
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_indian_identity = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_local_culture_protection"}
+			allowed = { always = no }
+			name = 印度民族的复兴
+            modifier = {
+				compliance_growth = 0.05
+				monthly_population = 0.1
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_indian_identity_2 = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_local_culture_protection"}
+			allowed = { always = no }
+			name = 印度民族的复兴
+            modifier = {
+				compliance_growth = 0.05
+				monthly_population = 0.1
+				stability_weekly = 0.002
+				war_support_weekly = 0.002
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_indian_identity_3 = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_local_culture_protection"}
+			allowed = { always = no }
+			name = 印度民族的复兴
+            modifier = {
+				compliance_growth = 0.1
+				monthly_population = 0.2
+				stability_weekly = 0.005
+				war_support_weekly = 0.005
+				war_support_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.15
+				production_factory_max_efficiency_factor = 0.1
+				army_attack_factor = 0.1
+				consumer_goods_factor = -0.1
+				army_defence_factor = 0.1
+				army_org_factor = 0.1
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_end_of_tyranny = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_local_culture_protection"}
+			allowed = { always = no }
+			name = 暴政之终
+            modifier = {
+				political_power_factor = 0.05
+				consumer_goods_factor = -0.1
+				production_factory_start_efficiency_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_end_of_tyranny_2 = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_local_culture_protection"}
+			allowed = { always = no }
+			name = 暴政之终
+            modifier = {
+				political_power_factor = 0.05
+				consumer_goods_factor = -0.1
+				production_factory_start_efficiency_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				local_resources_factor = 0.05
+				resistance_target = -0.05
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_end_of_tyranny_3 = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_local_culture_protection"}
+			allowed = { always = no }
+			name = 暴政之终
+            modifier = {
+				political_power_factor = 0.1
+				consumer_goods_factor = -0.2
+				production_factory_start_efficiency_factor = 0.15
+				production_factory_max_efficiency_factor = 0.15
+				local_resources_factor = 0.15
+				resistance_target = -0.1
+				compliance_growth = 0.05
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_iron_man = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_local_culture_protection"}
+			allowed = { always = no }
+			name = “铁人”之治
+            modifier = {
+				political_power_factor = -0.1
+				stability_factor = 0.1
+				stability_weekly = 0.001
+				social_democrat_drift = 0.01
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_iron_man_2 = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_local_culture_protection"}
+			allowed = { always = no }
+			name = “铁人”之治
+            modifier = {
+				political_power_factor = -0.05
+				stability_factor = 0.1
+				stability_weekly = 0.001
+				social_democrat_drift = 0.02
+				production_speed_buildings_factor = 0.05
+				economy_cost_factor = -0.2
+				CONVERSION_COST_MIL_TO_CIV_FACTOR = -0.1
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_iron_man_3 = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_local_culture_protection"}
+			allowed = { always = no }
+			name = “铁人”之治
+            modifier = {
+				stability_factor = 0.15
+				stability_weekly = 0.003
+				war_support_factor = 0.05
+				social_democrat_drift = 0.02
+				production_speed_buildings_factor = 0.1
+				economy_cost_factor = -0.2
+				CONVERSION_COST_MIL_TO_CIV_FACTOR = -0.1
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_iron_man_4 = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_local_culture_protection"}
+			allowed = { always = no }
+			name = “铁人”之治
+            modifier = {
+				stability_factor = 0.15
+				stability_weekly = 0.003
+				war_support_factor = 0.1
+				social_democrat_drift = 0.02
+				production_speed_buildings_factor = 0.2
+				consumer_goods_factor = -0.15
+				production_factory_max_efficiency_factor = 0.15
+				economy_cost_factor = -0.2
+				CONVERSION_COST_MIL_TO_CIV_FACTOR = -0.1
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_heritage = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_local_culture_protection"}
+			allowed = { always = no }
+			name = 收缴王公财产
+            modifier = {
+				stability_factor = -0.16
+				stability_weekly = -0.002
+				political_power_cost = 0.1
+				consumer_goods_factor = -0.3
+				industrial_capacity_factory = 0.15
+				production_speed_buildings_factor = 0.15
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_ending_colonial = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_local_culture_protection"}
+			allowed = { always = no }
+			name = 终结殖民时代
+            modifier = {
+				political_power_cost = 0.15
+				production_factory_efficiency_gain_factor = 0.15
+				paternal_autocrat_drift = -0.05
+				authoritarian_democrat_drift = -0.05
+				paternal_autocrat_drift = -0.05
+				industry_repair_factor = 0.15
+				research_speed_factor = 0.15
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_new_order = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_local_culture_protection"}
+			allowed = { always = no }
+			name = 扫除旧秩序
+            modifier = {
+				weekly_manpower = 100
+				non_core_manpower = 0.05
+				political_power_gain = 0.05
+				production_factory_start_efficiency_factor = 0.05
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_new_order_2 = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_local_culture_protection"}
+			allowed = { always = no }
+			name = 扫除旧秩序
+            modifier = {
+				weekly_manpower = 100
+				non_core_manpower = 0.1
+				political_power_gain = 0.1
+				production_factory_start_efficiency_factor = 0.1
+				industrial_capacity_factory = 0.1
+				line_change_production_efficiency_factor = 0.1
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_new_order_3 = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_local_culture_protection"}
+			allowed = { always = no }
+			name = 扫除旧秩序
+            modifier = {
+				weekly_manpower = 200
+				non_core_manpower = 0.1
+				political_power_gain = 0.1
+				production_factory_start_efficiency_factor = 0.15
+				industrial_capacity_factory = 0.15
+				line_change_production_efficiency_factor = 0.15
+				army_defence_factor = 0.1
+				army_attack_factor = 0.05
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_fertile_land = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_local_culture_protection"}
+			allowed = { always = no }
+			name = 救济人民
+            modifier = {
+				stability_factor = 0.1
+				consumer_goods_factor = 0.15
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				monthly_population = 0.1
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_fertile_land_2 = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_local_culture_protection"}
+			allowed = { always = no }
+			name = 救济人民
+            modifier = {
+				stability_factor = 0.1
+				consumer_goods_factor = 0.05
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				monthly_population = 0.2
+				local_resources_factor = 0.1
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_fertile_land_3 = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_local_culture_protection"}
+			allowed = { always = no }
+			name = 富饶之地
+            modifier = {
+				stability_factor = 0.15
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.15
+				global_building_slots_factor = 0.1
+				monthly_population = 0.2
+				local_resources_factor = 0.1
+				supply_node_range = 0.15
+				supply_consumption_factor = -0.1
+				production_speed_infrastructure_factor = 0.1
+			}
+			picture = UoB_militia_idea
+		}
+        BHC_walking_saints = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_local_culture_protection"}
+			allowed = { always = no }
+			name = 道德革命
+            modifier = {
+				stability_factor = 0.05
+				political_power_gain = 0.1
+				production_factory_start_efficiency_factor = 0.05
+				radical_socialist_drift = 0.02
+				
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_walking_saints_2 = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_local_culture_protection"}
+			allowed = { always = no }
+			name = 道德革命
+            modifier = {
+				stability_factor = 0.1
+				political_power_gain = 0.15
+				production_factory_start_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.05
+				consumer_goods_factor = -0.15
+				radical_socialist_drift = 0.03
+				
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_walking_saints_3 = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_local_culture_protection"}
+			allowed = { always = no }
+			name = 道德革命
+            modifier = {
+				stability_factor = 0.1
+				political_power_factor = 0.1
+				command_power_gain = 0.2
+				party_popularity_stability_factor = 0.15
+				political_power_gain = 0.15
+				production_factory_start_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.15
+				research_speed_factor = 0.1
+				consumer_goods_factor = -0.15
+				radical_socialist_drift = 0.05
+				
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_sarvodaya = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_local_culture_protection"}
+			allowed = { always = no }
+			name = 萨沃达亚
+            modifier = {
+				stability_factor = 0.05
+				production_speed_buildings_factor = 0.05
+				consumer_goods_expected_value = -0.05
+				monthly_population = 0.1
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_sarvodaya_2 = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_local_culture_protection"}
+			allowed = { always = no }
+			name = 萨沃达亚
+            modifier = {
+				stability_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				consumer_goods_expected_value = -0.1
+				monthly_population = 0.2
+				conscription = 0.01
+				non_core_manpower = 0.1
+				defensive_war_stability_factor = 0.1
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_land_donation_movement_spirit = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_local_culture_protection"}
+			allowed = { always = no }
+			name = 捐地运动的遗产
+            modifier = {
+				political_power_cost = 0.1
+				production_speed_buildings_factor = 0.05
+				production_speed_infrastructure_factor = 0.1
+				production_speed_industrial_complex_factor = 0.05
+				supply_node_range = 0.1
+				resistance_growth = -0.1
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_land_donation_movement_spirit_2 = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_local_culture_protection"}
+			allowed = { always = no }
+			name = 人民福祉
+            modifier = {
+				political_power_cost = 0.05
+				production_speed_buildings_factor = 0.1
+				production_speed_infrastructure_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+				supply_node_range = 0.1
+				resistance_growth = -0.1
+				global_building_slots_factor = 0.075
+				attrition = -0.1
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_land_donation_movement_spirit_3 = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_local_culture_protection"}
+			allowed = { always = no }
+			name = 人民福祉
+            modifier = {
+				production_speed_buildings_factor = 0.1
+				production_speed_infrastructure_factor = 0.15
+				production_speed_industrial_complex_factor = 0.15
+				supply_node_range = 0.15
+				resistance_growth = -0.15
+				global_building_slots_factor = 0.15
+				attrition = -0.1
+				consumer_goods_factor = -0.2
+				production_lack_of_resource_penalty_factor = -0.1
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_vanguard = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_local_culture_protection"}
+			allowed = { always = no }
+			name = 社会主义先锋
+            modifier = {
+				war_support_factor = 0.1
+				syndicalist_drift = 0.03
+				production_factory_start_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				industrial_capacity_factory = 0.05
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_vanguard_2 = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_local_culture_protection"}
+			allowed = { always = no }
+			name = 社会主义先锋
+            modifier = {
+				war_support_factor = 0.1
+				stability_factor = 0.05
+				political_power_cost = -0.05
+				syndicalist_drift = 0.05
+				consumer_goods_factor = -0.1
+				production_factory_max_efficiency_factor = 0.05
+				line_change_production_efficiency_factor = 0.05
+				production_factory_start_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				industrial_capacity_factory = 0.05
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_vanguard_3 = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_local_culture_protection"}
+			allowed = { always = no }
+			name = 社会主义先锋
+            modifier = {
+				war_support_factor = 0.15
+				stability_factor = 0.15
+				political_power_cost = -0.1
+				syndicalist_drift = 0.05
+				consumer_goods_factor = -0.1
+				production_factory_max_efficiency_factor = 0.05
+				line_change_production_efficiency_factor = 0.15
+				production_factory_start_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.15
+				industrial_capacity_factory = 0.05
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_vanguard_4 = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_local_culture_protection"}
+			allowed = { always = no }
+			name = 社会主义先锋
+            modifier = {
+				war_support_factor = 0.15
+				stability_factor = 0.15
+				political_power_cost = -0.1
+				syndicalist_drift = 0.05
+				radical_socialist_drift = 0.02
+				social_democrat_drift = 0.01
+				consumer_goods_factor = -0.2
+				production_factory_max_efficiency_factor = 0.15
+				line_change_production_efficiency_factor = 0.15
+				production_factory_start_efficiency_factor = 0.15
+				production_factory_efficiency_gain_factor = 0.15
+				global_building_slots_factor = 0.1
+				industrial_capacity_factory = 0.1
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_road_of_masses = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_local_culture_protection"}
+			allowed = { always = no }
+			name = 群众路线
+            modifier = {
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				non_core_manpower = 0.1
+				land_reinforce_rate = 0.05
+				conscription_factor = 0.15
+				compliance_growth = 0.05
+				resistance_growth_on_our_occupied_states = 0.15
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_unity_idea = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_local_culture_protection"}
+			allowed = { always = no }
+			name = 团结一心
+            modifier = {
+				industrial_capacity_factory = 0.1
+				coordination_bonus = 0.08
+				production_speed_buildings_factor = 0.1
+				local_resources_factor = 0.1
+				trade_laws_cost_factor  = -0.2
+				mobilization_laws_cost_factor = -0.2
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_humanitarian_ethics = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_local_culture_protection"}
+			allowed = { always = no }
+			name = 人道精神
+            modifier = {
+				stability_weekly = 0.005
+				stability_factor = 0.1
+				resistance_damage_to_garrison = -0.1
+				resistance_decay = 0.1
+				industry_free_repair_factor = 0.15
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_equality_of_citizens = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_local_culture_protection"}
+			allowed = { always = no }
+			name = 公民平等
+            modifier = {
+				political_power_factor = 0.1
+				monthly_population = 0.2
+				research_speed_factor = 0.1
+				production_factory_max_efficiency_factor = 0.15
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_equality_of_citizens_2 = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_local_culture_protection"}
+			allowed = { always = no }
+			name = 革命与人民
+            modifier = {
+				political_power_factor = 0.1
+				monthly_population = 0.2
+				consumer_goods_expected_value = -0.05
+				industrial_capacity_factory = 0.1
+				global_building_slots_factor = 0.1
+				conscription = 0.01
+				research_speed_factor = 0.1
+				production_factory_max_efficiency_factor = 0.15
+				enemy_operative_capture_chance_factor = 0.15
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_forward_idea = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_forward_idea"}
+			allowed = { always = no }
+			name = 向前进！
+            modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				breakthrough_factor = 0.05
+				army_speed_factor = 0.1
+				planning_speed = 0.15
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_forward_idea_2 = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_forward_idea_2"}
+			allowed = { always = no }
+			name = 向前进！
+            modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				breakthrough_factor = 0.05
+				command_power_gain = 0.2
+				command_power_gain_mult = 0.1
+				army_speed_factor = 0.1
+				planning_speed = 0.15
+				army_org_factor = 0.05
+				army_morale_factor = 0.05
+				land_reinforce_rate = 0.02
+				attrition = -0.1
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_delhis_call = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_local_culture_protection"}
+			allowed = { always = no }
+			name = 德里在呼唤...
+            modifier = {
+				war_support_factor = 0.1
+				weekly_manpower = 500
+			}
+			targeted_modifier = {
+			    tag = DEH
+			    attack_bonus_against = 0.15
+				defense_bonus_against = 0.1
+			    breakthrough_bonus_against = 0.15
+		    }
+			targeted_modifier = {
+			    tag = PRF
+			    attack_bonus_against = 0.15
+				defense_bonus_against = 0.1
+			    breakthrough_bonus_against = 0.15
+		    }
+			picture = UoB_militia_idea
+		}
+		BHC_netaji_idea = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_netaji_idea"}
+			allowed = { always = no }
+			name = 内塔吉的领导
+            modifier = {
+				political_power_factor = 0.1
+				command_power_gain = 0.2
+				army_attack_factor = 0.1
+				totalist_drift = 0.02
+				max_command_power = 100
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_netaji_idea_2 = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_netaji_idea_2"}
+			allowed = { always = no }
+			name = 内塔吉的领导
+             modifier = {
+		        political_power_factor = 0.15
+		        command_power_gain = 0.3
+		        army_attack_factor = 0.1
+		        totalist_drift = 0.03
+		        max_command_power = 150
+		        army_defence_factor = 0.1
+				industrial_capacity_factory = 0.1
+	        }
+			picture = UoB_militia_idea
+		}
+		BHC_netaji_idea_normative = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_netaji_idea_2"}
+			allowed = { always = no }
+			name = 内塔吉的准则
+             modifier = {
+				political_power_factor = 0.2
+				command_power_gain = 0.35
+				army_attack_factor = 0.15
+				max_command_power = 200
+				army_defence_factor = 0.15
+				research_speed_factor = 0.1
+				compliance_growth = 0.05
+				mobilization_speed = 0.1
+	        }
+			picture = UoB_militia_idea
+		}
+		BHC_netaji_idea_normative_2 = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_netaji_idea_2"}
+			allowed = { always = no }
+			name = 内塔吉的准则
+             modifier = {
+				political_power_factor = 0.25
+				command_power_gain = 0.4
+				army_attack_factor = 0.2
+				max_command_power = 250
+				army_defence_factor = 0.2
+				army_strength_factor = 0.1
+				compliance_growth = 0.1
+				mobilization_speed = 0.15
+				war_support_factor = 0.1
+				army_org_factor = 0.1
+				land_reinforce_rate = 0.05
+	        }
+			picture = UoB_militia_idea
+		}
+		BHC_new_era = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_netaji_idea_2"}
+			allowed = { always = no }
+			name = 纪念“新时代”
+             modifier = {
+				training_time_factor = -0.1
+				resistance_target_on_our_occupied_states = 0.05
+				war_stability_factor = 0.1
+				minimum_training_level = -0.05
+				supply_consumption_factor = -0.1
+				pocket_penalty = -0.2
+	        }
+			picture = UoB_militia_idea
+		}
+		BHC_netaji_idea_red = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_netaji_idea_2"}
+			allowed = { always = no }
+			name = 团结在领袖领导下
+             modifier = {
+		        political_power_factor = 0.15
+		        command_power_gain = 0.3
+		        army_attack_factor = 0.1
+		        totalist_drift = 0.04
+		        max_command_power = 150
+		        army_defence_factor = 0.1
+				industrial_capacity_factory = 0.15
+				production_speed_buildings_factor = 0.1
+				consumer_goods_factor = -0.1
+				production_factory_efficiency_gain_factor = 0.1
+	        }
+			picture = UoB_militia_idea
+		}
+		BHC_netaji_idea_red_2 = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_netaji_idea_2"}
+			allowed = { always = no }
+			name = 团结在领袖领导下
+             modifier = {
+				political_power_factor = 0.2
+				command_power_gain = 0.4
+				army_attack_factor = 0.1
+				totalist_drift = 0.05
+				max_command_power = 200
+				army_defence_factor = 0.1
+				industrial_capacity_factory = 0.2
+				production_speed_buildings_factor = 0.15
+				consumer_goods_factor = -0.15
+				production_factory_efficiency_gain_factor = 0.15
+				research_speed_factor = 0.1
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_Jhansis_spirit = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_Jhansis_spirit"}
+			allowed = { always = no }
+			name = 占西女王之意志
+			modifier = {
+				war_support_factor = 0.1
+				stability_factor = 0.1
+				conscription_factor = 0.15
+				war_support_weekly = 0.002
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				weekly_manpower = 200
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_hindustani = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_hindustani"}
+			allowed = { always = no }
+			name = 印度斯坦终将自由
+			modifier = {
+				war_support_factor = 0.15
+				stability_factor = 0.15
+				conscription_factor = 0.15
+				war_support_weekly = 0.002
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				monthly_population = 0.1
+				production_factory_efficiency_gain_factor = 0.05
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_a_socialist_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_a_socialist_idea" }
+			allowed = { always = no }
+			name = 社会主义的进军
+			modifier = {
+				production_factory_start_efficiency_factor = 0.05
+				political_power_factor = 0.05
+				consumer_goods_factor = -0.1
+				production_factory_efficiency_gain_factor = 0.05
+				totalist_drift = 0.02
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_a_socialist_idea_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_a_socialist_idea" }
+			allowed = { always = no }
+			name = 社会主义的进军
+			modifier = {
+		        production_factory_start_efficiency_factor = 0.1
+		        political_power_factor = 0.1
+		        consumer_goods_factor = -0.2
+		        production_factory_efficiency_gain_factor = 0.1
+		        totalist_drift = 0.04
+		        stability_factor = 0.05
+		        industrial_capacity_factory = 0.05
+	        }
+			picture = UoB_militia_idea
+		}
+		BHC_indian_national_guard = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_indian_national_guard"}
+			allowed = { always = no }
+			name = 国民卫队
+			modifier = {
+				political_power_cost = 0.05
+				stability_factor = 0.1
+				drift_defence_factor = 0.1
+				conscription_factor = 0.1
+				army_infantry_attack_factor = 0.1
+				army_infantry_defence_factor = 0.1
+				resistance_target = -0.05
+				required_garrison_factor = -0.05
+				resistance_decay = -0.1
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_personality_cult = {   
+	        on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_personality_cult" }
+	        allowed = { always = no }
+	        name = 个人崇拜
+	        modifier = {
+		        stability_factor = 0.1
+		        political_power_gain = 0.1
+		        war_support_factor = 0.05
+		        army_attack_factor = 0.05
+		        army_defence_factor = 0.05
+	        }
+	        picture = UoB_militia_idea
+        }
+		BHC_waking_tiger = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_waking_tiger"}
+			allowed = { always = no }
+			name = 唤醒猛虎
+			modifier = {
+				industrial_capacity_factory = 0.05
+				local_resources_factor = 0.1
+				production_factory_start_efficiency_factor = 0.05
+				war_support_weekly = 0.002
+				war_support_factor = 0.05
+			}
+			picture = UoB_militia_idea
+	    }
+		BHC_waking_tiger_2 = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_waking_tiger"}
+			allowed = { always = no }
+			name = 唤醒猛虎
+			modifier = {
+				industrial_capacity_factory = 0.1
+				local_resources_factor = 0.15
+				production_factory_start_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.05
+				war_support_weekly = 0.005
+				war_support_factor = 0.1
+			}
+			picture = UoB_militia_idea
+	    }
+		BHC_waking_tiger_3 = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_waking_tiger"}
+			allowed = { always = no }
+			name = 唤醒猛虎
+			modifier = {
+				industrial_capacity_factory = 0.15
+		        local_resources_factor = 0.2
+		        production_factory_start_efficiency_factor = 0.15
+		        production_factory_efficiency_gain_factor = 0.1
+		        war_support_weekly = 0.007
+		        war_support_factor = 0.15
+		        research_speed_factor = 0.05
+		        army_attack_factor = 0.05
+		        army_defence_factor = 0.05
+			}
+			picture = UoB_militia_idea
+	    }
+		BHC_indian_culture = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_indian_culture"}
+			allowed = { always = no }
+			name = 印度文化
+			modifier = {
+				stability_factor = 0.1
+				political_power_gain = 0.1
+				local_resources_factor = 0.1
+				compliance_growth = 0.05
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_indian_culture_2 = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_indian_culture"}
+			allowed = { always = no }
+			name = 印度文化
+			modifier = {
+				stability_factor = 0.15
+				political_power_gain = 0.15
+				local_resources_factor = 0.15
+				compliance_growth = 0.1
+				monthly_population = 0.1
+				research_speed_factor = 0.05
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_CIA = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_CIA"}
+			allowed = { always = no }
+			name = 中央情报局
+			modifier = {
+				agency_upgrade_time = -0.2
+				operation_outcome = 0.1
+				operative_slot = 1
+				enemy_operative_capture_chance_factor = 0.1
+				own_operative_capture_chance_factor = -0.1
+				intel_from_operatives_factor = 0.15
+				intelligence_agency_defense = 0.5
+			}
+		}
+		BHC_welfare_state = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_welfare_state"}
+			allowed = { always = no }
+			name = 福利国家
+			modifier = {
+				stability_factor = 0.1
+				consumer_goods_factor = 0.2
+				monthly_population = 0.2
+				production_factory_efficiency_gain_factor = 0.1
+				global_building_slots_factor = 0.15
+				political_power_cost = 0.05
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_3i_government_fake = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_3i_government_false"}
+			allowed = { always = no }
+			name = “合作政府”
+			modifier = {
+				stability_factor = 0.1
+				political_power_gain = -0.1
+				syndicalist_drift = 0.05
+				consumer_goods_factor = -0.15
+				compliance_growth = -0.05
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_3i_government_fake_2 = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_3i_government_false"}
+			allowed = { always = no }
+			name = “合作政府”
+			modifier = {
+				stability_factor = 0.15
+				political_power_gain = -0.05
+				syndicalist_drift = 0.05
+				authoritarian_democrat_drift = 0.01
+				paternal_autocrat_drift = 0.01
+				consumer_goods_factor = -0.2
+				compliance_growth = -0.05
+				resistance_decay = 0.1
+				industrial_capacity_factory = 0.1
+				local_resources_factor = 0.1
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_3i_government_fake_3 = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_3i_government_false"}
+			allowed = { always = no }
+			name = “合作政府”
+			modifier = {
+				stability_factor = 0.2
+				political_power_gain = -0.03
+				syndicalist_drift = 0.05
+				authoritarian_democrat_drift = 0.01
+				paternal_autocrat_drift = 0.01
+				consumer_goods_factor = -0.25
+				compliance_growth = -0.05
+				resistance_decay = 0.15
+				industrial_capacity_factory = 0.15
+				local_resources_factor = 0.15
+				production_factory_efficiency_gain_factor = 0.1
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_loyal_army = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_loyal_army"}
+			allowed = { always = no }
+			name = 忠诚的军队
+			modifier = {
+				political_power_cost = 0.05
+				army_org_factor = 0.1
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				breakthrough_factor = 0.1
+				army_morale_factor = 0.1
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_free_media_fake = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_3i_government_false"}
+			allowed = { always = no }
+			name = “自由”媒体
+			modifier = {
+				stability_factor = 0.15
+				political_power_cost = 0.03
+				stability_weekly = 0.003
+				war_support_factor = 0.1
+				compliance_growth = 0.05
+				party_popularity_stability_factor = 0.1
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_3i_government = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_3i_government_false"}
+			allowed = { always = no }
+			name = 同心同德
+			modifier = {
+				stability_factor = 0.1
+				political_power_gain = 0.1
+				syndicalist_drift = 0.05
+				consumer_goods_factor = -0.15
+				compliance_growth = 0.05
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_3i_government_2 = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_3i_government_false"}
+			allowed = { always = no }
+			name = 同心同德
+			modifier = {
+				stability_factor = 0.15
+				political_power_gain = 0.15
+				syndicalist_drift = 0.05
+				consumer_goods_factor = -0.15
+				compliance_growth = 0.1
+				local_resources_factor = 0.1
+				global_building_slots_factor = 0.1
+				industrial_capacity_factory = 0.05
+				production_speed_buildings_factor = 0.05
+				production_speed_infrastructure_factor = 0.1
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_3i_government_3 = {   
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_3i_government_false"}
+			allowed = { always = no }
+			name = 同心同德
+			modifier = {
+				stability_factor = 0.2
+				political_power_gain = 0.2
+				syndicalist_drift = 0.08
+				consumer_goods_factor = -0.2
+				compliance_growth = 0.15
+				local_resources_factor = 0.15
+				global_building_slots_factor = 0.15
+				industrial_capacity_factory = 0.1
+				production_speed_buildings_factor = 0.1
+				production_speed_infrastructure_factor = 0.15
+				research_speed_factor = 0.05
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_syndicalist_economy_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: BHC_syndicalist_economy_idea" }
+			picture = generic_syndicalist_medal
+			allowed = { always = no }
+			name = 工团主义经济
+            modifier = {
+				industrial_capacity_factory = 0.10
+				consumer_goods_factor = -0.1
+				production_factory_max_efficiency_factor = 0.15
+				production_factory_start_efficiency_factor = 0.1
+				local_resources_factor = 0.05
+			}
+		}
+		BHC_free_media = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: BHC_syndicalist_economy_idea" }
+			picture = generic_syndicalist_medal
+			allowed = { always = no }
+			name = 自由媒体
+            modifier = {
+				political_power_factor = 0.1
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				resistance_target_on_our_occupied_states = 0.1
+				syndicalist_drift = 0.03
+				social_democrat_drift = 0.01
+				radical_socialist_drift = 0.01
+				party_popularity_stability_factor = 0.1
+			}
+		}
+		BHC_code_silver = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_code_silver"}
+			allowed = { always = no }
+			name = 代号：银
+			modifier = {
+				enemy_operative_capture_chance_factor = 0.1
+				own_operative_capture_chance_factor = -0.1
+				intel_from_combat_factor = 0.1
+				intel_from_operatives_factor = 0.1
+				operative_slot = 1
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_code_silver_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_code_silver"}
+			allowed = { always = no }
+			name = 代号：银
+			modifier = {
+				enemy_operative_capture_chance_factor = 0.15
+				own_operative_capture_chance_factor = -0.15
+				intel_from_combat_factor = 0.15
+				intel_from_operatives_factor = 0.15
+				intel_network_gain_factor = 0.1
+				operative_slot = 2
+				agency_upgrade_time = -0.1
+				operation_outcome = 0.1
+				crypto_strength	= 1
+				decryption_power = 5
+			}
+			picture = UoB_militia_idea
+		}
+		BHC_second_front = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_second_front"}
+			allowed = { always = no }
+			name = 第二战场
+			modifier = {
+				resistance_target_on_our_occupied_states = 0.1
+				resistance_decay_on_our_occupied_states = -0.1
+				resistance_growth_on_our_occupied_states = 0.1
+				compliance_growth_on_our_occupied_states = -0.1
+				war_support_factor = 0.1
+			}
+		}
+		BHC_Purge = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_Purge" }
+			allowed = { always = no }
+			picture = generic_purge_idea
+			name = 政治清洗
+			modifier = {
+				stability_weekly = 0.005
+				war_support_weekly = -0.005
+				national_populist_drift = -0.05
+				paternal_autocrat_drift = -0.05
+				social_conservative_drift = -0.05
+				social_liberal_drift = -0.05
+				social_democrat_drift = -0.05
+				syndicalist_drift = -0.02
+				radical_socialist_drift = -0.02
+				totalist_drift = 0.05
+				authoritarian_democrat_drift = 0.05
+			}
+		}
+		BHC_red_fighting_units_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_red_fighting_units_idea" }
+			allowed = { always = no }
+			picture = UoB_militia_idea
+			name = 赤色战斗队
+			modifier = {
+				required_garrison_factor = -0.05
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				army_org_factor = -0.03
+				conscription_factor = 0.1
+				experience_loss_factor = -0.25
+			}
+		}
+		BHC_netaji_return = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_netaji_return" }
+			allowed = { always = no }
+			picture = UoB_militia_idea
+			name = 内塔吉归来？
+			modifier = {
+			    political_power_factor = 0.1
+				command_power_gain = 0.2
+				command_power_gain_mult = 0.1
+				army_attack_factor = 0.1
+				totalist_drift = 0.02
+				authoritarian_democrat_drift = 0.01
+				max_command_power = 100
+			}
+		}
+		BHC_netaji_return_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_netaji_return" }
+			allowed = { always = no }
+			picture = UoB_militia_idea
+			name = 内塔吉归来
+			modifier = {
+			    political_power_factor = 0.15
+		        command_power_gain = 0.3
+		        command_power_gain_mult = 0.15
+		        army_attack_factor = 0.15
+		        army_defence_factor = 0.1
+		        totalist_drift = 0.05
+		        authoritarian_democrat_drift = 0.02
+		        max_command_power = 150
+		        org_loss_at_low_org_factor = -0.15
+		        army_org_factor = 0.05
+		        land_reinforce_rate = 0.03
+			}
+		}
+		BHC_commie_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_commie_idea" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 印度共产主义
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.05
+				totalist_drift = 0.05
+				consumer_goods_factor = -0.1
+				production_factory_efficiency_gain_factor = 0.1
+				industrial_capacity_factory = 0.05
+			}
+		}
+		BHC_commie_idea_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_commie_idea" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 印度共产主义
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				totalist_drift = 0.05
+				consumer_goods_factor = -0.15
+				production_factory_efficiency_gain_factor = 0.1
+				industrial_capacity_factory = 0.1
+				local_resources_factor = 0.1
+				global_building_slots_factor = 0.1
+			}
+		}
+		BHC_trade_union_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_trade_union_idea" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 统一工会
+			modifier = {
+				consumer_goods_factor = -0.1
+				industrial_capacity_factory = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_start_efficiency_factor = 0.1
+				syndicalist_drift = 0.01
+			}
+		}
+		BHC_peasant_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_peasant_idea" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 农民协会
+			modifier = {
+				production_speed_infrastructure_factor = 0.1
+				global_building_slots_factor = 0.1
+				local_resources_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				monthly_population = 0.2
+			}
+		}
+		BHC_worker_peasant_alliance_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_peasant_idea" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 工农联盟
+			modifier = {
+				consumer_goods_factor = -0.15
+				industrial_capacity_factory = 0.15
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_start_efficiency_factor = 0.1
+				production_speed_infrastructure_factor = 0.1
+				line_change_production_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				global_building_slots_factor = 0.15
+				local_resources_factor = 0.15
+				production_speed_buildings_factor = 0.15
+				monthly_population = 0.3
+			}
+		}
+		BHC_Muzaffar_Ahmad_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_peasant_idea" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 人民的斗争
+			modifier = {
+				industrial_capacity_factory = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				research_speed_factor = 0.05
+			}
+		}
+		BHC_Muzaffar_Ahmad_idea_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_peasant_idea" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 人民的斗争
+			modifier = {
+				political_power_factor = 0.1
+				industrial_capacity_factory = 0.1
+				production_factory_efficiency_gain_factor = 0.15
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				research_speed_factor = 0.1
+				attrition = -0.1
+				conscription = 0.02
+				consumer_goods_expected_value = -0.05
+			}
+		}
+		BHC_Abani_Mukherji_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_peasant_idea" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 革命铁拳
+			modifier = {
+				stability_factor = 0.1
+				stability_weekly = 0.003
+				monthly_population = -0.05
+				industrial_capacity_factory = 0.15
+				political_power_cost = 0.05
+				production_speed_arms_factory_factor = 0.15
+				production_factory_max_efficiency_factor = 0.1
+				command_power_gain = 0.3
+				max_command_power = 50
+			}
+		}
+		BHC_Abani_Mukherji_idea_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_peasant_idea" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 革命铁拳
+			modifier = {
+				stability_factor = 0.15
+				stability_weekly = 0.005
+				industrial_capacity_factory = 0.2
+				political_power_cost = 0.02
+				production_speed_arms_factory_factor = 0.2
+				production_factory_max_efficiency_factor = 0.15
+				resistance_decay = 0.08
+				production_lack_of_resource_penalty_factor = -0.1
+				command_power_gain = 0.5
+				max_command_power = 150
+			}
+		}
+		BHC_against_weakness = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_peasant_idea" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 告别软弱
+			modifier = {
+				war_support_factor = 0.1
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				consumer_goods_factor = -0.1
+				research_speed_factor = 0.05
+				industrial_capacity_factory = 0.05
+                radical_socialist_drift = -0.02
+				social_democrat_drift = -0.02
+			}
+		}
+		BHC_against_weakness_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_peasant_idea" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 告别软弱
+			modifier = {
+				war_support_factor = 0.1
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				army_strength_factor = 0.05
+				army_org_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.1
+				consumer_goods_factor = -0.2
+				research_speed_factor = 0.1
+				industrial_capacity_factory = 0.1
+                radical_socialist_drift = -0.02
+				social_democrat_drift = -0.02
+			}
+		}
+		BHC_revolutionary_vanguards = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_peasant_idea" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 革命先锋队
+			modifier = {
+				political_power_gain = 0.1
+				max_planning_factor = 0.1
+				subversive_activites_upkeep = -0.2
+				drift_defence_factor = 0.5
+				totalist_drift = 0.02
+			}
+		}
+		BHC_Chandra_Shekar_Azad_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_peasant_idea" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 不自由，毋宁死
+			modifier = {
+				conscription = 0.01
+				conscription_factor = 0.1
+				industrial_capacity_factory = 0.1
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+				resistance_growth_on_our_occupied_states = 0.1
+				resistance_target_on_our_occupied_states = 0.05
+			}
+		}
+		BHC_Chandra_Shekar_Azad_idea_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_peasant_idea" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 不自由，毋宁死
+			modifier = {
+				conscription = 0.02
+		        conscription_factor = 0.15
+		        industrial_capacity_factory = 0.15
+		        army_attack_factor = 0.15
+		        army_core_attack_factor = 0.15
+		        army_defence_factor = 0.1
+		        army_core_defence_factor = 0.1
+		        resistance_growth_on_our_occupied_states = 0.15
+		        resistance_target_on_our_occupied_states = 0.1
+		        war_support_factor = 0.1
+			}
+		}
+		BHC_social_equality = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_peasant_idea" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 社会平等
+			modifier = {
+				consumer_goods_factor = -0.15
+				stability_factor = 0.1
+				non_core_manpower = 0.15
+				consumer_goods_expected_value = -0.05
+				production_factory_start_efficiency_factor = 0.1
+			}
+		}
+		BHC_lessons_of_october = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 十月之诫
+			modifier = {
+				stability_factor = 0.1
+				political_power_factor = 0.1
+				party_popularity_stability_factor = 0.1
+				line_change_production_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+		BHC_lessons_of_october_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 社会共和之愿
+			modifier = {
+				stability_factor = 0.15
+		        political_power_factor = 0.15
+		        party_popularity_stability_factor = 0.15
+		        line_change_production_efficiency_factor = 0.1
+		        production_factory_efficiency_gain_factor = 0.1
+		        totalist_drift = 0.01
+			}
+		}
+		BHC_red_belief_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 赤色信仰
+			modifier = {
+				political_power_cost = -0.05
+				stability_factor = 0.05
+				monthly_population = 0.1
+				production_factory_max_efficiency_factor = 0.05
+				compliance_growth = 0.05
+				required_garrison_factor = -0.05
+			}
+		}
+		BHC_red_belief_idea_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 赤色信仰
+			modifier = {
+				political_power_cost = -0.1
+				stability_factor = 0.1
+				stability_weekly = 0.003
+				monthly_population = 0.2
+				production_factory_max_efficiency_factor = 0.1
+				global_building_slots_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				compliance_growth = 0.1
+				required_garrison_factor = -0.1
+			}
+		}
+		BHC_hinduism_reshape = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 改造印度教
+			modifier = {
+				stability_factor = -0.05
+				political_power_cost = 0.1
+				industrial_capacity_factory = 0.05
+				production_factory_start_efficiency_factor = 0.05
+				non_core_manpower = 0.1
+				resistance_growth = 0.03
+			}
+		}
+		BHC_hinduism_reshape_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 印度教社会主义
+			modifier = {
+				stability_factor = 0.1
+				political_power_cost = 0.05
+				war_support_factor = 0.1
+				industrial_capacity_factory = 0.1
+				production_factory_start_efficiency_factor = 0.1
+				non_core_manpower = 0.2
+				compliance_growth = 0.05
+				totalist_drift = 0.03
+				radical_socialist_drift = 0.01
+				social_democrat_drift = 0.01
+			}
+		}
+		BHC_localization_of_socialism = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 本土化社会主义
+			modifier = {
+				consumer_goods_expected_value = -0.1
+				local_resources_factor = 0.1
+				drift_defence_factor = 0.3
+				totalist_drift = 0.02
+				conversion_cost_civ_to_mil_factor = -0.2
+				conversion_cost_mil_to_civ_factor = -0.2
+				weekly_manpower = 500
+			}
+		}
+		BHC_totalist_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 印度极权主义
+			modifier = {
+				war_support_factor = 0.1
+				army_attack_factor = 0.05
+				breakthrough_factor = 0.05
+				offensive_war_stability_factor = 0.15
+				totalist_drift = 0.05
+			}
+		}
+		BHC_totalist_idea_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 印度极权主义
+			modifier = {
+				war_support_factor = 0.15
+				production_lack_of_resource_penalty_factor = -0.1
+				production_speed_arms_factory_factor = 0.1
+				army_attack_factor = 0.08
+				breakthrough_factor = 0.08
+				mobilization_laws_cost_factor = -0.25
+				economy_cost_factor = -0.25
+				offensive_war_stability_factor = 0.2
+				totalist_drift = 0.05
+			}
+		}
+		BHC_totalist_charter = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 极权宪章的启示
+			modifier = {
+				drift_defence_factor = 0.5
+				foreign_subversive_activites = -0.2
+				production_factory_max_efficiency_factor = 0.1
+				political_power_factor = 0.1
+				resistance_target = -0.1
+				command_power_gain = 0.2
+				max_command_power = 50
+			}
+		}
+		BHC_educational_innovation_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 教育革新
+			modifier = {
+				research_speed_factor = 0.15
+				stability_factor = 0.05
+				political_power_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				local_resources_factor = 0.05
+			}
+		}
+		BHC_national_syndicalism_experience = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 国家工团主义经验
+			modifier = {
+				political_power_cost = -0.05
+				production_factory_efficiency_gain_factor = 0.15
+				local_resources_factor = 0.1
+				consumer_goods_factor = -0.1
+				command_power_gain = 0.2
+				max_command_power = 80
+				command_abilities_cost_factor = -0.4
+				army_leader_start_attack_level = 1
+				totalist_drift = 0.02
+			}
+		}
+		BHC_europe_totalist = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 宪章之下
+			modifier = {
+				political_power_factor = 0.1
+				consumer_goods_expected_value = -0.05
+				production_factory_start_efficiency_factor = 0.1
+				production_factory_max_efficiency_factor = 0.05
+				industrial_capacity_factory = 0.05
+				intel_from_combat_factor = 0.1
+			}
+		}
+		BHC_europe_totalist_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 革命恒存
+			modifier = {
+				stability_factor = 0.15
+				consumer_goods_expected_value = -0.1
+				consumer_goods_factor = -0.15
+				army_org_factor = 0.1
+				production_factory_start_efficiency_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				industrial_capacity_factory = 0.1
+				experience_loss_factor = -0.2
+				intel_from_combat_factor = 0.1
+				resistance_decay = 0.1
+			}
+		}
+		BHC_national_bolshivism_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 民族与阶级
+			modifier = {
+				war_support_factor = 0.1
+				pocket_penalty = -0.2
+				non_core_manpower = 0.1
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+				army_org_factor = 0.05
+				army_morale_factor = 0.05
+				stability_factor = -0.1
+			}
+		}
+		BHC_national_bolshivism_idea_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 民族与阶级
+			modifier = {
+				war_support_factor = 0.1
+				pocket_penalty = -0.25
+				non_core_manpower = 0.15
+				army_attack_factor = 0.1
+				experience_gain_army_unit_factor = 0.15
+                conscription = 0.01
+				training_time_army_factor = -0.1
+				war_stability_factor = 0.15
+				army_org_factor = 0.1
+				army_morale_factor = 0.1
+				monthly_population = -0.2
+				stability_factor = -0.1
+				totalist_drift = 0.04
+				national_populist_drift = 0.01
+			}
+		}
+		BHC_religious_fever = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 宗教狂热
+			modifier = {
+				war_support_weekly = 0.005
+				breakthrough_factor = 0.1
+				org_loss_at_low_org_factor = -0.1
+				required_garrison_factor = -0.05
+				production_factory_max_efficiency_factor = 0.1
+				compliance_growth = 0.1
+				research_speed_factor = -0.1
+			}
+		}
+		BHC_racial_superiority_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 种族优越
+			modifier = {
+				industrial_capacity_factory = 0.1
+				political_power_cost = 0.1
+				local_intel_to_enemies = -0.1
+				planning_speed = 0.15
+				attrition = -0.1
+				minimum_training_level = -0.05
+				resistance_growth_on_our_occupied_states = 0.1
+				non_core_manpower = -0.05
+			}
+		}
+		BHC_building_socialism = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 建设社会主义
+			modifier = {
+				industrial_capacity_factory = 0.1
+				production_speed_buildings_factor = 0.1
+				consumer_goods_factor = -0.1
+				production_factory_efficiency_gain_factor = 0.1
+				global_building_slots_factor = 0.1
+				industry_free_repair_factor = 0.25
+				industry_repair_factor = 0.25
+			}
+		}
+		BHC_japanese_experience = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 旭日照耀婆罗多
+			modifier = {
+				war_support_factor = 0.1
+				weekly_manpower = 300
+				experience_loss_factor = -0.1
+				initiative_factor = 0.05
+				command_power_gain = 0.2
+				max_command_power = 50
+				political_power_cost = -0.05
+				totalist_drift = 0.01
+				national_populist_drift = 0.01
+			}
+		}
+		BHC_japanese_experience_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 旭日照耀婆罗多
+			modifier = {
+				war_support_factor = 0.15
+				war_stability_factor = 0.1
+				weekly_manpower = 800
+				experience_loss_factor = -0.15
+				initiative_factor = 0.1
+				army_morale_factor = 0.1
+				army_strength_factor = 0.05
+				command_power_gain = 0.5
+				max_command_power = 100
+				political_power_cost = -0.05
+				totalist_drift = 0.01
+				national_populist_drift = 0.01
+			}
+		}
+	    BHC_nation_above_all_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 民族高于一切
+			modifier = {
+				consumer_goods_expected_value = -0.05
+				stability_factor = 0.1
+				non_core_manpower = 0.1
+				consumer_goods_factor = -0.1
+				conscription_factor = 0.1
+			}
+		}
+		BHC_nation_above_all_idea_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 民族高于一切
+			modifier = {
+				consumer_goods_expected_value = -0.1
+				stability_factor = 0.15
+				non_core_manpower = 0.1
+				consumer_goods_factor = -0.2
+				conscription_factor = 0.1
+				party_popularity_stability_factor = 0.1
+				resistance_decay = 0.1
+				political_power_gain = 0.05
+				totalist_drift = 0.02
+			}
+		}
+		BHC_nation_above_all_idea_3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 印度高于一切
+			modifier = {
+				consumer_goods_expected_value = -0.15
+				stability_factor = 0.15
+				non_core_manpower = 0.1
+				consumer_goods_factor = -0.25
+				conscription_factor = 0.15
+				conscription = 0.01
+				party_popularity_stability_factor = 0.15
+				resistance_decay = 0.1
+				political_power_gain = 0.08
+				army_core_attack_factor = 0.1
+				industry_free_repair_factor = 0.25
+				terrain_penalty_reduction = -0.1
+				totalist_drift = 0.02
+			}
+		}
+		BHC_controlled_economy = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 统制经济
+			modifier = {
+				consumer_goods_factor = -0.1
+				production_factory_efficiency_gain_factor = 0.1
+				industrial_capacity_factory = 0.1
+				production_speed_buildings_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+		BHC_controlled_economy_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 统制经济
+			modifier = {
+				consumer_goods_factor = -0.1
+				production_factory_efficiency_gain_factor = 0.15
+				industrial_capacity_factory = 0.15
+				production_speed_buildings_factor = 0.15
+				production_factory_max_efficiency_factor = 0.15
+				production_factory_start_efficiency_factor = 0.1
+				global_building_slots_factor = 0.1
+				local_resources_factor = 0.1
+				conversion_cost_mil_to_civ_factor = -0.2
+				conversion_cost_civ_to_mil_factor = -0.2
+			}
+		}
+		BHC_science_liberation_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 解放科学
+			modifier = {
+				research_speed_factor = 0.25
+				stability_factor = -0.15
+				political_power_factor = -0.05
+				production_factory_efficiency_gain_factor = 0.15
+				production_factory_max_efficiency_factor = 0.15
+				local_resources_factor = 0.15
+			}
+		}
+        BHC_from_past_to_future_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 来自过去...
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = -0.1
+				stability_weekly = -0.001
+				war_support_factor = 0.05
+				industrial_capacity_factory = 0.1
+				production_factory_start_efficiency_factor = 0.1
+			}
+		}
+		BHC_from_past_to_future_idea_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = ...走向未来
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = 0.1
+				stability_weekly = 0.002
+				industrial_capacity_factory = 0.1
+				production_factory_start_efficiency_factor = 0.15
+				research_speed_factor = 0.05
+				production_speed_buildings_factor = 0.1
+				consumer_goods_expected_value = -0.1
+				fuel_gain_factor = 0.15
+				max_fuel_factor = 0.1
+				totalist_drift = 0.02
+			}
+		}
+		BHC_guiding_people_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 指引人民
+			modifier = {
+				political_power_cost = -0.03
+				enemy_operative_intel_extraction_rate = -0.15
+				army_org_factor = 0.1
+				conscription_factor = -0.1
+				consumer_goods_factor = -0.15
+				production_factory_efficiency_gain_factor = 0.1
+				local_resources_factor = 0.1
+				terrain_trait_xp_gain_factor = 0.2
+			}
+		}
+		BHC_break_ivory_tower_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 打破象牙塔
+			modifier = {
+				research_speed_factor = 0.1
+				stability_factor = 0.05
+				political_power_factor = 0.05
+				consumer_goods_factor = -0.1
+				production_factory_efficiency_gain_factor = 0.05
+				local_resources_factor = 0.05
+			}
+		}
+		BHC_break_ivory_tower_idea_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 打破象牙塔
+			modifier = {
+				research_speed_factor = 0.15
+				stability_factor = 0.1
+				political_power_factor = 0.1
+				consumer_goods_factor = -0.15
+				production_factory_efficiency_gain_factor = 0.1
+				local_resources_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				global_building_slots_factor = 0.1
+			}
+		}
+		BHC_new_india_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 新印度
+			modifier = {
+				production_speed_buildings_factor = 0.25
+				production_speed_infrastructure_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+				consumer_goods_expected_value = -0.1
+				conscription_factor = -0.05
+				compliance_growth = 0.1
+			}
+		}
+		BHC_serve_masses_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 服务群众
+			modifier = {
+				attrition = -0.15
+				consumer_goods_factor = -0.1
+				political_power_factor = 0.1
+				non_core_manpower = 0.1
+				war_stability_factor = 0.15
+				monthly_population = 0.3
+			}
+		}
+		BHC_eugenics = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 优生学
+			modifier = {
+				non_core_manpower = -0.1
+				monthly_population = -0.25
+				industrial_capacity_factory = 0.15
+				production_factory_max_efficiency_factor = 0.15
+				resistance_target = -0.08
+				army_org_factor = 0.15
+			}
+		}
+		BHC_cosmic_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 宇宙主义启蒙
+			modifier = {
+				research_speed_factor = 0.18
+				political_power_gain = 0.05
+				stability_factor = -0.05
+				war_support_weekly = 0.005
+				subversive_activites_upkeep = 0.2
+			}
+		}
+		BHC_flying_daedalus_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 人类新时代
+			modifier = {
+				industrial_capacity_factory = 0.05
+				production_factory_start_efficiency_factor = 0.1
+				production_speed_buildings_factor = 0.05
+				supply_consumption_factor = -0.1
+				supply_node_range = 0.1
+				min_export = -0.1
+				drift_defence_factor = -0.2
+			}
+		}
+		BHC_flying_daedalus_idea_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 人类新时代
+			modifier = {
+				industrial_capacity_factory = 0.1
+				war_stability_factor = 0.1
+				production_factory_start_efficiency_factor = 0.15
+				production_speed_buildings_factor = 0.1
+				supply_consumption_factor = -0.15
+				consumer_goods_expected_value = -0.1
+				supply_node_range = 0.15
+				min_export = -0.15
+				drift_defence_factor = -0.2
+				breakthrough_factor = 0.1
+				army_speed_factor = 0.1
+			}
+		}
+		BHC_new_human = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 新人类
+			modifier = {
+				experience_loss_factor = -0.2
+				conscription = -0.005
+				army_strength_factor = 0.1
+				army_org_factor = 0.1
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				special_forces_attack_factor = 0.15
+			}
+		}
+		BHC_indian_humanism = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 印度人文主义
+			modifier = {
+				political_power_gain = 0.05
+				compliance_gain = 0.001
+				puppet_cost_factor = -0.1
+				industry_free_repair_factor = 0.15
+				monthly_population = 0.15
+				stability_weekly = 0.002
+			}
+		}
+		BHC_indian_humanism_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 印度人文主义
+			modifier = {
+				political_power_gain = 0.1
+				compliance_gain = 0.003
+				puppet_cost_factor = -0.25
+				industry_free_repair_factor = 0.25
+				monthly_population = 0.25
+				stability_weekly = 0.004
+				radical_socialist_drift = 0.02
+				research_speed_factor = 0.1
+				non_core_manpower = 0.05
+			}
+		}
+		BHC_voice_of_people = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 人民之声
+			modifier = {
+				stability_factor = 0.1
+				political_power_factor = 0.1
+				drift_defence_factor = 0.25
+				economy_cost_factor = -0.1
+				consumer_goods_factor = -0.1
+				production_speed_buildings_factor = 0.05
+				resistance_target_on_our_occupied_states = 0.03
+			}
+		}
+		BHC_voice_of_people_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 人民之声
+			modifier = {
+				stability_factor = 0.15
+				political_power_factor = 0.15
+				drift_defence_factor = 0.5
+				economy_cost_factor = -0.15
+				consumer_goods_factor = -0.15
+				production_speed_buildings_factor = 0.1
+				resistance_target_on_our_occupied_states = 0.05
+				production_factory_efficiency_gain_factor = 0.1
+			}
+		}
+		BHC_bukharinism_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 布哈林模式
+			modifier = {
+				industrial_capacity_factory = 0.05
+				land_equipment_upgrade_xp_cost = -0.1
+				consumer_goods_expected_value = -0.05
+				industrial_capacity_dockyard = 0.05
+				stability_factor = 0.1
+				research_speed_factor = 0.05
+				production_speed_infrastructure_factor = 0.1
+			}
+		}
+		BHC_bukharinism_idea_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 布哈林模式
+			modifier = {
+				industrial_capacity_factory = 0.1
+				land_equipment_upgrade_xp_cost = -0.2
+				consumer_goods_expected_value = -0.1
+				industrial_capacity_dockyard = 0.1
+				stability_factor = 0.1
+				research_speed_factor = 0.1
+				production_speed_infrastructure_factor = 0.15
+				production_factory_max_efficiency_factor = 0.1
+				max_planning_factor = 0.15
+			}
+		}
+		BHC_worker_or_peasant = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 工农之间
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				production_factory_start_efficiency_factor = 0.05
+				industrial_capacity_factory = 0.05
+				global_building_slots_factor = 0.05
+				local_resources_factor = 0.05
+				consumer_goods_factor = -0.1
+			}
+		}
+		BHC_moderate_land_reform_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 温和的土地改革
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				production_factory_start_efficiency_factor = 0.1
+				industrial_capacity_factory = 0.1
+				global_building_slots_factor = 0.15
+				local_resources_factor = 0.15
+				consumer_goods_factor = -0.2
+				production_speed_infrastructure_factor = 0.1
+				conversion_cost_mil_to_civ_factor = -0.2
+			}
+		}
+		BHC_worker_guided_economy = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 工人指导经济
+			modifier = {
+				production_speed_buildings_factor = 0.15
+				production_factory_start_efficiency_factor = 0.15
+				industrial_capacity_factory = 0.15
+				global_building_slots_factor = 0.1
+				local_resources_factor = 0.1
+				consumer_goods_factor = -0.15
+				conversion_cost_civ_to_mil_factor = -0.2
+				production_lack_of_resource_penalty_factor = -0.1
+			}
+		}
+		BHC_tridemism_policies = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 民生主义
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				production_factory_start_efficiency_factor = 0.05
+				industrial_capacity_factory = 0.05
+				global_building_slots_factor = 0.1
+				local_resources_factor = 0.05
+				consumer_goods_factor = -0.1
+				production_speed_infrastructure_factor = 0.1
+			}
+		}
+		BHC_tridemism_policies_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 民生主义
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				production_factory_start_efficiency_factor = 0.1
+				industrial_capacity_factory = 0.1
+				global_building_slots_factor = 0.15
+				local_resources_factor = 0.15
+				consumer_goods_factor = -0.2
+				production_speed_infrastructure_factor = 0.1
+				conversion_cost_mil_to_civ_factor = -0.2
+				compliance_growth = 0.1
+			}
+		}
+		BHC_socialist_reform_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 社会主义民权
+			modifier = {
+				political_power_factor = 0.1
+				subversive_activites_upkeep = -0.1
+				stability_factor = 0.05
+				economy_cost_factor = -0.2
+				planning_speed = 0.1
+				propaganda_mission_factor = 0.1
+			}
+		}
+		BHC_socialist_reform_idea_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 社会主义民权
+			modifier = {
+				political_power_factor = 0.15
+				subversive_activites_upkeep = -0.15
+				stability_factor = 0.1
+				economy_cost_factor = -0.2
+				planning_speed = 0.2
+				propaganda_mission_factor = 0.2
+				research_speed_factor = 0.1
+				consumer_goods_factor = -0.15
+				monthly_population = 0.2
+				compliance_gain = 0.001
+			}
+		}
+		BHC_tridemism = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 三民主义
+			modifier = {
+				political_power_gain = 0.03
+				production_factory_start_efficiency_factor = 0.1
+				production_factory_max_efficiency_factor = 0.05
+				consumer_goods_expected_value = -0.05
+				army_infantry_attack_factor = 0.05
+				army_infantry_defence_factor = 0.05
+				max_command_power = 60
+				command_power_gain = 0.2
+			}
+		}
+		BHC_tridemism_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 三民主义
+			modifier = {
+				political_power_gain = 0.1
+				production_factory_start_efficiency_factor = 0.15
+				production_factory_max_efficiency_factor = 0.1
+				radical_socialist_drift = 0.05
+				social_democrat_drift = 0.02
+				syndicalist_drift = 0.01
+				consumer_goods_expected_value = -0.1
+				army_infantry_attack_factor = 0.1
+				army_infantry_defence_factor = 0.1
+				resistance_growth_on_our_occupied_states = 0.2
+				max_command_power = 100
+				command_power_gain = 0.4
+			}
+		}
+		BHC_democratic_socialism_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 民主社会主义
+			modifier = {
+				political_power_factor = 0.1
+				stability_factor = 0.05
+				economy_cost_factor = -0.2
+				planning_speed = 0.1
+				compliance_growth = 0.1
+				command_power_gain = 0.25
+				research_speed_factor = 0.1
+			}
+		}
+		BHC_democratic_socialism_idea_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 民主社会主义
+			modifier = {
+				political_power_factor = 0.15
+				stability_factor = 0.1
+				economy_cost_factor = -0.2
+				consumer_goods_expected_value = -0.05
+				planning_speed = 0.2
+				compliance_growth = 0.1
+				command_power_gain = 0.25
+				research_speed_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.10
+				stability_weekly = 0.002
+			}
+		}
+		BHC_market_socialism_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 市场社会主义
+			modifier = {
+				trade_opinion_factor = 0.2
+				min_export = 0.1
+				trade_laws_cost_factor  = -0.2
+				research_speed_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				industrial_capacity_factory = 0.05
+				local_resources_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+			}
+		}
+		BHC_collectivization = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 集体化
+			modifier = {
+				stability_factor = -0.1
+				political_power_gain = 0.15
+				consumer_goods_factor = -0.3
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_start_efficiency_factor = 0.05
+				stability_weekly = -0.001
+			}
+		}
+		BHC_autonomous_communes = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 农村自治公社
+			modifier = {
+				stability_factor = 0.1
+				political_power_cost = 0.03
+				local_resources_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				line_change_production_efficiency_factor = 0.1
+				stability_weekly = 0.002
+				production_speed_infrastructure_factor = 0.1
+				local_building_slots_factor = 0.1
+			}
+		}
+		BHC_industrialization = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 逐步工业化
+			modifier = {
+				industrial_capacity_factory = 0.05
+				production_speed_buildings_factor = 0.05
+				consumer_goods_factor = -0.1
+				research_speed_factor = 0.05
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+				industrial_concern_cost_factor = -0.2
+			}
+		}
+		BHC_industrialization_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 逐步工业化
+			modifier = {
+				industrial_capacity_factory = 0.1
+				production_speed_buildings_factor = 0.1
+				consumer_goods_factor = -0.2
+				research_speed_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+				production_lack_of_resource_penalty_factor = -0.1
+				industrial_concern_cost_factor = -0.2
+				industry_free_repair_factor = 0.25
+				conversion_cost_civ_to_mil_factor = -0.2
+				conversion_cost_mil_to_civ_factor = -0.2
+			}
+		}
+		The_time_of_trouble = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			available = {
+				has_war = yes
+			}
+			picture = generic_syndicalist_medal
+			name = 风云将起
+			modifier = {
+				forced_surrender_limit = -0.3
+				min_export = -0.8
+				trade_opinion_factor = -0.8
+			}
+		}
+		The_time_of_trouble_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			available = {
+				has_war = yes
+			}
+			picture = generic_syndicalist_medal
+			name = 祸起萧墙
+			modifier = {
+				forced_surrender_limit = -0.4
+				min_export = -0.8
+				trade_opinion_factor = -0.8
+			}
+		}
+		The_time_of_trouble_3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			available = {
+				has_war = yes
+			}
+			picture = generic_syndicalist_medal
+			name = 风雨飘摇
+			modifier = {
+				forced_surrender_limit = -0.5
+				min_export = -0.8
+				trade_opinion_factor = -0.8
+			}
+		}
+		The_time_of_trouble_4 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			available = {
+				has_war = yes
+			}
+			picture = generic_syndicalist_medal
+			name = 血染山河
+			modifier = {
+				forced_surrender_limit = -0.6
+				min_export = -0.8
+				trade_opinion_factor = -0.8
+			}
+		}
+		The_time_of_trouble_5 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			available = {
+				has_war = yes
+			}
+			name = 分崩离析
+			modifier = {
+				forced_surrender_limit = -0.75
+				min_export = -0.8
+				trade_opinion_factor = -0.8
+			}
+		}
+		BHC_core_of_mexico =  {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 亚洲的墨西哥
+			modifier = {
+				political_power_cost = -0.05
+				local_building_slots_factor = 0.1
+				local_resources_factor = 0.1
+				production_lack_of_resource_penalty_factor = -0.1
+				land_doctrine_cost_factor = -0.1
+				weekly_manpower = 500
+				attrition_for_controller = -0.15
+				equipment_capture = 0.05
+			}
+		}
+		BHC_core_of_mexico_2 =  {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 亚洲的墨西哥
+			modifier = {
+				political_power_cost = -0.1
+				local_building_slots_factor = 0.15
+				local_resources_factor = 0.15
+				production_lack_of_resource_penalty_factor = -0.15
+				land_doctrine_cost_factor = -0.2
+				weekly_manpower = 800
+				attrition_for_controller = -0.2
+				equipment_capture = 0.05
+				research_speed_factor = 0.05
+				stability_weekly = 0.003
+				radical_socialist_drift = 0.02
+			}
+		}
+		BHC_core_of_mexico =  {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_lessons_of_october" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 亚洲的墨西哥
+			modifier = {
+				political_power_cost = -0.05
+				local_building_slots_factor = 0.1
+				local_resources_factor = 0.1
+				production_lack_of_resource_penalty_factor = -0.1
+				land_doctrine_cost_factor = -0.1
+				weekly_manpower = 500
+				attrition_for_controller = -0.15
+				equipment_capture = 0.05
+			}
+		}
+		BHC_for_freedom = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: internationale_support"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 为了自由
+			modifier = {
+				political_power_gain = 0.05
+				stability_factor = 0.1
+				syndicalist_drift = 0.01
+				radical_socialist_drift = 0.01
+			}
+		}
+		BHC_for_freedom_2 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: internationale_support"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 为了自由
+			modifier = {
+				political_power_gain = 0.05
+				stability_factor = 0.1
+				syndicalist_drift = 0.01
+				radical_socialist_drift = 0.01
+				research_speed_factor = 0.15
+				compliance_starting_value = 0.25
+				compliance_growth = 0.25
+				required_garrison_factor = -0.25
+				attrition = -0.2
+			}
+		}
+		BHC_lala_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: internationale_support"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 众生灵之解放
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				war_stability_factor = 0.1
+				attrition = -0.1
+				consumer_goods_factor = -0.1
+				radical_socialist_drift = 0.01
+				army_defence_factor = 0.05
+			}
+		}
+		BHC_lala_idea_2 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: internationale_support"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 众生灵之解放
+			modifier = {
+				production_speed_buildings_factor = 0.15
+				war_stability_factor = 0.15
+				attrition = -0.15
+				consumer_goods_factor = -0.15
+				radical_socialist_drift = 0.01
+				army_defence_factor = 0.1
+				army_attack_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.1
+				stability_factor = 0.1
+			}
+		}
+		BHC_reformed_government = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: internationale_support"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = IWW模式
+			modifier = {
+				political_power_factor = 0.05
+				research_speed_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				line_change_production_efficiency_factor = 0.05
+				stability_factor = 0.05
+				planning_speed = 0.1
+				conscription_factor = 0.1
+			}
+		}
+		BHC_reformed_government_2 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: internationale_support"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 巴枯宁之理想
+			modifier = {
+				political_power_factor = 0.1
+				research_speed_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				line_change_production_efficiency_factor = 0.1
+				supply_consumption_factor = -0.15
+				stability_factor = 0.1
+				planning_speed = 0.2
+				conscription_factor = 0.15
+				compliance_growth = 0.1
+				required_garrison_factor = -0.05
+			}
+		}
+		BHC_buddhas_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: internationale_support"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 教化万民
+			modifier = {
+				attrition = -0.1
+				resistance_damage_to_garrison = -0.15
+				resistance_growth = -0.1
+				production_factory_max_efficiency_factor = 0.1
+				army_morale_factor = 0.1
+				production_factory_start_efficiency_factor = 0.1
+				stability_factor = 0.05
+			}
+		}
+		BHC_revolutionaries_victory = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: internationale_support"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 点燃革命之火
+			modifier = {
+				war_support_factor = 0.1
+				weekly_manpower = 100
+				industrial_capacity_factory = 0.05
+				production_factory_start_efficiency_factor = 0.05
+				max_planning_factor = 0.1
+				command_power_gain_mult = 0.1
+				political_power_cost = -0.05
+				syndicalist_drift = 0.02
+			}
+		}
+		BHC_revolutionaries_victory_2 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: internationale_support"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 点燃革命之火
+			modifier = {
+				war_support_factor = 0.15
+				weekly_manpower = 300
+				industrial_capacity_factory = 0.1
+				production_factory_start_efficiency_factor = 0.1
+				max_planning_factor = 0.2
+				command_power_gain_mult = 0.25
+				political_power_cost = -0.1
+				syndicalist_drift = 0.02
+				breakthrough_factor = 0.1
+				max_command_power = 200
+				army_morale_factor = 0.1
+			}
+		}
+		BHC_logical_pacifism_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: internationale_support"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 逻辑和平主义
+			modifier = {
+				war_support_factor = -0.1
+				stability_factor = 0.1
+				political_power_gain = 0.1
+				research_speed_factor = 0.1
+				resource_trade_cost_bonus_per_factory = 2
+				opinion_gain_monthly_same_ideology_factor = 0.1
+				trade_opinion_factor = 0.1
+			}
+		}
+		BHC_liberal_socialism_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: internationale_support"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 自由的社会主义
+			modifier = {
+				political_power_cost = -0.15
+				consumer_goods_expected_value = -0.05
+				resistance_growth = -0.1
+				consumer_goods_factor = -0.1
+				monthly_population = 0.2
+				production_lack_of_resource_penalty_factor = -0.1
+				non_core_manpower = 0.05
+			}
+		}
+		BHC_revolutionary_nationalism = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: internationale_support"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 民族的革命
+			modifier = {
+				conscription = 0.01
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+				local_resources_factor = 0.1
+				org_loss_when_moving = -0.1
+				land_reinforce_rate = 0.05
+				drift_defence_factor = 0.25
+			}
+		}
+		BHC_missionarys_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: internationale_support"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 爱国者先知
+			modifier = {
+				compliance_gain = 0.002
+				stability_factor = 0.1
+				stability_weekly = 0.002
+				experience_loss_factor = -0.15
+				foreign_subversive_activites = -0.2
+				supply_consumption_factor = -0.1
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		BHC_missionarys_idea_2 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: internationale_support"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 明日婆罗多
+			modifier = {
+				compliance_gain = 0.003
+				stability_factor = 0.15
+				stability_weekly = 0.003
+				experience_loss_factor = -0.25
+				foreign_subversive_activites = -0.25
+				supply_consumption_factor = -0.15
+				production_speed_buildings_factor = 0.15
+				monthly_population = 0.2
+				consumer_goods_expected_value = -0.1
+			}
+		}
+		BHC_origins_of_socialism = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: internationale_support"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 真正社会主义之源
+			modifier = {
+				conscription = 0.02
+				war_support_factor = 0.1
+				breakthrough_factor = 0.1
+				army_attack_against_major_factor = 0.1
+				industrial_capacity_factory = 0.1
+				truck_attrition = -0.15
+				enemy_operative_recruitment_chance = 0.2
+			}
+		}
+		BHC_social_reform = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: internationale_support"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 社会改革
+			modifier = {
+				political_power_factor = 0.1
+				consumer_goods_expected_value = -0.05
+				consumer_goods_factor = -0.1
+				stability_factor = 0.1
+				industrial_capacity_factory = 0.1
+				planning_speed = 0.15
+				research_speed_factor = 0.1
+			}
+		}
+		BHC_ideological_and_cultural_development = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: internationale_support"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 思想文化教育
+			modifier = {
+				research_speed_factor = 0.1
+				political_power_gain = 0.1
+				compliance_growth = 0.05
+				intelligence_agency_defense = 0.3
+				production_factory_efficiency_gain_factor = 0.1
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		BHC_ideological_and_cultural_development_2 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: internationale_support"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 思想文化教育
+			modifier = {
+				research_speed_factor = 0.15
+				political_power_gain = 0.15
+				compliance_growth = 0.1
+				intelligence_agency_defense = 0.5
+				production_factory_efficiency_gain_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				propaganda_mission_factor = 0.2
+				resistance_growth = -0.1
+				attrition = -0.1
+			}
+		}
+		BHC_authoritarian_politics_end = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: internationale_support"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 终结威权政治
+			modifier = {
+				stability_factor = -0.05
+				political_power_factor = 0.1
+				industrial_capacity_factory = 0.05
+				production_factory_efficiency_gain_factor = 0.1
+				max_command_power = -20
+				command_power_gain = 0.2
+				state_resources_factor = 0.1
+				supply_consumption_factor = -0.1
+			}
+		}
+		BHC_red_flag_of_peace = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: internationale_support"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 和平的红旗
+			modifier = {
+				war_support_factor = -0.05
+				stability_factor = 0.1
+				political_power_cost = -0.05
+				production_factory_start_efficiency_factor = 0.1
+				line_change_production_efficiency_factor = 0.1
+				research_speed_factor = 0.05
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		BHC_red_flag_of_peace_2 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: internationale_support"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 和平的红旗
+			modifier = {
+				war_support_factor = -0.02
+				stability_factor = 0.15
+				political_power_cost = -0.1
+				production_factory_start_efficiency_factor = 0.15
+				line_change_production_efficiency_factor = 0.15
+				research_speed_factor = 0.1
+				production_speed_buildings_factor = 0.15
+				stability_weekly = 0.002
+				drift_defence_factor = 0.25
+				consumer_goods_factor = -0.2
+			}
+		}
+		BHC_60_theory = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: internationale_support"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 60%理论
+			modifier = {
+				non_core_manpower = 0.1
+				consumer_goods_expected_value = -0.05
+				production_speed_infrastructure_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+				industrial_capacity_factory = 0.1
+				compliance_growth = 0.05
+				local_resources_factor = 0.1
+			}
+		}
+		BHC_remove_English = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: internationale_support"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 废弃英语
+			modifier = {
+				political_power_cost = 0.05
+				war_stability_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				consumer_goods_factor = -0.1
+				min_export = -0.05
+				civilian_intel_to_others = -0.15
+				foreign_subversive_activites = -0.15
+				enemy_operative_capture_chance_factor = 0.1
+			}
+		}
+		BHC_sevenfold_revolution_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: internationale_support"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 七重革命
+			modifier = {
+				stability_factor = -0.07
+				conscription = 0.02
+				industrial_capacity_factory = 0.14
+				army_attack_factor = 0.07
+				army_attack_against_major_factor = 0.14
+				global_building_slots_factor = 0.07
+				breakthrough_factor = 0.07
+				research_speed_factor = 0.07
+				experience_loss_factor = -0.2
+			}
+		}
+		BHC_red_prophet = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: internationale_support"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 红色先知
+			modifier = {
+				political_power_factor = 0.05
+				stability_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				production_lack_of_resource_penalty_factor = -0.1
+				consumer_goods_factor = -0.1
+				army_morale_factor = 0.05
+			}
+		}
+		BHC_red_prophet_2 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: internationale_support"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 红色先知
+			modifier = {
+				political_power_factor = 0.1
+				stability_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				production_lack_of_resource_penalty_factor = -0.1
+				consumer_goods_factor = -0.2
+				army_morale_factor = 0.1
+				research_speed_factor = 0.1
+				compliance_growth = 0.05
+				max_command_power = 50
+				max_planning_factor = 0.1
+				supply_consumption_factor = -0.1
+			}
+		}
+		BHC_land_reform_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: BHC_land_reform_idea"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 土地改革
+			modifier = {
+				production_speed_buildings_factor = 0.15
+				production_factory_start_efficiency_factor = 0.1
+				global_building_slots_factor = 0.10
+				local_resources_factor = 0.10
+				consumer_goods_factor = -0.25
+				production_speed_infrastructure_factor = 0.1
+			}
+		}
+		BHC_decentralized_federation_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: BHC_decentralized_federation_idea"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 分权联邦
+			modifier = {
+				local_resources_factor = 0.1
+				global_building_slots_factor = 0.1
+				monthly_population = 0.2
+				production_speed_buildings_factor = 0.05
+				non_core_manpower = 0.05
+				production_speed_infrastructure_factor = 0.1
+				compliance_gain = 0.001
+			}
+		}
+		BHC_decentralized_federation_idea_2 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: BHC_decentralized_federation_idea_2"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 分权联邦
+			modifier = {
+				local_resources_factor = 0.15
+				global_building_slots_factor = 0.15
+				monthly_population = 0.2
+				production_speed_buildings_factor = 0.1
+				non_core_manpower = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				production_speed_infrastructure_factor = 0.1
+				production_speed_buildings_factor = 0.05
+				compliance_gain = 0.003
+			}
+		}
+		BHC_nehrusism = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: BHC_nehrusism"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 尼赫鲁主义
+			modifier = {
+				political_power_factor = 0.1
+				stability_factor = 0.05
+				war_support_factor = 0.05
+			}
+		}
+		BHC_nehrusism_2 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: BHC_nehrusism_2"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 尼赫鲁主义
+			modifier = {
+				political_power_factor = 0.1
+				stability_factor = 0.15
+				war_support_factor = 0.1
+				consumer_goods_factor = -0.1
+				command_power_gain = 0.3
+				max_command_power = 50
+				production_factory_max_efficiency_factor = 0.05
+				max_planning_factor = 0.1
+			}
+		}
+		BHC_nehrusism_3 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: BHC_nehrusism_3"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 尼赫鲁主义
+			modiier = {
+				political_power_factor = 0.1
+				stability_factor = 0.2
+				stability_weekly = 0.003
+				war_support_factor = 0.1
+				consumer_goods_factor = -0.2
+				command_power_gain = 0.5
+				max_command_power = 100
+				production_factory_max_efficiency_factor = 0.1
+				max_planning_factor = 0.15
+				war_stability_factor = 0.1
+			}
+		}
+		BHC_nehrusism_4 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: BHC_nehrusism_4"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 尼赫鲁主义
+			modifier = {
+				political_power_factor = 0.15
+				stability_factor = 0.2
+				stability_weekly = 0.003
+				war_support_factor = 0.15
+				consumer_goods_factor = -0.25
+				consumer_goods_expected_value = -0.05
+				command_power_gain = 0.5
+				max_command_power = 100
+				industrial_capacity_factory = 0.1
+				production_factory_max_efficiency_factor = 0.15
+				max_planning_factor = 0.2
+				war_stability_factor = 0.15
+			}
+		}
+		BHC_motherland = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: BHC_motherland"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 人民的祖国
+			modifier = {
+				conscription = 0.015
+				compliance_growth = 0.1
+				global_building_slots_factor = 0.1
+				local_resources_factor = 0.1
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		BHC_rising_nation = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: BHC_rising_nation"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 崛起之国
+			modifier = {
+				production_factory_start_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				army_morale_factor = 0.1
+				army_org_factor = 0.1
+				command_abilities_cost_factor = -0.25
+				industrial_concern_cost_factor = -0.2
+				economy_cost_factor = -0.1
+			}
+		}
+		BHC_ideal_instead_of_religion = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: BHC_ideal_instead_of_religion"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 理想而非宗教
+			modifier = {
+				army_attack_factor = 0.1
+				stability_factor = -0.1
+				political_power_cost = -0.05
+				research_speed_factor = 0.1
+				compliance_growth = -0.05
+				industrial_capacity_factory = 0.1
+				consumer_goods_factor = -0.1
+			}
+		}
+		BHC_rama_allah_nanak = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: BHC_rama_allah_nanak"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 罗摩、安拉与那纳克
+			modifier = {
+				stability_factor = 0.1
+				political_power_cost = -0.1
+				war_stability_factor = 0.1
+				war_support_factor = 0.1
+			}
+		}
+		BHC_free_synd = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: BHC_free_synd"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 自由工团
+			modifier = {
+				political_power_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				production_factory_start_efficiency_factor = 0.1
+				industrial_capacity_factory = 0.1
+				consumer_goods_factor = -0.15
+				trade_laws_cost_factor = -0.2
+				economy_cost_factor = -0.2
+			}
+		}
+		BHC_between_marx_and_anarchy = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: BHC_between_marx_and_anarchy"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 马克思与安那其之间
+			modifier = {
+				political_power_gain = 0.03
+				consumer_goods_expected_value = -0.1
+				industrial_capacity_factory = 0.1
+				war_support_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				conscription_factor = 0.1
+				army_org_factor = -0.05
+				conversion_cost_civ_to_mil_factor = 0.15
+			}
+		}
+		BHC_foreign_experience = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: BHC_foreign_experience"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 同志的经验
+			modifier = {
+				production_factory_start_efficiency_factor = 0.1
+				experience_gain_army_factor = 0.1
+				experience_gain_army_unit_factor = 0.1
+				experience_gain_navy_factor = 0.1
+				positioning = 0.1
+				experience_gain_air_factor = 0.1
+				air_ace_generation_chance_factor = 0.1
+				max_planning_factor = 0.1
+				research_speed_factor = 0.1
+			}
+		}
+		BHC_rishis_thought = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: BHC_rishis_thought"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = “仙人”之授
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				research_speed_factor = 0.05
+				party_popularity_stability_factor = 0.1
+				consumer_goods_factor = -0.1
+				army_org_factor = 0.1
+				stability_factor = 0.15
+				org_loss_at_low_org_factor = -0.25
+			}
+		}
+		BHC_revolution_again = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: BHC_revolution_again"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 革命再起
+			modifier = {
+				army_morale_factor = 0.1
+				army_org_factor = 0.1
+				equipment_capture_factor = 0.1
+				war_support_factor = 0.1
+				production_factory_start_efficiency_factor = 0.05
+				line_change_production_efficiency_factor = 0.1
+				political_power_gain = 0.05
+			}
+		}
+		BHC_nationalization = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: BHC_nationalization"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 大规模国有化
+			modifier = {
+				stability_factor = -0.05
+				industrial_capacity_factory = 0.1
+				consumer_goods_factor = -0.3
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_start_efficiency_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				conscription_factor = -0.05
+			}
+		}
+		BHC_anti_imperialist = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: BHC_anti_imperialist"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 反帝国主义
+			modifier = {
+				army_attack_against_major_factor = 0.1
+				army_breakthrough_against_major_factor = 0.1
+				war_support_factor = 0.1
+				war_support_weekly = 0.003
+				production_factory_efficiency_gain_factor = 0.1
+				conscription_factor = 0.1
+				org_loss_at_low_org_factor = -0.15
+			}
+		}
+        BHC_khilafat_movement = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: BHC_khilafat_movement"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 基利法特之精神
+			modifier = {
+				resistance_decay_on_our_occupied_states = -0.15
+				resistance_growth_on_our_occupied_states = 0.1
+				training_time_army_factor = -0.15
+				supply_consumption_factor = -0.1
+				political_power_cost = -0.05
+				consumer_goods_expected_value = -0.05
+				mobilization_speed = 0.2
+			}
+		}
+		BHC_abolish_private_ownership = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: BHC_abolish_private_ownership"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 私有制之终
+			modifier = {
+				political_power_factor = 0.1
+				industrial_capacity_factory = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				consumer_goods_factor = -0.2
+				global_building_slots_factor = 0.1
+				local_resources_factor = 0.1
+				conversion_cost_civ_to_mil_factor = -0.2
+			}
+		}
+		BHC_pioneer = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: BHC_pioneer"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 先驱者
+			modifier = {
+				political_power_gain = 0.1
+				research_speed_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_start_efficiency_factor = 0.1
+				industrial_capacity_factory = 0.05
+				army_org_factor = 0.1
+			}
+		}
+		BHC_pioneer_2 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: BHC_pioneer_2"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 共产主义重生
+			modifier = {
+				political_power_gain = 0.15
+				research_speed_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_start_efficiency_factor = 0.15
+				industrial_capacity_factory = 0.1
+				army_org_factor = 0.15
+				consumer_goods_expected_value = -0.05
+				economy_cost_factor = -0.2
+				coordination_bonus = 0.05
+				command_power_gain = 0.3
+				max_command_power = 50
+			}
+		}
+		BHC_revolution_aliance = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: BHC_revolution_aliance"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 革命联盟
+			modifier = {
+				political_power_factor = 0.1
+				syndicalist_drift = 0.03
+				totalist_drift = 0.01
+				radical_socialist_drift = 0.01
+				drift_defence_factor = 0.25
+				party_popularity_stability_factor = 0.1
+				war_support_factor = 0.1
+				supply_consumption_factor = -0.1
+			}
+		}
+		BHC_labor_right_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: BHC_labor_right_idea"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 劳工权利
+			modifier = {
+				consumer_goods_factor = -0.15
+				global_building_slots_factor = 0.1
+				stability_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				industry_free_repair_factor = 0.2
+				conscription_factor = 0.1
+			}
+		}
+		BHC_roaring_age = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: BHC_roaring_age"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 无产阶级之咆哮
+			modifier = {
+				war_support_factor = 0.1
+				planning_speed = 0.1
+				breakthrough_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				line_change_production_efficiency_factor = 0.1
+				org_loss_when_moving = -0.1
+			}
+		}
+		BHC_roaring_age_2 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: BHC_roaring_age_2"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 无产阶级之咆哮
+			modifier = {
+				war_support_factor = 0.15
+				war_stability_factor = 0.1
+				planning_speed = 0.15
+				breakthrough_factor = 0.15
+				production_factory_efficiency_gain_factor = 0.15
+				line_change_production_efficiency_factor = 0.15
+				org_loss_when_moving = -0.2
+				subversive_activites_upkeep = -0.3
+				war_support_weekly_factor = 0.002
+				production_speed_arms_factory_factor = 0.1
+				generate_wargoal_tension = -0.1
+			}
+		}
+		BHC_Class_struggle = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: BHC_Class_struggle"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 阶级斗争
+			modifier = {
+				stability_factor = -0.1
+				conscription_factor = 0.1
+				industrial_capacity_factory = 0.1
+				drift_defence_factor = 0.5
+				political_power_gain = 0.1
+				consumer_goods_expected_value = -0.1
+			}
+		}
+		BHC_internationalism = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: BHC_internationalism"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 国际主义
+			modifier = {
+				political_power_cost = -0.05
+				research_speed_factor = 0.1
+				research_sharing_per_country_bonus_factor = 0.2
+				send_volunteer_size = 3
+				justify_war_goal_time = -0.15
+				opinion_gain_monthly_factor = 0.25
+				improve_relations_maintain_cost_factor = -0.2
+				trade_opinion_factor = 0.2
+			}
+		}
+		BHC_forward_for_revolution = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: BHC_forward_for_revolution"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 为革命
+			modifier = {
+				army_attack_factor = 0.05
+				army_strength_factor = 0.1
+				army_defence_factor = 0.05
+				industrial_capacity_factory = 0.05
+				offensive_war_stability_factor = 0.1
+				assign_army_leader_cp_cost = -0.2
+			}
+		}
+		BHC_forward_for_revolution = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: BHC_forward_for_revolution_2"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 为未来
+			modifier = {
+				army_attack_factor = 0.15
+				army_strength_factor = 0.1
+				army_defence_factor = 0.15
+				industrial_capacity_factory = 0.1
+				offensive_war_stability_factor = 0.1
+				assign_army_leader_cp_cost = -0.2
+				consumer_goods_expected_value = -0.05
+				supply_node_range = 0.15
+				land_reinforce_rate = 0.05
+			}
+		}
+		BHC_social_justice_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: BHC_social_justice_idea"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 社会正义
+			modifier = {
+				stability_factor = 0.1
+				compliance_growth = 0.1
+				production_factory_start_efficiency_factor = 0.1
+				production_speed_infrastructure_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+				supply_consumption_factor = -0.1
+			}
+		}
+		BHC_nehrus_dictatorship = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: BHC_nehrus_dictatorship"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 必要之恶
+			modifier = {
+				stability_factor = 0.1
+				political_power_factor = -0.1
+				resistance_target = -0.05
+				resistance_target_on_our_occupied_states = -0.05
+				consumer_goods_factor = -0.1
+				industrial_capacity_factory = 0.05
+			}
+		}
+		BHC_nehrus_dictatorship_2 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: BHC_nehrus_dictatorship_2"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 必要之恶
+			modifier = {
+				stability_factor = 0.15
+				party_popularity_stability_factor = 0.1
+				political_power_factor = -0.05
+				resistance_target = -0.05
+				consumer_goods_factor = -0.15
+				industrial_capacity_factory = 0.1
+				paternal_autocrat_drift = 0.05
+				syndicalist_drift = -0.01
+				radical_socialist_drift = -0.01
+				totalist_drift = -0.01
+			}
+		}
+		BHC_nehrus_dictatorship_3 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: BHC_nehrus_dictatorship_3"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 必要之恶
+			modifier = {
+				stability_factor = 0.2
+				party_popularity_stability_factor = 0.1
+				resistance_target = -0.05
+				consumer_goods_factor = -0.2
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_start_efficiency_factor = 0.1
+				stability_weekly = 0.002
+				industrial_capacity_factory = 0.1
+				paternal_autocrat_drift = 0.05
+				syndicalist_drift = -0.01
+				radical_socialist_drift = -0.01
+				totalist_drift = -0.01
+			}
+		}
+		BHC_strengthen_stability = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: BHC_strengthen_stability"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 地方警察
+			modifier = {
+				war_support_factor = -0.1
+				required_garrison_factor = 0.03
+				compliance_growth = 0.1
+				resistance_decay = 0.1
+				attrition = -0.1
+				local_resources_factor = -0.05
+			}
+		}
+		BHC_strengthen_stability_2 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: BHC_strengthen_stability_2"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 强势维稳
+			modifier = {
+				war_support_factor = -0.05
+				resistance_damage_to_garrison = -0.1
+				intelligence_agency_defense = 1.5
+				compliance_growth = 0.1
+				resistance_decay = 0.1
+				attrition = -0.1
+				supply_consumption_factor = -0.1
+				conscription = 0.005
+			}
+		}
+		BHC_silence_political_opponents = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: BHC_silence_political_opponents"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 沉默的政坛
+			modifier = {
+				political_power_gain = -0.1
+				stability_factor = 0.1
+				economy_cost_factor = -0.2
+				military_leader_cost_factor = -0.50
+				trade_laws_cost_factor = -0.2
+				mobilization_laws_cost_factor = -0.2
+				max_command_power = 30
+			}
+		}
+		BHC_all_for_money = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: BHC_all_for_money"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 金钱就是一切
+			modifier = {
+				political_power_cost = -0.1
+				economy_cost_factor = -0.2
+				trade_laws_cost_factor = -0.2
+				military_leader_cost_factor = -0.5
+				mobilization_laws_cost_factor = -0.2
+				consumer_goods_factor = -0.1
+			}
+		}
+		BHC_all_for_money_2 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: BHC_all_for_money_2"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 兵富国强
+			modifier = {
+				political_power_cost = -0.15
+				stability_factor = 0.1
+				economy_cost_factor = -0.25
+				trade_laws_cost_factor = -0.25
+				military_leader_cost_factor = -0.5
+				mobilization_laws_cost_factor = -0.2
+				consumer_goods_factor = -0.2
+				consumer_goods_expected_value = -0.05
+				production_factory_efficiency_gain_factor = 0.1
+				army_org_factor = -0.05
+				command_abilities_cost_factor = -0.25
+			}
+		}
+		BHC_the_general = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: BHC_the_general"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 将军的意志
+			modifier = {
+				political_power_factor = -0.1
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				army_morale_factor = 0.1
+				command_power_gain = 0.2
+				max_command_power = 30
+				industrial_capacity_factory = 0.05
+				paternal_autocrat_drift = 0.05
+			}
+		}
+		BHC_the_general_2 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: BHC_the_general_2"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 大护国公
+			modifier = {
+				political_power_factor = -0.1
+				army_attack_factor = 0.15
+				army_defence_factor = 0.1
+				army_morale_factor = 0.15
+				command_power_gain = 0.3
+				max_command_power = 50
+				max_planning_factor = 0.15
+				industrial_capacity_factory = 0.1
+				paternal_autocrat_drift = 0.05
+				org_loss_at_low_org_factor = -0.2
+				experience_gain_army_factor = 0.1
+				experience_gain_army_unit_factor = 0.1
+			}
+		}
+		BHC_politicize_military = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: BHC_politicize_military"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 政治化军队
+			modifier = {
+				army_morale_factor = 0.1
+				army_org_factor = 0.1
+				conscription = 0.01
+				stability_factor = 0.1
+				war_support_factor = -0.05
+				unit_upkeep_attrition_factor = 0.05
+				planning_speed = 0.1
+				army_leader_start_level = 1
+			}
+		}
+		BHC_fair_law = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: BHC_fair_law"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = “公正”之法
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = 0.1
+				consumer_goods_factor = -0.1
+				local_resources_factor = -0.05
+				industrial_capacity_factory = 0.1
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		BHC_nehrus_second_reign = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: BHC_nehrus_second_reign"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 接过权杖
+			modifier = {
+				political_power_cost = 0.05
+				stability_factor = 0.1
+				war_stability_factor = 0.1
+				conscription_factor = 0.1
+				industrial_capacity_factory = 0.1
+				consumer_goods_factor = -0.1
+				totalist_drift = 0.03
+			}
+		}
+		BHC_nehrus_second_reign_2 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: BHC_nehrus_second_reign_2"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 婆罗多之子
+			modifier = {
+				stability_factor = 0.15
+				war_stability_factor = 0.15
+				conscription_factor = 0.1
+				industrial_capacity_factory = 0.15
+				production_factory_max_efficiency_factor = 0.1
+				consumer_goods_factor = -0.15
+				breakthrough_factor = 0.1
+				totalist_drift = 0.05
+				supply_consumption_factor = -0.1
+				compliance_growth = 0.05
+				enemy_operative_harmed_time_factor = 0.2
+				conversion_cost_civ_to_mil_factor = -0.2
+			}
+		}
+		BHC_twenty_five_point_programme_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: BHC_twenty_five_point_programme_idea"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 25点计划
+			modifier = {
+				non_core_manpower = -0.1
+				subversive_activites_upkeep = -0.2
+				stability_factor = 0.1
+				consumer_goods_expected_value = -0.05
+				industrial_capacity_factory = 0.1
+				local_resources_factor = 0.1
+				max_planning_factor = 0.1
+				production_factory_start_efficiency_factor = 0.1
+				pocket_penalty = -0.25
+			}
+		}
+		BHC_discipline = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: BHC_discipline"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 墓场的纪律
+			modifier = {
+				stability_factor = 0.1
+				stability_weekly = 0.002
+				monthly_population = -0.1
+				army_morale_factor = 0.1
+				army_org_factor = 0.1
+				industrial_capacity_factory = 0.05
+				civilian_intel_to_others = -0.1
+				initiative_factor = -0.03
+				attrition = -0.1
+				enemy_intel_network_gain_factor_over_occupied_tag = -0.1
+			}
+		}
+		BHC_committed_bureaucracy = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: BHC_committed_bureaucracy"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 官僚体系
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+				stability_factor = 0.1
+				production_factory_start_efficiency_factor = 0.1
+				industrial_capacity_factory = 0.1
+				consumer_goods_factor = -0.1
+				economy_cost_factor = -0.1
+			}
+		}
+		BHC_trusteeship_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: BHC_trusteeship_idea"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 信托制度
+			modifier = {
+				global_building_slots_factor = 0.1
+				monthly_population = 0.2
+				production_speed_buildings_factor = 0.05
+				non_core_manpower = 0.05
+				production_speed_infrastructure_factor = 0.1
+				compliance_gain = 0.001
+			}
+		}
+		BHC_technocratic_cabinet = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: BHC_technocratic_cabinet"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 技官之治
+			modifier = {
+				research_speed_factor = 0.1
+				political_power_factor = 0.05
+				production_factory_start_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				industrial_capacity_factory = 0.1
+				economy_cost_factor = -0.1
+			}
+		}
+		BHC_technocratic_cabinet_2 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: BHC_technocratic_cabinet"}
+			allowed = { always = yes }
+			picture = soc_confederacy
+			name = 技官之治
+			modifier = {
+				research_speed_factor = 0.15
+				production_factory_start_efficiency_factor = 0.15
+				production_factory_efficiency_gain_factor = 0.15
+				industrial_capacity_factory = 0.15
+				economy_cost_factor = -0.2
+				trade_laws_cost_factor = -0.2
+				min_export = -0.1
+				local_resources_factor = 0.1
+				license_purchase_cost = 0.15
+				production_oil_factor = 0.1
+			}
+		}
+		BHC_manage_revolution = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_manage_revolution" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 管理革命
+			modifier = {
+				consumer_goods_factor = -0.2
+				industrial_capacity_factory = 0.1
+				production_factory_max_efficiency_factor = 0.15
+				production_factory_start_efficiency_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				war_support_factor = -0.1
+				political_power_cost = 0.05
+				planning_speed = -0.1
+				max_planning_factor = 0.15
+			}
+		}
+		BHC_tycoon_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_tycoon_idea" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 大亨之道
+			modifier = {
+				consumer_goods_expected_value = -0.05
+				stability_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				recon_factor = 0.1
+				production_lack_of_resource_penalty_factor = -0.1
+				state_resources_factor = 0.1
+				trade_opinion_factor = 0.1
+			}
+		}
+		BHC_tycoon_idea_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_tycoon_idea" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 大亨之道
+			modifier = {
+				consumer_goods_expected_value = -0.1
+				stability_factor = 0.15
+				production_factory_efficiency_gain_factor = 0.1
+				recon_factor = 0.1
+				production_lack_of_resource_penalty_factor = -0.1
+				state_resources_factor = 0.2
+				trade_opinion_factor = 0.2
+				production_speed_arms_factory_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+				supply_consumption_factor = -0.1
+				supply_node_range = 0.1
+			}
+		}
+		BHC_great_uprising = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_great_uprising" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 终得自由
+			modifier = {
+				stability_factor = -0.1
+				army_org_factor = -0.1
+				equipment_capture_factor = 0.1
+				war_support_factor = 0.1
+				production_factory_start_efficiency_factor = 0.1
+				line_change_production_efficiency_factor = -0.1
+				political_power_gain = 0.05
+			}
+		}
+		BHC_great_uprising_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_great_uprising_2" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 赤阳初升
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				breakthrough_factor = 0.1
+				equipment_capture_factor = 0.1
+				war_support_factor = 0.1
+				production_factory_start_efficiency_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				political_power_gain = 0.1
+			}
+		}
+		BHC_saffron_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_saffron_idea" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 绽放的藏红花
+			modifier = {
+				stability_factor = 0.1
+				consumer_goods_expected_value = -0.1
+				industrial_capacity_factory = 0.05
+				war_support_factor = 0.1
+				conscription_factor = 0.1
+				army_org_factor = -0.05
+				conversion_cost_civ_to_mil_factor = 0.15
+			}
+		}
+		BHC_saffron_idea_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_saffron_idea_2" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 绽放的藏红花
+			modifier = {
+				stability_factor = 0.15
+				consumer_goods_expected_value = -0.1
+				conscription = 0.01
+				max_command_power = 60
+				command_power_gain = 0.25
+				research_speed_factor = -0.03
+				totalist_drift = 0.03
+				industrial_capacity_factory = 0.1
+				war_support_factor = 0.15
+				conscription_factor = 0.15
+				army_morale_factor = 0.1
+				conversion_cost_civ_to_mil_factor = 0.2
+			}
+		}
+		BHC_third_way_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_third_way_idea" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 第三条道路
+			modifier = {
+				political_power_cost = 0.03
+				production_factory_start_efficiency_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				resistance_target = -0.05
+				consumer_goods_factor = -0.1
+				state_resources_factor = 0.1
+				supply_consumption_factor = -0.1
+			}
+		}
+		BHC_self_reliance_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_self_reliance_idea" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 自力更生
+			modifier = {
+				economy_cost_factor = -0.15
+				local_resources_factor = 0.1
+				production_lack_of_resource_penalty_factor = -0.15
+				global_building_slots_factor = 0.1
+				supply_factor = 0.1
+				supply_consumption_factor = -0.1
+				min_export = -0.05
+				industrial_capacity_factory = 0.1
+			}
+		}
+		BHC_triumvirates_heritage = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_triumvirates_heritage" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 三巨头的遗产
+			modifier = {
+				political_power_gain = 0.1
+				resistance_growth_on_our_occupied_states = 0.05
+				war_stability_factor = 0.1
+				resistance_decay_on_our_occupied_states = -0.1
+				supply_consumption_factor = -0.1
+				mobilization_speed = 0.1				
+			}
+		}
+		BHC_fathers_legacy = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_fathers_legacy" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 父辈的遗产
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = -0.1
+				consumer_goods_factor = 0.1
+				compliance_growth = 0.1
+				local_resources_factor = 0.1
+				social_democrat_drift = 0.02
+				radical_socialist = 0.02
+			}
+		}
+		BHC_fathers_legacy_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_fathers_legacy_2" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 父辈的遗产
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.1
+				resistance_growth_on_our_occupied_states = 0.05
+				local_resources_factor = 0.1
+				totalist_drift = 0.03
+				war_stability_factor = 0.1
+				army_attack_factor = 0.05
+				supply_consumption_factor = -0.1
+			}
+		}
+		BHC_fathers_legacy_3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_fathers_legacy_3" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 甘地主义的重生
+			modifier = {
+				war_support_factor = 0.1
+				war_support_weekly = 0.002
+				resistance_growth_on_our_occupied_states = 0.05
+				consumer_goods_factor = -0.1
+				mobilization_laws_cost_factor = -0.2
+				industrial_capacity_factory = 0.1
+				local_resources_factor = 0.1
+				totalist_drift = 0.05
+				war_stability_factor = 0.1
+				army_attack_factor = 01
+				supply_consumption_factor = -0.1
+			}
+		}
+		BHC_workers_guards = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_workers_guards" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 工人卫队
+			modifier = {
+				army_morale_factor = 0.1
+				army_org_factor = 0.1
+				conscription = 0.01
+				max_planning_factor = 0.1
+				supply_node_range = 0.1
+				planning_speed = 0.1
+				army_leader_start_level = 1
+			}
+		}
+		BHC_end_hinduism_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_end_hinduism_idea" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 终结印度教
+			modifier = {
+				stability_factor = -0.1
+				consumer_goods_expected_value = -0.1
+				industrial_capacity_factory = 0.1
+				conscription_factor = 0.1
+				army_org_factor = -0.05
+				monthly_population = 0.1
+				research_speed_factor = 0.05
+			}
+		}
+		BHC_end_hinduism_idea_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_end_hinduism_idea" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 终结印度教
+			modifier = {
+				consumer_goods_expected_value = -0.1
+				industrial_capacity_factory = 0.1
+				conscription_factor = 0.2
+				local_resources_factor = 0.1
+				monthly_population = 0.25
+				research_speed_factor = 0.1
+				non_core_manpower = 0.05
+				industry_free_repair_factor = 0.1
+			}
+		}
+		BHC_free_will_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_free_will_idea" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 自由之意志
+			modifier = {
+				subversive_activites_upkeep = -0.2
+				resistance_decay_on_our_occupied_states = -0.1
+				resistance_growth_on_our_occupied_states = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				research_speed_factor = 0.05
+				intel_network_gain_factor = 0.1
+				boost_resistance_factor = 0.25
+			}
+		}
+		BHC_sun_god_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_sun_god_idea" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 太阳神之恩赐
+			modifier = {
+				stability_factor = 0.1
+				consumer_goods_factor = -0.1
+				monthly_population = -0.05
+				industrial_capacity_factory = 0.1
+				breakthrough_factor = 0.1
+				supply_consumption_factor = -0.1
+				research_speed_factor = -0.05
+			}
+		}
+		BHC_sun_god_idea_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_sun_god_idea_2" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 太阳神之恩赐
+			modifier = {
+				stability_factor = 0.1
+				political_power_cost = -0.05
+				war_support_factor = 0.1
+				consumer_goods_factor = -0.1
+				monthly_population = -0.1
+				industrial_capacity_factory = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_lack_of_resource_penalty_factor = -0.1
+				breakthrough_factor = 0.15
+				supply_consumption_factor = -0.1
+				research_speed_factor = -0.05
+			}
+		}
+		BHC_sun_god_idea_3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_sun_god_idea_3" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 太阳神之恩赐
+			modifier = {
+				own_operative_detection_chance_factor = 0.05
+				political_power_cost = -0.1
+				resistance_decay_on_our_occupied_states = 0.1
+				war_support_factor = 0.15
+				consumer_goods_factor = -0.2
+				monthly_population = -0.2
+				industrial_capacity_factory = 0.1
+				production_speed_arms_factory_factor = 0.1
+				production_factory_max_efficiency_factor = 0.15
+				production_lack_of_resource_penalty_factor = -0.15
+				breakthrough_factor = 0.15
+				supply_consumption_factor = -0.1
+			}
+		}
+		BHC_religious_purity_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_religious_purity_idea" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 宗教纯洁
+			modifier = {
+				stability_factor = -0.1
+				consumer_goods_expected_value = -0.03
+				compliance_gain = 0.001
+				conscription_factor = -0.1
+				army_org_factor = 0.1
+				production_speed_infrastructure_factor = 0.1
+				industry_repair_factor = 0.2
+			}
+		}
+		BHC_religious_purity_idea_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_religious_purity_idea_2" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 宗教纯洁
+			modifier = {
+				stability_factor = -0.05
+				consumer_goods_expected_value = -0.1
+				compliance_gain = 0.002
+				conscription_factor = -0.05
+				army_org_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				resistance_activity = -0.1
+				weekly_manpower = -50
+				production_speed_infrastructure_factor = 0.1
+				army_morale_factor = 0.1
+				industry_repair_factor = 0.2
+			}
+		}
+		BHC_fanaticism_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_fanaticism_idea" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 精神狂热
+			modifier = {
+				war_support_factor = 0.1
+				army_infantry_attack_factor = 0.05
+				army_infantry_defence_factor = 0.05
+				pocket_penalty = -0.2
+				attrition = -0.1
+				mobilization_speed = 0.1
+				experience_loss_factor = 0.05
+			}
+		}
+		BHC_fanaticism_idea_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_fanaticism_idea_2" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 精神狂热
+			modifier = {
+				war_support_factor = 0.1
+				war_support_weekly = 0.002
+				army_infantry_attack_factor = 0.1
+				army_infantry_defence_factor = 0.1
+				pocket_penalty = -0.2
+				conscription = 0.02
+				terrain_penalty_reduction = 0.1
+				river_crossing_factor = -0.2
+				attrition = -0.1
+				mobilization_speed = 0.1
+				experience_loss_factor = 0.1
+			}
+		}
+		BHC_apostles_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_apostles_idea" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 使徒
+			modifier = {
+				political_power_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_start_efficiency_factor = 0.05
+				production_speed_buildings_factor = 0.05
+				weekly_manpower = 100
+				attrition = -0.05
+			}
+		}
+		BHC_apostles_idea_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_apostles_idea_2" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 使徒
+			modifier = {
+				political_power_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_start_efficiency_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				weekly_manpower = 200
+				attrition = -0.1
+				compliance_growth = 0.05
+				max_planning_factor = 0.1
+				resistance_target = -0.05
+			}
+		}
+		BHC_apostles_idea_3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_apostles_idea_3" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 使徒
+			modifier = {
+				political_power_factor = 0.15
+				production_factory_max_efficiency_factor = 0.15
+				production_factory_start_efficiency_factor = 0.15
+				production_speed_buildings_factor = 0.15
+				weekly_manpower = 300
+				attrition = -0.15
+				compliance_growth = 0.1
+				max_planning_factor = 0.15
+				resistance_target = -0.1
+				supply_consumption_factor = -0.1
+				max_command_power = 50
+				army_speed_factor = 0.1
+			}
+		}
+		BHC_sacred_heaven_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_sacred_heaven_idea" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 赤色天国
+			modifier = {
+				production_speed_industrial_complex_factor = 0.1
+				consumer_goods_expected_value = -0.1
+				production_lack_of_resource_penalty_factor = -0.1
+				production_speed_infrastructure_factor = 0.1
+				fortification_collateral_chance = -0.2
+				global_building_slots_factor = 0.1
+			}
+		}
+		BHC_soul_of_art_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_soul_of_art_idea" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 艺术之魂
+			modifier = {
+				stability_factor = 0.1
+				political_power_gain = 0.1
+				consumer_goods_factor = -0.1
+				monthly_population = 0.1
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+		BHC_soul_of_art_idea_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_soul_of_art_idea_2" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 艺术之魂
+			modifier = {
+				stability_factor = 0.1
+				political_power_gain = 0.15
+				consumer_goods_factor = -0.15
+				monthly_population = 0.2
+				production_factory_efficiency_gain_factor = 0.1
+				research_speed_factor = 0.1
+				local_resources_factor = 0.1
+				war_stability_factor = 0.1
+			}
+		}
+		BHC_human_potential_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_human_potential_idea" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 人类的潜力
+			modifier = {
+				army_strength_factor = 0.05
+				sickness_chance = -0.2
+				attrition = -0.1
+				terrain_penalty_reduction = 0.1
+				river_crossing_factor = -0.1
+				army_morale_factor = 0.1
+			}
+		}
+		BHC_human_potential_idea_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_human_potential_idea_2" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 梵之形
+			modifier = {
+				army_strength_factor = 0.1
+				sickness_chance = -0.3
+				attrition = -0.15
+				terrain_penalty_reduction = 0.15
+				river_crossing_factor = -0.15
+				army_morale_factor = 0.1
+				army_org_factor = 0.1
+				industrial_capacity_factory = 0.1
+				production_lack_of_resource_penalty_factor = -0.1
+			}
+		}
+		BHC_evolution_of_matter_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_evolution_of_matter_idea" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 物质的进化
+			modifier = {
+				research_speed_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				production_factory_start_efficiency_factor = 0.05
+				global_building_slots_factor = 0.05
+				local_resources_factor = 0.05
+				fortification_collateral_chance = -0.1
+			}
+		}
+		BHC_evolution_of_matter_idea_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_evolution_of_matter_idea_2" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 梵之质
+			modifier = {
+				research_speed_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				production_factory_start_efficiency_factor = 0.1
+				global_building_slots_factor = 0.1
+				local_resources_factor = 0.1
+				fortification_collateral_chance = -0.2
+				no_supply_grace = 48
+				equipment_capture = 0.05
+				industry_air_damage_factor = -0.1
+				production_oil_factor = 0.1
+			}
+		}
+		BHC_spirit_revolution_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_spirit_revolution_idea" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 精神之革命
+			modifier = {
+				political_power_gain = 0.05
+				stability_factor = 0.1
+				conscription_factor = 0.1
+				compliance_growth = 0.05
+				breakthrough_factor = 0.1
+				training_time_factor = -0.1
+			}
+		}
+		BHC_spirit_revolution_idea_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_spirit_revolution_idea_2" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 精神之革命
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = 0.05
+				compliance_growth = 0.1
+				breakthrough_factor = 0.1
+				training_time_factor = -0.1
+				max_planning_factor = 0.1
+				max_training = 0.1
+				resistance_damage_to_garrison = -0.05
+				radical_socialist_drift = 0.02
+			}
+		}
+		BHC_spirit_revolution_idea_3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_spirit_revolution_idea_3" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 精神之革命
+			modifier = {
+				political_power_gain = 0.15
+				conscription = 0.02
+				compliance_growth = 0.1
+				breakthrough_factor = 0.1
+				training_time_factor = -0.15
+				max_planning_factor = 0.15
+				max_training = 0.15
+				production_speed_buildings_factor = 0.1
+				army_infantry_attack_factor = 0.1
+				resistance_damage_to_garrison = -0.1
+				radical_socialist_drift = 0.03
+			}
+		}
+		BHC_tucc_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_tucc_idea" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 工会协调中心
+			modifier = {
+				syndicalist_drift = 0.01
+				stability_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				industrial_capacity_factory = 0.1
+			}
+		}
+		BHC_totalists_experience = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_totalists_experience" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 极权主义经验
+			modifier = {
+				political_power_factor = 0.1
+				totalist_drift = 0.02
+				consumer_goods_factor = -0.15
+				army_org_factor = 0.1
+				command_power_gain = 0.25
+				max_command_power = 100
+				command_abilities_cost_factor = -0.2
+				research_sharing_per_country_bonus_factor = 0.1
+			}
+		}
+		BHC_planning_commission = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_planning_commission" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 国家计划委员会
+			modifier = {
+				consumer_goods_expected_value = -0.08
+				production_factory_max_efficiency_factor = 0.1
+				production_lack_of_resource_penalty_factor = -0.1
+				global_building_slots_factor = 0.1
+				local_resources_factor = 0.1
+			}
+		}
+		BHC_planning_commission_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_planning_commission_2" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 国家计划委员会
+			modifier = {
+				consumer_goods_expected_value = -0.12
+				production_factory_max_efficiency_factor = 0.15
+				production_lack_of_resource_penalty_factor = -0.1
+				industrial_capacity_factory = 0.1
+				equipment_conversion_speed = 0.1
+				research_speed_factor = 0.05
+				global_building_slots_factor = 0.1
+				local_resources_factor = 0.1
+			}
+		}
+		BHC_ending_white_myth = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_ending_white_myth" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 终结白人神话
+			modifier = {
+				army_breakthrough_against_major_factor = 0.1
+				army_attack_against_major_factor = 0.15
+				army_morale_factor = 0.1
+				army_org_factor = 0.1
+				non_core_manpower = 0.1
+				conscription = 0.01
+			}
+		}
+		BHC_indian_factory = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_indian_factory" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 齿轮之声
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.1
+				conscription_factor = -0.05
+				industry_repair_factor = 0.2
+				industrial_capacity_factory = 0.1
+				line_change_production_efficiency_factor = 0.1
+				industry_air_damage_factor = -0.25
+			}
+		}
+		BHC_castes_end = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_castes_end" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 种姓之终结
+			modifier = {
+				stability_factor = -0.05
+				party_popularity_stability_factor = 0.15
+				monthly_population = 0.2
+				compliance_growth = 0.1
+				resistance_damage_to_garrison = -0.05
+				local_resources_factor = 0.1
+				political_power_gain = 0.05
+				research_speed_factor = 0.1
+			}
+		}
+		BHC_Ramakrishna_and_Vivekanandas_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_Ramakrishna_and_Vivekanandas_idea" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 教义与社会
+			modifier = {
+				stability_factor = 0.1
+				resistance_decay = 0.05
+				production_speed_infrastructure_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				monthly_population = 0.2
+				attrition = -0.1
+			}
+		}
+		BHC_limitations = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_limitations" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 心灵之限
+			modifier = {
+				research_speed_factor = -0.05
+				conscription_factor = 0.1
+				stability_factor = 0.1
+				army_strength_factor = 0.05
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_start_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = -0.1
+			}
+		}
+		BHC_liberate_the_mind = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_liberate_the_mind" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 解放心灵
+			modifier = {
+				political_power_gain = 0.05
+				research_speed_factor = 0.05
+				stability_factor = -0.1
+				production_speed_buildings_factor = 0.05
+				consumer_goods_factor = -0.1
+				initiative_factor = 0.05
+			}
+		}
+		BHC_liberate_the_mind_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_liberate_the_mind_2" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 解放心灵
+			modifier = {
+				political_power_gain = 0.1
+				research_speed_factor = 0.1
+				stability_factor = -0.05
+				production_speed_buildings_factor = 0.1
+				consumer_goods_factor = -0.1
+				supply_consumption_factor = -0.1
+				coordination_bonus = 0.05
+				land_reinforce_rate = 0.05
+				initiative_factor = 0.05
+			}
+		}
+		BHC_liberate_the_mind_3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_liberate_the_mind_3" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 解放心灵
+			modifier = {
+				political_power_gain = 0.15
+				research_speed_factor = 0.15
+				production_speed_buildings_factor = 0.1
+				industrial_capacity_factory = 0.1
+				consumer_goods_factor = -0.2
+				annex_cost_factor = -0.2
+				non_core_manpower = 0.1
+				supply_consumption_factor = -0.1
+				coordination_bonus = 0.08
+				land_reinforce_rate = 0.08
+				initiative_factor = 0.08
+			}
+		}
+		BHC_love_revolution = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_love_revolution" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 爱之革命
+			modifier = {
+				war_stability_factor = 0.1
+				compliance_growth = 0.05
+				conscription = 0.01
+				sickness_chance = -0.1
+				monthly_population = 0.1
+				consumer_goods_expected_value = -0.05
+			}
+		}
+		BHC_love_revolution_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_love_revolution_2" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 爱之革命
+			modifier = {
+				war_stability_factor = 0.1
+				party_popularity_stability_factor = 0.1
+				army_org_factor = 0.1
+				army_morale_factor = 0.1
+				compliance_growth = 0.1
+				conscription = 0.015
+				sickness_chance = -0.2
+				monthly_population = 0.15
+				consumer_goods_expected_value = -0.05
+				experience_loss_factor = -0.2
+			}
+		}
+		BHC_evil_ego_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BHC_love_revolution_2" }
+			allowed = { always = no }
+			picture = generic_syndicalist_medal
+			name = 邪恶的自我
+			modifier = {
+				war_support_factor = 0.05
+				subversive_activites_upkeep = -0.2
+				army_infantry_attack_factor = 0.1
+				army_infantry_defence_factor = -0.05
+				breakthrough_factor = 0.1
+				stability_factor = -0.1
+				max_planning_factor = 0.1
+			}
+		}
+	}
 	}
 
 	##############
@@ -152,4 +5781,4 @@ ideas = {
 
 	}
 
-}
+

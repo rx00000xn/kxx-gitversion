@@ -1,0 +1,115 @@
+BHC_bop = {
+	initial_value = 0.15
+	left_side = BHC_totalism_side
+	right_side = BHC_communism_side
+	decision_category = BHC_bop_category
+
+	### Neutral status
+	range = {
+		id = BHC_dualism_status_quo
+		min = -0.10
+		max = 0.10
+		modifier = {
+			political_power_gain = -0.05
+			authoritarian_democrat_drift = 0.03
+			paternal_autocrat_drift = 0.03
+		}
+		on_activate = {
+
+		}
+		on_deactivate = {
+			
+		}
+	}
+
+	### 极权
+	side = {
+		id = BHC_king_side	
+		icon = GFX_bop_UKR_king_side
+
+		range = {
+			id = BHC_king_low_authority
+			min = -0.3
+			max = -0.1
+			modifier = {
+				political_power_gain = -0.05
+				authoritarian_democrat_drift = 0.04
+				paternal_autocrat_drift = 0.02
+							
+			}
+			on_activate = {
+				
+			}
+			on_deactivate = {
+				
+			}
+		}
+
+		range = {
+			id = BHC_king_high_authority
+			min = -1
+			max = -0.45
+			modifier = {
+				political_power_gain = -0.05
+				authoritarian_democrat_drift = 0.05
+				paternal_autocrat_drift = -0.02
+				
+			}
+			on_activate = {
+				set_power_balance_gfx = {
+					id = BHC_dualism
+					side = BHC_king_side
+					gfx = GFX_bop_BHC_king_improved_side
+				}
+			}
+			on_deactivate = {
+				set_power_balance_gfx = {
+					id = BHC_dualism
+					side = BHC_king_side
+					gfx = GFX_bop_BHC_king_side
+				}
+			}
+		}		
+	}
+	### 共产
+	side = {
+		id = BHC_hetman_side
+		icon = GFX_bop_UKR_hetman_side
+
+		range = {
+			id = BHC_hetman_low_authority
+			min = 0.2
+			max = 0.45
+			modifier = {
+				political_power_gain = -0.05
+				authoritarian_democrat_drift = 0.02
+				paternal_autocrat_drift = 0.04
+						
+			}
+			on_activate = {
+				
+			}
+			on_deactivate = {
+				
+			}
+		}
+
+		range = {
+			id = BHC_hetman_high_authority
+			min = 0.45
+			max = 1
+			modifier = {
+				political_power_gain = -0.05
+				paternal_autocrat_drift = 0.05
+				authoritarian_democrat_drift = -0.02
+				
+			}
+			on_activate = {
+				
+			}
+			on_deactivate = {
+				
+			}
+		}		
+	}	
+}

@@ -141,6 +141,10 @@ set_popularities = {
 	national_populist = 0
 }
 
+set_power_balance = {
+	id = BHC_bop
+}
+
 create_country_leader = {
 	name = "Vinayak Damodar Savarkar"
 	picture = "gfx/leaders/BHC/Portrait_BHC_Vinayak_Damodar_Savarkar.png"
