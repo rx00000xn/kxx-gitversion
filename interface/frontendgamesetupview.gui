@@ -722,7 +722,7 @@ guiTypes = {
 			textureFile = ""
 			font = "hoi_20b"
 			borderSize = {x = 0 y = -226}
-			text = "西班牙王国"
+			text = "塞尔维亚"
 			maxWidth = 340
 			maxHeight = 30	
 			format = centre
@@ -734,7 +734,7 @@ guiTypes = {
 			textureFile = ""
 			font = "hoi_20b"
 			borderSize = {x = 0 y = -226}
-			text = "丹麦"
+			text = "鲁系军阀"
 			maxWidth = 340
 			maxHeight = 30	
 			format = centre
@@ -770,7 +770,7 @@ guiTypes = {
 			textureFile = ""
 			font = "hoi_20b"
 			borderSize = {x = 0 y = -226}
-			text = "爱尔兰"
+			text = "耶路撒冷穆塔萨勒夫领"
 			maxWidth = 340
 			maxHeight = 30	
 			format = centre
@@ -782,7 +782,7 @@ guiTypes = {
 			textureFile = ""
 			font = "hoi_20b"
 			borderSize = {x = 0 y = -226}
-			text = "菲律宾"
+			text = "两广军阀"
 			maxWidth = 340
 			maxHeight = 30	
 			format = centre
@@ -936,16 +936,28 @@ guiTypes = {
 				position = { x = 170 y = 240 }
 				size = { width = 100 height = 100}
 			}
-			
+			iconType = {
+				name = feature_highlight_icon_0
+				quadTextureSprite = "GFX_idea_JAP_democracy"
+				position = { x = 260  y = 320 }
+				centerPosition = yes
+				pdx_tooltip = feature_highlight_icon_0_tt
+			}
 
 			iconType = {
 				name = feature_highlight_icon_1
 				quadTextureSprite = "GFX_idea_MEX_Church_Question"
-				position = { x = 260  y = 320 }
+				position = { x = 200  y = 320 }
 				centerPosition = yes
 				pdx_tooltip = feature_highlight_icon_1_tt
 			}
-
+			iconType = {
+				name = feature_highlight_icon_2
+				quadTextureSprite = "GFX_idea_ZAM_galaxy_brain_idea"
+				position = { x = 320  y = 320 }
+				centerPosition = yes
+				pdx_tooltip = feature_highlight_icon_2_tt
+			}
 			
 			
 			
@@ -1187,6 +1199,72 @@ guiTypes = {
 					rotation = -0.25
 					scale = 1.25
 					pdx_tooltip = highlight_minor_6_tt
+				}
+	
+		}
+		containerWindowType = {
+			name = "new_country_isr"
+			position = { x = 1350 y = 555 }
+			## x: ± 180 to move one slot left or right
+			## y: ± 100 to move one slot up or down
+	
+			iconType = {
+				name = "highlight_major_button"
+				quadTextureSprite = "GFX_ISR_medium_flag"
+				position = { x = 0  y = 0 }
+				rotation = -0.25
+				scale = 1.25
+				pdx_tooltip = highlight_minor_7_tt
+			}
+			iconType = {
+					name = "highlight_major_button_overlay"
+					quadTextureSprite = "GFX_flag_small2_not_masked"
+					position = { x = 0  y = 0 }
+					rotation = -0.25
+					scale = 1.25
+					pdx_tooltip = highlight_minor_7_tt
+				}
+	
+				iconType = {
+					name = "highlight_major_button_frame"
+					quadTextureSprite = "GFX_small_flag_frame_thin2_gold"
+					position = { x = -6  y = -6 }
+					rotation = -0.25
+					scale = 1.25
+					pdx_tooltip = highlight_minor_7_tt
+				}
+	
+		}
+		containerWindowType = {
+			name = "new_country_pls"
+			position = { x = 1350 y = 510 }
+			## x: ± 180 to move one slot left or right
+			## y: ± 100 to move one slot up or down
+	
+			iconType = {
+				name = "highlight_major_button"
+				quadTextureSprite = "GFX_PLS_medium_flag"
+				position = { x = 0  y = 0 }
+				rotation = -0.25
+				scale = 1.25
+				pdx_tooltip = highlight_minor_8_tt
+			}
+			iconType = {
+					name = "highlight_major_button_overlay"
+					quadTextureSprite = "GFX_flag_small2_not_masked"
+					position = { x = 0  y = 0 }
+					rotation = -0.25
+					scale = 1.25
+					pdx_tooltip = highlight_minor_8_tt
+				}
+	
+				iconType = {
+					name = "highlight_major_button_frame"
+					quadTextureSprite = "GFX_small_flag_frame_thin2_gold"
+					position = { x = -6  y = -6 }
+					rotation = -0.25
+					scale = 1.25
+					pdx_tooltip = highlight_minor_8_tt
 				}
 	
 		}

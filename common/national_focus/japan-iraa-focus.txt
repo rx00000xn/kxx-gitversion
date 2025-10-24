@@ -17,7 +17,10 @@
 		icon = GFX_JAPIRAA_question_of_the_zaibatsu_industries-248360
 		x = 6
 		y = 2
-		cost = 5
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
@@ -33,7 +36,10 @@
 		icon = GFX_JAPIRAA_merging_parties_and_think_tanks-248360
 		x = 8
 		y = 2
-		cost = 5
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
@@ -49,7 +55,10 @@
 		icon = GFX_JAPIRAA_closing_of_the_congress-248360
 		x = 7
 		y = 3
-		cost = 5
+		cost = 3
+		ai_will_do = {
+			factor = 100
+		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}

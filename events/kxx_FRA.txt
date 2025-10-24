@@ -775,6 +775,9 @@ option = {
 }
 option = { 
 	name = kxxfrance.16.b
+	ai_chance = {
+		factor = 70
+	}	
 	country_event = {
 		id = kxxfrance.17
 		days = 7
@@ -782,6 +785,9 @@ option = {
 }
 option = {
 	name = kxxfrance.16.c
+	ai_chance = {
+		factor = 30
+	}	
 	add_stability = -0.1
 	hidden_effect = {
 		country_event = {
@@ -802,14 +808,14 @@ country_event = {
 option = { 
 	name = kxxfrance.17.a #yay deat again
 	ai_chance = {
-		factor = 50
+		factor = 0
 	}
 	complete_national_focus = FRA_Restoring_Socialist_Order
 }
 option = { 
 	name = kxxfrance.17.b #yay dorgeres
 	ai_chance = {
-		factor = 50
+		base = 25
 	}
 	create_country_leader = {
 		name = "乔治·阿尔贝蒂尼"
@@ -850,7 +856,7 @@ option = {
 option = { 
 	name = kxxfrance.17.c #yay herve
 	ai_chance = {
-		factor = 50
+		base = 25
 	}
 	create_country_leader = {
 		name = "古斯塔夫·爱尔威"
@@ -891,7 +897,7 @@ option = {
 option = { 
 	name = kxxfrance.17.f #ohhhhhh napoleon!!!!
 	ai_chance = {
-		factor = 50
+		base = 25
 	}
 	create_country_leader = {
 		name = "安德烈·肖梅"
@@ -931,7 +937,7 @@ option = {
 option = { 
 	name = kxxfrance.17.e #yay red flood garbage
 	ai_chance = {
-		factor = 50
+		base = 25
 	}
 	create_country_leader = {
 		name = "西蒙娜·威尔"
@@ -972,7 +978,7 @@ option = {
 option = { 
 	name = kxxfrance.30.a #who fucking cares just a cringe commie chad
 	ai_chance = {
-		factor = 50
+		base = 25
 	}
 	country_event = {
 		id = kxxfrance.30
@@ -991,7 +997,7 @@ country_event = {	#戴亚选举第二部分
 	option = { 
 		name = kxxfrance.17.g #who fucking cares just a cringe commie chad
 		ai_chance = {
-			factor = 50
+			base = 18
 		}
 		create_country_leader = {
 			name = "安德烈·洛吕奥"
@@ -1032,7 +1038,7 @@ country_event = {	#戴亚选举第二部分
 	option = { 
 		name = kxxfrance.17.h #red flood garbage again
 		ai_chance = {
-			factor = 50
+			base = 18
 		}
 		create_country_leader = {
 			name = "罗伯特·佩尔蒂埃"
@@ -1073,7 +1079,7 @@ country_event = {	#戴亚选举第二部分
 	option = { 
 		name = kxxfrance.30.c #伊斯兰
 		ai_chance = {
-			factor = 50
+			base = 10
 		}
 		create_country_leader = {
 			name = "罗杰·加罗迪"
@@ -1119,7 +1125,7 @@ country_event = {	#戴亚选举第二部分
 	option = { 
 		name = kxxfrance.17.i #可能派
 		ai_chance = {
-			base = 35
+			base = 18
 			modifier = {
 				factor = 1000
 				has_game_rule = {
@@ -1171,7 +1177,7 @@ country_event = {	#戴亚选举第二部分
 	option = { 
 		name = kxxfrance.30.e #dysutopia
 		ai_chance = {
-			factor = 50
+			base = 18
 		}
 		create_country_leader = {
 			name = "皮埃尔·普丘"
@@ -1218,7 +1224,7 @@ country_event = {	#戴亚选举第二部分
 	option = { 
 		name = kxxfrance.30.f #red flood again and again
 		ai_chance = {
-			factor = 50
+			base = 18
 		}
 		create_country_leader = {
 			name = "阿尔方斯·德·沙托布里昂"
@@ -1259,7 +1265,7 @@ country_event = {	#戴亚选举第二部分
 	option = { 
 		name = kxxfrance.30.b #who fucking cares just a cringe commie chad
 		ai_chance = {
-			factor = 50
+			factor = 0
 		}
 		country_event = {
 			id = kxxfrance.17

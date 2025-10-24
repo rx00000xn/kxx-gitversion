@@ -259,8 +259,6 @@ country_event = { #1936 Elections
 			JAP_Inoue_Junnosuke_eco_mli
 			JAP_Kawasaki_Takukichi_sec_mli
 		}
-		set_temp_variable = { coalition_partner_var = token:social_liberal }
-		add_to_coalition = yes
 		set_country_flag = JAP_minseito_won_in_1936_elections
 		mark_focus_tree_layout_dirty = yes
 	}
@@ -376,6 +374,17 @@ country_event = { #Kokumin Domei Choices
 			election_frequency = 48
 			elections_allowed = yes
 		}
+		set_party_name = {
+			ideology = national_populist
+			long_name = "国民同盟"
+			name = "国民同盟"
+		}
+		create_country_leader = {
+			name = "中野正刚"
+			picture = "gfx/leaders/JAP/Portrait_JAP_Nakano_Seigo.png"
+			expire = "1965.1.1"
+			ideology = right_syndicalism_subtype
+		}		
 		add_popularity = {
 			ideology = national_populist
 			popularity = 0.3
@@ -2281,7 +2290,7 @@ country_event = { #Siding With a Faction
 	option = { #Pan-Asianists
 		name = japan_new_event.30.a
 		ai_chance = { 
-		base = 10
+		base = 35
 		modifier = {
 				factor = 100
 				OR = {
@@ -2331,7 +2340,7 @@ country_event = { #Siding With a Faction
 	option = { #Kodoha Army
 		name = japan_new_event.30.b
 		ai_chance = { 
-		base = 25
+		base = 30
 		modifier = {
 				factor = 100
 				OR = {
@@ -2348,7 +2357,7 @@ country_event = { #Siding With a Faction
 	option = { #Konoe
 		name = japan_new_event.30.c
 		ai_chance = { 
-		base = 65
+		base = 35
 		modifier = {
 				factor = 100
 				has_game_rule = { rule = JAP_KODOHA_FACTIONS option = JAP_KODOHA_IRAA }
@@ -3133,7 +3142,7 @@ country_event = { #leftist Election
 			picture = "gfx/leaders/JAP/Portrait_JAP_Nakano_Seigo.png"
 			expire = "1965.1.1"
 			ideology = natsynd_subtype
-		}
+		}		
 		set_politics = {
 			ruling_party = totalist
 			elections_allowed = no
@@ -3343,11 +3352,12 @@ country_event = { #Araki Ideology Picker
 	is_triggered_only = yes
 	option = { #stay same
 		name = "我们永远忠于皇帝"
+		ai_chance = { base = 45 }
 		add_ideas = JAP_new_shogunate
 	}
 	option = { #Pan-Asianism
 		name = japan_new_event.42.a
-		ai_chance = { base = 100 }
+		ai_chance = { base = 45 }
 		set_politics = {
 			ruling_party = paternal_autocrat
 			election_frequency = 48
@@ -3372,7 +3382,7 @@ country_event = { #Araki Ideology Picker
 	
 	option = { #Prussian Constitutionaliusm
 		name = japan_new_event.42.b
-		ai_chance = { base = 100 }
+		ai_chance = { base = 10 }
 		set_politics = {
 			ruling_party = authoritarian_democrat
 			election_frequency = 48
@@ -3588,7 +3598,7 @@ country_event = { #A Twist in the Coup
 	option = { #Nichirenists
 		name = japan_new_event.46.a
 		ai_chance = { 
-			base = 25
+			base = 50
 			modifier = {
 				factor = 100
 				OR = {
@@ -3606,7 +3616,7 @@ country_event = { #A Twist in the Coup
 	option = { #Genyosha
 		name = japan_new_event.46.b
 		ai_chance = { 
-			base = 25
+			base = 30
 			modifier = {
 				factor = 100
 				OR = {
@@ -3664,7 +3674,7 @@ country_event = { #A Twist in the Coup
 	option = { #Kozaburo
 		name = japan_new_event.46.c
 		ai_chance = { 
-			base = 25
+			base = 20
 			modifier = {
 				factor = 100
 				has_game_rule = { rule = JAP_END_OF_DEMOCRACY option = JAP_KOZABURO }
@@ -3722,7 +3732,7 @@ country_event = { #Leading the Genyosha
 	option = { #Stick With Ryohei
 		name = japan_new_event.47.a
 		ai_chance = { 
-		factor = 50
+		factor = 70
 		modifier = {
 				factor = 100
 				has_game_rule = { rule = JAP_END_OF_DEMOCRACY option = JAP_BLACK_DRAGON_UCHIDA }
@@ -3737,7 +3747,7 @@ country_event = { #Leading the Genyosha
 	option = { #Oomoto
 		name = japan_new_event.47.b
 		ai_chance = { 
-		factor = 50
+		factor = 30
 		modifier = {
 				factor = 100
 				has_game_rule = { rule = JAP_END_OF_DEMOCRACY option = JAP_BLACK_DRAGON_DEGUCHI }
@@ -3807,7 +3817,7 @@ country_event = { #Death of Ryohei Uchida
 	is_triggered_only = yes
 	option = { #
 		name = japan_new_event.48.a
-		ai_chance = { base = 100 }
+		ai_chance = { base = 50 }
 		create_country_leader = {
 			name = "头山满"
 			picture = "gfx/leaders/JAP/Portrait_JAP_Toyama_Mitsuru.png"
@@ -3825,7 +3835,7 @@ country_event = { #Death of Ryohei Uchida
 	
 	option = { #
 		name = japan_new_event.48.b
-		ai_chance = { base = 100 }
+		ai_chance = { base = 50 }
 		
 		if = {
 		limit = { has_completed_focus = JAP_BLACKDRAG_secure_pan_asia }
@@ -3928,7 +3938,7 @@ country_event = { #1937 Snap Elections
 	option = { #Kokumin Domei
 		name = OPTION_KOKUMIN_DOMEI_1937
 		ai_chance = { 
-		factor = 50
+		factor = 25
 		modifier = {
 				factor = 100
 				has_game_rule = { rule = JAP_SNAP_ELECTIONS option = JAP_SNAP_ELECTIONS_KOKUMIN_DOMEI }
@@ -3963,7 +3973,7 @@ country_event = { #1937 Snap Elections
 	option = { #Tokohai
 		name = OPTION_TOKOHAI_1937
 		ai_chance = { 
-		factor = 50
+		factor = 25
 		modifier = {
 				factor = 100
 				OR = {
@@ -3997,7 +4007,7 @@ country_event = { #1937 Snap Elections
 	option = { #The Seiyukai have defended their absolute majority!
 		name = OPTION_SEIYUKAI_1937
 		ai_chance = { 
-		factor = 50
+		factor = 25
 		modifier = {
 				factor = 100
 				OR = {
@@ -4037,7 +4047,7 @@ country_event = { #1937 Snap Elections
 		name = OPTION_MINSEITO_1937
 		
 		ai_chance = { 
-		factor = 50
+		factor = 25
 		modifier = {
 				factor = 100
 				OR = {
@@ -4079,7 +4089,7 @@ country_event = { #1937 Snap Elections
 	option = { #Shakai-Taishuto
 		name = OPTION_SHAKAI_TAISHUTO_1937
 		ai_chance = { 
-		factor = 50
+		factor = 25
 		modifier = {
 				factor = 100
 				OR = {
@@ -4379,7 +4389,7 @@ country_event = { #Struggle of the Toseiha
 	option = { #Pan-Turan - Iwane Matsui
 		name = japan_new_event.55.a
 		ai_chance = {
-			base = 50
+			base = 1
 			modifier = {
 				factor = 100
 				has_game_rule = { rule = JAP_TOSEIHA_FACTIONS option = JAP_TOSEIHA_TURAN }
@@ -4424,7 +4434,7 @@ country_event = { #Struggle of the Toseiha
 	option = { #Tojo Path
 		name = japan_new_event.55.b
 		ai_chance = {
-			base = 50
+			base = 44
 			modifier = {
 				factor = 100
 				has_game_rule = { rule = JAP_TOSEIHA_FACTIONS option = JAP_TOSEIHA_TOJO }
@@ -4468,7 +4478,7 @@ country_event = { #Struggle of the Toseiha
 	option = { #Tojo Path
 		name = japan_new_event.55.c
 		ai_chance = {
-			base = 50
+			base = 55
 			modifier = {
 				factor = 100
 				has_game_rule = { rule = JAP_TOSEIHA_FACTIONS option = JAP_TOSEIHA_NAGATA }
@@ -4573,7 +4583,7 @@ country_event = { #Minseito Factionalism
 			name = "永井柳太郎"
 			picture = "gfx/leaders/JAP/Portrait_JAP_Ryūtarō_Nagai.png"
 			expire = "1965.1.1"
-			ideology = national_liberalism_subtype
+			ideology = soclib_popular_patriotism_subtype
 		}
 		set_politics = { ruling_party = social_liberal }
 		complete_national_focus = JAPLIB_tojnha_faction_dominance
@@ -4664,7 +4674,7 @@ country_event = { #Seiyukai Factionalism
 	option = { #Rentaro Faction
 		name = japan_new_event.59.a
 		ai_chance = {
-			base = 50
+			base = 30
 			modifier = {
 				factor = 100
 				has_game_rule = { rule = JAP_SNAP_ELECTIONS option = JAP_SNAP_ELECTIONS_SEIYUKAI_RENTARO }
@@ -4702,7 +4712,7 @@ country_event = { #Seiyukai Factionalism
 	option = { #Kuhara Faction
 		name = japan_new_event.59.b
 		ai_chance = {
-			base = 50
+			base = 40
 			modifier = {
 				factor = 100
 				has_game_rule = { rule = JAP_SNAP_ELECTIONS option = JAP_SNAP_ELECTIONS_SEIYUKAI_KUHARA }
@@ -4716,7 +4726,7 @@ country_event = { #Seiyukai Factionalism
 			name = "久原房之助"
 			picture = "gfx/leaders/JAP/Portrait_JAP_Fusanosuke_Kuhara.png"
 			expire = "1965.1.1"
-			ideology = authdem_national_conservative_subtype
+			ideology = authdem_showa_statism_subtype
 		}
 		set_party_name = {
 			ideology = authoritarian_democrat
@@ -4747,7 +4757,7 @@ country_event = { #Seiyukai Factionalism
 	option = { #Reform Faction
 		name = japan_new_event.59.c
 		ai_chance = {
-			base = 50
+			base = 30
 			modifier = {
 				factor = 100
 				has_game_rule = { rule = JAP_SNAP_ELECTIONS option = JAP_SNAP_ELECTIONS_SEIYUKAI_NAKAJIMA }
@@ -4759,7 +4769,7 @@ country_event = { #Seiyukai Factionalism
 			name = "中岛知久平"
 			picture = "gfx/leaders/JAP/Portrait_JAP_Chikuhei_Nakajima.png"
 			expire = "1965.1.1"
-			ideology = conservative_populism_subtype
+			ideology = soccon_popular_patriotism_subtype
 		}
 		set_party_name = {
 			ideology = authoritarian_democrat
@@ -4804,7 +4814,7 @@ country_event = { #Social-Democrats
 	option = { #Totalist Faction
 		name = japan_new_event.60.a
 		ai_chance = {
-			base = 50
+			base = 30
 			modifier = {
 				factor = 100
 				has_game_rule = { rule = JAP_SNAP_ELECTIONS option = JAP_SNAP_ELECTIONS_SHAKAI_TAISHUTO_TOT }
@@ -4859,7 +4869,7 @@ country_event = { #Social-Democrats
 		complete_national_focus = JAPSOCDEM_the_democracy_path
 		complete_national_focus = JAPSOCDEM_leftwing_victory
 		ai_chance = {
-			base = 50
+			base = 30
 			modifier = {
 				factor = 100
 				OR = {
@@ -4916,7 +4926,7 @@ country_event = { #Social-Democrats
 	option = { #Rightist Faction
 		name = japan_new_event.60.c
 		ai_chance = {
-			base = 50
+			base = 40
 			modifier = {
 				factor = 100
 				OR = {
@@ -4965,7 +4975,7 @@ country_event = { #Social-Democrats
 			}
 		create_country_leader = {
 				name = "片山哲"
-				picture = "gfx/leaders/JAP/Portrait_JAP_Katayama_Tetsu.png"
+				picture = "gfx/leaders/JAP/Portrait_JAP_Tetsu_Katayama_KX.png"
 				expire = "1965.1.1"
 				ideology = socdem_paternal_socialism_subtype
 			}
@@ -5082,9 +5092,17 @@ country_event = { #1940 elections
 	
 	is_triggered_only = yes
 	option = { #Kokumin Domei
-		name = 国民同盟
+		name = "国民同盟"
+		trigger = {
+			OR = {
+				has_focus_tree = japan-seiyukai
+				has_focus_tree = minseito-japan
+				has_focus_tree = socdem-japan
+				has_focus_tree = kokumin-domei
+			}
+		}
 		ai_chance = {
-			base = 50
+			base = 25
 			modifier = {
 				factor = 100
 				OR = {
@@ -5174,9 +5192,17 @@ country_event = { #1940 elections
 	#}
 	
 	option = { #The Seiyukai have defended their absolute majority!
-		name = 政友会
+		name = "政友会"
+		trigger = {
+			OR = {
+				has_focus_tree = japan-seiyukai
+				has_focus_tree = minseito-japan
+				has_focus_tree = socdem-japan
+				has_focus_tree = kokumin-domei
+			}
+		}		
 		ai_chance = {
-			base = 50
+			base = 25
 			modifier = {
 				factor = 100
 				OR = {
@@ -5207,10 +5233,17 @@ country_event = { #1940 elections
 	}
 	
 	option = { #Minseito
-		name = 民政党
-		
+		name = "民政党"
+		trigger = {
+			OR = {
+				has_focus_tree = japan-seiyukai
+				has_focus_tree = minseito-japan
+				has_focus_tree = socdem-japan
+				has_focus_tree = kokumin-domei
+			}
+		}	
 		ai_chance = {
-			base = 50
+			base = 25
 			modifier = {
 				factor = 100
 				OR = {
@@ -5249,9 +5282,17 @@ country_event = { #1940 elections
 	
 	
 	option = { #Shakai-Taishuto
-		name = 社会大众党
+		name = "社会大众党"
+		trigger = {
+			OR = {
+				has_focus_tree = japan-seiyukai
+				has_focus_tree = minseito-japan
+				has_focus_tree = socdem-japan
+				has_focus_tree = kokumin-domei
+			}
+		}		
 		ai_chance = {
-			base = 50
+			base = 25
 			modifier = {
 				factor = 100
 				OR = {
@@ -5378,7 +5419,7 @@ country_event = { #Anarchism in Japan
 	option = { #The Council Will Decide Our Fate
 		name = japan_new_event.65.a
 		ai_chance = {
-			base = 50
+			base = 25
 			modifier = {
 				factor = 100
 				has_game_rule = { rule = JAP_SOCIALIST_LEADERS option = JAP_SOCIALIST_BURAKU }
@@ -5411,7 +5452,7 @@ country_event = { #Anarchism in Japan
 	option = {
 		name = japan_new_event.65.b
 		ai_chance = {
-			base = 50
+			base = 25
 			modifier = {
 				factor = 100
 				has_game_rule = { rule = JAP_SOCIALIST_LEADERS option = JAP_SOCIALIST_JIICHIRO }
@@ -5444,7 +5485,7 @@ country_event = { #Anarchism in Japan
 	option = {
 		name = japan_new_event.65.c
 		ai_chance = {
-			base = 50
+			base = 25
 			modifier = {
 				factor = 100
 				has_game_rule = { rule = JAP_SOCIALIST_LEADERS option = JAP_SOCIALIST_SANSHIRO }
@@ -5478,7 +5519,7 @@ country_event = { #Anarchism in Japan
 	option = {
 		name = japan_new_event.65.d
 		ai_chance = {
-			base = 50
+			base = 25
 			modifier = {
 				factor = 100
 				has_game_rule = { rule = JAP_SOCIALIST_LEADERS option = JAP_SOCIALIST_SCHZIO }
@@ -5572,7 +5613,7 @@ country_event = { #A United Front Victory
 	option = { #Red Army
 		name = japan_new_event.67.a
 		ai_chance = {
-			base = 50
+			base = 34
 			modifier = {
 				factor = 100
 				has_game_rule = { rule = JAP_SOCIALIST_LEADERS option = JAP_SOCIALIST_NOSAKA }
@@ -5610,7 +5651,7 @@ country_event = { #A United Front Victory
 	option = { #Yamakawa
 		name = japan_new_event.67.b
 		ai_chance = {
-			base = 50
+			base = 32
 			modifier = {
 				factor = 100
 				has_game_rule = { rule = JAP_SOCIALIST_LEADERS option = JAP_SOCIALIST_YAMAKAWA }
@@ -5648,7 +5689,7 @@ country_event = { #A United Front Victory
 	
 		name = japan_new_event.67.c
 		ai_chance = {
-			base = 50
+			base = 34
 			modifier = {
 				factor = 100
 				has_game_rule = { rule = JAP_SOCIALIST_LEADERS option = JAP_SOCIALIST_YAMAMOTO }
@@ -5693,7 +5734,7 @@ country_event = { #Transitioning From a Junta Government
 	is_triggered_only = yes
 	option = { #Feminist Socialism
 		name = japan_new_event.68.a
-		ai_chance = { base = 100 }
+		ai_chance = { base = 10 }
 		set_politics = {
 			ruling_party = totalist
 			election_frequency = 48
@@ -5715,7 +5756,7 @@ country_event = { #Transitioning From a Junta Government
 	
 	option = { #Red Empire
 		name = japan_new_event.68.b
-		ai_chance = { base = 100 }
+		ai_chance = { base = 20 }
 		trigger = { not = { has_idea = JSR_end_emperor } }
 		set_politics = {
 			ruling_party = radical_socialist
@@ -5739,7 +5780,7 @@ country_event = { #Transitioning From a Junta Government
 	
 	option = { #Bellamyism
 		name = japan_new_event.68.c
-		ai_chance = { base = 100 }
+		ai_chance = { base = 40 }
 		set_politics = {
 			ruling_party = radical_socialist
 			election_frequency = 48
@@ -5761,7 +5802,7 @@ country_event = { #Transitioning From a Junta Government
 	
 	option = { #Nosaka Shall Push Forward a Security State
 		name = japan_new_event.68.d
-		ai_chance = { base = 100 }
+		ai_chance = { base = 30 }
 		set_politics = {
 			ruling_party = totalist
 			election_frequency = 48
@@ -5792,7 +5833,7 @@ country_event = { #Legacy of Yamakawaism
 	is_triggered_only = yes
 	option = { #anarcho_syndicalism Hitoshi
 		name = japan_new_event.69.a
-		ai_chance = { base = 100 }
+		ai_chance = { base = 80 }
 		set_politics = {
 			ruling_party = syndicalist
 			election_frequency = 48
@@ -5816,7 +5857,7 @@ country_event = { #Legacy of Yamakawaism
 	
 	option = { #Yamakawaism Hitoshi
 		name = japan_new_event.69.b
-		ai_chance = { base = 100 }
+		ai_chance = { base = 15 }
 		add_popularity = {
 			ideology = radical_socialist
 			popularity = 0.15
@@ -5826,7 +5867,7 @@ country_event = { #Legacy of Yamakawaism
 	
 	option = { #Feminist Socialism Kikue
 		name = japan_new_event.69.c
-		ai_chance = { base = 100 }
+		ai_chance = { base = 5 }
 		add_popularity = {
 			ideology = radical_socialist
 			popularity = 0.15
@@ -5872,7 +5913,7 @@ country_event = { #Leading the True Revolutionary Vanguard
 	option = { #Kenji Miyamoto
 		name = japan_new_event.70.a
 		ai_chance = {
-			base = 50
+			base = 10
 			modifier = {
 				factor = 100
 				has_game_rule = { rule = JAP_SOCIALIST_LEADERS option = JAP_SOCIALIST_MIYAMOTO }
@@ -5908,7 +5949,7 @@ country_event = { #Leading the True Revolutionary Vanguard
 	option = { #Tokuda
 		name = japan_new_event.70.b
 		ai_chance = {
-			base = 50
+			base = 80
 			modifier = {
 				factor = 100
 				has_game_rule = { rule = JAP_SOCIALIST_LEADERS option = JAP_SOCIALIST_TOKUDA }
@@ -5944,7 +5985,7 @@ country_event = { #Leading the True Revolutionary Vanguard
 	option = { #Tokuda
 		name = japan_new_event.70.c
 		ai_chance = {
-			base = 50
+			base = 10
 			modifier = {
 				factor = 100
 				has_game_rule = { rule = JAP_SOCIALIST_LEADERS option = JAP_SOCIALIST_FUKUMOTO }
@@ -5987,22 +6028,22 @@ country_event = { #Questioning Kenji's Leadership
 	
 	is_triggered_only = yes
 	option = { #Control the State
-		name = 社会安保控制国家
-		ai_chance = { base = 100 }
+		name = "社会安保控制国家"
+		ai_chance = { base = 20 }
 		set_country_leader_ideology = socialist_security_state_subtype
 		add_ideas = JSR_Kenji_Miyamoto_idea
 	}
 	
 	option = { #Sexuality Freed
-		name = 倡导性解放
-		ai_chance = { base = 100 }
+		name = "倡导性解放"
+		ai_chance = { base = 20 }
 		set_country_leader_ideology = socialist_feminism_subtype
 		add_ideas = JSR_Kenji_Miyamoto_idea_1
 	}
 	
 	option = { #Technocratic Socialism
-		name = 选择技术官僚社会主义
-		ai_chance = { base = 100 }
+		name = "选择技术官僚社会主义"
+		ai_chance = { base = 20 }
 		set_country_leader_ideology = technocratic_socialism_subtype
 		add_research_slot = 5
 		add_ideas = JSR_Kenji_Miyamoto_idea_2
@@ -6010,7 +6051,7 @@ country_event = { #Questioning Kenji's Leadership
 	
 	option = { #Kuahara Techsoc
 		name = japan_new_event.71.d
-		ai_chance = { base = 100 }
+		ai_chance = { base = 20 }
 		add_research_slot = 5
 		add_ideas = JSR_Kenji_Miyamoto_idea_2
 		create_country_leader = {
@@ -6026,7 +6067,7 @@ country_event = { #Questioning Kenji's Leadership
 	option = { #Kuahara Social-Futurist
 		name = japan_new_event.71.e
 		add_research_slot = 3
-		ai_chance = { base = 100 }
+		ai_chance = { base = 20 }
 		add_ideas = JSR_Kenji_Miyamoto_idea_3
 		create_country_leader = {
 						name = "瓜原义仁"
@@ -6067,7 +6108,7 @@ country_event = { #Reach Out to the Anti-Syndicalist World
 	is_triggered_only = yes
 	option = { #Yes
 		name = japan_new_event.72.a
-		ai_chance = { base = 100 }
+		ai_chance = { base = 90 }
 		FROM = {
 		give_market_access = JAP
 		}
@@ -6075,7 +6116,7 @@ country_event = { #Reach Out to the Anti-Syndicalist World
 	
 	option = { #No
 		name = japan_new_event.72.b
-		ai_chance = { base = 100 }
+		ai_chance = { base = 10 }
 		add_opinion_modifier = {
 			target = JAP
 			modifier = JAP_betrayal_by_the_right
@@ -6128,7 +6169,7 @@ country_event = { #Japan's Place In Asia
 	is_triggered_only = yes
 	option = { #We Shall Liberate Asia
 		name = japan_new_event.74.a
-		ai_chance = { base = 100 }
+		ai_chance = { base = 50 }
 		trigger = {
 		NOT = {
 		has_completed_focus = JAP_BLACKDRAG_panasianist_expansion
@@ -6140,7 +6181,7 @@ country_event = { #Japan's Place In Asia
 	
 	option = { #We Shall unify Asia
 		name = japan_new_event.74.b
-		ai_chance = { base = 100 }
+		ai_chance = { base = 50 }
 		trigger = {
 		JAP_pan_asia_unification_trigger = yes
 		}
@@ -6165,7 +6206,7 @@ country_event = { #Japan's Place In Asia
 	
 	option = { #We Shall Liberate Asia
 		name = japan_new_event.74.a
-		ai_chance = { base = 100 }
+		ai_chance = { base = 50 }
 		trigger = {
 		has_completed_focus = JAP_BLACKDRAG_panasianist_expansion
 		NOT = { has_completed_focus = JAP_BLACKDRAG_unitary_state }
@@ -6177,7 +6218,7 @@ country_event = { #Japan's Place In Asia
 	
 	option = { #We Shall Liberate Asia
 		name = japan_new_event.74.b
-		ai_chance = { base = 100 }
+		ai_chance = { base = 50 }
 		trigger = {
 		has_completed_focus = JAP_BLACKDRAG_panasianist_expansion
 		NOT = { has_completed_focus = JAP_BLACKDRAG_federalist_path }
@@ -6198,7 +6239,7 @@ country_event = { #Japan Demands Our Submission
 	is_triggered_only = yes
 	option = { #Yes
 		name = japan_new_event.75.a
-		ai_chance = { base = 100 }
+		ai_chance = { base = 80 }
 		JAP = {
 		set_country_flag = JAP_Chose_A_Faction
 		puppet = {
@@ -6210,13 +6251,12 @@ country_event = { #Japan Demands Our Submission
 	
 	option = { #No
 		name = japan_new_event.75.b
-		ai_chance = { base = 100 }
+		ai_chance = { base = 20 }
 		
 		country_event = japan_new_event.81
 		}
 	}
-}
-
+	
 country_event = { #Refusal But Alliance?
 	id = japan_new_event.76
 	immediate = {log = "[GetDateText]: [Root.GetName]: event japan_new_event.76"}
@@ -6227,13 +6267,13 @@ country_event = { #Refusal But Alliance?
 	is_triggered_only = yes
 	option = { #Sure
 		name = japan_new_event.76.a
-		ai_chance = { base = 100 }
+		ai_chance = { base = 60 }
 		JAP = { add_to_faction = ROOT }
 	}
 	
 	option = { #How About No
 		name = japan_new_event.76.b
-		ai_chance = { base = 100 }
+		ai_chance = { base = 40 }
 		JAP = {
 			create_wargoal = {
 					type = puppet_wargoal_focus
@@ -6268,7 +6308,7 @@ country_event = { #Japan Demands Our Submission
 	is_triggered_only = yes
 	option = { #
 		name = japan_new_event.77.a
-		ai_chance = { base = 100 }
+		ai_chance = { base = 50 }
 		trigger = {
 			TRM = {
 				NOT = {
@@ -6286,7 +6326,7 @@ country_event = { #Japan Demands Our Submission
 	
 	option = { #
 		name = japan_new_event.77.b
-		ai_chance = { base = 100 }
+		ai_chance = { base = 50 }
 		JAP = {
 		puppet = TRM
 		set_state_owner = 408
@@ -6315,7 +6355,7 @@ country_event = { #Supporting Indonesian Independence
 	is_triggered_only = yes
 	option = { #We Must Uphold Pan-Asianism
 		name = japan_new_event.78.a
-		ai_chance = { base = 100 }
+		ai_chance = { base = 20 }
 			log = "[GetDateText]: [Root.GetName]: Focus JAP_target_east_indies"
 			set_country_flag = JAP_support_independence
 			if = {
@@ -6372,7 +6412,7 @@ country_event = { #Supporting Indonesian Independence
 	
 	option = { #
 		name = japan_new_event.78.b
-		ai_chance = { base = 100 }
+		ai_chance = { base = 80 }
 		JAP = {
 			create_wargoal = {
 					type = puppet_wargoal_focus
@@ -6392,7 +6432,7 @@ country_event = { #Fate of Vietnamese Administration
 	is_triggered_only = yes
 	option = { #Cuong De
 		name = japan_new_event.79.a
-		ai_chance = { base = 100 }
+		ai_chance = { base = 25 }
 		VIN = {
 		set_cosmetic_tag = VIN_CUONGJAP
 		set_politics = { ruling_party = national_populist }
@@ -6406,7 +6446,7 @@ country_event = { #Fate of Vietnamese Administration
 	}
 	option = { #Tran Trong Kim
 		name = japan_new_event.79.b
-		ai_chance = { base = 100 }
+		ai_chance = { base = 35 }
 		VIN = {
 		set_cosmetic_tag = VIN_NLF
 		set_politics = { ruling_party = paternal_autocrat }
@@ -6427,7 +6467,7 @@ country_event = { #Fate of Vietnamese Administration
 	
 	option = { #Japanese Puppet
 		name = japan_new_event.79.c
-		ai_chance = { base = 100 }
+		ai_chance = { base = 40 }
 		VIN = {
 		load_focus_tree = vin-jap-tree
 		complete_national_focus = JAPVINJAP_japanese_volunteers_coup_the_administration
@@ -6685,7 +6725,7 @@ country_event = { #Minseito Factionalism
 			name = "永井柳太郎"
 			picture = "gfx/leaders/JAP/Portrait_JAP_Ryūtarō_Nagai.png"
 			expire = "1965.1.1"
-			ideology = national_liberalism_subtype
+			ideology = soclib_popular_patriotism_subtype
 		}
 		set_politics = { ruling_party = social_liberal }
 		if = {
@@ -6851,7 +6891,7 @@ country_event = { #
 			name = "中岛知久平"
 			picture = "gfx/leaders/JAP/Portrait_JAP_Chikuhei_Nakajima.png"
 			expire = "1965.1.1"
-			ideology = conservative_populism_subtype
+			ideology = soccon_popular_patriotism_subtype
 		}
 		set_party_name = {
 			ideology = authoritarian_democrat
@@ -6922,7 +6962,7 @@ country_event = { #The True Emperor
 	is_triggered_only = yes
 	option = { #Yes He is the true Emperor
 		name = japan_new_event.87.a
-		ai_chance = { base = 100 }
+		ai_chance = { base = 50 }
 		add_stability = -0.1
 		clr_country_flag = JAP_Hirohito_VISIBLE
 		set_country_flag = JAP_Kumazawa_Hiromichi_VISIBLE
@@ -6931,7 +6971,7 @@ country_event = { #The True Emperor
 	
 	option = { #
 		name = japan_new_event.87.b
-		ai_chance = { base = 100 }
+		ai_chance = { base = 50 }
 		if = {
 			limit = {
 				has_country_leader = {
@@ -7065,7 +7105,7 @@ country_event = { #The Future Under the Crimson Empire
 	is_triggered_only = yes
 	option = { #
 		name = japan_new_event.90.a
-		ai_chance = { base = 100 }
+		ai_chance = { base = 35 }
 		country_event = japan_new_event.88
 		remove_all_ministers = yes
 		add_ideas = {
@@ -7079,7 +7119,7 @@ country_event = { #The Future Under the Crimson Empire
 	
 	option = { #
 		name = japan_new_event.90.b
-		ai_chance = { base = 100 }
+		ai_chance = { base = 32 }
 		set_cosmetic_tag = JAP_Soka_Gakkai
 		set_country_flag = JAP_Gokkai
 		set_politics = { ruling_party = totalist }
@@ -7118,7 +7158,7 @@ country_event = { #The Future Under the Crimson Empire
 	
 	option = { #
 		name = japan_new_event.90.c
-		ai_chance = { base = 100 }
+		ai_chance = { base = 33 }
 		set_country_flag = JAP_Gokkai
 		set_cosmetic_tag = JAP_Soka_Gakkai
 		set_politics = { ruling_party = social_democrat }
@@ -7267,7 +7307,7 @@ country_event = { #Formation of the China Committee
 	is_triggered_only = yes
 	option = { #Align China Warlord
 		name = japan_new_event.93.a
-		ai_chance = { base = 100 }
+		ai_chance = { base = 40 }
 		trigger = {
 			NOT = {
 				has_completed_focus = JAP_BLACKDRAG_unitary_state
@@ -7280,7 +7320,7 @@ country_event = { #Formation of the China Committee
 	
 	option = { #
 		name = japan_new_event.93.b
-		ai_chance = { base = 100 }
+		ai_chance = { base = 60 }
 		add_political_power = 100
 		add_opinion_modifier = {
 				target = QIE
@@ -7346,7 +7386,7 @@ country_event = { #Questioning the Meiji Restoration
 	is_triggered_only = yes
 	option = { #
 		name = japan_new_event.94.a
-		ai_chance = { base = 100 }
+		ai_chance = { base = 50 }
 		add_ideas = {
 		JAP_organ_emperor
 		}
@@ -7354,7 +7394,7 @@ country_event = { #Questioning the Meiji Restoration
 	
 	option = { #
 		name = japan_new_event.94.b
-		ai_chance = { base = 100 }
+		ai_chance = { base = 50 }
 		add_stability = 0.05
 	}
 }
@@ -7383,14 +7423,14 @@ country_event = { #Japan's Red Emperor!?
 	is_triggered_only = yes
 	option = { #
 		name = japan_new_event.95.a
-		ai_chance = { base = 100 }
+		ai_chance = { base = 50 }
 		clr_country_flag = JAP_Hirohito_VISIBLE
 		set_country_flag = JAP_Yasuhito_VISIBLE
 	}
 	
 	option = { #
 		name = japan_new_event.95.b
-		ai_chance = { base = 100 }
+		ai_chance = { base = 50 }
 		trigger = {
 		NOT = {
 		has_country_flag = hirohito_shot
@@ -7482,7 +7522,7 @@ country_event = { #Future of the Shumei Government
 	option = { #
 		name = japan_new_event.97.b
 		ai_chance = { 
-			base = 20
+			base = 10
 		}
 		set_cosmetic_tag = JAP_SHUMEI_ASIA
 		if = {
@@ -7537,7 +7577,7 @@ country_event = { #Future of the Shumei Government
 	option = { #
 		name = japan_new_event.97.c
 		ai_chance = { 
-			base = 0
+			base = 10
 		}
 		set_cosmetic_tag = JAP_SHUMEI_MUSLIM
 		JAP_shumei_caliphate_cores = yes
@@ -7618,7 +7658,7 @@ country_event = { #Direction of Radical Reforms
 	
 	option = { #
 		name = japan_new_event.98.b
-		ai_chance = { base = 100 }	
+		ai_chance = { base = 0 }	
 		add_popularity = {
 		ideology = totalist
 		popularity = 0.1
@@ -7669,7 +7709,7 @@ country_event = { #Our Lasting Legacy For the Empire
 	option = { #
 		name = japan_new_event.100.b
 		ai_chance = { 
-			base = 10
+			base = 20
 		}
 		set_cosmetic_tag = JAP_HASHIMOTO_ASIA
 		every_state = {
@@ -7756,13 +7796,13 @@ country_event = { #The Essential Principles of National Defense and Proposals fo
 	is_triggered_only = yes
 	option = { #
 		name = japan_new_event.102.a
-		ai_chance = { base = 100 }
+		ai_chance = { base = 75 }
 		set_temp_variable = { coalition_partner_var = token:totalist }
 		add_to_coalition = yes
 	}
 	option = { #
 		name = japan_new_event.102.b
-		ai_chance = { base = 100 }
+		ai_chance = { base = 25 }
 		add_ideas = {
 		JAP_Sumihisa_Ikeda_hog_tot
 		}
@@ -7805,7 +7845,7 @@ country_event = { #Death of Aso Hisashi
 	is_triggered_only = yes
 	option = { #Akamatsu
 		name = japan_new_event.104.a
-		ai_chance = { base = 100 }
+		ai_chance = { base = 25 }
 		set_cosmetic_tag = JAP_AKAMATSU
 		remove_all_ministers = yes
 		add_ideas = {
@@ -7831,7 +7871,7 @@ country_event = { #Death of Aso Hisashi
 	
 	option = { #Asanuma
 		name = japan_new_event.104.b
-		ai_chance = { base = 100 }
+		ai_chance = { base = 25 }
 		set_cosmetic_tag = JAP_ASANUMA
 		remove_all_ministers = yes
 		add_ideas = {
@@ -7857,7 +7897,7 @@ country_event = { #Death of Aso Hisashi
 	
 	option = { #Hirano
 		name = japan_new_event.104.c
-		ai_chance = { base = 100 }
+		ai_chance = { base = 25 }
 		set_cosmetic_tag = JAP_HIRANO
 		remove_all_ministers = yes
 		add_ideas = {
@@ -7882,7 +7922,7 @@ country_event = { #Death of Aso Hisashi
 	
 	option = { #Yamana
 		name = japan_new_event.104.d
-		ai_chance = { base = 100 }
+		ai_chance = { base = 25 }
 		set_cosmetic_tag = JAP_YAMANA
 		remove_all_ministers = yes
 		add_ideas = {
@@ -7916,7 +7956,7 @@ country_event = { #The Tohokai Split
 	is_triggered_only = yes
 	option = { #Expulsion
 		name = japan_new_event.105.a
-		ai_chance = { base = 100 }
+		ai_chance = { base = 50 }
 		add_manpower = -100
 		add_political_power = 25
 		add_popularity = {
@@ -7932,7 +7972,7 @@ country_event = { #The Tohokai Split
 	
 	option = { #Win Over Members
 		name = japan_new_event.105.b
-		ai_chance = { base = 100 }
+		ai_chance = { base = 50 }
 		add_political_power = -50
 		add_popularity = {
 		ideology = national_populist
@@ -8068,7 +8108,7 @@ country_event = { #Nakano Above All
 	is_triggered_only = yes
 	option = { #
 		name = japan_new_event.109.a
-		ai_chance = { base = 100 }
+		ai_chance = { base = 45 }
 		add_popularity = {
 		ideology = ROOT
 		popularity = 1
@@ -8076,8 +8116,8 @@ country_event = { #Nakano Above All
 	}
 	
 	option = { #
-		name = 旭日东升的光芒存在螺栓和齿轮
-		ai_chance = { base = 100 }
+		name = "旭日东升的光芒存在螺栓和齿轮"
+		ai_chance = { base = 45 }
 		add_popularity = {
 		ideology = ROOT
 		popularity = 1
@@ -8087,7 +8127,7 @@ country_event = { #Nakano Above All
 	
 	option = { #
 		name = japan_new_event.109.b
-		ai_chance = { base = 100 }
+		ai_chance = { base = 10 }
 		add_popularity = {
 		ideology = ROOT
 		popularity = 1
@@ -8146,7 +8186,7 @@ country_event = { #Japanese Socialists Request Foreign Aid
 	is_triggered_only = yes
 	option = { #
 		name = CHI.earlygame.102.a
-		ai_chance = { base = 100 }
+		ai_chance = { base = 45 }
 		add_political_power = -50
 		JSR = {
 			effect_tooltip = {
@@ -8162,7 +8202,7 @@ country_event = { #Japanese Socialists Request Foreign Aid
 	
 	option = { # just advisors
 		name = CHI.earlygame.102.b
-		ai_chance = { base = 70 }
+		ai_chance = { base = 45 }
 		add_political_power = -25
 		JSR = {
 			effect_tooltip = {
@@ -8179,7 +8219,7 @@ country_event = { #Japanese Socialists Request Foreign Aid
 	option = { # Solidarity but not for you
 		name = CHI.earlygame.102.c
 		ai_chance = {
-			base = 20
+			base = 10
 			modifier = {
 				add = -20
 				OR = {
@@ -8297,27 +8337,27 @@ country_event = { #Japan Shall Be Free
 	is_triggered_only = yes
 	option = { #
 		name = japan_new_event.116.a
-		ai_chance = { base = 100 }
+		ai_chance = { base = 25 }
 		set_country_leader_ideology = anarchism_subtype
 		
 	}
 	option = { #
 		name = japan_new_event.116.b
-		ai_chance = { base = 100 }
+		ai_chance = { base = 25 }
 		set_country_leader_ideology = illegalism_subtype
 		
 	}
 	
 	option = { #
 		name = japan_new_event.116.c
-		ai_chance = { base = 100 }
+		ai_chance = { base = 25 }
 		set_country_leader_ideology = anarcho_bolshevism_subtype
 		
 	}
 	
 	option = { #
 		name = japan_new_event.116.d
-		ai_chance = { base = 100 }
+		ai_chance = { base = 25 }
 		set_country_leader_ideology = anarcho_communism_subtype
 		
 	}
@@ -8357,25 +8397,25 @@ country_event = { #Whats Going On in the Pspych Ward!?
 	is_triggered_only = yes
 	option = { #
 		name = japan_new_event.118.a
-		ai_chance = { base = 100 }
+		ai_chance = { base = 25 }
 		set_country_leader_ideology = authdem_anarchism_subtype
 	}
 	
 	option = { #
 		name = japan_new_event.118.b
-		ai_chance = { base = 100 }
+		ai_chance = { base = 25 }
 		set_country_leader_ideology = anarchism_subtype
 	}
 	
 	option = { #
 		name = japan_new_event.118.c
-		ai_chance = { base = 100 }
+		ai_chance = { base = 25 }
 		set_country_leader_ideology = anarcho_buddhism_subtype
 	}
 	
 	option = { #
 		name = japan_new_event.118.d
-		ai_chance = { base = 100 }
+		ai_chance = { base = 25 }
 		set_country_leader_ideology = radsoc_social_anarchism_subtype
 	}
 }
@@ -8390,7 +8430,7 @@ country_event = { #Direction of the Economy
 	is_triggered_only = yes
 	option = { #
 		name = japan_new_event.119.a
-		ai_chance = { base = 100 }
+		ai_chance = { base = 50 }
 		complete_national_focus = JAPRECOVERY_centralized_approach
 		swap_ideas = {
 		remove_idea = JSR_economic_woes
@@ -8400,7 +8440,7 @@ country_event = { #Direction of the Economy
 	
 	option = { #
 		name = japan_new_event.119.b
-		ai_chance = { base = 100 }
+		ai_chance = { base = 50 }
 		complete_national_focus = JAPRECOVERY_decentralized_economics
 		swap_ideas = {
 		remove_idea = JSR_economic_woes
@@ -8544,7 +8584,7 @@ country_event = { #Question of the Emperor?
 	is_triggered_only = yes
 	option = { #
 		name = japan_new_event.125.a
-		ai_chance = { base = 100 }
+		ai_chance = { base = 10 }
 		set_country_flag = KXX_LEADER_GUI_VISIBLE
 		set_country_flag = JAP_Hirohito_VISIBLE
 		swap_ideas = {
@@ -8555,7 +8595,7 @@ country_event = { #Question of the Emperor?
 	
 	option = { #
 		name = japan_new_event.125.b
-		ai_chance = { base = 100 }
+		ai_chance = { base = 90 }
 		swap_ideas = {
 			remove_idea = JAP_no_emperor
 			add_idea = JSR_end_emperor 
@@ -8573,7 +8613,7 @@ country_event = { #Kikue's Eight Points of Gender Equality
 	is_triggered_only = yes
 	option = { #
 		name = japan_new_event.126.a
-		ai_chance = { base = 100 }
+		ai_chance = { base = 50 }
 		swap_ideas = {
 		remove_idea = JAP_Oyama_Ikuo_for_syn
 		add_idea = JAP_Yamakawa_Kikue_for_syn
@@ -8582,7 +8622,7 @@ country_event = { #Kikue's Eight Points of Gender Equality
 	
 	option = { #
 		name = japan_new_event.126.b
-		ai_chance = { base = 100 }
+		ai_chance = { base = 50 }
 		swap_ideas = {
 		remove_idea = JAP_Oyama_Ikuo_for_syn
 		add_idea = JAP_Teruko_Matsuda_for_syn
@@ -8600,7 +8640,7 @@ country_event = { #Kenzo's Syndicalist Dream
 	is_triggered_only = yes
 	option = { #
 		name = japan_new_event.127.a
-		ai_chance = { base = 100 }
+		ai_chance = { base = 30 }
 		set_politics = {
 			ruling_party = syndicalist
 			election_frequency = 48
@@ -8622,7 +8662,7 @@ country_event = { #Kenzo's Syndicalist Dream
 	
 	option = { #
 		name = japan_new_event.127.b
-		ai_chance = { base = 100 }
+		ai_chance = { base = 35 }
 		set_politics = {
 			ruling_party = syndicalist
 			election_frequency = 48
@@ -8644,7 +8684,7 @@ country_event = { #Kenzo's Syndicalist Dream
 	
 	option = { #
 		name = japan_new_event.127.c
-		ai_chance = { base = 100 }
+		ai_chance = { base = 35 }
 		set_politics = {
 			ruling_party = totalist
 			election_frequency = 48
@@ -8690,21 +8730,21 @@ country_event = { #Legacy of the New Proletarian Struggle
 	is_triggered_only = yes
 	option = { #
 		name = japan_new_event.129.a
-		ai_chance = { base = 100 }
+		ai_chance = { base = 50 }
 		set_country_leader_ideology = national_communism_subtype
 		add_ideas = JSR_Kyuchi_Tokuda_idea_2
 	}
 	
 	option = { #
 		name = japan_new_event.129.b
-		ai_chance = { base = 100 }
+		ai_chance = { base = 25 }
 		set_country_leader_ideology = authcom_subtype
 		add_ideas = JSR_Kyuchi_Tokuda_idea
 	}
 	
 	option = { #
 		name = japan_new_event.129.c
-		ai_chance = { base = 100 }
+		ai_chance = { base = 25 }
 		set_country_leader_ideology = mao_zedong_thought_subtype
 		add_ideas = JSR_Kyuchi_Tokuda_idea_1
 	}
@@ -8791,7 +8831,7 @@ country_event = { #
 	is_triggered_only = yes
 	option = { #
 		name = japan_new_event.132.a
-		ai_chance = { base = 100 }
+		ai_chance = { base = 35 }
 		trigger = {
 		has_idea = JAP_Inejiro_Asanuma_hog_rso
 		}
@@ -8809,7 +8849,7 @@ country_event = { #
 	
 	option = { #
 		name = japan_new_event.132.b
-		ai_chance = { base = 100 }
+		ai_chance = { base = 35 }
 		trigger = {
 			has_idea = JAP_Kingoro_Hashimoto_hog_tot
 		}
@@ -8820,7 +8860,7 @@ country_event = { #
 	
 	option = { #
 		name = japan_new_event.132.c
-		ai_chance = { base = 100 }
+		ai_chance = { base = 30 }
 		trigger = {
 			has_idea = JAP_Nakano_Seigo_hog_tot
 		}
@@ -8986,21 +9026,21 @@ country_event = { #Revenge of the Zaibatsu
 country_event = { #Taiwan Slips Through Our Fingers
 	id = japan_new_event.137
 	immediate = {log = "[GetDateText]: [Root.GetName]: event japan_new_event.137"}
-	title = 台湾叛乱
-	desc = 消息传来，我们的台湾殖民地的叛乱成功了。在镇压台湾原住民失败后，台湾殖民驻军在乌舍叛乱中被镇压。现在，随着殖民政府撤退到大陆，我们现在必须决定如何应对这种情况。
+	title = "台湾叛乱"
+	desc = "消息传来，我们的台湾殖民地的叛乱成功了。在镇压台湾原住民失败后，台湾殖民驻军在乌舍叛乱中被镇压。现在，随着殖民政府撤退到大陆，我们现在必须决定如何应对这种情况。"
 	picture = "GFX_japan_foreign_minister_2"
 	
 	is_triggered_only = yes
 	option = { #
-		name = 别管他们，我们以后会粉碎他们
+		name = "别管他们，我们以后会粉碎他们"
 		ai_chance = { base = 100 }
-		add_stability = = -0.05
+		add_stability = -0.05
 		add_war_support = -0.1
 		
 	}
 	
 	option = { #
-		name = 马上镇压叛乱
+		name = "马上镇压叛乱"
 		ai_chance = { base = 100 }
 		trigger = {
 		is_ai = no
@@ -9017,20 +9057,20 @@ country_event = { #Taiwan Slips Through Our Fingers
 country_event = { #Charlie Chaplin Visits Japan
 	id = japan_new_event.138
 	immediate = {log = "[GetDateText]: [Root.GetName]: event japan_new_event.138"}
-	title = 查理·卓别林访问日本
-	desc = 1936 年 5 月 14 日，著名演员查理·卓别林抵达日本度假 3 周的消息传来，人们涌向东京码头。当他走下船时，飞机从低空飞过，抛出“欢迎小册子”。除了他的兄弟，卓别林还由他的长期助手河野虎一陪同日本，他在日本长大，然后定居在南加州，并于 1916 年遇到了这位喜剧演员。尽管日本人对此持欢迎态度，但政治动荡的阴影仍然笼罩着日本，但这个问题可以通过派遣一个快速的安全小组到卓别林身边来解决。
+	title = "查理·卓别林访问日本"
+	desc = "1936 年 5 月 14 日，著名演员查理·卓别林抵达日本度假 3 周的消息传来，人们涌向东京码头。当他走下船时，飞机从低空飞过，抛出“欢迎小册子”。除了他的兄弟，卓别林还由他的长期助手河野虎一陪同日本，他在日本长大，然后定居在南加州，并于 1916 年遇到了这位喜剧演员。尽管日本人对此持欢迎态度，但政治动荡的阴影仍然笼罩着日本，但这个问题可以通过派遣一个快速的安全小组到卓别林身边来解决。"
 	picture = "GFX_chaplin_visits_japan"
 	
 	is_triggered_only = yes
 	option = { #May He Enjoy His Stay
-		name = 愿他享受在日本的时光
-		ai_chance = { base = 100 }
+		name = "愿他享受在日本的时光"
+		ai_chance = { base = 50 }
 		
 	}
 	
 	option = { #Encourage Him to Stay a Bit Long
-		name = 鼓励他多待一会儿
-		ai_chance = { base = 100 }
+		name = "鼓励他多待一会儿"
+		ai_chance = { base = 50 }
 		set_country_flag = JAP_chaplin_stay_longer
 	}
 }
@@ -9038,13 +9078,13 @@ country_event = { #Charlie Chaplin Visits Japan
 country_event = { #Death of Charli Chaplin
 	id = japan_new_event.139
 	immediate = {log = "[GetDateText]: [Root.GetName]: event japan_new_event.139"}
-	title = 卓别林之死
-	desc = 随着查理·卓别林在被激进军官枪杀后被宣布死亡，悲伤的消息传遍了全世界。在选择延长逗留时间后，查理·卓别林将进行全国巡回演出，甚至会见了包括总理在内的一些政客。尽管就在最近，一个名为“血腥联盟”的激进组织发动了一场针对政府的政变。可悲的是，查理卓别林也会成为目标。原因是因为血盟想让美国对日本宣战，尽管美国不会对此采取行动。全世界数以百万计的人现在正在哀悼失去这样一位伟大的演员。
+	title = "卓别林之死"
+	desc = "随着查理·卓别林在被激进军官枪杀后被宣布死亡，悲伤的消息传遍了全世界。在选择延长逗留时间后，查理·卓别林将进行全国巡回演出，甚至会见了包括总理在内的一些政客。尽管就在最近，一个名为“血腥联盟”的激进组织发动了一场针对政府的政变。可悲的是，查理卓别林也会成为目标。原因是因为血盟想让美国对日本宣战，尽管美国不会对此采取行动。全世界数以百万计的人现在正在哀悼失去这样一位伟大的演员。"
 	picture = "GFX_chaplin_visits_japan"
 	
 	is_triggered_only = yes
 	option = { #
-		name = 多么悲惨，他会被怀念的......
+		name = "多么悲惨，他会被怀念的......"
 		ai_chance = { base = 100 }
 		add_manpower = -1
 	}
@@ -9083,13 +9123,13 @@ country_event = { #Shumei Translates the Quran
 country_event = { #Missing Weapon Shipments From Factories
 	id = japan_new_event.142
 	immediate = {log = "[GetDateText]: [Root.GetName]: event japan_new_event.142"}
-	title = 工厂缺少武器运输
-	desc = 自从我们开始将宰拔公司国有化计划以来，已经过去了100多天，这引起了日本财阀的愤怒，尽管由于我们的警察和军队，他们无能为力，紧紧地束缚着他们。但这种束缚似乎是徒劳的，因为最近似乎有大量武器库存来自日本财阀的工厂。这引起了人们对日本财阀的怀疑。政府现在面临着一个决定，是调查这些怀疑，还是照常进行。
+	title = "工厂缺少武器运输"
+	desc = "自从我们开始将宰拔公司国有化计划以来，已经过去了100多天，这引起了日本财阀的愤怒，尽管由于我们的警察和军队，他们无能为力，紧紧地束缚着他们。但这种束缚似乎是徒劳的，因为最近似乎有大量武器库存来自日本财阀的工厂。这引起了人们对日本财阀的怀疑。政府现在面临着一个决定，是调查这些怀疑，还是照常进行。"
 	picture = "GFX_zaibatsu_image"
 	
 	is_triggered_only = yes
 	option = { #Launch An Investigation
-		name = 启动调查
+		name = "启动调查"
 		ai_chance = { base = 100 }
 		add_political_power = 50
 		add_days_mission_timeout = {
@@ -9099,7 +9139,7 @@ country_event = { #Missing Weapon Shipments From Factories
 	}
 	
 	option = { #This Is Actually the Doings of the Syndicalists Raiding Our Factories
-		name = 这实际上是工团主义者袭击我们工厂的所作所为
+		name = "这实际上是工团主义者袭击我们工厂的所作所为"
 		ai_chance = { base = 100 }
 		add_days_mission_timeout = {
 			mission = JAP_nationalization_mission

@@ -453,3 +453,14 @@ country_event = { #耶路撒冷
 		name = guides.1000.b
 	}
 }
+country_event = { #两广
+	id = zhinan.42
+	title = zhinan.42.t
+	desc = zhinan.42.d
+	picture = GFX_report_event_generic_diplomacy1
+
+	is_triggered_only = yes
+	option = { #Yes
+		name = guides.1000.b
+	}
+}

@@ -177,35 +177,35 @@ bookmarks = {
 			}
 		}
 
-		"SPR" = {
+		"SER" = {
 			minor = yes
-			history = "SPR_KR_GATHERING_STORM_DESC"
+			history = "SER_KR_GATHERING_STORM_DESC"
 			ideology = authoritarian_democrat
 			ideas = {
-				SPR_social_breakdown
-				SPR_memories_of_the_republic
+				SER_austrias_watchful_eye
+    			SER_jingoism
 			}
 			focuses = {
-				SPR_constitutionalism
-				SPR_The_Second_Election
-				SPR_absolutism
+				SER_black_hand
+				SER_chetnik_coup
+				YUG_hey_slavs
 			}
 		}
 
 
-		"DEN" = {
+		"SQI" = {
 			minor = yes
-			history = "DEN_KR_GATHERING_STORM_DESC"
-			ideology = social_democrat
+			history = "SQI_KR_GATHERING_STORM_DESC"
+			ideology = paternal_autocrat
 			ideas = {
-				KUB_Divided_Region
-				KUB_Unification_Sentiments
-				KUB_rada
+				SQI_Rampant_drug_trade
+				SQI_dogmeat_general
+				SQI_honored_master
 			}
 			focuses = {
-				DEN_second_chance_of_savinkov
-				DEN_return_to_the_past
-				DEN_national_syndicalism_in_denmark
+				SQI_the_shandong_takeover
+				SQI_the_moon_shines_throughout_china
+				SQITWO_the_fire_of_revolution_shines_through_shandong
 			}
 		}
 
@@ -255,35 +255,35 @@ bookmarks = {
 			}
 		}
 
-		"IRE" = {
+		"PAL" = {
 			minor = yes
-			history = "IRE_KR_GATHERING_STORM_DESC"
-			ideology = market_liberal
+			history = "PAL_KR_GATHERING_STORM_DESC"
+			ideology = social_conservative
 			ideas = {
-				IRE_Ulster_Issue
-				IRE_Unraveling_Political_Scene
-				IRE_Threat_Across_Isle
+				pal_moj
+				pal_alijah
+				PAL_Bloated_administrative_system
 			}
 			focuses = {
-				IRE_Dictatorship
-				IRE_Democratic_Mandate
-				IRE_Failure_of_the_British_Revolution
+				MOJ_The_Speaker_is_caught_in_a_conspiracy
+				ISR_Stern_withstood_the_pressure
+				PLS_stand_up_go_to_the_revolution
 			}
 		}
 
-		"PHI" = {
+		"GXC" = {
 			minor = yes
-			history = "PHI_KR_GATHERING_STORM_DESC"
-			ideology = social_conservative
+			history = "GXC_KR_GATHERING_STORM_DESC"
+			ideology = paternal_autocrat
 			ideas = {
-				PHI_catholic_nation
-				PHI_lingering_sakdalistas
-				PHI_agricultural_society
+				GXC_factionalism
+				GXC_AOG_leftovers
+				GXC_Bastion_of_Zhili
 			}
 			focuses = {
-				PHI_sedes_es_patri
-				PHI_eurasianism_in_philippines
-				PHI_huk_rises
+				GXC_zhili_collapse_of_league
+				GXC_lib_canton_uprising
+				PRC_rkmt_forgotten_faction
 			}
 		}
 

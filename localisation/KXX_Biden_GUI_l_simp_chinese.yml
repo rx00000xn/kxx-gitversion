@@ -170,6 +170,13 @@
  NOR_OR_leader3:0 "点击以切换§G国王§!与§B终身国务委员§!"
  NOR_OR_leader4:0 "点击以切换§G卢恩法师§!和§B宣传部长§!"
 
+ #塞尔维亚
+ SER_or_leader:0 "点击以切换§R领袖§!与§R保护者§!"
+ SER_or_leader2:0 "[FROM.GetNameWithFlag]的§R保护者§!"
+ SER_Draza_Mihailovic:0 "德拉查·米哈伊洛维奇"
+ SER_Zivojin_Peric:0 "日沃因·佩里奇"
+ SER_Dusan_Simovic:0 "杜尚·西莫维奇"
+
  #日本重置
  JAP_OR_LEADER:0 "点击以切换§G内阁总理大臣§!与§Y今上陛下§!"
  JAP_OR_LEADER1:0 "[FROM.GetNameWithFlag]的§Y国家象征§!"

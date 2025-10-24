@@ -6,7 +6,10 @@
 		icon = GFX_JAPARMY_armynavy_harmony-248360
 		x = 37
 		y = 4
-		cost = 5
+		cost = 3
+		ai_will_do = {
+			factor = 50
+		}	
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
@@ -43,7 +46,10 @@
 		icon = GFX_JAPARMY_continue_strengthening_military_industry-248360
 		x = 43
 		y = 8
-		cost = 5
+		cost = 3
+		ai_will_do = {
+			factor = 50
+		}	
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
@@ -59,7 +65,10 @@
 		icon = GFX_JAPARMY_learning_from_the_weltkrieg-248360
 		x = 29
 		y = 6
-		cost = 5
+		cost = 3
+		ai_will_do = {
+			factor = 50
+		}	
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
@@ -81,7 +90,10 @@
 		icon = GFX_JAPARMY_reform_the_disarmament_policy-248360
 		x = 31
 		y = 5
-		cost = 5
+		cost = 3
+		ai_will_do = {
+			factor = 50
+		}	
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
@@ -113,7 +125,10 @@
 		icon = GFX_JAPARMY_lessons_from_the_ministry_of_munitions-248360
 		x = 41
 		y = 6
-		cost = 5
+		cost = 3
+		ai_will_do = {
+			factor = 50
+		}	
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
@@ -131,7 +146,10 @@
 		icon = GFX_JAPARMY_increase_the_armynavy_budgets-248360
 		x = 43
 		y = 7
-		cost = 5
+		cost = 3
+		ai_will_do = {
+			factor = 50
+		}	
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
@@ -164,7 +182,10 @@
 		icon = GFX_JAPARMY_increased_warship_administration_costs-248360
 		x = 45
 		y = 6
-		cost = 5
+		cost = 3
+		ai_will_do = {
+			factor = 50
+		}	
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
@@ -188,7 +209,10 @@
 		icon = GFX_JAPARMY_increasing_naval_landing_forces-248360
 		x = 45
 		y = 7
-		cost = 5
+		cost = 3
+		ai_will_do = {
+			factor = 50
+		}	
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
@@ -209,7 +233,10 @@
 		icon = GFX_JAPARMY_mobilize_the_reserves-248360
 		x = 41
 		y = 7
-		cost = 5
+		cost = 3
+		ai_will_do = {
+			factor = 50
+		}	
 		search_filters = {
 			FOCUS_FILTER_MANPOWER
 		}
@@ -227,7 +254,10 @@
 		icon = GFX_JAPARMY_psychological_warfare-248360
 		x = 38
 		y = 9
-		cost = 5
+		cost = 3
+		ai_will_do = {
+			factor = 50
+		}	
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
@@ -245,7 +275,10 @@
 		icon = GFX_JAPARMY_military_unity-248360
 		x = 37
 		y = 10
-		cost = 5
+		cost = 3
+		ai_will_do = {
+			factor = 50
+		}	
 		search_filters = {
 			FOCUS_FILTER_STABILITY
 		}
@@ -264,7 +297,10 @@
 		icon = GFX_JAPARMY_supremacy_of_will-248360
 		x = 38
 		y = 7
-		cost = 5
+		cost = 3
+		ai_will_do = {
+			factor = 50
+		}	
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
@@ -283,7 +319,10 @@
 		icon = GFX_JAPARMY_increasing_weapons_production-248360
 		x = 37
 		y = 8
-		cost = 5
+		cost = 3
+		ai_will_do = {
+			factor = 50
+		}	
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
@@ -304,7 +343,10 @@
 		icon = GFX_JAPARMY_hell_from_above-248360
 		x = 36
 		y = 9
-		cost = 5
+		cost = 3
+		ai_will_do = {
+			factor = 50
+		}	
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
@@ -355,7 +397,10 @@
 		icon = GFX_JAPARMY_air_land_supremacy-248360
 		x = 36
 		y = 7
-		cost = 5
+		cost = 3
+		ai_will_do = {
+			factor = 50
+		}	
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
@@ -388,7 +433,10 @@
 		icon = GFX_JAPARMY_defence_of_the_home_islands-248360
 		x = 37
 		y = 6
-		cost = 5
+		cost = 3
+		ai_will_do = {
+			factor = 50
+		}	
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
@@ -477,7 +525,10 @@
 		icon = GFX_JAPARMY_modernisation_of_the_shipyards-248360
 		x = 32
 		y = 8
-		cost = 5
+		cost = 3
+		ai_will_do = {
+			factor = 50
+		}	
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
@@ -495,7 +546,10 @@
 		icon = GFX_JAPARMY_abandoning_dissarmament-248360
 		x = 43
 		y = 5
-		cost = 5
+		cost = 3
+		ai_will_do = {
+			factor = 50
+		}	
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
@@ -512,7 +566,10 @@
 			}
 			set_variable = { JAP_sw_length_var = 180 }
 			set_variable = { JAP_sw_warplan_research_time = 365 }
-			set_variable = { JAP_CP_cost = 50 }
+			set_variable = { JAP_CP_cost = 3
+		ai_will_do = {
+			factor = 50
+		}	0 }
 			custom_effect_tooltip = JAP_unlock_war_plans
 			custom_effect_tooltip = tooltip_white_line
 			custom_effect_tooltip = available_chief_of_staff
@@ -528,7 +585,10 @@
 		icon = GFX_JAPARMY_defenders_of_the_sky-248360
 		x = 32
 		y = 13
-		cost = 5
+		cost = 3
+		ai_will_do = {
+			factor = 50
+		}	
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
@@ -604,7 +664,10 @@
 		icon = GFX_JAPARMY_stronger_and_more_advanced-248360
 		x = 31
 		y = 14
-		cost = 5
+		cost = 3
+		ai_will_do = {
+			factor = 50
+		}	
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
@@ -622,7 +685,10 @@
 		icon = GFX_JAPARMY_army_elitism-248360
 		x = 31
 		y = 11
-		cost = 5
+		cost = 3
+		ai_will_do = {
+			factor = 50
+		}	
 		search_filters = {
 			FOCUS_FILTER_STABILITY
 		}
@@ -640,7 +706,10 @@
 		icon = GFX_JAPARMY_high_performance_firearms-248360
 		x = 30
 		y = 12
-		cost = 5
+		cost = 3
+		ai_will_do = {
+			factor = 50
+		}	
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
@@ -687,7 +756,10 @@
 		icon = GFX_JAPARMY_military_education_improvements-248360
 		x = 32
 		y = 12
-		cost = 5
+		cost = 3
+		ai_will_do = {
+			factor = 50
+		}	
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
@@ -703,7 +775,10 @@
 		icon = GFX_JAPARMY_improving_naval_performance-248360
 		x = 34
 		y = 8
-		cost = 5
+		cost = 3
+		ai_will_do = {
+			factor = 50
+		}	
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
@@ -803,7 +878,10 @@
 		icon = GFX_JAPARMY_elaboration_on_the_army-248360
 		x = 32
 		y = 9
-		cost = 5
+		cost = 3
+		ai_will_do = {
+			factor = 50
+		}	
 		search_filters = {
 			FOCUS_FILTER_MANPOWER
 		}
@@ -824,7 +902,10 @@
 		icon = GFX_JAPARMY_conscription_reforms-248360
 		x = 30
 		y = 9
-		cost = 5
+		cost = 3
+		ai_will_do = {
+			factor = 50
+		}	
 		search_filters = {
 			FOCUS_FILTER_MANPOWER
 		}
@@ -908,7 +989,10 @@
 		icon = GFX_JAPARMY_new_military_industry-248360
 		x = 31
 		y = 7
-		cost = 5
+		cost = 3
+		ai_will_do = {
+			factor = 50
+		}	
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
@@ -985,7 +1069,10 @@
 		icon = GFX_JAPARMY_kempeitai_training-248360
 		x = 29
 		y = 7
-		cost = 5
+		cost = 3
+		ai_will_do = {
+			factor = 50
+		}	
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
@@ -1024,7 +1111,10 @@
 		icon = GFX_JAPARMY_hismajestyspower-248360
 		x = 28
 		y = 8
-		cost = 5
+		cost = 3
+		ai_will_do = {
+			factor = 50
+		}	
 		search_filters = {
 			FOCUS_FILTER_MANPOWER
 		}
@@ -1040,7 +1130,10 @@
 		icon = GFX_JAPARMY_new_organization_targets-248360
 		x = 30
 		y = 8
-		cost = 5
+		cost = 3
+		ai_will_do = {
+			factor = 50
+		}	
 		search_filters = {
 			FOCUS_FILTER_MANPOWER
 		}
@@ -1058,7 +1151,10 @@
 		icon = GFX_JAPARMY_from_old_to_new-248360
 		x = 33
 		y = 6
-		cost = 5
+		cost = 3
+		ai_will_do = {
+			factor = 50
+		}	
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
@@ -1076,7 +1172,10 @@
 		icon = GFX_JAPARMY_efficient_munitions_manufacturing-248360
 		x = 33
 		y = 7
-		cost = 5
+		cost = 3
+		ai_will_do = {
+			factor = 50
+		}	
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
@@ -1094,7 +1193,10 @@
 		icon = GFX_JAPARMY_formal_end_to_disarmament-248360
 		x = 31
 		y = 10
-		cost = 5
+		cost = 3
+		ai_will_do = {
+			factor = 50
+		}	
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
@@ -1111,7 +1213,10 @@
 		icon = GFX_JAPARMY_crystallization_of_japanese_technology-248360
 		x = 30
 		y = 13
-		cost = 5
+		cost = 3
+		ai_will_do = {
+			factor = 50
+		}	
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
@@ -1133,7 +1238,10 @@
 		icon = GFX_JAPARMY_mass_assault_tanks-248360
 		x = 40
 		y = 8
-		cost = 5
+		cost = 3
+		ai_will_do = {
+			factor = 50
+		}	
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
@@ -1191,7 +1299,10 @@
 		icon = GFX_JAPARMY_sailing_across_the_pacific-248360
 		x = 46
 		y = 8
-		cost = 5
+		cost = 3
+		ai_will_do = {
+			factor = 50
+		}	
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
@@ -1236,7 +1347,10 @@
 		icon = GFX_JAPARMY_a_great_naval_power-248360
 		x = 45
 		y = 9
-		cost = 5
+		cost = 3
+		ai_will_do = {
+			factor = 50
+		}	
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
@@ -1259,7 +1373,10 @@
 		icon = GFX_JAPARMY_production_rescaling-248360
 		x = 43
 		y = 10
-		cost = 5
+		cost = 3
+		ai_will_do = {
+			factor = 50
+		}	
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
@@ -1278,7 +1395,10 @@
 		icon = GFX_JAPARMY_military_school_expansions-248360
 		x = 41
 		y = 9
-		cost = 5
+		cost = 3
+		ai_will_do = {
+			factor = 50
+		}	
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
@@ -1294,7 +1414,10 @@
 		icon = GFX_JAPARMY_state_the_mechanization_programme-248360
 		x = 43
 		y = 11
-		cost = 5
+		cost = 3
+		ai_will_do = {
+			factor = 50
+		}	
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
@@ -1314,7 +1437,10 @@
 		icon = GFX_JAPARMY_conscript_the_noncitizens-248360
 		x = 41
 		y = 12
-		cost = 5
+		cost = 3
+		ai_will_do = {
+			factor = 50
+		}	
 		search_filters = {
 			FOCUS_FILTER_MANPOWER
 		}
@@ -1327,7 +1453,10 @@
 		icon = GFX_JAPARMY_strengthen_the_armyair_corps-248360
 		x = 43
 		y = 12
-		cost = 5
+		cost = 3
+		ai_will_do = {
+			factor = 50
+		}	
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
@@ -1372,7 +1501,10 @@
 		icon = GFX_JAPARMY_increasing_the_worker_numbers-248360
 		x = 45
 		y = 12
-		cost = 5
+		cost = 3
+		ai_will_do = {
+			factor = 50
+		}	
 		search_filters = {
 			FOCUS_FILTER_MANPOWER
 		}
@@ -1390,7 +1522,10 @@
 		icon = GFX_JAPARMY_the_army_and_the_people-248360
 		x = 43
 		y = 13
-		cost = 5
+		cost = 3
+		ai_will_do = {
+			factor = 50
+		}	
 		search_filters = {
 			FOCUS_FILTER_WAR_SUPPORT
 		}
@@ -1406,7 +1541,10 @@
 		icon = GFX_JAPARMY_a_magnificent_army-248360
 		x = 43
 		y = 14
-		cost = 5
+		cost = 3
+		ai_will_do = {
+			factor = 50
+		}	
 		search_filters = {
 			FOCUS_FILTER_MANPOWER
 		}
@@ -1424,7 +1562,10 @@
 		icon = GFX_JAPARMY_jakuniku_kyoshoku-248360
 		x = 37
 		y = 0
-		cost = 5
+		cost = 3
+		ai_will_do = {
+			factor = 50
+		}	
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
@@ -1441,7 +1582,10 @@
 		icon = GFX_JAPARMY_the_army_direction-248360
 		x = 34
 		y = 1
-		cost = 5
+		cost = 3
+		ai_will_do = {
+			factor = 50
+		}	
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
@@ -1461,7 +1605,10 @@
 		icon = GFX_JAPARMY_the_naval_approach-248360
 		x = 40
 		y = 1
-		cost = 5
+		cost = 3
+		ai_will_do = {
+			factor = 50
+		}	
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
@@ -1481,7 +1628,10 @@
 		icon = GFX_JAPARMY_victorythroughcombinedarms-248360
 		x = 32
 		y = 2
-		cost = 5
+		cost = 3
+		ai_will_do = {
+			factor = 50
+		}	
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
@@ -1503,7 +1653,10 @@
 		icon = GFX_JAPARMY_the_human_wave-248360
 		x = 34
 		y = 2
-		cost = 5
+		cost = 3
+		ai_will_do = {
+			factor = 50
+		}	
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
@@ -1525,7 +1678,10 @@
 		icon = GFX_JAPARMY_supremacy_of_the_mind-248360
 		x = 36
 		y = 2
-		cost = 5
+		cost = 3
+		ai_will_do = {
+			factor = 50
+		}	
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
@@ -1547,7 +1703,10 @@
 		icon = GFX_JAPARMY_teishin_shudan-248360
 		x = 34
 		y = 3
-		cost = 5
+		cost = 3
+		ai_will_do = {
+			factor = 50
+		}	
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
@@ -1605,7 +1764,10 @@
 		icon = GFX_JAPARMY_carrier_investment-248360
 		x = 38
 		y = 2
-		cost = 5
+		cost = 3
+		ai_will_do = {
+			factor = 50
+		}	
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
@@ -1627,7 +1789,10 @@
 		icon = GFX_JAPARMY_battleship_mega_projects-248360
 		x = 40
 		y = 2
-		cost = 5
+		cost = 3
+		ai_will_do = {
+			factor = 50
+		}	
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
@@ -1649,7 +1814,10 @@
 		icon = GFX_JAPARMY_snakes_under_the_waves-248360
 		x = 42
 		y = 2
-		cost = 5
+		cost = 3
+		ai_will_do = {
+			factor = 50
+		}	
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
@@ -1671,7 +1839,10 @@
 		icon = GFX_JAPARMY_expand_the_kure_naval_arsenal-248360
 		x = 40
 		y = 3
-		cost = 5
+		cost = 3
+		ai_will_do = {
+			factor = 50
+		}	
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
