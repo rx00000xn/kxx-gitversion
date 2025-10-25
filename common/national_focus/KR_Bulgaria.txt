@@ -8030,10 +8030,7 @@ focus = {
 		focus = BUL_Cleanse_The_Party
 	}
 	available = {
-		has_country_leader = {
-			ruling_only = yes
-			name = "Nikolay Yezhov"
-		}
+		
 	}
 	cost = 3
 	ai_will_do = {
@@ -8081,10 +8078,7 @@ focus = {
 		focus = BUL_Subjugate_The_Army
 	}
 	available = {
-		has_country_leader = {
-			ruling_only = yes
-			name = "Nikolay Yezhov"
-		}
+		
 	}
 	cost = 3
 	ai_will_do = {
@@ -8261,8 +8255,20 @@ focus = {
 				has_country_flag = BUL_zveno_is_pataut
 				has_country_flag = lukov_zveno
 				has_country_flag = BUL_tsankov_victory
+				has_country_flag = BUL_legionary_coup
 			}
-			
+			NOT = {
+				has_country_leader = {
+					ruling_only = yes
+					name = "迪米特尔·瑟塞洛夫"
+				}
+			}
+			NOT = {
+				has_country_leader = {
+					ruling_only = yes
+					name = "鲍里斯·萨文科夫"
+				}
+			}
 		}
 		ai_will_do = { factor = 20 }
 		completion_reward = {
@@ -11204,7 +11210,6 @@ focus = {
         country_event = {
           id = bulgaria.126
           days = 30
-          random_days = 15
         }
       }
     }
@@ -24855,7 +24860,9 @@ focus = {
 		available = {
 			has_country_flag = BUL_hidden_path_unlock
 		}
-		
+		allow_branch = {
+			has_country_flag = BUL_hidden_path_unlock
+		}
 		completion_reward = {
 			country_event = bulgaria.25
 			add_popularity = {
