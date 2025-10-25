@@ -24698,26 +24698,6 @@ focus = {
 		ai_will_do = { factor = 50 }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed BUL_catastrophe_over"
-			if = {
-				limit = { has_idea = BUL_national_catastrophe }
-				remove_ideas = BUL_national_catastrophe
-			}
-			else_if = {
-				limit = { has_idea = BUL_national_catastrophe_2 }
-				remove_ideas = BUL_national_catastrophe_2
-			}
-			else_if = {
-				limit = { has_idea = BUL_national_catastrophe_3 }
-				remove_ideas = BUL_national_catastrophe_3
-			}
-			else_if = {
-				limit = { has_idea = BUL_national_catastrophe_4 }
-				remove_ideas = BUL_national_catastrophe_4
-			}
-			else_if = {
-				limit = { has_idea = BUL_national_catastrophe_5 }
-				remove_ideas = BUL_national_catastrophe_5
-			}
 			add_research_slot_until_five = yes
 		}
 	}
@@ -24863,6 +24843,414 @@ focus = {
 					GRE = { country_event = { id = bulgaria_foreign_events.39 days = 1 } }
 				}
 			}
+		}
+	}
+	#hidden path - bulgarian rasputin
+	focus = {
+		id = BUL_bulgarian_rasputin
+		icon = GFX_goal_generic_the_man
+		cost = 3
+		x = 97
+		y = 10
+		available = {
+			has_country_flag = BUL_hidden_path_unlock
+		}
+		
+		completion_reward = {
+			country_event = bulgaria.25
+			add_popularity = {
+			  ideology = national_populist
+				popularity = 0.1
+			}
+			add_stability = 0.1
+			add_ideas = BUL_titans_amogus
+			
+		}
+	}
+	focus = {
+		id = BUL_enchanted_court
+		icon = GFX_goal_AUS_Figureheads_Court
+		cost = 3
+		relative_position_id = BUL_bulgarian_rasputin
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = BUL_bulgarian_rasputin
+		}
+		completion_reward = {
+			country_event = bulgaria.25
+			add_popularity = {
+			  ideology = national_populist
+				popularity = 0.1
+			}
+			add_stability = 0.1
+			add_ideas = BUL_titans_amogus
+			
+		}
+	}
+	focus = {
+		id = BUL_good_people
+		icon = GFX_goal_AUS_Court_Ranchers_With_Rosy_Bouquet
+		cost = 3
+		relative_position_id = BUL_bulgarian_rasputin
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = BUL_bulgarian_rasputin
+		}
+		completion_reward = {
+			country_event = bulgaria.25
+			add_popularity = {
+			  ideology = national_populist
+				popularity = 0.1
+			}
+			add_stability = 0.1
+			add_ideas = BUL_titans_amogus
+			
+		}
+	}
+	focus = {
+		id = BUL_listen_to_deunov
+		icon = GFX_goal_TIB_Roerichism_Esoteric_Buddho_Communism
+		cost = 3
+		relative_position_id = BUL_bulgarian_rasputin
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = BUL_enchanted_court
+		}
+		prerequisite = {
+			focus = BUL_good_people
+		}
+		completion_reward = {
+			country_event = bulgaria.25
+			add_popularity = {
+			  ideology = national_populist
+				popularity = 0.1
+			}
+			add_stability = 0.1
+			add_ideas = BUL_titans_amogus
+			
+		}
+	}
+	focus = {
+		id = BUL_christ_king
+		icon = GFX_goal_AUS_Mein_Bruder_Christus
+		cost = 3
+		relative_position_id = BUL_bulgarian_rasputin
+		x = -1
+		y = 3
+		prerequisite = {
+			focus = BUL_listen_to_deunov
+		}
+		completion_reward = {
+			country_event = bulgaria.25
+			add_popularity = {
+			  ideology = national_populist
+				popularity = 0.1
+			}
+			add_stability = 0.1
+			add_ideas = BUL_titans_amogus
+			
+		}
+	}
+	focus = {
+		id = BUL_peace_and_mercy
+		icon = GFX_DKB_Christian_Social_Justice
+		cost = 3
+		relative_position_id = BUL_bulgarian_rasputin
+		x = 1
+		y = 3
+		prerequisite = {
+			focus = BUL_listen_to_deunov
+		}
+		completion_reward = {
+			country_event = bulgaria.25
+			add_popularity = {
+			  ideology = national_populist
+				popularity = 0.1
+			}
+			add_stability = 0.1
+			add_ideas = BUL_titans_amogus
+			
+		}
+	}
+	focus = {
+		id = BUL_embrace_messiahism
+		icon = GFX_goal_POL_Unity_In_Christ
+		cost = 3
+		relative_position_id = BUL_bulgarian_rasputin
+		x = 0
+		y = 4
+		prerequisite = {
+			focus = BUL_christ_king
+		}
+		prerequisite = {
+			focus = BUL_peace_and_mercy
+		}
+		completion_reward = {
+			country_event = bulgaria.25
+			add_popularity = {
+			  ideology = national_populist
+				popularity = 0.1
+			}
+			add_stability = 0.1
+			add_ideas = BUL_titans_amogus
+			
+		}
+	}
+	focus = {
+		id = BUL_ally_socialists
+		icon = GFX_RUS_Truly_Socialist_Party
+		cost = 3
+		relative_position_id = BUL_bulgarian_rasputin
+		x = -2
+		y = 5
+		prerequisite = {
+			focus = BUL_embrace_messiahism
+		}
+		completion_reward = {
+			country_event = bulgaria.25
+			add_popularity = {
+			  ideology = national_populist
+				popularity = 0.1
+			}
+			add_stability = 0.1
+			add_ideas = BUL_titans_amogus
+			
+		}
+	}
+	focus = {
+		id = BUL_enlightened_autocracy
+		icon = GFX_goal_COL_Authoritarian_Friends_Everywhere_Unite
+		cost = 3
+		relative_position_id = BUL_bulgarian_rasputin
+		x = 0
+		y = 5
+		prerequisite = {
+			focus = BUL_embrace_messiahism
+		}
+		mutually_exclusive = {
+			focus = BUL_peoples_power
+		}
+		completion_reward = {
+			country_event = bulgaria.25
+			add_popularity = {
+			  ideology = national_populist
+				popularity = 0.1
+			}
+			add_stability = 0.1
+			add_ideas = BUL_titans_amogus
+			
+		}
+	}
+	focus = {
+		id = BUL_peoples_power
+		icon = GFX_goal_japanese_democracy
+		cost = 3
+		relative_position_id = BUL_bulgarian_rasputin
+		x = 2
+		y = 5
+		prerequisite = {
+			focus = BUL_embrace_messiahism
+		}
+		mutually_exclusive = {
+			focus = BUL_enlightened_autocracy
+		}
+		completion_reward = {
+			country_event = bulgaria.25
+			add_popularity = {
+			  ideology = national_populist
+				popularity = 0.1
+			}
+			add_stability = 0.1
+			add_ideas = BUL_titans_amogus
+			
+		}
+	}
+	focus = {
+		id = BUL_feed_farmers
+		icon = GFX_goal_COR_Cooperate_Organized_Workers_Farmers
+		cost = 3
+		relative_position_id = BUL_bulgarian_rasputin
+		x = -3
+		y = 6
+		prerequisite = {
+			focus = BUL_ally_socialists
+		}
+		completion_reward = {
+			country_event = bulgaria.25
+			add_popularity = {
+			  ideology = national_populist
+				popularity = 0.1
+			}
+			add_stability = 0.1
+			add_ideas = BUL_titans_amogus
+			
+		}
+	}
+	focus = {
+		id = BUL_purge_corrupt_buearucrat
+		icon = GFX_RUS_Fight_Bureaucratisation
+		cost = 3
+		relative_position_id = BUL_bulgarian_rasputin
+		x = -1
+		y = 6
+		prerequisite = {
+			focus = BUL_ally_socialists
+		}
+		completion_reward = {
+			country_event = bulgaria.25
+			add_popularity = {
+			  ideology = national_populist
+				popularity = 0.1
+			}
+			add_stability = 0.1
+			add_ideas = BUL_titans_amogus
+			
+		}
+	}
+	focus = {
+		id = BUL_abolish_death
+		icon = GFX_goal_MEX_apolitical_judges
+		cost = 3
+		relative_position_id = BUL_bulgarian_rasputin
+		x = 1
+		y = 6
+		prerequisite = {
+			focus = BUL_enlightened_autocracy
+			focus = BUL_peoples_power
+		}
+		completion_reward = {
+			country_event = bulgaria.25
+			add_popularity = {
+			  ideology = national_populist
+				popularity = 0.1
+			}
+			add_stability = 0.1
+			add_ideas = BUL_titans_amogus
+			
+		}
+	}
+	focus = {
+		id = BUL_selfless_devotion
+		icon = GFX_goal_NEE_Lovecrafts_Utopia_Everyman
+		cost = 3
+		relative_position_id = BUL_bulgarian_rasputin
+		x = 3
+		y = 6
+		prerequisite = {
+			focus = BUL_enlightened_autocracy
+			focus = BUL_peoples_power
+		}
+		completion_reward = {
+			country_event = bulgaria.25
+			add_popularity = {
+			  ideology = national_populist
+				popularity = 0.1
+			}
+			add_stability = 0.1
+			add_ideas = BUL_titans_amogus
+			
+		}
+	}
+	focus = {
+		id = BUL_conquer_heart_of_heritics
+		icon = GFX_goal_COR_church_of_zion
+		cost = 3
+		relative_position_id = BUL_bulgarian_rasputin
+		x = -2
+		y = 7
+		prerequisite = {
+			focus = BUL_feed_farmers
+		}
+		prerequisite = {
+			focus = BUL_purge_corrupt_buearucrat
+		}
+		completion_reward = {
+			country_event = bulgaria.25
+			add_popularity = {
+			  ideology = national_populist
+				popularity = 0.1
+			}
+			add_stability = 0.1
+			add_ideas = BUL_titans_amogus
+			
+		}
+	}
+	focus = {
+		id = BUL_forbidden_magics
+		icon = GFX_goal_ELS_Cult_Warlock
+		cost = 3
+		relative_position_id = BUL_bulgarian_rasputin
+		x = 0
+		y = 7
+		prerequisite = {
+			focus = BUL_abolish_death
+		}
+		prerequisite = {
+			focus = BUL_selfless_devotion
+		}
+		completion_reward = {
+			country_event = bulgaria.25
+			add_popularity = {
+			  ideology = national_populist
+				popularity = 0.1
+			}
+			add_stability = 0.1
+			add_ideas = BUL_titans_amogus
+			
+		}
+	}
+	focus = {
+		id = BUL_mercyful_hand
+		icon = GFX_goal_TEX_Angels_Mercy
+		cost = 3
+		relative_position_id = BUL_bulgarian_rasputin
+		x = 2
+		y = 7
+		prerequisite = {
+			focus = BUL_abolish_death
+		}
+		prerequisite = {
+			focus = BUL_selfless_devotion
+		}
+		completion_reward = {
+			country_event = bulgaria.25
+			add_popularity = {
+			  ideology = national_populist
+				popularity = 0.1
+			}
+			add_stability = 0.1
+			add_ideas = BUL_titans_amogus
+			
+		}
+	}
+	focus = {
+		id = BUL_peoples_tsardom
+		icon = GFX_goal_BAN_sympathetic_bulgaria
+		cost = 3
+		relative_position_id = BUL_bulgarian_rasputin
+		x = 0
+		y = 8
+		prerequisite = {
+			focus = BUL_conquer_heart_of_heritics
+		}
+		prerequisite = {
+			focus = BUL_forbidden_magics
+		}
+		prerequisite = {
+			focus = BUL_mercyful_hand
+		}
+		completion_reward = {
+			country_event = bulgaria.25
+			add_popularity = {
+			  ideology = national_populist
+				popularity = 0.1
+			}
+			add_stability = 0.1
+			add_ideas = BUL_titans_amogus
+			
 		}
 	}
 }
