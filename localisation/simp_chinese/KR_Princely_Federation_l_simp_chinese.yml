@@ -1,0 +1,1777 @@
+﻿l_simp_chinese:
+ KR_Princely_States:0 "王公联盟国策树"
+ POLITICS_OSMAN_ALI_KHAN_DESC:0 "王号阿萨夫·贾赫七世的海得拉巴土王奥斯曼·阿里汗曾经只是日不落大英帝国的臣民，但他抓住了英属印度解体后的混乱机遇，统一了南方的诸王公。在阿里汗的领导下，羽翼未丰的王公联盟击溃了社会主义叛军，镇压了国内的叛乱势力，也喝阻了蠢蠢欲动的残留殖民者势力。不过，联盟逐渐稳固后，国家政府的性质却又成为了一个棘手的难题。奥斯曼·阿里汗现在必须引导联盟摆脱对其造成诸多阻碍的疑难杂症，走向更稳定的明天。"
+ POLITICS_OSMAN_ALI_KHAN2_DESC:0 "印度皇帝奥斯曼·阿里汗曾经只是日不落大英帝国的臣民，但他在英属印度解体后的混乱时期趁机统一了南方的印度王公。在他的领导下，羽翼未丰的王公联盟击溃了社会主义叛军，镇压了国内的叛乱势力，也喝阻了蠢蠢欲动的残留殖民者势力。然而，随着联盟的完善稳固，国家政府性质却成为了一个需要跨越的问题。奥斯曼·阿里汗现在必须引导联盟摆脱对其造成诸多阻碍的疑难杂症，走向更稳定的明天。"
+ chamberofprinces:0 "王公会议"
+ PRF_Osman_Paternal_Autocrat:0 "§Y奥斯曼·阿里汗§走向§Y家长制独裁§\n"
+ PRF_reforms_forced:0 "反思内战，改革军队"
+ PRF_aggressive_stance:0 "侵略姿态"
+ PRF_kashmir_may_help:0 "§Y克什米尔邦§和我们并肩作战的可能性是§Y60%§。\n"
+ PRF_kashmir_baroda_may_help:0 "§Y克什米尔邦§和§Y古吉拉特邦§都与我们并肩作战的概率是§Y40%§。\n"
+ PRF_kashmir_rises:0 "§Y克什米尔§造我们的反了！\n"
+ PRF_kashmir_baroda_rises:0 "§Y克什米尔邦§和§Y古吉拉特邦§都在造我们的反！\n"
+ PRF_orissa_rises:0 "§Y奥里萨邦§造我们的反了！\n"
+ PRF_orissa_crushed:0 "§Y奥里萨邦§的叛军被摧垮了！\n"
+ PRF_unholy_deal:0 "当与§Y[BHC.GetNameDef]§的战争开始之时，他们会接触我们的。\n"
+ PRF_BHC_convert_faster:0 "在§Y[BHC.GetName]§地区获取核心的速度变快了\n"
+ PRF_BHC_convert_slower:0 "在§Y[BHC.GetName]§地区获取核心的速度变慢了\n"
+ PRF_BHC_cores_1:0 "现在可以获得§Y西孟加拉§、§Y东孟加拉§和§Y比哈尔§的核心了！\n"
+ PRF_BHC_cores_2:0 "现在可以获得§Y阿萨姆§和§Y曼尼普尔§的核心了\n"
+ PRF_BHC_cores_3:0 "现在可以获得§Y奥里萨§、§Y维沙卡帕特南§和§Y贾巴尔普尔§的核心了\n"
+ PRF_DEH_convert_faster:0 "在§Y[DEH.GetName]§地区获取核心的速度变快了。\n"
+ PRF_DEH_convert_slower:0 "在§Y[DEH.GetName]§地区获取核心的速度变慢了\n"
+ PRF_DEH_cores_1:0 "现在可以获得§Y[DEH.GetName]§北方各邦的核心了\n"
+ PRF_DEH_cores_2:0 "现在可以获得§Y[DEH.GetName]§南方诸邦的核心了。\n"
+ PRF_exiles_come:0 "三支步兵部队从他们沦陷的故土流亡到了海得拉巴。\n"
+ PRF_exiles_come_to_fight:0 "两支王家骑兵部队抵达了海得拉巴，他们将协助守军打击入侵者。\n"
+ PRF_receive_mysore_force:0 "迈索尔的王家部队将被整编进国防军。\n"
+ PRF_receive_trv_force:0 "特拉凡哥尔的王家部队将被整编进国防军。\n"
+ PRF_kashmir_forces:0 "克什米尔邦的王家部队将加入战斗。\n"
+ PRF_baroda_forces:0 "巴罗达邦的王家部队将加入战斗。\n"
+ PRF_orissa_forces:0 "奥里萨邦的叛军将加入战斗！\n"
+ PRF_tot_party:0 "平行政府-贡德叛乱"
+ PRF_tot_party_long:0 "平行政府-贡德叛乱(Prati Sarkar Gondi Rebellion)"
+ PRF_syn_party:0 "平行政府-台风军"
+ PRF_syn_party_long:0 "平行政府-台风军(Prati Sarkar Toofan Sena)"
+ PRF_rso_party:0 "自治党"
+ PRF_rso_party_long:0 "自治党(Swarajya Party)"
+ PRF_social_democrat_party:0 "农民人民党"
+ PRF_social_democrat_party_long:0 "农民人民党(Krishikar Lok Party)"
+ PRF_social_liberal_party:0 "希瓦吉之军"
+ PRF_social_liberal_party_long:0 "希瓦吉之军(Shiv Sena)"
+ PRF_market_liberal_party:0 "安得拉大会"
+ PRF_market_liberal_party_long:0 "安得拉大会(Andra Mahasabha)"
+ PRF_social_conservative_party:0 "正义党"
+ PRF_social_conservative_party_long:0 "正义党(Justice Party)"
+ PRF_authoritarian_democrat_party:0 "国家农业党"
+ PRF_authoritarian_democrat_party_long:0 "国家农业党(National Agriculturist Party)"
+ PRF_paternal_autocrat_party:0 "王公会议"
+ PRF_paternal_autocrat_party_long:0 "王公会议(Council of Princes)"
+ PRF_national_populist_party:0 "拉扎卡尔"
+ PRF_national_populist_party_long:0 "拉扎卡尔(Razakars)"
+#flag+ideas
+ PRF_Uprising_victory:0 "起义胜利了！"
+ PRF_Uprising_lost:0 "起义已被镇压"
+ PRF_CAIO:0 "意外的胜利"
+ PRF_Nizam_hold_power: "尼扎姆掌握权力"
+ PRF_Democracy_Triumphs: "民主的胜利"
+ PRF_The_Prince_victory: "进步王公攫取政权"
+ PRF_military_seizes_the_power: "军队攫取政权"
+ PRF_Islamist_militia_seizes_power: "伊斯兰民兵接管国家"
+ PRF_The_colonizers_return_in_force: "殖民统治回归"
+ PRF_Dravidian_alliance_wins: "进步联盟凯旋"
+ PRF_Labour_Party_wins: "独立工党获胜"
+ PRF_The_Worker_Peasant_Party_Wins: "工农党担当大任"
+ PRF_The_Autonomy_Party_Wins: "自治党的胜利"
+ PRF_The_Victory_of_the_Community: "我们生于社团之中"
+ PRF_The_Victory_of_the_Citizens: "市民集团的胜利"
+ PRF_Religious_India: "教团的胜利"
+ PRF_economic_backwardness:0 "经济落后"
+ PRF_military_backwardness:0 "军事落后"
+ PRF_left_wing_rebellion:0 "左翼叛乱"
+ PRF_public_morale_instability:0 "人心不稳"
+ PRF_caste_problem:0 "种姓问题"
+ PRF_religious_conflict:0 "宗教纷争"
+#经济
+ PRF_Labor_mobilization:0 "劳工动员"
+ PRF_the_Peoples_Planning_Commission:0 "人民计划委"
+ PRF_Foreign_capital_introduction:0 "外资引入"
+ PRF_general_mobilization:0 "总动员"
+ PRF_Revolutionary_industrialization:0 "革命工业化" 
+ PRF_Revolutionary_industrialization_1:0 "革命工业化" 
+ PRF_Revolutionary_industrialization_2:0 "革命工业化" 
+ PRF_Revolutionary_industrialization_3:0 "革命工业化" 
+ PRF_Revolutionary_industrialization_4:0 "革命工业化"
+ PRF_Agricultural_reform:0 "农业改革"
+ PRF_Agricultural_reform_1:0 "农业改革"
+ PRF_Agricultural_reform_2:0 "农业改革"
+ PRF_Princely_court_economy:0 "宫廷经济"
+ PRF_Princely_court_economy_1:0 "宫廷经济"
+ PRF_Princely_court_economy_2:0 "宫廷经济"
+ PRF_Princely_court_economy_3:0 "宫廷经济"
+ PRF_Princely_court_economy_4:0 "宫廷经济" 
+ PRF_Light_textile_industry:0 "轻纺工业"
+ PRF_Light_textile_industry_1:0 "轻纺工业"
+ PRF_Light_textile_industry_2:0 "轻纺工业"
+ PRF_Dock_production:0 "船坞增产"
+ PRF_industry_plan:0 "工业计划"
+ PRF_industry_plan_1:0 "工业计划"
+ PRF_industry_plan_2:0 "工业计划"
+ PRF_industry_plan_3:0 "工业计划"
+ PRF_Light_Industry:0 "轻工业基础"
+ PRF_Light_Industry_1:0 "轻工业基础"
+ PRF_Light_Industry_2:0 "轻工业基础"
+ PRF_Agricultural_Cooperative:0 "合作社"
+ PRF_State_Bank_of_India:0 "国家银行"
+#军事
+ PRF_officer_corps:0 "本土军官团"
+ PRF_officer_corps_1:0 "本土军官团"
+ PRF_Military_Command_Academy:0 "指挥学院"
+ PRF_Military_Command_Academy_1:0 "指挥学院"
+ PRF_General_Staff:0 "总参谋部"
+ PRF_General_Staff_1:0 "总参谋部"
+ PRF_General_Staff_2:0 "总参谋部"
+ PRF_Song_of_the_Armored_Troops:0 "装甲兵之歌"
+ PRF_Song_of_the_Armored_Troops_1:0 "装甲兵之歌"
+ PRF_Song_of_the_Artillery_howls:0 "炮兽之怒"
+ PRF_Song_of_the_Artillery_howls_1:0 "炮兽之怒"
+ PRF_Franchise:0"外部投资"
+ #国策
+ PRF_Light_industry_self_sufficiency_plan:0"轻工业自给计划"
+ PRF_Light_industry_self_sufficiency_plan_desc:0"轻工业自给计划"
+
+ PRF_Rural_credit_cooperatives:0"农村信贷合作社"
+ PRF_Rural_credit_cooperatives_desc:0"农村信贷合作社"
+
+ PRF_British_technology_transfer:0"英国的技术转移"
+ PRF_British_technology_transfer_desc:0"英国的技术转移"
+
+ PRF_Tariff_autonomy_negotiations:0"关税自治谈判"
+ PRF_Tariff_autonomy_negotiations_desc:0"关税自治谈判"
+
+ PRF_Establishment_of_the_National_Planning_Commission:0"成立国家计划委员会"
+ PRF_Establishment_of_the_National_Planning_Commission_desc:0"成立国家计划委员会"
+
+ PRF_Foreign_capital_introduction:0"外资引进"
+ PRF_Foreign_capital_introduction_desc:0"外资引进"
+
+ PRF_Our_backward_industrial_status:0"我们落后的工业现状"
+ PRF_Our_backward_industrial_status_desc:0"我们落后的工业现状"
+
+ PRF_Linking_the_states:0"联系各邦"
+ PRF_Linking_the_states_desc:0"联系各邦"
+
+ PRF_Industrial_general_mobilization:0"工业总动员"
+ PRF_Industrial_general_mobilization_desc:0"工业总动员"
+
+ PRF_Labor_mobilization:0"劳工动员"
+ PRF_Labor_mobilization_desc:0"劳工动员"
+
+ PRF_Establishment_of_the_Peoples_Planning_Commission:0"建立人民计划委员会"
+ PRF_Establishment_of_the_Peoples_Planning_Commission_desc:0"建立人民计划委员会"
+
+ PRF_Nationalization_of_key_industries:0"国有化关键产业"
+ PRF_Nationalization_of_key_industries_desc:0"国有化关键产业"
+
+ PRF_Green_revolution:0"绿色（农业）革命"
+ PRF_Green_revolution_desc:0"绿色（农业）革命"
+
+ PRF_All_India_Trade_Union_Congress:0"全印度工会大会"
+ PRF_All_India_Trade_Union_Congress_desc:0"全印度工会大会"
+
+ PRF_Revolutionary_industrialization:0"革命工业化"
+ PRF_Revolutionary_industrialization_desc:0"革命工业化"
+
+ PRF_Improvement_of_the_textile_industry:0"改进纺织工业"
+ PRF_Improvement_of_the_textile_industry_desc:0"改进纺织工业"
+
+ PRF_Hyderabad_Arsenal:0"海得拉巴兵工厂"
+ PRF_Hyderabad_Arsenal_desc:0"海得拉巴兵工厂"
+
+ PRF_Establishment_of_the_Princely_States_Development_Council:0"建立王公发展委员会"
+ PRF_Establishment_of_the_Princely_States_Development_Council_desc:0"建立王公发展委员会"
+
+ PRF_Princely_court_economy:0"宫廷经济"
+ PRF_Princely_court_economy_desc:0"宫廷经济"
+
+ PRF_Princely_Academy_of_Sciences:0"王公科学院"
+ PRF_Princely_Academy_of_Sciences_desc:0"王公科学院"
+
+ PRF_Completion_of_agricultural_reform:0"完成农业改革"
+ PRF_Completion_of_agricultural_reform_desc:0"完成农业改革"
+
+ PRF_National_dam_building_plan:0"全国筑坝计划"
+ PRF_National_dam_building_plan_desc:0"全国筑坝计划"
+
+ PRF_South_Asian_economic_miracle:0"南亚经济奇迹"
+ PRF_South_Asian_economic_miracle_desc:0"南亚经济奇迹"
+
+ PRF_Franchise_of_Tata_Steel_operations:0"特许塔塔钢铁经营"
+ PRF_Franchise_of_Tata_Steel_operations_desc:0"特许塔塔钢铁经营"
+
+ PRF_Heavy_machinery_complex:0"重型机械综合体"
+ PRF_Heavy_machinery_complex_desc:0"重型机械综合体"
+
+ PRF_Modernization_of_Bombay_Madras_ports:0"孟买_马德拉斯港口现代化"
+ PRF_Modernization_of_Bombay_Madras_ports_desc:0"孟买_马德拉斯港口现代化"
+
+ PRF_Modernization_of_the_textile_industry:0"纺织工业现代化"
+ PRF_Modernization_of_the_textile_industry_desc:0"纺织工业现代化"
+
+ PRF_Land_collectivization_movement:0"土地集体化运动"
+ PRF_Land_collectivization_movement_desc:0"土地集体化运动"
+
+ PRF_National_consumer_goods_industry:0"民族消费品工业"
+ PRF_National_consumer_goods_industry_desc:0"民族消费品工业"
+
+ PRF_Light_industry_prosperity:0"轻工业繁荣"
+ PRF_Light_industry_prosperity_desc:0"轻工业繁荣"
+
+ PRF_Towards_an_industrial_titan:0"迈向工业泰坦"
+ PRF_Towards_an_industrial_titan_desc:0"迈向工业泰坦"
+
+ PRF_Rebuilding_infrastructure:0"重建基础设施"
+ PRF_Rebuilding_infrastructure_desc:0"重建基础设施"
+
+ PRF_Seizure_of_reactionary_assets:0"收缴反动派资产"
+ PRF_Seizure_of_reactionary_assets_desc:0"收缴反动派资产"
+
+ PRF_Completion_of_the_defense_industry:0"建成国防工业"
+ PRF_Completion_of_the_defense_industry_desc:0"建成国防工业"
+
+ PRF_South_Asian_industrial_corridor:0"南亚工业走廊"
+ PRF_South_Asian_industrial_corridor_desc:0"南亚工业走廊"
+
+ PRF_State_Bank_of_India:0"印度国家银行"
+ PRF_State_Bank_of_India_desc:0"印度国家银行"
+
+ PRF_South_Asian_arsenals:0"南亚兵工厂"
+ PRF_South_Asian_arsenals_desc:0"南亚兵工厂"
+
+ PRF_Industrial_production_increase_plan:0"工业增产计划"
+ PRF_Industrial_production_increase_plan_desc:0"工业增产计划"
+
+ PRF_Heavy_industry_complex:0"重工业综合体"
+ PRF_Heavy_industry_complex_desc:0"重工业综合体"
+
+ PRF_Examine_our_army:0"审视我们的军队"
+ PRF_Examine_our_army_desc:0"？"
+
+ PRF_Funding_for_indigenous_aviation_industry:0"本土航空工业资助"
+ PRF_Funding_for_indigenous_aviation_industry_desc:0"本土航空工业资助"
+
+ PRF_Air_combat_flight_research:0"空战飞行研究"
+ PRF_Air_combat_flight_research_desc:0"空战飞行研究"
+
+ PRF_Establishment_of_junior_flying_schools:0"开设初级航校"
+ PRF_Establishment_of_junior_flying_schools_desc:0"开设初级航校"
+
+ PRF_Establishment_of_the_Indian_Air_Force:0"建立印度空军"
+ PRF_Establishment_of_the_Indian_Air_Force_desc:0"建立印度空军"
+
+ PRF_Reform_of_the_Indian_Army:0"印度陆军改革"
+ PRF_Reform_of_the_Indian_Army_desc:0"印度陆军改革"
+
+ PRF_Development_of_the_Indian_Navy:0"发展印度海军"
+ PRF_Development_of_the_Indian_Navy_desc:0"发展印度海军"
+
+ PRF_Seaman_training_schools:0"海员训练学校"
+ PRF_Seaman_training_schools_desc:0"海员训练学校"
+
+ PRF_Development_of_indigenous_shipbuilding:0"发展本土造船业"
+ PRF_Development_of_indigenous_shipbuilding_desc:0"发展本土造船业"
+
+ PRF_Expansion_of_the_Mumbai_naval_base:0"扩张孟买海军基地"
+ PRF_Expansion_of_the_Mumbai_naval_base_desc:0"扩张孟买海军基地"
+
+ PRF_Artillery_modernization:0"炮兵现代化"
+ PRF_Artillery_modernization_desc:0"炮兵现代化"
+
+ PRF_Junior_command_college:0"初级指挥学院"
+ PRF_Junior_command_college_desc:0"初级指挥学院"
+
+ PRF_Formation_of_armored_corps:0"组建装甲兵团"
+ PRF_Formation_of_armored_corps_desc:0"组建装甲兵团"
+
+ PRF_General_Staff_plan:0"总参谋部计划"
+ PRF_General_Staff_plan_desc:0"总参谋部计划"
+
+ PRF_Establishment_of_indigenous_officer_corps:0"建立本土军官团"
+ PRF_Establishment_of_indigenous_officer_corps_desc:0"建立本土军官团"
+
+ PRF_Dominion_of_the_skies:0"统治天空"
+ PRF_Dominion_of_the_skies_desc:0"统治天空"
+
+ PRF_The_newborn_army:0"新生的军队"
+ PRF_The_newborn_army_desc:0"新生的军队"
+
+ PRF_Large_scale_mobilization_plan:0"大规模动员计划"
+ PRF_Large_scale_mobilization_plan_desc:0"大规模动员计划"
+
+ PRF_Logistics_network_construction:0"后勤网络建设"
+ PRF_Logistics_network_construction_desc:0"后勤网络建设"
+
+ PRF_Air_base_network_construction:0"空军基地网络建设"
+ PRF_Air_base_network_construction_desc:0"空军基地网络建设"
+
+ PRF_Debate_on_the_direction_of_the_air_force:0"空军方向的辩论"
+ PRF_Debate_on_the_direction_of_the_air_force_desc:0"空军方向的辩论"
+
+ PRF_Cult_of_speed:0"速度崇拜"
+ PRF_Cult_of_speed_desc:0"速度崇拜"
+
+ PRF_Fighting_for_the_nation:0"为国而战"
+ PRF_Fighting_for_the_nation_desc:0"为国而战"
+
+ PRF_Capital_ship_plan:0"主力舰计划"
+ PRF_Capital_ship_plan_desc:0"主力舰计划"
+
+ PRF_Naval_staff:0"海军参谋部"
+ PRF_Naval_staff_desc:0"海军参谋部"
+
+ PRF_Underwater_wolf_packs:0"水下狼群"
+ PRF_Underwater_wolf_packs_desc:0"水下狼群"
+
+ PRF_Focus_on_screening_ships:0"注重屏卫舰"
+ PRF_Focus_on_screening_ships_desc:0"注重屏卫舰"
+
+ PRF_Focus_on_battleships:0"注重战列舰"
+ PRF_Focus_on_battleships_desc:0"注重战列舰"
+
+ PRF_Defense_of_the_Indian_Ocean:0"保卫印度洋"
+ PRF_Defense_of_the_Indian_Ocean_desc:0"保卫印度洋"
+
+ PRF_Debate_on_the_direction_of_the_navy:0"海军方向的辩论"
+ PRF_Debate_on_the_direction_of_the_navy_desc:0"海军方向的辩论"
+
+ PRF_Supremacy_of_firepower:0"火力至上"
+ PRF_Supremacy_of_firepower_desc:0"火力至上"
+
+ PRF_Large_scale_air_force_expansion:0"大规模空军扩张"
+ PRF_Large_scale_air_force_expansion_desc:0"大规模空军扩张"
+
+ PRF_Fighter_aircraft_development_plan:0"战机研发计划"
+ PRF_Fighter_aircraft_development_plan_desc:0"战机研发计划"
+
+ PRF_Focus_on_fighter_aircraft:0"注重战斗机"
+ PRF_Focus_on_fighter_aircraft_desc:0"注重战斗机"
+
+ PRF_Focus_on_close_air_support:0"注重近地支援"
+ PRF_Focus_on_close_air_support_desc:0"注重近地支援"
+
+ PRF_Rebirth_from_feudal_ruins:0"从封建废墟中重生"
+ PRF_Rebirth_from_feudal_ruins_desc:0"从封建废墟中重生"
+
+ PRF_Autonomy_Party_victory:0"自治党得胜"
+ PRF_Autonomy_Party_victory_desc:0"自治党得胜"
+
+ PRF_Breaking_free_from_sectarian_violence:0"从宗派暴力中挣脱"
+ PRF_Breaking_free_from_sectarian_violence_desc:0"从宗派暴力中挣脱"
+
+ PRF_Growing_from_colonial_oppression:0"从殖民压迫中成长"
+ PRF_Growing_from_colonial_oppression_desc:0"从殖民压迫中成长"
+
+ PRF_Tamil_Sailors_set_sail:0"“泰米尔水手”扬帆启航"
+ PRF_Tamil_Sailors_set_sail_desc:0"“泰米尔水手”扬帆启航"
+
+ PRF_Vanchinathans_legacy:0"万奇纳坦的遗产"
+ PRF_Vanchinathans_legacy_desc:0"万奇纳坦的遗产"
+
+ PRF_Memories_of_Tirunelveli:0"蒂鲁内尔维利的记忆"
+ PRF_Memories_of_Tirunelveli_desc:0"蒂鲁内尔维利的记忆"
+
+ PRF_Expanding_the_Indian_Steam_Navigation_Company:0"扩张印度蒸汽轮船公司"
+ PRF_Expanding_the_Indian_Steam_Navigation_Company_desc:0"扩张印度蒸汽轮船公司"
+
+ PRF_Senapati_leads_the_people:0"塞纳帕蒂引领人民"
+ PRF_Senapati_leads_the_people_desc:0"塞纳帕蒂引领人民"
+
+ PRF_Following_in_Mrs_Besants_footsteps:0"追随贝赞特夫人的脚步"
+ PRF_Following_in_Mrs_Besants_footsteps_desc:0"追随贝赞特夫人的脚步"
+
+ PRF_Uniting_the_remnants_of_the_commune:0"联合公社残部"
+ PRF_Uniting_the_remnants_of_the_commune_desc:0"联合公社残部"
+
+ PRF_The_future_of_autonomy:0"自治的前程"
+ PRF_The_future_of_autonomy_desc:0"自治的前程"
+
+ PRF_Preserving_the_flame_of_democracy:0"维护民主火苗"
+ PRF_Preserving_the_flame_of_democracy_desc:0"维护民主火苗"
+
+ PRF_The_voice_of_labor:0"劳工之声"
+ PRF_The_voice_of_labor_desc:0"劳工之声"
+
+ PRF_Fighting_for_the_Mahatma:0"为圣雄而战"
+ PRF_Fighting_for_the_Mahatma_desc:0"为圣雄而战"
+
+ PRF_Aryan_thought:0"雅利安之思"
+ PRF_Aryan_thought_desc:0"雅利安之思"
+
+ PRF_Serving_all_of_humanity:0"服务全人类"
+ PRF_Serving_all_of_humanity_desc:0"服务全人类"
+
+ PRF_Protecting_Indias_diversity:0"保护印度的“多元性”"
+ PRF_Protecting_Indias_diversity_desc:0"保护印度的“多元性”"
+
+ PRF_The_soul_breaking_free_from_bondage:0"挣脱束缚之灵魂"
+ PRF_The_soul_breaking_free_from_bondage_desc:0"挣脱束缚之灵魂"
+
+ PRF_Advaita_Vedanta_politics:0"吠檀多不二论政治"
+ PRF_Advaita_Vedanta_politics_desc:0"吠檀多不二论政治"
+
+ PRF_Democratic_worker_rule:0"民主的工人治世"
+ PRF_Democratic_worker_rule_desc:0"民主的工人治世"
+
+ PRF_Setting_sail_for_Kumari_Kandam:0"向库玛丽坎达姆启航"
+ PRF_Setting_sail_for_Kumari_Kandam_desc:0"向库玛丽坎达姆启航"
+
+ PRF_Promoting_social_justice:0"弘扬社会正义"
+ PRF_Promoting_social_justice_desc:0"弘扬社会正义"
+
+ PRF_Opposing_Brahmin_violence:0"反对婆罗门暴力"
+ PRF_Opposing_Brahmin_violence_desc:0"反对婆罗门暴力"
+
+ PRF_Loyalty_wisdom_and_frugality:0"忠诚、明智、节俭"
+ PRF_Loyalty_wisdom_and_frugality_desc:0"忠诚、明智、节俭"
+
+ PRF_Victory_of_the_Independent_Labour_Party:0"独立工党胜利"
+ PRF_Victory_of_the_Independent_Labour_Party_desc:0"独立工党胜利"
+
+ PRF_Babasaheb_moves_forward:0"巴巴萨海布继续前进"
+ PRF_Babasaheb_moves_forward_desc:0"巴巴萨海布继续前进"
+
+ PRF_The_spirit_of_the_New_Riders:0"“新乘”之精神"
+ PRF_The_spirit_of_the_New_Riders_desc:0"“新乘”之精神"
+
+ PRF_Eliminating_caste:0"消灭种姓"
+ PRF_Eliminating_caste_desc:0"消灭种姓"
+
+ PRF_Resisting_oppressive_religion:0"反抗压迫性宗教"
+ PRF_Resisting_oppressive_religion_desc:0"反抗压迫性宗教"
+
+ PRF_Beneath_the_surface:0"暗流之下"
+ PRF_Beneath_the_surface_desc:0"暗流之下"
+
+ PRF_The_Bhim_Army_takes_up_the_torch:0"比姆军接过火炬"
+ PRF_The_Bhim_Army_takes_up_the_torch_desc:0"比姆军接过火炬"
+
+ PRF_Inheriting_Babasahebs_legacy:0"继承巴巴萨海布之遗产"
+ PRF_Inheriting_Babasahebs_legacy_desc:0"继承巴巴萨海布之遗产"
+
+ PRF_Breaking_the_chains_of_caste:0"打碎种姓枷锁"
+ PRF_Breaking_the_chains_of_caste_desc:0"打碎种姓枷锁"
+
+ PRF_Buddha_or_Marx:0"佛陀还是马克思？"
+ PRF_Buddha_or_Marx_desc:0"佛陀还是马克思？"
+
+ PRF_Uniting_with_Muslims:0"团结穆斯林"
+ PRF_Uniting_with_Muslims_desc:0"团结穆斯林"
+
+ PRF_Uniting_with_syndicalists:0"联合工团主义者"
+ PRF_Uniting_with_syndicalists_desc:0"联合工团主义者"
+
+ PRF_Paying_homage_to_Ambedkar_Mahasabha:0"顶礼安贝德卡摩诃萨"
+ PRF_Paying_homage_to_Ambedkar_Mahasabha_desc:0"顶礼安贝德卡摩诃萨"
+
+ PRF_Bhim_and_his_Dharma:0"比姆和他的法"
+ PRF_Bhim_and_his_Dharma_desc:0"比姆和他的法"
+
+ PRF_The_struggle_of_Shakyamuni:0"释迦摩尼之斗争"
+ PRF_The_struggle_of_Shakyamuni_desc:0"释迦摩尼之斗争"
+
+ PRF_An_egalitarian_Aryan_nation:0"平等的雅利安国度"
+ PRF_An_egalitarian_Aryan_nation_desc:0"平等的雅利安国度"
+
+ PRF_The_revelation_of_Bahaullah:0"巴哈欧拉之启示"
+ PRF_The_revelation_of_Bahaullah_desc:0"巴哈欧拉之启示"
+
+ PRF_A_classless_society_a_casteless_people:0"无阶级之社会，无种姓之人民"
+ PRF_A_classless_society_a_casteless_people_desc:0"无阶级之社会，无种姓之人民"
+
+ PRF_Ambedkars_Twenty_Two_Vows:0"安贝德卡的二十二誓言"
+ PRF_Ambedkars_Twenty_Two_Vows_desc:0"安贝德卡的二十二誓言"
+
+ PRF_The_nation_of_nirvana:0"涅槃之国"
+ PRF_The_nation_of_nirvana_desc:0"涅槃之国"
+
+ PRF_Long_live_Bhim:0"比姆万岁！"
+ PRF_Long_live_Bhim_desc:0"比姆万岁！"
+
+ PRF_India_is_ours:0"印度是我们的！"
+ PRF_India_is_ours_desc:0"印度是我们的！"
+
+ PRF_Crushing_reactionary_remnants:0"粉碎反动残余"
+ PRF_Crushing_reactionary_remnants_desc:0"粉碎反动残余"
+
+ PRF_Overthrowing_feudal_princes:0"推翻封建王公"
+ PRF_Overthrowing_feudal_princes_desc:0"推翻封建王公"
+
+ PRF_Appeasing_our_compatriots:0"安抚我们的同胞"
+ PRF_Appeasing_our_compatriots_desc:0"安抚我们的同胞"
+
+ PRF_Uniting_with_comrades:0"团结同路人"
+ PRF_Uniting_with_comrades_desc:0"团结同路人"
+
+ PRF_The_springtime_of_the_Workers_and_Peasants_Party:0"工农党的春日"
+ PRF_The_springtime_of_the_Workers_and_Peasants_Party_desc:0"工农党的春日"
+
+ PRF_Healing_the_wounds:0"弥合伤口"
+ PRF_Healing_the_wounds_desc:0"弥合伤口"
+
+ PRF_Rising_from_the_ruins:0"从废墟中崛起"
+ PRF_Rising_from_the_ruins_desc:0"从废墟中崛起"
+
+ PRF_The_uprising_of_the_two_heroes:0"双雄起义"
+ PRF_The_uprising_of_the_two_heroes_desc:0"双雄起义"
+
+ PRF_The_revolutionary_lion:0"革命雄狮"
+ PRF_The_revolutionary_lion_desc:0"革命雄狮"
+
+ PRF_The_rise_of_the_new_wave:0"新浪潮的崛起……"
+ PRF_The_rise_of_the_new_wave_desc:0"新浪潮的崛起……"
+
+ PRF_Building_communal_self_rule:0"建设公社自治"
+ PRF_Building_communal_self_rule_desc:0"建设公社自治"
+
+ PRF_Binding_the_hands_of_the_zamindars:0"绑住扎明达尔的手脚"
+ PRF_Binding_the_hands_of_the_zamindars_desc:0"绑住扎明达尔的手脚"
+
+ PRF_Eradicating_vices:0"铲除恶习"
+ PRF_Eradicating_vices_desc:0"铲除恶习"
+
+ PRF_The_truth_of_Mahatma_Phule:0"圣雄普勒之真理"
+ PRF_The_truth_of_Mahatma_Phule_desc:0"圣雄普勒之真理"
+
+ PRF_Sparks_igniting_a_prairie_fire:0"星火燎原"
+ PRF_Sparks_igniting_a_prairie_fire_desc:0"星火燎原"
+
+ PRF_The_bond_between_community_and_vanguard:0"社群与先锋队之纽带"
+ PRF_The_bond_between_community_and_vanguard_desc:0"社群与先锋队之纽带"
+
+ PRF_The_inspiration_of_Rajarsi:0"拉贾尔西之启迪"
+ PRF_The_inspiration_of_Rajarsi_desc:0"拉贾尔西之启迪"
+
+ PRF_Liberation_pioneers:0"解放先驱"
+ PRF_Liberation_pioneers_desc:0"解放先驱"
+
+ PRF_The_dissolution_of_the_old_order:0"旧秩序的溶解……"
+ PRF_The_dissolution_of_the_old_order_desc:0"旧秩序的溶解……"
+
+ PRF_Long_live_the_labor_union:0"劳工联盟万岁"
+ PRF_Long_live_the_labor_union_desc:0"劳工联盟万岁"
+
+ PRF_Raising_the_banner_of_self_respect:0"高举自尊大旗"
+ PRF_Raising_the_banner_of_self_respect_desc:0"高举自尊大旗"
+
+ PRF_Promoting_the_Mahabodhi_Society:0"推广摩诃菩提协会"
+ PRF_Promoting_the_Mahabodhi_Society_desc:0"推广摩诃菩提协会"
+
+ PRF_A_rational_workers_and_peasants_nation:0"理性的工农国度"
+ PRF_A_rational_workers_and_peasants_nation_desc:0"理性的工农国度"
+
+ PRF_Water_forests_land:0"水，森林，土地"
+ PRF_Water_forests_land_desc:0"水，森林，土地"
+
+ PRF_Celebrating_rationalism:0"颂扬理性主义"
+ PRF_Celebrating_rationalism_desc:0"颂扬理性主义"
+
+ PRF_Victory_of_the_Progressive_Alliance:0"进步联盟胜利"
+ PRF_Victory_of_the_Progressive_Alliance_desc:0"进步联盟胜利"
+
+ PRF_Spreading_the_idea_of_self_respect:0"传播自尊理念"
+ PRF_Spreading_the_idea_of_self_respect_desc:0"传播自尊理念"
+
+ PRF_The_pen_of_Malaimale:0"奋笔的玛莱马莱"
+ PRF_The_pen_of_Malaimale_desc:0"奋笔的玛莱马莱"
+
+ PRF_Establishing_the_Blackshirts:0"建立黑衫军"
+ PRF_Establishing_the_Blackshirts_desc:0"建立黑衫军"
+
+ PRF_The_path_forward_for_the_self_respect_movement:0"自尊运动的前路？"
+ PRF_The_path_forward_for_the_self_respect_movement_desc:0"自尊运动的前路？"
+
+ PRF_Anna_of_action:0"行动的安纳"
+ PRF_Anna_of_action_desc:0"行动的安纳"
+
+ PRF_Joining_hands_with_Singaravelu:0"与辛加拉维鲁携手"
+ PRF_Joining_hands_with_Singaravelu_desc:0"与辛加拉维鲁携手"
+
+ PRF_Periyar_the_fighter:0"战斗的佩利亚尔"
+ PRF_Periyar_the_fighter_desc:0"战斗的佩利亚尔"
+
+ PRF_Exposing_the_sins_of_Brahminism:0"揭露婆罗门教之罪恶"
+ PRF_Exposing_the_sins_of_Brahminism_desc:0"揭露婆罗门教之罪恶"
+
+ PRF_Self_respect_and_democracy:0"自尊与民主"
+ PRF_Self_respect_and_democracy_desc:0"自尊与民主"
+
+ PRF_Equality_for_all_without_compromise:0"毫无妥协的人人平等"
+ PRF_Equality_for_all_without_compromise_desc:0"毫无妥协的人人平等"
+
+ PRF_Rejecting_the_upside_down_government:0"摒弃“颠倒的政府”"
+ PRF_Rejecting_the_upside_down_government_desc:0"摒弃“颠倒的政府”"
+
+ PRF_Breaking_the_Aryan_fantasy:0"打破“雅利安幻想”"
+ PRF_Breaking_the_Aryan_fantasy_desc:0"打破“雅利安幻想”"
+
+ PRF_The_Fourteen_Point_Plan_for_Rural_Revitalization:0"乡村振兴十四点计划"
+ PRF_The_Fourteen_Point_Plan_for_Rural_Revitalization_desc:0"乡村振兴十四点计划"
+
+ PRF_Burning_the_idols:0"烧毁神像"
+ PRF_Burning_the_idols_desc:0"烧毁神像"
+
+ PRF_An_olive_branch_extended_to_Periyar:0"伸向佩利亚尔的橄榄枝"
+ PRF_An_olive_branch_extended_to_Periyar_desc:0"伸向佩利亚尔的橄榄枝"
+
+ PRF_Hinduism_without_sacred_ash_Christians_without_crosses:0"没有圣灰的印度教，没有十字架的基督徒"
+ PRF_Hinduism_without_sacred_ash_Christians_without_crosses_desc:0"没有圣灰的印度教，没有十字架的基督徒"
+
+ PRF_Shaivism_not_Brahminism:0"湿婆教而非婆罗门教"
+ PRF_Shaivism_not_Brahminism_desc:0"湿婆教而非婆罗门教"
+
+ PRF_Tiru_Vi_Kas_progressivism:0"蒂鲁·维·卡的进步主义"
+ PRF_Tiru_Vi_Kas_progressivism_desc:0"蒂鲁·维·卡的进步主义"
+
+ PRF_Inheriting_the_legacy_of_Ramalingar:0"继承拉玛林加尔的遗产"
+ PRF_Inheriting_the_legacy_of_Ramalingar_desc:0"继承拉玛林加尔的遗产"
+
+ PRF_The_land_of_self_respect:0"自尊之地"
+ PRF_The_land_of_self_respect_desc:0"自尊之地"
+
+ PRF_Seeking_the_Sage_of_Karma:0"追寻“业力之智者”"
+ PRF_Seeking_the_Sage_of_Karma_desc:0"追寻“业力之智者”"
+
+ PRF_Raising_the_banner_of_rationalism:0"扛起理性主义之大旗"
+ PRF_Raising_the_banner_of_rationalism_desc:0"扛起理性主义之大旗"
+
+ PRF_Walking_the_path_of_Narayana_Guru:0"走在纳拉亚纳古鲁的道路上"
+ PRF_Walking_the_path_of_Narayana_Guru_desc:0"走在纳拉亚纳古鲁的道路上"
+
+ PRF_The_inspiration_of_Western_revolutions:0"西方革命之启示"
+ PRF_The_inspiration_of_Western_revolutions_desc:0"西方革命之启示"
+
+ PRF_Joining_hands_with_Babasaheb:0"和巴巴萨海布携手"
+ PRF_Joining_hands_with_Babasaheb_desc:0"和巴巴萨海布携手"
+
+ PRF_Exposing_the_Godmen:0"揭露“神人”"
+ PRF_Exposing_the_Godmen_desc:0"揭露“神人”"
+
+ PRF_Walking_with_the_Prayer_Society_and_the_Theosophical_Society:0"与祈祷社及神智学会同行"
+ PRF_Walking_with_the_Prayer_Society_and_the_Theosophical_Society_desc:0"与祈祷社及神智学会同行"
+
+ PRF_Dasa_Sahibs_community_of_the_oppressed:0"达萨·萨希布的受压迫阶层教团"
+ PRF_Dasa_Sahibs_community_of_the_oppressed_desc:0"达萨·萨希布的受压迫阶层教团"
+
+ PRF_Freedom_through_education:0"以教育求自由"
+ PRF_Freedom_through_education_desc:0"以教育求自由"
+
+ PRF_The_Mahatma_of_the_South_and_the_Mahatma_of_the_North:0"南方之圣雄与北方之圣雄"
+ PRF_The_Mahatma_of_the_South_and_the_Mahatma_of_the_North_desc:0"南方之圣雄与北方之圣雄"
+
+ PRF_The_feast_of_all_castes:0"全种姓的筵席"
+ PRF_The_feast_of_all_castes_desc:0"全种姓的筵席"
+
+ PRF_Accountability_for_the_oppressors:0"对压迫者之清算"
+ PRF_Accountability_for_the_oppressors_desc:0"对压迫者之清算"
+
+ PRF_No_more_Brahmin_Shiva:0"再无“婆罗门湿婆”"
+ PRF_No_more_Brahmin_Shiva_desc:0"再无“婆罗门湿婆”"
+
+ PRF_Organizing_an_All_India_Inter_Religious_Congress:0"开展全印全宗教大会"
+ PRF_Organizing_an_All_India_Inter_Religious_Congress_desc:0"开展全印全宗教大会"
+
+ PRF_One_caste_one_religion_one_deity:0"一个种姓，一个宗教，一位神明"
+ PRF_One_caste_one_religion_one_deity_desc:0"一个种姓，一个宗教，一位神明"
+
+ PRF_Promoting_the_workers_cooperative_model:0"推广工人合作社模式"
+ PRF_Promoting_the_workers_cooperative_model_desc:0"推广工人合作社模式"
+
+ PRF_The_power_of_freedom_and_unity:0"自由而团结之力量"
+ PRF_The_power_of_freedom_and_unity_desc:0"自由而团结之力量"
+
+ PRF_Extensively_forming_labor_associations:0"广泛组建劳工协会"
+ PRF_Extensively_forming_labor_associations_desc:0"广泛组建劳工协会"
+
+ PRF_The_tower_of_vast_brotherhood:0"广阔的兄弟情谊之塔"
+ PRF_The_tower_of_vast_brotherhood_desc:0"广阔的兄弟情谊之塔"
+
+ PRF_Strength_through_organization:0"以组织求力量"
+ PRF_Strength_through_organization_desc:0"以组织求力量"
+
+ PRF_No_caste_no_religion_no_deity:0"没有种姓，没有宗教，没有神明"
+ PRF_No_caste_no_religion_no_deity_desc:0"没有种姓，没有宗教，没有神明"
+
+ PRF_Inheriting_the_legacy_of_Kuroli_Chekon:0"继承库罗利·切孔之遗志"
+ PRF_Inheriting_the_legacy_of_Kuroli_Chekon_desc:0"继承库罗利·切孔之遗志"
+
+ PRF_Prosperity_through_industry:0"以工业求繁荣"
+ PRF_Prosperity_through_industry_desc:0"以工业求繁荣"
+
+ PRF_May_all_beings_be_happy:0"愿众生幸福"
+ PRF_May_all_beings_be_happy_desc:0"愿众生幸福"
+
+ PRF_and_radical_syndicalists_draw_a_clear_demarcation:0"和激进工团分子划清界限"
+ PRF_and_radical_syndicalists_draw_a_clear_demarcation_desc:0"和激进工团分子划清界限"
+ 
+ PRF_farmers_manifesto:0"农民宣言"
+ PRF_farmers_manifesto_desc:0"农民宣言"
+ 
+ PRF_unexpected_victory_of_the_Farmers_Peoples_Party:0"农民人民党意外取胜"
+ PRF_unexpected_victory_of_the_Farmers_Peoples_Party_desc:0"农民人民党意外取胜"
+ 
+ PRF_expand_the_Peoples_Action_Congress:0"扩展人民行动大会"
+ PRF_expand_the_Peoples_Action_Congress_desc:0"扩展人民行动大会"
+ 
+ PRF_extensively_build_farmers_schools:0"广泛建设农民学校"
+ PRF_extensively_build_farmers_schools_desc:0"广泛建设农民学校"
+ 
+ PRF_Indias_farmer_king:0"印度的农民大王"
+ PRF_Indias_farmer_king_desc:0"印度的农民大王"
+ 
+ PRF_defend_farmersproperty_rights:0"保卫农民产权"
+ PRF_defend_farmersproperty_rights_desc:0"保卫农民产权"
+ 
+ PRF_promote_the_ideas_of_guild_socialism:0"推广行会社会主义思想"
+ PRF_promote_the_ideas_of_guild_socialism_desc:0"推广行会社会主义思想"
+ 
+ PRF_blessings_of_the_Mahatma:0"圣雄的祝福"
+ PRF_blessings_of_the_Mahatma_desc:0"圣雄的祝福"
+ 
+ PRF_return_to_the_Vedas:0"回归吠陀经"
+ PRF_return_to_the_Vedas_desc:0"回归吠陀经"
+ 
+ PRF_the_arrow_shot_at_Bijoshahi:0"射向比丘沙希之箭"
+ PRF_the_arrow_shot_at_Bijoshahi_desc:0"射向比丘沙希之箭"
+ 
+ PRF_the_army_of_Shivaji:0"希瓦吉之军"
+ PRF_the_army_of_Shivaji_desc:0"希瓦吉之军"
+ 
+ PRF_the_power_of_the_common_people:0"平民的力量"
+ PRF_the_power_of_the_common_people_desc:0"平民的力量"
+ 
+ PRF_follow_the_donkey:0"跟在驴的后面"
+ PRF_follow_the_donkey_desc:0"跟在驴的后面"
+ 
+ PRF_the_awakened_people:0"觉醒之民"
+ PRF_the_awakened_people_desc:0"觉醒之民"
+ 
+ PRF_learn_from_the_social_wisdom_of_Muslims:0"学习穆斯林的社会智慧"
+ PRF_learn_from_the_social_wisdom_of_Muslims_desc:0"学习穆斯林的社会智慧"
+ 
+ PRF_the_great_nation:0"伟大之邦"
+ PRF_the_great_nation_desc:0"伟大之邦"
+ 
+ PRF_he_said_India_has_finally_gained_freedom:0"他说，“印度终获自由”"
+ PRF_he_said_India_has_finally_gained_freedom_desc:0"他说，“印度终获自由”"
+
+ PRF_All_India_Grand_Parliamentary_Party_elected:0"全印大议会党当选"
+ PRF_All_India_Grand_Parliamentary_Party_elected_desc:0"全印大议会党当选"
+
+ PRF_Critique_of_Vulgar_Customs:0"批判陋俗"
+ PRF_Critique_of_Vulgar_Customs_desc:0"批判陋俗"
+
+ PRF_Our_Relationship_with_the_Radicals:0"我们和激进派的关系？"
+ PRF_Our_Relationship_with_the_Radicals_desc:0"我们和激进派的关系？"
+
+ PRF_Introduction_to_Western_Modern_Thought:0"介绍西方现代思想"
+ PRF_Introduction_to_Western_Modern_Thought_desc:0"介绍西方现代思想"
+
+ PRF_Educating_Women:0"教育女性"
+ PRF_Educating_Women_desc:0"教育女性"
+
+ PRF_Reviving_Our_Language:0"复兴我们的语言"
+ PRF_Reviving_Our_Language_desc:0"复兴我们的语言"
+
+ PRF_Promoting_the_Experience_of_the_Andhra_Movement:0"推广安德拉运动经验"
+ PRF_Promoting_the_Experience_of_the_Andhra_Movement_desc:0"推广安德拉运动经验"
+
+ PRF_Indian_Federalism:0"印度的联邦主义"
+ PRF_Indian_Federalism_desc:0"印度的联邦主义"
+
+ PRF_Democratic_Confederation:0"民主的邦联"
+ PRF_Democratic_Confederation_desc:0"民主的邦联"
+ PRF_Beat_up_the_Congress_Party_drowning_dog:0"痛打国大党落水狗！"
+ PRF_Beat_up_the_Congress_Party_drowning_dog_desc:0"痛打国大党落水狗！"
+
+ PRF_Severely_criticize_the_caste_system:0"严厉批判种姓制度"
+ PRF_Severely_criticize_the_caste_system_desc:0"严厉批判种姓制度"
+
+ PRF_Justice_Party_retakes_India:0"正义党重夺印度"
+ PRF_Justice_Party_retakes_India_desc:0"正义党重夺印度"
+
+ PRF_Defend_ourselves_by_the_way:0"顺便为我们自己辩护？"
+ PRF_Defend_ourselves_by_the_way_desc:0"顺便为我们自己辩护？"
+
+ PRF_What_about_the_Nizam:0"那尼扎姆呢？"
+ PRF_What_about_the_Nizam_desc:0"那尼扎姆呢？"
+
+ PRF_Crack_down_on_syndicalists:0"对工团分子重拳出击！"
+ PRF_Crack_down_on_syndicalists_desc:0"对工团分子重拳出击！"
+
+ PRF_Its_our_turn_to_be_the_masters:0"轮到我们当老爷了"
+ PRF_Its_our_turn_to_be_the_masters_desc:0"轮到我们当老爷了"
+
+ PRF_What_about_the_British_masters:0"那英国老爷咋办？"
+ PRF_What_about_the_British_masters_desc:0"那英国老爷咋办？"
+
+ PRF_The_King_of_the_People:0"“人民”的“国王”"
+ PRF_The_King_of_the_People_desc:0"“人民”的“国王”"
+
+ PRF_Victory_of_the_National_Agricultural_Party:0"国家农业党的胜利"
+ PRF_Victory_of_the_National_Agricultural_Party_desc:0"国家农业党的胜利"
+
+ PRF_Improve_relations_with_tenant_farmers:0"改善和佃农的关系"
+ PRF_Improve_relations_with_tenant_farmers_desc:0"改善和佃农的关系"
+
+ PRF_Win_over_the_Muslim_League:0"拉拢穆斯林联盟"
+ PRF_Win_over_the_Muslim_League_desc:0"拉拢穆斯林联盟"
+
+ PRF_Improve_our_estates:0"改良我们的庄园"
+ PRF_Improve_our_estates_desc:0"改良我们的庄园"
+
+ PRF_Education_and_reform:0"教育与改革"
+ PRF_Education_and_reform_desc:0"教育与改革"
+
+ PRF_Carrot_or_stick:0"胡萝卜还是大棒？"
+ PRF_Carrot_or_stick_desc:0"胡萝卜还是大棒？"
+
+ PRF_Memories_of_Uttar_Pradesh:0"北方邦的记忆"
+ PRF_Memories_of_Uttar_Pradesh_desc:0"北方邦的记忆"
+
+ PRF_Support_the_Nizam:0"拥护尼扎姆"
+ PRF_Support_the_Nizam_desc:0"拥护尼扎姆"
+
+ PRF_The_Nawab_of_the_farmers:0"农民们的纳瓦布"
+ PRF_The_Nawab_of_the_farmers_desc:0"农民们的纳瓦布"
+
+ PRF_The_Nizam_and_his_subjects:0"尼扎姆和他的臣民"
+ PRF_The_Nizam_and_his_subjects_desc:0"尼扎姆和他的臣民"
+
+ PRF_Extensive_industrial_construction:0"广泛工业建设"
+ PRF_Extensive_industrial_construction_desc:0"广泛工业建设"
+
+ PRF_Sir_C_P_s_iron_fist:0"C. P.爵士的铁腕"
+ PRF_Sir_C_P_s_iron_fist_desc:0"C. P.爵士的铁腕"
+
+ PRF_Efficient_and_powerful_administration:0"高效而有力的行政"
+ PRF_Efficient_and_powerful_administration_desc:0"高效而有力的行政"
+
+ PRF_The_rights_of_subjects:0"臣民的权利"
+ PRF_The_rights_of_subjects_desc:0"臣民的权利"
+
+ PRF_Pay_tribute_to_the_Nizam:0"向尼扎姆致敬"
+ PRF_Pay_tribute_to_the_Nizam_desc:0"向尼扎姆致敬"
+
+ PRF_Pragmatic_social_reform:0"实用主义社会改革"
+ PRF_Pragmatic_social_reform_desc:0"实用主义社会改革"
+
+ PRF_Firmly_oppose_the_red_threat:0"坚决反对赤色威胁"
+ PRF_Firmly_oppose_the_red_threat_desc:0"坚决反对赤色威胁"
+
+ PRF_The_manager_of_the_country:0"国家的管理者"
+ PRF_The_manager_of_the_country_desc:0"国家的管理者"
+
+ PRF_The_Prince_achieves_a_complete_victory:0""
+ PRF_The_Prince_achieves_a_complete_victory_desc:0""
+
+ PRF_Savior_of_Indian_Maharajas:0"联盟的救主"
+ PRF_Savior_of_Indian_Maharajas_desc:0""
+
+ PRF_Complaints_of_the_Maharajas:0"王公的抱怨"
+ PRF_Complaints_of_the_Maharajas_desc:0""
+
+ PRF_Inefficient_state_apparatus:0"低效的国家机器"
+ PRF_Inefficient_state_apparatus_desc:0""
+
+ PRF_A_remedy_to_soothe_peoples_minds:0"稳定人心的良药"
+ PRF_A_remedy_to_soothe_peoples_minds_desc:0""
+
+ PRF_Examining_our_current_situation:0"审视我们的现状"
+ PRF_Examining_our_current_situation_desc:0""
+
+ PRF_Streamlining_the_government_and_reducing_the_military:0"精兵简政"
+ PRF_Streamlining_the_government_and_reducing_the_military_desc:0""
+
+ PRF_Staggering_towards_the_future:0"蹒跚走向未来"
+ PRF_Staggering_towards_the_future_desc:0""
+
+ PRF_The_rule_continues:0"秩序仍在"
+ PRF_The_rule_continues_desc:0""
+
+ PRF_Conducting_a_thorough_inspection_of_the_military:0"排查军队"
+ PRF_Conducting_a_thorough_inspection_of_the_military_desc:0""
+
+ PRF_Restructuring_the_governmen:0"重组政府"
+ PRF_Restructuring_the_governmen_desc:0""
+
+ PRF_Forming_auxiliary_forces:0"组建辅军"
+ PRF_Forming_auxiliary_forces_desc:0""
+
+ PRF_Promises_to_the_people:0"为民许诺"
+ PRF_Promises_to_the_people_desc:0""
+
+ PRF_Favoring_relatives_in_appointments:0"任人唯亲"
+ PRF_Favoring_relatives_in_appointments_desc:0""
+
+ PRF_Purging_the_remnants_of_the_uprising:0"清洗起义遗毒"
+ PRF_Purging_the_remnants_of_the_uprising_desc:0""
+
+ PRF_Uprising_victory:0"起义胜利"
+ PRF_Uprising_victory_desc:0""
+
+ PRF_liquidate_the_legacy_of_the_former_regime:0"清算前政权遗毒"
+ PRF_liquidate_the_legacy_of_the_former_regime_desc:0"清算前政权遗毒"
+ 
+ PRF_crush_the_resistance_of_the_princes:0"粉碎王公抵抗"
+ PRF_crush_the_resistance_of_the_princes_desc:0"粉碎王公抵抗"
+ 
+ PRF_regroup_and_rally:0"重整旗鼓"
+ PRF_regroup_and_rally_desc:0"重整旗鼓"
+
+ PRF_unite_the_people:0"团结民众"
+ PRF_unite_the_people_desc:0"团结民众"
+
+ PRF_peoples_front:0"人民阵线"
+ PRF_peoples_front_desc:0"人民阵线"
+
+ PRF_abolish_martial_law:0"废除戒严"
+ PRF_abolish_martial_law_desc:0"废除戒严"
+
+ PRF_unbreakable:0"坚不可摧"
+ PRF_unbreakable_desc:0"坚不可摧"
+
+ PRF_federation_no_more:0"联邦不在"
+ PRF_federation_no_more_desc:0"联邦不在"
+
+ PRF_go_separate_ways:0"各奔东西"
+ PRF_go_separate_ways_desc:0"各奔东西"
+
+ PRF_fill_in_the_gaps:0"填补空白"
+ PRF_fill_in_the_gaps_desc:0"填补空白"
+
+ PRF_spirit_of_self_governance:0"自治精神"
+ PRF_spirit_of_self_governance_desc:0"自治精神"
+
+ PRF_establish_armed_forces:0"建立武装"
+ PRF_establish_armed_forces_desc:0"建立武装"
+
+ PRF_pacify_the_people:0"安抚民众"
+ PRF_pacify_the_people_desc:0"安抚民众"
+
+ PRF_stabilize_position:0"稳固地位"
+ PRF_stabilize_position_desc:0"稳固地位"
+
+ PRF_get_prepared:0"做好准备"
+ PRF_get_prepared_desc:0"做好准备"
+ PRF_Nizam_continues_to_hold_power:0""
+ PRF_Nizam_continues_to_hold_power_desc:0""
+ PRF_The_Princes_Democracy:0""
+ PRF_The_Princes_Democracy_desc:0""
+ PRF_The_Princes_Democracy_2:0""
+ PRF_The_Princes_Democracy_2_desc:0""
+ PRF_The_Princes_Democracy_1:0""
+ PRF_The_Princes_Democracy_1_desc:0""
+ PRF_The_Princes_Democracy_3:0""
+ PRF_The_Princes_Democracy_3_desc:0""
+ PRF_The_Princes_Democracy_4:0""
+ PRF_The_Princes_Democracy_4_desc:0""
+ PRF_The_Princes_Democracy_5:0""
+ PRF_The_Princes_Democracy_5_desc:0""
+ PRF_The_Princes_Democracy_6:0""
+ PRF_The_Princes_Democracy_6_desc:0""
+ PRF_The_Princes_Democracy_7:0""
+ PRF_The_Princes_Democracy_7_desc:0""
+ PRF_The_Princes_Democracy_8:0""
+ PRF_The_Princes_Democracy_8_desc:0""
+ PRF_The_Princes_Democracy_9:0""
+ PRF_The_Princes_Democracy_9_desc:0""
+ PRF_The_Princes_Democracy_10:0""
+ PRF_The_Princes_Democracy_10_desc:0""
+ PRF_The_Princes_Democracy_11:0""
+ PRF_The_Princes_Democracy_11_desc:0""
+ PRF_The_Princes_Democracy_12:0""
+ PRF_The_Princes_Democracy_12_desc:0""
+ PRF_The_Princes_Democracy_13:0""
+ PRF_The_Princes_Democracy_13_desc:0""
+ PRF_Nizam_continues_to_hold_power_r:0""
+ PRF_Nizam_continues_to_hold_power_r_desc:0""
+ PRF_Nizam_continues_to_hold_power_r_1:0""
+ PRF_Nizam_continues_to_hold_power_r_1_desc:0""
+ PRF_Nizam_continues_to_hold_power_r_2:0""
+ PRF_Nizam_continues_to_hold_power_r_2_desc:0""
+ PRF_Nizam_continues_to_hold_power_r_3:0""
+ PRF_Nizam_continues_to_hold_power_r_3_desc:0""
+ PRF_Nizam_continues_to_hold_power_r_4:0""
+ PRF_Nizam_continues_to_hold_power_r_4_desc:0""
+ PRF_Nizam_continues_to_hold_power_r_5:0""
+ PRF_Nizam_continues_to_hold_power_r_5_desc:0""
+ PRF_Nizam_continues_to_hold_power_r_6:0""
+ PRF_Nizam_continues_to_hold_power_r_6_desc:0""
+ PRF_Nizam_continues_to_hold_power_r_7:0""
+ PRF_Nizam_continues_to_hold_power_r_7_desc:0""
+ PRF_Nizam_continues_to_hold_power_r_8:0""
+ PRF_Nizam_continues_to_hold_power_r_8_desc:0""
+ PRF_Nizam_continues_to_hold_power_r_9:0""
+ PRF_Nizam_continues_to_hold_power_r_9_desc:0""
+ PRF_Nizam_continues_to_hold_power_r_10:0""
+ PRF_Nizam_continues_to_hold_power_r_10_desc:0""
+ PRF_Nizam_continues_to_hold_power_r_11:0""
+ PRF_Nizam_continues_to_hold_power_r_11_desc:0""
+ PRF_Nizam_continues_to_hold_power_r_12:0""
+ PRF_Nizam_continues_to_hold_power_r_12_desc:0""
+ PRF_Nizam_continues_to_hold_power_r_13:0""
+ PRF_Nizam_continues_to_hold_power_r_13_desc:0""
+ PRF_Nizam_continues_to_hold_power_r_14:0""
+ PRF_Nizam_continues_to_hold_power_r_14_desc:0""
+ PRF_Democratic_Federation:0""
+ PRF_Democratic_Federation_desc:0""
+
+ PRF_Bourbonism_revival:0""
+ PRF_Bourbonism_revival_desc:0""
+ PRF_Bourbonism_revival_1:0""
+ PRF_Bourbonism_revival_1_desc:0""
+ PRF_Bourbonism_revival_2:0""
+ PRF_Bourbonism_revival_2_desc:0""
+ PRF_Bourbonism_revival_3:0""
+ PRF_Bourbonism_revival_3_desc:0""
+ PRF_Bourbonism_revival_4:0""
+ PRF_Bourbonism_revival_4_desc:0""
+ PRF_Bourbonism_revival_5:0""
+ PRF_Bourbonism_revival_5_desc:0""
+ PRF_Bourbonism_revival_6:0""
+ PRF_Bourbonism_revival_6_desc:0""
+ PRF_Bourbonism_revival_7:0""
+ PRF_Bourbonism_revival_7_desc:0""
+ PRF_Bourbonism_revival_8:0""
+ PRF_Bourbonism_revival_8_desc:0""
+ PRF_Bourbonism_revival_9:0""
+ PRF_Bourbonism_revival_9_desc:0""
+ PRF_Bourbonism_revival_10:0""
+ PRF_Bourbonism_revival_10_desc:0""
+ PRF_Bourbonism_revival_11:0""
+ PRF_Bourbonism_revival_11_desc:0""
+ PRF_Bourbonism_revival_12:0""
+ PRF_Bourbonism_revival_12_desc:0""
+ PRF_Republic_in_the_tribe:0""
+ PRF_Republic_in_the_tribe_desc:0""
+ PRF_Republic_in_the_tribe_1:0""
+ PRF_Republic_in_the_tribe_1_desc:0""
+ PRF_Republic_in_the_tribe_2:0""
+ PRF_Republic_in_the_tribe_2_desc:0""
+ PRF_Republic_in_the_tribe_3:0""
+ PRF_Republic_in_the_tribe_3_desc:0""
+ PRF_Republic_in_the_tribe_4:0""
+ PRF_Republic_in_the_tribe_4_desc:0""
+ PRF_Republic_in_the_tribe_5:0""
+ PRF_Republic_in_the_tribe_5_desc:0""
+ PRF_Republic_in_the_tribe_6:0""
+ PRF_Republic_in_the_tribe_6_desc:0""
+ PRF_Republic_in_the_tribe_7:0""
+ PRF_Republic_in_the_tribe_7_desc:0""
+ PRF_Republic_in_the_tribe_8:0""
+ PRF_Republic_in_the_tribe_8_desc:0""
+ PRF_Republic_in_the_tribe_9:0""
+ PRF_Republic_in_the_tribe_9_desc:0""
+ PRF_Republic_in_the_tribe_10:0""
+ PRF_Republic_in_the_tribe_10_desc:0""
+ PRF_Republic_in_the_tribe_11:0""
+ PRF_Republic_in_the_tribe_11_desc:0""
+ PRF_The_red_on_the_crown:0""
+ PRF_The_red_on_the_crown_desc:0""
+ PRF_The_red_on_the_crown_1:0""
+ PRF_The_red_on_the_crown_1_desc:0""
+ PRF_The_red_on_the_crown_2:0""
+ PRF_The_red_on_the_crown_2_desc:0""
+ PRF_The_red_on_the_crown_3:0""
+ PRF_The_red_on_the_crown_3_desc:0""
+ PRF_The_red_on_the_crown_4:0""
+ PRF_The_red_on_the_crown_4_desc:0""
+ PRF_The_red_on_the_crown_5:0""
+ PRF_The_red_on_the_crown_5_desc:0""
+ PRF_The_red_on_the_crown_6:0""
+ PRF_The_red_on_the_crown_6_desc:0""
+ PRF_The_red_on_the_crown_7:0""
+ PRF_The_red_on_the_crown_7_desc:0""
+ PRF_The_red_on_the_crown_8:0""
+ PRF_The_red_on_the_crown_8_desc:0""
+ PRF_The_red_on_the_crown_9:0""
+ PRF_The_red_on_the_crown_9_desc:0""
+ PRF_The_red_on_the_crown_10:0""
+ PRF_The_red_on_the_crown_10_desc:0""
+ PRF_The_red_on_the_crown_11:0""
+ PRF_The_red_on_the_crown_11_desc:0""
+ PRF_The_military_seizes_power:0"军队掌权"
+ PRF_The_military_seizes_power_desc:0""
+
+ PRF_Reorganize_the_legal_order:0"重整法律秩序"
+ PRF_Reorganize_the_legal_order_desc:0"重整法律秩序"
+
+ PRF_General_Cariappas_discipline:0"卡里亚帕将军的纪律"
+ PRF_General_Cariappas_discipline_desc:0"卡里亚帕将军的纪律"
+
+ PRF_Dealing_with_Razakars:0"处理拉扎卡尔分子"
+ PRF_Dealing_with_Razakars_desc:0"处理拉扎卡尔分子"
+
+ PRF_Overthrow_the_parasitic_princes:0"推翻王公蛀虫"
+ PRF_Overthrow_the_parasitic_princes_desc:0"推翻王公蛀虫"
+
+ PRF_General_Mirzas_iron_fist:0"米尔扎将军的铁腕"
+ PRF_General_Mirzas_iron_fist_desc:0"米尔扎将军的铁腕"
+
+ PRF_Sweep_away_corrupt_princes:0"扫清腐败王公"
+ PRF_Sweep_away_corrupt_princes_desc:0"扫清腐败王公"
+
+ PRF_Establish_the_National_Reconstruction_Bureau:0"建立国家重建局"
+ PRF_Establish_the_National_Reconstruction_Bureau_desc:0"建立国家重建局"
+
+ PRF_Build_a_democracy_for_new_India:0"建立新印度的民主..."
+ PRF_Build_a_democracy_for_new_India_desc:0"建立新印度的民主..."
+
+ PRF_Learn_about_the_two_party_system:0"学习两党制..."
+ PRF_Learn_about_the_two_party_system_desc:0"学习两党制..."
+
+ PRF_Religious_issues:0"宗教问题"
+ PRF_Religious_issues_desc:0"宗教问题"
+
+ PRF_Shooting_oneself_in_the_foot:0"搬石砸脚"
+ PRF_Shooting_oneself_in_the_foot_desc:0"搬石砸脚"
+
+ PRF_Constitutional_dictatorship:0"宪政独裁"
+ PRF_Constitutional_dictatorship_desc:0"宪政独裁"
+
+ PRF_National_emergency:0"全国紧急状态"
+ PRF_National_emergency_desc:0"全国紧急状态"
+
+ PRF_Form_the_National_Guard:0"组建国民卫队"
+ PRF_Form_the_National_Guard_desc:0"组建国民卫队"
+
+ PRF_Oppose_national_division:0"反对国家分裂"
+ PRF_Oppose_national_division_desc:0"反对国家分裂"
+
+ PRF_The_issue_of_untouchables:0"贱民问题"
+ PRF_The_issue_of_untouchables_desc:0"贱民问题"
+
+ PRF_but_under_our_control:0"...但是要在我们的掌控之下"
+ PRF_but_under_our_control_desc:0"...但是要在我们的掌控之下"
+
+ PRF_Promote_peoples_awakening:0"促进人民觉醒"
+ PRF_Promote_peoples_awakening_desc:0"促进人民觉醒"
+
+ PRF_Clear_away_colonial_heritage:0"清除殖民遗产"
+ PRF_Clear_away_colonial_heritage_desc:0"清除殖民遗产"
+
+ PRF_The_rise_of_the_Young_Officers_Corps:0"青年军官团崛起"
+ PRF_The_rise_of_the_Young_Officers_Corps_desc:0"青年军官团崛起"
+
+ PRF_The_trial_of_the_princes:0"对王公们的审判"
+ PRF_The_trial_of_the_princes_desc:0"对王公们的审判"
+
+ PRF_Arrest_trade_union_sympathizers:0"逮捕工团同情者"
+ PRF_Arrest_trade_union_sympathizers_desc:0"逮捕工团同情者"
+
+ PRF_Patriotic_fervor:0"爱国热忱"
+ PRF_Patriotic_fervor_desc:0"爱国热忱"
+
+ PRF_Unite_with_moderate_trade_unionists:0"联合温和工团分子"
+ PRF_Unite_with_moderate_trade_unionists_desc:0"联合温和工团分子"
+
+ PRF_Improve_the_status_of_untouchables:0"改良贱民地位"
+ PRF_Improve_the_status_of_untouchables_desc:0"改良贱民地位"
+
+ PRF_Build_the_National_Cadet_Corps:0"建设国家学员团"
+ PRF_Build_the_National_Cadet_Corps_desc:0"建设国家学员团"
+
+ PRF_Wave_of_construction:0"建设浪潮"
+ PRF_Wave_of_construction_desc:0"建设浪潮"
+
+ PRF_Inherit_Gandhis_thoughts:0"继承甘地思想"
+ PRF_Inherit_Gandhis_thoughts_desc:0"继承甘地思想"
+
+ PRF_Solve_the_problem_of_poverty:0"解决贫困问题"
+ PRF_Solve_the_problem_of_poverty_desc:0"解决贫困问题"
+
+ PRF_Carrot_and_stick:0"胡萝卜与大棒"
+ PRF_Carrot_and_stick_desc:0"胡萝卜与大棒"
+
+ PRF_Clear_away_extremist_religious_elements:0"清除极端宗教分子"
+ PRF_Clear_away_extremist_religious_elements_desc:0"清除极端宗教分子"
+
+ PRF_Long_live_the_soldiers_long_live_the_farmers:0"士兵万岁，农民万岁！"
+ PRF_Long_live_the_soldiers_long_live_the_farmers_desc:0"士兵万岁，农民万岁！"
+
+ PRF_Expand_military_strength:0"扩充军事力量"
+ PRF_Expand_military_strength_desc:0"扩充军事力量"
+
+ PRF_Grand_Marshal_here_I_come:0"大元帅，我来了！"
+ PRF_Grand_Marshal_here_I_come_desc:0"大元帅，我来了！"
+
+ PRF_The_true_form_of_democracy:0"民主的“真正形式”"
+ PRF_Thetrue_form_of_democracy_desc:0"民主的“真正形式”"
+
+ PRF_Appoint_technocrats:0"任用技术官僚"
+ PRF_Appoint_technocrats_desc:0"任用技术官僚"
+
+ PRF_Liberalize_economic_reforms:0"自由化经济改革"
+ PRF_Liberalize_economic_reforms_desc:0"自由化经济改革"
+
+ PRF_A_new_strongman_in_South_Asia:0"南亚的新强人"
+ PRF_A_new_strongman_in_South_Asia_desc:0"南亚的新强人"
+ PRF_Brand_new_colony:0""
+ PRF_Brand_new_colony_desc:0""
+ PRF_Brand_new_colony_ger:0""
+ PRF_Brand_new_colony_ger_desc:0""
+ PRF_Brand_new_colony_ger_1:0""
+ PRF_Brand_new_colony_ger_1_desc:0""
+ PRF_Brand_new_colony_ger_2:0""
+ PRF_Brand_new_colony_ger_2_desc:0""
+ PRF_Brand_new_colony_ger_3:0""
+ PRF_Brand_new_colony_ger_3_desc:0""
+ PRF_Brand_new_colony_ger_4:0""
+ PRF_Brand_new_colony_ger_4_desc:0""
+ PRF_Brand_new_colony_ger_5:0""
+ PRF_Brand_new_colony_ger_5_desc:0""
+ PRF_Brand_new_colony_ger_6:0""
+ PRF_Brand_new_colony_ger_6_desc:0""
+ PRF_Brand_new_colony_ger_7:0""
+ PRF_Brand_new_colony_ger_7_desc:0""
+ PRF_Brand_new_colony_ger_8:0""
+ PRF_Brand_new_colony_ger_8_desc:0""
+ PRF_Brand_new_colony_ger_9:0""
+ PRF_Brand_new_colony_ger_9_desc:0""
+ PRF_Brand_new_colony_ger_10:0""
+ PRF_Brand_new_colony_ger_10_desc:0""
+ PRF_Brand_new_colony_ger_11:0""
+ PRF_Brand_new_colony_ger_11_desc:0""
+ PRF_Brand_new_colony_ger_12:0""
+ PRF_Brand_new_colony_ger_12_desc:0""
+ PRF_Brand_new_colony_eng:0""
+ PRF_Brand_new_colony_eng_desc:0""
+ PRF_Brand_new_colony_eng_1:0""
+ PRF_Brand_new_colony_eng_1_desc:0""
+ PRF_Brand_new_colony_eng_2:0""
+ PRF_Brand_new_colony_eng_2_desc:0""
+ PRF_Brand_new_colony_eng_3:0""
+ PRF_Brand_new_colony_eng_3_desc:0""
+ PRF_Brand_new_colony_eng_4:0""
+ PRF_Brand_new_colony_eng_4_desc:0""
+ PRF_Brand_new_colony_eng_5:0""
+ PRF_Brand_new_colony_eng_5_desc:0""
+ PRF_Brand_new_colony_eng_6:0""
+ PRF_Brand_new_colony_eng_6_desc:0""
+ PRF_Brand_new_colony_eng_7:0""
+ PRF_Brand_new_colony_eng_7_desc:0""
+ PRF_Brand_new_colony_eng_8:0""
+ PRF_Brand_new_colony_eng_8_desc:0""
+ PRF_Brand_new_colony_eng_9:0""
+ PRF_Brand_new_colony_eng_9_desc:0""
+ PRF_Brand_new_colony_eng_10:0""
+ PRF_Brand_new_colony_eng_10_desc:0""
+ PRF_Brand_new_colony_eng_11:0""
+ PRF_Brand_new_colony_eng_11_desc:0""
+ PRF_Brand_new_colony_jap:0""
+ PRF_Brand_new_colony_jap_desc:0""
+ PRF_Brand_new_colony_jap_1:0""
+ PRF_Brand_new_colony_jap_1_desc:0""
+ PRF_Brand_new_colony_jap_2:0""
+ PRF_Brand_new_colony_jap_2_desc:0""
+ PRF_Brand_new_colony_jap_3:0""
+ PRF_Brand_new_colony_jap_3_desc:0""
+ PRF_Brand_new_colony_jap_4:0""
+ PRF_Brand_new_colony_jap_4_desc:0""
+ PRF_Brand_new_colony_jap_5:0""
+ PRF_Brand_new_colony_jap_5_desc:0""
+ PRF_Brand_new_colony_jap_6:0""
+ PRF_Brand_new_colony_jap_6_desc:0""
+ PRF_Brand_new_colony_jap_7:0""
+ PRF_Brand_new_colony_jap_7_desc:0""
+ PRF_Brand_new_colony_jap_8:0""
+ PRF_Brand_new_colony_jap_8_desc:0""
+ PRF_Brand_new_colony_jap_9:0""
+ PRF_Brand_new_colony_jap_9_desc:0""
+ PRF_Brand_new_colony_jap_10:0""
+ PRF_Brand_new_colony_jap_10_desc:0""
+ PRF_Brand_new_colony_jap_11:0""
+ PRF_Brand_new_colony_jap_11_desc:0""
+ PRF_Brand_new_colony_jap_12:0""
+ PRF_Brand_new_colony_jap_12_desc:0""
+ PRF_Brand_new_colony_jap_13:0""
+ PRF_Brand_new_colony_jap_13_desc:0""
+
+ PRF_Islamist_militia_seizes_power:0"伊斯兰民兵接管国家"
+ PRF_Islamist_militia_seizes_power_desc:0""
+
+ PRF_Completely_crush_the_rebels:0"彻底粉碎叛乱分子"
+ PRF_Completely_crush_the_rebels_desc:0"彻底粉碎叛乱分子"
+
+ PRF_The_Army_of_Piety:0"虔诚之军"
+ PRF_The_Army_of_Piety_desc:0"虔诚之军"
+
+ PRF_Eliminate_the_influence_of_Nizam:0"消除尼扎姆的影响"
+ PRF_Eliminate_the_influence_of_Nizam_desc:0"消除尼扎姆的影响"
+
+ PRF_The_Nation_of_Faith:0"信仰之国"
+ PRF_The_Nation_of_Faith_desc:0"信仰之国"
+
+ PRF_Beyond_the_Dark_Ages:0"超越蒙昧当代"
+ PRF_Beyond_the_Dark_Ages_desc:0"超越蒙昧当代"
+
+ PRF_The_Road_to_Mecca:0"通向麦加之路"
+ PRF_The_Road_to_Mecca_desc:0"通向麦加之路"
+
+ PRF_The_Eastern_and_Western_Routes:0"东西两路"
+ PRF_The_Eastern_and_Western_Routes_desc:0"东西两路"
+
+ PRF_Social_Islamization:0"社会伊斯兰化"
+ PRF_Social_Islamization_desc:0"社会伊斯兰化"
+
+ PRF_Formulate_principles_for_an_Islamic_state_and_government:0"制定伊斯兰国家和政府原则"
+ PRF_Formulate_principles_for_an_Islamic_state_and_government_desc:0"制定伊斯兰国家和政府原则"
+
+ PRF_Clean_the_house:0"打扫房屋"
+ PRF_Clean_the_house_desc:0"打扫房屋"
+
+ PRF_Destroy_the_vices_of_the_Kafir:0"摧毁卡菲勒恶习"
+ PRF_Destroy_the_vices_of_the_Kafir_desc:0"摧毁卡菲勒恶习"
+
+ PRF_Eradicate_stubborn_ailments:0"清除顽疾"
+ PRF_Eradicate_stubborn_ailments_desc:0"清除顽疾"
+
+ PRF_The_issue_of_the_two_state_solution:0"两国方案问题"
+ PRF_The_issue_of_the_two_state_solution_desc:0"两国方案问题"
+
+ PRF_Theocratic_democracy:0"神权民主"
+ PRF_Theocratic_democracy_desc:0"神权民主"
+
+ PRF_Modernized_Sharia_law:0"现代化沙里亚法"
+ PRF_Modernized_Sharia_law_desc:0"现代化沙里亚法"
+
+ PRF_Allah_is_the_greatest_everything_is_one:0"真主至大，万物归一"
+ PRF_Allah_is_the_greatest_everything_is_one_desc:0"真主至大，万物归一"
+
+ PRF_The_true_revival_of_Islam:0"真正伊斯兰之复兴"
+ PRF_The_true_revival_of_Islam_desc:0"真正伊斯兰之复兴"
+
+ PRF_Open_the_door_of_Ijtihad:0"开启伊智提哈德之门"
+ PRF_Open_the_door_of_Ijtihad_desc:0"开启伊智提哈德之门"
+
+ PRF_Illuminate_the_darkened_hearts:0"照亮黑暗的心灵"
+ PRF_Illuminate_the_darkened_hearts_desc:0"照亮黑暗的心灵"
+
+ PRF_The_issue_of_Hindus:0"印度教徒问题"
+ PRF_The_issue_of_Hindus_desc:0"印度教徒问题"
+
+ PRF_Between_the_sword_and_the_pen:0"在剑与笔之间"
+ PRF_Between_the_sword_and_the_pen_desc:0"在剑与笔之间"
+
+ PRF_Expand_the_Missionary_Organization_Association:0"扩展传教士组织协会"
+ PRF_Expand_the_Missionary_Organization_Association_desc:0"扩展传教士组织协会"
+
+ PRF_Work_with_Allama_Mashriqi:0"与阿拉玛玛什里奇携手"
+ PRF_Work_with_Allama_Mashriqi_desc:0"与阿拉玛玛什里奇携手"
+
+ PRF_The_pen_wielding_agitator:0"执笔的煽动家"
+ PRF_The_pen_wielding_agitator_desc:0"执笔的煽动家"
+
+ PRF_Against_Jews_and_Hindus:0"对抗“犹太人和印度人”"
+ PRF_Against_Jews_and_Hindus_desc:0"对抗“犹太人和印度人”"
+
+ PRF_The_sword_wielding_Frankenstein:0"持剑的弗兰肯斯坦"
+ PRF_The_sword_wielding_Frankenstein_desc:0"持剑的弗兰肯斯坦"
+
+ PRF_Eliminate_Hindu_vices:0"消灭印度教恶习"
+ PRF_Eliminate_Hindu_vices_desc:0"消灭印度教恶习"
+
+ PRF_Razakarization_of_the_army:0"军队拉扎卡尔化"
+ PRF_Razakarization_of_the_army_desc:0"军队拉扎卡尔化"
+
+ PRF_Quran_based_economic_plan_and_social_justice:0"基于《古兰经》的经济计划和社会正义"
+ PRF_Quran_based_economic_plan_and_social_justice_desc:0"基于《古兰经》的经济计划和社会正义"
+
+ PRF_The_spirit_of_the_jihadists:0"圣战者的精神"
+ PRF_The_spirit_of_the_jihadists_desc:0"圣战者的精神"
+
+ PRF_Eliminate_the_remnants_of_the_Kafir:0"消除卡菲勒的残余"
+ PRF_Eliminate_the_remnants_of_the_Kafir_desc:0"消除卡菲勒的残余"
+
+ PRF_Volcano_and_Waterfall:0"“火山与瀑布”"
+ PRF_Volcano_and_Waterfall_desc:0"“火山与瀑布”"
+
+ PRF_From_the_Red_Fort_to_London:0"从红堡到伦敦"
+ PRF_From_the_Red_Fort_to_London_desc:0"从红堡到伦敦"
+
+ PRF_Revive_the_legacy_of_the_Khilafat_Movement:0"重整基拉法特运动之遗风"
+ PRF_Revive_the_legacy_of_the_Khilafat_Movement_desc:0"重整基拉法特运动之遗风"
+
+
+
+ PRF.0.t:0 "王公联盟的介绍"
+ PRF.0.d:0 "印度在1925年英国大革命之后最终实现了自身的独立。比卡内尔的拉杰普特大君登上了统治之巅。但刚获得自由的印度很快便陷入印度国民大会与以激进地下支持者为中心的左翼平民反对派之间产生的分歧中。几个月后，印度左翼激进者谴责辛格签订英印条约的事件导致印度次大陆陷入内战。正是在这个混乱的时期，南方诸邦以《英印条约》和辛格多次违反法律为动机，联合起来支持奥斯曼·阿里汗，海得拉巴的尼扎姆，并宣布他为真正的印度总督。随着内战升级为令人困惑的暴力泥潭，阿里汗未能入侵辛格的北部权力基地，但成功地铲除了孟买的社会主义飞地，并阻止德里和加尔各答政府入侵德干高原。和平最终降临后，王公联盟很快就着手组织起了一个接替英属印度的民族政府，由奥斯曼·阿里汗担任尼扎姆穆勒克（意为“王国之纪纲”），他的王公伙伴们在所谓的王公会议里担任顾问和立法角色。到1936年，王公联盟仍是一个脆弱的国家，也是印度最保守的地方政府。"
+ prfline.0.a:0 "让我们开工吧！"
+ prfline.1.t:0 "混乱"
+ prfline.1.d:0 "千疮百孔的统治体系之下，长久以来积累的阶级矛盾、民族压迫以及社会不公，在暗处不断涌动、积聚，终于迎来了喷发的时刻。最初，只是零星地区出现了左翼力量的抗议活动。起初，这些抗议活动规模较小，形式也较为温和，只是一些集会、演讲，试图通过和平的方式表达他们的诉求。但警察和军队对抗议活动进行残酷镇压不仅没有扑灭左翼力量的怒火，反而如同火上浇油，让原本就愤怒的人们更加坚定了反抗的决心。左翼骚乱愈演愈烈，抗议的规模越来越大，参与的人数越来越多。从城市的大街小巷到乡村的田间地头，到处都能看到愤怒的人群，在这场激烈的对抗中，起义的火种被彻底点燃。迈索尔，特拉凡哥尔等地，左翼力量举起反旗，向联盟的统治发起全面挑战。如同一颗重磅炸弹，在王公联盟引起了巨大的震动。"
+ prfline.1.a:0 "我们必须着手处理"
+ prfline.2.t:0 "德国佬的来访"
+ prfline.2.d:0 "一群突如其来的不速之客打破了表面的平静。在孟买这座繁华却又被起义阴云笼罩的港口城市，一艘破旧却带有明显异国军事风格的船只缓缓靠岸。一群身着德国军装、神情疲惫却又透着几分傲慢的人便急匆匆地下了船。他们自称是德国的军事观察团，此前一直在英阿战争的战场上活动。在那场激烈的战争中，他们凭借着所谓的“专业军事眼光”，对交战双方的军事行动中获取有价值的军事战略信息，同时也妄图在这场列强博弈中为德国谋取利益。然而，英阿战争结束后，新成立的阿富汗政权对这群在战争期间行为诡秘、时常干涉阿富汗内政的德国人深感厌恶和警惕，毫不留情地将他们驱逐出了阿富汗境内。\n\n他们在印度洋上漂泊了数日，历经艰难险阻，最终流落到了孟买。听闻王公联盟正深陷全国性起义，急需外部军事力量的援助，便向当地官员恳求帮助王公联盟镇压这场来势汹汹的叛乱，妄图借此在这片土地上重新找到立足之地，继续他们的军事野心和利益追逐。"
+ prfline.2.a:0 "我们别无选择，试试看吧"
+ prfline.2.b:0 "有意思，但我们不需要殖民者"
+ prfline.2.c:0 "我们不需要德国人"
+ prfline.3.t:0 "牟田口的来访"
+ prfline.3.d:0 "在我们将那群居心叵测的德国佬礼送出境后，本以为能换来片刻的安宁，可命运的齿轮却并未停歇，另一位不速之客后脚就踏入了尼扎姆的皇宫。牟田口廉也，这个自称为日本帝国出访王公联盟代表的家伙，迈着沉稳却暗藏嚣张的步伐走进了宫殿。脸上挂着虚伪的笑容，眼神中却闪烁着贪婪和算计。\n\n他先是对王公联盟深陷全国性起义的困境表示了“深刻的不幸”，那夸张的语气和表情，为联盟的遭遇痛心疾首。紧接着他话锋一转，表示自己可以让日方势力介入，帮助联盟平息叛乱，还信誓旦旦地说这是为了全亚洲的共荣。\n\n尼扎姆眉头紧锁，陷入了沉思。当前联盟的起义犹如一场熊熊烈火，若不及时扑灭，自己的统治将岌岌可危。但日本人的意图也绝非善类，他们所谓的“共荣”，不过是殖民统治和掠夺的遮羞布。沉思良久后，尼扎姆缓缓张口道……"
+ prfline.3.a:0 "我想我们可以合作"
+ prfline.3.b:0 "阁下的好意我心领了"
+ prfline.4.t:0 "我们的帮手"
+ prfline.4.d:0 "南印度这片古老而广袤的土地上，起义的烽火如今已化作燎原之势，迅速蔓延至整个南印度的每一个角落。城市的大街小巷中，乡村的田野间，起义军的规模如同滚雪球一般越滚越大。如今，起义军的人数已经数以万计，他们训练有素、斗志昂扬，成为了政府军面前一支不可小觑的力量。面对如此严峻的形势，政府方面已经到了必须要大规模动员镇压的时候。如果不及时采取行动，整个南印度都将陷入起义军的掌控之中，政府的统治也将岌岌可危。我们迫切需要选择可靠的帮手协助我们的镇压行动。才能在这场残酷的镇压中恢复南印度的和平与稳定。"
+ prfline.4.a:0 "军队是最可靠的"
+ prfline.4.b:0 "拉扎卡尔也许可以帮上忙"
+ prfline.4.c:0 "外国佬也许可以试试看"
+ prfline.4.e:0 "自己的事情自己做"
+ prfline.5.t:0 "战火蔓延"
+ prfline.5.d:0 "当尼扎姆随王公议会迁至繁华却又暗流涌动的孟买之后，他的心便如同被一根无形的线紧紧牵扯着，无时无刻不在关心着前线的战事。孟买，表面上灯红酒绿、车水马龙，然而在尼扎姆的眼中，这一切繁华都不过是过眼云烟。他的脑海中时刻浮现着前线那硝烟弥漫、战火纷飞的场景，士兵们的呐喊声、枪炮的轰鸣声仿佛就在耳边回荡。他深知，前线的战事不仅关系到王公议会的决策走向，更关乎着自己所代表的势力的生死存亡。\n\n午饭过后，阳光透过窗户洒在尼扎姆的身上，但他却无心享受这片刻的宁静。他眉头紧锁，不时地看向窗外，仿佛在期待着什么。他正准备吩咐身旁的侍从，让其立刻与前线取得联系，询问最新的战况。\n\n然而，就在他刚要开口的时候，一阵急促的马蹄声由远及近传来，打破了这原本就有些压抑的氛围。紧接着，一名前线传令兵风尘仆仆地冲进了房间。“报——前线战报……"
+ prfline.5.a:0 "我军在前线大获全胜，起义军节节败退！"
+ prfline.5.b:0 "我们的战线已经全面崩溃，海得拉巴已落入起义军之手！"
+ prfline.5.c:0 "我军在前线挡住了他们的攻势！"
+ prfline.6.t:0 "英国佬的小动作"
+ prfline.6.d:0 "我们在孟买布下的眼线洞察着各方势力的细微动静。这几天，眼线传来了至关重要的情报：英国佬，一直在暗中支持一个名为孟买市民联合会的小团体，慷慨地给予其资金支持。想必他们是想借这个团体的手，在背后搞一些见不得人的小动作，妄图扰乱我们的战略布局，给我们的战斗增添阻碍。然而，在如今这如火如荼的战时大背景下，英国佬的这点小伎俩就如同蚍蜉撼树，显得微不足道、无关紧要。我们的目光必须紧紧锁定在眼前的起义军身上，他们才是我们的敌人，只要我们死死地拖住起义军，让他们无法突围、无法得到外界的有效支援，就如同将他们困在了一个无形的牢笼之中。在绝望中走向覆灭。\n\n那么，我们的下一步该怎么办呢？"
+ prfline.6.a:0 "我们需要认真调查，以防万一"
+ prfline.6.b:0 "我们要着眼于目前的战事"
+ prfline.7.t:0 "起义胜利了！"
+ prfline.7.d:0 "当历史的巨轮碾碎一切腐朽与落后，一场波澜壮阔的革命风暴如汹涌的潮水般，以不可阻挡之势席卷了整个南亚次大陆。在这场震撼人心的革命浪潮中，起义军宛如一把锋利无比的利刃，所到之处，旧秩序的枷锁纷纷崩裂，黑暗的统治在他们的铁蹄下瑟瑟发抖。海得拉巴，这座曾经在旧势力庇护下顽固坚守的堡垒，在起义军的攻势面前，显得如此不堪一击。攻克海得拉巴后，起义军没有丝毫的懈怠和停歇。他们深知，前方的道路依然充满荆棘和挑战，但革命的火焰已经在他们心中熊熊燃烧，赋予了他们无穷的力量。于是，他们一鼓作气，兵锋如闪电般直指孟买，孟买的残军们象征性地放了几枪，开了几炮，便迅速失去了战斗的勇气和决心。他们纷纷丢下武器，四处逃窜。随着孟买参军的投降，这个曾经脆弱而畸形的国家，就像一座摇摇欲坠的破旧房屋，在革命的风暴中轰然倒塌。他们的美梦被彻底粉碎，他们的统治被永远埋进了历史的垃圾桶。而起义军用自己的鲜血和生命，为南亚次大陆带来了新的希望和曙光。一个崭新的时代即将拉开帷幕，照耀在这片古老而又充满活力的土地上。"
+ prfline.7.a:0 "王公们赤石去吧"
+ prfline.8.t:0 "起义被镇压"
+ prfline.8.d:0 "在感受到泰米尔邦的威胁之后，老迈昏庸的王公们要求我们放弃我们的独立。对于这种卑鄙的要求我们只有一个回应。"
+ prfline.8.a:0 "王公的威胁必须被消灭，开战！"
+ prfline.8.b:0 "屈服吧，我们挡不住王公们的"
+ prfline.9.t:0 "[From.GetNameDef]的结束"
+ prfline.9.d:0 "[From.GetNameDef]意识到他们无力抵抗我们的军事力量，他们选择向我们投降并接受我们的要求。随着剩余泰米尔土地的和平整合，印度大陆的南端终于完全统一在我们的控制之下。今天是印度统一大业的伟大日子！"
+ prfline.9.a:0 "团结就是力量！"
+ prfline.10.t:0 "王公联盟要求结束泰米尔的共和制度"
+ prfline.10.d:0 "王公联盟要求我们结束共和政府，建立王公政权，但仍令我们保持相当大的自治权。"
+ prfline.11.t:0 "组建马德拉斯邦"
+ prfline.11.d:0 "在两国存在武装冲突的前景下，马德拉斯总统自行下台，并颁行了新的合乎王公执政的宪法。现在斯里·罗摩克里希纳·兰加·拉奥现在掌管着一个泰米尔内阁，这个内阁与王公联盟行动完全一致。今天，我们为印度而战！"
+ prfline.11.a:0 "吼啊，新王公"
+ prfline.12.t:0 "整合前马德拉斯共和国"
+ prfline.12.d:0 "我们终于征服了马德拉斯共和国的领土。我们的部队在蒂鲁瓦纳马莱和所有其他主要城市的街道上巡逻。敌人在农村的抵抗已经到了最后阶段，凡是我们的士兵经过之处，当地人都授首来降。"
+ prfline.12.a:0 "很好"
+ prfline.20.t:0 "[GetYear]年首相选举"
+ prfline.20.d:0 "王公会议群聚一堂，他们将决定首相之人选，这次选举的胜利者是……"
+ prfline.20.a:0 "迈索尔的克里希纳·拉贾·瓦迪亚尔四世"
+ prfline.20.b:0 "特拉凡哥尔的奇蒂拉·瓦尔马"
+ prfline.20.c:0 "戈尔哈布尔的拉贾拉姆三世"
+ prfline.20.e:0 "阿克巴尔·海达利"
+ prfline.20.f:0 "马达帕蒂·哈努曼塔·拉奥"
+ prfline.20.g:0 "米尔扎·穆罕默德·伊斯梅尔"
+ prfline.20.h:0 "纳瓦卜·法扎勒·纳瓦兹·忠格·巴哈杜尔"
+ prfline.20.i:0 "贾亚查马拉金德拉·拉贾·瓦迪亚尔五世"
+ prfline.20.j:0 "克鲁希纳·钱德拉·加贾帕蒂"
+ prfline.100.t:0 "王公会议"
+ prfline.100.d:0 "今天，海得拉巴的尼扎姆奥斯曼·阿里汗会见了王公会议的领导人员，王公会议方提出了自己的改革方案。在该方案中，王公联盟的权力将集中于一个经选举产生的国家首相手中，且首相将负责在整个印度地区重建秩序的重要任务。目前还不确定尼扎姆能否接受该项提案，或者他是否会将其看作是威胁自身统治地位的提案。不过仍有许多人认为尼扎姆自己就应该扮演首相的角色，另外一些人则认为首相之职应由国家选举产生，甚至认为王公会议本身也是如此。"
+ prfline.100.a:0 "我会考虑议会的建议的"
+ prfline.101.t:0 "奥斯曼拒绝了议会的提议"
+ prfline.101.d:0 "海得拉巴的尼扎姆断然拒绝了王公会议的改革提议，诸王公们的脸上瞬间就挂不住了。在讲话中，尼扎姆列举了王公们平时的貌合神离，并强调如果联盟要同时对抗殖民主义和社会主义势力，就显然需要一个强有力的中央政府……哪怕要取代会议也在所不惜。不止一位王公在会议结束时发誓，如果王公会议真的解散，就意味着内战。"
+ prfline.101.a:0 "他们一点大局观都没有"
+ prfline.102.t:0 "解散王公会议"
+ prfline.102.d:0 "尼扎姆奥斯曼·阿里汗拒绝了王公会议最后的改革提议，许多人对此并不感到意外。今天，尼扎姆奥斯曼·阿里汗下令解散王公会议。现在所有的权力都掌握在尼扎姆的手中，有传言说，有几个王公骑马南下，举枪叛乱。如果上述情况属实的话，内战就只是时间问题了。"
+ prfline.102.a:0 "叛乱？让我看看"
+ prfline.103.t:0 "王公联盟首相"
+ prfline.103.d:0 "在奥斯曼·阿里汗决定解散王公会议之后，尼扎姆几乎完全控制了联盟政府的行政部门。然而，对王室领地的实际控制一直处于低位，许多人表示，非常需要一个新的人物来领导王公联盟的内阁，以免奥斯曼的独裁成为海得拉巴治下唯一的面具形象。"
+ prfline.103.a:0 "来自海得拉巴的阿克巴尔·海达利将领导政府"
+ prfline.103.b:0 "克鲁希纳·钱德拉·加贾帕蒂将驯服四方王公！"
+ prfline.103.c:0 "我用不着傀儡，我自己统治就够了"
+ prfline.104.t:0 "奥斯曼·阿里汗宣称印度皇帝之位"
+ prfline.104.d:0 "在印度南部，印度王室成员奥斯曼.阿里.汗宣称自己是印度皇帝，而此前该头衔则为莫卧儿帝国皇帝和英国国王所有。他那直截了当的宣言认为我们合法统治的想法只不过是不切实际的幻想。这份夸大其实的宣告在[Root.GetNameDef]内存在一批拥趸，他们认为这个印度皇帝很快便会在整个次大陆重建秩序。"
+ prfline.104.a:0 "王公联盟会不太开心的"
+ prfline.104.b:0 "印度无产阶级谴责这个僭主！"
+ prfline.106.t:0 "解散王公会议"
+ prfline.106.d:0 "来自南方的消息称，王公联盟的政治局势正在迅速恶化。海得拉巴的尼扎姆，奥斯曼·阿里汗今天解散了王公会议，并建立了自己为唯一领袖的政府。有传言称，有一大批南方王公对其傲慢言行感到愤怒，尽管一些人仍以权力的游戏来描绘尼扎姆的幻想，但是实际上王公联盟境内各土邦与中央政府之间的矛盾已然一触即发。"
+ prfline.106.a:0 "我们的一个机会，接下来要怎么做？"
+ prfline.107.t:0 "奥斯曼接受了议会的提议"
+ prfline.107.d:0 "今天，当海得拉巴的尼扎姆奥斯曼·阿里汗同意他们的改革时，王公会议的家伙们显然很高兴，至少在表面上是这样。王公会议的权力将因为首相一职的建立而得到巩固，尼扎姆也将自身的一定权力移交给首相，现在的问题是首相的产生方式几何。是由一位王公主持，还是由全国选举？也有一些人说，王公会议本身应该改革，而王公会议的准入要求需要放宽了……还有一个激进的想法，如果尼扎姆同意的话，它将把王公联盟转变成一个宪政民主国家。"
+ prfline.107.a:0 "这显然需要一些讨论"
+ prfline.108.t:0 "国家选举"
+ prfline.108.d:0 "我们决定将王公会议改革为一个单一的政府职位，现在要求在全国自由选举一个适当的候选人。有许多选择，选民中很少有人怀疑这个新职位的重要性。目前首相的任期限制是四年。"
+ prfline.108.a:0 "睿智的印度教领导人，迈索尔的克里希纳·拉贾·瓦迪亚尔四世！"
+ prfline.108.b:0 "大众进步者，特拉凡哥尔的奇蒂拉·瓦尔马！"
+ prfline.108.c:0 "战争伟人，戈尔哈布尔的拉贾拉姆三世！"
+ prfline.108.e:0 "铁面无私的人民公仆，阿克巴尔·海达利！"
+ prfline.108.f:0 "自由派领袖，马达帕蒂·哈努曼塔·拉奥！"
+ prfline.109.t:0 "王公选举"
+ prfline.109.d:0 "我们决定将王公会议改革为一个单一的政府职位，现在要求在诸多王公之中选举一个适当的候选人。选择多样，参与选举的王公们中很少有人怀疑这个新职位的重要性。目前首相的任期限制是四年。"
+ prfline.110.t:0 "再表忠心"
+ prfline.110.d:0 "尽管印度南部的王公们一直对尼扎姆效忠，但并非所有人都为联盟的防务贡献了全部力量，甚至有些人在改革中对尼扎姆摊牌，然而，随着改革的完成，人们对联盟的信心达到了空前的高度，因此王公们同意做出比以前更多的贡献。"
+ prfline.110.a:0 "是时候了！"
+ prfline.120.t:0 "克里希纳·拉贾·瓦迪亚尔四世的背叛"
+ prfline.120.d:0 "迈索尔是王公联盟第二强的邦，且其常与尼扎姆的海得拉巴中央长期不睦。除却宗教问题，尼扎姆和克里希纳·拉贾·瓦迪亚尔四世在政治方面也是明争暗斗。在尼扎姆宣称帝位之后，这些问题最终浮出水面，瓦迪亚尔大公宣称尼扎姆这种行为违背联盟宪法，无异于一次政变。随后，这位王公宣称自己的邦独立，脱离联盟政府，曾经把南方各邦团结起来的王公联盟时至今日已面临灭顶之灾，这对其来说是至暗时刻。"
+ prfline.120.a:0 "这是叛国"
+ prfline.122.t:0 "马拉巴尔海岸叛乱"
+ prfline.122.d:0 "在进步却刚愎自用的年轻统治者的领导下，特拉凡哥尔_科钦邦从未满意过尼扎姆的统治。如今迈索尔邦已公开举起了反旗，年轻的王公也决定押宝压在抵抗我们之上，忠于该邦的军队已经发动叛乱，不再对尼扎姆效忠。"
+ prfline.122.a:0 "现在，我们国家陷入了分裂"
+ prfline.124.t:0 "发动泰米尔民族统一主义的事业"
+ prfline.124.d:0 "自从1933年联盟军队开进马德拉斯共和国并占据了诸多泰米尔人领土后，复仇主义的种子就一直在次大陆东南端生根发芽。现在尼扎姆的海得拉巴政府正面临灭顶之灾，迈索尔和特拉凡哥尔_科钦两邦已经正是对其发动叛乱，现在是我们夺回失地并教那群王公做人的最好时机。"
+ prfline.124.a:0 "让我们宣称所有前马德拉斯管辖区的领地！"
+ prfline.124.b:0 "我们的共和国将彼及科摩罗角！"
+ prfline.124.c:0 "我们不能承担和王公开战的风险……"
+ prfline.124.e:0 "建立达罗毗荼纳德！统一所有的达罗毗荼人！"
+ prfline.125.t:0 "[From.GetAdjective]军队打到了北边"
+ prfline.125.d:0 "王八蛋！马德拉斯共和国的泰米尔人也以颠覆海得拉巴政权为旗号，对我们勇敢的部队发动了攻击。令人吃惊的是，我们在马杜赖哥印拜陀的部队已经被击溃了！"
+ prfline.125.a:0 "开战！"
+ prfline.126.t:0 "叛乱结束了"
+ prfline.126.d.all:0 "德干诸邦的叛乱已结束，南部叛乱势力已经被消灭，尼扎姆已经对其他各邦展示了实力，并在一定程度上证明了自己和王公们联合统一印度的实力。问题在于如何处置叛乱地区，是宽宏大量还是将其交给更尊贵的人统治？"
+ prfline.126.d.some:0 "德干诸邦叛乱已结束，但是尼扎姆也不能说完全胜利。一些南方土邦并未完全在其治下，所以仍有一些王公认为尼扎姆攫取权力为非法行为。然而，他经受住了挑战。问题在于如何处置叛乱地区，是宽宏大量还是将其交给更尊贵的人统治？"
+ prfline.126.d.none:0 "德干诸邦叛乱已结束，尼扎姆惨败而归。剩下的王公们聚集在一起，要求对议会进行改革，更重要的是，王公会议必须得到恢复，其提案必须得到通过。这可能是一个权力平衡的问题，战败者尼扎姆已经插不上话了。"
+ prfline.126.a:0 "给予不满的邦以联盟内部的自治权"
+ prfline.126.b:0 "把他们的土地完全并入联盟统治之下"
+ prfline.126.c:0 "印度似乎完蛋了"
+ prfline.140.t:0 "海得拉巴_德干铁路线延长"
+ prfline.140.d:0 "如果说印度是英帝国主义王冠上的一颗宝石，那么印度半岛铁路网络就是其中的一颗宝石。它始建于1853年，是英国建立庞大交通基础设施的典范，深受亚洲其他国家羡慕，也是著名作家儒勒·凡尔纳的灵感来源。在英国从印度撤军后，这条连接孟买和海得拉巴的新铁路的第一部分于今天宣布开通，并更名为海得拉巴_德干铁路，而这大大加强了印度中部各邦之间的通讯。我们的工程师和规划人员已经开始了连接迈索尔州和海得拉巴的大系统第二部分的工作。无论是王公还是平民，都认为这项事业是有价值和前途的！"
+ prfline.140.a:0 "下一站：迈索尔！"
+ prfline.141.t:0 "海得拉巴_德干铁路到达迈索尔"
+ prfline.141.d:0 "在一段时间的建设下，[Root.GetNameDef]的铁路最终抵达了迈索尔，尽管克里希纳·拉贾·瓦迪亚尔四世和尼扎姆之间政见不同，但这个为加强交流和运输的国家建设项目还是得到了王公联盟最具权势的两大王公的支持。"
+ prfline.141.a:0 "下一站：科摩林角和印度洋！"
+ prfline.142.t:0 "海得拉巴_德干铁路到达科摩林角"
+ prfline.142.d:0 "海得拉巴_德干铁路终于蜿蜒曲折，从孟买的大都市一直延伸到马拉巴尔海岸。这一伟大事业的圆满完成，使有关的各王公之间产生了巨大的团结，这一重大事业的成功，使对该项目的国内外批评人士哑口无言。今天，现代化的交通将大陆的尖端与主要的权力中心连接起来，我们的国家作为现代化的灯塔而闪耀着光芒！"
+ prfline.142.a:0 "我们的国家何其伟大！"
+ prfline.145.t:0 "国家政府以温和态度对待北方的王公们"
+ prfline.145.d:0 "尽管北方的走狗们远比王公联盟集权，但其仍存在地主和王公，他们中的大多数人都支持遮丑布式民主遗产，但也有一些人表达了强烈的反英观点，古吉拉特邦巴罗达邦的普拉塔普·辛格·盖克瓦德和查谟_克什米尔邦的哈里·辛格是最突出的两位。如果我们能够说服其中一位或两位王公支持我们统治全印度，我们或许能够从内部削弱德里政府，让我们的军队更快地向前推进。要同时改变这两人很困难，但这两个人都有可能背叛我们，是我们的进军计划雪上加霜。"
+ prfline.145.d.kashmir.only:0 "尽管北方的走狗们远比王公联盟集权，但其仍存在地主和王公，他们中的大多数人都支持遮丑布式民主遗产，但也有一些人表达了强烈的反英观点，哈里·辛格和古吉拉特邦巴罗达邦的普拉塔普·辛格·盖克瓦德是最突出的两位。如果我们能够说服他支持我们统治全印度的权利，我们或许能够从内部削弱德里政府，让我们的军队更快地向前推进。然而，在时机尚未成熟之前，他有可能背叛我们的计划，给德里带来优势。"
+ prfline.145.a:0 "克什米尔的哈里·辛格是个有趣的反动分子，向他献殷勤吧！"
+ prfline.145.b:0 "去讨好巴罗达和克什米尔的有权有势的王公们吧！"
+ prfline.145.c:0 "放弃这个阴谋，宣战吧！"
+ prfline.146.t:0 "在我们的王公中煽动叛乱！"
+ prfline.146.d.kashmir:0 "尽管目前的内阁已经改革了许多国家机构，并解决了两院制的问题，但一些王公仍然坚决反对德里的中央政府。北部查谟和克什米尔的年轻王公带着不信任和仇恨的眼光看着我们的政府，对海得拉巴的封建政权怀有秘密的感情。我们接到令人不安的报告，说王公正与[From.GetNameDef]秘密通信，一旦王公联盟再次向北进军，他们就会开辟一条反对我们军队的内部战线。我们一定要做点什么！"
+ prfline.146.d.baroda:0 "尽管目前的内阁已经改革了许多国家机构，并解决了两院制的问题，但一些王公仍然坚决反对德里的中央政府。北部查谟和克什米尔的年轻王公带着不信任和仇恨的眼光看着我们的政府，对海得拉巴的封建政权怀有秘密的感情。我们接到令人不安的报告，说王公正与[From.GetNameDef]秘密通信，一旦王公联盟再次向北进军，他们就会开辟一条反对我们军队的内部战线。我们一定要做点什么！"
+ prfline.146.a:0 "赶快派军队到克什米尔去逮捕大君！"
+ prfline.146.b:0 "在巴罗达和克什米尔宣布戒严并逮捕王公们！"
+ prfline.147.t:0 "王公联盟的阴谋成功"
+ prfline.147.d:0 "不管怎样，我们使一些北方王公反对他们自己政府的阴谋得逞了。现在是时候拿出匕首，割断英国殖民主义在印度次大陆的最后一个污点了！"
+ prfline.147.a:0 "那就开战吧！"
+ prfline.148.t:0 "王公联盟的阴谋受挫"
+ prfline.148.d:0 "不管怎样，我们使一些北方王公来反对他们自己政府的阴险阴谋已经结束了。现在是时候拿出匕首，割断英国殖民主义在印度次大陆的最后一个污点了！"
+ prfline.149.t:0 "推翻印度社会主义"
+ prfline.149.d:0 "作为我们国家统一的第一步，我国政府已决定打击加尔各答空洞的左翼分子。有人建议我们要立即开始战争，但也有一些人建议我们在婆罗多公社内较保守的奥里萨邦培植反对势力，尽管这样的努力可能会失败，并让[BHC.GetNameDef]占尽先机，但也值得一试。"
+ prfline.149.a:0 "奥里萨邦集体农场的骚乱！"
+ prfline.149.b:0 "别再耍这种花招了——开战吧！"
+ prfline.150.t:0 "奥里萨的反动派骚乱"
+ prfline.150.d:0 "奥里萨邦传来了令人不安的消息，保守和反动的农民领袖正在抵制我们政治委员的工作。骚乱他们在抗议我们针对宗教迷信和集体农场恶劣条件的限制性指令。甚至在城市里，骚乱也在迅速获得民众的支持，而我们据可靠的情报来源的消息，[From.GetNameDef]正在帮助这些反对派！"
+ prfline.150.a:0 "让人民警察执行无产阶级的意志！"
+ prfline.151.t:0 "王公联盟的阴谋成功"
+ prfline.151.d:0 "不管怎样，我们使奥里萨邦的反动农民反对他们自己政府的阴谋得逞了。现在是拿出匕首，铲除印度次大陆上这一社会主义污点的时候了！"
+ prfline.151.a:0 "那就开战吧！"
+ prfline.152.t:0 "王公联盟的阴谋失败"
+ prfline.152.d:0 "不管怎样，我们使奥里萨邦的反动农民反对他们自己政府的卑鄙阴谋失败了。现在是拿出匕首，铲除印度次大陆上这一社会主义污点的时候了！"
+ prfline.153.t:0 "海得拉巴和针对[BHC.GetNameDef]的合约"
+ prfline.153.d:0 "我们被[From.GetAdjective]的特使秘密地联系了。他们要求我们合作推翻孟加拉的社会主义政权。这是一个棘手的问题，因为我们不承认王公联盟，且我们反对其统一全印度的主张。然而，这样的协议可能有助于消除激进的左翼国家，并为我们与南方卖国贼王公们的最后对抗创造条件。更不必说，即使我们做出承诺，我们也不需要履行协议，因为这绝不是公开的。"
+ prfline.153.a:0 "积极回应这些提议"
+ prfline.153.b:0 "做出承诺并对冲风险"
+ prfline.153.c:0 "不要和诡计多端的王公打交道！"
+ prfline.154.t:0 "德里政府接受了这项协议"
+ prfline.154.d:0 "今天我们取得了重要的外交胜利！德里政府已经接受了我们关于在加尔各答消灭社会主义杂种的建议，从而保卫了我们的北方地区。国家统一的道路已经扫清，我们的军队渴望有机会证明他们的价值！当然，我们政府的一些成员建议要谨慎，因为我们无法知道北方的汉奸是否真的会坚持自己的立场。他们可能会袖手旁观，甚至更糟的是在背后捅我们一刀。"
+ prfline.154.a:0 "老实说，这个机会是值得的"
+ prfline.155.t:0 "德里政府拒绝了这项协议"
+ prfline.155.d:0 "狗屎，野蛮的德里政府拒绝加入针对[BHC.GetNameDef]的合约。"
+ prfline.155.a:0 "那我们将独自面对布尔什维克的威胁！"
+ prfline.156.t:0 "遵守德里_海得拉巴协定"
+ prfline.156.d:0 "根据我们两国政府之间的秘密谈判，[ prfline.GetNameDef]已经对[BHC.GetNameDef]宣战，我们是应该尊重这一协议，发动自己的攻势，还是采取一种更为隐秘的方式？"
+ prfline.156.a:0 "遵守打击[BHC.GetNameDef]之协议"
+ prfline.156.b:0 "捅王公们一刀"
+ prfline.156.c:0 "让他们彼此倾尽力量"
+ prfline.160.t:0 "北方的胜利"
+ prfline.160.d:0 "我们已经把背信弃义的英国哈巴狗从大陆上赶走了！现在是通过向德里的[faction_head.GetAdjective]大人物们派遣一名特使来为整个印度赢得和平的时候了。我们要求他们结束对我们的战争，不要伤害我们的人民。"
+ prfline.160.a:0 "建议停战"
+ prfline.160.b:0 "继续打"
+ prfline.161.t:0 "[From.GetName]寻求和平"
+ prfline.161.d:0 "噩耗传到了我们的政府，亲[Root.GetFactionName]的德里政权已被推翻，其领土被[From.GetAdjective]兼并，我们无力对此进行干涉，且即便干涉成功可能性也十分渺茫，[From.GetAdjective]政府寄希望于一项和平方案，永远结束在印度的统治。"
+ prfline.161.a:0 "除了接受，我们别无选择"
+ prfline.161.b:0 "不！德里政府永不亡"
+ prfline.162.t:0 "拒绝和平"
+ prfline.162.d:0 "我们收到了[From.GetAdjective]军队领导人的回应：在重建德里政权之前绝无和平，但是他们接受在我们撤军基础上的和平"
+ prfline.162.a:0 "撤退，绝不"
+ prfline.162.b:0 "好吧，我们想结束这场战争"
+ prfline.170.t:0 "王公联盟想加入[Root.GetFactionName]"
+ prfline.170.d.japan:0 "海得拉巴政府最近统一了次大陆。印度新政府已表示愿意加入我们的联盟，帮助促进亚洲人民的觉醒。帝国内阁的意见是什么？"
+ prfline.170.d.germany:0 "海得拉巴政府最近统一了次大陆。印度新政府已表示愿意加入我们的帝国公约，并表示将会继续打击亚洲工团主义。然而，预计印度人将要求对我们在次大陆的殖民地归属上作出让步。"
+ prfline.170.d.russia:0 "海得拉巴政府最近统一了次大陆。印度新政府已表示愿意加入我们的联盟，在整个欧亚大陆增进稳定和民族和谐。有了这样的联盟，土兵和哥萨克肯定会统治大陆！"
+ prfline.170.a:0 "当然！我们欢迎他们"
+ prfline.170.b:0 "我觉得不行"
+ prfline.171.t:0 "王公联盟加入了[From.GetFactionName]"
+ prfline.171.d.japan:0 "[FROM.GetNameDefCap]接受我们为亚洲国家提供安全保障的提议，并允许我们加入[From.GetFactionName]"
+ prfline.171.d.germany:0 "德国人很高兴我们愿意携手同心，摧毁邪恶的工团主义者。现在我们是[From.GetFactionName]的一部分！"
+ prfline.171.d.russia:0 "俄国人接受了我们的提议！今天，一个新的全球联盟诞生了，它将决定世界的命运！"
+ prfline.171.a:0 "好极了！"
+ prfline.172.t:0 "婆罗多公社军官团的命运"
+ prfline.172.d:0 "次大陆的工团主义威胁已经被我们的钢铁履带碾平，一些曾经效忠于加尔各答政府的军官愿意放下他们的政治成见再次为印度母亲服务。鉴于我们两国之间曾经的仇恨，这将是一个有争议的抉择，因为我们军队内的许多人仍对工团耿耿于怀。"
+ prfline.172.a:0 "允许一批政治上问题最少的人回到岗位"
+ prfline.172.b:0 "这些人无法被饶恕，永远禁止他们参军！"
+ prfline.173.t:0 "孟加拉工业集团的现状"
+ prfline.173.d:0 "孟加拉是加尔各答政府所有省份中工业化程度最高的，工厂和车间由工人委员会管理，工人委员会遵循社会主义执政干部的集中化原则。自从我们征服了该省，我们要面对如何处理这些工业巨兽的问题。中央政府应该指导工厂的日常运营，还是应该发起一场大规模的私有化项目？另一些人则建议我们让当地的地主和王公控制这些工厂，采取温和的立场。而无论国家政府采取什么措施，都必然会影响我们的统治受到影响。"
+ prfline.173.a:0 "允许私人公司接管工厂"
+ prfline.173.b:0 "让当地的地主和王公来经营这些产业"
+ prfline.173.c:0 "政府将直接控制！"
+ prfline.174.t:0 "阿萨姆邦国有化茶园的地位"
+ prfline.174.d:0 "阿萨姆邦长期以来以茶叶生产而闻名，在社会主义政府的十年统治下，阿萨姆邦大量的种植园实际上繁荣了起来。种植园雇佣了成千上万的当地人，确保了法国人和英国人得到了他们的宝贵产品。然而，现在田地失修了。就像社会主义共和国的大多数事情一样，我们现在必须就这个行业的未来做出艰难的决定。我们应该保持国家的控制，保障农民和工人的权利，还是应该对社会主义经济制度宣战，铲除这个集体化的残余？"
+ prfline.174.a:0 "在全省推行私有化！毫不留情！"
+ prfline.174.b:0 "让旧的农村秩序得到恢复——同时增加工人的权利"
+ prfline.174.c:0 "政府必须控制这个至关重要的产业！"
+ prfline.175.t:0 "地主移民和当地土地的情况"
+ prfline.175.d:0 "上次内战爆发时，加尔各答的革命暴徒把东部各省几十个贵族和王公家庭赶出了他们的家园。因此，这些移民中的很大一部分来到了海得拉巴，组成了王公会议中最激进、最反动的派别之一。现在我们已经击败了公社，重建了秩序，而这些王公要求废除集体化，重建地主制度。我们当然需要在我们自己的政府中安抚王公，但与社会主义模式的突然决裂可能后果严重，这会在我们的新臣民中造成许多不必要的问题。现在全国都在等待内阁的决定。"
+ prfline.175.a:0 "旧的农村秩序将被完全恢复！"
+ prfline.175.b:0 "为了印度的未来，我们必须妥协"
+ prfline.176.t:0 "在[new_core.GetName]取得控制"
+ prfline.176.d:0 "虽然很难使当地人摆脱他们的社会主义信仰和以前对集体化工农业的依赖，但[new_core.GetName]终于能成为[Root.GetNameDef]的一员了"
+ prfline.176.a:0 "是时候了！"
+ prfline.177.t:0 "[damage_state.GetName]的抵抗"
+ prfline.177.d:0 "在前婆罗多公社的[damage_state.GetName]的地区爆发了叛乱，我们认为这是由一个在偏远地区运作的反动抵抗组织操纵的。恐怖主义爆炸事件和抗议活动现在正层出不穷，直到我们完全控制[damage_state.GetName]为止。"
+ prfline.177.a:0 "他们在自寻死路吗"
+ prfline.178.t:0 "德里政府军官团的命运"
+ prfline.178.d:0 "印度政府终于清除了英国对印度次大陆的最后一点影响，并在麻烦不断的西北诸省实行了真正的本土治理制度。一些曾经宣誓效忠德里政府的官员表示，希望继续为印度母亲服务，然而，如果我们任用这些人，我们可能会面临来自我们自己的军官的不满，他们憎恨和以前的敌人一起服役。"
+ prfline.178.a:0 "国家需要每一个人为之服务"
+ prfline.178.b:0 "我们用不着英国佬的傀儡"
+ prfline.179.t:0 "北方土邦的命运"
+ prfline.179.d:0 "当奥斯曼·阿里汗召集南部王公建设国家政府时，并不是所有的印度王公都决定支持他。北方的许多土邦决定把自己的命运交给辛格和他的政府。现在我们终于打败了这个卖国的政府，剩下的问题就是如何处置这些王公。我们要么让他们保留王位，要么强行罢黜他们，建立更忠于政府的较小王室。然而，后一种做法可能导致长期的怨恨，并让我们的重组进程步履维艰。"
+ prfline.179.a:0 "推翻最亲英的王公，并设置好当地的分权机构！"
+ prfline.179.b:0 "我们必须向所有印度王公伸出橄榄枝！"
+ prfline.180.t:0 "重组东北省份"
+ prfline.180.d:0 "德里政府对平民百姓的荒唐纵容弥补了其中央权力的不足。商人甚至工人都有一定程度的个人自由，在国家的日常运作中都有发言权。随着我们整合了北方诸邦，群众担心他们在未来可能会被剥夺公民自由。如果我们能够解决一些有关的问题，我们也许能够确保统治的过渡更加顺利。"
+ prfline.180.a:0 "新秩序在印度河畔冉冉升起，让群众颤抖吧"
+ prfline.180.b:0 "通过承诺更好的贸易权利来赢得商人阶层的支持"
+ prfline.180.c:0 "我们保证尊重各邦的公民自由！"
+ prfline.181.t:0 "在[new_core.GetName]取得控制"
+ prfline.181.d:0 "虽然让本地人摆脱他们所谓的傀儡版的民主政治很困难，但[new_core.GetName]现在已经被同化并成为了[Root.GetNameDef]的一部分！"
+ prfline.181.a:0 "是时候了！"
+ prfline.182.t:0 "在[damage_state.GetName]的抵抗"
+ prfline.182.d:0 "在前英国伪政权的[damage_state.GetName]地区爆发了叛乱，我们认为这是由一个在偏远地区运作的民主派抵抗组织操纵的。恐怖主义爆炸事件和抗议活动现在正层出不穷，直到我们完全控制[damage_state.GetName]地区的人口为止。"
+ prfline.182.a:0 "这就是他们嘴里的“自由”？"
+ prfline.183.t:0 "和不丹打交道"
+ prfline.183.d:0 "在印度崩溃后，与世隔绝的小国不丹利用阿萨姆邦北部的混乱局势，占领了喜马拉雅山脚下的几个地区。随着印度其余地区最终统一，内阁中的许多鹰派人士要求归还这块非法占领的领土。一些人甚至呼吁通过军事条约将不丹纳入一个更广泛的联盟中。"
+ prfline.183.a:0 "要求归还占领区"
+ prfline.183.b:0 "宣称这些地区，并建立一个友好的政府！"
+ prfline.184.t:0 "对[From.GetNameDef]的索求"
+ prfline.184.d.return:0 "我们现在受到[From.GetNameDef]的施压，他们要求归还那些我们在英国统治崩溃后占据的土地。"
+ prfline.184.d.govt:0 "我们现在受到[From.GetNameDef]的施压，他们要求归还那些我们在英国统治崩溃后占据的土地。此外他们还要求我们放弃实际上的独立地位。"
+ prfline.184.a:0 "我们别无选择，唯有遵从"
+ prfline.184.b:0 "告诉他们，不丹不会屈服于其淫威"
+ prfline.185.t:0 "不丹屈服了"
+ prfline.185.d.return:0 "束手无策之下，[From.GetAdjective]政府明智的屈服于我们的要求并归还了我们所要求的领土。"
+ prfline.185.d.govt:0 "束手无策之下，[From.GetAdjective]政府明智的屈服于我们的要求并归还了我们所要求的领土。并屈服于[Root.GetAdjective]的统治。"
+ prfline.185.a:0 "有什么疑问吗？"
+ prfline.186.t:0 "不丹拒绝了"
+ prfline.186.d:0 "令人惊奇的是，[From.GetAdjective]拒绝了我们的要求，我们只能用武力手段夺回达旺。"
+ prfline.186.a:0 "这意味着战争！"
+ prfline.186.b:0 "再说吧"
+ prfline.187.t:0 "和尼泊尔打交道"
+ prfline.187.d:0 "在印度崩溃后，[NEP.GetNameDef]利用混乱局势，占领了喜马拉雅山脚下的几个地区。随着印度其余地区最终统一，内阁中的许多鹰派人士要求归还这块非法占领的领土。一些人甚至呼吁通过军事条约将不丹纳入一个更广泛的联盟中。"
+ prfline.187.a:0 "要求归还占领区"
+ prfline.187.b:0 "宣称这些地区，并建立一个友好的政府！"
+ prfline.188.t:0 "对[From.GetNameDef]的索求"
+ prfline.188.d.return:0 "我们现在受到[From.GetAdjective]的施压，他们要求归还那些我们在英国统治崩溃后占据的土地。"
+ prfline.188.d.govt:0 "我们现在受到[From.GetAdjective]的施压，他们要求归还那些我们在英国统治崩溃后占据的土地。此外他们还要求我们放弃实际上的独立地位。"
+ prfline.188.a:0 "我们别无选择，唯有遵从"
+ prfline.188.b:0 "告诉他们，尼泊尔不会屈服于其淫威"
+ prfline.189.t:0 "尼泊尔屈服了"
+ prfline.189.d.return:0 "束手无策之下，[From.GetAdjective]政府明智的屈服于我们的要求并归还了我们所要求的领土"
+ prfline.189.d.govt:0 "束手无策之下，[From.GetAdjective]政府明智的屈服于我们的要求并归还了我们所要求的领土。并屈服于[Root.GetAdjective]的统治。"
+ prfline.189.a:0 "有什么疑问吗？"
+ prfline.190.t:0 "尼泊尔拒绝了"
+ prfline.190.d:0 "令人惊奇的是，[From.GetAdjective]拒绝了我们的要求，我们只能用武力手段夺回土地。"
+ prfline.190.a:0 "这意味着战争！"
+ prfline.190.b:0 "再说吧"
+ prfline.191.t:0 "[From.GetNameDefCap]要我们投降"
+ prfline.191.d:0 "[From.GetAdjective]的特使今天到了[Root.GetNameDef]，他们要我们加入新建立的印度政府，要不然就要被消灭。"
+ prfline.191.other.d:0 "[From.GetAdjective]的特使今天到了[Root.GetNameDef]，他们得意洋洋的要我们加入新建立的[From.GetAdjective]，要不然就要被消灭。"
+ prfline.191.a:0 "我们别无选择，唯有遵从"
+ prfline.191.b:0 "绝不！他们敢就放马过来！"
+ prfline.192.t:0 "[From.GetName]屈服了"
+ prfline.192.d:0 "[From.GetAdjective]的特使今天说他们将会屈服于我们并重新加入新建的印度政府"
+ prfline.192.a:0 "很好！"
+ prfline.193.t:0 "[From.GetName]拒绝了我们"
+ prfline.193.d:0 "[From.GetAdjective]的特使今天说他们将永不屈服于我们并重新加入新建的印度政府，这样的话倘若我们要占据他们的领土，我们只能采用军事手段。"
+ prfline.193.a:0 "是这样吗？"
+ prfline.194.t:0 "[From.GetName]要求印度殖民地"
+ prfline.194.d:0 "当我们忙于战争之时，[From.GetAdjective]军队开进了我们的印度洋殖民地，并在我们守备队反应过来之前将其缴械。[From.GetNameDef]宣称这些地区是其神圣不可侵犯的领土，目前我们似乎对此无能为力。"
+ prfline.194.a:0 "这种暴行会受到报应的！"
+ prfline.195.t:0 "[From.GetNameDefCap]与印度殖民地的去留"
+ prfline.195.d:0 "[From.GetAdjective]政府想要我们归还自英属印度崩溃以来我们得到的[From.GetNameDef]殖民地，这可能是一个提升两国间外交关系的好机会，但是这也会为我们的殖民地开一个危险的头。"
+ prfline.195.a:0 "把这些地方给印度人吧"
+ prfline.195.b:0 "不，这些海军基地对公海舰队来讲意义重大"
+ prfline.196.t:0 "德属殖民地的转让"
+ prfline.196.d:0 "我们已经成功说服德国人，让他们归还那些在印度内战中占领的殖民地，这对印德关系是起到了相当良好的影响，也证明了我们比英国傀儡统治的更合法、更成功。印度万岁！"
+ prfline.196.a:0 "把这些岛屿并入我国！"
+ prfline.196.b:0 "给予锡兰地区以相当程度的地方自治权力，并整合周边岛屿"
+ prfline.197.t:0 "[From.GetName]拒绝了我们"
+ prfline.197.d:0 "[From.GetAdjective]的特使告诉我们返还印度洋殖民地是绝无可能的，其对于德国公海舰队来说极为重要。"
+ prfline.197.a:0 "好吧……"
+ prfline.198.t:0 "[From.GetName]索要果阿！"
+ prfline.198.d:0 "[From.GetAdjective]的军队今天开进了果阿并接管了我们的地方部队。[From.GetNameDef]宣称果阿是其神圣不可侵犯的领土，目前我们似乎对此无能为力。"
+ prfline.198.a:0 "这种暴行会受到报应的！"
+ prfline.201.t:0 "[uniter.GetNameDef]的危险"
+ prfline.201.d:0 "在[uniter.GetNameDef]控制加尔各答和德里并肃清反对派一统印度之后，有许多[Root.GetNameDef]人对我们下一步将会迅速南下坚信不疑，事实上，我们占领的海得拉巴地区已经出现了暴动，试图摧垮我们的统治转而加入到[uniter.GetAdjective]之中。"
+ prfline.201.a:0 "给他们海得拉巴"
+ prfline.201.b:0 "我们还是接受吧……"
+ prfline.201.c:0 "我们做不了什么，他们想来就来吧"
+ prfline.202.t:0 "[From.GetNameDefCap]要求海得拉巴"
+ prfline.202.d:0 "或许他们已经由在内战结束后被[From.GetAdjective]军队占领的原属王公联盟的海得拉巴所爆发的暴动而知，我们的战略目标在南方，因此[From.GetNameDef]想用海得拉巴来换取与我们的和平。"
+ prfline.202.a:0 "接受协定"
+ prfline.202.b:0 "他们理应从属于我们的统治"
+ prfline.203.t:0 "[From.GetNameDefCap]要求投降"
+ prfline.203.d:0 "或许他们已经由在内战结束后被[From.GetAdjective]军队占领的原属王公联盟的海得拉巴所爆发的暴动而知，我们的战略目标在南方，因此[From.GetNameDef]想用海得拉巴并屈服于我们名义上的统治的来换取与我们的和平。"
+ prfline.203.b:0 "他们将服从我们的直接统治，否则就会爆发战争"
+ prfline.204.t:0 "海得拉巴暴动"
+ prfline.204.d:0 "或许他们已经由在内战结束后被[From.GetAdjective]军队占领的原属王公联盟的海得拉巴所爆发的暴动而知，我们的战略目标在南方，但是[From.GetAdjective]却拒绝了我们之间的谈判，与此同时，海得拉巴的抗议活动要求我们进行干预。"
+ prfline.204.a:0 "我们走着瞧"
+ prfline.205.t:0 "[Root.GetName]胜利"
+ prfline.205.d:0 "我们不仅挫败了奥斯曼·阿里汗的疯狂计划，而且还占领了海得拉巴。这是把[Root.GetNameDef]扶到南方德干各邦国新统治者的好机会，我们是否愿意走这条路？"
+ prfline.205.a:0 "是的，这对我们的未来至关重要"
+ prfline.205.b:0 "不，我们现在很好"
+ IND_EMP_national_populist:0 "印度帝国"
+ IND_EMP_national_populist_ADJ:0 "印度"
+ IND_EMP_national_populist_DEF:0 "印度帝国"
+ IND_EMP_paternal_autocrat:0 "印度帝国"
+ IND_EMP_paternal_autocrat_ADJ:0 "印度"
+ IND_EMP_paternal_autocrat_DEF:0 "印度帝国"
+ IND_EMP_authoritarian_democrat:0 "印度帝国"
+ IND_EMP_authoritarian_democrat_ADJ:0 "印度"
+ IND_EMP_authoritarian_democrat_DEF:0 "印度帝国"
+ IND_EMP_social_conservative:0 "印度帝国"
+ IND_EMP_social_conservative_ADJ:0 "印度"
+ IND_EMP_social_conservative_DEF:0 "印度帝国"
+ IND_EMP_market_liberal:0 "印度帝国"
+ IND_EMP_market_liberal_ADJ:0 "印度"
+ IND_EMP_market_liberal_DEF:0 "印度帝国"
+ IND_EMP_social_liberal:0 "印度帝国"
+ IND_EMP_social_liberal_ADJ:0 "印度"
+ IND_EMP_social_liberal_DEF:0 "印度帝国"
+ IND_EMP_social_democrat:0 "印度帝国"
+ IND_EMP_social_democrat_ADJ:0 "印度"
+ IND_EMP_social_democrat_DEF:0 "印度帝国"
+ IND_EMP_radical_socialist:0 "印度帝国"
+ IND_EMP_radical_socialist_ADJ:0 "印度"
+ IND_EMP_radical_socialist_DEF:0 "印度帝国"
+ IND_EMP_syndicalist:0 "印度帝国"
+ IND_EMP_syndicalist_ADJ:0 "印度"
+ IND_EMP_syndicalist_DEF:0 "印度帝国"
+ IND_EMP_totalist:0 "印度帝国"
+ IND_EMP_totalist_ADJ:0 "印度"
+ IND_EMP_totalist_DEF:0 "印度帝国"
+ PRF_EMP_national_populist:0 "印度帝国"
+ PRF_EMP_national_populist_ADJ:0 "印度"
+ PRF_EMP_national_populist_DEF:0 "印度帝国"
+ PRF_EMP_paternal_autocrat:0 "印度帝国"
+ PRF_EMP_paternal_autocrat_ADJ:0 "印度"
+ PRF_EMP_paternal_autocrat_DEF:0 "印度帝国"
+ PRF_EMP_authoritarian_democrat:0 "印度帝国"
+ PRF_EMP_authoritarian_democrat_ADJ:0 "印度"
+ PRF_EMP_authoritarian_democrat_DEF:0 "印度帝国"
+ PRF_EMP_social_conservative:0 "印度帝国"
+ PRF_EMP_social_conservative_ADJ:0 "印度"
+ PRF_EMP_social_conservative_DEF:0 "印度帝国"
+ PRF_EMP_market_liberal:0 "印度帝国"
+ PRF_EMP_market_liberal_ADJ:0 "印度"
+ PRF_EMP_market_liberal_DEF:0 "印度帝国"
+ PRF_EMP_social_liberal:0 "印度帝国"
+ PRF_EMP_social_liberal_ADJ:0 "印度"
+ PRF_EMP_social_liberal_DEF:0 "印度帝国"
+ PRF_EMP_social_democrat:0 "印度帝国"
+ PRF_EMP_social_democrat_ADJ:0 "印度"
+ PRF_EMP_social_democrat_DEF:0 "印度帝国"
+ PRF_EMP_radical_socialist:0 "印度社会主义共和国"
+ PRF_EMP_radical_socialist_ADJ:0 "印度"
+ PRF_EMP_radical_socialist_DEF:0 "印度社会主义共和国"
+ PRF_EMP_syndicalist:0 "印度公社"
+ PRF_EMP_syndicalist_ADJ:0 "印度"
+ PRF_EMP_syndicalist_DEF:0 "印度公社"
+ PRF_EMP_totalist:0 "印度公社"
+ PRF_EMP_totalist_ADJ:0 "印度"
+ PRF_EMP_totalist_DEF:0 "印度公社"
+ MYS_PRF_subject:0 "迈索尔邦"
+ MYS_PRF_subject_DEF:0 "迈索尔邦"
+ MYS_PRF_subject_ADJ:0 "迈索尔"
+ TRV_PRF_subject:0 "特拉凡哥尔_科钦"
+ TRV_PRF_subject_DEF:0 "特拉凡哥尔_科钦"
+ TRV_PRF_subject_ADJ:0 "特拉凡哥尔"
+ prfline.124.f:0 "建立泰米尔纳德！统一所有的达罗毗荼人！"
+ prfline.124.g:0 "对抗王公联盟，总有一天我们会夺回家园！"
+ PRF_align_ottomans:0 "结交最高朴特"
+ PRF_align_ottomans_desc:0 "尼扎姆的家族与奥斯曼家族联系密切。1931年的时候，家族长子阿扎姆·贾迎娶了苏丹阿卜杜勒梅西德二世的独生女。我们应该把我们的家庭关系扩展为国家间的正式联盟。"
+ PRF_rocketry:0 "现代迈索尔火箭"
+ PRF_rocketry_desc:0 "凶猛的迈索尔之虎蒂普苏丹曾经使用火箭来对付东印度公司，我们要接过这一光荣遗产，改良迈索尔火箭，创造出更加先进的版本来。让任何胆敢与我们为敌之人在恐惧中瑟瑟发抖吧！"
+ PRF_nuclear:0 "战争的未来"
+ PRF_nuclear_desc:0 "为了保卫我们的土地不受任何域外势力的威胁，我们要开发一种全新的可怕武器。尼扎姆已为科研小组下达了命令，而后者正全力攻关，努力破解原子的终极奥秘。"
