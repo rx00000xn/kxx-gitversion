@@ -10039,4 +10039,18 @@ text = {
 		localization_key = tot_shintaisei_subtype
 	}
 
+	text = {
+		trigger = {
+			has_country_leader_ideology = pataut_shintaisei_subtype
+		}
+		localization_key = pataut_shintaisei_subtype
+	}
+	
+	text = {
+		trigger = {
+			has_country_leader_ideology = autdem_shintaisei_subtype
+		}
+		localization_key = autdem_shintaisei_subtype
+	}	
+
 }

@@ -1357,6 +1357,8 @@ ideologies = {
 			authdem_hindutva_subtype = { can_be_randomly_selected = no } #印度教民族主义
 			integral_humanism_subtype = { can_be_randomly_selected = no } #整体人文主义
 			sikhism_subtype = { can_be_randomly_selected = no } #锡克教
+			#日本重置
+			autdem_shintaisei_subtype = { can_be_randomly_selected = no } #新体制
 
 			#制作组彩蛋
 			Tao_Fuism_subtype = {can_be_randomly_selected = no} #七日来复（制作组彩蛋）
@@ -1546,6 +1548,7 @@ ideologies = {
 			#日本重置
 			kokubo_kokka_subtype = {can_be_randomly_selected = no} #国防国家
 			pataut_nihonism_subtype = {can_be_randomly_selected = no} #日本国粹主义
+			pataut_shintaisei_subtype = {can_be_randomly_selected = no} #新体制
 
 			#制作组彩蛋
 			hartmannism_subtype = { can_be_randomly_selected = no }  #哈特曼主义（制作组彩蛋）
