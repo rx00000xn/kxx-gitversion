@@ -437,7 +437,7 @@ country_event = { #Shakai-Taishuto Candidate
 		}
 		create_country_leader = {
 			name = "山本悬藏"
-			picture = "gfx/leaders/JAP/Portrait_JAP_Kenzo_Yamamoto.png"
+			picture = "gfx/leaders/JAP/Portrait_JAP_Yamamoto_Kenzo.png"
 			expire = "1965.1.1"
 			ideology = syndie_social_democrat_subtype
 		}
@@ -5729,7 +5729,7 @@ country_event = { #A United Front Victory
 		create_country_leader = {
 						name = "山本悬藏"
 						desc = "-"
-						picture = "gfx/leaders/JAP/Portrait_JAP_Kenzo_Yamamoto.png"
+						picture = "gfx/leaders/JAP/Portrait_JAP_Yamamoto_Kenzo.png"
 						expire = "1965.1.1"
 						ideology = agrarian_syndicalism_subtype
 					}
