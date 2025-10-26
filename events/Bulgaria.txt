@@ -2523,6 +2523,81 @@ country_event = { #Government destabilisation
 			}
 		}
 	}
+	option = { #
+		name = bulgaria.57.f
+		trigger = {
+			has_cosmetic_tag = BUL_republic
+		}
+		clr_country_flag = BUL_liberal_government
+
+
+		ai_chance = {
+			factor = 15
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = { rule = BUL_politics option = BUL_POLITIC_SOCDEM }
+					has_game_rule = { rule = BUL_politics option = BUL_POLITIC_MARLIB }
+					has_game_rule = { rule = BUL_politics option = BUL_POLITIC_PATAUT }
+				}
+			}
+		}
+
+		if = {
+			limit = { is_subject = yes }
+			overlord = {
+				country_event = { id = bulgaria.118 days = 1 }
+				set_autonomy = {
+					target = BUL
+					autonomy_state = autonomy_free
+				}
+			}
+		}
+		if = {
+			limit = { is_in_faction = yes }
+			leave_faction = yes
+		}
+		
+		separate_peace_all_wars = yes
+
+		add_popularity = {
+			ideology = social_conservative
+			popularity = -0.15
+		}
+
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.4
+		}
+
+		remove_all_ministers = yes
+		add_ideas = {
+			BUL_Rafael_Kamhi_hog_rso
+			BUL_Dimo_Kazasov_for_sde
+			BUL_Ivan_Stefanov_eco_syn
+			BUL_Pencho_Zlatev_sec_pau
+		}
+
+		set_politics = {
+			ruling_party = radical_socialist
+			elections_allowed = no
+		}
+			create_country_leader = {
+				name = "鲍里斯三世"
+				desc = "POLITICS_BORIS_III_DESC"
+				picture = "gfx/leaders/BUL/Portrait_BUL_Boris_III.png"
+				expire = "1.1.1"
+				ideology = monsoc_subtype
+			}
+		set_party_name = {
+			ideology = radical_socialist
+			name = "沙皇勤王党"
+			long_name = "沙皇勤王党"
+		}
+		set_country_flag = BUL_hidden_path_unlock
+		set_country_flag = KXX_LEADER_GUI_VISIBLE
+		set_country_flag = BUL_Lyubomir_Hristov_Lulchev_VISIBLE
+	}
 }
 
 country_event = { #Advancing political democracy
@@ -6713,6 +6788,8 @@ country_event = { # puppet monarchy?
 		add_stability = 0.05
 		
 		set_country_flag = zveno_monarchy
+		set_country_flag = KXX_LEADER_GUI_VISIBLE
+		set_country_flag = BUL_Hristo_Lukov_VISIBLE
 	}
 }
 
