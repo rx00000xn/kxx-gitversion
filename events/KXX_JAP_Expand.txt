@@ -326,7 +326,7 @@ country_event = { #永田路线换人
 			name = "永田铁山"
 			picture = "gfx/leaders/JAP/Portrait_JAP_Nagata_Tetsuzan.png"
 			expire = "1965.1.1"
-			ideology = pataut_japanese_militarism_subtype
+			ideology = kokubo_kokka_subtype
 		}
 	}	
 
@@ -345,7 +345,7 @@ country_event = { #永田路线换人
 			name = "杉山元"
 			picture = "gfx/leaders/JAP/Portrait_JAP_Sugiyama_Hajime.png"
 			expire = "1965.1.1"
-			ideology = pataut_japanese_militarism_subtype
+			ideology = kokubo_kokka_subtype
 		}
 	}
 
@@ -364,7 +364,7 @@ country_event = { #永田路线换人
 			name = "寺内寿一"
 			picture = "gfx/leaders/JAP/Portrait_JAP_Hisaichi_Terauchi.png"
 			expire = "1965.1.1"
-			ideology = pataut_japanese_militarism_subtype
+			ideology = kokubo_kokka_subtype
 		}
 	}
 
@@ -384,7 +384,7 @@ country_event = { #永田路线换人
 			name = "池田纯久"
 			picture = "gfx/leaders/JAP/Portrait_JAP_Sumihisa_Ikeda.png"
 			expire = "1965.1.1"
-			ideology = tot_ikedaism_subtype
+			ideology = tot_kokubo_kokka_subtype
 		}
 		set_party_name = {
 			ideology = totalist
@@ -448,7 +448,7 @@ country_event = { #东条路线换人
 			name = "东条英机"
 			picture = "gfx/leaders/JAP/Portrait_JAP_Hideki_Tojo.png"
 			expire = "1965.1.1"
-			ideology = natpop_japanese_militarism_subtype
+			ideology = natpop_kokubo_kokka_subtype
 		}
 	}	
 
