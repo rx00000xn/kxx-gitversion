@@ -713,6 +713,8 @@ country_event = { #
 		add_ideas = TTR_Gaynan_Waisev_hog_tot
 		add_synd_to_coalition = yes
 		add_radsoc_to_coalition = yes
+		set_country_flag = KXX_LEADER_GUI_VISIBLE
+		set_country_flag = BUL_Gaynan_Waisi_VISIBLE
 	}
 	option = { #...what now?
 		name = kxbul.25.b
@@ -738,6 +740,8 @@ country_event = { #
 		add_ideas = TTR_Mirsaid_Sultangaliev_hog_rso
 		add_synd_to_coalition = yes
 		add_tot_to_coalition = yes
+		set_country_flag = KXX_LEADER_GUI_VISIBLE
+		set_country_flag = BUL_Mirsayet_Soltangaliev_VISIBLE
 	}
 	option = { #...what now?
 		name = kxbul.25.c
@@ -763,6 +767,8 @@ country_event = { #
 		add_ideas = TTR_Galimcan_Ibrahimov_hog_syn
 		add_radsoc_to_coalition = yes
 		add_tot_to_coalition = yes
+		set_country_flag = KXX_LEADER_GUI_VISIBLE
+		set_country_flag = BUL_Galimcan_ibrahimov_VISIBLE
 	}
 }
 country_event = { #Veterans complain

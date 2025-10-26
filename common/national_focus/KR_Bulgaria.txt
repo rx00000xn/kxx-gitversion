@@ -32,6 +32,17 @@ focus_tree = {
       }
       add_political_power = 50
       add_stability = 0.05
+	  add_ideas = BUL_retain_agrarianism_idea
+	  add_ideas = BUL_adopt_industrialisation_idea
+	  add_ideas = BUL_increased_wheat_exports_idea
+	  add_ideas = BUL_increased_wheat_exports_idea2
+	  add_ideas = BUL_agricultural_subsidisation_idea
+	  add_ideas = BUL_agricultural_subsidisation_idea2
+	  add_ideas = BUL_empowering_the_bank_idea
+	  add_ideas = BUL_agricultural_boom_idea
+	  add_ideas = BUL_industrial_boom_idea
+	  add_ideas = BUL_redistributing_land_to_peasants_idea
+	  add_ideas = BUL_lowering_tax_burden_on_peasants_idea
     }
   }
   focus = {
@@ -9143,7 +9154,7 @@ focus = {
 		ai_will_do = { factor = 200 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BUL_left_pivot"
-			
+			custom_effect_tooltip = unlock_focuses
 		}
 	}
   
@@ -12875,6 +12886,12 @@ focus = {
 		prerequisite = {
 			focus = BUL_front_republic
 		}
+		available = {
+			OR = {
+				BUL_agrarians_in_power = yes
+				has_country_flag = BUL_another_agrarian_w
+			}
+		}
 		ai_will_do = {
 			factor = 40
 			modifier = {
@@ -12908,6 +12925,12 @@ focus = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		prerequisite = {
 			focus = BUL_the_agrarians
+		}
+		available = {
+			OR = {
+				BUL_agrarians_in_power = yes
+				has_country_flag = BUL_another_agrarian_w
+			}
 		}
 		ai_will_do = {
 			factor = 40
@@ -15860,6 +15883,8 @@ focus = {
 				remove_idea = BUL_russian_supports
 				add_idea = BUL_russian_exile
 			}
+			set_country_flag = KXX_LEADER_GUI_VISIBLE
+			set_country_flag = BUL_Hristo_Kunchev_VISIBLE
 			every_state = {
 				limit = {
 					is_core_of = RUS
@@ -17033,6 +17058,8 @@ focus = {
 				expire = "1.1.1" 
 				ideology = legionarism_subtype
 			}
+			set_country_flag = KXX_LEADER_GUI_VISIBLE
+			set_country_flag = BUL_Ivan_Dochev_VISIBLE
 		}
 	}
   focus = {
@@ -21133,13 +21160,10 @@ focus = {
 			focus = BUL_decentralize_industry
 		}
 		completion_reward = {
-			add_political_power = 50
-			add_popularity = {
-			  ideology = social_democrat
-				popularity = 0.1
+			swap_ideas = {
+				remove_idea = BUL_syndicalist_imro2
+				add_idea = BUL_syndicalist_imro3
 			}
-			add_ideas = BUL_lucky_clover
-			
 		}
 	}
 	focus = {
@@ -24496,7 +24520,22 @@ focus = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed BUL_opportunism"
-			custom_effect_tooltip = BUL_opportunism_tt
+			create_wargoal = {
+				target = SER
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = TUR
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = ROM
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = GRE
+				type = annex_everything
+			}
 		}
 	}
 
@@ -24522,7 +24561,6 @@ focus = {
 			AUS = {
 				is_faction_leader = yes
 			}
-			AUS_has_completed_ausgleich_path = yes
 			NOT = {
 				has_war_with = AUS
 				has_war_with = SER
@@ -24551,7 +24589,9 @@ focus = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed BUL_anti_belgrade_pact"
-			AUS = { ask_to_join_faction = yes }
+			AUS = {
+				country_event = { id = bulgaria.80 days = 5 }
+			}
 		}
 	}
 
@@ -24576,19 +24616,15 @@ focus = {
 		ai_will_do = { factor = 40 }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed BUL_restore_lost_cores"
-			if = {
-				limit = { has_idea = BUL_secret_rearmament_idea }
-				remove_ideas = BUL_secret_rearmament_idea
-				custom_effect_tooltip = tooltip_white_line
-			}
-			77 = { enable_state_integration_50_compliance = yes } #Silistria
-			106 = { enable_state_integration_50_compliance = yes } #Macedonia
-			184 = { enable_state_integration_50_compliance = yes } #Komotini
-			731 = { enable_state_integration_50_compliance = yes } #Florina
-			767 = { enable_state_integration_50_compliance = yes } #Nish
-			769 = { enable_state_integration_50_compliance = yes } #Serres
-			772 = { enable_state_integration_50_compliance = yes } #Constantza
-			1089 = { enable_state_integration_50_compliance = yes } #Kardzhali
+			add_state_core = 106
+			add_state_core = 1271
+			add_state_core = 731
+			add_state_core = 769
+			add_state_core = 184
+			add_state_core = 1089
+			add_state_core = 841
+			add_state_core = 77
+			add_state_core = 772
 		}
 	}
 
@@ -24628,38 +24664,7 @@ focus = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed BUL_seek_factions_wk"
-			if = {
-				limit = {
-					has_socialist_government = no
-					NOT = { has_country_leader = { character = BUL_alexander_stamboliyski } }
-				}
-				unlock_decision_tooltip = BUL_Join_Reichspakt
-			}
-			if = {
-				limit = {
-					OR = {
-						has_elected_government = yes
-						has_government = paternal_autocrat
-					}
-				}
-				unlock_decision_tooltip = BUL_Join_Austria
-				unlock_decision_tooltip = BUL_Join_Russia
-			}
-			if = {
-				limit = {
-					OR = {
-						has_country_leader = { character = BUL_alexander_stamboliyski }
-						has_government = national_populist
-					}
-				}
-				unlock_decision_tooltip = BUL_Join_Russia
-			}
-			if = {
-				limit = {
-					has_socialist_government = yes
-				}
-				unlock_decision_tooltip = BUL_Join_Internationale
-			}
+			country_event = bulgaria.92
 		}
 	}
 
@@ -24861,17 +24866,10 @@ focus = {
 			has_country_flag = BUL_hidden_path_unlock
 		}
 		allow_branch = {
-			has_country_flag = BUL_hidden_path_unlock
+			#has_country_flag = BUL_hidden_path_unlock
 		}
 		completion_reward = {
-			country_event = bulgaria.25
-			add_popularity = {
-			  ideology = national_populist
-				popularity = 0.1
-			}
-			add_stability = 0.1
-			add_ideas = BUL_titans_amogus
-			
+			custom_effect_tooltip = unlock_focuses
 		}
 	}
 	focus = {
@@ -24885,14 +24883,7 @@ focus = {
 			focus = BUL_bulgarian_rasputin
 		}
 		completion_reward = {
-			country_event = bulgaria.25
-			add_popularity = {
-			  ideology = national_populist
-				popularity = 0.1
-			}
-			add_stability = 0.1
-			add_ideas = BUL_titans_amogus
-			
+			add_ideas = BUL_enchanted_court	
 		}
 	}
 	focus = {
@@ -24906,13 +24897,7 @@ focus = {
 			focus = BUL_bulgarian_rasputin
 		}
 		completion_reward = {
-			country_event = bulgaria.25
-			add_popularity = {
-			  ideology = national_populist
-				popularity = 0.1
-			}
-			add_stability = 0.1
-			add_ideas = BUL_titans_amogus
+			add_ideas = BUL_good_people
 			
 		}
 	}
@@ -24930,13 +24915,7 @@ focus = {
 			focus = BUL_good_people
 		}
 		completion_reward = {
-			country_event = bulgaria.25
-			add_popularity = {
-			  ideology = national_populist
-				popularity = 0.1
-			}
-			add_stability = 0.1
-			add_ideas = BUL_titans_amogus
+			add_ideas = BUL_listen_to_deunov
 			
 		}
 	}
@@ -24951,13 +24930,12 @@ focus = {
 			focus = BUL_listen_to_deunov
 		}
 		completion_reward = {
-			country_event = bulgaria.25
 			add_popularity = {
-			  ideology = national_populist
+			  ideology = radical_socialist
 				popularity = 0.1
 			}
-			add_stability = 0.1
-			add_ideas = BUL_titans_amogus
+			add_war_support = 0.1
+			add_political_power = 100
 			
 		}
 	}
@@ -24972,14 +24950,9 @@ focus = {
 			focus = BUL_listen_to_deunov
 		}
 		completion_reward = {
-			country_event = bulgaria.25
-			add_popularity = {
-			  ideology = national_populist
-				popularity = 0.1
-			}
 			add_stability = 0.1
-			add_ideas = BUL_titans_amogus
-			
+			add_political_power = 100
+			add_manpower = 50000
 		}
 	}
 	focus = {
@@ -24996,14 +24969,7 @@ focus = {
 			focus = BUL_peace_and_mercy
 		}
 		completion_reward = {
-			country_event = bulgaria.25
-			add_popularity = {
-			  ideology = national_populist
-				popularity = 0.1
-			}
-			add_stability = 0.1
-			add_ideas = BUL_titans_amogus
-			
+			add_ideas = BUL_embrace_messiahism
 		}
 	}
 	focus = {
@@ -25017,13 +24983,10 @@ focus = {
 			focus = BUL_embrace_messiahism
 		}
 		completion_reward = {
-			country_event = bulgaria.25
-			add_popularity = {
-			  ideology = national_populist
-				popularity = 0.1
+			swap_ideas = {
+				remove_idea = BUL_embrace_messiahism
+				add_idea = BUL_embrace_messiahism2
 			}
-			add_stability = 0.1
-			add_ideas = BUL_titans_amogus
 			
 		}
 	}
@@ -25041,14 +25004,21 @@ focus = {
 			focus = BUL_peoples_power
 		}
 		completion_reward = {
-			country_event = bulgaria.25
 			add_popularity = {
-			  ideology = national_populist
+			  	ideology = radical_socialist
+				popularity = 0.1
+			}
+			add_popularity = {
+			  	ideology = paternal_autocrat
+				popularity = 0.1
+			}
+			add_popularity = {
+			  	ideology = authoritarian_democrat
 				popularity = 0.1
 			}
 			add_stability = 0.1
-			add_ideas = BUL_titans_amogus
-			
+			add_pataut_to_coalition = yes
+			add_authdem_to_coalition = yes
 		}
 	}
 	focus = {
@@ -25065,14 +25035,32 @@ focus = {
 			focus = BUL_enlightened_autocracy
 		}
 		completion_reward = {
-			country_event = bulgaria.25
 			add_popularity = {
-			  ideology = national_populist
+			  	ideology = syndicalist
+				popularity = 0.1
+			}
+			add_popularity = {
+			  	ideology = social_democrat
+				popularity = 0.1
+			}
+			add_popularity = {
+			  	ideology = social_liberal
+				popularity = 0.1
+			}
+			add_popularity = {
+			  	ideology = market_liberal
+				popularity = 0.1
+			}
+			add_popularity = {
+			  	ideology = social_conservative
 				popularity = 0.1
 			}
 			add_stability = 0.1
-			add_ideas = BUL_titans_amogus
-			
+			add_synd_to_coalition = yes
+			add_socdem_to_coalition = yes
+			add_soclib_to_coalition = yes
+			add_marlib_to_coalition = yes
+			add_soccon_to_coalition = yes
 		}
 	}
 	focus = {
@@ -25086,13 +25074,8 @@ focus = {
 			focus = BUL_ally_socialists
 		}
 		completion_reward = {
-			country_event = bulgaria.25
-			add_popularity = {
-			  ideology = national_populist
-				popularity = 0.1
-			}
-			add_stability = 0.1
-			add_ideas = BUL_titans_amogus
+			
+			add_ideas = BUL_feed_farmers
 			
 		}
 	}
@@ -25107,13 +25090,10 @@ focus = {
 			focus = BUL_ally_socialists
 		}
 		completion_reward = {
-			country_event = bulgaria.25
-			add_popularity = {
-			  ideology = national_populist
-				popularity = 0.1
-			}
+			add_one_random_civilian_factory = yes
+			add_one_random_civilian_factory = yes
+			add_one_random_civilian_factory = yes
 			add_stability = 0.1
-			add_ideas = BUL_titans_amogus
 			
 		}
 	}
@@ -25129,14 +25109,13 @@ focus = {
 			focus = BUL_peoples_power
 		}
 		completion_reward = {
-			country_event = bulgaria.25
 			add_popularity = {
-			  ideology = national_populist
+			  	ideology = radical_socialist
 				popularity = 0.1
 			}
 			add_stability = 0.1
-			add_ideas = BUL_titans_amogus
-			
+			add_political_power = 100
+			add_manpower = 10000
 		}
 	}
 	focus = {
@@ -25151,13 +25130,8 @@ focus = {
 			focus = BUL_peoples_power
 		}
 		completion_reward = {
-			country_event = bulgaria.25
-			add_popularity = {
-			  ideology = national_populist
-				popularity = 0.1
-			}
-			add_stability = 0.1
-			add_ideas = BUL_titans_amogus
+			
+			add_ideas = BUL_selfless_devotion
 			
 		}
 	}
@@ -25175,14 +25149,10 @@ focus = {
 			focus = BUL_purge_corrupt_buearucrat
 		}
 		completion_reward = {
-			country_event = bulgaria.25
-			add_popularity = {
-			  ideology = national_populist
-				popularity = 0.1
+			swap_ideas = {
+				remove_idea = BUL_embrace_messiahism2
+				add_idea = BUL_embrace_messiahism3
 			}
-			add_stability = 0.1
-			add_ideas = BUL_titans_amogus
-			
 		}
 	}
 	focus = {
@@ -25199,13 +25169,8 @@ focus = {
 			focus = BUL_selfless_devotion
 		}
 		completion_reward = {
-			country_event = bulgaria.25
-			add_popularity = {
-			  ideology = national_populist
-				popularity = 0.1
-			}
-			add_stability = 0.1
-			add_ideas = BUL_titans_amogus
+			
+			add_ideas = BUL_forbidden_magics
 			
 		}
 	}
@@ -25223,14 +25188,10 @@ focus = {
 			focus = BUL_selfless_devotion
 		}
 		completion_reward = {
-			country_event = bulgaria.25
-			add_popularity = {
-			  ideology = national_populist
-				popularity = 0.1
+			swap_ideas = {
+				remove_idea = BUL_selfless_devotion
+				add_idea = BUL_mercyful_hand
 			}
-			add_stability = 0.1
-			add_ideas = BUL_titans_amogus
-			
 		}
 	}
 	focus = {
@@ -25250,14 +25211,24 @@ focus = {
 			focus = BUL_mercyful_hand
 		}
 		completion_reward = {
-			country_event = bulgaria.25
 			add_popularity = {
-			  ideology = national_populist
+			  	ideology = radical_socialist
 				popularity = 0.1
 			}
-			add_stability = 0.1
-			add_ideas = BUL_titans_amogus
-			
+			add_stability = 0.2
+			if = {
+				limit = {
+					has_completed_focus = BUL_enlightened_autocracy
+				}
+				add_ideas = BUL_peoples_tsardom_aut
+			}
+			if = {
+				limit = {
+					has_completed_focus = BUL_peoples_power
+				}
+				add_ideas = BUL_peoples_tsardom_peo
+			}
+			add_political_power = 100
 		}
 	}
 }

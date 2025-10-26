@@ -218,6 +218,38 @@ spriteTypes = {
 		texturefile = "gfx/leaders/GRU/Portrait_germany_Albert_Speer.png"
 	}
 
+
+
+	###保加利亚###
+	spriteType = {
+		name = "GFX_Portrait_BUL_Gaynan_Waisi"
+		texturefile = "gfx/leaders/TTR/Portrait_TTR_Gainan_Waisov.png"
+	}	
+	spriteType = {
+		name = "GFX_Portrait_BUL_Galimcan_ibrahimov"
+		texturefile = "gfx/leaders/TTR/Portrait_TTR_Ibragimov.png"
+	}	
+	spriteType = {
+		name = "GFX_Portrait_BUL_Mirsayet_Soltangaliev"
+		texturefile = "gfx/leaders/TTR/Portrait_TTR_Soltangaliev.png"
+	}	
+	spriteType = {
+		name = "GFX_Portrait_BUL_Ivan_Dochev"
+		texturefile = "gfx/leaders/BUL/Portrait_BUL_Ivan_Dochev.png"
+	}	
+	spriteType = {
+		name = "GFX_Portrait_BUL_Hristo_Kunchev"
+		texturefile = "gfx/leaders/BUL/Portrait_BUL_Hristo_Kunchev.png"
+	}	
+	spriteType = {
+		name = "GFX_Portrait_BUL_Hristo_Lukov"
+		texturefile = "gfx/leaders/BUL/Portrait_BUL_Hristo_Lukov_KR.png"
+	}	
+	spriteType = {
+		name = "GFX_Portrait_Lyubomir_Hristov_Lulchev"
+		texturefile = "gfx/leaders/BUL/Portrait_BUL_Lyubomir_Hristov_Lulchev.png"
+	}	
+
 	###越南###
 	spriteType = {
 		name = "GFX_Portrait_Vietnam_Nguyen_Tuong_Long"
