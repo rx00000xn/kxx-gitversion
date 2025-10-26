@@ -574,10 +574,7 @@ spriteTypes = {
 		name = "GFX_ideology_tot_colonial_government" 
 		texturefile = "gfx/interface/ideologies/subideologies/tot_colonial_government.png"
 	}
-	spriteType = { #极权-革命新体制
-		name = "GFX_ideology_tot_shintaisei_subtype" 
-		texturefile = "gfx/interface/ideologies/subideologies/tot_shintaisei_subtype.png"
-	}
+
 	
 
 	SpriteType = {
