@@ -22384,7 +22384,7 @@ focus = {
 		x = 80
 		y = 19
 		available = {
-			has_country_flag = BUL_golden_horn
+			always = no
 		}
 		
 		completion_reward = {
@@ -25607,7 +25607,7 @@ focus = {
 			has_country_flag = BUL_hidden_path_unlock
 		}
 		allow_branch = {
-			#has_country_flag = BUL_hidden_path_unlock
+			has_country_flag = BUL_hidden_path_unlock
 		}
 		completion_reward = {
 			custom_effect_tooltip = unlock_focuses
