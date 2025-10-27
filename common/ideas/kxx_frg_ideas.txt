@@ -360,10 +360,6 @@ ideas = {
 		}
 
 		#法国复兴政府
-		FRG_take_over = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea IRQ_Socialist_Agitation"}
-			picture = FRG_take_over_idea
-		}
 
 		FRG_independence_war = {
 			available = {
@@ -1840,5 +1836,38 @@ ideas = {
 				weekly_manpower = -10
 		    }
 	    }
+		RUS_Tver_treaty = { #特维尔条约
+			allowed = { always = no }
+			available = {
+				OR = {
+					RRF = {
+						has_global_flag = FRG_Tver_accords_active
+					}
+					RUS = {
+						has_global_flag = FRG_Tver_accords_active
+					}
+				}
+			}
+			modifier = {
+				mobilization_speed = -0.5
+				war_support_factor = -0.5
+				stability_factor = -0.5
+				conscription_factor = -0.25
+				custom_modifier_tooltip = cannot_mobilise_tt
+				hidden_modifier = {
+					disabled_ideas = 1
+				}
+			}
+			targeted_modifier = {
+				tag = FRG
+				trade_cost_for_target_factor = -0.5
+			}
+			rule = {
+				can_join_factions = no
+				can_only_justify_war_on_threat_country = yes
+				can_not_declare_war = yes
+			}
+			picture = Idea_ORS_exhausted_band
+		}
 	}
 }

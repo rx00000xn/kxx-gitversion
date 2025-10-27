@@ -5842,6 +5842,7 @@ country_event = { #Anger against Agrarians
 	option = {
 		name = bulgaria.126.f #chaos - esoterics
 		#insert event later
+		complete_national_focus = BUL_small_cloud_and_big_rain
 	}
 }
 country_event = { #rome shit
@@ -7708,5 +7709,113 @@ country_event = { #
 					add_state_core = PREV 
 				}
 			}
+	}
+}
+country_event = { # 
+	id = bulgaria_foreign_events.17
+	title = bulgaria_foreign_events.17.t
+	desc = bulgaria_foreign_events.17.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { # yes
+		name = bulgaria_foreign_events.17.a
+		create_country_leader = {
+			name = "弗拉德·帕绍夫"
+			picture = "gfx/leaders/BUL/Portrait_BUL_Vlad_Pashov.png"
+			expire = "1.1.1"
+			ideology = syn_esoteric_anarchism_subtype
+		}
+		create_country_leader = {
+			name = "彼得·杜诺夫"
+			picture = "gfx/leaders/BUL/Portrait_BUL_Peter_Deunov.png"
+			expire = "1.1.1"
+			ideology = radsoc_left_occultism_subtype
+		}
+		set_politics = {
+			ruling_party = radical_socialist
+			elections_allowed = no
+		}
+		set_party_name = {
+			ideology = radical_socialist
+			long_name = BUL_reactionism_party_long
+			name = BUL_reactionism_party
+		}
+		set_party_name = {
+			ideology = syndicalist
+			long_name = BUL_reactionism_party_long
+			name = BUL_reactionism_party
+		}
+		add_synd_to_coalition = yes
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.2
+		}
+		add_popularity = {
+			ideology = syndicalist
+			popularity = 0.2
+		}
+		set_cosmetic_tag = BUL_yugo_free_reactionism
+	}
+	option = { # yes
+		name = bulgaria_foreign_events.17.b
+		create_country_leader = {
+			name = "尼古拉·雷诺夫"
+			picture = "gfx/leaders/BUL/Portrait_BUL_Nikolay_Rainov.png"
+			expire = "1.1.1"
+			ideology = tot_theosophy_subtype
+		}
+		create_country_leader = {
+			name = "奈登·赫里斯托夫·谢塔诺夫"
+			picture = "gfx/leaders/BUL/Portrait_BUL_Nayden_Shaytanov.png"
+			expire = "1.1.1"
+			ideology = occultism_subtype
+		}
+		set_politics = {
+			ruling_party = national_populist
+			elections_allowed = no
+		}
+		set_party_name = {
+			ideology = national_populist
+			long_name = BUL_accelerationism_party_long
+			name = BUL_accelerationism_party
+		}
+		set_party_name = {
+			ideology = totalist
+			long_name = BUL_accelerationism_party_long
+			name = BUL_accelerationism_party
+		}
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.2
+		}
+		add_popularity = {
+			ideology = national_populist
+			popularity = 0.2
+		}
+		set_cosmetic_tag = BUL_accelerationism
+	}
+	option = { # yes
+		name = bulgaria_foreign_events.17.c
+		create_country_leader = {
+			name = "鲍里斯·格奥尔基耶夫"
+			picture = "gfx/leaders/BUL/Portrait_BUL_Boris_Georgiev.png"
+			expire = "1.1.1"
+			ideology = socdem_esoteric_leninism_subtype
+		}
+		set_country_flag = soc_dems_are_socialists
+		set_politics = {
+			ruling_party = social_democrat
+			elections_allowed = no
+		}
+		set_party_name = {
+			ideology = social_democrat
+			long_name = BUL_roerich_party_long
+			name = BUL_roerich_party
+		}
+		add_popularity = {
+			ideology = social_democrat
+			popularity = 0.2
+		}
+		set_cosmetic_tag = BUL_roerich
 	}
 }

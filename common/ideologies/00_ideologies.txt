@@ -220,6 +220,7 @@ ideologies = {
 			National_Tridemism_subtype = {can_be_randomly_selected = no} #纬式国社理论
 			National_Corporatist_System_subtype = {can_be_randomly_selected = no} #团社体制
 			tot_colonial_government = {can_be_randomly_selected = no} #社会主义殖民政府
+			tot_theosophy_subtype = { can_be_randomly_selected = no } #神智学
 			#点
 			tot_baishi_subtype = {can_be_randomly_selected = no} #百事思想
 			islamic_communism_subtype = {can_be_randomly_selected = no} #伊斯兰马克思主义
@@ -378,6 +379,7 @@ ideologies = {
 			canaanist_subtype = {can_be_randomly_selected = no} #迦南主义
 			syn_sssp_subtype_subtype = { can_be_randomly_selected = no }  #科学特搜署
 			syn_bukharinist_subtype = {can_be_randomly_selected = no} #布哈林主义
+			syn_esoteric_anarchism_subtype = { can_be_randomly_selected = no color = { 91 9 76 } }  #神秘无政府主义
 
 			#点
 			syn_islamic_communism_subtype = {can_be_randomly_selected = no} #伊斯兰马克思主义
@@ -1536,6 +1538,7 @@ ideologies = {
 			generic_sssp_subtype = { can_be_randomly_selected = no } #科学特搜署
 			pataut_new_live_movement_subtype = { can_be_randomly_selected = no } #新生活运动
 			pataut_neo_citizenism_subtype  = { can_be_randomly_selected = no } #新民主义
+			theravada_buddhism_subtype = { can_be_randomly_selected = no } #上座部佛教
 			
 			#点
 			absolute_monarchy_CN_subtype = {can_be_randomly_selected = no color = { 255 216 0 } } #绝对君主制
@@ -1815,6 +1818,9 @@ ideologies = {
 			revolutionary_nationalism_subtype = {can_be_randomly_selected = no} #革命民族主义
 			natpop_chiangism_subtype = { can_be_randomly_selected = no }#蒋介石思想
 			natpop_new_live_movement_subtype = { can_be_randomly_selected = no }#新生活运动
+			natpop_esoteric_anarchism_subtype = { can_be_randomly_selected = no color = { 91 9 76 } }  #神秘无政府主义
+			naga_adore_subtype = { can_be_randomly_selected = no color = { 91 9 76 } }  #娜迦崇拜
+			phi_fa_adore_subtype = { can_be_randomly_selected = no color = { 91 9 76 } }  #天灵崇拜
 
 			
 

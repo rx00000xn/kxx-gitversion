@@ -22377,17 +22377,33 @@ focus = {
 
 		}
 	}
-
+	focus = {
+		id = BUL_small_cloud_and_big_rain
+		icon = GFX_goal_AUS_Coalition_Splits
+		cost = 3
+		x = 80
+		y = 19
+		available = {
+			has_country_flag = BUL_golden_horn
+		}
+		
+		completion_reward = {
+			country_event = bulgaria_foreign_events.17
+		}
+	}
 	################
 	## 	ZLATOROG  ##
 	################
-
 	focus = {
 		id = BUL_sound_of_golden_horn
 		icon = GFX_BUL_sound_of_golden_horn
 		cost = 3
-		x = 90
-		y = 20
+		relative_position_id = BUL_small_cloud_and_big_rain
+		x = 8
+		y = 1
+		prerequisite = {
+			focus = BUL_small_cloud_and_big_rain
+		}
 		available = {
 			has_country_flag = BUL_golden_horn
 		}
@@ -22403,184 +22419,42 @@ focus = {
 			
 		}
 	}
-
 	focus = {
-		id = BUL_righteous_blood_of_zagreus
-		icon = GFX_BUL_blood_of_zagreus
+		id = BUL_a_new_kind_titan_god
+		icon = GFX_goal_BUL_a_new_kind_titan_god
 		cost = 3
 		relative_position_id = BUL_sound_of_golden_horn
-		x = -5
+		x = 2
 		y = 1
+		available = {
+			
+		}
+		mutually_exclusive = {
+			focus = BUL_when_theosophy_meets_communism
+		}
 		prerequisite = {
 			focus = BUL_sound_of_golden_horn
 		}
-
 		completion_reward = {
-			add_ideas = BUL_when_golden_horn_sounds
-			swap_ideas = {
-				remove_idea = BUL_small_cloud_big_rain
-				add_idea = BUL_small_cloud_big_rain2
-			}
-		}
-	}
-
-	focus = {
-		id = BUL_economy_of_ash_soil
-		icon = GFX_BUL_economy_ash_soil
-		cost = 3
-		relative_position_id = BUL_righteous_blood_of_zagreus
-		x = -1
-		y = 1
-		prerequisite = {
-			focus = BUL_righteous_blood_of_zagreus
-		}
-		mutually_exclusive = {
-			focus = BUL_carnivals_lust_joy
-		}
-
-		completion_reward = {
-			swap_ideas = {
-				remove_idea = BUL_when_golden_horn_sounds
-				add_idea = BUL_when_golden_horn_sounds2
-			}
-			
-		}
-	}
-
-	focus = {
-		id = BUL_carnivals_lust_joy
-		icon = GFX_BUL_carnivals_lust_joy
-		cost = 3
-		relative_position_id = BUL_righteous_blood_of_zagreus
-		x = 1
-		y = 1
-		prerequisite = {
-			focus = BUL_righteous_blood_of_zagreus
-		}
-		mutually_exclusive = {
-			focus = BUL_economy_of_ash_soil
-		}
-		completion_reward = {
-			swap_ideas = {
-				remove_idea = BUL_when_golden_horn_sounds
-				add_idea = BUL_when_golden_horn_sounds7
-			}
-			
-		}
-	}
-	focus = {
-		id = BUL_search_for_immortality
-		icon = GFX_BUL_search_immortality
-		cost = 3
-		relative_position_id = BUL_economy_of_ash_soil
-		x = -2
-		y = 1
-		prerequisite = {
-			focus = BUL_economy_of_ash_soil
-		}
-
-		completion_reward = {
-			if = {
-				limit = {
-					has_idea = BUL_when_golden_horn_sounds2
-				}
-				swap_ideas = {
-					remove_idea = BUL_when_golden_horn_sounds2
-					add_idea = BUL_when_golden_horn_sounds3
-				}
-			}
-			if = {
-				limit = {
-					has_idea = BUL_when_golden_horn_sounds5
-				}
-				swap_ideas = {
-					remove_idea = BUL_when_golden_horn_sounds5
-					add_idea = BUL_when_golden_horn_sounds4
-				}
-			}
-			add_tech_bonus = {
-				bonus = 0.5
-				uses = 2
-				category = electronics
-			}
-			add_tech_bonus = {
-				bonus = 0.5
-				uses = 2
-				category = industry
-			}
-		}
-	}
-	focus = {
-		id = BUL_power_of_anarchobarbarianism
-		icon = GFX_BUL_anarcho_barbarism
-		cost = 3
-		relative_position_id = BUL_economy_of_ash_soil
-		x = 0
-		y = 1
-		prerequisite = {
-			focus = BUL_economy_of_ash_soil
-		}
-
-		completion_reward = {
+			country_event = bulgaria.25
 			add_popularity = {
-			    ideology = national_populist
+			  ideology = national_populist
 				popularity = 0.1
 			}
-			add_popularity = {
-			  ideology = totalist
-				popularity = 0.1
-			}
-			if = {
-				limit = {
-					has_idea = BUL_when_golden_horn_sounds2
-				}
-				swap_ideas = {
-					remove_idea = BUL_when_golden_horn_sounds2
-					add_idea = BUL_when_golden_horn_sounds5
-				}
-			}
-			if = {
-				limit = {
-					has_idea = BUL_when_golden_horn_sounds3
-				}
-				swap_ideas = {
-					remove_idea = BUL_when_golden_horn_sounds3
-					add_idea = BUL_when_golden_horn_sounds4
-				}
-			}
-		}
-	}
-	focus = {
-		id = BUL_glory_to_faust_torchbearer
-		icon = GFX_BUL_faust_torch_bearer
-		cost = 3
-		relative_position_id = BUL_search_for_immortality
-		x = 1
-		y = 1
-		prerequisite = {
-			focus = BUL_search_for_immortality
-		}
-		prerequisite = {
-			focus = BUL_power_of_anarchobarbarianism
-		}
-
-		completion_reward = {
-			add_research_slot = 1
-			swap_ideas = {
-				remove_idea = BUL_when_golden_horn_sounds4
-				add_idea = BUL_when_golden_horn_sounds6
-			}
+			add_stability = 0.1
+			add_ideas = BUL_titans_amogus
+			
 		}
 	}
 	focus = {
 		id = BUL_learn_from_gypsies
 		icon = GFX_BUL_learn_from_gypsies
 		cost = 3
-		relative_position_id = BUL_carnivals_lust_joy
-		x = 0
+		relative_position_id = BUL_a_new_kind_titan_god
+		x = -1
 		y = 1
 		prerequisite = {
-			focus = BUL_carnivals_lust_joy
+			focus = BUL_a_new_kind_titan_god
 		}
 
 		completion_reward = {
@@ -22612,169 +22486,14 @@ focus = {
 		}
 	}
 	focus = {
-		id = BUL_thirst_bodily_liberation
-		icon = GFX_BUL_thirst_for_liberation
-		cost = 3
-		relative_position_id = BUL_carnivals_lust_joy
-		x = 2
-		y = 1
-		prerequisite = {
-			focus = BUL_carnivals_lust_joy
-		}
-
-		completion_reward = {
-			if = {
-				limit = {
-					has_idea = BUL_when_golden_horn_sounds8
-				}
-				swap_ideas = {
-					remove_idea = BUL_when_golden_horn_sounds8
-					add_idea = BUL_when_golden_horn_sounds9
-				}
-			}
-			if = {
-				limit = {
-					has_idea = BUL_when_golden_horn_sounds7
-				}
-				swap_ideas = {
-					remove_idea = BUL_when_golden_horn_sounds7
-					add_idea = BUL_when_golden_horn_sounds10
-				}
-			}
-		}
-	}
-	focus = {
-		id = BUL_villages_cities
-		icon = GFX_BUL_alliance_villages_and_cities
-		cost = 3
-		relative_position_id = BUL_learn_from_gypsies
-		x = 1
-		y = 1
-		prerequisite = {
-			focus = BUL_learn_from_gypsies
-		}
-		prerequisite = {
-			focus = BUL_thirst_bodily_liberation
-		}
-
-		completion_reward = {
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = arms_factory
-					level = 3
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = industrial_complex
-					level = 3
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-				}
-			}
-			random_owned_controlled_state = {
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-				}
-			}
-			add_resource = {
-			    type = steel
-			    amount = 20
-			    state = 48
-			}
-		}
-	}
-	focus = {
-		id = BUL_peace_heaven_earth
-		icon = GFX_BUL_between_heaven_and_earth
-		cost = 3
-		relative_position_id = BUL_power_of_anarchobarbarianism
-		x = 1
-		y = 1
-		prerequisite = {
-			focus = BUL_power_of_anarchobarbarianism
-			focus = BUL_learn_from_gypsies
-		}
-
-		completion_reward = {
-			remove_ideas = BUL_small_cloud_big_rain2
-		}
-	}
-	focus = {
-		id = BUL_blessing_of_dyonisus
-		icon = GFX_BUL_blessing_of_dyonisus
-		cost = 3
-		relative_position_id = BUL_sound_of_golden_horn
-		x = 3
-		y = 1
-		prerequisite = {
-			focus = BUL_sound_of_golden_horn
-		}
-		
-
-		completion_reward = {
-			swap_ideas = {
-				remove_idea = BUL_watchful_eye
-				add_idea = BUL_watchful_eye2
-			}
-			
-		}
-	}
-	focus = {
-		id = BUL_brothers_of_vseslavia
-		icon = GFX_BUL_vseslavia
-		cost = 3
-		relative_position_id = BUL_blessing_of_dyonisus
-		x = 0
-		y = 1
-		prerequisite = {
-			focus = BUL_blessing_of_dyonisus
-		}
-	
-		completion_reward = {
-			
-		}
-	}
-	focus = {
-		id = BUL_knowledge_of_india_and_slavs
-		icon = GFX_BUL_knowledge_of_india
-		cost = 3
-		relative_position_id = BUL_blessing_of_dyonisus
-		x = -2
-		y = 1
-		prerequisite = {
-			focus = BUL_blessing_of_dyonisus
-		}
-		
-
-		completion_reward = {
-			
-			add_tech_bonus = {
-				bonus = 0.5
-				uses = 2
-				category = infantry_weapons
-			}
-			custom_effect_tooltip = BUL_moderate_influence_tooltip
-		}
-	}
-	focus = {
 		id = BUL_new_face_of_paganism
-		icon = GFX_BUL_primitive_paganism
+		icon = GFX_goal_RUS_paganism
 		cost = 3
-		relative_position_id = BUL_blessing_of_dyonisus
-		x = 2
+		relative_position_id = BUL_a_new_kind_titan_god
+		x = 1
 		y = 1
 		prerequisite = {
-			focus = BUL_blessing_of_dyonisus
+			focus = BUL_a_new_kind_titan_god
 		}
 		
 		completion_reward = {
@@ -22791,7 +22510,7 @@ focus = {
 		id = BUL_iconoclastic_overdrive
 		icon = GFX_BUL_iconoclast_overdrive
 		cost = 3
-		relative_position_id = BUL_blessing_of_dyonisus
+		relative_position_id = BUL_a_new_kind_titan_god
 		x = 0
 		y = 2
 		prerequisite = {
@@ -22828,14 +22547,14 @@ focus = {
 		}
 	}
 	focus = {
-		id = BUL_against_the_very_god_of_west
-		icon = GFX_BUL_against_gods_of_west
+		id = NBUL_against_the_very_god_of_west
+		icon = GFX_goal_SPR_churchburn
 		cost = 3
-		relative_position_id = BUL_iconoclastic_overdrive
-		x = 0
-		y = 1
+		relative_position_id = BUL_a_new_kind_titan_god
+		x = 2
+		y = 2
 		prerequisite = {
-			focus = BUL_iconoclastic_overdrive
+			focus = BUL_new_face_of_paganism
 		}
 		available = {
 			owns_state = 107
@@ -22863,17 +22582,430 @@ focus = {
 		}
 	}
 	focus = {
-		id = BUL_haemimontus_invicta
-		icon = GFX_BUL_heamimontus_invicta
+		id = BUL_glory_to_faust_torchbearer
+		icon = GFX_BUL_faust_torch_bearer
+		cost = 3
+		relative_position_id = BUL_a_new_kind_titan_god
+		x = 1
+		y = 3
+		prerequisite = {
+			focus = BUL_iconoclastic_overdrive
+		}
+		prerequisite = {
+			focus = NBUL_against_the_very_god_of_west
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+			swap_ideas = {
+				remove_idea = BUL_when_golden_horn_sounds4
+				add_idea = BUL_when_golden_horn_sounds6
+			}
+		}
+	}
+	focus = {
+		id = BUL_thirst_bodily_liberation
+		icon = GFX_goal_ALB_Catharsis
+		cost = 3
+		relative_position_id = BUL_a_new_kind_titan_god
+		x = 0
+		y = 6
+		prerequisite = {
+			focus = BUL_glory_to_faust_torchbearer
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = BUL_when_golden_horn_sounds8
+				}
+				swap_ideas = {
+					remove_idea = BUL_when_golden_horn_sounds8
+					add_idea = BUL_when_golden_horn_sounds9
+				}
+			}
+			if = {
+				limit = {
+					has_idea = BUL_when_golden_horn_sounds7
+				}
+				swap_ideas = {
+					remove_idea = BUL_when_golden_horn_sounds7
+					add_idea = BUL_when_golden_horn_sounds10
+				}
+			}
+		}
+	}
+	focus = {
+		id = BUL_peace_heaven_earth
+		icon = GFX_BBR_International_Peace_movement
+		cost = 3
+		relative_position_id = BUL_sound_of_golden_horn
+		x = 0
+		y = 7
+		prerequisite = {
+			focus = NBUL_search_for_immortality
+		}
+		prerequisite = {
+			focus = NBUL_blessing_of_dyonisus
+		}
+		completion_reward = {
+			remove_ideas = BUL_small_cloud_big_rain2
+		}
+	}
+	focus = {
+		id = BUL_when_theosophy_meets_communism
+		icon = GFX_goal_BUL_when_theosophy_meets_communism
+		cost = 3
+		relative_position_id = BUL_sound_of_golden_horn
+		x = -2
+		y = 1
+		available = {
+			
+		}
+		mutually_exclusive = {
+			focus = BUL_a_new_kind_titan_god
+		}
+		prerequisite = {
+			focus = BUL_sound_of_golden_horn
+		}
+		completion_reward = {
+			set_politics = {
+				ruling_party = totalist
+				elections_allowed = no
+			}
+			set_cosmetic_tag = BUL_accelerationism_totalist
+		}
+	}
+	focus = {
+		id = BUL_return_of_bogmils
+		icon = GFX_goal_BUL_return_of_bogmils
+		cost = 3
+		relative_position_id = BUL_when_theosophy_meets_communism
+		x = -1
+		y = 1
+		available = {
+			
+		}
+		prerequisite = {
+			focus = BUL_when_theosophy_meets_communism
+		}
+		completion_reward = {
+			country_event = bulgaria.25
+			add_popularity = {
+			  ideology = national_populist
+				popularity = 0.1
+			}
+			add_stability = 0.1
+			add_ideas = BUL_titans_amogus
+			
+		}
+	}
+	focus = {
+		id = BUL_the_bulgarianess
+		icon = GFX_goal_BUL_dream_of_greatness
+		cost = 3
+		relative_position_id = BUL_when_theosophy_meets_communism
+		x = 1
+		y = 1
+		available = {
+			
+		}
+		prerequisite = {
+			focus = BUL_when_theosophy_meets_communism
+		}
+		completion_reward = {
+			country_event = bulgaria.25
+			add_popularity = {
+			  ideology = national_populist
+				popularity = 0.1
+			}
+			add_stability = 0.1
+			add_ideas = BUL_titans_amogus
+			
+		}
+	}
+	focus = {
+		id = BUL_communalism_of_our_ancestors
+		icon = GFX_goal_SKM_From_Feudalism_Council_Communalism
+		cost = 3
+		relative_position_id = BUL_sound_of_golden_horn
+		x = -1
+		y = 4
+		available = {
+			
+		}
+		mutually_exclusive = {
+			focus = BUL_carnivals_lust_joy
+		}
+		prerequisite = {
+			focus = BUL_the_bulgarianess
+			focus = BUL_learn_from_gypsies
+		}
+		completion_reward = {
+			country_event = bulgaria.25
+			add_popularity = {
+			  ideology = national_populist
+				popularity = 0.1
+			}
+			add_stability = 0.1
+			add_ideas = BUL_titans_amogus
+			
+		}
+	}
+	
+	focus = {
+		id = BUL_carnivals_lust_joy
+		icon = GFX_BUL_carnivals_lust_joy
+		cost = 3
+		relative_position_id = BUL_sound_of_golden_horn
+		x = 1
+		y = 4
+		prerequisite = {
+			focus = BUL_the_bulgarianess
+			focus = BUL_learn_from_gypsies
+		}
+		mutually_exclusive = {
+			focus = BUL_communalism_of_our_ancestors
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = BUL_when_golden_horn_sounds
+				add_idea = BUL_when_golden_horn_sounds7
+			}
+			
+		}
+	}
+	focus = {
+		id = BUL_purge_christianty_beast
+		icon = GFX_goal_NOR_disband_the_state_church
 		cost = 3
 		relative_position_id = BUL_sound_of_golden_horn
 		x = 0
 		y = 5
+		available = {
+			
+		}
+		mutually_exclusive = {
+			focus = BUL_call_upon_brothers
+		}
+		prerequisite = {
+			focus = BUL_communalism_of_our_ancestors
+			focus = BUL_carnivals_lust_joy
+		}
+		completion_reward = {
+			country_event = bulgaria.25
+			add_popularity = {
+			  ideology = national_populist
+				popularity = 0.1
+			}
+			add_stability = 0.1
+			add_ideas = BUL_titans_amogus
+			
+		}
+	}
+	focus = {
+		id = NBUL_search_for_immortality
+		icon = GFX_goal_AUS_Geist_Ariosophie
+		cost = 3
+		relative_position_id = BUL_sound_of_golden_horn
+		x = -1
+		y = 6
+		available = {
+			
+		}
+		
+		prerequisite = {
+			focus = BUL_purge_christianty_beast
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = BUL_when_golden_horn_sounds2
+				}
+				swap_ideas = {
+					remove_idea = BUL_when_golden_horn_sounds2
+					add_idea = BUL_when_golden_horn_sounds3
+				}
+			}
+			if = {
+				limit = {
+					has_idea = BUL_when_golden_horn_sounds5
+				}
+				swap_ideas = {
+					remove_idea = BUL_when_golden_horn_sounds5
+					add_idea = BUL_when_golden_horn_sounds4
+				}
+			}
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = electronics
+			}
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = industry
+			}
+		}
+	}
+	focus = {
+		id = NBUL_blessing_of_dyonisus
+		icon = GFX_goal_FRA_dionysian_excuberance
+		cost = 3
+		relative_position_id = BUL_sound_of_golden_horn
+		x = 1
+		y = 6
+		prerequisite = {
+			focus = BUL_purge_christianty_beast
+		}
+		
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = BUL_watchful_eye
+				add_idea = BUL_watchful_eye2
+			}
+			
+		}
+	}
+	focus = {
+		id = BUL_art_symbolism
+		icon = GFX_BBR_art_centers
+		cost = 3
+		relative_position_id = BUL_when_theosophy_meets_communism
+		x = -2
+		y = 2
+		available = {
+			
+		}
+		prerequisite = {
+			focus = BUL_return_of_bogmils
+		}
+		completion_reward = {
+			country_event = bulgaria.25
+			add_popularity = {
+			  ideology = national_populist
+				popularity = 0.1
+			}
+			add_stability = 0.1
+			add_ideas = BUL_titans_amogus
+			
+		}
+	}
+	focus = {
+		id = BUL_plant_golden_seeds
+		icon = GFX_goal_AUS_agrarian_means
+		cost = 3
+		relative_position_id = BUL_when_theosophy_meets_communism
+		x = 0
+		y = 2
+		available = {
+			
+		}
+		prerequisite = {
+			focus = BUL_return_of_bogmils
+		}
+		completion_reward = {
+			country_event = bulgaria.25
+			add_popularity = {
+			  ideology = national_populist
+				popularity = 0.1
+			}
+			add_stability = 0.1
+			add_ideas = BUL_titans_amogus
+			
+		}
+	}
+	focus = {
+		id = BUL_new_byzantinism_bleeds
+		icon = GFX_goal_BUL_new_byzantinism_bleeds
+		cost = 3
+		relative_position_id = BUL_when_theosophy_meets_communism
+		x = -1
+		y = 3
+		available = {
+			
+		}
+		prerequisite = {
+			focus = BUL_art_symbolism
+		}
+		prerequisite = {
+			focus = BUL_plant_golden_seeds
+		}
+		completion_reward = {
+			country_event = bulgaria.25
+			add_popularity = {
+			  ideology = national_populist
+				popularity = 0.1
+			}
+			add_stability = 0.1
+			add_ideas = BUL_titans_amogus
+			
+		}
+	}
+	focus = {
+		id = BUL_prophet_of_golden_bird
+		icon = GFX_RUS_Revive_National_Identity
+		cost = 3
+		relative_position_id = BUL_when_theosophy_meets_communism
+		x = 0
+		y = 6
+		available = {
+			
+		}
+		prerequisite = {
+			focus = BUL_new_byzantinism_bleeds
+		}
+		
+		completion_reward = {
+			country_event = bulgaria.25
+			add_popularity = {
+			  ideology = national_populist
+				popularity = 0.1
+			}
+			add_stability = 0.1
+			add_ideas = BUL_titans_amogus
+			
+		}
+	}
+	focus = {
+		id = BUL_arise_power_anarchobarabrianism
+		icon = GFX_goal_CSA_Anarchism_Capone_Clearly_Wanted
+		cost = 3
+		relative_position_id = BUL_when_theosophy_meets_communism
+		x = 1
+		y = 7
+		available = {
+			
+		}
+		prerequisite = {
+			focus = BUL_prophet_of_golden_bird
+		}
+		prerequisite = {
+			focus = BUL_peace_heaven_earth
+		}
+		completion_reward = {
+			country_event = bulgaria.25
+			add_popularity = {
+			  ideology = national_populist
+				popularity = 0.1
+			}
+			add_stability = 0.1
+			add_ideas = BUL_titans_amogus
+			
+		}
+	}
+	focus = {
+		id = BUL_haemimontus_invicta
+		icon = GFX_BUL_heamimontus_invicta
+		cost = 3
+		relative_position_id = BUL_a_new_kind_titan_god
+		x = -1
+		y = 7
 		prerequisite = {
 			focus = BUL_peace_heaven_earth
 		}
 		prerequisite = {
-			focus = BUL_against_the_very_god_of_west
+			focus = BUL_thirst_bodily_liberation
 		}
 
 		completion_reward = {
@@ -22904,13 +23036,17 @@ focus = {
 	################
 	#### DEUNOV ####
 	################
-
+	
 	focus = {
 		id = BUL_touch_grass
 		icon = GFX_BUL_touch_grass
 		cost = 3
-		x = 75
-		y = 20
+		relative_position_id = BUL_small_cloud_and_big_rain
+		x = -8
+		y = 1
+		prerequisite = {
+			focus = BUL_small_cloud_and_big_rain
+		}
 		available = {
 			has_country_flag = BUL_spawn_of_satan
 		}
@@ -22926,17 +23062,334 @@ focus = {
 			
 		}
 	}
+	
 	focus = {
-		id = BUL_everyone_should_thank_god
-		icon = GFX_BUL_everyone_should_thank_god
+		id = BUL_into_the_stars
+		icon = GFX_goal_NEE_Fly_Me_To_Moon
 		cost = 3
 		relative_position_id = BUL_touch_grass
-		x = 0
+		x = -2
 		y = 1
+		available = {
+			
+		}
+		mutually_exclusive = {
+			focus = BUL_under_the_sun
+		}
 		prerequisite = {
 			focus = BUL_touch_grass
 		}
+		completion_reward = {
+			set_politics = {
+				ruling_party = syndicalist
+				elections_allowed = no
+			}
+			add_radsoc_to_coalition = yes
+		}
+	}
+	focus = {
+		id = BUL_god_in_us
+		icon = GFX_ITA_christbol
+		cost = 3
+		relative_position_id = BUL_touch_grass
+		x = -1
+		y = 2
+		available = {
+			
+		}
+		prerequisite = {
+			focus = BUL_into_the_stars
+		}
+		completion_reward = {
+			add_popularity = {
+			  ideology = radical_socialist
+				popularity = 0.2
+			}
+			add_stability = 0.1
+			add_war_support = -0.5
+			add_ideas = BUL_dance_with_world
+			
+		}
+	}
+	focus = {
+		id = BUL_syndicate_for_common_good
+		icon = GFX_goal_AUS_Meld_Austromarxism_Syndicalism
+		cost = 3
+		relative_position_id = BUL_touch_grass
+		x = -1
+		y = 4
+		available = {
+			
+		}
+		mutually_exclusive = {
+			focus = BUL_gods_plan_economy
+		}
+		prerequisite = {
+			focus = BUL_god_in_us
+			focus = NBUL_everyone_should_thank_god
+		}
+		completion_reward = {
+			add_popularity = {
+			  ideology = radical_socialist
+				popularity = 0.2
+			}
+			add_stability = 0.1
+			add_war_support = -0.5
+			add_ideas = BUL_dance_with_world
+			
+		}
+	}
+	focus = {
+		id = BUL_gods_plan_economy
+		icon = GFX_goal_COR_church_economy
+		cost = 3
+		relative_position_id = BUL_touch_grass
+		x = 1
+		y = 4
+		available = {
+			
+		}
+		prerequisite = {
+			focus = BUL_god_in_us
+			focus = NBUL_everyone_should_thank_god
+		}
+		mutually_exclusive = {
+			focus = BUL_syndicate_for_common_good
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = BUL_opening_the_eyes
+				add_idea = BUL_opening_the_eyes2
+			}
+			add_popularity = {
+			    ideology = radical_socialist
+				popularity = 0.1
+			}
+			add_popularity = {
+			    ideology = syndicalist
+				popularity = 0.05
+			}
+			add_popularity = {
+			    ideology = social_democrat
+				popularity = 0.05
+			}
+			
+		}
+	}
+	focus = {
+		id = BUL_all_classes_under_pravda
+		icon = GFX_goal_NFA_Republican_National_Corporatism
+		cost = 3
+		relative_position_id = BUL_touch_grass
+		x = 0
+		y = 5
+		available = {
+			
+		}
+		prerequisite = {
+			focus = BUL_syndicate_for_common_good
+			focus = BUL_gods_plan_economy
+		}
+		completion_reward = {
+			add_ideas = BUL_opening_the_eyes
+		}
+	}
+	focus = {
+		id = NBUL_you_cannot_talk_with_monsters
+		icon = GFX_goal_POL_Ramparts_Clarus_Mons
+		cost = 3
+		relative_position_id = BUL_touch_grass
+		x = -1
+		y = 6
+		prerequisite = {
+			focus = BUL_all_classes_under_pravda
+		}
+		available = {
+			NOT = {
+				has_war_with = YUG
+			}
+			NOT = {
+				YUG = {
+					has_government = reactionism
+				}
+			}
+		}
+		bypass = {
+			owns_state = 107
+		}
 
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = BUL_watchful_eye
+				add_idea = BUL_watchful_eye2
+			}
+			
+			
+		}
+	}
+	focus = {
+		id = BUL_anarchism_appeals
+		icon = GFX_goal_FRA_Anarchist_Mobilization_Techniques
+		cost = 3
+		relative_position_id = BUL_into_the_stars
+		x = -1
+		y = 1
+		available = {
+			
+		}
+		prerequisite = {
+			focus = BUL_into_the_stars
+		}
+		completion_reward = {
+			add_popularity = {
+			  ideology = radical_socialist
+				popularity = 0.2
+			}
+			add_stability = 0.1
+			add_war_support = -0.5
+			add_ideas = BUL_dance_with_world
+		}
+	}
+	focus = {
+		id = BUL_spritual_revolution
+		icon = GFX_goal_GUA_Spiritual_Socialism
+		cost = 3
+		relative_position_id = BUL_into_the_stars
+		x = -2
+		y = 2
+		available = {
+			
+		}
+		prerequisite = {
+			focus = BUL_anarchism_appeals
+		}
+		completion_reward = {
+			add_popularity = {
+			  ideology = radical_socialist
+				popularity = 0.2
+			}
+			add_stability = 0.1
+			add_war_support = -0.5
+			add_ideas = BUL_dance_with_world
+			
+		}
+	}
+	focus = {
+		id = BUL_lessons_anthroposophy
+		icon = GFX_goal_BUL_lessons_anthroposophy
+		cost = 3
+		relative_position_id = BUL_into_the_stars
+		x = 0
+		y = 2
+		available = {
+			
+		}
+		prerequisite = {
+			focus = BUL_anarchism_appeals
+		}
+		completion_reward = {
+			add_popularity = {
+			  ideology = radical_socialist
+				popularity = 0.2
+			}
+			add_stability = 0.1
+			add_war_support = -0.5
+			add_ideas = BUL_dance_with_world
+			
+		}
+	}
+	focus = {
+		id = BUL_esotericism_fusion
+		icon = GFX_goal_COL_Esotericism
+		cost = 3
+		relative_position_id = BUL_into_the_stars
+		x = -1
+		y = 3
+		available = {
+			
+		}
+		prerequisite = {
+			focus = BUL_spritual_revolution
+		}
+		prerequisite = {
+			focus = BUL_lessons_anthroposophy
+		}
+		completion_reward = {
+			add_popularity = {
+			  ideology = radical_socialist
+				popularity = 0.2
+			}
+			add_stability = 0.1
+			add_war_support = -0.5
+			add_ideas = BUL_dance_with_world
+			
+		}
+	}
+	focus = {
+		id = BUL_provody_of_stars
+		icon = GFX_goal_LIC_stars
+		cost = 3
+		relative_position_id = BUL_into_the_stars
+		x = 0
+		y = 6
+		available = {
+			
+		}
+		prerequisite = {
+			focus = BUL_esotericism_fusion
+		}
+		
+		completion_reward = {
+			add_popularity = {
+			  ideology = radical_socialist
+				popularity = 0.2
+			}
+			add_stability = 0.1
+			add_war_support = -0.5
+			add_ideas = BUL_dance_with_world
+			
+		}
+	}
+	focus = {
+		id = BUL_under_the_sun
+		icon = GFX_goal_CEA_place_in_the_sun
+		cost = 3
+		relative_position_id = BUL_touch_grass
+		x = 2
+		y = 1
+		available = {
+			
+		}
+		mutually_exclusive = {
+			focus = BUL_into_the_stars
+		}
+		prerequisite = {
+			focus = BUL_touch_grass
+		}
+		completion_reward = {
+			add_popularity = {
+			  ideology = radical_socialist
+				popularity = 0.2
+			}
+			add_stability = 0.1
+			add_war_support = -0.5
+			add_ideas = BUL_dance_with_world
+			
+		}
+	}
+	focus = {
+		id = NBUL_everyone_should_thank_god
+		icon = GFX_goal_NYC_Under_God
+		cost = 3
+		relative_position_id = BUL_touch_grass
+		x = 1
+		y = 2
+		available = {
+			
+		}
+		prerequisite = {
+			focus = BUL_under_the_sun
+		}
 		completion_reward = {
 			country_event = bulgaria.28
 			swap_ideas = {
@@ -22982,14 +23435,69 @@ focus = {
 		}
 	}
 	focus = {
-		id = BUL_demons_out_of_church
-		icon = GFX_BUL_drive_out_demons
+		id = NBUL_state_build_on_altruism
+		icon = GFX_goal_NFA_People_Corporatism
 		cost = 3
-		relative_position_id = BUL_everyone_should_thank_god
-		x = -1
+		relative_position_id = BUL_under_the_sun
+		x = 1
 		y = 1
 		prerequisite = {
-			focus = BUL_all_classes_under_pravda
+			focus = BUL_under_the_sun
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = BUL_opening_the_eyes2
+				add_idea = BUL_opening_the_eyes3
+			}
+		}
+	}
+	focus = {
+		id = NBUL_protest_unfair_privilege
+		icon = GFX_goal_ALB_Reinforce_Syndicalist_System
+		cost = 3
+		relative_position_id = BUL_under_the_sun
+		x = 2
+		y = 2
+		prerequisite = {
+			focus = NBUL_state_build_on_altruism
+		}
+
+		completion_reward = {
+			48 = {
+				remove_building = {
+					type = industrial_complex
+					level = 2
+				}
+			}
+			add_resource = {
+			    type = steel
+			    amount = 12
+			    state = 48
+			}
+			48 = {
+				remove_building = {
+					type = infrastructure
+					level = 2
+				}
+			}
+			212 = {
+				remove_building = {
+					type = infrastructure
+					level = 1
+				}
+			}
+		}
+	}
+	focus = {
+		id = BUL_demons_out_of_church
+		icon = GFX_goal_COR_burn_church
+		cost = 3
+		relative_position_id = BUL_under_the_sun
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = NBUL_state_build_on_altruism
 		}
 
 		completion_reward = {
@@ -23046,15 +23554,17 @@ focus = {
 	}
 	focus = {
 		id = BUL_white_sharia
-		icon = GFX_BUL_no_peace_without_sword
+		icon = GFX_goal_BAN_army_of_peace
 		cost = 3
-		relative_position_id = BUL_everyone_should_thank_god
+		relative_position_id = BUL_under_the_sun
 		x = 1
-		y = 1
+		y = 3
 		prerequisite = {
-			focus = BUL_you_cannot_talk_with_monsters
+			focus = BUL_demons_out_of_church
 		}
-
+		prerequisite = {
+			focus = NBUL_protest_unfair_privilege
+		}
 		completion_reward = {
 			if = {
 				limit = {
@@ -23103,22 +23613,23 @@ focus = {
 			}
 		}
 	}
+	
+	
+	
 	focus = {
-		id = BUL_united_in_brotherhood
-		icon = GFX_BUL_united_in_brotherhood
+		id = NBUL_united_in_brotherhood
+		icon = GFX_SRI_fascist_brotherhood
 		cost = 3
-		relative_position_id = BUL_everyone_should_thank_god
+		relative_position_id = BUL_touch_grass
 		x = 0
-		y = 2
+		y = 7
 		prerequisite = {
-			focus = BUL_everyone_should_thank_god
+			focus = NBUL_you_cannot_talk_with_monsters
 		}
 		prerequisite = {
-			focus = BUL_demons_out_of_church
+			focus = NBUL_spiritual_pan_thracia
 		}
-		prerequisite = {
-			focus = BUL_white_sharia
-		}
+		
 		available = {
 			owns_state = 107
 		}
@@ -23130,166 +23641,37 @@ focus = {
 			
 		}
 	}
+	
+	
+	
+	
+	
 	focus = {
-		id = BUL_all_classes_under_pravda
-		icon = GFX_BUL_all_classes_one_pravda
+		id = NBUL_spiritual_pan_thracia
+		icon = GFX_focus_BUL_bulgaria_on_the_three_seas
 		cost = 3
 		relative_position_id = BUL_touch_grass
-		x = -4
-		y = 1
-		prerequisite = {
-			focus = BUL_touch_grass
-		}
-
-		completion_reward = {
-			add_ideas = BUL_opening_the_eyes
-		}
-	}
-	focus = {
-		id = BUL_gods_plan_economy
-		icon = GFX_BUL_gods_plan
-		cost = 3
-		relative_position_id = BUL_all_classes_under_pravda
-		x = 0
-		y = 1
+		x = 1
+		y = 6
 		prerequisite = {
 			focus = BUL_all_classes_under_pravda
 		}
+		
+		
 
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = BUL_opening_the_eyes
-				add_idea = BUL_opening_the_eyes2
-			}
-			add_popularity = {
-			    ideology = radical_socialist
-				popularity = 0.1
-			}
-			add_popularity = {
-			    ideology = syndicalist
-				popularity = 0.05
-			}
-			add_popularity = {
-			    ideology = social_democrat
-				popularity = 0.05
-			}
 			
 		}
 	}
 	focus = {
-		id = BUL_state_build_on_altruism
-		icon = GFX_BUL_state_build_on_altruism
+		id = NBUL_calm_inner_beast
+		icon = GFX_splendid_isolation_in_africa
 		cost = 3
-		relative_position_id = BUL_gods_plan_economy
-		x = -1
-		y = 1
-		prerequisite = {
-			focus = BUL_gods_plan_economy
-		}
-
-		completion_reward = {
-			swap_ideas = {
-				remove_idea = BUL_opening_the_eyes2
-				add_idea = BUL_opening_the_eyes3
-			}
-		}
-	}
-	focus = {
-		id = BUL_protest_unfair_privilege
-		icon = GFX_BUL_protest_unfair_privilege
-		cost = 3
-		relative_position_id = BUL_gods_plan_economy
-		x = 1
-		y = 1
-		prerequisite = {
-			focus = BUL_gods_plan_economy
-		}
-
-		completion_reward = {
-			48 = {
-				remove_building = {
-					type = industrial_complex
-					level = 2
-				}
-			}
-			add_resource = {
-			    type = steel
-			    amount = 12
-			    state = 48
-			}
-			48 = {
-				remove_building = {
-					type = infrastructure
-					level = 2
-				}
-			}
-			212 = {
-				remove_building = {
-					type = infrastructure
-					level = 1
-				}
-			}
-		}
-	}
-	focus = {
-		id = BUL_you_cannot_talk_with_monsters
-		icon = GFX_BUL_cant_talk_with_monsters
-		cost = 3
-		relative_position_id = BUL_touch_grass
-		x = 4
-		y = 1
-		prerequisite = {
-			focus = BUL_touch_grass
-		}
-		available = {
-			NOT = {
-				has_war_with = YUG
-			}
-			NOT = {
-				YUG = {
-					has_government = reactionism
-				}
-			}
-		}
-		bypass = {
-			owns_state = 107
-		}
-
-		completion_reward = {
-			swap_ideas = {
-				remove_idea = BUL_watchful_eye
-				add_idea = BUL_watchful_eye2
-			}
-			
-			
-		}
-	}
-	focus = {
-		id = BUL_spiritual_pan_thracia
-		icon = GFX_BUL_spiritual_pan_thracia
-		cost = 3
-		relative_position_id = BUL_you_cannot_talk_with_monsters
+		relative_position_id = BUL_under_the_sun
 		x = 0
-		y = 1
+		y = 6
 		prerequisite = {
-			focus = BUL_you_cannot_talk_with_monsters
-		}
-		
-		
-
-		completion_reward = {
-			
-		}
-	}
-	focus = {
-		id = BUL_calm_inner_beast
-		icon = GFX_BUL_calm_inner_beast
-		cost = 3
-		relative_position_id = BUL_spiritual_pan_thracia
-		x = -1
-		y = 1
-		prerequisite = {
-			focus = BUL_spiritual_pan_thracia
+			focus = BUL_white_sharia
 		}
 		
 
@@ -23301,13 +23683,15 @@ focus = {
 		id = BUL_dance_with_world_focus
 		icon = GFX_BUL_dance_with_the_world
 		cost = 3
-		relative_position_id = BUL_spiritual_pan_thracia
+		relative_position_id = BUL_into_the_stars
 		x = 1
-		y = 1
+		y = 7
 		prerequisite = {
-			focus = BUL_spiritual_pan_thracia
+			focus = NBUL_united_in_brotherhood
 		}
-	
+		prerequisite = {
+			focus = BUL_provody_of_stars
+		}
 
 		completion_reward = {
 			
@@ -23331,13 +23715,15 @@ focus = {
 		id = BUL_solar_temple_over_earth
 		icon = GFX_BUL_solar_temple_over_earth
 		cost = 3
-		relative_position_id = BUL_united_in_brotherhood
-		x = 0
-		y = 1
+		relative_position_id = BUL_under_the_sun
+		x = -1
+		y = 7
 		prerequisite = {
-			focus = BUL_united_in_brotherhood
+			focus = NBUL_united_in_brotherhood
 		}
-
+		prerequisite = {
+			focus = NBUL_calm_inner_beast
+		}
 		completion_reward = {
 
 			country_event = bulgaria.29
@@ -23359,6 +23745,361 @@ focus = {
 					instant_build = yes
 				}
 			}
+			
+		}
+	}
+	focus = {
+		id = BUL_path_to_shangrila
+		icon = GFX_goal_TIB_Temper_Channel_Fire_Birds_Flame
+		cost = 3
+		relative_position_id = BUL_small_cloud_and_big_rain
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = BUL_small_cloud_and_big_rain
+		}
+		available = {
+			has_country_flag = BUL_golden_horn
+		}
+		
+		completion_reward = {
+			country_event = bulgaria.25
+			add_popularity = {
+			  ideology = national_populist
+				popularity = 0.1
+			}
+			add_stability = 0.1
+			add_ideas = BUL_titans_amogus
+			
+		}
+	}
+	
+	focus = {
+		id = BUL_art_society
+		icon = GFX_goal_TIB_Spiritual_Healing_Man_Nature
+		cost = 3
+		relative_position_id = BUL_path_to_shangrila
+		x = 0
+		y = 1
+		available = {
+			
+		}
+		prerequisite = {
+			focus = BUL_path_to_shangrila
+		}
+		completion_reward = {
+			country_event = bulgaria.25
+			add_popularity = {
+			  ideology = national_populist
+				popularity = 0.1
+			}
+			add_stability = 0.1
+			add_ideas = BUL_titans_amogus
+			
+		}
+	}
+	focus = {
+		id = BUL_utopia_combine_science_religion
+		icon = GFX_goal_CSA_Technocracy_Committee
+		cost = 3
+		relative_position_id = BUL_path_to_shangrila
+		x = -1
+		y = 2
+		available = {
+			
+		}
+		prerequisite = {
+			focus = BUL_art_society
+		}
+		completion_reward = {
+			country_event = bulgaria.25
+			add_popularity = {
+			  ideology = national_populist
+				popularity = 0.1
+			}
+			add_stability = 0.1
+			add_ideas = BUL_titans_amogus
+			
+		}
+	}
+	focus = {
+		id = BUL_spirit_in_everywhere
+		icon = GFX_goal_TIB_Peaceful_Reformation_Guided_Piety
+		cost = 3
+		relative_position_id = BUL_path_to_shangrila
+		x = 1
+		y = 2
+		available = {
+			
+		}
+		prerequisite = {
+			focus = BUL_art_society
+		}
+		completion_reward = {
+			country_event = bulgaria.25
+			add_popularity = {
+			  ideology = national_populist
+				popularity = 0.1
+			}
+			add_stability = 0.1
+			add_ideas = BUL_titans_amogus
+			
+		}
+	}
+	focus = {
+		id = BUL_orient_wisdom_of_roerich
+		icon = GFX_goal_TIB_Roerichs_Path_Shangri_La
+		cost = 3
+		relative_position_id = BUL_path_to_shangrila
+		x = 0
+		y = 3
+		available = {
+			
+		}
+		prerequisite = {
+			focus = BUL_utopia_combine_science_religion
+		}
+		prerequisite = {
+			focus = BUL_spirit_in_everywhere
+		}
+		completion_reward = {
+			country_event = bulgaria.25
+			add_popularity = {
+			  ideology = national_populist
+				popularity = 0.1
+			}
+			add_stability = 0.1
+			add_ideas = BUL_titans_amogus
+			
+		}
+	}
+	focus = {
+		id = BUL_practice_idealism_peace_reforms
+		icon = GFX_goal_TIB_Peace_With_Ganden_Phodrang
+		cost = 3
+		relative_position_id = BUL_path_to_shangrila
+		x = 0
+		y = 4
+		available = {
+			
+		}
+		prerequisite = {
+			focus = BUL_orient_wisdom_of_roerich
+		}
+		completion_reward = {
+			country_event = bulgaria.25
+			add_popularity = {
+			  ideology = national_populist
+				popularity = 0.1
+			}
+			add_stability = 0.1
+			add_ideas = BUL_titans_amogus
+			
+		}
+	}
+	focus = {
+		id = BUL_harmony_and_peaceful
+		icon = GFX_goal_TIB_Karma_Other_Absolute_Cosmic_Laws
+		cost = 3
+		relative_position_id = BUL_path_to_shangrila
+		x = 0
+		y = 5
+		available = {
+			
+		}
+		prerequisite = {
+			focus = BUL_practice_idealism_peace_reforms
+		}
+		completion_reward = {
+			country_event = bulgaria.25
+			add_popularity = {
+			  ideology = national_populist
+				popularity = 0.1
+			}
+			add_stability = 0.1
+			add_ideas = BUL_titans_amogus
+			
+		}
+	}
+	focus = {
+		id = BUL_horns_of_cosmeticism
+		icon = GFX_goal_NEE_Providential_Cosmicism
+		cost = 3
+		relative_position_id = BUL_path_to_shangrila
+		x = -1
+		y = 6
+		available = {
+			
+		}
+		prerequisite = {
+			focus = BUL_practice_idealism_peace_reforms
+		}
+		completion_reward = {
+			country_event = bulgaria.25
+			add_popularity = {
+			  ideology = national_populist
+				popularity = 0.1
+			}
+			add_stability = 0.1
+			add_ideas = BUL_titans_amogus
+			
+		}
+	}
+	focus = {
+		id = BUL_hindu_wisdom
+		icon = GFX_goal_SKM_Move_Against_Hindu_Faith
+		cost = 3
+		relative_position_id = BUL_path_to_shangrila
+		x = 1
+		y = 6
+		available = {
+			
+		}
+		prerequisite = {
+			focus = BUL_practice_idealism_peace_reforms
+		}
+		completion_reward = {
+			country_event = bulgaria.25
+			add_popularity = {
+			  ideology = national_populist
+				popularity = 0.1
+			}
+			add_stability = 0.1
+			add_ideas = BUL_titans_amogus
+			
+		}
+	}
+	focus = {
+		id = BUL_towards_shambala
+		icon = GFX_goal_TIB_Ethical_Imperative_Traditional_Virtue
+		cost = 3
+		relative_position_id = BUL_path_to_shangrila
+		x = 0
+		y = 7
+		available = {
+			
+		}
+		prerequisite = {
+			focus = BUL_harmony_and_peaceful
+		}
+		prerequisite = {
+			focus = BUL_horns_of_cosmeticism
+		}
+		prerequisite = {
+			focus = BUL_hindu_wisdom
+		}
+		completion_reward = {
+			country_event = bulgaria.25
+			add_popularity = {
+			  ideology = national_populist
+				popularity = 0.1
+			}
+			add_stability = 0.1
+			add_ideas = BUL_titans_amogus
+			
+		}
+	}
+	focus = {
+		id = BUL_idealism_of_brotherhood
+		icon = GFX_goal_ideology_radical_socialist
+		cost = 3
+		relative_position_id = BUL_path_to_shangrila
+		x = 2
+		y = 3
+		available = {
+			
+		}
+		prerequisite = {
+			focus = BUL_utopia_combine_science_religion
+		}
+		prerequisite = {
+			focus = BUL_spirit_in_everywhere
+		}
+		completion_reward = {
+			country_event = bulgaria.25
+			add_popularity = {
+			  ideology = national_populist
+				popularity = 0.1
+			}
+			add_stability = 0.1
+			add_ideas = BUL_titans_amogus
+			
+		}
+	}
+	focus = {
+		id = BUL_intelligence_of_dazhbog
+		icon = GFX_goal_FRA_glory_of_war
+		cost = 3
+		relative_position_id = BUL_path_to_shangrila
+		x = 2
+		y = 5
+		available = {
+			
+		}
+		prerequisite = {
+			focus = BUL_idealism_of_brotherhood
+		}
+
+		completion_reward = {
+			country_event = bulgaria.25
+			add_popularity = {
+			  ideology = national_populist
+				popularity = 0.1
+			}
+			add_stability = 0.1
+			add_ideas = BUL_titans_amogus
+			
+		}
+	}
+	focus = {
+		id = BUL_fervor_of_zlatrog
+		icon = GFX_goal_ideology_national_populist
+		cost = 3
+		relative_position_id = BUL_path_to_shangrila
+		x = -2
+		y = 3
+		available = {
+			
+		}
+		prerequisite = {
+			focus = BUL_utopia_combine_science_religion
+		}
+		prerequisite = {
+			focus = BUL_spirit_in_everywhere
+		}
+		completion_reward = {
+			country_event = bulgaria.25
+			add_popularity = {
+			  ideology = national_populist
+				popularity = 0.1
+			}
+			add_stability = 0.1
+			add_ideas = BUL_titans_amogus
+			
+		}
+	}
+	focus = {
+		id = BUL_happiness_of_dyonisus
+		icon = GFX_goal_FRA_beauty_of_destruction
+		cost = 3
+		relative_position_id = BUL_path_to_shangrila
+		x = -2
+		y = 5
+		available = {
+			
+		}
+		prerequisite = {
+			focus = BUL_fervor_of_zlatrog
+		}
+		
+		completion_reward = {
+			country_event = bulgaria.25
+			add_popularity = {
+			  ideology = national_populist
+				popularity = 0.1
+			}
+			add_stability = 0.1
+			add_ideas = BUL_titans_amogus
 			
 		}
 	}
@@ -24035,7 +24776,7 @@ focus = {
 		ai_will_do = { factor = 15 }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed BUL_strengthen_thracian_identity"
-			set_cosmetic_tag = ALB_Odrysia
+			set_cosmetic_tag = BUL_Odrysia
 			every_state = {
 				limit = {
 					OR = {
