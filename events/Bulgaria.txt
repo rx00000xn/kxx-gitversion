@@ -7768,7 +7768,7 @@ country_event = { #
 			name = "奈登·赫里斯托夫·谢塔诺夫"
 			picture = "gfx/leaders/BUL/Portrait_BUL_Nayden_Shaytanov.png"
 			expire = "1.1.1"
-			ideology = occultism_subtype
+			ideology = orphism_subtype
 		}
 		set_politics = {
 			ruling_party = national_populist
