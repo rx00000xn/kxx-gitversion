@@ -279,6 +279,9 @@ country_event = { #和平-日帝胜利
 		tag = JAP
 		has_war_with = JSR
 		controls_state = 533
+		controls_state = 534
+		controls_state = 1351
+		controls_state = 282
 		NOT = { has_global_flag = IJA_JAP_WIN_CW }		
 	}
 

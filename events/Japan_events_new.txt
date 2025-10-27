@@ -437,7 +437,7 @@ country_event = { #Shakai-Taishuto Candidate
 		}
 		create_country_leader = {
 			name = "山本悬藏"
-			picture = "gfx/leaders/JAP/Portrait_JAP_Kenzo_Yamamoto.png"
+			picture = "gfx/leaders/JAP/Portrait_JAP_Yamamoto_Kenzo.png"
 			expire = "1965.1.1"
 			ideology = syndie_social_democrat_subtype
 		}
@@ -3898,6 +3898,18 @@ country_event = { #Seigo Nakano Splits From the Kokumin Domei
 	option = { #
 		name = japan_new_event.50.a
 		ai_chance = { base = 100 }
+		create_country_leader = {
+			name = "中野正刚"
+			picture = "gfx/leaders/JAP/Portrait_JAP_Nakano_Seigo.png"
+			expire = "1965.1.1"
+			ideology = tennosei_totalism_subtype
+		}
+			create_country_leader = {
+			name = "中野正刚"
+			picture = "gfx/leaders/JAP/Portrait_JAP_Nakano_Seigo.png"
+			expire = "1965.1.1"
+			ideology = tot_tennosei_totalism_subtype
+		}			
 		set_party_name = {
 			ideology = national_populist
 			long_name = JAP_party_tokohai_long
@@ -5717,7 +5729,7 @@ country_event = { #A United Front Victory
 		create_country_leader = {
 						name = "山本悬藏"
 						desc = "-"
-						picture = "gfx/leaders/JAP/Portrait_JAP_Kenzo_Yamamoto.png"
+						picture = "gfx/leaders/JAP/Portrait_JAP_Yamamoto_Kenzo.png"
 						expire = "1965.1.1"
 						ideology = agrarian_syndicalism_subtype
 					}
