@@ -7717,6 +7717,9 @@ country_event = { #
 	desc = bulgaria_foreign_events.17.d
 	is_triggered_only = yes
 	fire_only_once = yes
+	immediate = {
+		set_country_flag = BUL_imro_off
+	}
 	option = { # yes
 		name = bulgaria_foreign_events.17.a
 		create_country_leader = {

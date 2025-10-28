@@ -22409,14 +22409,17 @@ focus = {
 		}
 		
 		completion_reward = {
-			country_event = bulgaria.25
+			add_popularity = {
+			  	ideology = totalist
+				popularity = 0.1
+			}
 			add_popularity = {
 			  ideology = national_populist
 				popularity = 0.1
 			}
 			add_stability = 0.1
-			add_ideas = BUL_titans_amogus
-			
+			add_political_power = 100
+			add_war_support = 0.1
 		}
 	}
 	focus = {
@@ -22436,13 +22439,7 @@ focus = {
 			focus = BUL_sound_of_golden_horn
 		}
 		completion_reward = {
-			country_event = bulgaria.25
-			add_popularity = {
-			  ideology = national_populist
-				popularity = 0.1
-			}
-			add_stability = 0.1
-			add_ideas = BUL_titans_amogus
+			add_ideas = BUL_new_titanomachy
 			
 		}
 	}
@@ -22458,31 +22455,12 @@ focus = {
 		}
 
 		completion_reward = {
-			if = {
-				limit = {
-					has_idea = BUL_when_golden_horn_sounds7
-				}
-				swap_ideas = {
-					remove_idea = BUL_when_golden_horn_sounds7
-					add_idea = BUL_when_golden_horn_sounds8
-				}
-			}
-			if = {
-				limit = {
-					has_idea = BUL_when_golden_horn_sounds10
-				}
-				swap_ideas = {
-					remove_idea = BUL_when_golden_horn_sounds10
-					add_idea = BUL_when_golden_horn_sounds9
-				}
+			add_ideas = BUL_titans_amogus
+			add_popularity = {
+			  	ideology = national_populist
+				popularity = 0.1
 			}
 			add_stability = 0.1
-			48 = {
-				remove_building = {
-					type = infrastructure
-					level = 2
-				}
-			}
 		}
 	}
 	focus = {
@@ -22498,12 +22476,12 @@ focus = {
 		
 		completion_reward = {
 			
-			add_political_power = 100
-			add_popularity = {
-			  ideology = national_populist
+			add_ideas = BUL_when_golden_horn_sounds
+				add_popularity = {
+			  	ideology = national_populist
 				popularity = 0.1
 			}
-			custom_effect_tooltip = BUL_moderate_influence_tooltip
+			add_political_power = 100
 		}
 	}
 	focus = {
@@ -22526,12 +22504,12 @@ focus = {
 
 		completion_reward = {
 			
-			add_ideas = BUL_new_titanomachy
+			add_ideas = BUL_iconoclastic_overdrive
 			
 			48 = {
 				add_building_construction = {
 					type = infrastructure
-					level = 1
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -22543,7 +22521,6 @@ focus = {
 					instant_build = yes
 				}
 			}
-			custom_effect_tooltip = BUL_moderate_influence_tooltip
 		}
 	}
 	focus = {
@@ -22561,24 +22538,14 @@ focus = {
 		}
 
 		completion_reward = {
-			country_event = bulgaria.27
 			swap_ideas = {
 				remove_idea = BUL_new_titanomachy
 				add_idea = BUL_new_titanomachy2
 			}
-			modify_timed_idea = {
-				idea = BUL_purges_of_unloyal
-				days = -375
+			swap_ideas = {
+				remove_idea = BUL_when_golden_horn_sounds
+				add_idea = BUL_when_golden_horn_sounds2
 			}
-			107 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-			
 		}
 	}
 	focus = {
@@ -22596,11 +22563,12 @@ focus = {
 		}
 
 		completion_reward = {
-			add_research_slot = 1
 			swap_ideas = {
-				remove_idea = BUL_when_golden_horn_sounds4
-				add_idea = BUL_when_golden_horn_sounds6
+				remove_idea = BUL_when_golden_horn_sounds2
+				add_idea = BUL_when_golden_horn_sounds3
 			}
+			add_command_power = 50
+			add_manpower = 10000
 		}
 	}
 	focus = {
@@ -22614,22 +22582,16 @@ focus = {
 			focus = BUL_glory_to_faust_torchbearer
 		}
 		completion_reward = {
-			if = {
-				limit = {
-					has_idea = BUL_when_golden_horn_sounds8
-				}
-				swap_ideas = {
-					remove_idea = BUL_when_golden_horn_sounds8
-					add_idea = BUL_when_golden_horn_sounds9
-				}
+			swap_ideas = {
+				remove_idea = BUL_when_golden_horn_sounds3
+				add_idea = BUL_when_golden_horn_sounds4
 			}
-			if = {
-				limit = {
-					has_idea = BUL_when_golden_horn_sounds7
-				}
-				swap_ideas = {
-					remove_idea = BUL_when_golden_horn_sounds7
-					add_idea = BUL_when_golden_horn_sounds10
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
 				}
 			}
 		}
@@ -22648,7 +22610,211 @@ focus = {
 			focus = NBUL_blessing_of_dyonisus
 		}
 		completion_reward = {
-			remove_ideas = BUL_small_cloud_big_rain2
+			#cores wargoal
+			create_wargoal = {
+				target = SER
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = TUR
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = ROM
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = GRE
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = ALB
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = CRO
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = HUN
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = SLO
+				type = annex_everything
+			}
+			989 = { add_core_of = ROOT 
+				        }
+				1076 = { add_core_of = ROOT 
+				        }
+				185 = { add_core_of = ROOT 
+				        }
+				768 = { add_core_of = ROOT 
+				        }
+				47 = { add_core_of = ROOT 
+				        }
+				186 = { add_core_of = ROOT 
+				        }
+				758 = { add_core_of = ROOT 
+				        }
+				939 = { add_core_of = ROOT 
+				        }				
+				#Bulgaria
+				48 = { add_core_of = ROOT 
+				        }
+				211 = { add_core_of = ROOT 
+				        }
+				212 = { add_core_of = ROOT 
+				        }
+				77 = { add_core_of = ROOT 
+				        }
+				184 = { add_core_of = ROOT 
+				        }
+				731 = { add_core_of = ROOT 
+				        }
+				769 = { add_core_of = ROOT 
+				        }
+				1089 = { add_core_of = ROOT 
+				        }
+				106 = { add_core_of = ROOT 
+				        }
+				1271 = { add_core_of = ROOT 
+				        }
+				841 = { add_core_of = ROOT 
+				        }
+				1090 = { add_core_of = ROOT 
+				        }
+				770 = { add_core_of = ROOT 
+				        }
+				771 = { add_core_of = ROOT 
+				        }
+				772 = { add_core_of = ROOT 
+				        }				
+				#Albania
+				44 = { add_core_of = ROOT 
+				        }
+				766 = { add_core_of = ROOT 
+				        }
+				1268 = { add_core_of = ROOT 
+				        }
+				#Serbia
+				1269 = { add_core_of = ROOT 
+				        }
+				107 = { add_core_of = ROOT 
+				        }
+				765 = { add_core_of = ROOT 
+				        }
+				108 = { add_core_of = ROOT 
+				        }
+				767 = { add_core_of = ROOT 
+				        }				
+				#crete
+				182 = { add_core_of = ROOT 
+				        }
+				#illyria
+				109 = { add_core_of = ROOT 
+				        }
+				1142 = { add_core_of = ROOT 
+				        }
+				1105 = { add_core_of = ROOT 
+				        }
+				1206 = { add_core_of = ROOT 
+				        }
+				103 = { add_core_of = ROOT 
+				        }
+				163 = { add_core_of = ROOT 
+				        }
+				1143 = { add_core_of = ROOT 
+				        }
+				1141 = { add_core_of = ROOT 
+				        }
+				104 = { add_core_of = ROOT 
+				        }
+				1145 = { add_core_of = ROOT 
+				        }
+				1098 = { add_core_of = ROOT 
+				        }
+				1270 = { add_core_of = ROOT 
+				        }
+				1099 = { add_core_of = ROOT 
+				        }
+				1102 = { add_core_of = ROOT 
+				        }
+				794 = { add_core_of = ROOT 
+				        }
+				1128 = { add_core_of = ROOT 
+				        }
+				105 = { add_core_of = ROOT 
+				        }
+				1097 = { add_core_of = ROOT 
+				        }
+				#galica
+				80 = { add_core_of = ROOT 
+				        }
+				713 = { add_core_of = ROOT 
+				        }
+				#hungary
+				789 = { add_core_of = ROOT 
+				        }
+				1117 = { add_core_of = ROOT 
+				        }
+				76 = { add_core_of = ROOT 
+				        }
+				1118 = { add_core_of = ROOT 
+				        }
+				83 = { add_core_of = ROOT 
+				        }
+				1114 = { add_core_of = ROOT 
+				        }
+				82 = { add_core_of = ROOT 
+				        }
+				1113 = { add_core_of = ROOT 
+				        }
+				1116 = { add_core_of = ROOT 
+				        }
+				84 = { add_core_of = ROOT 
+				        }
+				1115 = { add_core_of = ROOT 
+				        }
+				1112 = { add_core_of = ROOT 
+				        }
+				45 = { add_core_of = ROOT 
+				        }
+				875 = { add_core_of = ROOT 
+				        }
+				#romania
+				81 = { add_core_of = ROOT 
+				        }
+				46 = { add_core_of = ROOT 
+				        }
+				79 = { add_core_of = ROOT 
+				        }
+				78 = { add_core_of = ROOT 
+				        }
+				1222 = { add_core_of = ROOT 
+				        }
+				1320 = { add_core_of = ROOT 
+				        }
+				#austria
+				1101 = { add_core_of = ROOT 
+				        }
+				1272 = { add_core_of = ROOT 
+				        }
+				102 = { add_core_of = ROOT 
+				        }
+				736 = { add_core_of = ROOT 
+				        }
+				1100 = { add_core_of = ROOT 
+				        }
+				1144 = { add_core_of = ROOT 
+				        }
+				1103 = { add_core_of = ROOT 
+				        }
+				1104 = { add_core_of = ROOT 
+				        }
+				#ottoman empire
+				341 = { add_core_of = ROOT }
+				773 = { add_core_of = ROOT }
 		}
 	}
 	focus = {
@@ -22673,6 +22839,7 @@ focus = {
 				elections_allowed = no
 			}
 			set_cosmetic_tag = BUL_accelerationism_totalist
+			add_ideas = BUL_new_communism
 		}
 	}
 	focus = {
@@ -22689,14 +22856,12 @@ focus = {
 			focus = BUL_when_theosophy_meets_communism
 		}
 		completion_reward = {
-			country_event = bulgaria.25
+			add_ideas = BUL_bogmils_legacy
 			add_popularity = {
-			  ideology = national_populist
+			  	ideology = totalist
 				popularity = 0.1
 			}
-			add_stability = 0.1
-			add_ideas = BUL_titans_amogus
-			
+			add_political_power = 100
 		}
 	}
 	focus = {
@@ -22713,14 +22878,13 @@ focus = {
 			focus = BUL_when_theosophy_meets_communism
 		}
 		completion_reward = {
-			country_event = bulgaria.25
+			
+			add_ideas = BUL_the_bulgarianess
 			add_popularity = {
-			  ideology = national_populist
+			  	ideology = totalist
 				popularity = 0.1
 			}
-			add_stability = 0.1
-			add_ideas = BUL_titans_amogus
-			
+			add_war_support = 0.1
 		}
 	}
 	focus = {
@@ -22741,14 +22905,9 @@ focus = {
 			focus = BUL_learn_from_gypsies
 		}
 		completion_reward = {
-			country_event = bulgaria.25
-			add_popularity = {
-			  ideology = national_populist
-				popularity = 0.1
-			}
-			add_stability = 0.1
-			add_ideas = BUL_titans_amogus
-			
+			add_ideas = BUL_communalism_of_our_ancestors
+			add_one_random_civilian_factory = yes
+			add_one_random_military_factory = yes
 		}
 	}
 	
@@ -22767,11 +22926,27 @@ focus = {
 			focus = BUL_communalism_of_our_ancestors
 		}
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = BUL_when_golden_horn_sounds
-				add_idea = BUL_when_golden_horn_sounds7
+			add_ideas = BUL_carnivals_lust_joy
+			add_resource = {
+			    type = steel
+			    amount = 10
+			    state = 48
 			}
-			
+			add_resource = {
+			    type = tungsten
+			    amount = 10
+			    state = 48
+			}
+			add_resource = {
+			    type = aluminium
+			    amount = 10
+			    state = 48
+			}
+			add_resource = {
+			    type = chromium
+			    amount = 10
+			    state = 48
+			}
 		}
 	}
 	focus = {
@@ -22792,14 +22967,30 @@ focus = {
 			focus = BUL_carnivals_lust_joy
 		}
 		completion_reward = {
-			country_event = bulgaria.25
-			add_popularity = {
-			  ideology = national_populist
-				popularity = 0.1
+			48 = {
+				remove_building = {
+					type = infrastructure
+					level = 2
+				}
 			}
-			add_stability = 0.1
-			add_ideas = BUL_titans_amogus
-			
+			if = {
+				limit = {
+					has_completed_focus = BUL_communalism_of_our_ancestors
+				}
+				swap_ideas = {
+					remove_idea = BUL_communalism_of_our_ancestors
+					add_idea = BUL_communalism_of_our_ancestors2
+				}
+			}
+			if = {
+				limit = {
+					has_completed_focus = BUL_carnivals_lust_joy
+				}
+				swap_ideas = {
+					remove_idea = BUL_carnivals_lust_joy
+					add_idea = BUL_carnivals_lust_joy2
+				}
+			}
 		}
 	}
 	focus = {
@@ -22817,22 +23008,23 @@ focus = {
 			focus = BUL_purge_christianty_beast
 		}
 		completion_reward = {
+			add_research_slot = 1
 			if = {
 				limit = {
-					has_idea = BUL_when_golden_horn_sounds2
+					has_completed_focus = BUL_communalism_of_our_ancestors
 				}
 				swap_ideas = {
-					remove_idea = BUL_when_golden_horn_sounds2
-					add_idea = BUL_when_golden_horn_sounds3
+					remove_idea = BUL_communalism_of_our_ancestors2
+					add_idea = BUL_communalism_of_our_ancestors3
 				}
 			}
 			if = {
 				limit = {
-					has_idea = BUL_when_golden_horn_sounds5
+					has_completed_focus = BUL_carnivals_lust_joy
 				}
 				swap_ideas = {
-					remove_idea = BUL_when_golden_horn_sounds5
-					add_idea = BUL_when_golden_horn_sounds4
+					remove_idea = BUL_carnivals_lust_joy2
+					add_idea = BUL_carnivals_lust_joy3
 				}
 			}
 			add_tech_bonus = {
@@ -22857,14 +23049,11 @@ focus = {
 		prerequisite = {
 			focus = BUL_purge_christianty_beast
 		}
-		
-
 		completion_reward = {
 			swap_ideas = {
 				remove_idea = BUL_watchful_eye
 				add_idea = BUL_watchful_eye2
 			}
-			
 		}
 	}
 	focus = {
@@ -22881,14 +23070,14 @@ focus = {
 			focus = BUL_return_of_bogmils
 		}
 		completion_reward = {
-			country_event = bulgaria.25
-			add_popularity = {
-			  ideology = national_populist
-				popularity = 0.1
+			swap_ideas = {
+				remove_idea = BUL_bogmils_legacy
+				add_idea = BUL_bogmils_legacy2
 			}
-			add_stability = 0.1
-			add_ideas = BUL_titans_amogus
-			
+			swap_ideas = {
+				remove_idea = BUL_new_communism
+				add_idea = BUL_new_communism2
+			}
 		}
 	}
 	focus = {
@@ -22905,14 +23094,9 @@ focus = {
 			focus = BUL_return_of_bogmils
 		}
 		completion_reward = {
-			country_event = bulgaria.25
-			add_popularity = {
-			  ideology = national_populist
-				popularity = 0.1
-			}
-			add_stability = 0.1
-			add_ideas = BUL_titans_amogus
-			
+			add_one_random_civilian_factory = yes
+			add_one_random_civilian_factory = yes
+			add_ideas = BUL_plant_golden_seeds
 		}
 	}
 	focus = {
@@ -22932,13 +23116,40 @@ focus = {
 			focus = BUL_plant_golden_seeds
 		}
 		completion_reward = {
-			country_event = bulgaria.25
-			add_popularity = {
-			  ideology = national_populist
-				popularity = 0.1
+			swap_ideas = {
+				remove_idea = BUL_bogmils_legacy2
+				add_idea = BUL_bogmils_legacy3
 			}
-			add_stability = 0.1
-			add_ideas = BUL_titans_amogus
+			add_popularity = {
+			  	ideology = national_populist
+				popularity = -0.1
+			}
+			add_popularity = {
+			  	ideology = paternal_autocrat
+				popularity = -0.1
+			}
+			add_popularity = {
+			  	ideology = authoritarian_democrat
+				popularity = -0.1
+			}
+			add_popularity = {
+			  	ideology = social_conservative
+				popularity = -0.1
+			}
+			add_popularity = {
+			  	ideology = market_liberal
+				popularity = -0.1
+			}
+			add_popularity = {
+			  	ideology = social_liberal
+				popularity = -0.1
+			}
+			add_popularity = {
+			  	ideology = social_democrat
+				popularity = -0.1
+			}
+			add_stability = 0.2
+			add_manpower = -1000
 			
 		}
 	}
@@ -22957,14 +23168,12 @@ focus = {
 		}
 		
 		completion_reward = {
-			country_event = bulgaria.25
-			add_popularity = {
-			  ideology = national_populist
-				popularity = 0.1
+			swap_ideas = {
+				remove_idea = BUL_bogmils_legacy3
+				add_idea = BUL_bogmils_legacy4
 			}
-			add_stability = 0.1
-			add_ideas = BUL_titans_amogus
-			
+			add_one_random_military_factory = yes
+			add_one_random_military_factory = yes
 		}
 	}
 	focus = {
@@ -22975,7 +23184,13 @@ focus = {
 		x = 1
 		y = 7
 		available = {
-			
+			NOT = {
+				country_exists = SER
+				country_exists = GRE
+				country_exists = ROM
+				country_exists = CRO
+				country_exists = ALB
+			}
 		}
 		prerequisite = {
 			focus = BUL_prophet_of_golden_bird
@@ -22984,14 +23199,78 @@ focus = {
 			focus = BUL_peace_heaven_earth
 		}
 		completion_reward = {
-			country_event = bulgaria.25
-			add_popularity = {
-			  ideology = national_populist
-				popularity = 0.1
+			set_cosmetic_tag = BUL_accelerationism_totalist_larp
+			swap_ideas = {
+				remove_idea = BUL_bogmils_legacy4
+				add_idea = BUL_bogmils_legacy5
 			}
-			add_stability = 0.1
-			add_ideas = BUL_titans_amogus
-			
+			add_ideas = BUL_arise_power_anarchobarabrianism
+			add_state_core = 779
+			add_state_core = 28
+			add_state_core = 8
+			add_state_core = 741
+			add_state_core = 781
+			add_state_core = 42
+			add_state_core = 126
+			add_state_core = 127
+			add_state_core = 165
+			add_state_core = 1313
+			every_state = {
+				limit = {
+					is_core_of = FRA
+				}
+				BUL = { 
+					add_state_core = PREV 
+				}
+			}
+			every_state = {
+				limit = {
+					is_core_of = ARM
+				}
+				BUL = { 
+					add_state_core = PREV 
+				}
+			}
+			every_state = {
+				limit = {
+					is_core_of = TUR
+				}
+				BUL = { 
+					add_state_core = PREV 
+				}
+			}
+			every_state = {
+				limit = {
+					is_core_of = SRI
+				}
+				BUL = { 
+					add_state_core = PREV 
+				}
+			}
+			every_state = {
+				limit = {
+					is_core_of = ITA
+				}
+				BUL = { 
+					add_state_core = PREV 
+				}
+			}
+			every_state = {
+				limit = {
+					is_core_of = PAP
+				}
+				BUL = { 
+					add_state_core = PREV 
+				}
+			}
+			every_state = {
+				limit = {
+					is_core_of = BEL
+				}
+				BUL = { 
+					add_state_core = PREV 
+				}
+			}
 		}
 	}
 	focus = {
@@ -23007,29 +23286,38 @@ focus = {
 		prerequisite = {
 			focus = BUL_thirst_bodily_liberation
 		}
-
+		available = {
+			NOT = {
+				country_exists = SER
+				country_exists = GRE
+				country_exists = ROM
+				country_exists = CRO
+				country_exists = ALB
+			}
+		}
 		completion_reward = {
-
-			country_event = bulgaria.26
-			add_stability = 0.2
-			add_war_support = 0.3
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
+			swap_ideas = {
+				remove_idea = BUL_when_golden_horn_sounds4
+				add_idea = BUL_when_golden_horn_sounds5
+			}
+			add_ideas = BUL_haemimontus_invicta
+			set_cosmetic_tag = BUL_yugo_free_accelerationism
+			every_state = {
+				limit = {
+					is_core_of = HUN
+				}
+				BUL = { 
+					add_state_core = PREV 
 				}
 			}
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
+			every_state = {
+				limit = {
+					is_core_of = TUR
+				}
+				BUL = { 
+					add_state_core = PREV 
 				}
 			}
-			
 		}
 	}
 
@@ -23053,13 +23341,16 @@ focus = {
 		
 		completion_reward = {
 			add_popularity = {
-			  ideology = radical_socialist
-				popularity = 0.2
+			  	ideology = radical_socialist
+				popularity = 0.1
+			}
+			add_popularity = {
+			  ideology = syndicalist
+				popularity = 0.1
 			}
 			add_stability = 0.1
-			add_war_support = -0.5
-			add_ideas = BUL_dance_with_world
-			
+			add_political_power = 100
+			add_war_support = 0.1
 		}
 	}
 	
@@ -23085,6 +23376,7 @@ focus = {
 				elections_allowed = no
 			}
 			add_radsoc_to_coalition = yes
+			add_ideas = BUL_myth_in_stars
 		}
 	}
 	focus = {
@@ -23102,13 +23394,11 @@ focus = {
 		}
 		completion_reward = {
 			add_popularity = {
-			  ideology = radical_socialist
-				popularity = 0.2
+			  	ideology = syndicalist
+				popularity = 0.1
 			}
-			add_stability = 0.1
-			add_war_support = -0.5
-			add_ideas = BUL_dance_with_world
-			
+			add_war_support = 0.1
+			add_ideas = BUL_god_in_us
 		}
 	}
 	focus = {
@@ -23129,14 +23419,9 @@ focus = {
 			focus = NBUL_everyone_should_thank_god
 		}
 		completion_reward = {
-			add_popularity = {
-			  ideology = radical_socialist
-				popularity = 0.2
-			}
-			add_stability = 0.1
-			add_war_support = -0.5
-			add_ideas = BUL_dance_with_world
-			
+			add_ideas = BUL_syndicate_for_common_good
+			add_one_random_military_factory = yes
+			add_one_random_military_factory = yes
 		}
 	}
 	focus = {
@@ -23157,23 +23442,9 @@ focus = {
 			focus = BUL_syndicate_for_common_good
 		}
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = BUL_opening_the_eyes
-				add_idea = BUL_opening_the_eyes2
-			}
-			add_popularity = {
-			    ideology = radical_socialist
-				popularity = 0.1
-			}
-			add_popularity = {
-			    ideology = syndicalist
-				popularity = 0.05
-			}
-			add_popularity = {
-			    ideology = social_democrat
-				popularity = 0.05
-			}
-			
+			add_ideas = BUL_gods_plan_economy
+			add_one_random_civilian_factory = yes
+			add_one_random_civilian_factory = yes
 		}
 	}
 	focus = {
@@ -23191,7 +23462,25 @@ focus = {
 			focus = BUL_gods_plan_economy
 		}
 		completion_reward = {
-			add_ideas = BUL_opening_the_eyes
+			add_stability = 0.1
+			if = {
+				limit = {
+					has_completed_focus = BUL_syndicate_for_common_good
+				}
+				swap_ideas = {
+					remove_idea = BUL_syndicate_for_common_good
+					add_idea = BUL_syndicate_for_common_good2
+				}
+			}
+			if = {
+				limit = {
+					has_completed_focus = BUL_gods_plan_economy
+				}
+				swap_ideas = {
+					remove_idea = BUL_gods_plan_economy
+					add_idea = BUL_gods_plan_economy2
+				}
+			}
 		}
 	}
 	focus = {
@@ -23205,18 +23494,9 @@ focus = {
 			focus = BUL_all_classes_under_pravda
 		}
 		available = {
-			NOT = {
-				has_war_with = YUG
-			}
-			NOT = {
-				YUG = {
-					has_government = reactionism
-				}
-			}
+			
 		}
-		bypass = {
-			owns_state = 107
-		}
+		
 
 		completion_reward = {
 			swap_ideas = {
@@ -23242,12 +23522,11 @@ focus = {
 		}
 		completion_reward = {
 			add_popularity = {
-			  ideology = radical_socialist
-				popularity = 0.2
+			  	ideology = syndicalist
+				popularity = 0.1
 			}
-			add_stability = 0.1
-			add_war_support = -0.5
-			add_ideas = BUL_dance_with_world
+			add_political_power = 100
+			add_ideas = BUL_anarchism_with_esotericism
 		}
 	}
 	focus = {
@@ -23264,14 +23543,14 @@ focus = {
 			focus = BUL_anarchism_appeals
 		}
 		completion_reward = {
-			add_popularity = {
-			  ideology = radical_socialist
-				popularity = 0.2
+			swap_ideas = {
+				remove_idea = BUL_anarchism_with_esotericism
+				add_idea = BUL_anarchism_with_esotericism2
 			}
-			add_stability = 0.1
-			add_war_support = -0.5
-			add_ideas = BUL_dance_with_world
-			
+			swap_ideas = {
+				remove_idea = BUL_myth_in_stars
+				add_idea = BUL_myth_in_stars2
+			}
 		}
 	}
 	focus = {
@@ -23288,14 +23567,9 @@ focus = {
 			focus = BUL_anarchism_appeals
 		}
 		completion_reward = {
-			add_popularity = {
-			  ideology = radical_socialist
-				popularity = 0.2
-			}
-			add_stability = 0.1
-			add_war_support = -0.5
-			add_ideas = BUL_dance_with_world
-			
+			add_ideas = BUL_lessons_anthroposophy
+			add_one_random_civilian_factory = yes
+			add_one_random_civilian_factory = yes
 		}
 	}
 	focus = {
@@ -23315,14 +23589,12 @@ focus = {
 			focus = BUL_lessons_anthroposophy
 		}
 		completion_reward = {
-			add_popularity = {
-			  ideology = radical_socialist
-				popularity = 0.2
+			swap_ideas = {
+				remove_idea = BUL_anarchism_with_esotericism2
+				add_idea = BUL_anarchism_with_esotericism3
 			}
-			add_stability = 0.1
-			add_war_support = -0.5
-			add_ideas = BUL_dance_with_world
-			
+			add_one_random_civilian_factory = yes
+			add_one_random_civilian_factory = yes
 		}
 	}
 	focus = {
@@ -23340,14 +23612,12 @@ focus = {
 		}
 		
 		completion_reward = {
-			add_popularity = {
-			  ideology = radical_socialist
-				popularity = 0.2
+			swap_ideas = {
+				remove_idea = BUL_anarchism_with_esotericism3
+				add_idea = BUL_anarchism_with_esotericism4
 			}
-			add_stability = 0.1
-			add_war_support = -0.5
-			add_ideas = BUL_dance_with_world
-			
+			add_one_random_military_factory = yes
+			add_one_random_military_factory = yes
 		}
 	}
 	focus = {
@@ -23367,13 +23637,8 @@ focus = {
 			focus = BUL_touch_grass
 		}
 		completion_reward = {
-			add_popularity = {
-			  ideology = radical_socialist
-				popularity = 0.2
-			}
-			add_stability = 0.1
-			add_war_support = -0.5
-			add_ideas = BUL_dance_with_world
+			
+			add_ideas = BUL_opening_the_eyes
 			
 		}
 	}
@@ -23391,47 +23656,12 @@ focus = {
 			focus = BUL_under_the_sun
 		}
 		completion_reward = {
-			country_event = bulgaria.28
-			swap_ideas = {
-				remove_idea = BUL_small_cloud_big_rain
-				add_idea = BUL_small_cloud_big_rain2
+			add_ideas = NBUL_everyone_should_thank_god
+			add_popularity = {
+			  	ideology = radical_socialist
+				popularity = 0.1
 			}
-			if = {
-				limit = {
-					has_idea = BUL_dance_with_world
-				}
-				swap_ideas = {
-					remove_idea = BUL_dance_with_world
-					add_idea = BUL_dance_with_world2
-				}
-			}
-			if = {
-				limit = {
-					has_idea = BUL_dance_with_world5
-				}
-				swap_ideas = {
-					remove_idea = BUL_dance_with_world5
-					add_idea = BUL_dance_with_world3
-				}
-			}
-			if = {
-				limit = {
-					has_idea = BUL_dance_with_world6
-				}
-				swap_ideas = {
-					remove_idea = BUL_dance_with_world6
-					add_idea = BUL_dance_with_world4
-				}
-			}
-			if = {
-				limit = {
-					has_idea = BUL_dance_with_world7
-				}
-				swap_ideas = {
-					remove_idea = BUL_dance_with_world7
-					add_idea = BUL_dance_with_world8
-				}
-			}
+			add_stability = 0.1
 		}
 	}
 	focus = {
@@ -23446,10 +23676,7 @@ focus = {
 		}
 
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = BUL_opening_the_eyes2
-				add_idea = BUL_opening_the_eyes3
-			}
+			add_ideas = BUL_dance_with_world
 		}
 	}
 	focus = {
@@ -23464,28 +23691,13 @@ focus = {
 		}
 
 		completion_reward = {
-			48 = {
-				remove_building = {
-					type = industrial_complex
-					level = 2
-				}
+			swap_ideas = {
+				remove_idea = BUL_dance_with_world
+				add_idea = BUL_dance_with_world2
 			}
-			add_resource = {
-			    type = steel
-			    amount = 12
-			    state = 48
-			}
-			48 = {
-				remove_building = {
-					type = infrastructure
-					level = 2
-				}
-			}
-			212 = {
-				remove_building = {
-					type = infrastructure
-					level = 1
-				}
+			swap_ideas = {
+				remove_idea = BUL_opening_the_eyes
+				add_idea = BUL_opening_the_eyes2
 			}
 		}
 	}
@@ -23501,49 +23713,14 @@ focus = {
 		}
 
 		completion_reward = {
-			if = {
-				limit = {
-					has_idea = BUL_dance_with_world3
-				}
-				swap_ideas = {
-					remove_idea = BUL_dance_with_world3
-					add_idea = BUL_dance_with_world4
-				}
-			}
-			if = {
-				limit = {
-					has_idea = BUL_dance_with_world5
-				}
-				swap_ideas = {
-					remove_idea = BUL_dance_with_world5
-					add_idea = BUL_dance_with_world6
-				}
-			}
-			if = {
-				limit = {
-					has_idea = BUL_dance_with_world
-				}
-				swap_ideas = {
-					remove_idea = BUL_dance_with_world
-					add_idea = BUL_dance_with_world7
-				}
-			}
-			if = {
-				limit = {
-					has_idea = BUL_dance_with_world2
-				}
-				swap_ideas = {
-					remove_idea = BUL_dance_with_world2
-					add_idea = BUL_dance_with_world8
-				}
-			}
+			add_ideas = BUL_mission_of_peace
 			add_political_power = 100
 			add_popularity = {
 			    ideology = paternal_autocrat
 				popularity = -0.2
 			}
 			add_popularity = {
-			    ideology = totalist
+			    ideology = authoritarian_democrat
 				popularity = -0.2
 			}
 			add_popularity = {
@@ -23566,43 +23743,10 @@ focus = {
 			focus = NBUL_protest_unfair_privilege
 		}
 		completion_reward = {
-			if = {
-				limit = {
-					has_idea = BUL_dance_with_world
-				}
-				swap_ideas = {
-					remove_idea = BUL_dance_with_world
-					add_idea = BUL_dance_with_world5
-				}
+			swap_ideas = {
+				remove_idea = BUL_dance_with_world2
+				add_idea = BUL_dance_with_world3
 			}
-			if = {
-				limit = {
-					has_idea = BUL_dance_with_world7
-				}
-				swap_ideas = {
-					remove_idea = BUL_dance_with_world7
-					add_idea = BUL_dance_with_world6
-				}
-			}
-			if = {
-				limit = {
-					has_idea = BUL_dance_with_world2
-				}
-				swap_ideas = {
-					remove_idea = BUL_dance_with_world2
-					add_idea = BUL_dance_with_world3
-				}
-			}
-			if = {
-				limit = {
-					has_idea = BUL_dance_with_world8
-				}
-				swap_ideas = {
-					remove_idea = BUL_dance_with_world8
-					add_idea = BUL_dance_with_world4
-				}
-			}
-			add_war_support = 0.1
 			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
@@ -23635,10 +23779,210 @@ focus = {
 		}
 
 		completion_reward = {
-			country_event = bulgaria.30
-			remove_ideas = BUL_small_cloud_big_rain2
-	
-			
+			create_wargoal = {
+				target = SER
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = TUR
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = ROM
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = GRE
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = ALB
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = CRO
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = HUN
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = SLO
+				type = annex_everything
+			}
+			989 = { add_core_of = ROOT 
+				        }
+				1076 = { add_core_of = ROOT 
+				        }
+				185 = { add_core_of = ROOT 
+				        }
+				768 = { add_core_of = ROOT 
+				        }
+				47 = { add_core_of = ROOT 
+				        }
+				186 = { add_core_of = ROOT 
+				        }
+				758 = { add_core_of = ROOT 
+				        }
+				939 = { add_core_of = ROOT 
+				        }				
+				#Bulgaria
+				48 = { add_core_of = ROOT 
+				        }
+				211 = { add_core_of = ROOT 
+				        }
+				212 = { add_core_of = ROOT 
+				        }
+				77 = { add_core_of = ROOT 
+				        }
+				184 = { add_core_of = ROOT 
+				        }
+				731 = { add_core_of = ROOT 
+				        }
+				769 = { add_core_of = ROOT 
+				        }
+				1089 = { add_core_of = ROOT 
+				        }
+				106 = { add_core_of = ROOT 
+				        }
+				1271 = { add_core_of = ROOT 
+				        }
+				841 = { add_core_of = ROOT 
+				        }
+				1090 = { add_core_of = ROOT 
+				        }
+				770 = { add_core_of = ROOT 
+				        }
+				771 = { add_core_of = ROOT 
+				        }
+				772 = { add_core_of = ROOT 
+				        }				
+				#Albania
+				44 = { add_core_of = ROOT 
+				        }
+				766 = { add_core_of = ROOT 
+				        }
+				1268 = { add_core_of = ROOT 
+				        }
+				#Serbia
+				1269 = { add_core_of = ROOT 
+				        }
+				107 = { add_core_of = ROOT 
+				        }
+				765 = { add_core_of = ROOT 
+				        }
+				108 = { add_core_of = ROOT 
+				        }
+				767 = { add_core_of = ROOT 
+				        }				
+				#crete
+				182 = { add_core_of = ROOT 
+				        }
+				#illyria
+				109 = { add_core_of = ROOT 
+				        }
+				1142 = { add_core_of = ROOT 
+				        }
+				1105 = { add_core_of = ROOT 
+				        }
+				1206 = { add_core_of = ROOT 
+				        }
+				103 = { add_core_of = ROOT 
+				        }
+				163 = { add_core_of = ROOT 
+				        }
+				1143 = { add_core_of = ROOT 
+				        }
+				1141 = { add_core_of = ROOT 
+				        }
+				104 = { add_core_of = ROOT 
+				        }
+				1145 = { add_core_of = ROOT 
+				        }
+				1098 = { add_core_of = ROOT 
+				        }
+				1270 = { add_core_of = ROOT 
+				        }
+				1099 = { add_core_of = ROOT 
+				        }
+				1102 = { add_core_of = ROOT 
+				        }
+				794 = { add_core_of = ROOT 
+				        }
+				1128 = { add_core_of = ROOT 
+				        }
+				105 = { add_core_of = ROOT 
+				        }
+				1097 = { add_core_of = ROOT 
+				        }
+				#galica
+				80 = { add_core_of = ROOT 
+				        }
+				713 = { add_core_of = ROOT 
+				        }
+				#hungary
+				789 = { add_core_of = ROOT 
+				        }
+				1117 = { add_core_of = ROOT 
+				        }
+				76 = { add_core_of = ROOT 
+				        }
+				1118 = { add_core_of = ROOT 
+				        }
+				83 = { add_core_of = ROOT 
+				        }
+				1114 = { add_core_of = ROOT 
+				        }
+				82 = { add_core_of = ROOT 
+				        }
+				1113 = { add_core_of = ROOT 
+				        }
+				1116 = { add_core_of = ROOT 
+				        }
+				84 = { add_core_of = ROOT 
+				        }
+				1115 = { add_core_of = ROOT 
+				        }
+				1112 = { add_core_of = ROOT 
+				        }
+				45 = { add_core_of = ROOT 
+				        }
+				875 = { add_core_of = ROOT 
+				        }
+				#romania
+				81 = { add_core_of = ROOT 
+				        }
+				46 = { add_core_of = ROOT 
+				        }
+				79 = { add_core_of = ROOT 
+				        }
+				78 = { add_core_of = ROOT 
+				        }
+				1222 = { add_core_of = ROOT 
+				        }
+				1320 = { add_core_of = ROOT 
+				        }
+				#austria
+				1101 = { add_core_of = ROOT 
+				        }
+				1272 = { add_core_of = ROOT 
+				        }
+				102 = { add_core_of = ROOT 
+				        }
+				736 = { add_core_of = ROOT 
+				        }
+				1100 = { add_core_of = ROOT 
+				        }
+				1144 = { add_core_of = ROOT 
+				        }
+				1103 = { add_core_of = ROOT 
+				        }
+				1104 = { add_core_of = ROOT 
+				        }
+				#ottoman empire
+				341 = { add_core_of = ROOT }
+				773 = { add_core_of = ROOT }
 		}
 	}
 	
@@ -23660,7 +24004,35 @@ focus = {
 		
 
 		completion_reward = {
-			
+			add_research_slot = 1
+			if = {
+				limit = {
+					has_completed_focus = BUL_syndicate_for_common_good
+				}
+				swap_ideas = {
+					remove_idea = BUL_syndicate_for_common_good2
+					add_idea = BUL_syndicate_for_common_good3
+				}
+			}
+			if = {
+				limit = {
+					has_completed_focus = BUL_gods_plan_economy
+				}
+				swap_ideas = {
+					remove_idea = BUL_gods_plan_economy2
+					add_idea = BUL_gods_plan_economy3
+				}
+			}
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = construction_tech
+			}
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = excavation_tech
+			}
 		}
 	}
 	focus = {
@@ -23676,7 +24048,12 @@ focus = {
 		
 
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = BUL_dance_with_world3
+				add_idea = BUL_dance_with_world4
+			}
+			add_manpower = 10000
+			add_command_power = 50
 		}
 	}
 	focus = {
@@ -23694,21 +24071,16 @@ focus = {
 		}
 
 		completion_reward = {
-			
-			48  = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
+			swap_ideas = {
+				remove_idea = BUL_anarchism_with_esotericism4
+				add_idea = BUL_anarchism_with_esotericism5
+			}
+			add_ideas = BUL_dance_with_world_focus
+			every_state = {
+				BUL = { 
+					add_state_core = PREV 
 				}
 			}
-
 		}
 	}
 	focus = {
@@ -23725,27 +24097,16 @@ focus = {
 			focus = NBUL_calm_inner_beast
 		}
 		completion_reward = {
-
-			country_event = bulgaria.29
-			add_stability = 0.2
-			add_war_support = 0.3
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
+			swap_ideas = {
+				remove_idea = BUL_dance_with_world4
+				add_idea = BUL_dance_with_world5
+			}
+			add_ideas = BUL_solar_temple_over_earth
+			every_state = {
+				BUL = { 
+					add_state_core = PREV 
 				}
 			}
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-			
 		}
 	}
 	focus = {
@@ -23763,13 +24124,12 @@ focus = {
 		}
 		
 		completion_reward = {
-			country_event = bulgaria.25
 			add_popularity = {
-			  ideology = national_populist
+			  	ideology = social_democrat
 				popularity = 0.1
 			}
 			add_stability = 0.1
-			add_ideas = BUL_titans_amogus
+			add_ideas = BUL_path_to_shangrila
 			
 		}
 	}
@@ -23788,14 +24148,10 @@ focus = {
 			focus = BUL_path_to_shangrila
 		}
 		completion_reward = {
-			country_event = bulgaria.25
-			add_popularity = {
-			  ideology = national_populist
-				popularity = 0.1
+			swap_ideas = {
+				remove_idea = BUL_path_to_shangrila
+				add_idea = BUL_path_to_shangrila2
 			}
-			add_stability = 0.1
-			add_ideas = BUL_titans_amogus
-			
 		}
 	}
 	focus = {
@@ -23812,14 +24168,10 @@ focus = {
 			focus = BUL_art_society
 		}
 		completion_reward = {
-			country_event = bulgaria.25
-			add_popularity = {
-			  ideology = national_populist
-				popularity = 0.1
-			}
-			add_stability = 0.1
-			add_ideas = BUL_titans_amogus
-			
+			add_research_slot = 1
+			add_ideas = BUL_utopia_combine_science_religion
+			add_one_random_civilian_factory = yes
+			add_one_random_civilian_factory = yes
 		}
 	}
 	focus = {
@@ -23836,14 +24188,10 @@ focus = {
 			focus = BUL_art_society
 		}
 		completion_reward = {
-			country_event = bulgaria.25
-			add_popularity = {
-			  ideology = national_populist
-				popularity = 0.1
+			swap_ideas = {
+				remove_idea = BUL_path_to_shangrila2
+				add_idea = BUL_path_to_shangrila3
 			}
-			add_stability = 0.1
-			add_ideas = BUL_titans_amogus
-			
 		}
 	}
 	focus = {
@@ -23863,14 +24211,10 @@ focus = {
 			focus = BUL_spirit_in_everywhere
 		}
 		completion_reward = {
-			country_event = bulgaria.25
-			add_popularity = {
-			  ideology = national_populist
-				popularity = 0.1
+			swap_ideas = {
+				remove_idea = BUL_path_to_shangrila3
+				add_idea = BUL_path_to_shangrila4
 			}
-			add_stability = 0.1
-			add_ideas = BUL_titans_amogus
-			
 		}
 	}
 	focus = {
@@ -23887,14 +24231,10 @@ focus = {
 			focus = BUL_orient_wisdom_of_roerich
 		}
 		completion_reward = {
-			country_event = bulgaria.25
-			add_popularity = {
-			  ideology = national_populist
-				popularity = 0.1
-			}
-			add_stability = 0.1
-			add_ideas = BUL_titans_amogus
-			
+			add_one_random_civilian_factory = yes
+			add_one_random_civilian_factory = yes
+			add_one_random_military_factory = yes
+			add_one_random_military_factory = yes
 		}
 	}
 	focus = {
@@ -23911,13 +24251,13 @@ focus = {
 			focus = BUL_practice_idealism_peace_reforms
 		}
 		completion_reward = {
-			country_event = bulgaria.25
+			add_political_power = 100
 			add_popularity = {
-			  ideology = national_populist
+			  ideology = social_democrat
 				popularity = 0.1
 			}
 			add_stability = 0.1
-			add_ideas = BUL_titans_amogus
+			add_manpower = 50000
 			
 		}
 	}
@@ -23935,14 +24275,13 @@ focus = {
 			focus = BUL_practice_idealism_peace_reforms
 		}
 		completion_reward = {
-			country_event = bulgaria.25
-			add_popularity = {
-			  ideology = national_populist
-				popularity = 0.1
-			}
-			add_stability = 0.1
-			add_ideas = BUL_titans_amogus
 			
+			add_ideas = BUL_horns_of_cosmeticism
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = rocketry 
+			}
 		}
 	}
 	focus = {
@@ -23959,14 +24298,14 @@ focus = {
 			focus = BUL_practice_idealism_peace_reforms
 		}
 		completion_reward = {
-			country_event = bulgaria.25
-			add_popularity = {
-			  ideology = national_populist
-				popularity = 0.1
-			}
-			add_stability = 0.1
-			add_ideas = BUL_titans_amogus
 			
+			add_ideas = BUL_hindu_wisdom
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
 		}
 	}
 	focus = {
@@ -23989,14 +24328,16 @@ focus = {
 			focus = BUL_hindu_wisdom
 		}
 		completion_reward = {
-			country_event = bulgaria.25
-			add_popularity = {
-			  ideology = national_populist
-				popularity = 0.1
+			set_cosmetic_tag = TIB_SHANGRI_LA_RED
+			swap_ideas = {
+				remove_idea = BUL_path_to_shangrila4
+				add_idea = BUL_path_to_shangrila5
 			}
-			add_stability = 0.1
-			add_ideas = BUL_titans_amogus
-			
+			every_state = {
+				BUL = { 
+					add_state_core = PREV 
+				}
+			}
 		}
 	}
 	focus = {
@@ -24016,13 +24357,17 @@ focus = {
 			focus = BUL_spirit_in_everywhere
 		}
 		completion_reward = {
-			country_event = bulgaria.25
 			add_popularity = {
-			  ideology = national_populist
+			  	ideology = syndicalist
 				popularity = 0.1
 			}
-			add_stability = 0.1
-			add_ideas = BUL_titans_amogus
+			add_popularity = {
+			  	ideology = radical_socialist
+				popularity = 0.1
+			}
+			add_synd_to_coalition = yes
+			add_radsoc_to_coalition = yes
+			add_ideas = BUL_idealism_of_brotherhood
 			
 		}
 	}
@@ -24041,14 +24386,12 @@ focus = {
 		}
 
 		completion_reward = {
-			country_event = bulgaria.25
-			add_popularity = {
-			  ideology = national_populist
-				popularity = 0.1
+			swap_ideas = {
+				remove_idea = BUL_idealism_of_brotherhood
+				add_idea = BUL_idealism_of_brotherhood2
 			}
 			add_stability = 0.1
-			add_ideas = BUL_titans_amogus
-			
+			add_command_power = 50
 		}
 	}
 	focus = {
@@ -24068,13 +24411,18 @@ focus = {
 			focus = BUL_spirit_in_everywhere
 		}
 		completion_reward = {
-			country_event = bulgaria.25
+			
 			add_popularity = {
 			  ideology = national_populist
 				popularity = 0.1
 			}
-			add_stability = 0.1
-			add_ideas = BUL_titans_amogus
+			add_popularity = {
+			  ideology = totalist
+				popularity = 0.1
+			}
+			add_tot_to_coalition = yes
+			add_natpop_to_coalition = yes
+			add_ideas = BUL_fervor_of_zlatrog
 			
 		}
 	}
@@ -24093,14 +24441,12 @@ focus = {
 		}
 		
 		completion_reward = {
-			country_event = bulgaria.25
-			add_popularity = {
-			  ideology = national_populist
-				popularity = 0.1
+			swap_ideas = {
+				remove_idea = BUL_fervor_of_zlatrog
+				add_idea = BUL_fervor_of_zlatrog2
 			}
-			add_stability = 0.1
-			add_ideas = BUL_titans_amogus
-			
+			add_political_power = 100
+			add_war_support = 0.1
 		}
 	}
   focus = {
