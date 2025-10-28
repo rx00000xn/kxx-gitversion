@@ -11121,6 +11121,35 @@ FRG_DKU = {
     color = rgb { 30 54 103 }
     color_ui = rgb { 34 62 119 }
 }
+FRG_RRF = {
+    color = rgb { 30 54 103 }
+    color_ui = rgb { 34 62 119 }
+}
+FRG_KAR = {
+    color = rgb { 30 54 103 }
+    color_ui = rgb { 34 62 119 }
+}
+FRG_RUS = {
+    color = rgb { 30 54 103 }
+    color_ui = rgb { 34 62 119 }
+}
+FRG_SIB = {
+    color = rgb { 30 54 103 }
+    color_ui = rgb { 34 62 119 }
+}
+FRG_LEB_1 = {
+    color = rgb { 30 54 103 }
+    color_ui = rgb { 34 62 119 }
+}
+FRG_SYR = {
+    color = rgb { 30 54 103 }
+    color_ui = rgb { 34 62 119 }
+}
+DJI_FRG = {
+    color = rgb { 30 54 103 }
+    color_ui = rgb { 34 62 119 }
+}
+
 
 FRG_EPR = {
     color = rgb { 45 45 45 }
@@ -11129,6 +11158,10 @@ FRG_EPR = {
 FRG_ISH = {
     color = rgb { 45 45 45 }
 	color_ui = rgb { 55 55 55 }
+}
+FRG_LEB_2 = {
+	color = rgb { 0 78 188 }
+	color_ui = rgb { 0 78 188 }
 }
 
 
