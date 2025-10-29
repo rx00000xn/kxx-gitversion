@@ -4284,6 +4284,125 @@ FRG_Levant_imperialate_decision = { #建立法属黎凡特
         }
     }
 
+FRG_IRQ_imperialate_decision = { #处理两河流域
+		icon = decision_cat_generic_purge
+		visible = { 
+            has_completed_focus = FRG_ottoman	
+		}
+		available = {
+			country_exists = IRQ
+		}
+		fire_only_once = yes
+		cost = 20
+		days_remove = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision FRG_italian_imperialate_decision"
+			set_country_flag = FRG_imperialate
+		}
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove FRG_italian_imperialate_decision"
+			clr_country_flag = FRG_imperialate
+			FRG = {
+				set_autonomy = {
+					target = IRQ
+					autonomy_state = kr_colonial_government
+				}
+			} 
+        	IRQ = { set_cosmetic_tag = FRG_IRQ_1 }
+			IRQ = {
+				set_politics = {
+            		ruling_party = authoritarian_democrat
+					elections_allowed = no
+        		} 
+				create_country_leader = {
+            		name = "朱尔斯·阿道夫·梅尼"
+					desc = "POLITICS_IAR_COLONIAL_DESC_10"
+            		picture = "gfx/leaders/FRG/Portrait_FRG_Jules_Adolphe_Meny.png"
+            		expire = "1965.1.1"
+            		ideology = colonial_govt_subtype
+           	 	}
+           	 	add_popularity = {
+					ideology = paternal_autocrat
+					popularity = 0.25
+				}
+				add_popularity = {
+					ideology = authoritarian_democrat
+					popularity = 0.36
+				}
+				add_popularity = {
+					ideology = market_liberal
+					popularity = 0.20
+				}
+				set_party_name = {
+            		ideology = authoritarian_democrat
+            		long_name = "法国道达尔石油公司中东总部"
+            		name = "法国道达尔石油公司中东总部"
+        		}
+				set_party_name = {
+            		ideology = market_liberal
+            		long_name = "法国道达尔石油公司中东总部（韦特海默家族控股）/法国石油公司雇佣兵"
+            		name = "法国道达尔石油公司中东总部（韦特海默家族控股）/法国石油公司雇佣兵"
+        		}
+				set_party_name = {
+            		ideology = paternal_autocrat
+            		long_name = "法属伊拉克殖民军"
+            		name = "法属伊拉克殖民军"
+        		}
+				add_marlib_to_coalition = yes
+				add_pataut_to_coalition = yes
+			}
+        	IRQ = { load_focus_tree = { id = generic_focus } }                   
+        }
+    }
+
+FRG_moon_imperialate_decision = { #整合新月沃地
+		icon = decision_cat_generic_purge
+		visible = { 
+            has_completed_focus = FRG_ottoman
+		}
+		available = {
+            country_exists = IRQ
+			country_exists = LEB
+			NOT = {
+				country_exists = SYR
+			}
+			IRQ = {
+				is_puppet_of = FRG
+			}
+            LEB = {
+				is_puppet_of = FRG
+			}
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 1
+
+		ai_will_do = {
+			factor = 6
+		}
+		
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision FRG_italian_imperialate_decision"
+			set_country_flag = FRG_imperialate
+		}
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove FRG_italian_imperialate_decision"
+			clr_country_flag = FRG_imperialate
+            FRG = {
+				country_event = frg.127
+			}
+        }
+    }
+
+
+
 #废弃决议
 FRG_maghreb_imperialate_decision = {
 		icon = decision_cat_generic_purge
@@ -4744,26 +4863,9 @@ FRG_attack_bulgaria_decision = {
 				target = BUL
 				type = annex_everything
 			}
-			CRO = { add_state_core = 1090
-					add_state_core = 48
-					add_state_core = 212
-					add_state_core = 1089
-					add_state_core = 211
-					add_state_core = 770
-					add_state_core = 771
-					add_state_core = 82
-					add_state_core = 341
-					add_state_core = 1113 
-			}
-			if = {
-				BUL = {
-					owns_state = 77
-					owns_state = 772
-				}
-				CRO = {
-					add_state_core = 77
-					add_state_core = 772
-				}
+			every_state = {
+				limit = { is_owned_and_controlled_by = BUL }
+				add_core_of = CRO
 			}
 		}
     }
@@ -4807,28 +4909,9 @@ FRG_attack_greece_decision = {
 				target = CRE
 				type = annex_everything
 			}
-			CRO = { 
-				add_state_core = 769
-				add_state_core = 989
-				add_state_core = 731
-				add_state_core = 1076
-				add_state_core = 768
-				add_state_core = 185
-				add_state_core = 758
-				add_state_core = 47
-				add_state_core = 186
-				add_state_core = 939
-				add_state_core = 182
-			}
-			if = {
-				GRE = {
-					owns_state = 187
-					owns_state = 184
-				}
-				CRO = {
-					add_state_core = 187
-					add_state_core = 184
-				}
+			every_state = {
+				limit = { is_owned_and_controlled_by = GRE }
+				add_core_of = CRO
 			}
 		}
     }
@@ -4868,10 +4951,9 @@ FRG_attack_albania_decision = {
 				target = ALB
 				type = annex_everything
 			}
-			CRO = { 
-				add_state_core = 1268
-				add_state_core = 44
-				add_state_core = 766
+			every_state = {
+				limit = { is_owned_and_controlled_by = ALB }
+				add_core_of = CRO
 			}
 		}
     }
@@ -5049,6 +5131,8 @@ FRG_attack_serbia_decision = {
 			}
 		}
     }
+
+#废弃决议
 FRG_attack_ireland_decision = {
 		icon = decision_cat_generic_purge
 		visible = {

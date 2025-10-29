@@ -4071,6 +4071,9 @@ country_event = { #重组法属西非
     fire_only_once = yes
     option = { #重新殖民西非
         name = frg.110.a
+		ai_chance = {
+			factor = 100
+		}
 		trigger = {
 			NOT = {
 				country_exists = NFA
@@ -5031,7 +5034,7 @@ country_event = { #煽动德属西非脱钩
 	}
 }
 
-
+#俄国投降
 country_event = {  #给斯拉夫民族一个选择生路的机会
 	id = frg.115
 	immediate = {log = "[GetDateText]: [Root.GetName]: event frg.115 "}
@@ -5353,6 +5356,7 @@ country_event = {  #败者的回复
 	}
 }
 
+#入侵俄国
 country_event = {  #评估俄国局势
 	id = frg.118
 	immediate = {log = "[GetDateText]: [Root.GetName]: event frg.118 "}
@@ -5665,6 +5669,7 @@ country_event = {  #评估俄国局势
 	}
 }
 
+#黎凡特
 country_event = {  #叙利亚的一小步
 	id = frg.119
 	immediate = {log = "[GetDateText]: [Root.GetName]: event frg.119 "}
@@ -5918,6 +5923,8 @@ country_event = {  #向黎凡特地区传播革命
 		}
 	}
 }
+
+#吉布提
 country_event = {  #准备夺取曼德海峡控制权
 	id = frg.121
 	immediate = {log = "[GetDateText]: [Root.GetName]: event frg.121 "}
@@ -6051,7 +6058,8 @@ country_event = {  #诡异的暴动
 	}
 }
 
-country_event = {  #意料之外的金主
+#刚果
+country_event = {  #意料之内的新金主
 	id = frg.123
 	immediate = {log = "[GetDateText]: [Root.GetName]: event frg.123 "}
 	title = frg.123.t
@@ -6060,10 +6068,55 @@ country_event = {  #意料之外的金主
 	is_triggered_only = yes
 	fire_only_once = yes
          
-	option = { #什么，女王打钱了？马絮飘零半生，未逢明主，今愿重拾法国人的荣耀...
+	option = { #什么，女王打钱了？吾飘零半生，未逢明主，今愿弃阿尔及尔之暗，从巴黎之明...
 		name = frg.123.a
 		ai_chance = {
+			factor = 100
+		}
+		trigger = {
+			NOT = {
+				FRG = {
+					has_government = syndicalist
+					has_government = radical_socialist
+					has_government = social_democrat
+					has_country_leader = { ruling_only = yes name = "西蒙·萨比亚尼" }
+				}
+			}
+			FRG = {
+                has_completed_focus = FRG_Chanel_win
+            }
+			NOT = {
+                FRG = {
+                    has_completed_focus = FRG_Appearing_from_the_shadow
+                }
+            }
+		} 
+		FRG = {
+			add_political_power = -66
+		}   
+        FRG = {
+			add_to_faction = MSF
+		} 
+		if = {
+			limit = {
+				MSF = {
+					NOT = {
+						has_completed_focus = MSF_entente_cuck
+					}
+				}
+			}
+			MSF = {
+				complete_national_focus = MSF_mercanary_junta
+			} 
+		}
+	}
+	option = { #巴黎这群人嘛...出价还行，姑且就先投靠吧
+		name = frg.123.b
+		ai_chance = {
 			factor = 50
+		}   
+		FRG = {
+			add_political_power = -44
 		}   
         FRG = {
 			add_to_faction = MSF
@@ -6079,6 +6132,53 @@ country_event = {  #意料之外的金主
 			}
 			MSF = {
 				complete_national_focus = MSF_mercanary_junta
+			} 
+		} 
+	}
+	option = { #什么，给这么少就想打发我...啊不是，作为最优秀的战士，我坚决为忠诚于贝当元帅，绝不为巴黎伪政府所动
+		name = frg.123.c
+		ai_chance = {
+			factor = 50
+		}
+		trigger = {
+			NOT = {
+				FRG = {
+					has_government = syndicalist
+					has_government = radical_socialist
+					has_government = social_democrat
+					has_country_leader = { ruling_only = yes name = "西蒙·萨比亚尼" }
+				}
+			}
+		}    
+        FRG = {
+			country_event = { id = frg.128 days = 4 }
+		} 
+	}
+	option = { #妈的，有诈
+		name = frg.123.e
+		ai_chance = {
+			factor = 50
+		}   
+        FRG = {
+			create_wargoal = {
+				target = KIV
+				type = annex_everything
+			}  
+			create_wargoal = {
+				target = COG
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = MSF
+				type = annex_everything
+			}  
+			create_wargoal = {
+				target = UMN
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = LPD
+				type = annex_everything
 			} 
 		} 
 	}
@@ -6315,6 +6415,225 @@ country_event = {  #军方夺取大片土地
 		name = frg.125.b
 		trigger = { is_ai = no }  
         add_stability = 0.01  
+	}
+}
+
+#伊拉克
+country_event = {  #漫步美索不达利亚
+	id = frg.126
+	immediate = {log = "[GetDateText]: [Root.GetName]: event frg.126 "}
+	title = frg.126.t
+	desc = frg.126.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+         
+
+	option = { #这里的石油...不错
+		name = frg.126.a
+		ai_chance = {
+			factor = 50
+		}
+		trigger = {
+			NOT = {
+				FRG = {
+					OR = {
+						has_government = syndicalist
+						has_government = radical_socialist
+						has_government = social_democrat
+						has_country_leader = { ruling_only = yes name = "西蒙·萨比亚尼" }
+					}
+				}
+			}
+		}     
+        create_wargoal = {
+			target = IRQ
+			type = annex_everything
+		}  
+		create_wargoal = {
+			target = ASY
+			type = annex_everything
+		}
+	}
+
+	option = { #联络革命同志
+		name = frg.126.b
+		ai_chance = {
+			factor = 50
+		}
+		trigger = {
+			FRG = {
+				OR = {
+					has_government = syndicalist
+					has_government = radical_socialist
+					has_government = social_democrat
+					has_country_leader = { ruling_only = yes name = "西蒙·萨比亚尼" }
+				}
+			}
+			IRQ = {
+				has_socialist_government = yes
+			}
+		}     
+        FRG = {
+			add_to_faction = IRQ
+		}
+		create_wargoal = {
+			target = ASY
+			type = annex_everything
+		}  
+	}
+
+	option = { #毁减革命公敌
+		name = frg.126.b
+		ai_chance = {
+			factor = 50
+		}
+		trigger = {
+			FRG = {
+				OR = {
+					has_government = syndicalist
+					has_government = radical_socialist
+					has_government = social_democrat
+					has_country_leader = { ruling_only = yes name = "西蒙·萨比亚尼" }
+				}
+			}
+			IRQ = {
+				has_socialist_government = no
+			}
+		}    
+        create_wargoal = {
+			target = IRQ
+			type = annex_everything
+		}  
+		create_wargoal = {
+			target = ASY
+			type = annex_everything
+		}  
+	}
+}
+
+country_event = {  #新月沃土尽在手中
+	id = frg.127
+	immediate = {log = "[GetDateText]: [Root.GetName]: event frg.127 "}
+	title = frg.127.t
+	desc = frg.127.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+         
+
+	option = { #新时代十字军东征在法兰西领导下所向披靡
+		name = frg.127.a
+		ai_chance = {
+			factor = 50
+		}
+		IRQ = { set_cosmetic_tag = FRG_IRQ_2 }
+		IRQ = {
+			annex_country = {
+				target = LEB
+				transfer_troops = yes
+			} 
+		}  
+        every_state = {
+			limit = { is_owned_and_controlled_by = LEB }
+			add_core_of = IRQ
+		} 
+	}
+}
+
+#刚果后续
+country_event = {  #雇佣兵不为所动
+	id = frg.128
+	immediate = {log = "[GetDateText]: [Root.GetName]: event frg.128 "}
+	title = frg.128.t
+	desc = frg.128.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+         
+
+	option = { #主义讲的不错，可惜实质全是生意。反正刚果离开了你们也不是不能运作
+		name = frg.128.a
+		ai_chance = {
+			factor = 50
+		}   
+        FRG = {
+			country_event = { id = frg.129 days = 7 }
+		}   
+	}
+}
+
+country_event = {  #伊丽莎白维尔之旅
+	id = frg.129
+	immediate = {log = "[GetDateText]: [Root.GetName]: event frg.129 "}
+	title = frg.129.t
+	desc = frg.129.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+         
+
+	option = { #都是为钱而行，矿业资本家就是比傻不拉几大头兵好说话
+		name = frg.129.a
+		ai_chance = {
+			factor = 50
+		}   
+        FRG = {
+			add_to_faction = UMN
+		}  
+	}
+
+	option = { #都低估我们了啊...那法国人践踏刚果的时候就由不得你们臭非洲白人求饶了
+		name = frg.129.a
+		ai_chance = {
+			factor = 50
+		}   
+        create_wargoal = {
+			target = KIV
+			type = annex_everything
+		}  
+		create_wargoal = {
+			target = COG
+			type = annex_everything
+		}
+		create_wargoal = {
+			target = MSF
+			type = annex_everything
+		}  
+		create_wargoal = {
+			target = UMN
+			type = annex_everything
+		}
+		create_wargoal = {
+			target = LPD
+			type = annex_everything
+		}     
+	}
+}
+
+country_event = {  #观察刚果的革命事业
+	id = frg.130
+	immediate = {log = "[GetDateText]: [Root.GetName]: event frg.130 "}
+	title = frg.130.t
+	desc = frg.130.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+         
+
+	option = { #
+		name = frg.130.a
+		ai_chance = {
+			factor = 50
+		}   
+        KIV = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 2000
+				producer = FRG
+			}
+			add_ideas = internationale_support
+		}  
 	}
 }
 

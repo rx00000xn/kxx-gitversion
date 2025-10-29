@@ -1324,6 +1324,109 @@ FRG_Lebanon_imperialate_decision = { #雪松行动
         }
     }
 
+FRG_IRQ_imperialate_decision = { #美索不达利亚行动
+		icon = decision_cat_generic_purge
+		visible = { 
+            has_completed_focus = FRG_ottoman	
+		}
+		available = {
+			OR = {
+				country_exists = IRQ
+				country_exists = OTT
+			}
+		}
+		fire_only_once = yes
+		cost = 20
+		days_remove = 7
+
+		ai_will_do = {
+			factor = 50
+		}
+		
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision FRG_italian_imperialate_decision"
+			set_country_flag = FRG_imperialate
+		}
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove FRG_italian_imperialate_decision"
+			clr_country_flag = FRG_imperialate
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							FRG = {
+								OR = {
+									has_government = syndicalist
+									has_government = radical_socialist
+									has_government = social_democrat
+									has_country_leader = { ruling_only = yes name = "西蒙·萨比亚尼" }
+								}
+							}
+							IRQ = {
+								has_socialist_government = no
+							}
+						}
+						AND = {
+							NOT = {
+								FRG = {
+									OR = {
+										has_government = syndicalist
+										has_government = radical_socialist
+										has_government = social_democrat
+										has_country_leader = { ruling_only = yes name = "西蒙·萨比亚尼" }
+									}
+								}
+							}
+							IRQ = {
+								has_socialist_government = no	
+							}
+						}
+						AND = {
+							NOT = {
+								FRG = {
+									OR = {
+										has_government = syndicalist
+										has_government = radical_socialist
+										has_government = social_democrat
+										has_country_leader = { ruling_only = yes name = "西蒙·萨比亚尼" }
+									}
+								}
+							}
+							IRQ = {
+								has_socialist_government = yes	
+							}
+						}
+					}
+				}
+				FRG = {
+					create_wargoal = {
+						type = annex_everything
+						target = IRQ
+					} 
+				}
+			}
+        	else_if = {
+				limit = {
+					FRG = {
+						OR = {
+							has_government = syndicalist
+							has_government = radical_socialist
+							has_government = social_democrat
+							has_country_leader = { ruling_only = yes name = "西蒙·萨比亚尼" }
+						}
+					}
+					IRQ = {
+						has_socialist_government = yes
+					}
+				}
+				FRG = {
+					add_to_faction = IRQ
+				} 
+			}                    
+        }
+    }
+
 FRG_Djibouti_imperialate_decision = { #红沙行动
 		icon = decision_cat_generic_purge
 		visible = { 
@@ -1363,33 +1466,12 @@ FRG_MSF_imperialate_decision = { #刚果的秘密交易
             has_completed_focus = FRG_ottoman	
 		}
 		available = {
-			country_exists = MSF
-			MSF = {
-				OR = {
-					has_war_with = COG
-					has_war_with = KIV
-					AND = {
-						has_global_flag = CONGO_SHITSHOW_OVER
-						NOT = {
-							has_completed_focus = MSF_entente_cuck
-						}
-					}
-				}
-			}
-			FRG = {
-                has_completed_focus = FRG_Chanel_win
-            }
-			NOT = {
-                FRG = {
-                    has_completed_focus = FRG_Appearing_from_the_shadow
-                }
-            }
 			NOT = {
 				country_exists = NFA
 			}
 		}
 		fire_only_once = yes
-		cost = 66
+		cost = 10
 		days_remove = 6
 		ai_will_do = {
 			factor = 10
@@ -1403,8 +1485,41 @@ FRG_MSF_imperialate_decision = { #刚果的秘密交易
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove FRG_italian_imperialate_decision"
 			clr_country_flag = FRG_imperialate
-			MSF = {
-				country_event = { id = frg.123 days = 3 }
+			if = {
+				limit = {
+					country_exists = MSF
+					MSF = {
+						OR = {
+							has_war_with = COG
+							has_war_with = KIV
+							AND = {
+								has_global_flag = CONGO_SHITSHOW_OVER
+								NOT = {
+									has_completed_focus = MSF_entente_cuck
+								}
+							}
+						}
+					}
+				}
+				MSF = {
+					country_event = { id = frg.123 days = 3 }
+				} 
+			}
+			else_if = {
+				limit = {
+					country_exists = KIV
+					KIV = {
+						OR = {
+							has_war_with = COG
+							has_war_with = MSF
+							has_global_flag = CONGO_SHITSHOW_OVER
+							}
+						}
+					}
+				}
+				MSF = {
+					country_event = { id = frg.130 days = 3 }
+				} 
 			}                   
         }
     }

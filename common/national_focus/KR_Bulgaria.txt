@@ -32,17 +32,6 @@ focus_tree = {
       }
       add_political_power = 50
       add_stability = 0.05
-	  add_ideas = BUL_retain_agrarianism_idea
-	  add_ideas = BUL_adopt_industrialisation_idea
-	  add_ideas = BUL_increased_wheat_exports_idea
-	  add_ideas = BUL_increased_wheat_exports_idea2
-	  add_ideas = BUL_agricultural_subsidisation_idea
-	  add_ideas = BUL_agricultural_subsidisation_idea2
-	  add_ideas = BUL_empowering_the_bank_idea
-	  add_ideas = BUL_agricultural_boom_idea
-	  add_ideas = BUL_industrial_boom_idea
-	  add_ideas = BUL_redistributing_land_to_peasants_idea
-	  add_ideas = BUL_lowering_tax_burden_on_peasants_idea
     }
   }
   focus = {
@@ -62,6 +51,7 @@ focus_tree = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_we_must_industrialize"
+	  add_ideas = BUL_adopt_industrialisation_idea
       random_owned_state = {
         add_building_construction = {
           type = arms_factory
@@ -637,6 +627,7 @@ focus_tree = {
         }
         add_extra_state_shared_building_slots = 1
       }
+	  add_ideas = BUL_empowering_the_bank_idea
     }
   }
   focus = {
@@ -745,6 +736,7 @@ focus_tree = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_bulgarian_urban_metropolis"
+	  add_ideas = BUL_industrial_boom_idea
       48 = {
         add_extra_state_shared_building_slots = 2
       }
@@ -793,6 +785,27 @@ focus_tree = {
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_university_of_sofia"
       add_research_slot = 1
+    }
+  }
+  focus = {
+    id = BUL_agarianism_protects
+    icon = GFX_goal_SRD_tackle_agrarian_issues
+    x = 12
+    y = 6
+    cost = 3
+    ai_will_do = {
+      factor = 75
+    }
+    available = {
+      has_country_flag = BUL_black_monday_has_hit
+    }
+    prerequisite = {
+      focus = BUL_bulgarian_urban_metropolis
+    }
+    completion_reward = {
+      log = "[GetDateText]: [Root.GetName]: Focus BUL_university_of_sofia"
+      custom_effect_tooltip = BUL_agarian_decisions_unlock
+	  add_ideas = BUL_retain_agrarianism_idea
     }
   }
   focus = {
@@ -24266,7 +24279,16 @@ focus = {
 			add_synd_to_coalition = yes
 			add_radsoc_to_coalition = yes
 			add_ideas = BUL_idealism_of_brotherhood
-			
+		set_party_name = {
+			ideology = radical_socialist
+			long_name = BUL_reactionism_party_long
+			name = BUL_reactionism_party
+		}
+		set_party_name = {
+			ideology = syndicalist
+			long_name = BUL_reactionism_party_long
+			name = BUL_reactionism_party
+		}
 		}
 	}
 	focus = {
@@ -24321,7 +24343,16 @@ focus = {
 			add_tot_to_coalition = yes
 			add_natpop_to_coalition = yes
 			add_ideas = BUL_fervor_of_zlatrog
-			
+		set_party_name = {
+			ideology = national_populist
+			long_name = BUL_accelerationism_party_long
+			name = BUL_accelerationism_party
+		}
+		set_party_name = {
+			ideology = totalist
+			long_name = BUL_accelerationism_party_long
+			name = BUL_accelerationism_party
+		}
 		}
 	}
 	focus = {
@@ -24830,6 +24861,7 @@ focus = {
 			add_one_random_civilian_factory = yes
 			add_one_random_civilian_factory = yes
 			increase_ruling_party_popularity_by_10 = yes
+			
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}

@@ -14956,6 +14956,8 @@ focus_tree = {
 			custom_effect_tooltip = FRG_europe_tooltip_21
 			unlock_decision_tooltip = FRG_Lebanon_imperialate_decision
 			unlock_decision_tooltip = FRG_Levant_imperialate_decision
+			unlock_decision_tooltip = FRG_IRQ_imperialate_decision
+			unlock_decision_tooltip = FRG_moon_imperialate_decision
 		}
 	}
 
@@ -15192,7 +15194,31 @@ focus_tree = {
 			focus = FRG_china
 		}
 		completion_reward = {
-			
+			if = {
+				limit = {
+					FRG = {
+						is_in_faction_with = CAN
+					}
+				}
+				FRG = {
+					add_political_power = 100
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						FRG = {
+							is_in_faction_with = CAN
+						}
+					}
+				}
+				FRG = {
+					create_wargoal = {
+						type = annex_everything
+						target = CAN
+					} 
+				}
+			}
 		}
 	}
 
