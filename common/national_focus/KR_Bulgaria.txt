@@ -2760,6 +2760,14 @@ focus_tree = {
     ai_will_do = {
       factor = 100
     }
+	bypass_effect = { 
+		hidden_effect = {
+		country_event = {
+			id = bulgaria_foreign_events.7
+			days = 7
+		}
+	  }
+	}
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_the_liberals_in_power"
       custom_effect_tooltip = unlock_focuses
@@ -2976,8 +2984,11 @@ focus_tree = {
     }
     
     available = {
-      BUL_has_liberal_rule = yes
-	  has_government = market_liberal
+		OR = {
+			 BUL_has_liberal_rule = yes
+	 		 has_government = market_liberal
+		}
+     
     }
     relative_position_id = BUL_tarnovo_constitution
     x = 3
@@ -12343,15 +12354,15 @@ focus = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_agrarian_alliance"
       add_popularity = {
         ideology = totalist
-        popularity = 0.1
+        popularity = -0.1
       }
 	  add_popularity = {
         ideology = syndicalist
-        popularity = 0.1
+        popularity = -0.1
       }
 	  add_popularity = {
         ideology = radical_socialist
-        popularity = 0.1
+        popularity = -0.1
       }
       
       add_one_random_civilian_factory = yes
@@ -21356,11 +21367,7 @@ focus = {
 		}
 
 		completion_reward = {
-			country_event = bulgaria.16
-			modify_timed_idea = {
-				idea = BUL_purges_of_unloyal
-				days = -375
-			}
+			
 			if = {
 				limit = {
 					has_idea = BUL_scythe_sickle

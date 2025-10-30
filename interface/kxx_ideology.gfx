@@ -593,6 +593,10 @@ spriteTypes = {
 		name = "GFX_ideology_natpop_esoteric_anarchism_subtype" #民粹-神秘无政府主义
 		texturefile = "gfx/interface/ideologies/subideologies/natpop_esoteric_anarchism_group.png"
 	}
+	SpriteType = {
+		name = "GFX_ideology_syn_esoteric_anarchism_subtype" #工团-神秘无政府主义
+		texturefile = "gfx/interface/ideologies/subideologies/esoteric_anarchism_group.png"
+	}
 
 	SpriteType = {
 		name = "GFX_ideology_theravada_buddhism_subtype" #家独-上座部佛教
@@ -605,14 +609,6 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_ideology_phi_fa_adore_subtype" #民粹-天灵崇拜
 		texturefile = "gfx/interface/ideologies/subideologies/phi_fa_adore_group.png"
-	}
-	SpriteType = {
-		name = "GFX_ideology_syn_esoteric_anarchism_subtype" #工团-神秘无政府主义
-		texturefile = "gfx/interface/ideologies/subideologies/esoteric_anarchism_group.png"
-	}
-	SpriteType = {
-		name = "GFX_ideology_syn_esoteric_anarchism_subtype" #工团-神秘无政府主义
-		texturefile = "gfx/interface/ideologies/subideologies/esoteric_anarchism_group.png"
 	}
 	SpriteType = {
 		name = "GFX_ideology_tot_theosophy_subtype"

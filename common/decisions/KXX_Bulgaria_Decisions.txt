@@ -342,27 +342,42 @@ BUL_agarian_reform_decision = {
 		}
 		icon = GFX_decision_generic_cement_mixer
 		days_remove = 30
-		days_re_enable = 30
+		fire_only_once = yes
 		complete_effect = {
-			if = {
-				limit = {
-					NOT = {
-						has_idea = BUL_redistributing_land_to_peasants_idea
-					}
-					
-				}
-				add_ideas = BUL_lowering_tax_burden_on_peasants_idea
+			
+				
+			add_ideas = BUL_lowering_tax_burden_on_peasants_idea
+			set_country_flag = BUL_land_reform1
+			
+			
+		}
+	}
+	BUL_land_reform2 = {
+		cost = 30
+		name = BUL_land_reform
+		visible = {
+			has_completed_focus = BUL_agarianism_protects
+			has_country_flag = BUL_land_reform1
+			NOT = {
+				has_country_flag = BUL_agarian_reform_finish2
 			}
-			if = {
-				limit = {
-					has_idea = BUL_redistributing_land_to_peasants_idea
-				}
+		}
+		available = { 
+			has_war = no	
+		}
+		icon = GFX_decision_generic_cement_mixer
+		days_remove = 30
+		fire_only_once = yes
+		complete_effect = {
+			
+			
+				
 				swap_ideas = {
 					remove_idea = BUL_redistributing_land_to_peasants_idea
 					add_idea = BUL_lowering_tax_burden_on_peasants_idea
 				}
 				set_country_flag = BUL_agarian_reform_finish2
-			}
+			
 			
 		}
 	}

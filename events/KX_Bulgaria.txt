@@ -394,6 +394,8 @@ country_event = { #[BUL.GetLeader]'s popularity is lowering
 			NOT = {
 				has_country_leader = { name = "Ferdinand I" }
 				has_country_leader = { name = "Boris III" }
+				has_country_leader = { name = "斐迪南一世" }
+				has_country_leader = { name = "鲍里斯三世" }
 			}
 		}
 		add_stability = -0.05
@@ -411,6 +413,8 @@ country_event = { #[BUL.GetLeader]'s popularity is lowering
 					OR = {
 					has_country_leader = { name = "Ferdinand I" }
 					has_country_leader = { name = "Boris III" }
+					has_country_leader = { name = "斐迪南一世" }
+					has_country_leader = { name = "鲍里斯三世" }
 					}
 				}
 				country_event = {
@@ -436,7 +440,7 @@ country_event = { #No Opposition in Parliament
 	option = { #It's time
 		name = kxbul.14.a
 		create_country_leader = {
-			name = "N.S. Derzhavin"
+			name = "N·S·杰尔扎温"
 			picture = "gfx/leaders/BUL/Portrait_BUL_NS_Derzhavin.png"
 			expire = "1.1.1"
 			ideology = tot_national_mysticism_subtype
