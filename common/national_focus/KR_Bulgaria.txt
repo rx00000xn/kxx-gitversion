@@ -5565,6 +5565,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus BUL_balkan_customs_union"
 			set_variable = { global.BUL_balkan_union_production_speed_industrial_complex_factor = 0.1 }
 			add_dynamic_modifier = { modifier = BUL_balkan_union }
+			tooltip = industrial_complex_construction_speed_tooltip
 			every_other_country = {
 				limit = {
 					OR = {
@@ -5606,7 +5607,7 @@ focus_tree = {
 			custom_effect_tooltip = BUL_modifies_balkan_union
 			add_to_variable = {
 				global.BUL_balkan_union_production_speed_industrial_complex_factor = 0.1
-				tooltip = industrial_capacity_factory_tooltip
+				tooltip = industrial_complex_construction_speed_tooltip
 			}
 			every_other_country = {
 				limit = { has_dynamic_modifier = { modifier = BUL_balkan_union } }
