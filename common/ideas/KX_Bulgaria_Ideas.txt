@@ -519,18 +519,7 @@ ideas = {
 				army_speed_factor = 0.1
 			}
 		}
-		BUL_embrace_messiahism2 = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_conditions_loosened"}
-			allowed = { always = no }
-			picture = RUS_savnat
-			name = BUL_embrace_messiahism
-			modifier = {
-				experience_loss_factor = -0.15
-				army_attack_factor = 0.1
-				army_defence_factor = 0.1
-				army_speed_factor = 0.1
-			}
-		}
+		
 		BUL_embrace_messiahism2 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_conditions_loosened"}
 			allowed = { always = no }
