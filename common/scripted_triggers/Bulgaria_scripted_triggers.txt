@@ -45,6 +45,7 @@ BUL_has_socialist_rule = {
 			has_country_flag = BUL_roerichists
 			has_country_flag = BUL_golden_horn
 			has_country_flag = BUL_hidden_path_unlock
+			has_country_flag = BUL_another_agrarian_w
 		}
 	}
 }

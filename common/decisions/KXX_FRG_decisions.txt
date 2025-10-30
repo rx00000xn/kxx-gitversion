@@ -1516,13 +1516,13 @@ FRG_MSF_imperialate_decision = { #刚果的秘密交易
 							}
 						}
 					}
-				}
 				MSF = {
 					country_event = { id = frg.130 days = 3 }
 				} 
 			}                   
         }
-    }
+	}
+    
 
 
 
