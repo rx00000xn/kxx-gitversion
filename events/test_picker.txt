@@ -1,0 +1,71 @@
+﻿
+add_namespace = KXXJAP
+
+country_event = {
+	id = KXXJAP.129
+	title = KXXJAP.129.t 
+	desc = KXXJAP.129.d 
+
+	is_triggered_only = yes
+	
+	option = {
+		name = KXXJAP.129.a	
+		create_country_leader = {
+			name = "中野正刚"
+			picture = "gfx/leaders/JAP/Portrait_JAP_Nakano_Seigo.png"
+			expire = "1965.1.1"
+			ideology = tot_tennosei_totalism_subtype
+		}		
+	}
+	option = {
+		name = KXXJAP.129.b	
+		create_country_leader = {
+			name = "下位春吉"
+			picture = "gfx/leaders/ITA/Portrait_ITA_Harukichi_Shimoi.png"
+			expire = "1.1.1"
+			ideology = italian_legionarism_subtype
+		}		
+		set_country_leader_portrait = {
+			portrait = "gfx/leaders/ITA/Portrait_ITA_Harukichi_Shimoi.png"
+		}
+	}
+	option = {
+		name = KXXJAP.129.c
+		create_country_leader = {
+			name = "福士幸次郎"
+			picture = "gfx/leaders/JAP/Portrait_JAP_Kojiro_Fukushi.png"
+			expire = "1.1.1"
+			ideology = maurrassism_subtype
+		}
+		set_politics = {
+			ruling_party = totalist
+		}					
+		set_party_name = {
+			ideology = totalist
+			long_name = "东方会"
+			name = "东方会"
+		}	
+	}
+	option = {
+		name = KXXJAP.129.e
+		create_country_leader = {
+			name = "花田清辉"
+			picture = "gfx/leaders/JAP/Portrait_JAP_Kiyoteru_Hanada.png"
+			expire = "1.1.1"
+			ideology = natpop_futurism_subtype
+		}
+		set_country_leader_portrait = {
+			portrait = "gfx/leaders/JAP/Portrait_JAP_Kiyoteru_Hanada.png"
+		}		
+	}
+	option = {
+		name = KXXJAP.129.f
+		create_country_leader = {
+			name = "宫崎龙介"
+			picture = "gfx/leaders/JAP/Portrait_JAP_Miyazaki_Ryusuke.png"
+			expire = "1.1.1"
+			ideology = natpop_new_live_movement_subtype
+		}		
+	}
+}
+
