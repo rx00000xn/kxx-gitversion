@@ -269,6 +269,10 @@ add_ideas = {
   partial_economic_mobilisation
   THINT_exact_vengeance
   FRA_Maurice_Gamelin_cos
+  FRA_les_grand_travaux
+  FRA_rural_religious_question
+  FRA_divided_defenders
+  FRA_tempered_revanchism
 }
 create_country_leader = {
   name = "路易·尼埃尔"  # Louis Niel
