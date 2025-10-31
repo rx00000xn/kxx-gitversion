@@ -6731,8 +6731,8 @@ country_event = { # retire Lukov?
 		}
 		
 		add_political_power = 150
-		
-		set_country_flag = zveno_legionnary
+		complete_national_focus = BUL_young_officers
+		set_country_flag = BUL_legion_victory
 	}
 }
 country_event = {
