@@ -212,6 +212,36 @@ scripted_gui = {
 			  		has_country_flag = BUL_Lyubomir_Hristov_Lulchev_VISIBLE
 				}
 			}
+			Aleksandar_Stamboliyski_visible = { #亚历山大·斯坦博利斯基
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_idea = BUL_Aleksandar_Stamboliyski_hog_sco
+				}
+			}
+			Yanko_Sakazov_visible = { #扬科·萨卡佐夫
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_idea = BUL_Yanko_Sakazov_hog_sde
+				}
+			}
+			Atanas_Burov_visible = { #阿塔纳斯·布罗夫
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_idea = BUL_Atanas_Burov_hog_sli
+				}
+			}
+			Stoyan_Kosturkov_visible = { #斯托扬·科斯图尔科夫
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_idea = BUL_Stoyan_Kosturkov_hog_mli
+				}
+			}
+			Aleksandar_Malinov_visible = { #亚历山大·马利诺夫
+				AND = {
+					has_country_flag = KXX_HOG_veiw
+					has_idea = BUL_Aleksandar_Malinov_hog_ade
+				}
+			}
 
 			#越南
 			Nguyen_Tuong_Long_visible = { #阮详龙
@@ -268,31 +298,31 @@ scripted_gui = {
 				  has_idea = VIN_Nguyen_Phan_Long_hog_mli
 				}
 			  }
-			  Nguyen_Phuc_Buu_Dinh_visible = { #阮福宝庭
+			Nguyen_Phuc_Buu_Dinh_visible = { #阮福宝庭
 				AND = {
 				  has_country_flag = KXX_HOG_veiw
 				  has_idea = VIN_Nguyen_Phuc_Buu_Dinh_hog_pau
 				}
-			  }
-			  Le_Van_Vien_visible = { #黎文远
+			}
+			Le_Van_Vien_visible = { #黎文远
 				AND = {
 				  has_country_flag = KXX_HOG_veiw
 				  has_idea = VIN_Le_Van_Vien_hog_pau
 				}
-			  }
-			  Duong_Van_Duong_visible = { #杨文洋
+			}
+			Duong_Van_Duong_visible = { #杨文洋
 				AND = {
 				  has_country_flag = KXX_HOG_veiw
 				  has_idea = VIN_Duong_Van_Duong_hog_pau
 				}
-			  }
-			  Huynh_Phu_So_visible = { #黄富楚
+			}
+			Huynh_Phu_So_visible = { #黄富楚
 				AND = {
 				  has_country_flag = KXX_HOG_veiw
 				  has_idea = VIN_Huynh_Phu_So_hog_npo
 				}
-			  }
-
+			}
+			
 			#塞尔维亚
 			Draza_Mihailovics_visible = { #德拉查·米哈伊洛维奇
 				AND = {

@@ -188,6 +188,31 @@ guiTypes = {
 			position = { x = 8 y = 10 }
 			spriteType = "GFX_Portrait_Lyubomir_Hristov_Lulchev"
 		}
+		iconType = { #
+			name = "Aleksandar_Stamboliyski"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_BUL_Aleksandar_Stamboliyski"
+		}
+		iconType = { #
+			name = "Yanko_Sakazov"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_BUL_Yanko_Sakazov"
+		}
+		iconType = { #
+			name = "Atanas_Burov"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_BUL_Atanas_Burov"
+		}
+		iconType = { #
+			name = "Stoyan_Kosturkov"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_BUL_Stoyan_Kosturkov"
+		}
+		iconType = { #
+			name = "Aleksandar_Malinov"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_BUL_Aleksandar_Malinov"
+		}
 		
 		#######################越南##########################
 		iconType = { #
