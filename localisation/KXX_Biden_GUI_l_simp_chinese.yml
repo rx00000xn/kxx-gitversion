@@ -180,6 +180,8 @@
  #保加利亚
  BUL_OR_LEADER:0 "点击以切换§R大汗§!与§C首相§!"
  BUL_OR_LEADER2:0 "[FROM.GetNameWithFlag]的§C首相§!"
+ BUL_OR_LEADER3:0 "点击以切换§8领袖§!与§R执剑人§!"
+ BUL_OR_LEADER4:0 "[FROM.GetNameWithFlag]的§R执剑人§!"
  BUL_Gaynan_Waisi_C:0 "盖南·瓦伊西"
  BUL_Galimcan_ibrahimov_C:0 "加利姆詹·易卜拉欣莫夫"
  BUL_Mirsayet_Soltangaliev_C:0 "米尔赛义德·苏丹-加利耶夫"

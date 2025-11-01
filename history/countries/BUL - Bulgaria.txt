@@ -151,6 +151,8 @@ set_politics = {
 	elections_allowed = no
 }
 
+set_country_flag = LEADER_GUI_NOT_VISIBLE
+
 set_popularities = {
 	totalist = 0
 	radical_socialist = 4
