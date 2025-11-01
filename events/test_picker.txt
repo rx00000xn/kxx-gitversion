@@ -1,24 +1,35 @@
 ﻿
-add_namespace = KXXJAP
+add_namespace = SCBJAP
 
 country_event = {
-	id = KXXJAP.129
-	title = KXXJAP.129.t 
-	desc = KXXJAP.129.d 
+	id = SCBJAP.129
+	title = KXXJAP.148.t 
+	desc = KXXJAP.148.d 
 
 	is_triggered_only = yes
 	
 	option = {
-		name = KXXJAP.129.a	
+		name = KXXJAP.148.a	
 		create_country_leader = {
-			name = "中野正刚"
-			picture = "gfx/leaders/JAP/Portrait_JAP_Nakano_Seigo.png"
+			name = "白鸟敏夫"
+			picture = "gfx/leaders/JAP/Portrait_JAP_Shiratori_Toshio.png"
 			expire = "1965.1.1"
-			ideology = tot_tennosei_totalism_subtype
+			ideology = national_mysticism_subtype
 		}		
+		set_politics = {
+			ruling_party = national_populist
+		}					
+		set_party_name = {
+			ideology = national_populist
+			long_name = "大政翼赞会"
+			name = "大政翼赞会"
+		}	
+		set_country_leader_portrait = {
+			portrait = "gfx/leaders/JAP/Portrait_JAP_Shiratori_Toshio.png"
+		}				
 	}
 	option = {
-		name = KXXJAP.129.b	
+		name = KXXJAP.148.b	
 		create_country_leader = {
 			name = "下位春吉"
 			picture = "gfx/leaders/ITA/Portrait_ITA_Harukichi_Shimoi.png"
@@ -30,7 +41,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = KXXJAP.129.c
+		name = KXXJAP.149.c
 		create_country_leader = {
 			name = "福士幸次郎"
 			picture = "gfx/leaders/JAP/Portrait_JAP_Kojiro_Fukushi.png"
@@ -47,7 +58,7 @@ country_event = {
 		}	
 	}
 	option = {
-		name = KXXJAP.129.e
+		name = KXXJAP.150.e
 		create_country_leader = {
 			name = "花田清辉"
 			picture = "gfx/leaders/JAP/Portrait_JAP_Kiyoteru_Hanada.png"
@@ -59,7 +70,7 @@ country_event = {
 		}		
 	}
 	option = {
-		name = KXXJAP.129.f
+		name = SCBJAP.129.f
 		create_country_leader = {
 			name = "宫崎龙介"
 			picture = "gfx/leaders/JAP/Portrait_JAP_Miyazaki_Ryusuke.png"
