@@ -1149,11 +1149,11 @@
  tot_kokubo_kokka_subtype:0 "国防国家"
  tot_kokubo_kokka_subtype_desc:0 "§Y国防国家§!\n\n"
 
- tennosei_totalism_subtype:0 "天皇制极权主义"
- tennosei_totalism_subtype_desc:0 "§Y天皇制极权主义§!\n\n"
+ tennosei_totalism_subtype:0 "天皇制准则主义"
+ tennosei_totalism_subtype_desc:0 "§Y天皇制准则主义§!\n\n天皇制准则主义是日本党人派政客中野正刚所创建的国家主义政党“东方会”的指导思想。这一理念结合了过去在民政党与国民同盟中野所推崇的“社会国民主义”和欧洲考察时所接触到的国家工团主义思想——特别是英国政治家奥斯瓦尔德·莫斯利的主张。"
 
- tot_tennosei_totalism_subtype:0 "天皇制极权主义"
- tot_tennosei_totalism_subtype_desc:0 "§Y天皇制极权主义§!\n\n"
+ tot_tennosei_totalism_subtype:0 "天皇制准则主义"
+ tot_tennosei_totalism_subtype_desc:0 "§Y天皇制准则主义§!\n\n"
 
  nihonism_subtype:0 "日本国粹主义"
  nihonism_subtype_desc:0 "§Y日本国粹主义§!\n\n"
