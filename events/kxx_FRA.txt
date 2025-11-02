@@ -54,13 +54,13 @@ country_event = {
 option = { 
 	name = kxxfrance.3.a
 	ai_chance = {
-		factor = 100
+		base = 100
 	}
 }	
 option = { 
 	name = kxxfrance.3.b
 	ai_chance = {
-		factor = 0
+		base = 0
 	}
 	set_country_flag = PANEUROPE
 	every_country = {
@@ -87,14 +87,14 @@ country_event = {
 option = { 
 	name = kxxfrance.4.a
 	ai_chance = {
-		factor = 0
+		base = 0
 		
 	}
 }	
 option = { 
 	name = kxxfrance.4.b
 	ai_chance = {
-		factor = 100
+		base = 100
 		
 	}
 	FRA = {
@@ -194,20 +194,20 @@ country_event = {
 option = { 
 	name = kxxfrance.7.a
 	ai_chance = {
-		factor = 34
+		base = 34
 	}
 	set_country_flag = PROFRANCE
 }
 option = { 
 	ai_chance = {
-		factor = 33
+		base = 33
 	}
 	name = kxxfrance.7.b
 	set_country_flag = PROBRITISH
 }	
 option = { 
 	ai_chance = {
-		factor = 33
+		base = 33
 	}
 	name = kxxfrance.7.c
 	
@@ -362,6 +362,9 @@ country_event = {
 
 option = { 
 	name = kxxfrance.12.a
+	ai_chance = {
+		base = 50
+	}
 	create_country_leader = {
 		name = "马塞尔·戴亚"
 		desc = "POLITICS_MARCEL_DEAT_DESC"
@@ -405,6 +408,9 @@ option = {
 }	
 option = { 
 	name = kxxfrance.12.b
+	ai_chance = {
+		base = 49
+	}	
 	set_politics = {
 		ruling_party = social_democrat
 		elections_allowed = no
@@ -518,6 +524,9 @@ option = {
 }
 option = {
 	name = kxxfrance.13.c
+	ai_chance = {
+		base = 1
+	}	
 	add_stability = -0.1
 	hidden_effect = {
 		country_event = {
@@ -564,7 +573,7 @@ country_event = {
 option = { 
 	name = kxxfrance.14.a
 	ai_chance = {
-		factor = 100
+		base = 100
 	}
 	create_country_leader = {
 		name = "利奥十四世"
@@ -776,7 +785,7 @@ option = {
 option = { 
 	name = kxxfrance.16.b
 	ai_chance = {
-		factor = 70
+		base = 99
 	}	
 	country_event = {
 		id = kxxfrance.17
@@ -786,7 +795,7 @@ option = {
 option = {
 	name = kxxfrance.16.c
 	ai_chance = {
-		factor = 30
+		base = 1
 	}	
 	add_stability = -0.1
 	hidden_effect = {
@@ -808,14 +817,14 @@ country_event = {
 option = { 
 	name = kxxfrance.17.a #yay deat again
 	ai_chance = {
-		factor = 0
+		base = 0
 	}
 	complete_national_focus = FRA_Restoring_Socialist_Order
 }
 option = { 
 	name = kxxfrance.17.b #yay dorgeres
 	ai_chance = {
-		base = 25
+		base = 20
 	}
 	create_country_leader = {
 		name = "乔治·阿尔贝蒂尼"
@@ -856,7 +865,7 @@ option = {
 option = { 
 	name = kxxfrance.17.c #yay herve
 	ai_chance = {
-		base = 25
+		base = 20
 	}
 	create_country_leader = {
 		name = "古斯塔夫·爱尔威"
@@ -897,7 +906,7 @@ option = {
 option = { 
 	name = kxxfrance.17.f #ohhhhhh napoleon!!!!
 	ai_chance = {
-		base = 25
+		base = 20
 	}
 	create_country_leader = {
 		name = "安德烈·肖梅"
@@ -937,7 +946,7 @@ option = {
 option = { 
 	name = kxxfrance.17.e #yay red flood garbage
 	ai_chance = {
-		base = 25
+		base = 20
 	}
 	create_country_leader = {
 		name = "西蒙娜·威尔"
@@ -978,7 +987,7 @@ option = {
 option = { 
 	name = kxxfrance.30.a #who fucking cares just a cringe commie chad
 	ai_chance = {
-		base = 25
+		base = 20
 	}
 	country_event = {
 		id = kxxfrance.30
@@ -997,7 +1006,7 @@ country_event = {	#戴亚选举第二部分
 	option = { 
 		name = kxxfrance.17.g #who fucking cares just a cringe commie chad
 		ai_chance = {
-			base = 18
+			base = 20
 		}
 		create_country_leader = {
 			name = "安德烈·洛吕奥"
@@ -1038,7 +1047,7 @@ country_event = {	#戴亚选举第二部分
 	option = { 
 		name = kxxfrance.17.h #red flood garbage again
 		ai_chance = {
-			base = 18
+			base = 20
 		}
 		create_country_leader = {
 			name = "罗伯特·佩尔蒂埃"
@@ -1125,9 +1134,9 @@ country_event = {	#戴亚选举第二部分
 	option = { 
 		name = kxxfrance.17.i #可能派
 		ai_chance = {
-			base = 18
+			base = 20
 			modifier = {
-				factor = 1000
+				base = 1000
 				has_game_rule = {
 					rule = FRA_after_deat
 					option = FRA_AFTER_DEAT_POSSIBLE
@@ -1177,7 +1186,7 @@ country_event = {	#戴亚选举第二部分
 	option = { 
 		name = kxxfrance.30.e #dysutopia
 		ai_chance = {
-			base = 18
+			base = 20
 		}
 		create_country_leader = {
 			name = "皮埃尔·普丘"
@@ -1224,7 +1233,7 @@ country_event = {	#戴亚选举第二部分
 	option = { 
 		name = kxxfrance.30.f #red flood again and again
 		ai_chance = {
-			base = 18
+			base = 20
 		}
 		create_country_leader = {
 			name = "阿尔方斯·德·沙托布里昂"
@@ -1265,7 +1274,7 @@ country_event = {	#戴亚选举第二部分
 	option = { 
 		name = kxxfrance.30.b #who fucking cares just a cringe commie chad
 		ai_chance = {
-			factor = 0
+			base = 0
 		}
 		country_event = {
 			id = kxxfrance.17
@@ -1284,7 +1293,7 @@ country_event = {
 option = { #cores!!!!
 	name = kxxfrance.18.a
 	ai_chance = {
-		factor = 50
+		base = 50
 	}
 	create_wargoal = {
 		type = annex_everything
@@ -1360,7 +1369,7 @@ country_event = {
 option = { 
 	name = kxxfrance.19.a
 	ai_chance = {
-		factor = 50
+		base = 50
 	}
 	set_country_flag = FRA_nap_puppet
 			add_state_core = 42
@@ -1389,7 +1398,7 @@ option = {
 	name = kxxfrance.19.b
 	
 	ai_chance = {
-		factor = 50
+		base = 50
 	}
 	set_country_flag = FRA_nap_euro
 
@@ -2307,7 +2316,7 @@ country_event = {
 option = { #nein
 	name = kxxfrance.24.a
 	ai_chance = {
-		factor = 0
+		base = 0
 	}
 	add_political_power = 50
 	
@@ -2315,7 +2324,7 @@ option = { #nein
 option = { #oh yes
 	name = kxxfrance.24.b
 	ai_chance = {
-		factor = 100
+		base = 100
 	}
 	if = {
 		limit = {
@@ -2989,7 +2998,7 @@ country_event = {
 	option = { 
 		name = kxxfrance.31.a #who fucking cares just a cringe commie chad
 		ai_chance = {
-			factor = 50
+			base = 50
 		}
 		meta_effect = {
 			text = {
@@ -3022,7 +3031,7 @@ country_event = {
 	option = { 
 		name = kxxfrance.31.b #who fucking cares just a cringe commie chad
 		ai_chance = {
-			factor = 50
+			base = 50
 		}	
 		meta_effect = {
 			text = {
@@ -3056,7 +3065,7 @@ country_event = {
 	option = { 
 		name = kxxfrance.31.c #who fucking cares just a cringe commie chad
 		ai_chance = {
-			factor = 50
+			base = 50
 		}	
 		meta_effect = {
 			text = {
@@ -3087,7 +3096,7 @@ country_event = {
 	option = { 
 		name = kxxfrance.31.e #who fucking cares just a cringe commie chad
 		ai_chance = {
-			factor = 50
+			base = 50
 		}	
 		meta_effect = {
 			text = {
@@ -3119,7 +3128,7 @@ country_event = {
 	option = { 
 		name = kxxfrance.31.f #who fucking cares just a cringe commie chad
 		ai_chance = {
-			factor = 50
+			base = 50
 		}	
 		meta_effect = {
 			text = {
@@ -3151,7 +3160,7 @@ country_event = {
 	option = { 
 		name = kxxfrance.31.g #who fucking cares just a cringe commie chad
 		ai_chance = {
-			factor = 50
+			base = 50
 		}	
 		meta_effect = {
 			text = {
@@ -5085,14 +5094,14 @@ country_event = {
 option = { 
 	name = kxxfrance.53.a
 	ai_chance = {
-		factor = 0
+		base = 0
 		
 	}
 }	
 option = { 
 	name = kxxfrance.53.b
 	ai_chance = {
-		factor = 100
+		base = 100
 		
 	}
 	ROOT = {
@@ -5226,7 +5235,7 @@ country_event = {
 option = { 
 	name = kxxfrance.60.a
 	ai_chance = {
-		factor = 100
+		base = 100
 	}
 	every_country = {
 		limit = {
@@ -5273,7 +5282,7 @@ country_event = {
 option = { 
 	name = kxxfrance.62.a
 	ai_chance = {
-		factor = 100
+		base = 100
 	}
 	every_country = {
 		limit = {
@@ -5625,7 +5634,7 @@ country_event = {
 option = { 
 	name = kxxfrance.73.a
 	ai_chance = {
-		factor = 100
+		base = 100
 	}
 	set_global_flag = FRA_CNT_UNION
 }	
@@ -7088,7 +7097,7 @@ country_event = {
 	option = { 
 		name = kxxfrance.93.a
 		ai_chance = {
-			factor = 100
+			base = 100
 		}
 		FRA = {
 			annex_country = { target = NFA transfer_troops = yes }
@@ -7101,7 +7110,7 @@ country_event = {
 	option = { 
 		name = kxxfrance.93.b
 		ai_chance = {
-			factor = 0
+			base = 0
 		}
 	}
 }

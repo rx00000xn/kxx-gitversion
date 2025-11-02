@@ -390,7 +390,7 @@ focus = {
 	icon = GFX_goal_JAP_iesato_government 
 	relative_position_id = JAP_long_live_the_shogunate
 	x = 0
-	y = 1
+	y = 2
 	allow_branch = {
 		
 	}
@@ -994,45 +994,14 @@ focus = {
 		}
 	}
 }
-focus = {
-	id = JAP_grand_triumvirate
-	icon = GFX_goal_JAP_grand_triumvirate  
-	x = 13
-	y = 16
-	
-	cost = 5
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus JAP_grand_triumvirate"
-		country_event = {
-			id = jap_shogun.11
-			days = 3 
-		}
-	}
-}
-focus = {
-	id = JAP_meeting_of_three_officials
-	icon = GFX_goal_JAP_meeting_of_officials 
-	relative_position_id = JAP_grand_triumvirate
-	x = 0
-	y = 1
-	prerequisite = { focus = JAP_grand_triumvirate }
-	cost = 6
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus JAP_meeting_of_three_officials"
-		country_event = {
-			id = jap_shogun.14
-			days = 5 
-		}
-	}
-}
+
 focus = {
 	id = JAP_the_kingmaker_assumed_shogunate
 	icon = GFX_goal_JAP_the_kingmaker 
 	relative_position_id = JAP_meeting_of_three_officials 
-	x = 0
-	y = 1
+	x = 13
+	y = 18
 	
-	prerequisite = { focus = JAP_meeting_of_three_officials }
 	cost = 2
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus JAP_the_kingmaker_assumed_shogunate"

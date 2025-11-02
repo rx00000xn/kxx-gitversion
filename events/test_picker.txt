@@ -63,20 +63,15 @@ country_event = {
 			name = "花田清辉"
 			picture = "gfx/leaders/JAP/Portrait_JAP_Kiyoteru_Hanada.png"
 			expire = "1.1.1"
-			ideology = natpop_futurism_subtype
+			ideology = fascination_with_death_subtype
 		}
-		set_country_leader_portrait = {
-			portrait = "gfx/leaders/JAP/Portrait_JAP_Kiyoteru_Hanada.png"
+		set_politics = {
+			ruling_party = national_populist
 		}		
 	}
 	option = {
 		name = SCBJAP.129.f
-		create_country_leader = {
-			name = "宫崎龙介"
-			picture = "gfx/leaders/JAP/Portrait_JAP_Miyazaki_Ryusuke.png"
-			expire = "1.1.1"
-			ideology = natpop_new_live_movement_subtype
-		}		
+		load_focus_tree = japan-shongunate
 	}
 }
 
