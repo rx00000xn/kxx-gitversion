@@ -7624,6 +7624,7 @@ country_event = {
 			complete_national_focus = FRA_Paris_en_ordre
 			remove_ideas = FRA_valois_dead_idea
 			remove_ideas = French_Revanchism_idea
+			remove_ideas = FRA_Sorelian_Division
 			country_event = {
 				id = comfrance.929
 				days = 5
