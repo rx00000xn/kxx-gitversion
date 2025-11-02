@@ -6585,6 +6585,11 @@ option = {
 		remove_ideas = FRA_valois_dead_idea
 	}
 	set_country_flag = FRA_batalie
+	hidden_effect = {
+		remove_ideas = FRA_valois_dead_idea
+		remove_ideas = FRA_black_guard_insurgency_idea
+		remove_ideas = FRA_Sorelian_Division
+	}
 }	
 	
 }

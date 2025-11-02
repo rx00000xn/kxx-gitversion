@@ -2300,6 +2300,7 @@ country_event = { #Government destabilisation
 		remove_ideas = BUL_asserting_the_tsars_power_idea
 
 		hidden_effect = {
+			country_event = { id = bulgaria.125 days = 30  }
 			random_other_country = {
 				limit = { is_ai = yes }
 				news_event = worldnews.140
@@ -2371,6 +2372,7 @@ country_event = { #Government destabilisation
 		remove_ideas = BUL_asserting_the_tsars_power_idea
 
 		hidden_effect = {
+			country_event = { id = bulgaria.125 days = 30  }
 			random_other_country = {
 				limit = { is_ai = yes }
 				news_event = worldnews.140
