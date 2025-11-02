@@ -998,7 +998,6 @@ focus = {
 focus = {
 	id = JAP_the_kingmaker_assumed_shogunate
 	icon = GFX_goal_JAP_the_kingmaker 
-	relative_position_id = JAP_meeting_of_three_officials 
 	x = 13
 	y = 18
 	
