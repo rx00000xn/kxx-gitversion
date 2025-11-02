@@ -2,16 +2,16 @@
 
 ### 国名 ###
 JAP_vanguardist: "日本公社联邦共和国" # 原注释：日本公社連合共和国
-JAP_vanguardist_ADJ: "日本的"
+JAP_vanguardist_ADJ: "日本"
 JAP_vanguardist_DEF: "日本公社联邦共和国"
 JAP_collectivist: "日本革命联合省" # 原注释：日本革命連邦共和国
-JAP_collectivist_ADJ: "日本的"
+JAP_collectivist_ADJ: "日本"
 JAP_collectivist_DEF: "日本革命联合省"
 JAP_libertarian_socialist: "日本民主人民共和国"
-JAP_libertarian_socialist_ADJ: "日本的"
+JAP_libertarian_socialist_ADJ: "日本"
 JAP_libertarian_socialist_DEF: "日本民主人民共和国"
 JAP_valkist: "神州真宗政府" # Akitsushima Shinshū Seifu
-JAP_valkist_ADJ: "神州的" # Akitsushiman
+JAP_valkist_ADJ: "神州" # Akitsushiman
 JAP_valkist_DEF: "神州真宗政府" # The Divine State Administration of Akitsushima
 
 JAP_tohokai_national_populist: "日本执权府" # Shikkenate of Japan
@@ -23,8 +23,8 @@ JAP_Shogunate: "德川幕府" # Tokugawa Shogunate
 JAP_Shogunate_DEF: "德川幕府" # The Tokugawa Shogunate
 JAP_Shogunate_Kuniyuki: "日本幕府" # Shogunate of Japan
 JAP_Shogunate_Kuniyuki_DEF: "日本幕府" # The Shogunate of Japan
-JAP_Kumazawa: "日本帝国国" # Japanese Imperial State
-JAP_Kumazawa_DEF: "日本帝国国" # The Japanese Imperial State
+JAP_Kumazawa: "日本帝权国" # Japanese Imperial State
+JAP_Kumazawa_DEF: "日本帝权国" # The Japanese Imperial State
 JAP_Suiheisha_libertarian_socialist: "日本民主邦联" # Democratic Confederation of Japan
 JAP_Suiheisha_libertarian_socialist_DEF: "日本民主邦联" # The Democratic Confederation of Japan
 JAP_Republican_libertarian_socialist: "日本社会主义共和国" # Socialist Republic of Japan
