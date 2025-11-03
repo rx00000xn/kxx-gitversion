@@ -6843,15 +6843,10 @@ focus_tree = {
 			has_socialist_government = yes
 		}
 		prerequisite = {
-			focus = BUL_Cement_The_Army
+			focus = BUL_Cement_The_Regime
 			
 		}
-		prerequisite = {
-			focus = BUL_Cement_The_Economy
-		}
-		prerequisite = {
-			focus = BUL_Trade_Unions_Issue
-		}
+		
 		ai_will_do = {
 			factor = 10
 		}
@@ -20494,12 +20489,10 @@ focus = {
 		}
 		completion_reward = {
 			custom_effect_tooltip = tooltip_focus_unlocked_by_event
-			hidden_effect = {
-				country_event = {
-					id = bulgaria_foreign_events.15
-					days = 1
-				}
-			}
+			country_event = bulgaria_foreign_events.15
+					
+				
+			
 		}
 	}
 	focus = {
@@ -21860,7 +21853,7 @@ focus = {
 				amount = 1000
 				producer = BUL
 			}
-			custom_effect_tooltip = BUL_moderate_influence_tooltip
+			
 		}
 	}
 	
@@ -25068,7 +25061,7 @@ focus = {
 		available = {
 			is_subject = no
 			has_country_flag = BUL_IMRO_coup
-		
+			has_socialist_government = no
 		}
 		mutually_exclusive = {
 			focus = BUL_declare_balkan_socialist_federation
@@ -25113,7 +25106,7 @@ focus = {
 		available = {
 			is_subject = no
 			has_country_flag = BUL_IMRO_coup
-		
+			has_socialist_government = yes
 		}
 		mutually_exclusive = {
 			focus = BUL_odrysia_legacy

@@ -92,7 +92,6 @@ ideas = {
 			modifier = {
 				political_power_factor = 0.15
 				army_attack_factor = 0.1
-				army_org_factor = -0.1
 				army_morale_factor = 0.05
 				consumer_goods_expected_value = -0.05
 			}
@@ -236,7 +235,6 @@ ideas = {
 			modifier = { 
 				totalist_drift = 0.1
 				local_resources_factor = 0.1
-				consumer_goods_expected_value = 0.1
 				army_org_factor = 0.15
 				conscription_factor = 0.15
 				training_time_factor = -0.10
@@ -319,11 +317,9 @@ ideas = {
 			modifier = {
 				totalist_drift = 0.05
 				army_speed_factor = 0.15
-				army_org_factor = -0.15
 				army_attack_factor = 0.1
-				army_morale_factor = -0.1
 				consumer_goods_expected_value = -0.1
-				cat_mobile_warfare_cost_factor = -0.1
+				army_attack_speed_factor = 0.1
 			}
 		}
 		BUL_skulls_and_bones5 = {
@@ -342,8 +338,6 @@ ideas = {
 			modifier = {
 				totalist_drift = 0.05
 				army_speed_factor = 0.15
-				army_org_factor = -0.05
-				army_morale_factor = -0.1
 				consumer_goods_expected_value = -0.1
 				army_attack_speed_factor = 0.1
 			}

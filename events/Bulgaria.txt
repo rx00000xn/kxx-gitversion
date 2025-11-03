@@ -2228,7 +2228,6 @@ country_event = { #Government destabilisation
 	is_triggered_only = yes
 	
 	trigger = {
-		has_government = social_conservative
 		has_idea = BUL_Aleksandar_Stamboliyski_hog_sco
 	}
 
