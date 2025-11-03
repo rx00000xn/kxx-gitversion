@@ -7515,6 +7515,8 @@ country_event = { #
 				array = RUS.RUS_starting_states_array
 				add_core_of = ROOT
 			}
+			RUS_enable_integration = yes
+			ROOT = { save_global_event_target_as = russia }
 			every_state = {
 				limit = {
 					is_core_of = DKB
@@ -7555,6 +7557,8 @@ country_event = { #
 				array = RUS.RUS_starting_states_array
 				add_core_of = ROOT
 			}
+			RUS_enable_integration = yes
+			ROOT = { save_global_event_target_as = russia }
 			every_state = {
 				limit = {
 					is_core_of = DKB

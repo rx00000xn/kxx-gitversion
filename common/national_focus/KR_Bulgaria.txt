@@ -10,7 +10,7 @@ focus_tree = {
   default = no
   continuous_focus_position = {
     x = 10000
-    y = 10000
+    y = 3000
   }
   focus = {
     id = BUL_rectify_economic_mistakes
@@ -2760,14 +2760,7 @@ focus_tree = {
     ai_will_do = {
       factor = 100
     }
-	bypass_effect = { 
-		hidden_effect = {
-		country_event = {
-			id = bulgaria_foreign_events.7
-			days = 7
-		}
-	  }
-	}
+	
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus BUL_the_liberals_in_power"
       custom_effect_tooltip = unlock_focuses
@@ -3039,6 +3032,17 @@ focus_tree = {
 				swap_ideas = {
 					remove_idea = BUL_boris_crown_prince
 					add_idea = BUL_boris_crown_prince_bad
+				}
+			}
+			if = {
+				limit = {
+					  BUL_has_liberal_rule = yes
+				}
+				hidden_effect = {
+					country_event = {
+						id = bulgaria_foreign_events.7
+						days = 7
+					}
 				}
 			}
 		}
@@ -24937,11 +24941,7 @@ focus = {
 		}
 		available = {
 			is_subject = no
-			SER = {
-				NOT = {
-					has_completed_focus = SER_develop_macedonia
-				}
-			}
+			
 		}
 		
 		ai_will_do = { factor = 30 }
