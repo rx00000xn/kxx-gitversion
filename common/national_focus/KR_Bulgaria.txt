@@ -24937,11 +24937,7 @@ focus = {
 		}
 		available = {
 			is_subject = no
-			SER = {
-				NOT = {
-					has_completed_focus = SER_develop_macedonia
-				}
-			}
+			
 		}
 		
 		ai_will_do = { factor = 30 }
