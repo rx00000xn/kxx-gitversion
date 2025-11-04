@@ -1779,7 +1779,7 @@ ideologies = {
 			natpop_goebbels_subtype = { can_be_randomly_selected = no }  #民族马克思主义
 			natpop_lusotropicalism_subtype = {can_be_randomly_selected = no} #葡萄牙热带主义（刚果拓展）
 			cannibalism_proto_subtype = {can_be_randomly_selected = no color = { 93 27 29 } } #同类相食（刚果拓展）
-			mercourism_subtype = { can_be_randomly_selected = no } #梅尔库里斯主义
+			mercourism_subtype = { can_be_randomly_selected = no color = { 11 46 29 } } #梅尔库里斯主义
 			ultranationalism_proto_subtype = { can_be_randomly_selected = no } #极端民族主义
 			imperialcult_subtype = { can_be_randomly_selected = no color = { 9 11 57 } } #帝国宗教
 			eugenicsism_subtype = { can_be_randomly_selected = no } #优生学
