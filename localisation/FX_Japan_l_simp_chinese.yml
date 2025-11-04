@@ -95,7 +95,7 @@ JAP_usa_faction_tt: "我们将与§G[PHI.GetNameDef]§!建立同盟"
 
 ## 效果 (FX)
 # 特质 (Trait)
-chancellor_of_state: "太政大臣 (Chancellor of State)"
+chancellor_of_state: "太政大臣"
 the_just_shogun: "正义将军"
 JAP_demon_lord_in_disguise: "伪装的魔王"
 JAP_yamato_ogosho: "大和大御所"
@@ -178,8 +178,8 @@ JAP_spirit_of_bodhisatva_idea: "菩萨精神"
 JAP_indochinese_guerilla_riot: "印度支那游击队暴动"
 
 # 国策树描述 (Redux Tree)
-JAP_alliance_triumphant: "联盟凯旋" # Domei Triumphant
-JAP_alliance_triumphant_desc: "新的北部联盟终于成功地实现了其崇高目标，推翻了扼杀国家的错误僭主。我们骄傲的国家将不再屈服于伪政府中军人傀儡的铁蹄之下。在我们仁慈的领袖德川家达的明智领导下，我们将恢复日本真正的民主。他将引领我们的国家走向自由繁荣的未来。"
+JAP_alliance_triumphant: "幕府再建" # Domei Triumphant
+JAP_alliance_triumphant_desc: "在经历惨烈的内战后，日本的命运被重新交回了德川家族手中，我们骄傲的国家不再屈服于萨长军阀的铁蹄之下。在仁慈忠厚的德川家达的领导下，我们将同民党的好友们恢复日本真正的民主，修正幕末以来的错误，引领我们的国家走向自由繁荣的未来。"
 JAP_great_council_of_state: "太政官" # Daijo-kan
 JAP_great_council_of_state_desc: "太政官是旧日本帝国政府的最高机构。我们将恢复该制度昔日的荣光，包括其法律典章和政府结构的所有方面。这将保障我们政府未来的稳定和效能。"
 JAP_restore_ritsuryo: "恢复律令制" # Restore Ritsuryo Code
@@ -189,9 +189,9 @@ JAP_empower_shogunal_authority_desc: "将军世代担任日本的守护者，在
 JAP_kyujidai_doctrine: "旧代改革" # Kyujidai Reform
 JAP_kyujidai_doctrine_desc: "旧代改革是我们按照封建时代的旧日本制度改革政府的宏伟计划。我们将这些作为我们国家数百年稳定基石的观念带入我们的新未来，并将这一概念现代化以适应现代。这些伟大的改革将引领我们建立一个真正繁荣、真正属于日本的、摆脱西方影响的国家。"
 JAP_shinjidai_doctrine: "新代改革" # Shinjidai Reform
-JAP_shinjidai_doctrine_desc: "新代改革是我们按照英国威斯敏斯特议会制度改革政府的宏伟计划。它旨在创建一个上议院和下议院，下议院由人民选举产生。这将意味着我们开始向新的亚洲民主目标过渡。"
+JAP_shinjidai_doctrine_desc: "虽然英国人的体制已经被革命推翻，但威斯敏斯特议会制度仍然记得借鉴。遥想加藤尝试贵族院改革，但是终无成果。我们将进行新代改革，建立真正上下议员的权力制衡机制。这将意味着我们开始向新的亚洲民主目标过渡。"
 JAP_supreme_tribunal_of_nagasaki: "长崎最高法庭" # Supreme Tribunal of Nagasaki
-JAP_supreme_tribunal_of_nagasaki_desc: "在第二次北部联盟赢得困扰国家的政治动荡之后，太政官的参议们在德川圀順的领导下，与日本议会一起，敦促幕府开设临时法庭，以清除国家主义者和保皇党强硬派，并决定帝国海军的命运。我们将确保将这些社会的无序分子迅速绳之以法，以巩固新的国家秩序。"
+JAP_supreme_tribunal_of_nagasaki_desc: "在困扰国家的政治动荡之后，太政官的参议们在德川圀順的领导下，与日本议会一起，敦促幕府开设临时法庭，以清除国家主义者和保皇党强硬派，并决定帝国海军的命运。我们将确保将这些社会的无序分子迅速绳之以法，以巩固新的国家秩序。"
 jap_nagasaki_court_tt: "§Y一旦您的决定被选定，您将获得以下加成： \n§!" # 保留格式占位符
 JAP_the_ultranationalists: "案件：极端民族主义者" # Case: The Ultranationalists
 JAP_the_ultranationalists_desc: "民族主义集团中的强硬派一直是我们眼中的刺，他们反对我们的大多数改革计划，并一有机会就暗中破坏。虽然他们的权力肯定会自行消退，但我们现在需要采取行动。为了避免进一步的内部分裂和冲突升级，我们需要最终决定性地解决如何处置这些不守规矩的分子。"
@@ -212,9 +212,9 @@ JAP_restore_han_system_desc: "藩制赋予地方领地的大名（藩主）对�
 JAP_restore_military_authority: "恢复军事权威" # Restore Military Authority
 JAP_restore_military_authority_desc: "陆军的指挥权是一个非常有力且重要的职位，它使得指挥军官获得了巨大的影响力。我们不能接受这种现状。在旧幕府垮台之前，将军是陆军的首领，我们将确保他从军官手中收回权力，并再次担任军事领导角色。"
 JAP_guilty_of_former_shogun: "前任将军之罪" # Guilty of Former Shogun
-JAP_guilty_of_former_shogun_desc: "末代将军德川庆喜未能保卫德川家族的遗产，让政府落入倒幕运动（尊王攘夷）的险恶势力手中。这使日本偏离了正确的道路，摧毁了前几代人建立的一切。在我们持续努力纠正过去错误的同时，我们不会忘记他的过失。"
+JAP_guilty_of_former_shogun_desc: "末代将军德川庆喜未能保卫德川家族的遗产，让政府落入倒幕运动的险恶势力手中。这使日本偏离了正确的道路，摧毁了前几代人建立的一切。在我们持续努力纠正过去错误的同时，我们不会忘记他的过失。"
 JAP_reform_kazoku_law: "改革华族法" # Reform Kazoku Law
-JAP_reform_kazoku_law_desc: "《华族法》颁布于明治时期，是其宪法的一部分。它允许武士阶级成为一个更加西化的贵族阶级，在日本议会上议院拥有重要权力。我们将改革这项旧法律以限制该阶级的影响力，以英国上议院（House of Lords）作为我们的灵感来源。"
+JAP_reform_kazoku_law_desc: "《华族法》颁布于明治时期，是其宪法的一部分。它允许武士阶级成为一个更加西化的贵族阶级，在日本议会上议院拥有重要权力。我们将改革这项旧法律以限制该阶级的影响力，以英国上议院作为我们的灵感来源。"
 JAP_next_bastion_of_democracy: "亚洲民主的下一个堡垒" # Next Bastion of Asian Democracy
 JAP_next_bastion_of_democracy_desc: "通过在我们英明领导的政府领导下采用传统的日本统治方式，日本将成为亚洲民主的光辉榜样。以我们人民的名义，我们将带领我们的国家走向一个新的黄金时代，并成为我们周边国家的榜样。"
 JAP_new_legacy_of_iesato: "家达的新遗产" # New Legacy of Iesato
@@ -224,9 +224,9 @@ JAP_report_to_the_emperor_desc: "必要的工作已经完成，国家得到巩�
 JAP_long_live_the_shogunate: "幕府万岁" # Long Live the Shogunate
 JAP_long_live_the_shogunate_desc: "动荡的过渡时期已经结束，我们的国家稳固，经济终于开始复苏。似乎我们已经度过了风暴，并将日本带回了正轨。我们应该庆祝我们国家的这次伟大重生。"
 JAP_iesato_government: "家达政府" # Iesato Government
-JAP_iesato_government_desc: "将军将宣布任命太政官（Daijo-Daijin）的副手左大臣（Sa-daijin），负责政府各部和职位。新政府将在左大臣的指导下运作。现在只剩下一个问题：谁将成为政府的下一任领导人？"
+JAP_iesato_government_desc: "将军将宣布任命太政官的副手左大臣，负责政府各部和职位。新政府将在左大臣的指导下运作。现在只剩下一个问题：谁将成为政府的下一任领导人？"
 JAP_mikawahan_faction: "三河藩派" # Mikawa-han Faction
-JAP_mikawahan_faction_desc: "三河藩派（Mikawa-han Faction）是一群在将军家达领导和指导下的温和派与进步派。他们得名于德川家族祖先的故乡；德川家族的前身松平家族曾是名古屋三河藩的大名。"
+JAP_mikawahan_faction_desc: "三河藩派是一群在将军家达领导和指导下的温和派与进步派。他们得名于德川家族祖先的故乡；德川家族的前身松平家族曾是名古屋三河藩的大名。"
 JAP_left_learning_doctrine: "左翼学习主义" # Left-Learning Doctrine
 JAP_left_learning_doctrine_desc: "为了实现建设一个更好的日本的目标，我们需要从根本上改变我们国家的许多方面。虽然我们永远不能忘记伟大的日本精神，但确实，普通民众已经受苦够久了。我们将从世界各地的许多社会主义运动中汲取灵感，采取更左翼的主义，将我们的国家带入未来。还有很多工作要做。"
 JAP_rural_urbanization: "农村城市化" # Rural Urbanization
@@ -242,7 +242,7 @@ JAP_peoples_power_strengthen_desc: "我们需要支持我们最伟大的盟友�
 JAP_deconfuciusization: "去儒教化" # De-Confuciusization
 JAP_deconfuciusization_desc: "日本教育充斥着儒家思想和哲学，这已不再适合我们的日本国家。儒家思想旨在维护中国的社会价值观，是反平等主义的，这与我们处理社会问题的新方法背道而驰。因此，我们必须努力清除我们国家中这些过时的外来影响。"
 JAP_seigaku_education_reform: "西学教育改革" # Seigaku Education Reform
-JAP_seigaku_education_reform_desc: "兰学（Seigaku），在德川幕府初期也称为‘荷兰学问’（Rangaku），描述的是在早期德川时期被禁止的西方书籍和知识。禁令于1720年解除，导致了对这些新思想的研究，使日本进入了科学和文化进步的黄金时代。我们的新教育应该努力追求那个时代的理想，而不是孤立和落后的旧儒家方式。"
+JAP_seigaku_education_reform_desc: "兰学，在德川幕府初期也称为‘荷兰学问’，描述的是在早期德川时期被禁止的西方书籍和知识。禁令于1720年解除，导致了对这些新思想的研究，使日本进入了科学和文化进步的黄金时代。我们的新教育应该努力追求那个时代的理想，而不是孤立和落后的旧儒家方式。"
 JAP_electoral_reform: "选举改革" # Electoral Reform
 JAP_electoral_reform_desc: "我们的国家需要将选举过程改革为一个公平、高效和标准化的程序，以确保我们民主国家的顺利运行。我们将需要建立一个新的机构来监督这一过程，并使我们的选举过程及其影响公平合理。"
 JAP_universal_suffrage_act: "新普选法令" # New Universal Suffrage Act
