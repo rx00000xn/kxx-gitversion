@@ -152,6 +152,18 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/COL_Core_Panama.png"
 	}
 	SpriteType = {
+		name = "GFX_goal_COL_APEN"
+		texturefile = "gfx/interface/goals/COL_APEN.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_COL_the_paisa_president"
+		texturefile = "gfx/interface/goals/COL_the_paisa_president.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_COL_samarios"
+		texturefile = "gfx/interface/goals/COL_samarios.png"
+	}
+	SpriteType = {
 		name = "GFX_goal_COL_assuring_independance_shine"
 		texturefile = "gfx/interface/goals/COL_assuring_independance.png"
 		effectFile = "gfx/FX/buttonstate.lua"
@@ -1409,4 +1421,5 @@ spriteTypes = {
 			animationrotationoffset = { x = 0.0 y = 0.0 }
 			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
+}
 }

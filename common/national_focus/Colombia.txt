@@ -698,7 +698,7 @@ focus_tree = {
 
 	focus = {
 		id = COL_new_laws_propositions
-		icon = GFX_focus_generic_little_entente
+		icon = GFX_RUS_Reform_The_Judicial_System
 		x = 0
 		y = 0
 		allow_branch = {
@@ -723,7 +723,7 @@ focus_tree = {
 
 	focus = {
 		id = COL_invite_foreign_industries
-		icon = GFX_focus_generic_little_entente
+		icon = GFX_goal_AST_drink_with_industrialists
 		prerequisite = { focus = COL_new_laws_propositions }
 		mutually_exclusive = { focus = COL_no_more_blaiming_the_army focus = COL_electoral_reform }
 		x = -2
@@ -751,7 +751,7 @@ focus_tree = {
 
 	focus = {
 		id = COL_mandatory_bilingual_teaching
-		icon = GFX_focus_generic_little_entente
+		icon = GFX_ITA_education
 		prerequisite = { focus = COL_invite_foreign_industries }
 		x = 0
 		y = 1
@@ -778,7 +778,7 @@ focus_tree = {
 
 	focus = {
 		id = COL_freeze_taxes_for_businesses
-		icon = GFX_focus_generic_little_entente
+		icon = GFX_goal_HOL_progressive_tax
 		prerequisite = { focus = COL_mandatory_bilingual_teaching }
 		x = 0
 		y = 1
@@ -872,7 +872,7 @@ focus_tree = {
 
 	focus = {
 		id = COL_exposing_the_Lopez_corruption
-		icon = GFX_focus_generic_little_entente
+		icon = GFX_goal_generic_investigate_corruption
 		prerequisite = { focus = COL_comision_de_verdad_hechos_de_Leticia }
 		x = 0
 		y = 1
@@ -933,7 +933,7 @@ focus_tree = {
 
 	focus = {
 		id = COL_ban_electoral_coalitions
-		icon = GFX_focus_generic_little_entente
+		icon = GFX_GRU_BAN_LEFT
 		prerequisite = { focus = COL_electoral_reform }
 		x = 0
 		y = 1
@@ -1156,7 +1156,7 @@ focus_tree = {
 
 	focus = {
 		id = COL_grand_battle_plan_2
-		icon = GFX_focus_generic_little_entente
+		icon = GFX_MON_doctrines_I
 		prerequisite = { focus = COL_grand_battle_plan }
 		relative_position_id = COL_grand_battle_plan
 		x = 0
@@ -1178,7 +1178,7 @@ focus_tree = {
 
 	focus = {
 		id = COL_superior_firepower_2
-		icon = GFX_focus_generic_little_entente
+		icon = GFX_goal_NIC_Strong_Guerilla_Doctrine
 		prerequisite = { focus = COL_superior_firepower }
 		relative_position_id = COL_superior_firepower
 		x = 0
@@ -1230,7 +1230,7 @@ focus_tree = {
 
 	focus = {
 		id = COL_grand_battle_plan_3
-		icon = GFX_focus_generic_little_entente
+		icon = GFX_goal_generic_army_junta
 		prerequisite = { focus = COL_grand_battle_plan_2 }
 		relative_position_id = COL_grand_battle_plan_2
 		x = -1
@@ -1252,7 +1252,7 @@ focus_tree = {
 
 	focus = {
 		id = COL_grand_battle_plan_4
-		icon = GFX_focus_generic_little_entente
+		icon = GFX_goal_KEN_peoples_army
 		prerequisite = { focus = COL_grand_battle_plan_3 }
 		prerequisite = { focus = COL_further_research_army_doctrine }
 		relative_position_id = COL_grand_battle_plan_3
@@ -1273,7 +1273,7 @@ focus_tree = {
 
 	focus = {
 		id = COL_superior_firepower_3
-		icon = GFX_focus_generic_little_entente
+		icon = GFX_focus_generic_reinforcing_the_supply_network
 		prerequisite = { focus = COL_superior_firepower_2 }
 		relative_position_id = COL_grand_battle_plan_2
 		x = 3
@@ -1295,7 +1295,7 @@ focus_tree = {
 
 	focus = {
 		id = COL_superior_firepower_4
-		icon = GFX_focus_generic_little_entente
+		icon = GFX_goal_doctrine_fire_superiority
 		prerequisite = { focus = COL_superior_firepower_3 }
 		prerequisite = { focus = COL_further_research_army_doctrine }
 		relative_position_id = COL_superior_firepower_3
@@ -2553,7 +2553,7 @@ focus_tree = {
 
 	focus = {
 		id = COL_emerald_industry
-		icon = GFX_goal_generic_defence
+		icon = GFX_BRM_jade_mines
 		prerequisite = { focus = COL_the_new_economy }
 		mutually_exclusive = { focus = COL_coffee_boom }
 		relative_position_id = COL_the_new_economy
@@ -2832,7 +2832,7 @@ focus_tree = {
 
 	focus = {
 		id = COL_goodbye_recession
-		icon = GFX_goal_generic_defence
+		icon = GFX_goal_MNT_decade_to_prosperity
 		prerequisite = { focus = COL_subsidize_argriculture focus = COL_creating_the_Juan_Valdez_corporation focus = COL_inflate_emerald_prices focus = COL_from_raw_extraction_to_final_product }
 		prerequisite = { focus = COL_diversify_output }
 		relative_position_id = COL_diversify_output
@@ -2908,7 +2908,7 @@ focus_tree = {
 
 	focus = {
 		id = COL_inflate_emerald_prices
-		icon = GFX_goal_generic_defence
+		icon = GFX_goal_POL_International_Trade_Reform
 		prerequisite = { focus = COL_second_emerald_industry }
 		mutually_exclusive = { focus = COL_from_raw_extraction_to_final_product }
 		relative_position_id = COL_second_emerald_industry
@@ -2934,7 +2934,7 @@ focus_tree = {
 
 	focus = {
 		id = COL_from_raw_extraction_to_final_product
-		icon = GFX_goal_generic_defence
+		icon = GFX_goal_AFG_Polish_the_Jewel
 		prerequisite = { focus = COL_second_emerald_industry }
 		mutually_exclusive = { focus = COL_inflate_emerald_prices }
 		relative_position_id = COL_second_emerald_industry
@@ -3152,7 +3152,7 @@ focus_tree = {
 
 	focus = {
 		id = COL_push_for_multiculturalism	
-		icon = GFX_goal_generic_neutrality_focus
+		icon = GFX_goal_NYC_Metro_Culture
 		prerequisite = { focus = COL_APEN }
 		relative_position_id = COL_APEN
 		x = -1
@@ -3318,7 +3318,7 @@ focus_tree = {
 
 	focus = {
 		id = COL_funding_the_air_force		
-		icon = GFX_goal_generic_neutrality_focus
+		icon = GFX_goal_CZE_air_industry
 		prerequisite = { focus = COL_ban_moonshining }
 		prerequisite = { focus = COL_freemason_once_again }
 		prerequisite = { focus = COL_freeze_taxes_for_businesses focus = COL_exposing_the_Lopez_corruption focus = COL_approach_the_liberals }
@@ -3358,7 +3358,7 @@ focus_tree = {
 
 	focus = {
 		id = COL_minimazing_tariffs	
-		icon = GFX_goal_generic_neutrality_focus
+		icon = GFX_GRU_CONS_TAX_CUT
 		prerequisite = { focus = COL_funding_the_air_force }
 		prerequisite = { focus = COL_one_times_cash_handouts }
 		#mutually_exclusive = { focus = COL_industrial_eletronics_projects }
@@ -3587,7 +3587,7 @@ focus_tree = {
 
 	focus = {
 		id = COL_foreign_economic_advisors
-		icon = GFX_goal_generic_neutrality_focus
+		icon = GFX_goal_NVN_Economic_Expansion_Under_Business_Council
 		prerequisite = { focus = COL_the_paisa_president }
 		relative_position_id = COL_the_paisa_president
 		x = 0
@@ -3617,7 +3617,7 @@ focus_tree = {
 
 	focus = {
 		id = COL_the_intelligenzia
-		icon = GFX_goal_generic_neutrality_focus
+		icon = GFX_goal_ROM_Intellectuals_Green_Banner
 		prerequisite = { focus = COL_foreign_economic_advisors }
 		relative_position_id = COL_foreign_economic_advisors
 		x = 0
@@ -3694,7 +3694,7 @@ focus_tree = {
 
 	focus = {
 		id = COL_our_family_in_the_lead
-		icon = GFX_goal_generic_neutrality_focus
+		icon = GFX_goal_NFA_Caring_Republic_Family
 		prerequisite = { focus = COL_the_echevarria_castle }
 		prerequisite = { focus = COL_industrial_eletronics_projects }
 		prerequisite = { focus = COL_discover_oil }
@@ -3947,7 +3947,7 @@ focus_tree = {
 
 	focus = {
 		id = COL_pan_y_espectaculos_de_circo
-		icon = GFX_goal_generic_neutrality_focus
+		icon = GFX_goal_generic_cake
 		prerequisite = { focus = COL_extend_the_powers_of_the_police }
 		relative_position_id = COL_extend_the_powers_of_the_police
 		x = 0
@@ -3983,7 +3983,7 @@ focus_tree = {
 
 	focus = {
 		id = COL_securing_our_party_future
-		icon = GFX_goal_generic_neutrality_focus
+		icon = GFX_goal_ideology_market_liberal
 		prerequisite = { focus = COL_pan_y_espectaculos_de_circo }
 		prerequisite = { focus = COL_neoclassical_economics_think_thank }
 		prerequisite = { focus = COL_freeze_taxes_for_businesses focus = COL_exposing_the_Lopez_corruption focus = COL_approach_the_liberals }
@@ -4018,7 +4018,7 @@ focus_tree = {
 
 	focus = {
 		id = COL_discover_oil
-		icon = GFX_goal_generic_neutrality_focus
+		icon = GFX_goal_GAL_sell_oil
 		prerequisite = { focus = COL_securing_our_party_future focus = COL_the_echevarria_castle }
 		prerequisite = { focus = COL_one_times_cash_handouts }
 		#mutually_exclusive = { focus = COL_incentivise_lobby_groups }
@@ -4176,7 +4176,7 @@ focus_tree = {
 
 	focus = {
 		id = COL_regional_level_resources_administation
-		icon = GFX_goal_generic_defence
+		icon = GFX_RUS_Workers_Self_Government
 		prerequisite = { focus = COL_liberal }
 		relative_position_id = COL_liberal
 		x = -1
@@ -4196,7 +4196,7 @@ focus_tree = {
 
 	focus = {
 		id = COL_more_secure_industries
-		icon = GFX_goal_generic_defence
+		icon = GFX_RUS_Industrial_Expansion
 		prerequisite = { focus = COL_regional_level_resources_administation }
 		relative_position_id = COL_regional_level_resources_administation
 		x = 0
@@ -4218,7 +4218,7 @@ focus_tree = {
 
 	focus = {
 		id = COL_grants_for_our_papers
-		icon = GFX_goal_generic_defence
+		icon = GFX_goal_NFA_A_New_Constitution
 		prerequisite = { focus = COL_liberal }
 		relative_position_id = COL_liberal
 		x = 1
@@ -4262,7 +4262,7 @@ focus_tree = {
 
 	focus = {
 		id = COL_acknowledge_unions
-		icon = GFX_goal_generic_defence
+		icon = GFX_RUS_Trade_Unions_Impartiality_Act
 		prerequisite = { focus = COL_more_secure_industries }
 		prerequisite = { focus = COL_a_fairer_justice_system }
 		relative_position_id = COL_more_secure_industries
@@ -4353,7 +4353,7 @@ focus_tree = {
 
 	focus = {
 		id = COL_finalize_la_revolucion_en_marcha
-		icon = GFX_goal_generic_defence
+		icon = GFX_goal_GER_Moderate_Unions
 		prerequisite = { focus = COL_train_the_female_workforce}
 		prerequisite = { focus = COL_utopian_projects }
 		relative_position_id = COL_train_the_female_workforce
@@ -4378,7 +4378,7 @@ focus_tree = {
 
 	focus = {
 		id = COL_benefits_for_the_army
-		icon = GFX_goal_generic_defence
+		icon = GFX_goal_reform_socialist_army
 		prerequisite = { focus = COL_liberal focus = COL_conservador }
 		relative_position_id = COL_liberal
 		x = 3
@@ -4402,7 +4402,7 @@ focus_tree = {
 
 	focus = {
 		id = COL_the_long_leanage
-		icon = GFX_goal_generic_defence
+		icon = GFX_goal_KIV_state_beyond_ideology
 		prerequisite = { focus = COL_benefits_for_the_army }
 		relative_position_id = COL_benefits_for_the_army
 		x = 0
@@ -4537,7 +4537,7 @@ focus_tree = {
 
 	focus = {
 		id = COL_streighten_the_bipartisan_system
-		icon = GFX_goal_generic_defence
+		icon = GFX_UKR_Entrench_Party
 		prerequisite = { focus = COL_building_grants }
 		relative_position_id = COL_building_grants
 		x = 0
@@ -4588,7 +4588,7 @@ focus_tree = {
 
 	focus = {
 		id = COL_the_bearer_of_spainard_tradition
-		icon = GFX_goal_generic_defence
+		icon = GFX_goal_SPR_Inherent_Supremacy_Hispanic_Spirit
 		prerequisite = { focus = COL_conservador }
 		relative_position_id = COL_conservador
 		x = -1
@@ -4634,7 +4634,7 @@ focus_tree = {
 
 	focus = {
 		id = COL_economic_protectionism
-		icon = GFX_goal_generic_defence
+		icon = GFX_RUS_Reaffirm_Protectionism
 		prerequisite = { focus = COL_conservador }
 		relative_position_id = COL_conservador
 		x = 1
@@ -4655,7 +4655,7 @@ focus_tree = {
 
 	focus = {
 		id = COL_guarantee_state_invervention
-		icon = GFX_goal_generic_defence
+		icon = GFX_goal_state_economy
 		prerequisite = { focus = COL_economic_protectionism }
 		relative_position_id = COL_economic_protectionism
 		x = 0
@@ -4676,7 +4676,7 @@ focus_tree = {
 
 	focus = {
 		id = COL_reduce_department_powers
-		icon = GFX_goal_generic_defence
+		icon = GFX_goal_generic_authoritarian_government
 		prerequisite = { focus = COL_guarantee_state_invervention }
 		prerequisite = { focus = COL_end_liberal_hegemony }
 		relative_position_id = COL_guarantee_state_invervention
@@ -4698,7 +4698,7 @@ focus_tree = {
 
 	focus = {
 		id = COL_prizes_for_trailblazers
-		icon = GFX_goal_generic_defence
+		icon = GFX_goal_NFA_review_economy
 		prerequisite = { focus = COL_reduce_department_powers }
 		prerequisite = { focus = COL_building_grants }
 		#mutually_exclusive = { focus = COL_antitrust_measures }
@@ -4727,7 +4727,7 @@ focus_tree = {
 
 	focus = {
 		id = COL_antitrust_measures
-		icon = GFX_goal_generic_defence
+		icon = GFX_goal_WCC_punish_capital
 		prerequisite = { focus = COL_reduce_department_powers }
 		prerequisite = { focus = COL_building_grants }
 		#mutually_exclusive = { focus = COL_prizes_for_trailblazers }
@@ -5935,7 +5935,7 @@ focus_tree = {
 
 	focus = {
 		id = COL_FN_open_dialogue_with_the_workers
-		icon = GFX_goal_generic_union_agreement
+		icon = GFX_DKB_Loyal_Unions
 		prerequisite = { focus = COL_a_new_united_parlament }
 		x = -3
 		y = 1
@@ -6172,7 +6172,7 @@ focus_tree = {
 
 	focus = {
 		id = COL_coalition_succeeds
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_goal_LPD_democracy_in_quotation_marks
 		prerequisite = { focus = COL_FN_open_dialogue_with_the_workers }
 		prerequisite = { focus = COL_FN_naval_grants }
 		prerequisite = { focus = COL_FN_agricolture_reforms }
@@ -6323,7 +6323,7 @@ focus_tree = {
 
 	focus = {
 		id = COL_antisocialist_trade
-		icon = GFX_goal_tripartite_pact
+		icon = GFX_goal_generic_positive_trade_relations_gold
 		prerequisite = { focus = COL_reassuring_the_capitalists }
 		x = -2
 		y = 1
@@ -6474,7 +6474,7 @@ focus_tree = {
 
 	focus = {
 		id = COL_alfabetization_program
-		icon = GFX_goal_NEE_education_spending
+		icon = GFX_NEE_education_spending
 		prerequisite = { focus = COL_control_newspapers }
 		prerequisite = { focus = COL_antisocialist_trade }
 		prerequisite = { focus = COL_new_taxes }
@@ -6690,7 +6690,7 @@ focus_tree = {
 
 	focus = {
 		id = COL_expand_civil_service
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_goal_GUA_Implement_Civil_Code
 		prerequisite = { focus = COL_incentivise_denouncing_rebels }
 		x = -1
 		y = 1
@@ -6711,7 +6711,7 @@ focus_tree = {
 
 	focus = {
 		id = COL_incentivise_factory_conversion
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_goal_AUS_field_factory
 		prerequisite = { focus = COL_expand_civil_service }
 		x = 0
 		y = 1
@@ -6732,7 +6732,7 @@ focus_tree = {
 
 	focus = {
 		id = COL_invest_tax_money_in_mining
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_goal_NFL_wabana_mining
 		prerequisite = { focus = COL_incentivise_denouncing_rebels }
 		x = 1
 		y = 1
@@ -6756,7 +6756,7 @@ focus_tree = {
 
 	focus = {
 		id = COL_invest_tax_money_factories
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_RUS_Money_For_Industrialization
 		prerequisite = { focus = COL_invest_tax_money_in_mining }
 		x = 0
 		y = 1
@@ -6816,7 +6816,7 @@ focus_tree = {
 
 	focus = {
 		id = COL_expanding_the_secret_police
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_goal_secret_police
 		prerequisite = { focus = COL_incentivise_denouncing_rebels }
 		x = 3
 		y = 1
@@ -6837,7 +6837,7 @@ focus_tree = {
 
 	focus = {
 		id = COL_prioritize_elite_training
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_goal_CAN_Expand_Training_Facilities
 		prerequisite = { focus = COL_expanding_the_secret_police }
 		x = 0
 		y = 1
@@ -7047,7 +7047,7 @@ focus_tree = {
 
 	focus = {
 		id = COL_renowed_party
-		icon = GFX_goal_COL_Renewed_Party
+		icon = GFX_goal_COL_Avendano
 		prerequisite = { focus = COL_church_and_state_separation }
 		prerequisite = { focus = COL_christian_corporations }
 		mutually_exclusive = { focus = COL_the_new_guy }
@@ -7288,7 +7288,7 @@ focus_tree = {
 
 	focus = {
 		id = COL_ban_degenerate_traditions
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_goal_GER_Crucify_Degenerates
 		prerequisite = { focus = COL_promote_classical_philosophy }
 		x = 0
 		y = 1
@@ -7314,7 +7314,7 @@ focus_tree = {
 
 	focus = {
 		id = COL_strike_globalization
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_goal_burning_globe
 		prerequisite = { focus = COL_conservative_ties }
 		x = 1
 		y = 1
@@ -7354,7 +7354,7 @@ focus_tree = {
 
 	focus = {
 		id = COL_total_control_over_arms_factory
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_goal_ZAM_arms_factory
 		prerequisite = { focus = COL_strike_globalization }
 		x = 0
 		y = 1
@@ -7415,7 +7415,7 @@ focus_tree = {
 
 	focus = {
 		id = COL_showing_the_fangs
-		icon = GFX_goal_COL_Avendano
+		icon = GFX_goal_COL_Renewed_Party
 		prerequisite = { focus = COL_ban_degenerate_traditions }
 		prerequisite = { focus = COL_total_control_over_arms_factory }
 		x = 1
@@ -9395,7 +9395,7 @@ focus_tree = {
 
 	focus = {
 		id = COL_invite_guayana_in_GCL
-		icon = GFX_goal_COL_Invite_Guayana
+		icon = GFX_goal_HOL_guyana_for_alliance
 		prerequisite = { focus = COL_declare_gran_colombia focus = COL_santander_dream }
 		x = -6
 		y = 1
@@ -9488,7 +9488,7 @@ focus_tree = {
 
 	focus = {
 		id = COL_war_with_guayana_in_GCL
-		icon = GFX_goal_COL_War_With_Guayana
+		icon = GFX_goal_CAN_west_indies
 		prerequisite = { focus = COL_declare_gran_colombia focus = COL_santander_dream }
 		x = -4
 		y = 1
@@ -9648,7 +9648,7 @@ focus_tree = {
 
 	focus = {
 		id = COL_GCL_foreign_relations
-		icon = GFX_goal_COL_Choosing_our_Side
+		icon = GFX_goal_generic_globe
 		prerequisite = { focus = COL_declare_gran_colombia }
 		x = 0
 		y = 1
@@ -9883,7 +9883,7 @@ focus_tree = {
 
 	focus = {
 		id = COL_invite_panama_in_GCL
-		icon = GFX_goal_COL_Invite_Panama
+		icon = GFX_goal_panama
 		prerequisite = { focus = COL_declare_gran_colombia focus = COL_there_will_be_peace_in_the_andes }
 		x = 6
 		y = 1

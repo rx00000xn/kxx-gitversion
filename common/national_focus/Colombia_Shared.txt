@@ -11,7 +11,7 @@
 
 shared_focus = {
 	id = COL_the_coalition_survives
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_TRK_Revolution
 	x = 0
 	y = 0
 	allow_branch = {
@@ -46,7 +46,7 @@ shared_focus = {
 
 shared_focus = {
 	id = COL_totalist_revolution
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_goal_ideology_totalist
 	prerequisite = { focus = COL_the_coalition_survives }
 	x = -8
 	y = 1
@@ -73,7 +73,7 @@ shared_focus = {
 
 shared_focus = {
 	id = COL_Secret_Police
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_goal_NOR_secret_police
 	prerequisite = { focus = COL_totalist_revolution }
 	x = 1
 	y = 1
@@ -100,7 +100,7 @@ shared_focus = {
 
 shared_focus = {
 	id = COL_UNIR_revolution
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_goal_ideology_radical_socialist
 	prerequisite = { focus = COL_the_coalition_survives }
 	x = 0
 	y = 1
@@ -127,7 +127,7 @@ shared_focus = {
 
 shared_focus = {
 	id = COL_syndicalist_revolution
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_goal_ideology_syndicalist
 	prerequisite = { focus = COL_the_coalition_survives }
 	x = 8
 	y = 1
@@ -154,7 +154,7 @@ shared_focus = {
 
 shared_focus = {
 	id = COL_Seize_The_Means
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_VK_NATIONALIZE
 	prerequisite = { focus = COL_totalist_revolution }
 	x = -1
 	y = 1
@@ -172,7 +172,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = COL_A_Socialist_Bureaucracy
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_SOV_Every_Bureaucrat
 	prerequisite = { focus = COL_Seize_The_Means }
 	x = 0
 	y = 1
@@ -189,7 +189,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = COL_Setting_Production_Objectives
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_SOV_A_Great_Leap_Forward
 	prerequisite = { focus = COL_A_Socialist_Bureaucracy }
 	prerequisite = { focus = COL_Peoples_Commissars }
 	x = 0
@@ -210,7 +210,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = COL_Leader_Knows_Best
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_goal_CSA_lead_the_revolution
 	prerequisite = { 
 		focus = COL_totalist_revolution
 		focus = COL_UNIR_revolution
@@ -232,7 +232,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = COL_Peoples_Commissars
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_SOV_rev_commisars
 	prerequisite = { focus = COL_Secret_Police }
 	prerequisite = { focus = COL_Leader_Knows_Best }
 	x = 0
@@ -253,7 +253,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = COL_Anticapitalist_Action
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_SOV_No_Capital
 	prerequisite = { focus = COL_Peoples_Commissars }
 	x = 0
 	y = 1
@@ -342,7 +342,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = COL_Militia_Training_tot
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_SOV_militia
 	prerequisite = { focus = COL_Setting_Production_Objectives }
 	prerequisite = { focus = COL_Anticapitalist_Action }
 	prerequisite = { focus = COL_uuuuuuuu }
@@ -365,7 +365,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = COL_no_more_violence
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_BBR_approach_local_socialists
 	prerequisite = { 
 		focus = COL_Militia_Training_tot 
 		focus = COL_Militia_Training_rad
@@ -399,7 +399,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = COL_the_SA_playground
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_goal_CSA_lead_american_revolution
 	x = 22
 	y = 0
 	allow_branch = {
@@ -419,7 +419,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = COL_Heavily_Regulated_Enterp
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_GRU_PDS_SOCIALIST_MARKET
 	prerequisite = { focus = COL_UNIR_revolution }
 	x = 0
 	y = 1
@@ -436,7 +436,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = COL_Reshape_The_Army
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_goal_CSA_professional_red_army
 	prerequisite = { focus = COL_Heavily_Regulated_Enterp }
 	prerequisite = { focus = COL_Leader_Knows_Best }
 	x = -2
@@ -457,7 +457,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = COL_Public_Housing
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_goal_NYC_City_Communes
 	prerequisite = { focus = COL_Heavily_Regulated_Enterp }
 	x = 0
 	y = 1
@@ -476,7 +476,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = COL_Rural_Development_Focus
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_goal_HON_Agrarian
 	prerequisite = { focus = COL_Reshape_The_Army }
 	prerequisite = { focus = COL_Public_Housing }
 	prerequisite = { focus = COL_Minority_Quotas }
@@ -545,7 +545,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = COL_Estatuto_Del_Trabajo
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_RUS_Syndical_Cooperative_Federation
 	prerequisite = {
 			focus = COL_UNIR_revolution
 			focus = COL_syndicalist_revolution
@@ -568,7 +568,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = COL_Minority_Quotas
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_BBR_insurance_societies
 	prerequisite = { focus = COL_Heavily_Regulated_Enterp }
 	prerequisite = { focus = COL_Estatuto_Del_Trabajo }
 	x = 2
@@ -589,7 +589,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = COL_Urbanization_Effort
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_BBR_urbanization
 	prerequisite = { focus = COL_Reshape_The_Army }
 	prerequisite = { focus = COL_Public_Housing }
 	prerequisite = { focus = COL_Minority_Quotas }
@@ -662,7 +662,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = COL_Militia_Training_rad
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_BBR_jacobin_police
 	prerequisite = { 
 		focus = COL_Rural_Development_Focus
 		focus = COL_Urbanization_Effort
@@ -687,7 +687,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = COL_Federalization
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_SOV_decentralize_syndicates
 	prerequisite = { focus = COL_syndicalist_revolution }
 	x = -1
 	y = 1
@@ -707,7 +707,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = COL_Offering_Welfare_And_Hospitals
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_RUS_Welfare_State
 	prerequisite = { focus = COL_Federalization }
 	prerequisite = { focus = COL_Estatuto_Del_Trabajo }
 	x = 0
@@ -749,7 +749,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = COL_Agressive_Industrialization
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_RUS_Cautious_Industrialization
 	prerequisite = { focus = COL_syndicalist_revolution }
 	x = 1
 	y = 1
@@ -797,7 +797,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = COL_syndie_resources
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_goal_CSA_resource_nationalisation
 	prerequisite = { focus = COL_Agressive_Industrialization }
 	x = 0
 	y = 1
@@ -823,7 +823,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = COL_Encourage_Women_In_Factories
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_GRU_PIECK_WORKING_WOMAN
 	prerequisite = { focus = COL_syndie_resources }
 	prerequisite = { focus = COL_Offering_Welfare_And_Hospitals }
 	x = 0
@@ -844,7 +844,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = COL_A_Defensive_Army
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_CSA_defensive_outlook
 	prerequisite = { focus = COL_defensive_countermeasures }
 	prerequisite = { focus = COL_Encourage_Women_In_Factories }
 	x = 1
@@ -861,7 +861,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = COL_the_bigger_picture
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_BBR_internationale_struggle
 	x = 36
 	y = 0
 	allow_branch = {
@@ -881,7 +881,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = COL_afro_syndie
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_goal_CEA_new_syndicalist_society
 	prerequisite = { focus = COL_the_SA_playground }
 	x = 0
 	y = 1
@@ -914,7 +914,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = COL_State_Visit_To_Europe
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_BBR_internationale_collaboration
 	prerequisite = { focus = COL_the_bigger_picture }
 	x = -3
 	y = 1
@@ -939,7 +939,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = COL_invite_black_leaders
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_BBR_black_national_syndicalism
 	prerequisite = { focus = COL_afro_syndie }
 	x = -1
 	y = 1
@@ -960,7 +960,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = COL_safe_harbor_for_ex_slaves
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_goal_NYC_Black_Robin_Hood_Bronx
 	prerequisite = { focus = COL_afro_syndie }
 	x = 1
 	y = 1
@@ -980,7 +980,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = COL_support_the_black_struggle
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_goal_CSA_black_autonomy
 	prerequisite = { focus = COL_invite_black_leaders }
 	x = 0
 	y = 1
@@ -1000,7 +1000,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = COL_liberate_the_american_afros
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_BBR_new_communist_league
 	prerequisite = { focus = COL_safe_harbor_for_ex_slaves }
 	x = 0
 	y = 1
@@ -1020,7 +1020,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = COL_no_masters
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_goal_NYC_Encourage_Black_Self_Confidence_Pride
 	prerequisite = { focus = COL_support_the_black_struggle }
 	prerequisite = { focus = COL_liberate_the_american_afros }
 	x = 1
@@ -1041,7 +1041,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = COL_Syndie_Army_Buff
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_BBR_red_militia_justice
 	prerequisite = { focus = COL_State_Visit_To_Europe }
 	x = -1
 	y = 1
@@ -1065,7 +1065,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = COL_Syndie_Air_Buff
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_goal_USA_organic_air_support
 	prerequisite = { focus = COL_State_Visit_To_Europe }
 	x = 1
 	y = 1
@@ -1086,7 +1086,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = COL_Join_The_Internationale
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_goal_FRA_international_insurrection
 	prerequisite = { focus = COL_Syndie_Army_Buff }
 	prerequisite = { focus = COL_Syndie_Air_Buff }
 	x = 1
@@ -1112,7 +1112,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = COL_Agudelo_Doctrine
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_goal_SPR_turn_towards_the_new_world_left
 	prerequisite = { focus = COL_Join_The_Internationale }
 	x = 0
 	y = 1
@@ -1190,7 +1190,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = COL_European_Front
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_goal_FRA_european_peoples_republicanism
 	prerequisite = { focus = COL_Agudelo_Doctrine }
 	x = -1
 	y = 1
@@ -1217,7 +1217,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = COL_SA_Front
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_goal_ARG_FOP_debacle
 	prerequisite = { focus = COL_Agudelo_Doctrine }
 	x = 1
 	y = 1
@@ -1270,7 +1270,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = COL_Syndie_Aggro
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_goal_NFA_liberation
 	prerequisite = { focus = COL_European_Front }
 	prerequisite = { focus = COL_SA_Front }
 	mutually_exclusive = { focus = COL_A_War_To_End_Wars }
@@ -1306,7 +1306,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = COL_A_War_To_End_Wars
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_BBR_International_Peace_movement
 	prerequisite = { focus = COL_European_Front }
 	prerequisite = { focus = COL_SA_Front }
 	mutually_exclusive = { focus = COL_Syndie_Aggro }
@@ -1338,7 +1338,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = COL_revenge_time
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_goal_CSA_truly_red_peru
 	prerequisite = { focus = COL_European_Front }
 	prerequisite = { focus = COL_SA_Front }
 	mutually_exclusive = { focus = COL_A_War_To_End_Wars }
@@ -1399,7 +1399,7 @@ shared_focus = {
 
 shared_focus = {
 	id = COL_bring_browderism_in_colombia
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_goal_CSA_Browder_Syndicalism
 	prerequisite = { focus = COL_the_bigger_picture }
 	x = 3
 	y = 1
@@ -1432,7 +1432,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = COL_mutual_help_with_the_gringos
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_goal_HON_Help_Others
 	prerequisite = { focus = COL_bring_browderism_in_colombia }
 	mutually_exclusive = { focus = COL_look_for_support }
 	x = -2
@@ -1534,7 +1534,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = COL_look_for_support
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_goal_CSA_socialist_friendly_media
 	prerequisite = { focus = COL_bring_browderism_in_colombia }
 	mutually_exclusive = { focus = COL_mutual_help_with_the_gringos }
 	x = 2
@@ -1616,7 +1616,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = COL_the_panama_question
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_goal_USA_panama_control
 	prerequisite = { focus = COL_mutual_help_with_the_gringos }
 	x = -1
 	y = 1
@@ -1928,7 +1928,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = COL_prepare_to_land_in_america
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_goal_CSA_american_exceptionalism
 	prerequisite = { focus = COL_browder_the_martyr focus = COL_invite_earl }
 	x = 1
 	y = 1
@@ -1982,7 +1982,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = COL_the_colombian_gringos
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_goal_CSA_socialist_defence_doctrine
 	prerequisite = { focus = COL_bababa focus = COL_prepare_to_land_in_america }
 	x = 1
 	y = 2
@@ -2029,7 +2029,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = COL_invite_earl
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_goal_CAN_study_browder_axioms
 	prerequisite = { focus = COL_look_for_support }
 	mutually_exclusive = { focus = COL_browder_the_martyr }
 	x = 5
@@ -2071,7 +2071,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = COL_browder_the_martyr
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_goal_CSA_the_boss
 	prerequisite = { focus = COL_look_for_support }
 	mutually_exclusive = { focus = COL_invite_earl }
 	x = 3
@@ -2113,7 +2113,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = COL_under_american_juristicition
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_goal_CSA_master_west
 	prerequisite = { focus = COL_the_colombian_gringos }
 	mutually_exclusive = { focus = COL_friends_but_independents }
 	mutually_exclusive = { focus = COL_reconquering_the_traitors }
@@ -2246,7 +2246,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = COL_friends_but_independents
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_goal_CSA_victory
 	prerequisite = { focus = COL_the_colombian_gringos }
 	mutually_exclusive = { focus = COL_under_american_juristicition }
 	mutually_exclusive = { focus = COL_reconquering_the_traitors }
@@ -2284,7 +2284,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = COL_reconquering_the_traitors
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_goal_CSA_ussa
 	prerequisite = { focus = COL_the_colombian_gringos }
 	mutually_exclusive = { focus = COL_friends_but_independents }
 	mutually_exclusive = { focus = COL_under_american_juristicition }
@@ -2370,7 +2370,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = COL_all_forms_of_fight
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_goal_FRA_Defence_Revolution
 	prerequisite = { focus = COL_the_SA_playground }
 	x = -5
 	y = 1
@@ -2391,7 +2391,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = COL_stronger_alone
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_goal_TEX_isolationism
 	prerequisite = { focus = COL_all_forms_of_fight }
 	x = 0
 	y = 1
@@ -2412,7 +2412,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = COL_the_buffer_zone
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_goal_NEE_armed_free_neutrality
 	prerequisite = { focus = COL_stronger_alone }
 	mutually_exclusive = { focus = COL_self_reliance }
 	x = -1
@@ -2434,7 +2434,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = COL_self_reliance
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_goal_CZE_fortress_autocracy
 	prerequisite = { focus = COL_stronger_alone }
 	mutually_exclusive = { focus = COL_the_buffer_zone }
 	x = 1
@@ -2456,7 +2456,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = COL_second_objective
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_goal_TEX_ideoloical_neutrality
 	prerequisite = { focus = COL_the_buffer_zone }
 	x = 0
 	y = 1
@@ -2477,7 +2477,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = COL_declare_absolute_neutrality
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_goal_HOL_sustain_neutrality
 	prerequisite = { focus = COL_self_reliance }
 	x = 0
 	y = 1
@@ -2498,7 +2498,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = COL_third_world_pact
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_goal_GUA_Peaceful_Revolution
 	prerequisite = { focus = COL_declare_absolute_neutrality }
 	x = 0
 	y = 1
@@ -2520,7 +2520,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = COL_focus_on_south_american_revolutions
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_goal_USA_stop_southern_syndicalism
 	prerequisite = { focus = COL_the_SA_playground }
 	x = 5
 	y = 1
@@ -2551,7 +2551,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = COL_Found_The_Panamerican_Forum
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_goal_NIC_Universal_Commune
 	prerequisite = { focus = COL_focus_on_south_american_revolutions }
 	x = 0
 	y = 1
@@ -2589,7 +2589,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = COL_the_fuel_of_latin_revolutions
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_goal_NIC_Socialist_Revolution
 	prerequisite = { focus = COL_Found_The_Panamerican_Forum }
 	x = 0
 	y = 1
@@ -2611,7 +2611,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = COL_Volunteer_Forces_Training
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_goal_FRA_syndicalistmilitarism
 	prerequisite = { focus = COL_the_fuel_of_latin_revolutions }
 	x = -2
 	y = 1
@@ -2659,7 +2659,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = COL_terror_from_the_sky
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_GRU_fighter_focus-4011 
 	prerequisite = { focus = COL_the_fuel_of_latin_revolutions }
 	x = 0
 	y = 1
@@ -2681,7 +2681,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = COL_Refitting_Our_Navy
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_goal_USA_navy_top
 	prerequisite = { focus = COL_the_fuel_of_latin_revolutions }
 	x = 2
 	y = 1
@@ -2703,7 +2703,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = COL_Strike_Coastal_South_America
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_goal_generic_coastal_navy2
 	prerequisite = { focus = COL_Volunteer_Forces_Training }
 	x = 1
 	y = 1
@@ -2726,7 +2726,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = COL_Strike_Brazil
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_goal_FOP_fonte_brazil
 	prerequisite = { focus = COL_Refitting_Our_Navy }
 	x = -1
 	y = 1
@@ -2750,7 +2750,7 @@ shared_focus = {
 
 shared_focus = {
 	id = COL_Strike_Landlocked_South_America
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_goal_CSA_chilean_revolution
 	prerequisite = { focus = COL_terror_from_the_sky }
 	prerequisite = { focus = COL_Strike_Coastal_South_America }
 	prerequisite = { focus = COL_Strike_Brazil }
@@ -2776,7 +2776,7 @@ shared_focus = {
 
 shared_focus = {
 	id = COL_Finish_the_conquest
-	icon = GFX_focus_generic_treaty
+	icon = GFX_goal_CSA_revolutionary_army
 	prerequisite = { 
 		focus = COL_Strike_Landlocked_South_America
 		focus = COL_Syndie_Aggro
@@ -2821,7 +2821,7 @@ shared_focus = {
 
 shared_focus = {
 	id = COL_No_More_Borders
-	icon = GFX_focus_generic_treaty
+	icon = GFX_goal_CSA_revolutionize_monroeism
 	prerequisite = { 
 		focus = COL_Strike_Landlocked_South_America
 		focus = COL_Syndie_Aggro
@@ -2900,7 +2900,7 @@ shared_focus = {
 
 shared_focus = {
 	id = COL_the_socialist_vigilante
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_goal_CSA_social_patriotism
 	prerequisite = { 
 		focus = COL_revenge_time 
 		focus = COL_under_american_juristicition
