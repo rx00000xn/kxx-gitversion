@@ -267,6 +267,18 @@ ideologies = {
 			marxism_leninism_banderaism_subtype = {can_be_randomly_selected = no} #马列班主义（制作组彩蛋）
 
 			#大乐队时代
+			#absurd
+			anarcho_internationalism_subtype = {can_be_randomly_selected = no}
+			popular_legionarism_subtype = {can_be_randomly_selected = no}
+			marxism_leninism_banderaism_subtype = {can_be_randomly_selected = no}
+			tot_romanian_nationalism_subtype = {can_be_randomly_selected = no}
+			tot_romanianism_subtype = {can_be_randomly_selected = no}
+			stsiborskyi_thought_subtype = {can_be_randomly_selected = no}
+			tot_moral_discipline_system_subtype = {can_be_randomly_selected = no}
+			tot_eternal_revolution_subtype = {can_be_randomly_selected = no}
+			latin_national_syndicalism_subtype = {can_be_randomly_selected = no}
+			latin_falangism_subtype = {can_be_randomly_selected = no}
+			tot_chilean_national_socialist_subtype = {can_be_randomly_selected = no}
 
 
 		}
@@ -414,6 +426,9 @@ ideologies = {
 			#制作组彩蛋
 
 			#大乐队时代
+
+			#absurd
+			syn_moral_discipline_system_subtype = {can_be_randomly_selected = no}
 
 
 			
@@ -648,6 +663,14 @@ ideologies = {
 			radsoc_Kawaragi_Momoka_subtype = {can_be_randomly_selected = no} #桃香管理论（彩蛋）
 			radsoc_Ebisuza_Tomo_subtype = {can_be_randomly_selected = no} #海老塚智标准（彩蛋）
 			dazhuanshunism_subtype = { can_be_randomly_selected = no }  #大赚顺制度（彩蛋）
+
+			#absurd
+			radsoc_moral_discipline_system_subtype = {can_be_randomly_selected = no}
+			cossack_anarchism_subtype = {can_be_randomly_selected = no}
+			platformism_subtype = {can_be_randomly_selected = no}
+			military_anarchism_subtype = {can_be_randomly_selected = no}
+			radsoc_latin_falangism_subtype = {can_be_randomly_selected = no}
+			radsoc_chilean_national_socialist_subtype = {can_be_randomly_selected = no}
 		}
 		dynamic_faction_names = {
 			"FACTION_NAME_RADICAL_SOCIALIST_1"
@@ -835,6 +858,18 @@ ideologies = {
 			social_Mygo_subtype = { can_be_randomly_selected = no } #高松灯思想（彩蛋）
 			socdem_kessoku_banndo_subtype = { can_be_randomly_selected = no } #纽带理想论（彩蛋）
 			socdem_Subaru_Awa_subtype = { can_be_randomly_selected = no } #安和昴方法（彩蛋）
+
+			#absurd
+			socdem_romanianism_subtype = {can_be_randomly_selected = no}
+			socdem_moral_discipline_system_subtype = {can_be_randomly_selected = no}
+			social_populism_subtype = {can_be_randomly_selected = no}
+			syndie_social_democrat_subtype = {can_be_randomly_selected = no}
+			marechal_democracy_subtype = {can_be_randomly_selected = no}
+			socdem_true_whigs_subtype = {can_be_randomly_selected = no}
+			socdem_warlordism_subtype = {can_be_randomly_selected = no}
+			socdem_democratic_socialism_subtype = {can_be_randomly_selected = no}
+			socdem_longism_subtype = {can_be_randomly_selected = no}
+			socdem_radical_progressivism_subtype = {can_be_randomly_selected = no}
 			
 		}
 		dynamic_faction_names = {
@@ -982,6 +1017,14 @@ ideologies = {
 			Tea_Time_subtype = {can_be_randomly_selected = no} #茶会时间（制作组彩蛋）
 			miusi_subtype = {can_be_randomly_selected = no} #穗乃果崇拜（制作组彩蛋）
 
+			soclib_moral_discipline_system_subtype = {can_be_randomly_selected = no}
+			soclib_chilean_national_socialist_subtype = {can_be_randomly_selected = no}
+			centrist_subtype = {can_be_randomly_selected = no}
+			soclib_agrarianism_subtype = {can_be_randomly_selected = no}
+			soclib_true_whigs_subtype = {can_be_randomly_selected = no}
+			soclib_warlordism_subtype = {can_be_randomly_selected = no}
+			soclib_longism_subtype = {can_be_randomly_selected = no}
+
 		}
 		dynamic_faction_names = {
 			"FACTION_NAME_SOCIAL_LIBERAL_1"
@@ -1095,6 +1138,15 @@ ideologies = {
 			marlib_chinese_federalism_subtype = {can_be_randomly_selected = no } #联省主义
 
 			#大乐队时代
+
+			marlib_moral_discipline_system_subtype = {can_be_randomly_selected = no}
+			free_market_capitalist_subtype = {can_be_randomly_selected = no}
+			libertarian_subtype = {can_be_randomly_selected = no}
+			ancap_subtype = {can_be_randomly_selected = no}
+			marlib_agrarianism_subtype = {can_be_randomly_selected = no}
+			marlib_true_whigs_subtype = {can_be_randomly_selected = no}
+			marlib_warlordism_subtype = {can_be_randomly_selected = no}
+			liberal_conservative_subtype = {can_be_randomly_selected = no}
 
 		}
 		dynamic_faction_names = {
@@ -1415,6 +1467,10 @@ ideologies = {
 			#大乐队时代
 			bangdreamism_subtype = {can_be_randomly_selected = no} #户山香澄思想（制作组彩蛋）
 			Mygo_subtype = {can_be_randomly_selected = no} #高松灯思想（彩蛋）
+
+			slovak_populism_subtype = {can_be_randomly_selected = no}
+			anarchy_subtype = {can_be_randomly_selected = no}
+			autdem_moral_discipline_system_subtype = {can_be_randomly_selected = no}
 		}
 		dynamic_faction_names = {
 			"FACTION_NAME_AUTHORITARIAN_DEMOCRAT_1"
@@ -1610,6 +1666,10 @@ ideologies = {
 			Mashiroism_subtype = { can_be_randomly_selected = no }  #仓田真白理论（彩蛋）
 			LSD_Mashiroism_subtype = { can_be_randomly_selected = no }  #倉畾寘苩荲論（彩蛋）
 			pataut_rupa_subtype = {can_be_randomly_selected = no} #卢帕体制
+
+			pataut_slovak_populism_subtype = {can_be_randomly_selected = no}
+			pataut_moral_discipline_system_subtype = {can_be_randomly_selected = no}
+			pataut_eternal_revolution_subtype = {can_be_randomly_selected = no}
 		}
 		dynamic_faction_names = {
 			"FACTION_NAME_PATERNAL_AUTOCRAT_1"
@@ -1918,6 +1978,17 @@ ideologies = {
 			#大乐队时代
 			natpop_Ave_Mujica_subtype = { can_be_randomly_selected = no }  #颂乐人偶体制（彩蛋）
 			player_subtype = { can_be_randomly_selected = no }  #命运之歌剧（彩蛋）
+
+			natpop_slovak_populism_subtype = {can_be_randomly_selected = no}
+			worker_legionarism_subtype = {can_be_randomly_selected = no color = { 65 117 13 } }
+			eternal_return_subtype = {can_be_randomly_selected = no color = { 91 9 76 } }
+			trairism_subtype = {can_be_randomly_selected = no color = { 91 9 76 } }
+			romanian_nationalism_subtype = {can_be_randomly_selected = no}
+			romanianism_subtype = {can_be_randomly_selected = no}
+			aristocrat_legionarism_subtype = {can_be_randomly_selected = no}
+			natpop_moral_discipline_system_subtype = {can_be_randomly_selected = no}
+			natpop_latin_falangism_subtype = {can_be_randomly_selected = no}
+			natpop_chilean_national_socialist_subtype = {can_be_randomly_selected = no}
 		}
 		dynamic_faction_names = {
 			"FACTION_NAME_NATIONAL_POPULIST_1"
