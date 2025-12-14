@@ -368,7 +368,7 @@ create_country_leader = {
 }
 create_country_leader = {
 	name = "山川均"
-	picture = "gfx/leaders/JAP/Portrait_JAP_Hitoshi_Yamakawa.png"
+	picture = "gfx/leaders/JAP/Portrait_JAP_Hitoshi_Yamakawa_KX.png"
 	expire = "1981.3.6"
 	ideology = syn_rounoucom_subtype
 }
@@ -664,7 +664,7 @@ if = {
 }
 
 create_corps_commander = {
-	name = "上下奉文"
+	name = "山下奉文"
 	portrait_path = "gfx/leaders/JAP/Portrait_JAP_Tomoyuki_Yamashita.png"
 	traits = { trickster trait_engineer brilliant_strategist politically_connected }
 	skill = 4

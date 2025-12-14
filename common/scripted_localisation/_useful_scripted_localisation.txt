@@ -9617,6 +9617,24 @@ text = {
 		}
 		localization_key = pataut_metaxism_subtype  
 	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = jacobin_futurism_subtype
+		}
+		localization_key = jacobin_futurism_subtype
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = chizhevskyism_subtype
+		}
+		localization_key = chizhevskyism_subtype
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = bogomilism_subtype
+		}
+		localization_key = bogomilism_subtype
+	}			
 	#柏柏尔主义
 	text = {
 		trigger = {
@@ -10438,5 +10456,29 @@ text = {
 			has_country_leader_ideology = autdem_state_shintoism_subtype
 		}
 		localization_key = autdem_state_shintoism_subtype
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = antisemitisme_subtype
+		}
+		localization_key = antisemitisme_subtype
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = little_japan_subtype
+		}
+		localization_key = little_japan_subtype
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = kokuken_socialism_subtype
+		}
+		localization_key = kokuken_socialism_subtype
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = authdem_absolute_monarchy_subtype
+		}
+		localization_key = authdem_absolute_monarchy_subtype
 	}
 }
