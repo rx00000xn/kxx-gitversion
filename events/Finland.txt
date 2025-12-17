@@ -637,7 +637,7 @@ country_event = { # Revolt
 			name = "Kurt Martti Wallenius"
 			picture = "gfx/leaders/FIN/Portrait_FIN_Kurt_Martti_Wallenius_KX.png"
 			expire = "1.1.1"
-			ideology = legionarism_subtype
+			ideology = lapuanliike_subtype
 		}	
 		hidden_effect = {
 			country_event = { id = finland_revolt.25 days = 5 }
@@ -1118,7 +1118,7 @@ country_event = { # Revolt
 			name = "Kurt Martti Wallenius"
 			picture = "gfx/leaders/FIN/Portrait_FIN_Kurt_Martti_Wallenius_KX.png"
 			expire = "1.1.1"
-			ideology = legionarism_subtype
+			ideology = lapuanliike_subtype
 		}
 		hidden_effect = {
 			country_event = { id = finland_revolt.25 days = 5 }
@@ -1173,7 +1173,7 @@ country_event = { # Revolt
 			picture = "gfx/leaders/FIN/Portrait_FIN_Vaino_I.png"
 			desc = "POLITICS_VAINO_DESC"
 			expire = "1.1.1"
-			ideology = legionarism_subtype
+			ideology = lapuanliike_subtype
 		}
 		set_country_flag = FIN_natpop_king
 		complete_national_focus = FIN_the_rebellion_succeeds
@@ -1186,7 +1186,7 @@ country_event = { # Revolt
 			name = "Vihtori Kosola"
 			picture = "gfx/leaders/FIN/Portrait_FIN_Vihtori_Kosola.png"
 			expire = "1.1.1"
-			ideology = legionarism_subtype
+			ideology = lapuanliike_subtype
 		}
 		complete_national_focus = FIN_the_rebellion_succeeds
 	}
@@ -2150,7 +2150,7 @@ country_event = { #Finnish snap elections
 						desc = "POLITICS_FREDRIK_KAARLE_DESC"
 						picture = "gfx/leaders/FIN/Portrait_FIN_Fredrik_Kaarle_I.png"
 						expire = "1.1.1"
-						ideology = legionarism_subtype
+						ideology = lapuanliike_subtype
 					}
 				}
 				else = {					
@@ -2159,7 +2159,7 @@ country_event = { #Finnish snap elections
 						picture = "gfx/leaders/FIN/Portrait_FIN_Vaino_I.png"
 						desc = "POLITICS_VAINO_DESC"
 						expire = "1.1.1"
-						ideology = legionarism_subtype
+						ideology = lapuanliike_subtype
 					}
 				}
 			}
@@ -6114,7 +6114,7 @@ country_event = { #Finnish elections
 						desc = "POLITICS_FREDRIK_KAARLE_DESC"
 						picture = "gfx/leaders/FIN/Portrait_FIN_Fredrik_Kaarle_I.png"
 						expire = "1.1.1"
-						ideology = legionarism_subtype
+						ideology = lapuanliike_subtype
 					}
 				}
 				else = {					
@@ -6123,7 +6123,7 @@ country_event = { #Finnish elections
 						picture = "gfx/leaders/FIN/Portrait_FIN_Vaino_I.png"
 						desc = "POLITICS_VAINO_DESC"
 						expire = "1.1.1"
-						ideology = legionarism_subtype
+						ideology = lapuanliike_subtype
 					}
 				}
 			}
@@ -6932,7 +6932,7 @@ country_event = { #
 				name = "Vilho Annala"
 				picture = "gfx/leaders/FIN/Portrait_FIN_Vilho_Annala_KX.png"
 				expire = "1.1.1"
-				ideology = legionarism_subtype
+				ideology = lapuanliike_subtype
 			}
 		}
 	}
@@ -7431,7 +7431,7 @@ country_event = {
 			name = "Kurt Martti Wallenius"
 			picture = "gfx/leaders/FIN/Portrait_FIN_Kurt_Martti_Wallenius_KX.png"
 			expire = "1.1.1"
-			ideology = legionarism_subtype
+			ideology = lapuanliike_subtype
 		}	
 		drop_cosmetic_tag = yes
 		hidden_effect = {
