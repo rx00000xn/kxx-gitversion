@@ -4,6 +4,1238 @@
 
 ideas = {
 	country = {
+		QIE_chaos_3 = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_chaos_3" }
+			picture = chi_war_of_resistance
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.1
+				political_power_gain = 0.05
+				industrial_capacity_factory = 0.15
+				production_factory_efficiency_gain_factor = 0.10
+				production_factory_max_efficiency_factor = 0.10
+				production_factory_start_efficiency_factor = 0.10
+			}
+		}
+		QIE_Intellectuals_Doubts = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_Intellectuals_Doubts" }
+			picture = generic_disjointed_gov
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = 0.05
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				compliance_gain = 0.05
+				research_speed_factor = 0.05
+			}
+		}
+		QIE_code_chi = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_code_chi" }
+			picture = OTT_solid_idea
+			allowed = { always = no }
+			modifier = {
+				political_power_factor = 0.1
+				consumer_goods_factor = -0.02
+			}
+		}
+
+		QIE_public_health = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_public_health" }
+			picture = IRE_PLP_idea
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.05
+				consumer_goods_factor = 0.02
+				monthly_population = 0.25
+			}
+		}
+
+		QIE_legitimacy_of_the_monarchy_dem_wu = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_legitimacy_of_the_monarchy_dem" }
+			picture = man_low_legitimacy5
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.15
+				war_support_factor = 0.15
+				political_power_gain = 0.15
+				production_factory_max_efficiency_factor = 0.15
+				compliance_growth = 0.01
+				required_garrison_factor = -0.15
+				resistance_target = 0.05
+		        compliance_gain = 0.02
+		        resistance_damage_to_garrison = -0.25
+			}
+		}
+
+		QIE_legitimacy_of_the_monarchy_dem_cao = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_legitimacy_of_the_monarchy_dem" }
+			picture = man_low_legitimacy5
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.15
+				war_support_factor = 0.15
+				political_power_gain = 0.15
+				production_factory_max_efficiency_factor = 0.1
+				industrial_capacity_factory = 0.12
+				production_speed_buildings_factor = 0.12
+				required_garrison_factor = -0.15
+				resistance_target = 0.05
+		        compliance_gain = 0.02
+		        resistance_damage_to_garrison = -0.25
+			}
+		}
+
+		QIE_legitimacy_of_the_monarchy_har_wu = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_legitimacy_of_the_monarchy_har" }
+			picture = man_low_legitimacy5
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.15
+				war_support_factor = 0.15
+				compliance_gain = 0.02
+				political_power_gain = 0.05
+				production_speed_industrial_complex_factor = 0.1
+				production_factory_start_efficiency_factor = 0.15
+				local_resources = 0.1
+			}
+		}
+
+		QIE_legitimacy_of_the_monarchy_har_cao = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_legitimacy_of_the_monarchy_har" }
+			picture = man_low_legitimacy5
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.15
+				war_support_factor = 0.15
+				compliance_gain = 0.02
+				political_power_gain = 0.05
+				production_speed_industrial_complex_factor = 0.1
+				industrial_capacity_factory = 0.12
+				production_speed_buildings_factor = 0.12
+				production_factory_start_efficiency_factor = 0.15
+				local_resources = 0.1
+			}
+		}
+
+		QIE_legitimacy_of_the_monarchy_zhili_wu = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_legitimacy_of_the_monarchy_zhili" }
+			picture = man_low_legitimacy5
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.15
+				war_support_factor = 0.15
+				political_power_gain = -0.1
+				army_attack_factor = 0.15
+				army_defence_factor = 0.15
+				resistance_target = -0.7
+				production_speed_arms_factory_factor = 0.15
+				resistance_target = -0.60
+		        compliance_gain = 0.055
+		        local_resources = 0.1 
+			}
+		}
+
+		QIE_legitimacy_of_the_monarchy_zhili_cao = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_legitimacy_of_the_monarchy_zhili" }
+			picture = man_low_legitimacy5
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.15
+				war_support_factor = 0.15
+				political_power_gain = -0.1
+				army_attack_factor = 0.15
+				army_defence_factor = 0.15
+				industrial_capacity_factory = 0.12
+				production_speed_buildings_factor = 0.12
+				resistance_target = -0.7
+				compliance_gain = 1
+				production_speed_arms_factory_factor = 0.15 
+			}
+		}
+		QIE_professional_core = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_professional_core_12" }
+			picture = generic_army_war_college
+			name = QIE_professional_core
+			allowed = { always = no }
+			modifier = {
+				army_org_factor = 0.1
+				army_morale_factor = 0.1
+				experience_loss_factor = -0.25
+				conscription_factor = -0.2
+				army_armor_attack_factor = 0.1
+				army_armor_defence_factor = 0.1
+			}
+		}
+
+		QIE_old_mobile_doctrine = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_old_mobile_doctrine" }
+			picture = german_advisors
+			name = QIE_old_mobile_doctrine
+			allowed = { always = no }
+			modifier = {
+				recon_factor = 0.1
+				army_infantry_attack_factor = 0.1
+				breakthrough_factor = 0.1
+				combat_width_factor = -0.1
+			}
+		}
+
+		QIE_total_war = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_total_war" }
+			picture = generic_war_preparation
+			name = QIE_total_war
+			allowed = { always = no }
+			modifier = {
+				conscription_factor = 0.1
+				army_morale_factor = 0.1
+				army_strength_factor = 0.1
+				org_loss_at_low_org_factor = -0.15
+				resistance_target_on_our_occupied_states = 0.1
+				army_core_defence_factor = 0.1
+				army_attack_against_major_factor = 0.05
+			}
+		}
+
+		QIE_labor_protection = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_labor_protection" }
+			picture = UK_economy_syn_idea
+			allowed = { always = no }
+			modifier = {
+				production_factory_start_efficiency_factor = 0.10
+				production_factory_max_efficiency_factor = 0.10
+				production_factory_start_efficiency_factor = 0.10
+				consumer_goods_factor = 0.05
+			}
+		}
+
+		QIE_Independent_Audit = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_Independent_Audit" }
+			picture = generic_scales
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = 0.05
+				consumer_goods_factor = -0.15
+			}
+		}
+
+		QIE_macro_control = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_macro_control" }
+			picture = PAL_Shortage_of_Goods
+			allowed = { always = no }
+			modifier = {
+				industrial_capacity_factory = 0.05
+				trade_opinion_factor = 0.15
+			}
+		}
+
+		QIE_civic_awareness = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_civic_awareness" }
+			picture = FRA_communard_spirit
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.15
+				social_democrat_drift = 0.01
+				social_liberal_drift = 0.01
+				market_liberal_drift = 0.01
+				social_conservative_drift = 0.01
+			}
+		}
+
+		QIE_Provincial_Assembly_idea = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_Provincial_Assembly_idea" }
+			picture = RUS_republican_anger
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.05
+                political_power_factor = 0.05
+                political_advisor_cost_factor = -0.15
+                local_supplies = 0.1
+                compliance_gain = 0.1
+			}
+		}
+
+		QIE_Controversy_Women_Emancipation = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_Controversy_Women_Emancipation" }
+			picture = generic_disjointed_gov
+			allowed = { always = no }
+			modifier = {
+				stability_weekly = 0.005
+			}
+		}
+
+		QIE_land_ownership_equalization = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_minsheng_revolution" }
+			picture = ITA_devaluated_lira
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.05
+				production_speed_infrastructure_factor = 0.15
+				local_manpower = 0.05
+			}
+		}
+
+		QIE_Publishing_censorship = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_Publishing_censorship" }
+			picture = EST_democratic_opposition 
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = 0.1
+				social_liberal_drift = 0.01
+				market_liberal_drift = 0.01
+				social_conservative_drift = 0.01
+				authoritarian_democrat_drift = 0.01
+			}
+		}
+
+		QIE_Technical_control = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_Technical_control" }
+			picture = GER_recovering_economy
+			allowed = { always = no }
+			modifier = {
+				research_speed_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_start_efficiency_factor = 0.05
+				industrial_capacity_factory = 0.05
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		QIE_Military_sports_organization_idea = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_Military_sports_organization_idea" }
+			picture = SPR_international_brigades
+			allowed = { always = no }
+			modifier = {
+				mobilization_speed = 0.1
+				experience_gain_army_factor = 0.1
+                training_time_factor = -0.15
+                conscription = 0.015
+			}
+		}
+
+		QIE_Business_and_Industry_Association = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_Business_and_Industry_Association" }
+			picture = generic_lightbulb
+			allowed = { always = no }
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+                consumer_goods_factor = -0.05
+                political_advisor_cost_factor = -0.15
+			}
+		}
+
+		QIE_construction_corps = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_construction_corps" }
+			picture = backward_industry
+			allowed = { always = no }
+			modifier = {
+				conscription_factor = -0.05
+				production_speed_infrastructure_factor = 0.1
+			}
+		}
+
+		QIE_defence_commission = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_defence_commission" }
+			picture = MON_conscript_conquered
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = 0.05
+				army_core_defence_factor = 0.05
+			}
+		}
+		QIE_defence_commission_2 = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_defence_commission_2" }
+			picture = MON_conscript_conquered
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = 0.10
+				army_core_defence_factor = 0.10
+				command_power_gain = 0.2
+			}
+		}
+		QIE_defence_commission_3 = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_defence_commission_3" }
+			picture = MON_conscript_conquered
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.10
+				political_power_gain = 0.15
+				army_core_defence_factor = 0.10
+				command_power_gain = 0.25
+			}
+		}
+
+		QIE_economic_control_idea = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_economic_control_idea" }
+			picture = GER_autarky
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = -0.05
+				industrial_capacity_factory = 0.05
+                production_speed_industrial_complex_factor = 0.05
+				production_speed_arms_factory_factor = 0.05
+				local_resources_factor = 0.05
+			}
+		}
+		QIE_republic_of_china_navy_idea = { 
+			on_add = { log = "[GetLogRoot]: add idea QIE_republic_of_china_navy_idea" }
+			picture = generic_navy_bonus
+			allowed = { always = no }
+			modifier = {
+				refit_speed = 0.15
+				navy_fuel_consumption_factor = -0.25
+			}
+		}
+		
+		QIE_republic_of_china_navy_idea2 = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_republic_of_china_navy_idea2" }
+			picture = generic_navy_bonus
+			allowed = { always = no }
+			modifier = {
+				refit_speed = 0.15
+				navy_fuel_consumption_factor = -0.25
+				naval_coordination = 0.1
+				naval_night_attack = 0.1
+			}
+			equipment_bonus = {
+				submarine = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				screen_ship = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				capital_ship = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+		}
+		QIE_rapid_air_development_german_idea = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_rapid_air_development_german_idea" }
+			picture = advisors_japan
+			allowed = { always = no }
+			modifier = {
+				air_superiority_efficiency = 0.1
+				ground_attack_factor = 0.1
+			}
+			equipment_bonus = {
+				mio_cat_eq_only_light_fighter_no_cv = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				small_plane_cas_airframe = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+				mio_cat_eq_only_tactical_bomber = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+			}
+		}
+		QIE_republic_of_china_air_force_idea = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_republic_of_china_air_force_idea" }
+			picture = generic_air_payment
+			allowed = { always = no }
+			modifier = {
+				air_training_xp_gain_factor = 0.1
+				air_ace_generation_chance_factor = 0.15
+			}
+		}
+		QIE_republic_of_china_air_force_idea2 = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_republic_of_china_air_force_idea2" }
+			picture = generic_air_payment
+			allowed = { always = no }
+			modifier = {
+				air_training_xp_gain_factor = 0.1
+				air_ace_generation_chance_factor = 0.15
+				air_interception_detect_factor = 0.1
+				air_superiority_efficiency = 0.05
+			}
+		}
+		QIE_republic_of_china_air_force_idea_long_range = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_republic_of_china_air_force_idea_long_range" }
+			picture = generic_air_payment
+			allowed = { always = no }
+			modifier = {
+				air_training_xp_gain_factor = 0.1
+				air_ace_generation_chance_factor = 0.15
+				air_interception_detect_factor = 0.1
+				air_superiority_efficiency = 0.05
+				air_bombing_targetting = 0.1
+			}
+			equipment_bonus = {
+				mio_cat_eq_only_tactical_bomber = {
+					air_bombing = 0.1
+					air_attack = 0.1
+					instant = yes
+				}
+			}
+		}
+		QIE_republic_of_china_air_force_idea_cas = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_republic_of_china_air_force_idea_cas " }
+			picture = generic_air_payment
+			allowed = { always = no }
+			modifier = {
+				air_training_xp_gain_factor = 0.1
+				air_ace_generation_chance_factor = 0.15
+				air_interception_detect_factor = 0.1
+				air_superiority_efficiency = 0.05
+				ground_attack_factor = 0.1
+			}
+			equipment_bonus = {
+				small_plane_cas_airframe = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}
+		}
+		QIE_republic_of_china_air_force_idea3_long_range = {
+			on_add = { log = "[GetLogRoot]: add idea  			QIE_republic_of_china_air_force_idea3_long_range " }
+			picture = generic_air_payment
+			allowed = { always = no }
+			modifier = {
+				air_training_xp_gain_factor = 0.1
+				air_ace_generation_chance_factor = 0.15
+				air_interception_detect_factor = 0.1
+				air_superiority_efficiency = 0.1
+				air_nav_efficiency = 0.1
+				air_bombing_targetting = 0.15
+			}
+			equipment_bonus = {
+				mio_cat_eq_only_tactical_bomber = {
+					air_bombing = 0.15
+					air_attack = 0.1
+					instant = yes
+				}
+			}
+		}
+		QIE_republic_of_china_air_force_idea3_cas = {
+			on_add = { log = "[GetLogRoot]: add idea  			QIE_republic_of_china_air_force_idea3_cas " }
+			picture = generic_air_payment
+			allowed = { always = no }
+			modifier = {
+				air_training_xp_gain_factor = 0.1
+				air_ace_generation_chance_factor = 0.15
+				air_interception_detect_factor = 0.1
+				air_superiority_efficiency = 0.1
+				air_nav_efficiency = 0.1
+				ground_attack_factor = 0.15
+			}
+			equipment_bonus = {
+				small_plane_cas_airframe = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+			}
+		}
+
+		QIE_new_army = {
+			on_add = { log = "[GetLogRoot]: add idea  QIE_new_army " }
+			picture = QIE_soldier_flag 
+			allowed = { always = no }
+			modifier = {
+				army_armor_attack_factor = 0.1
+				army_armor_defence_factor = 0.1
+				mechanized_attack_factor = 0.1 
+				mechanized_defence_factor = 0.1
+				special_forces_attack_factor = 0.1
+				special_forces_defence_factor = 0.1
+			}
+			equipment_bonus = {
+				armor = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+				mechanized_equipment = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+			}
+		}
+		QIE_revival_of_new_nationalism = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_revival_of_new_nationalism" }
+			picture = generic_phoenix
+			name = "民族主义复兴"
+			allowed = { always = no }
+			modifier = {
+				war_support_weekly = 0.005
+				experience_gain_navy = 0.10
+				experience_gain_army = 0.10
+				experience_gain_air = 0.10
+				mobilization_speed = 0.10
+			}
+		}
+		QIE_mass_nationalisation_of_noble_estates = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_mass_nationalisation_of_noble_estates" }
+			picture = PER_Corruption
+			allowed = { always = no }
+			name = "夺取满清资产"
+			modifier = {
+				consumer_goods_factor = -0.25
+				production_speed_arms_factory_factor = 0.10
+			}
+		}
+		QIE_support_of_the_bankers = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_support_of_the_bankers" }
+			picture = FNG_china_money
+			name = "银行家的支持"
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = 0.10
+				production_speed_industrial_complex_factor = 0.10
+				production_factory_efficiency_gain_factor = 0.10
+			}
+		}
+		QIE_provincial_reform_idea = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_provincial_reform_idea" }
+			picture = NOR_syndicalist_industry_idea
+			allowed = { always = no }
+			modifier = {
+				local_resources_factor = -0.05
+				consumer_goods_factor = 0.05
+				global_building_slots_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.10
+			}
+		}
+		
+		QIE_Provincial_Assemblies_idea = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_Provincial_Assemblies_idea" }
+			picture = NOR_syndicalist_industry_idea
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.05
+				local_resources_factor = -0.05
+				global_building_slots_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.10
+			}
+		}
+		
+		QIE_Provincial_Elections_idea = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_Provincial_Elections_idea" }
+			picture = NOR_syndicalist_industry_idea
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.05
+				global_building_slots_factor = 0.10
+				production_factory_efficiency_gain_factor = 0.10
+			}
+		}
+		
+		QIE_Restructure_The_Bureaucracy_idea = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_Restructure_The_Bureaucracy_idea" }
+			picture = NOR_syndicalist_industry_idea
+			allowed = { always = no }
+			modifier = {
+				mobilization_speed = 0.20
+				political_advisor_cost_factor = -0.33
+				stability_factor = 0.05
+				local_resources_factor = 0.05
+				global_building_slots_factor = 0.10
+				production_factory_efficiency_gain_factor = 0.10
+			}
+		}
+		
+		QIE_Financial_Reform_Ongoing_idea = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_Financial_Reform_Ongoing_idea" }
+			picture = generic_coins
+			allowed = { always = no }
+			modifier = {
+				stability_factor = -0.10
+				production_factory_efficiency_gain_factor = -0.05
+			}
+		}
+		
+		QIE_Financial_Reform_idea = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_Financial_Reform_idea" }
+			picture = generic_economic_increase
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		QIE_Modern_Legal_System_Reform_Ongoing_idea = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_Modern_Legal_System_Reform_Ongoing_idea" }
+			picture = prc_low_popular_support
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = 0.10
+				stability_factor = 0.10
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+		
+		QIE_crack_down_on_radicals_and_corruption_idea = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_crack_down_on_radicals_and_corruption_idea" }
+			picture = generic_investigation
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = -0.05
+				stability_factor = -0.05
+				stability_weekly = 0.002
+				consumer_goods_factor = -0.05
+				paternal_autocrat_drift = -0.02
+				national_populist_drift = -0.02
+				radical_socialist_drift = -0.02
+				syndicalist_drift = -0.02
+				totalist_drift = -0.02
+			}
+		}
+		QIE_crack_down_on_radicals_and_corruption_alt_idea = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_crack_down_on_radicals_and_corruption_alt_idea" }
+			picture = generic_investigation
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.05
+				consumer_goods_factor = -0.05
+				social_democrat_drift = 0.02
+				social_liberal_drift = 0.02
+				social_conservative_drift = 0.02
+				market_liberal_drift = 0.02
+				authoritarian_democrat_drift = 0.01
+			}
+		}
+		
+		QIE_social_democrat_idea = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_social_democrat_idea" }
+			picture = ANQ_credibility
+			allowed = { always = no }
+			modifier = {
+				social_democrat_drift = 0.02
+				consumer_goods_factor = 0.10
+				production_speed_infrastructure_factor = 0.20
+				production_speed_industrial_complex_factor = 0.20
+				monthly_population = 0.20
+			}
+		}
+		
+		QIE_social_liberal_idea = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_social_liberal_idea" }
+			picture = ANQ_credibility
+			allowed = { always = no }
+			modifier = {
+				social_liberal_drift = 0.02
+				stability_factor = -0.10
+				industrial_capacity_factory = 0.10
+				line_change_production_efficiency_factor = 0.10
+				research_speed_factor = 0.10
+			}
+		}
+		
+		QIE_market_liberal_idea = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_market_liberal_idea" }
+			picture = ANQ_credibility
+			allowed = { always = no }
+			modifier = {
+				market_liberal_drift = 0.02
+				war_support_factor = -0.10
+				industrial_capacity_dockyard = 0.10
+				consumer_goods_factor = -0.10
+				trade_opinion_factor = 0.50
+			}
+		}
+		
+		QIE_social_conservative_idea = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_social_conservative_idea" }
+			picture = ANQ_credibility
+			allowed = { always = no }
+			modifier = {
+				social_conservative_drift = 0.02
+				production_factory_efficiency_gain_factor = -0.10
+				production_factory_start_efficiency_factor = 0.10
+				stability_factor = 0.10
+				min_export = -0.10
+			}
+		}
+		QIE_legitimacy_of_the_republic_koo_1 = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_legitimacy_of_the_republic_koo_1" }
+			picture = FNG_pervasive_mantetsu
+			name = "卿云之下"
+			allowed = { always = no }
+			modifier = {
+				stability_factor = -0.10
+				war_support_factor = 0.05
+				political_advisor_cost_factor = -0.15
+				consumer_goods_factor = -0.10
+			}
+		}
+		QIE_legitimacy_of_the_republic_koo_2 = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_legitimacy_of_the_republic_koo_2" }
+			picture = FNG_xinhai_order
+			name = "卿云之下"
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.10
+				war_support_factor = 0.10
+				compliance_gain = 0.01
+				political_advisor_cost_factor = -0.33
+				consumer_goods_factor = -0.15
+			}
+		}
+		QIE_A_Federalist_Republic_idea = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_A_Federalist_Republic_idea" }
+			picture = FNG_xinhai_order
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.10
+				war_support_factor = 0.10
+				production_speed_buildings_factor = 0.10
+				global_building_slots_factor = 0.20
+				local_resources_factor = 0.20
+				compliance_gain = 0.02
+			}
+		}
+		QIE_zhang_zongyuan_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea QIE_song_zheyuan_idea"}
+			allowed = { always = no }
+			picture = japanese_loyalism
+			modifier = { 
+				experience_gain_army_factor = 0.05
+				political_power_cost = -0.05
+			}
+		}
+		QIE_japan_advisor = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea QIE_song_zheyuan_idea"}
+			allowed = { always = no }
+			picture = advisors_japan
+			name = "日本顾问"
+			modifier = { 
+				experience_loss_factor = -0.1
+				planning_speed = 0.1
+				max_planning = 0.05
+				command_power_gain_mult = 0.15
+			}
+		}
+		QIE_infilitrate_fengtian = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea QIE_song_zheyuan_idea"}
+			allowed = { always = no }
+			picture = FNG_dominant_mantetsu
+			modifier = { 
+				army_attack_speed_factor = 0.1
+				army_org_factor = 0.05
+				army_morale_factor = 0.05
+			}
+			targeted_modifier = {
+				tag = FNG
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+		}
+		QIE_panasianism = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea QIE_song_zheyuan_idea"}
+			allowed = { always = no }
+			picture = JAP_Defending_Our_Sphere
+			modifier = { 
+				war_support_factor = 0.15
+				conscription = 0.01
+				conscription_factor = 0.1
+				command_power_gain = 0.1
+
+			}
+		}
+		QIE_neo_confuciusism = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea QIE_song_zheyuan_idea"}
+			allowed = { always = no }
+			picture = SQI_benevolent_restorer
+			name = "夫子之道"
+			modifier = { 
+				political_power_gain = 0.05
+				stability_factor = 0.1
+				attrition = -0.1
+				resistance_target = -0.1
+			}
+		}
+		QIE_neo_confuciusism2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea QIE_song_zheyuan_idea"}
+			allowed = { always = no }
+			picture = SQI_benevolent_restorer
+			name = "夫子之道"
+			modifier = { 
+				political_power_gain = 0.1
+				stability_factor = 0.15
+				attrition = -0.1
+				resistance_target = -0.1
+				production_factory_start_efficiency_factor = 0.075
+				production_factory_max_efficiency_factor = 0.075
+				production_factory_efficiency_gain_factor = 0.075
+			}
+		}
+		QIE_neo_confuciusism3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea QIE_song_zheyuan_idea"}
+			allowed = { always = no }
+			picture = SQI_benevolent_restorer
+			name = "夫子之道"
+			modifier = { 
+				political_power_gain = 0.1
+				stability_factor = 0.15
+				attrition = -0.1
+				resistance_target = -0.1
+				production_factory_start_efficiency_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				planning_speed = 0.1
+				max_planning = 0.1
+
+			}
+		}
+		
+		QIE_yiguandao_rule = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea QIE_song_zheyuan_idea"}
+			allowed = { always = no }
+			picture = SQI_honored_master
+			name = "一贯道统治"
+			modifier = { 
+				political_power_gain = 0.1
+				consumer_goods_expected_value = -0.1
+				consumer_goods_factor = -0.1
+				max_command_power = 100
+			}
+		}
+		QIE_yiguandao_rule2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea QIE_song_zheyuan_idea"}
+			allowed = { always = no }
+			picture = SQI_honored_master
+			name = "一贯道统治"
+			modifier = { 
+				political_power_gain = 0.1
+				consumer_goods_expected_value = -0.15
+				consumer_goods_factor = -0.15
+				max_command_power = 100
+				conscription = 0.01
+				army_org_factor = 0.05
+				army_morale_factor = 0.05
+			}
+		}
+		QIE_yiguandao_rule3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea QIE_song_zheyuan_idea"}
+			allowed = { always = no }
+			picture = SQI_honored_master
+			name = "一贯道统治"
+			modifier = { 
+				political_power_gain = 0.1
+				consumer_goods_expected_value = -0.15
+				consumer_goods_factor = -0.15
+				max_command_power = 100
+				conscription = 0.01
+				army_org_factor = 0.05
+				army_morale_factor = 0.05
+				war_stability_factor = 0.1
+				industrial_capacity_factory = 0.1
+			}
+		}
+		QIE_song_zheyuan_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea QIE_song_zheyuan_idea"}
+			allowed = { always = no }
+			picture = generic_scales
+			modifier = { 
+				political_power_gain = 0.025 
+				research_speed_factor = 0.025
+			}
+		}
+		QIE_yan_xishan_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea QIE_yan_xishan_idea"}
+			allowed = { always = no }
+			picture = profits_legation_cities
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				research_speed_factor = 0.025
+			}
+		}
+		QIE_zhang_tianran_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea QIE_zhang_tianran_idea"}
+			allowed = { always = no }
+			picture = chi_war_of_resistance3
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				political_power_gain = 0.025
+			}
+		}
+		QIE_mladrossi = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea QIE_fractured_empire" }
+			picture = TRM_Economic_Council
+			name = QIE_follow_the_mladrossi_idea
+			allowed = { always = no }
+			modifier = {
+				production_speed_buildings_factor = 0.12
+				production_factory_efficiency_gain_factor = 0.12
+				political_power_gain = 0.1
+				stability_factor = 0.1
+				drift_defence_factor = 0.2
+			}
+		}
+		QIE_mladrossi = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea QIE_fractured_empire" }
+			picture = TRM_Economic_Council
+			name = QIE_follow_the_mladrossi_idea
+			allowed = { always = no }
+			modifier = {
+				production_speed_buildings_factor = 0.12
+				production_factory_efficiency_gain_factor = 0.12
+				political_power_gain = 0.1
+				stability_factor = 0.1
+				drift_defence_factor = 0.2
+			}
+		}
+		QIE_datong_society = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea QIE_fractured_empire" }
+			picture = VIN_Dragons_Roar_Peace
+			name = "大同社会"
+			allowed = { always = no }
+			modifier = {
+				political_power_cost = -0.1
+				production_factory_efficiency_gain_factor = 0.1
+				war_stability_factor = 0.25
+				army_org_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				army_defence_factor = 0.15
+				consumer_goods_factor = -0.15
+				non_core_manpower = 0.75
+			}
+		}
+		QIE_constitutionism  = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea QIE_fractured_empire" }
+			picture = generic_king_handled
+			name = "君主立宪"
+			allowed = { always = no }
+			modifier = {
+				command_power_gain_mult = 0.15
+				max_command_power_mult = 0.15
+				attrition = -0.1
+				party_popularity_stability_factor = 0.25
+			}
+		}
+		QIE_universal_healthcare  = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea QIE_fractured_empire" }
+			picture = National_Healthcare_System
+			name = "普遍医保"
+			allowed = { always = no }
+			modifier = {
+				conscription = 0.02
+				monthly_population = 0.5
+				land_reinforce_rate = 0.1
+				experience_loss_factor = -0.15
+			}
+		}
+		QIE_workers_rights  = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea QIE_fractured_empire" }
+			picture = BBR_workers_market
+			name = "工人不再为奴"
+			allowed = { always = no }
+			modifier = {
+				line_change_production_efficiency_factor = 0.1
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				production_factory_start_efficiency_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+		QIE_empowered_parliment  = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea QIE_fractured_empire" }
+			picture = CAN_exile_government
+			name = "强化议会"
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.15
+				war_support_factor = 0.15
+				consumer_goods_factor = -0.15
+				political_power_cost = -0.1
+			}
+		}
+		QIE_universual_justice  = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea QIE_fractured_empire" }
+			picture = republican_justice_2
+			name = "普遍正义"
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = 0.1
+				conscription = 0.01
+				conscription_factor = 0.3
+				industrial_capacity_factory = 0.1
+			}
+		}
+		QIE_county_assemblies  = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea QIE_fractured_empire" }
+			picture = generic_government
+			allowed = { always = no }
+			modifier = {
+				stability_weekly = 0.005
+				production_speed_arms_factory_factor = 0.15
+				production_speed_industrial_complex_factor = 0.15
+				army_morale_factor = 0.15
+
+			}
+		}
+		QIE_xuantong  = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea QIE_fractured_empire" }
+			picture = QIE_soldier_flag
+			name = "宣统中兴"
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = 0.1
+				mobilization_speed = 0.1
+				line_change_production_efficiency_factor = 0.1
+				industrial_capacity_factory = 0.1
+				no_supply_grace = 96
+				command_power_gain_mult = 0.25
+				army_infantry_attack_factor = 0.15
+				army_infantry_defence_factor = 0.15
+				social_conservative_drift = 0.01
+				authoritarian_democrat_drift = 0.01
+				paternal_autocrat_drift = 0.02
+				national_populist_drift = 0.01
+			}
+		}
+		QIE_new_cavalry  = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea QIE_fractured_empire" }
+			picture = MON_scourge_of_the_steppes
+			name = "帝国铁骑"
+			allowed = { always = no }
+			modifier = {
+				cavalry_attack_factor = 0.25
+				cavalry_defence_factor = 0.25
+				army_speed_factor = 0.1
+				org_loss_when_moving = -0.25
+			}
+		}
+		QIE_new_schools  = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea QIE_fractured_empire" }
+			picture = WCC_bureaucratic_research_complex
+			name = "新科举"
+			allowed = { always = no }
+			modifier = {
+				research_speed_factor = 0.1
+				resistance_target = -0.15
+				attrition = -0.1
+				compliance_growth = 0.15
+			}
+		}
+		QIE_restore_taxes  = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea QIE_fractured_empire" }
+			picture = generic_taxation
+			name = "提高税收"
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = -0.15
+				consumer_goods_expected_value = -0.15
+				local_resources_factor = 0.2
+				min_export = -0.25
+			}
+		}
+		QIE_appoint_viceroys  = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea QIE_fractured_empire" }
+			picture = CAN_king_visit
+			allowed = { always = no }
+			modifier = {
+				global_building_slots_factor = 0.25
+				global_building_slots = 3
+				conscription = 0.02
+				conscription_factor = 0.2
+			}
+		}
+		QIE_mandate_heaven  = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea QIE_fractured_empire" }
+			picture = LIT_crown_4
+			allowed = { always = no }
+			modifier = {
+				conscription = 0.01
+				planning_speed = 0.1
+				max_planning = 0.1
+				equipment_capture_factor = 0.2
+			}
+		}
+		QIE_qing_revival  = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea QIE_fractured_empire" }
+			picture = man_militarism
+			name = "满清重生"
+			allowed = { always = no }
+			modifier = {
+				political_power_factor = 0.15
+				stability_factor = 0.15
+				war_support_factor = 0.15
+				social_conservative_drift = 0.05
+				paternal_autocrat_drift = 0.03
+				party_popularity_stability_factor = 0.25
+			}
+		}
+		QIE_grand_empire  = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea QIE_fractured_empire" }
+			picture = man_low_legitimacy5
+			name = "伟大帝国"
+			allowed = { always = no }
+			modifier = {
+				political_power_cost = -0.1
+				consumer_goods_expected_value = -0.15
+				army_morale_factor = 0.1
+				global_building_slots_factor = 0.1
+				research_speed_factor = 0.1
+				local_resources_factor = 0.1
+				production_lack_of_resource_penalty_factor = -0.15
+				command_power_gain_mult = 0.15
+				max_command_power_mult = 0.15
+				social_liberal_drift = 0.01
+				authoritarian_democrat_drift = 0.02
+				paternal_autocrat_drift = 0.01
+				national_populist_drift = 0.01
+			}
+		}
+		QIE_radical_modernization  = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea QIE_fractured_empire" }
+			picture = generic_autarky
+			name = "激进现代化"
+			allowed = { always = no }
+			modifier = {
+				production_speed_industrial_complex_factor = 0.15
+				production_speed_arms_factory_factor = 0.15
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_start_efficiency_factor = 0.1
+			}
+		}
+		QIE_ycp_autocracy  = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea QIE_fractured_empire" }
+			picture = VNC_auth_dem_victory
+			name = "一党独裁"
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = 0.15
+				stability_factor = 0.15
+				war_support_factor = 0.15
+				social_liberal_drift = 0.05
+				paternal_autocrat_drift = 0.02
+				national_populist_drift = 0.02
+			}
+		}
+		QIE_loyal_army  = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea QIE_fractured_empire" }
+			picture = advisors_china_qing
+			name = "忠诚之军"
+			allowed = { always = no }
+			modifier = {
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				conscription_factor = 0.2
+				army_org_factor = 0.1
+			}
+		}
+		QIE_warrior_society  = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea QIE_fractured_empire" }
+			picture = GEN_army_special_forces
+			name = "战士社会"
+			allowed = { always = no }
+			modifier = {
+				army_attack_speed_factor = 0.1
+				dig_in_speed_factor = 0.1
+				max_dig_in_factor = 0.1
+				army_strength_factor = 0.1
+			}
+		}
 		QIE_military_socialism  = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea QIE_fractured_empire" }
 			picture = HOL_dutch_militia
@@ -1456,7 +2688,10 @@ ideas = {
 			picture = HOL_unemployment_subs_cut
 			allowed = { always = no }
 			modifier = {
-				consumer_goods_factor = 0.1
+				consumer_goods_factor = -0.1
+				political_power_cost = -0.1
+				local_resources_factor = 0.2
+				production_lack_of_resource_penalty_factor = -0.1
 			}
 		}
 #electoral reforms
@@ -1484,7 +2719,8 @@ ideas = {
 			modifier = {
 				stability_weekly = 0.001
 				production_speed_infrastructure_factor = 0.1
-				social_democrat_drift = 0.02
+				social_conservative_drift = 0.02
+				monthly_population = 0.75
 			}
 		}
 #rural insurgency
@@ -1496,11 +2732,27 @@ ideas = {
 				stability_weekly = 0.002
 				production_speed_infrastructure_factor = 0.1
 				political_power_factor = 0.10
-				social_democrat_drift = 0.02
-				social_conservative_drift = 0.01
+				social_democrat_drift = 0.01
+				social_conservative_drift = 0.02
 				resistance_growth_on_our_occupied_states = 0.20
 				resistance_damage_to_garrison = -0.20
 				compliance_gain = 0.01
+				monthly_population = 0.75
+			}
+		}
+		QIE_rural_insurgency_idea_alt = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea QIE_rural_insurgency_idea" }
+			picture = POL_the_peasants_strike
+			name = QIE_rural_insurgency_idea
+			allowed = { always = no }
+			modifier = {
+				stability_weekly = 0.002
+				production_speed_infrastructure_factor = 0.1
+				political_power_factor = 0.10
+				resistance_growth_on_our_occupied_states = 0.20
+				resistance_damage_to_garrison = -0.20
+				compliance_gain = 0.01
+				monthly_population = 0.75
 			}
 		}
 #mandate of heaven
@@ -1510,7 +2762,9 @@ ideas = {
 			allowed = { always = no }
 			modifier = {
 				experience_gain_factor = 0.15
-				max_command_power = 25
+				max_command_power = 250
+				experience_loss_factor = -0.1
+				stability_weekly = 0.005
 			}
 		}
 		QIE_reinforce_confucianism_idea2 = {
@@ -1520,8 +2774,13 @@ ideas = {
 			allowed = { always = no }
 			modifier = {
 				experience_gain_factor = 0.15
-				max_command_power = 25
-				political_power_gain = 0.10
+				max_command_power = 250
+				experience_loss_factor = -0.1
+				stability_weekly = 0.005
+				war_support_weekly = 0.005
+				compliance_growth = 0.1
+				army_org_factor = 0.1
+				monthly_population = 0.5
 			}
 		}
 #banners
@@ -1549,7 +2808,11 @@ ideas = {
 			picture = NOR_syndicalist_industry_idea
 			allowed = { always = no }
 			modifier = {
-				production_speed_industrial_complex_factor = 0.15
+				production_speed_buildings_factor = 0.15
+				production_factory_start_efficiency_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+
 			}
 		}
 		QIE_centralize_the_state = {
@@ -1560,6 +2823,7 @@ ideas = {
 				production_speed_buildings_factor = 0.10
 				industrial_capacity_factory = 0.10
 				local_resources_factor = 0.2
+				global_building_slots = 2
 			}
 		}
 		QIE_noble_factories_idea = {
@@ -1570,6 +2834,8 @@ ideas = {
 				production_factory_efficiency_gain_factor = 0.1
 				production_factory_start_efficiency_factor = 0.1
 				line_change_production_efficiency_factor = 0.1
+				industrial_capacity_factory = 0.15
+
 			}
 		}
 		QIE_noble_factories2_idea = {
@@ -1617,6 +2883,8 @@ ideas = {
 			modifier = {
 				global_building_slots_factor = 0.2
 				consumer_goods_factor = -0.1
+				production_speed_buildings_factor = 0.1
+				local_resources_factor = 0.2
 			}
 		}
 		QIE_Legacy_Kang_Youwei_2 = {
@@ -1626,6 +2894,12 @@ ideas = {
 			modifier = {
 				global_building_slots_factor = 0.25
 				consumer_goods_factor = -0.2
+				production_speed_buildings_factor = 0.1
+				local_resources_factor = 0.2
+				supply_consumption_factor = -0.1
+				supply_node_range = 0.1
+				no_supply_grace = 36
+				global_building_slots = 2
 			}
 		}
 #widespread protests
@@ -1710,7 +2984,9 @@ ideas = {
 			picture = ANQ_credibility
 			allowed = { always = no }
 			modifier = {
-				research_speed_factor = 0.10
+				research_speed_factor = 0.1
+				industrial_capacity_factory = 0.1
+				production_factory_efficiency_gain_factor = 0.1
 			}
 		}
 		QIE_chinese_century_tianran_idea = {
@@ -1718,7 +2994,7 @@ ideas = {
 			picture = jap_intervene_in_china
 			allowed = { always = no }
 			modifier = {
-				research_speed_factor = -0.10
+				research_speed_factor = 0.10
 				min_export = -0.50
 				resistance_growth = -0.50
 			}
@@ -1976,6 +3252,47 @@ ideas = {
 				production_factory_max_efficiency_factor = 0.15
 			}
 		}
+		QIE_coop_rkmt = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea QIE_Sie_Contracts" }
+			picture = LEC_China_Rising
+			allowed = { always = no }
+			modifier = {
+				political_power_cost = -0.1
+				stability_factor = 0.1
+				conscription_factor = 0.1
+			}
+		}
+		QIE_coop_rkmt2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea QIE_Sie_Contracts" }
+			picture = LEC_China_Rising
+			name = QIE_coop_rkmt
+			allowed = { always = no }
+			modifier = {
+				political_power_cost = -0.1
+				stability_factor = 0.1
+				conscription_factor = 0.1
+				army_morale_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				resistance_target = -0.15
+			}
+		}
+		QIE_coop_rkmt3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea QIE_Sie_Contracts" }
+			picture = LEC_China_Rising
+			name = QIE_coop_rkmt
+			allowed = { always = no }
+			modifier = {
+				political_power_cost = -0.1
+				stability_factor = 0.1
+				conscription_factor = 0.1
+				army_morale_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				resistance_target = -0.15
+				army_org_Factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				command_power_gain_mult = 0.15
+			}
+		}
 		### YCP ideas ###
 		QIE_YCP_militarized_state = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea QIE_YCP_militarized_state" }
@@ -2009,6 +3326,7 @@ ideas = {
 				political_power_factor = 0.10
 				army_speed_factor = 0.10
 				army_org_Factor = 0.10
+				army_strength_factor = 0.1
 			}
 		}
 		QIE_nationalized_yan_xishan_thought = {
@@ -2020,6 +3338,21 @@ ideas = {
 				production_speed_buildings_factor = 0.05
 				production_factory_max_efficiency_factor = 0.10
 				army_defence_factor = 0.05
+			}
+		}
+		QIE_nationalized_yan_xishan_thought2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea QIE_nationalized_yan_xishan_thought" }
+			picture = CAN_darkest_hour
+			allowed = { always = no }
+			name = QIE_nationalized_yan_xishan_thought
+			modifier = {
+				political_power_gain = 0.1
+				production_speed_buildings_factor = 0.1
+				production_factory_max_efficiency_factor = 0.10
+				army_defence_factor = 0.05
+				production_speed_arms_factory_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+				global_building_slots = 0.1
 			}
 		}
 
@@ -2267,7 +3600,370 @@ ideas = {
 				max_dig_in_factor = 0.10
 			}
 		}
+		QIE_red_ncera = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_in_the_footsteps_of_giants_level1" }
+			picture = generic_social_democracy
+			allowed = { always = no }
+			name = "社会帝国"
+			modifier = {
+				political_power_cost = -0.1
+				stability_factor = 0.1
+				social_democrat_drift = 0.05
+				social_conservative_drift = 0.05
+				global_building_slots_factor = 0.1
+			}
+		}
+		QIE_red_ncera2 = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_in_the_footsteps_of_giants_level1" }
+			picture = GRU_Bismarckian_Social_Policy
+			allowed = { always = no }
+			name = "连施派社会帝国"
+			modifier = {
+				political_power_cost = -0.1
+				stability_factor = 0.1
+				social_democrat_drift = 0.05
+				social_conservative_drift = 0.05
+				global_building_slots_factor = 0.1
+				industrial_capacity_factory = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+		QIE_red_ncera3 = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_in_the_footsteps_of_giants_level1" }
+			picture = GRU_Bismarckian_Social_Policy
+			allowed = { always = no }
+			name = "连施派社会帝国"
+			modifier = {
+				political_power_cost = -0.1
+				stability_factor = 0.1
+				social_democrat_drift = 0.05
+				social_conservative_drift = 0.05
+				global_building_slots_factor = 0.1
+				industrial_capacity_factory = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				supply_consumption_factor = -0.1
+				supply_node_range = 0.1
+				consumer_goods_expected_value = -0.15
+			}
+		}
+		QIE_spd = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_in_the_footsteps_of_giants_level1" }
+			picture = GRU_SUCCDUMS
+			allowed = { always = no }
+			name = "学习德国社民党"
+			modifier = {
+				command_power_gain_mult = 0.15
+				max_command_power_mult = 0.15
+				war_support_factor = 0.1
+				consumer_goods_factor = -0.15
+			}
+		}
+		QIE_trimuph_of_national_socialism = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_in_the_footsteps_of_giants_level1" }
+			picture = GRU_SPD_WORKER_RIGHTS
+			allowed = { always = no }
+			name = "国家社会主义的胜利"
+			modifier = {
+				army_attack_factor = 0.1
+				army_org_factor = 0.1
+				production_factory_start_efficiency_factor = 0.1
+				research_speed_factor = 0.1
+			}
+		}
+		QIE_labour_party = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_in_the_footsteps_of_giants_level1" }
+			picture = MAF_labour_charter
+			allowed = { always = no }
+			name = "消弭阶级斗争"
+			modifier = {
+				political_power_gain = 0.1
+				party_popularity_stability_factor = 0.1
+				radical_socialist_drift = 0.05
+				social_democrat_drift = 0.05
+				social_liberal_drift = 0.05
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		QIE_labour_party2 = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_in_the_footsteps_of_giants_level1" }
+			picture = MAF_labour_charter
+			allowed = { always = no }
+			name = "消弭阶级斗争"
+			modifier = {
+				political_power_gain = 0.1
+				party_popularity_stability_factor = 0.1
+				radical_socialist_drift = 0.05
+				social_democrat_drift = 0.05
+				social_liberal_drift = 0.05
+				production_speed_buildings_factor = 0.1
+				production_speed_arms_factory_factor = 0.15
+				production_speed_industrial_complex_factor = 0.15
+				production_factory_start_efficiency_factor = 0.1
+			}
+		}
+		QIE_labour_party3 = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_in_the_footsteps_of_giants_level1" }
+			picture = MAF_labour_charter
+			allowed = { always = no }
+			name = "消弭阶级斗争"
+			modifier = {
+				political_power_gain = 0.1
+				party_popularity_stability_factor = 0.1
+				radical_socialist_drift = 0.05
+				social_democrat_drift = 0.05
+				social_liberal_drift = 0.05
+				production_speed_buildings_factor = 0.1
+				production_speed_arms_factory_factor = 0.15
+				production_speed_industrial_complex_factor = 0.15
+				production_factory_start_efficiency_factor = 0.1
+				local_resources_factor = 0.15
+				production_lack_of_resource_penalty_factor = -0.1
+			}
+		}
+		QIE_christian_socialism = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_in_the_footsteps_of_giants_level1" }
+			picture = KIV_social_christian_capitalism_idea
+			allowed = { always = no }
+			modifier = {
+				conscription = 0.01
+				compliance_growth = 0.15
+				monthly_population = 0.5
+				mobilization_speed = 0.1
+			}
+		}
+		QIE_class_unity = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_in_the_footsteps_of_giants_level1" }
+			picture = class_collaboration
+			allowed = { always = no }
+			modifier = {
+				conscription = 0.01
+				compliance_growth = 0.15
+				monthly_population = 0.5
+				mobilization_speed = 0.1
+			}
+		}
+		QIE_socialist_party = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_in_the_footsteps_of_giants_level1" }
+			picture = social_planning_2
+			allowed = { always = no }
+			name = "社会党革命"
+			modifier = {
+				political_power_factor = 0.1
+				war_stability_factor = 0.1
+				radical_socialist_drift = 0.05
+				totalist_drift = 0.05
+				conscription_factor = 0.1
+			}
+		}
+		QIE_socialist_party2 = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_in_the_footsteps_of_giants_level1" }
+			picture = social_planning_2
+			allowed = { always = no }
+			name = "社会党革命"
+			modifier = {
+				political_power_factor = 0.1
+				war_stability_factor = 0.1
+				radical_socialist_drift = 0.05
+				totalist_drift = 0.05
+				conscription_factor = 0.1
+				stability_weekly = 0.005
+				army_org_factor = 0.1
+				army_morale_factor = 0.1
+			}
+		}
+		QIE_socialist_party3 = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_in_the_footsteps_of_giants_level1" }
+			picture = social_planning_2
+			allowed = { always = no }
+			name = "社会党革命"
+			modifier = {
+				political_power_factor = 0.1
+				war_stability_factor = 0.1
+				radical_socialist_drift = 0.05
+				totalist_drift = 0.05
+				conscription_factor = 0.1
+				stability_weekly = 0.005
+				army_org_factor = 0.1
+				army_morale_factor = 0.1
+				research_speed_factor = 0.15
+				line_change_production_efficiency_factor = 0.1
+				industrial_capacity_factory = 0.1
+			}
+		}
+		QIE_imperial_anarchy = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_in_the_footsteps_of_giants_level1" }
+			picture = SWE_workers_riksdag_anarchist
+			allowed = { always = no }
+			name = "无政府主义帝国"
+			modifier = {
+				global_building_slots = 1
+				army_speed_factor = 0.1
+				experience_loss_factor = -0.15
+				war_support_weekly = 0.005
+			}
+		}
+		QIE_socialism_forever = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_in_the_footsteps_of_giants_level1" }
+			picture = BBR_socialist_civic_identity
+			allowed = { always = no }
+			modifier = {
+				attrition = -0.1
+				planning_speed = 0.15
+				max_planning = 0.15
+				planning_decay_rate_factor = -0.15
+			}
+		}
+		QIE_synd_datong = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_in_the_footsteps_of_giants_level1" }
+			picture = generic_syndicalist_monarchy
+			name = "工团主义大同"
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = 0.1
+				command_power_gain = 0.1
+				syndicalist_drift = 0.05
+				industrial_capacity_factory = 0.1
+			}
+		}
+		QIE_synd_datong2 = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_in_the_footsteps_of_giants_level1" }
+			picture = generic_syndicalist_monarchy
+			name = "工团主义大同"
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = 0.1
+				command_power_gain = 0.1
+				syndicalist_drift = 0.05
+				industrial_capacity_factory = 0.1
+				production_speed_buildings_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				consumer_goods_expected_value = -0.15
+			}
+		}
+		QIE_synd_datong3 = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_in_the_footsteps_of_giants_level1" }
+			picture = generic_syndicalist_monarchy
+			name = "工团主义大同"
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = 0.1
+				command_power_gain = 0.1
+				syndicalist_drift = 0.05
+				industrial_capacity_factory = 0.1
+				production_speed_buildings_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				consumer_goods_expected_value = -0.15
+				conscription = 0.01
+				army_attack_against_major_factor = 0.1
+				army_attack_against_minor_factor = 0.1
+			}
+		}
+		QIE_syndical_dirisngisme = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_in_the_footsteps_of_giants_level1" }
+			picture = SWE_centralized_syndicalism
+			allowed = { always = no }
+			modifier = {
+				production_speed_arms_factory_factor = 0.15
+				production_speed_industrial_complex_factor = 0.15
+				production_speed_supply_node_factor = 0.15
+				production_speed_infrastructure_factor = 0.2
+			}
+		}
+		QIE_new_china_new_society = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_in_the_footsteps_of_giants_level1" }
+			picture = MON_healing_stepp_with_syndical
+			allowed = { always = no }
+			modifier = {
+				line_change_production_efficiency_factor = 0.1
+				production_factory_start_efficiency_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
 
+			}
+		}
+		QIE_zhang_natsynd = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_in_the_footsteps_of_giants_level1" }
+			picture = ENG_blackshirts
+			name = "中式准则主义"
+			allowed = { always = no }
+			modifier = {
+				political_power_cost = -0.1
+				war_support_factor = 0.1
+				totalist_drift = 0.05
+				syndicalist_drift = 0.05
+				army_org_factor = 0.1
+			}
+		}
+		QIE_zhang_natsynd2 = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_in_the_footsteps_of_giants_level1" }
+			picture = ENG_blackshirts
+			name = "中式准则主义"
+			allowed = { always = no }
+			modifier = {
+				political_power_cost = -0.1
+				war_support_factor = 0.1
+				totalist_drift = 0.05
+				syndicalist_drift = 0.05
+				army_org_factor = 0.1
+				army_morale_factor = 0.1
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+
+			}
+		}
+		QIE_zhang_natsynd3 = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_in_the_footsteps_of_giants_level1" }
+			picture = ENG_blackshirts
+			name = "中式准则主义"
+			allowed = { always = no }
+			modifier = {
+				political_power_cost = -0.1
+				war_support_factor = 0.1
+				totalist_drift = 0.05
+				syndicalist_drift = 0.05
+				army_org_factor = 0.1
+				army_morale_factor = 0.1
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				required_garrison_factor = -0.1
+				breakthrough_factor = 0.1
+				recon_factor = 0.1
+
+			}
+		}
+		QIE_autarky = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_in_the_footsteps_of_giants_level1" }
+			picture = generic_autarky
+			allowed = { always = no }
+			modifier = {
+				production_speed_arms_factory_factor = 0.15
+				industrial_capacity_factory = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+			}
+		}
+		QIE_rise_of_national_socialism = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_in_the_footsteps_of_giants_level1" }
+			picture = generic_totalist_revolution
+			allowed = { always = no }
+			modifier = {
+				conscription = 0.01
+				conscription_factor = 0.1
+				army_infantry_attack_factor = 0.15
+				army_infantry_defence_factor = 0.15
+
+			}
+		}
+		QIE_puyi_sideline = {
+			on_add = { log = "[GetLogRoot]: add idea QIE_in_the_footsteps_of_giants_level1" }
+			picture = MAN_manchuria_henry_pu_yi
+			name = "溥仪"
+			allowed = { always = no }
+			modifier = {
+				political_power_factor = 0.1
+			}
+		}
 	}
 
 	#################
