@@ -1,5 +1,93 @@
 ideas = {
 	country = {
+		BRI_economy_1 = {
+			picture = BAN_industrial_encouragement
+			name = "经济改革"
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRI_memories_of_1932 "}
+            modifier = {
+				global_building_slots_factor = 0.1
+				global_building_slots = 2
+			}
+		}
+		BRI_economy_2 = {
+			picture = BAN_industrial_encouragement
+			name = "经济改革"
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRI_memories_of_1932 "}
+            modifier = {
+				global_building_slots_factor = 0.1
+				global_building_slots = 2
+				monthly_population = 0.5
+				consumer_goods_factor = -0.1
+			}
+		}
+		BRI_economy_3 = {
+			picture = BAN_industrial_encouragement
+			name = "经济改革"
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRI_memories_of_1932 "}
+            modifier = {
+				global_building_slots_factor = 0.1
+				global_building_slots = 2
+				monthly_population = 0.5
+				consumer_goods_factor = -0.1
+				local_resources_factor = 0.1
+				production_lack_of_resource_penalty_factor = -0.1
+			}
+		}
+		BRI_economy_4 = {
+			picture = BAN_industrial_encouragement
+			name = "经济改革"
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRI_memories_of_1932 "}
+            modifier = {
+				global_building_slots_factor = 0.1
+				global_building_slots = 2
+				monthly_population = 0.5
+				consumer_goods_factor = -0.1
+				local_resources_factor = 0.1
+				production_lack_of_resource_penalty_factor = -0.1
+				industrial_capacity_factory = 0.1
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		BRI_economy_5 = {
+			picture = BAN_industrial_encouragement
+			name = "经济改革"
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRI_memories_of_1932 "}
+            modifier = {
+				global_building_slots_factor = 0.1
+				global_building_slots = 2
+				monthly_population = 0.5
+				consumer_goods_factor = -0.1
+				local_resources_factor = 0.1
+				production_lack_of_resource_penalty_factor = -0.1
+				industrial_capacity_factory = 0.1
+				production_speed_buildings_factor = 0.1
+				research_speed_factor = 0.1
+			}
+			research_bonus = {
+				industry = 0.1
+			}
+		}
+		BRI_economy_6 = {
+			picture = BAN_industrial_encouragement
+			name = "经济改革"
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRI_memories_of_1932 "}
+            modifier = {
+				global_building_slots_factor = 0.1
+				global_building_slots = 2
+				monthly_population = 0.5
+				consumer_goods_factor = -0.1
+				local_resources_factor = 0.1
+				production_lack_of_resource_penalty_factor = -0.1
+				industrial_capacity_factory = 0.1
+				production_speed_buildings_factor = 0.1
+				research_speed_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+			}
+			research_bonus = {
+				industry = 0.1
+			}
+		}
 		BRI_memories_of_1932 = {
 			picture = generic_destruction
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRI_memories_of_1932 "}
@@ -2014,30 +2102,18 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRI_based_idea" }
 			targeted_modifier = {
 				tag = BRI
+				attack_bonus_against = -0.45
+				defense_bonus_against = -0.45
+			}
+		}
+		BRI_based_idea_1 = {
+			picture = BEL_Army_Tatters
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BRI_based_idea_1" }
+			targeted_modifier = {
+				tag = BRI
 				attack_bonus_against = -0.85
 				defense_bonus_against = -0.85
 			}
-		}
-		FRG_divided_france_idea = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRG_divided_france"}
-			allowed = {
-				NOT = {
-					OR = {
-						country_exists = BRI
-						country_exists = OCC
-						country_exists = NRM
-						country_exists = LRE
-						country_exists = FRA
-						country_exists = NFA
-					}
-				}
-			}
-			modifier = {
-				ai_call_ally_desire_factor = -10000
-				ai_join_ally_desire_factor = -10000
-				ai_get_ally_desire_factor = -10000
-			}
-			picture = FRA_divided_nation
 		}
 	}
 	hidden_ideas = {

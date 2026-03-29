@@ -1,5 +1,8 @@
 add_namespace = frg
 add_namespace = frg_new
+add_namespace = frg_least
+add_namespace = frgEconomy
+
 country_event = {
 	id = frg.210
 	immediate = {log = "[GetDateText]: [Root.GetName]: event comfrance.971"}
@@ -676,9 +679,6 @@ country_event = {
 
 	option = {
 		name = frg.15.a
-		trigger = { 
-			is_ai = no
-		}
 		add_stability = -0.05
 		hidden_effect = {
 			if = {
@@ -706,14 +706,6 @@ country_event = {
 				}
 			}
 		}	
-	}	
-
-	option = {
-		name = frg.15.b
-		trigger = { 
-			is_ai = yes
-		}
-		add_stability = -0.05
 	}	
 }
 country_event = {  #甘莫林专属事件-可疑的举动
@@ -805,6 +797,8 @@ country_event = {
 		name = frg.19.a
 		add_stability = -0.05
 		set_country_flag = LRE_BOOM
+		
+		
 		hidden_effect = {
 			country_event = {
 				id = frg.20
@@ -1494,10 +1488,18 @@ country_event = {
 				add_state_core = 31
 				add_state_core = 19
 				add_state_core = 22
+				
 				set_politics = {
-					ruling_party = authoritarian_democrat
+					ruling_party = social_democrat
 					elections_allowed = no
 				}
+				create_country_leader = {
+					name = "让·梅德欣"
+					picture = "gfx/leaders/OCC/Portrait_OCC_Jean_Medecin.png"
+					expire = "1.1.1"
+					ideology = socdem_united_front
+				}
+		
 			}
 		}
 	}
@@ -1780,7 +1782,7 @@ country_event = {
 						artillery = { x = 0 y = 0 }
 						}
 					}
-				random_owned_controlled_state = {
+					random_owned_controlled_state = {
 						create_unit = {
 							division = "name = \"雇佣兵\" division_template = \"雇佣兵\" start_experience_factor = 0.6 start_equipment_factor = 1"
 							allow_spawning_on_enemy_provs = yes
@@ -1926,8 +1928,6 @@ country_event = {
 				add_to_faction = NFA
 				inherit_technology = FRA
 			}
-          
-		
 			
             FRG = { 
 				add_state_core = 14
@@ -1995,32 +1995,48 @@ country_event = {
 				}
 				load_oob = FRG
 			}
+			
 			dismantle_faction = yes
 		}
 		hidden_effect = {
+			FRA = {
+				add_ideas = FRG_civil_war_idea
+			}
+			BRI = {
+				add_ideas = FRG_civil_war_idea
+			}
+			LRE = {
+				add_ideas = FRG_civil_war_idea
+			}
+			NRM = {
+				add_ideas = FRG_civil_war_idea
+			}
+			OCC = {
+				add_ideas = FRG_civil_war_idea
+			}
 			country_event = {
 				id = frg_new.2
-				days = 25
+				days = 26
 			}
 			declare_war_on = {
          		target = FRG
-         		type = annex_everything
+         		type = take_state_focus
         	}
 			declare_war_on = {
          		target = BRI
-         		type = annex_everything
+         		type = take_state_focus
         	}
 			declare_war_on = {
          		target = NRM
-         		type = annex_everything
+         		type = take_state_focus
         	}
 			declare_war_on = {
          		target = OCC
-         		type = annex_everything
+         		type = take_state_focus
         	}
 			declare_war_on = {
          		target = LRE
-         		type = annex_everything
+         		type = take_state_focus
         	}
 		}	
     }
@@ -2113,29 +2129,44 @@ country_event = {
 			dismantle_faction = yes
 		}
 		hidden_effect = {
+			FRA = {
+				add_ideas = FRG_civil_war_idea
+			}
+			BRI = {
+				add_ideas = FRG_civil_war_idea
+			}
+			LRE = {
+				add_ideas = FRG_civil_war_idea
+			}
+			NRM = {
+				add_ideas = FRG_civil_war_idea
+			}
+			OCC = {
+				add_ideas = FRG_civil_war_idea
+			}
 			country_event = {
 				id = frg_new.2
 				days = 25
 			}
 			declare_war_on = {
          		target = FRG
-         		type = annex_everything
+         		type = take_state_focus
         	}
 			declare_war_on = {
          		target = BRI
-         		type = annex_everything
+         		type = take_state_focus
         	}
 			declare_war_on = {
          		target = NRM
-         		type = annex_everything
+         		type = take_state_focus
         	}
 			declare_war_on = {
          		target = OCC
-         		type = annex_everything
+         		type = take_state_focus
         	}
 			declare_war_on = {
          		target = LRE
-         		type = annex_everything
+         		type = take_state_focus
         	}
 		}
     } 
@@ -2160,10 +2191,16 @@ country_event = {
 			id = frg.30
 			days = 7
 		}
+		add_ideas = FRG_civil_war_war_aftermath_idea
 		hidden_effect = {
 			FRG = {
 				transfer_navy = { target = FRA }
+				add_ideas = {
+					civilian_economy
+					volunteer_only
+				}
 			}
+		FRG_civil_war_ends = yes
 		}
     }  
 }
@@ -2220,6 +2257,7 @@ country_event = {
 			}
 			NFA = {
 				leave_faction = yes
+				add_ideas = FRG_civil_war_idea
 			}
 			country_event = {
 				id = frg.31
@@ -2326,21 +2364,24 @@ country_event = {
 	option = {	
         name = frg.34.a
 		set_country_flag = Remy_Maurice
+		hidden_effect = {
+			country_event = { id = frgEconomy.4 days = 30 }
+		}
     }  
 	option = {	
         name = frg.34.b
 		set_country_flag = Remy_Gaulle
 		set_politics = {
-			ruling_party = authoritarian_democrat
+			ruling_party = paternal_autocrat
 			elections_allowed = no
 		}
 		set_party_name = {
-			ideology = authoritarian_democrat
+			ideology = paternal_autocrat
 			long_name = FRG_national_populist_party_long
 			name = FRG_national_populist_party
 		}
 		create_country_leader = {
-			name = "科洛内尔·雷米"  # Colonel Rémy
+			name = "吉尔伯特·雷诺"  # Colonel Rémy
 			 traits = {
 				  FRG_Colonel_Remy
 			  }
@@ -2350,9 +2391,16 @@ country_event = {
 		}
 		add_popularity = {
 			ideology = authoritarian_democrat
+			popularity = 0.25
+		}
+		add_popularity = {
+			ideology = paternal_autocrat
 			popularity = 0.15
 		}
 		add_natpop_to_coalition = yes
+		hidden_effect = {
+			country_event = { id = frgEconomy.4 days = 30 }
+		}
     }  
 	
 }
@@ -2382,6 +2430,7 @@ country_event = {
 				remove_unit_leader = yes
 			}
 		}
+		complete_national_focus = FRG_Remy_die
     }  
 }
 
@@ -2970,6 +3019,7 @@ country_event = { #反日耳曼外交
 		}
 		FROM = {
 			add_to_faction = ROOT
+			set_country_flag = FRG_alley
 		}
 		ROOT = {
 			add_ideas = FRG_faction_Finale
@@ -3053,6 +3103,7 @@ country_event = {
 				traits = { Valley_of_the_Sons_of_Hinnom }
 			}
 			set_cosmetic_tag = FRG_Promised_land
+			country_event = frg_least.1
 		}
 	}
 
@@ -3258,6 +3309,10 @@ country_event = {  #香奈儿死亡
 		}   
 		add_manpower = -2
 		set_cosmetic_tag = FRG_Clara_Knecht
+		set_politics = {
+			ruling_party = paternal_autocrat
+			elections_allowed = no
+		}
 		create_country_leader = {
 			name = "克拉拉·克内希特"
 			desc = ""
@@ -3265,7 +3320,14 @@ country_event = {  #香奈儿死亡
 			expire = "1965.1.1"
 			ideology = spectral_state_subtype
 			traits = { FRG_shadow }
-		}	
+		}
+		every_state = {
+			limit = { is_core_of = WGR }
+			add_core_of = FRG
+		} 
+		FRG = {
+			annex_country = { target = WGR transfer_troops = yes }
+		}		
 	}
 }
 
@@ -3324,23 +3386,23 @@ country_event = {
 		}
 		set_party_name = {
 			ideology = totalist
-			long_name = "社会主义行动党"
-			name = "社会主义行动党"
+			long_name = FRG_pas_party_long
+			name = FRG_pas_party
 		}
 		set_party_name = {
 			ideology = syndicalist
-			long_name = "劳工总联合会"
-			name = "劳工总联合会"
+			long_name = FRG_cgt_party_long
+			name = FRG_cgt_party
 		}
 		set_party_name = {
 			ideology = radical_socialist
-			long_name = "临时政府/联邦无政府主义者联合会"
-			name = "临时政府/联邦无政府主义者联合会"
+			long_name = FRG_rsp_party_long
+			name = FRG_rsp_party
 		}
 		set_party_name = {
 			ideology = social_democrat
-			long_name = "工人国际法国支部"
-			name = "工人国际法国支部"
+			long_name = FRG_sfio_party_long
+			name = FRG_sfio_party
 		}
 		set_cosmetic_tag = FRG_commune
 		FRG = {
@@ -3358,6 +3420,7 @@ country_event = {
 			days = 2
 		}
 		remove_ideas = FRG_A_chaotic_government
+		set_country_flag = FRG_revolution_victory
 	}
 	
 	
@@ -3387,7 +3450,7 @@ country_event = {
 			ideology = radical_socialist
 			popularity = 0.1
 		}
-		complete_national_focus = FRG_Crossroads_of_DestinyFRG_Reconstruction_of_the_Republic
+		complete_national_focus = FRG_Reconstruction_of_the_Republic
 		country_event = {
 			id = frg.62
 			days = 7
@@ -3438,10 +3501,7 @@ country_event = {
 	}
 	option = {
 		name = frg.62.b
-		set_politics = {
-			ruling_party = radical_socialist
-			elections_allowed = no
-		}
+		
 		set_party_name = {
 			ideology = radical_socialist
 			long_name = "基督教劳联"
@@ -3452,18 +3512,29 @@ country_event = {
 			long_name = "基督教劳联"
 			name = "基督教劳联"
 		}
-		create_country_leader = {
-			name = "加斯东·泰西耶"  # Gaston Tessier
-			picture = "gfx/leaders/FRA/Portrait_FRA_Gaston_Tessier.png"
-			expire = "1.1.1"
-			ideology = christian_socialism_subtype
+		set_politics = {
+			ruling_party = social_democrat
+			elections_allowed = no
 		}
 		create_country_leader = {
 			name = "加斯东·泰西耶"  # Gaston Tessier
+			desc = FRG_Gaston_Tessier
 			picture = "gfx/leaders/FRA/Portrait_FRA_Gaston_Tessier.png"
 			expire = "1.1.1"
 			ideology = socdem_christian_socialism_subtype
 		}
+		set_politics = {
+			ruling_party = radical_socialist
+			elections_allowed = no
+		}
+		create_country_leader = {
+			name = "加斯东·泰西耶"  # Gaston Tessier
+			desc = FRG_Gaston_Tessier
+			picture = "gfx/leaders/FRA/Portrait_FRA_Gaston_Tessier.png"
+			expire = "1.1.1"
+			ideology = christian_socialism_subtype
+		}
+		
 		set_cosmetic_tag = FRG_tessier
 	}
 	option = {
@@ -3474,11 +3545,12 @@ country_event = {
 		}
 		set_party_name = {
 			ideology = social_democrat
-			long_name = "共和社会党"
-			name = "共和社会党"
+			long_name = FRG_rsp_party_long
+			name = FRG_rsp_party
 		}
 		create_country_leader = {	
 			name = "加斯东·维达尔"  # Gaston Vidal
+			deac = FRG_Gaston_Vidal_desc
 			picture = "gfx/leaders/FRA/Portrait_FRA_Gaston_Vidal.png"
 			expire = "1.1.1"
 			ideology = socdem_paternal_socialism_subtype
@@ -3526,11 +3598,35 @@ country_event = {
 		}
 		create_country_leader = {
 			name = "达尼埃尔·介朗"
+			desc = FRG_Daniel_Guerin
 			picture = "gfx/leaders/FRA/Portrait_France_Daniel_Guerin.png"
 			expire = "1.1.1"
 			ideology = anarcho_communism_subtype
 			traits = {}
 		}
+	}
+}
+
+country_event = { #fate of gangs
+	id = frg.69 
+	immediate = {log = "[GetDateText]: [Root.GetName]: event frg.69 "}
+	title = frg.69.t
+	desc = frg.69.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+         
+	option = {
+		name = frg.69.a #purge them
+		hidden_effect = {
+			country_event = {
+				id = frg.70
+				days = 7
+			}
+		}
+	}
+	option = {
+		name = frg.69.b #no
 	}
 }
 
@@ -3556,6 +3652,7 @@ country_event = { #assination
 			popularity = 0.15
 		}
 		set_country_flag = Rocca_coup
+		complete_national_focus = FRG_socialism_still_exists
 	}
 }
 
@@ -3786,9 +3883,12 @@ country_event = { #日内瓦普通的一天
 				}
 			}
 		FRG = {transfer_state = 943}
-		FRG = { 
-			puppet = SWI
-	 		}
+		FRG = {
+			set_autonomy = {
+				target = SWI
+				autonomy_state = autonomous_territory
+			}
+		}
 		SWI = {
 			set_politics = {
             	ruling_party = totalist
@@ -3885,6 +3985,109 @@ country_event = { #一位社会主义共和国边防部队士兵的日记
 		}
 	option = {
 		name = frg.103.c
+		ai_chance = {
+			factor = 50
+		}   
+		trigger = {
+			FRG = {
+				OR = {
+						has_government = syndicalist
+						has_government = radical_socialist
+						has_government = social_democrat
+						has_country_leader = { ruling_only = yes name = "西蒙·萨比亚尼" }
+					}
+				}
+			}
+        add_war_support = 0.2
+		FRG = {
+			add_to_faction = SRI
+			}
+		SRI = {
+			create_wargoal = {
+				type = annex_everything
+				target = SIC
+				} 
+			create_wargoal = {
+				type = annex_everything
+				target = ITA
+				}
+			create_wargoal = {
+				type = annex_everything
+				target = PAP
+				}  
+			}
+		}
+	}
+country_event = { #一位社会主义共和国边防部队士兵的日记
+	id = frg.1031
+	immediate = {log = "[GetDateText]: [Root.GetName]: event frg.1031 "}
+	title = frg.1031.t
+	desc = frg.1031.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = frg.1031.a
+		ai_chance = {
+			factor = 50
+		}   
+		trigger = {
+			NOT = {
+				FRG = {
+					OR = {
+						has_government = syndicalist
+						has_government = radical_socialist
+						has_government = social_democrat
+						has_country_leader = { ruling_only = yes name = "西蒙·萨比亚尼" }
+					}
+				}
+			}
+		}
+		FRG = {transfer_state = 1003}
+		FRG = { 
+			add_state_core = 1003
+			}
+        FRG = {
+			create_wargoal = {
+				type = annex_everything
+				target = SRI
+				} 
+			}
+		}
+	option = {
+		name = frg.1031.b
+		ai_chance = {
+			factor = 50
+		}   
+		trigger = {
+			NOT = {
+				FRG = {
+					OR = {
+						has_government = syndicalist
+						has_government = radical_socialist
+						has_government = social_democrat
+						has_country_leader = { ruling_only = yes name = "西蒙·萨比亚尼" }
+					}
+				}
+			}
+		}
+		leave_faction = yes
+		hidden_effect = {
+			SRI = {
+				add_popularity = {
+					ideology = paternal_autocrat
+					popularity = 0.1
+					}
+				}
+			}
+		FRG = {
+			declare_war_on = {
+         		target = SRI
+         		type = annex_everything
+        		} 
+			}
+		}
+	option = {
+		name = frg.1031.c
 		ai_chance = {
 			factor = 50
 		}   
@@ -4211,8 +4414,75 @@ country_event = { #重组法属西非
 		    SEN = {
 				exists = yes 
 				is_puppet_of = FRG
-			    }
-			NOT = {
+			}
+		}
+		FRG = {
+			set_autonomy = {
+				target = SEN
+				autonomy_state = autonomous_territory
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					FRG = {
+						has_government = syndicalist
+						has_government = radical_socialist
+						has_government = social_democrat
+						has_country_leader = { ruling_only = yes name = "西蒙·萨比亚尼" }
+					}
+				}
+			}
+			SEN = {
+				set_cosmetic_tag = NFA_MITTEL_01
+				set_politics = {
+            		ruling_party = authoritarian_democrat
+					elections_allowed = no
+        		} 
+				add_popularity = {
+					ideology = authoritarian_democrat
+					popularity = 0.44
+				}
+				add_popularity = {
+					ideology = market_liberal
+					popularity = 0.14
+				}
+        		create_country_leader = {
+            		name = "乔治·比多"
+					desc = "POLITICS_SEN_COLONIAL_DESC"
+            		picture = "gfx/leaders/FRG/Portrait_FRG_Georges_Bidault.png"
+            		expire = "1965.1.1"
+            		ideology = colonial_govt_subtype
+        		}
+				set_party_name = {
+            		ideology = authoritarian_democrat
+            		long_name = "法兰西西非殖民机构"
+            		name = "法兰西西非殖民机构"
+        		}
+				set_party_name = {
+            		ideology = market_liberal
+            		long_name = "法兰西西非殖民机构"
+            		name = "法兰西西非殖民机构"
+        		}
+				set_party_name = {
+            		ideology = paternal_autocrat
+            		long_name = "法兰西西非殖民军"
+            		name = "法兰西西非殖民军"
+        		}
+				set_party_name = {
+            		ideology = national_populist
+            		long_name = "地方合作者"
+            		name = "地方合作者"
+        		}
+				set_party_name = {
+            		ideology = social_democrat
+            		long_name = "地方合作者"
+            		name = "地方合作者"
+        		}
+    		}
+		}
+		if = {
+			limit = {
 				FRG = {
 					has_government = syndicalist
 					has_government = radical_socialist
@@ -4220,66 +4490,57 @@ country_event = { #重组法属西非
 					has_country_leader = { ruling_only = yes name = "西蒙·萨比亚尼" }
 				}
 			}
-		}
-		FRG = {
-			set_autonomy = {
-				target = SEN
-				autonomy_state = kr_colonial_government
-			}
-		}
-		SEN = {
-			set_cosmetic_tag = NFA_MITTEL_01
-			set_politics = {
-            	ruling_party = authoritarian_democrat
-				elections_allowed = no
-        	} 
-			add_popularity = {
-				ideology = authoritarian_democrat
-				popularity = 0.44
-			}
-			add_popularity = {
-				ideology = market_liberal
-				popularity = 0.14
-			}
-        	create_country_leader = {
-            	name = "乔治·比多"
-				desc = "POLITICS_SEN_COLONIAL_DESC"
-            	picture = "gfx/leaders/FRG/Portrait_FRG_Georges_Bidault.png"
-            	expire = "1965.1.1"
-            	ideology = colonial_govt_subtype
-        	}
-			set_party_name = {
-            	ideology = authoritarian_democrat
-            	long_name = "法兰西西非殖民机构"
-            	name = "法兰西西非殖民机构"
-        	}
-			set_party_name = {
-            	ideology = market_liberal
-            	long_name = "法兰西西非殖民机构"
-            	name = "法兰西西非殖民机构"
-        	}
-			set_party_name = {
-            	ideology = paternal_autocrat
-            	long_name = "法兰西西非殖民军"
-            	name = "法兰西西非殖民军"
-        	}
-			set_party_name = {
-            	ideology = national_populist
-            	long_name = "地方合作者"
-            	name = "地方合作者"
-        	}
-			set_party_name = {
-            	ideology = social_democrat
-            	long_name = "地方合作者"
-            	name = "地方合作者"
-        	}
-			set_autonomy = {
-					target = SEN
-					autonomy_state = kmt_puppet
-					end_wars = no
+			SEN = {
+				set_cosmetic_tag = NFA_MITTEL_02
+				set_politics = {
+            		ruling_party = syndicalist
+					elections_allowed = no
+        		} 
+				add_popularity = {
+					ideology = syndicalist
+					popularity = 0.80
 				}
-			country_event = { id = frg.111 days = 7 }
-    	}
+				add_popularity = {
+					ideology = social_democrat
+					popularity = 0.46
+				}
+				add_popularity = {
+					ideology = radical_socialist
+					popularity = 0.2
+				}
+				set_party_name = {
+            		ideology = radical_socialist
+            		long_name = "法兰西西非解放委员会"
+            		name = "法兰西西非解放委员会"
+        		}
+				set_party_name = {
+            		ideology = syndicalist
+            		long_name = "地方合作者"
+            		name = "地方合作者"
+        		}
+				set_party_name = {
+            		ideology = social_democrat
+            		long_name = "地方合作者"
+            		name = "地方合作者"
+        		}
+				set_party_name = {
+            		ideology = social_liberal
+            		long_name = "地方合作者"
+            		name = "地方合作者"
+        		}
+				set_party_name = {
+            		ideology = authoritarian_democrat
+            		long_name = "地方合作者"
+            		name = "地方合作者"
+        		}
+				set_party_name = {
+            		ideology = paternal_autocrat
+            		long_name = "地方合作者"
+            		name = "地方合作者"
+        		}
+    		}
+		}
+		SEN = { country_event = { id = frg.111 days = 7 } }
 	}
 }
 
@@ -4342,6 +4603,28 @@ country_event = {  #划定西非大区管辖范围
 			add_state_core = 968
 			add_state_core = 1192
 			add_state_core = 910
+		}
+		SEN = {
+			add_popularity = {
+				ideology = social_liberal
+				popularity = 0.13
+			}
+			add_popularity = {
+				ideology = social_democrat
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = authoritarian_democrat
+				popularity = 0.08
+			}
+			add_popularity = {
+				ideology = paternal_autocrat
+				popularity = 0.08
+			}
+			add_popularity = {
+				ideology = syndicalist
+				popularity = 0.03
+			}
 		} 
 	}
 }
@@ -4425,7 +4708,7 @@ country_event = { #重组法属赤道非洲
         	}
 			set_autonomy = {
 				target = GAB
-				autonomy_state = kr_colonial_government
+				autonomy_state = autonomous_territory
 				end_wars = no
 			}
 			complete_national_focus = GAB_the_ecuator_united
@@ -4664,6 +4947,7 @@ country_event = { #煽动德属西非脱钩
 					amount = 5000
 					producer = CIV
 				}
+			}
 			IVO = {
 					division_template = {
 						name = "民兵武装"
@@ -4718,7 +5002,6 @@ country_event = { #煽动德属西非脱钩
 						}
 					}
 				}
-			}
 		DAH = { transfer_state = 876
 				add_state_core = 876
 				
@@ -5024,9 +5307,7 @@ country_event = { #煽动德属西非脱钩
 			MAF = {
 				release_puppet = CIV
 			}
-			CIV = (
-				leave_faction = yes
-			)
+			CIV = { leave_faction = yes }
 			FRG = {
 				declare_war_on = {
          			target = CIV
@@ -5055,9 +5336,7 @@ country_event = { #煽动德属西非脱钩
 			MAF = {
 				release_puppet = CIV
 			}
-			CIV = (
-				leave_faction = yes
-			)
+			CIV = { leave_faction = yes }
 			GHA = {
 				transfer_state = 877
 				transfer_state = 274
@@ -5149,10 +5428,6 @@ country_event = { #煽动德属西非脱钩
 						}
 					}
 				}
-			MAF = {
-					end_puppet = CIV
-					remove_from_faction = CIV
-				}
 			FRG = {
 				add_to_faction = GHA
 				declare_war_on = {
@@ -5239,6 +5514,18 @@ country_event = {  #败者的回复
 
 	option = { #他们还算识趣
 		name = frg.117.a
+		trigger = {
+			NOT = {
+				FRG = {
+					OR = {
+						has_government = syndicalist
+						has_government = radical_socialist
+						has_government = social_democrat
+						has_country_leader = { ruling_only = yes name = "西蒙·萨比亚尼" }
+					}
+				}
+			}
+		}
 		ai_chance = {
 			factor = 50
 		}
@@ -5354,24 +5641,19 @@ country_event = {  #败者的回复
 					transfer_state = 1231
 				}
 			ISH = { add_state_core = 722 }
-			FRG = {
-				puppet = RRF
-				puppet = KAR
+			 FRG = {
+				set_autonomy = {
+					target = RRF
+					autonomous_state = autonomous_territory
+				}
+				set_autonomy = {
+					target = KAR
+					autonomous_state = autonomous_territory
+				}
 			}
 			RRF = { set_cosmetic_tag = FRG_RRF }   
        	 	RRF = {
 				kill_country_leader = yes
-				set_politics = {
-            		ruling_party = authoritarian_democrat 
-					elections_allowed = no
-        		} 
-				create_country_leader = {
-	            	name = "埃德加·普瓦"
-	            	desc = ""
-	            	picture = "gfx/leaders/FRG/Edgar_Puaud.png"
-	            	expire = "1965.1.1"
-	            	ideology = colonial_govt_subtype
-           	 	}
 				set_party_name = {
             		ideology = authoritarian_democrat
             		long_name = "莫斯科行省政府"
@@ -5425,6 +5707,78 @@ country_event = {  #败者的回复
 				add_popularity = {
 					ideology = syndicalist
 					popularity = 0.1
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						FRG = {
+							OR = {
+								has_government = syndicalist
+								has_government = radical_socialist
+								has_government = social_democrat
+								has_country_leader = { ruling_only = yes name = "西蒙·萨比亚尼" }
+							}
+						}	
+					}
+					NOT = {
+                        FRG = {
+                            has_completed_focus = FRG_Chanel_win
+                        }
+                    }
+				}
+				RRF = {
+					set_politics = {
+            			ruling_party = authoritarian_democrat 
+						elections_allowed = no
+        			} 
+                    create_country_leader = {
+	                    name = "埃德加·普瓦"
+	                    desc = ""
+	                    picture = "gfx/leaders/FRG/Portrait_FRG_Dmitri_Pavlovich.png"
+	                    expire = "1965.1.1"
+	                    ideology = autocratic_colonial_govt_subtype
+                    }
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						FRG = {
+							OR = {
+								has_government = syndicalist
+								has_government = radical_socialist
+								has_government = social_democrat
+								has_country_leader = { ruling_only = yes name = "西蒙·萨比亚尼" }
+							}
+						}	
+					}
+					FRG = {
+                        has_completed_focus = FRG_Chanel_win
+                    }
+                    NOT = {
+                    	FRG = {
+                        	has_completed_focus = FRG_Appearing_from_the_shadow
+                   		 }
+                    }
+				}
+				RRF = {
+					set_politics = {
+            			ruling_party = paternal_autocrat 
+						elections_allowed = no
+        			} 
+                    create_country_leader = {
+	                    name = "德米特里·巴甫诺维奇"
+	                    desc = ""
+	                    picture = "gfx/leaders/FRG/Edgar_Puaud.png"
+	                    expire = "1965.1.1"
+	                    ideology = absolute_monarchy_subtype
+                    }
+					set_party_name = {
+            	        ideology = paternal_autocrat
+            	        long_name = "巴甫诺维奇大公忠诚派"
+            	        name = "巴甫诺维奇大公忠诚派"
+        	        } 
 				}
 			}
 			RRF = { load_focus_tree = { id = generic_focus } }
@@ -5506,19 +5860,42 @@ country_event = {  #败者的回复
 				}
 				else_if = {
 					limit = {
-						is_in_faction_with = JAP
+						OR = {
+							is_in_faction_with = JAP
+							is_in_faction_with = CAN
+						}
 					}
 					leave_faction = yes
 				}
 			}
 			every_country = {
 				limit = {
-					is_subject_of = RUS
+					OR = {
+						is_subject_of = RUS
+						is_in_faction_with = RUS
+					}
 					OR = {
 						capital_scope = { is_on_continent = europe }				
 					}
 				}
 				force_capitulate = yes
+			}
+			every_state = {
+				limit = {
+					is_owned_and_controlled_by= RUS
+					is_on_continent = europe
+					is_core_of = UKR
+					is_core_of = WHR
+					is_core_of = EST
+					is_core_of = LAT
+					is_core_of = BAT
+					is_core_of = LIT
+					is_core_of = POL
+					is_core_of = ROM
+					is_core_of = GAL	
+					is_core_of = EPR
+				}
+				transfer_state_to = FRG
 			}
 			if = {
 				limit = {
@@ -5733,6 +6110,323 @@ country_event = {  #败者的回复
 			}
 		}
 	}
+	option = { #重燃十月革命
+		name = frg.117.b
+		trigger = {
+			FRG = {
+				OR = {
+					has_government = syndicalist
+					has_government = radical_socialist
+					has_government = social_democrat
+					has_country_leader = { ruling_only = yes name = "西蒙·萨比亚尼" }
+				}
+			}
+		}
+		ai_chance = {
+			factor = 50
+		}
+		RUS = {
+			country_event = { id = frg.124 days = 30 }
+		}
+		hidden_effect = {
+			FRG = { increase_ruling_party_popularity_by_10 = yes }
+			diplomatic_relation = {
+				country = RUS
+				relation = non_aggression_pact
+				active = yes
+			}
+			RUS = {
+				remove_ideas = FRG_FRG_RUS_Peace
+				add_ideas = RUS_Tver_treaty
+			}
+			every_state = {
+				limit = {
+					is_owned_and_controlled_by = RUS
+					is_on_continent = europe
+					NOT = {
+						state = 655
+                        state = 96
+                        state = 11
+                        state = 189
+                        state = 190
+                        state = 1091
+                        state = 12
+                        state = 13
+                        state = 191
+						state = 1329
+                        state = 94
+						state = 1295
+                        state = 95
+						state = 194
+                        state = 204
+						state = 1087
+                        state = 1294
+						state = 206
+                        state = 207
+						state = 1288
+						state = 209
+                        state = 880
+						state = 1290
+						state = 1291
+                        state = 1287
+						state = 243
+                        state = 755
+					}
+					NOT = {
+						is_core_of = UKR
+						is_core_of = DKB
+						is_core_of = KUB
+						is_core_of = MTR
+						is_core_of = KLY
+						is_core_of = GRO
+						is_core_of = ARM
+						is_core_of = AZE
+					}
+				}
+				transfer_state_to = LAT
+				add_core_of = LAT
+			}
+			every_state = {
+				limit = {
+					is_core_of = RUS
+					is_on_continent = europe
+					state = 655
+                    state = 96
+                    state = 11
+                    state = 189
+                    state = 190
+                    state = 1091
+                    state = 12
+                    state = 13
+                    state = 191
+					state = 1329
+                    state = 94
+					state = 1295
+                    state = 95
+					state = 194
+                    state = 204
+					state = 1087
+                    state = 1294
+					state = 206
+                    state = 1288
+					state = 209
+                    state = 880
+					state = 1290
+					state = 1291
+                    state = 1287
+					state = 243
+                    state = 755
+					is_core_of = UKR
+					is_core_of = DKB
+					is_core_of = KUB
+					is_core_of = MTR
+					is_core_of = KLY
+					is_core_of = GRO
+					is_core_of = ARM
+					is_core_of = AZE
+				}
+				transfer_state_to = LAT
+				add_core_of = LAT
+			}
+			LAT = {
+				set_party_name = {
+					ideology = radical_socialist
+					long_name = LAT_SOV_radical_socialist_party_long
+					name = LAT_SOV_radical_socialist_party
+				}
+				set_party_name = {
+					ideology = syndicalist
+					long_name = LAT_SOV_syndicalist_party_long
+					name = LAT_SOV_syndicalist_party
+				}
+				set_party_name = {
+					ideology = totalist
+					long_name = LAT_SOV_totalist_party_long
+					name = LAT_SOV_totalist_party
+				}
+				set_party_name = {
+					ideology = national_populist
+					long_name = RUS_national_populist_party_long
+					name = RUS_national_populist_party
+				}
+				set_party_name = {
+					ideology = paternal_autocrat
+					long_name = RUS_paternal_autocrat_party_long
+					name = RUS_paternal_autocrat_party
+				}
+				set_party_name = {
+					ideology = authoritarian_democrat
+					long_name = RUS_authoritarian_democrat_party_long
+					name = RUS_authoritarian_democrat_party
+				}
+				set_party_name = {
+					ideology = social_conservative
+					long_name = RUS_social_conservative_party_long
+					name = RUS_social_conservative_party
+				}
+				set_party_name = {
+					ideology = market_liberal
+					long_name = RUS_market_liberal_party_long
+					name = RUS_market_liberal_party
+				}
+				set_party_name = {
+					ideology = social_liberal
+					long_name = RUS_social_liberal_party_long
+					name = RUS_social_liberal_party
+				}
+				set_party_name = {
+					ideology = social_democrat
+					long_name = RUS_social_democrat_party_long
+					name = RUS_social_democrat_party
+				}
+				set_cosmetic_tag = LAT_RUS
+				add_popularity = {
+					ideology = syndicalist
+					popularity = 0.25
+				}
+				add_popularity = {
+					ideology = radical_socialist
+					popularity = 0.25
+				}
+				add_popularity = {
+					ideology = totalist
+					popularity = 0.25
+				}
+				set_capital = { state = 219 }
+				load_focus_tree = LAT_socialist_focus
+				mark_focus_tree_layout_dirty = yes
+				add_manpower = 300000
+			}
+			every_unit_leader = {
+				limit = { has_character_flag = RUS_socialist }
+				set_nationality = LAT
+			}
+			RUS = {
+				transfer_units_fraction = {
+					target = LAT
+					size = 0.4
+					air_ratio = 0.4
+					navy_ratio = 0.2
+					keep_unit_leaders_trigger = { always = yes }
+				}
+			}
+			if = {
+				limit = {
+					FRG = {
+						OR = {
+							has_government = syndicalist
+							has_government = radical_socialist
+							has_government = social_democrat
+						}
+					}
+				}
+				LAT = {
+					set_politics = {
+            			ruling_party = radical_socialist 
+						elections_allowed = no
+        			} 
+					complete_national_focus = LAT_begin_a_five_year_plan
+				}
+			}
+			if = {
+				limit = {
+					FRG = {
+						has_country_leader = { ruling_only = yes name = "西蒙·萨比亚尼" }
+					}
+				}
+				LAT = {
+					set_politics = {
+            			ruling_party = totalist 
+						elections_allowed = no
+        			} 
+					complete_national_focus = LAT_a_syndicalist_model
+				}
+			}
+
+			RUS = {
+				if = {
+					limit = {
+						is_faction_leader = yes
+					}
+					dismantle_faction = yes
+				}
+				else_if = {
+					limit = {
+						is_in_faction = yes
+						is_faction_leader = no
+					}
+					leave_faction = yes
+				}
+			}
+			every_other_country = {
+				limit = { 
+					AND = {
+						is_in_europe = yes
+						or = {
+							is_subject_of = RUS
+							is_in_faction_with = RUS
+						}
+					}
+				}
+				FRG = {	
+					annex_country = {
+						target = PREV
+					}
+			    }
+	        }
+			if = {
+				limit = {
+					OR = {
+						GEO = {
+							is_puppet_of = RUS
+						}
+						231 = {
+							is_owned_and_controlled_by = RUS
+						}
+					}
+				}
+				every_state = {
+					limit = { is_core_of = GEO }
+					transfer_state_to = FRG
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						AZE = {
+							is_puppet_of = RUS
+						}
+						990 = {
+							is_owned_and_controlled_by = RUS
+						}
+					}
+				}
+				every_state = {
+					limit = { is_core_of = AZE }
+					transfer_state_to = FRG
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						ARM = {
+							is_puppet_of = RUS
+						}
+						230 = {
+							is_owned_and_controlled_by = RUS
+						}
+					}
+				}
+				every_state = {
+					limit = { is_core_of = ARM }
+					transfer_state_to = FRG
+				}
+			}
+			RUS = {
+				white_peace = FRG
+			}
+		}
+	}
 }
 
 #入侵俄国
@@ -5882,6 +6576,12 @@ country_event = {  #评估俄国局势
 			RUS = { dismantle_faction = yes }
 			FRG = {
 				add_to_faction = RUS
+			}
+			every_country = {
+				limit = {
+					is_in_faction_with = RUS
+				}
+				add_to_faction = PREV
 			}
 		}
 	}
@@ -6077,7 +6777,7 @@ country_event = {  #叙利亚的一小步
             FRG = {
 				set_autonomy = {
 					target = LEB
-					autonomy_state = kr_colonial_government
+					autonomy_state = autonomous_territory
 				}
 			} 
             LEB = { set_cosmetic_tag = FRG_LEB_1 }
@@ -6236,7 +6936,7 @@ country_event = {  #向黎凡特地区传播革命
 					} 
 				}
 			}
-			else_if = {
+			if = {
 				limit = {
 					country_exists = OTT
 					OTT = {
@@ -6288,7 +6988,7 @@ country_event = {  #向黎凡特地区传播革命
 					add_to_faction = SYR
 				}
 			} 
-			else_if = {
+			if = {
 				limit = {
 					country_exists = OTT
 					OTT = {
@@ -6393,7 +7093,7 @@ country_event = {  #诡异的暴动
 		FRG = {
 			set_autonomy = {
 				target = DJI
-				autonomy_state = kr_colonial_government
+				autonomy_state = autonomous_territory
 			}
 		}
 		DJI = { restore_previous_government_type = yes }
@@ -7383,6 +8083,500 @@ country_event = { #评估中国
 	}
 }
 
+country_event = { #印支傀儡事件
+	id = frg.138
+	immediate = {log = "[GetDateText]: [Root.GetName]: event frg.138 "}
+	title = frg.138.t
+	desc = frg.138.d
+	picture = GFX_report_event_NFA_event_indochina
+
+	is_triggered_only = yes
+	fire_only_once = yes
+         
+
+	option = { #印度支那是法国的一个大区
+		name = frg.138.a
+		ai_chance = {
+			factor = 50
+		}  
+		if = {
+			limit = {
+				country_exists = VIN
+				NOT = {
+					country_exists = INC
+				}
+				VIN = {
+					is_puppet_of = FRG
+				}
+			}
+			every_state = {
+				limit = { is_core_of = VIN }
+				transfer_state_to = INC
+				add_core_of = INC
+			}
+		}
+		if = {
+			limit = {
+				country_exists = LAO
+				LAO = {
+					is_puppet_of = FRG
+				}
+			}
+			every_state = {
+				limit = { is_core_of = LAO }
+				transfer_state_to = INC
+				add_core_of = INC
+			}
+		}
+		if = {
+			limit = {
+				country_exists = CAM
+				CAM = {
+					is_puppet_of = FRG
+				}
+			}
+			every_state = {
+				limit = { is_core_of = CAM }
+				transfer_state_to = INC
+				add_core_of = INC
+			}
+		}
+		FRG = { 
+			set_autonomy = {
+				target = INC
+				autonomous_state = autonomous_territory
+			}
+		}
+		INC = { load_focus_tree = { id = generic_focus } }
+		INC = { set_cosmetic_tag = FRG_INC }
+		INC = {
+			set_politics = {
+            	ruling_party = authoritarian_democrat
+				 elections_allowed = no
+        	}
+			create_country_leader = {
+            	name = "印支大区驻军司令部"
+				desc = ""
+            	picture = "gfx/leaders/FRG/Portrait_FRG_Imperial_Regency.png"
+            	expire = "1965.1.1"
+            	ideology = colonial_govt_subtype
+            }
+			add_popularity = {
+				ideology = authoritarian_democrat
+				popularity = 0.32
+			}
+            add_popularity = {
+				ideology = paternal_autocrat
+				popularity = 0.32
+			}
+			add_popularity = {
+				ideology = national_populist
+				popularity = 0.32
+			}
+			add_popularity = {
+				ideology = totalist
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = syndicalist
+				popularity = 0.1
+			}
+		}
+	}
+	option = {  #委托本地人范琼去代为管理
+		name = frg.138.b
+		trigger = {
+			NOT = {
+				FRG = {
+					OR = {
+						has_government = syndicalist
+						has_government = radical_socialist
+						has_government = social_democrat
+						has_country_leader = { ruling_only = yes name = "西蒙·萨比亚尼" }
+					}
+				}	
+			}
+		}
+		ai_chance = {
+			factor = 50
+		} 
+		if = {
+			limit = {
+				country_exists = VIN
+				NOT = {
+					country_exists = INC
+				}
+				VIN = {
+					is_puppet_of = FRG
+				}
+			}
+			every_state = {
+				limit = { is_core_of = VIN }
+				transfer_state_to = INC
+				add_core_of = INC
+			}
+		}
+		FRG = { 
+			set_autonomy = {
+				target = INC
+				autonomous_state = autonomous_territory
+			}
+		}
+		if = {
+			limit = {
+				country_exists = LAO
+				LAO = {
+					is_puppet_of = FRG
+				}
+			}
+			every_state = {
+				limit = { is_core_of = LAO }
+				transfer_state_to = INC
+				add_core_of = INC
+			}
+		}
+		if = {
+			limit = {
+				country_exists = CAM
+				CAM = {
+					is_puppet_of = FRG
+				}
+			}
+			every_state = {
+				limit = { is_core_of = CAM }
+				transfer_state_to = INC
+				add_core_of = INC
+			}
+		}
+		add_political_power = 50
+		add_stability = 0.05
+		add_war_support = 0.05
+		INC = { load_focus_tree = { id = generic_focus } }
+		INC = { set_cosmetic_tag = FRG_INC }
+		INC = {
+			create_country_leader = {
+				name = "Pham Quynh"
+				desc = ""
+				picture = "gfx/leaders/VIN/Portrait_Vietnam_Pham_Quynh.png"
+				expire = "1.1.1"
+				ideology = socdem_colonial_govt_subtype
+			}
+			create_country_leader = {
+				name = "Pham Quynh"
+				desc = ""
+				picture = "gfx/leaders/VIN/Portrait_Vietnam_Pham_Quynh.png"
+				expire = "1.1.1"
+				ideology = soclib_colonial_govt_subtype
+			}
+			create_country_leader = {
+				name = "Pham Quynh"
+				desc = ""
+				picture = "gfx/leaders/VIN/Portrait_Vietnam_Pham_Quynh.png"
+				expire = "1.1.1"
+				ideology = marlib_colonial_govt_subtype
+			}
+			create_country_leader = {
+				name = "Pham Quynh"
+				desc = ""
+				picture = "gfx/leaders/VIN/Portrait_Vietnam_Pham_Quynh.png"
+				expire = "1.1.1"
+				ideology = soccon_colonial_govt_subtype
+			}
+			create_country_leader = {
+				name = "Pham Quynh"
+				desc = ""
+				picture = "gfx/leaders/VIN/Portrait_Vietnam_Pham_Quynh.png"
+				expire = "1.1.1"
+				ideology = colonial_govt_subtype
+			}
+			create_country_leader = {
+				name = "Pham Quynh"
+				desc = ""
+				picture = "gfx/leaders/VIN/Portrait_Vietnam_Pham_Quynh.png"
+				expire = "1.1.1"
+				ideology = autocratic_colonial_govt_subtype
+			}
+			create_country_leader = {
+				name = "Pham Quynh"
+				desc = ""
+				picture = "gfx/leaders/VIN/Portrait_Vietnam_Pham_Quynh.png"
+				expire = "1.1.1"
+				ideology = natpop_colonial_govt_subtype
+			}
+			set_party_name = {
+				ideology = social_democrat
+				long_name = NFA_indochina_party_long
+				name = NFA_indochina_party
+			}
+			set_party_name = {
+				ideology = social_liberal
+				long_name = NFA_indochina_party_long
+				name = NFA_indochina_party
+			}
+			set_party_name = {
+				ideology = market_liberal
+				long_name = NFA_indochina_party_long
+				name = NFA_indochina_party
+			}
+			set_party_name = {
+				ideology = social_conservative
+				long_name = NFA_indochina_party_long
+				name = NFA_indochina_party
+			}
+			set_party_name = {
+				ideology = authoritarian_democrat
+				long_name = NFA_indochina_party_long
+				name = NFA_indochina_party
+			}
+			set_party_name = {
+				ideology = paternal_autocrat
+				long_name = NFA_indochina_party_long
+				name = NFA_indochina_party
+			}
+			set_party_name = {
+				ideology = national_populist
+				long_name = NFA_indochina_party_long
+				name = NFA_indochina_party
+			}
+			add_popularity = {
+				ideology = authoritarian_democrat
+				 popularity = 0.128
+			}
+			add_popularity = {
+				ideology = national_populist
+				popularity = 0.128
+			}
+            add_popularity = {
+				ideology = paternal_autocrat
+				popularity = 0.128
+			}
+			add_popularity = {
+				ideology = social_conservative
+				 popularity = 0.128
+			}
+			add_popularity = {
+				ideology = market_liberal
+				popularity = 0.128
+			}
+			add_popularity = {
+				ideology = social_liberal
+				 popularity = 0.128
+			}
+			add_popularity = {
+				ideology = social_democrat
+				 popularity = 0.128
+			}
+		}
+		if = {
+			limit = {
+				FRG = {
+                    has_completed_focus = FRG_Chanel_win
+                }
+				NOT = {
+                     FRG = {
+                        has_completed_focus = FRG_Appearing_from_the_shadow
+                    }
+                }
+			}
+			INC = {
+				set_politics = {
+            	    ruling_party = market_liberal
+				    elections_allowed = no
+        	    }
+				add_popularity = {
+				    ideology = authoritarian_democrat
+				    popularity = 0.05
+			    }
+			    add_popularity = {
+				    ideology = national_populist
+				    popularity = 0.05
+			    }
+                add_popularity = {
+				    ideology = paternal_autocrat
+				    popularity = 0.05
+			    }
+				add_popularity = {
+				    ideology = market_liberal
+				    popularity = 0.12
+			    }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+                     FRG = {
+                        has_completed_focus = FRG_Chanel_win
+                    }
+                }
+			}
+			INC = {
+				set_politics = {
+            	    ruling_party = authoritarian_democrat
+				    elections_allowed = no
+        	    }
+			    add_popularity = {
+				    ideology = national_populist
+				    popularity = 0.05
+			    }
+                add_popularity = {
+				    ideology = paternal_autocrat
+				    popularity = 0.05
+			    }
+				add_popularity = {
+				    ideology = market_liberal
+				    popularity = 0.05
+			    }
+				add_popularity = {
+				    ideology = authoritarian_democrat
+				    popularity = 0.12
+			    }
+			}
+		}
+		if = {
+			limit = {
+				FRG = {
+                    has_country_leader = { ruling_only = yes name = "阿尔弗雷德·法布尔·卢斯" }
+					has_government = totalist
+                }
+			}
+			INC = {
+				set_politics = {
+            	    ruling_party = social_democrat
+				    elections_allowed = no
+        	    }
+				add_popularity = {
+				    ideology = authoritarian_democrat
+				    popularity = 0.05
+			    }
+                add_popularity = {
+				    ideology = paternal_autocrat
+				    popularity = 0.05
+			    }
+				add_popularity = {
+				    ideology = market_liberal
+				    popularity = 0.12
+			    }
+				add_popularity = {
+				    ideology = national_populist
+				    popularity = 0.2
+			    }
+				add_popularity = {
+				    ideology = social_democrat
+				    popularity = 0.18
+			    }
+			}
+		}
+		if = {
+			limit = {
+				FRG = {
+                    has_country_leader = { ruling_only = yes name = "阿尔弗雷德·法布尔·卢斯" }
+					has_government = national_populist
+                }
+			}
+			INC = {
+				set_politics = {
+            	    ruling_party = national_populist
+				    elections_allowed = no
+        	    }
+				add_popularity = {
+				    ideology = authoritarian_democrat
+				    popularity = 0.05
+			    }
+                add_popularity = {
+				    ideology = paternal_autocrat
+				    popularity = 0.05
+			    }
+				add_popularity = {
+				    ideology = market_liberal
+				    popularity = 0.12
+			    }
+				add_popularity = {
+				    ideology = social_democrat
+				    popularity = 0.23
+			    }
+				add_popularity = {
+				    ideology = national_populist
+				    popularity = 0.2
+			    }
+			}
+		}
+	}	
+	option = { #西贡的同志再也不用牺牲了
+		name = frg.138.c
+		ai_chance = {
+			factor = 50
+		}  
+		trigger = {
+			FRG = {
+				OR = {
+					has_government = syndicalist
+					has_government = radical_socialist
+					has_government = social_democrat
+					has_country_leader = { ruling_only = yes name = "西蒙·萨比亚尼" }
+				}
+			}
+		}
+		if = {
+			limit = {
+				country_exists = VIN
+				NOT = {
+					country_exists = INC
+				}
+				VIN = {
+					is_puppet_of = FRG
+				}
+			}
+			every_state = {
+				limit = { is_core_of = VIN }
+				transfer_state_to = INC
+				add_core_of = INC
+			}
+		}
+		if = {
+			limit = {
+				country_exists = INC
+				INC = {
+					is_puppet_of = FRG
+				}
+			}
+			FRG = {
+				release_puppet = INC
+			}
+		}
+		if = {
+			limit = {
+				country_exists = LAO
+				LAO = {
+					is_puppet_of = FRG
+				}
+			}
+			every_state = {
+				limit = { is_core_of = LAO }
+				transfer_state_to = INC
+				add_core_of = INC
+			}
+		}
+		if = {
+			limit = {
+				country_exists = CAM
+				CAM = {
+					is_puppet_of = FRG
+				}
+			}
+			every_state = {
+				limit = { is_core_of = CAM }
+				transfer_state_to = INC
+				add_core_of = INC
+			}
+		}
+		INC = { 
+			add_to_faction = FRG
+		}
+	}
+	
+}
+
+
 #非洲（下）
 country_event = { #马达加斯加
 	id = frg.140
@@ -7408,7 +8602,7 @@ country_event = { #马达加斯加
 		FRG = { 
 			set_autonomy = {
 				target = MAG
-				autonomous_state = kx_colored_puppet
+				autonomous_state = autonomous_territory
 			}
 		}
 		MAG = {
@@ -7437,8 +8631,490 @@ country_event = { #马达加斯加
 	}
 }
 
+#南美洲
+country_event = { #“高级”行动 瞄准福克兰群岛
+	id = frg.150
+	immediate = {log = "[GetDateText]: [Root.GetName]: event frg.150 "}
+	title = frg.150.t
+	desc = frg.150.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+         
+
+	option = { #故步自封，胡言乱语，死不足惜
+		name = frg.150.a
+		ai_chance = {
+			factor = 50
+		}  
+		FRG = { 
+			set_autonomy = {
+				target = FLS
+				autonomous_state = autonomous_territory
+			}
+		}
+        FLS = { set_cosmetic_tag = FRG_FLS }
+		FLS = {
+			remove_ideas = FLK_coup
+			remove_ideas = FLK_political_immigration
+			remove_ideas = FLK_under_the_british_crown
+			set_politics = {
+            	ruling_party = authoritarian_democrat
+				elections_allowed = no
+        	} 
+			create_country_leader = {
+            	name = "菲利普·基弗"
+				desc = ""
+            	picture = "gfx/leaders/FRG/Portrait_FRG_Philippe_Kieffer.png"
+            	expire = "1965.1.1"
+            	ideology = authdem_junta_subtype
+           	}
+           	add_popularity = {
+				ideology = paternal_autocrat
+				popularity = 0.25
+			}
+			add_popularity = {
+				ideology = authoritarian_democrat
+				popularity = 0.36
+			}
+			add_popularity = {
+				ideology = market_liberal
+				popularity = 0.27
+			}
+			set_party_name = {
+            	ideology = authoritarian_democrat
+            	long_name = "法兰西第一海军陆战队突击营"
+            	name = "法兰西第一海军陆战队突击营"
+        	}
+			set_party_name = {
+            	ideology = market_liberal
+            	long_name = "德奥梅松家族/法国石油公司雇佣兵"
+            	name = "德奥梅松家族/法国石油公司雇佣兵"
+        	}
+			set_party_name = {
+            	ideology = paternal_autocrat
+            	long_name = "法属安塔克蒂克殖民军"
+            	name = "法属安塔克蒂克殖民军"
+        	}
+		} 
+		every_state = {
+			limit = {
+				is_core_of = PIR
+				is_core_of = ARG
+				is_core_of = CHL
+				is_core_of = PAR
+				is_core_of = URG
+				is_core_of = SPO
+				is_core_of = BOS
+			}
+			add_core_of = GRP
+		} 
+		country_event = { id = frg.151 days = 30 }             
+     }
+}
+country_event = { #政路漫漫
+	id = frg.151
+	immediate = {log = "[GetDateText]: [Root.GetName]: event frg.151 "}
+	title = frg.151.t
+	desc = frg.151.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+         
+
+	option = { #从马尔维纳斯群岛开始，法兰西人将重新拿下通往南极的通道
+		name = frg.151.a
+		ai_chance = {
+			factor = 50
+		}  
+		FLS = {
+			set_party_name = {
+            	ideology = authoritarian_democrat
+            	long_name = "法属安塔克蒂克殖民当局"
+            	name = "法属安塔克蒂克殖民当局"
+        	}
+			set_party_name = {
+            	ideology = market_liberal
+            	long_name = "德奥梅松家族/法国石油公司雇佣兵"
+            	name = "德奥梅松家族/法国石油公司雇佣兵"
+        	}
+			set_party_name = {
+            	ideology = paternal_autocrat
+            	long_name = "法属安塔克蒂克殖民军"
+            	name = "法属安塔克蒂克殖民军"
+        	}
+		} 
+			if = {
+				limit = {
+					NOT = {
+                        FRG = {
+							OR = {
+								has_government = syndicalist
+								has_government = radical_socialist
+								has_government = social_democrat
+								has_country_leader = { ruling_only = yes name = "西蒙·萨比亚尼" }
+							}
+						}
+                    }
+					NOT = {
+                        FRG = {
+                            has_completed_focus = FRG_Chanel_win
+							has_completed_focus = FRG_La_scoumoune
+                        }
+                    }
+				}
+				FLS = {
+					set_politics = {
+            			ruling_party = authoritarian_democrat
+						elections_allowed = no
+        			} 
+					create_country_leader = {
+            			name = "弗拉基米尔·德奥梅松"
+						desc = ""
+            			picture = "gfx/leaders/FRG/Portrait_FRG_Wladimir_d_Ormesson.png"
+            			expire = "1965.1.1"
+            			ideology = colonial_govt_subtype
+           	 		}
+					add_marlib_to_coalition = yes
+					add_natpop_to_coalition = yes
+					add_pataut_to_coalition = yes
+				} 
+			} 
+			if = {
+				limit = {
+					NOT = {
+                        FRG = {
+							OR = {
+								has_government = syndicalist
+								has_government = radical_socialist
+								has_government = social_democrat
+								has_country_leader = { ruling_only = yes name = "西蒙·萨比亚尼" }
+							}
+						}
+                    }
+					FRG = {
+                        has_completed_focus = FRG_Chanel_win
+                    }
+					NOT = {
+                        FRG = {
+                            has_completed_focus = FRG_Appearing_from_the_shadow
+                        }
+                    }
+				}
+				FLS = {
+					set_politics = {
+            			ruling_party = market_liberal
+						elections_allowed = no
+        			} 
+					create_country_leader = {
+            			name = "弗拉基米尔·德奥梅松"
+						desc = ""
+            			picture = "gfx/leaders/FRG/Portrait_FRG_Wladimir_d_Ormesson.png"
+            			expire = "1965.1.1"
+            			ideology = marlib_colonial_govt_subtype
+           	 		}
+					add_authdem_to_coalition = yes
+					add_natpop_to_coalition = yes
+					add_pataut_to_coalition = yes
+           	 		add_popularity = {
+						ideology = paternal_autocrat
+						popularity = 0.25
+					}
+					add_popularity = {
+						ideology = authoritarian_democrat
+						popularity = 0.20
+					}
+					add_popularity = {
+						ideology = market_liberal
+						popularity = 0.36
+					}
+				} 
+			}             
+    }
+}
+
+#对待傀儡
+country_event = {  #不再需要傀儡
+	id = frg_least.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event frg_least.1 "}
+	title = frg_least.1.t
+	desc = frg_least.1.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+         
+
+	option = {  #泛欧核心
+		name = frg_least.1.a
+		ai_chance = {
+			factor = 50
+		}   
+		trigger = {
+			FRG = {
+				or = {
+					has_country_leader = { ruling_only = yes name = "加布里埃·香奈儿" }
+					has_country_leader = { ruling_only = yes name = "阿尔弗雷德·法布尔·卢斯" }
+					has_country_leader = { ruling_only = yes name = "保罗·查克" }
+					has_country_leader = { ruling_only = yes name = "罗伯特·布拉希拉赫" }
+				}
+			}
+			
+		} 
+        if = {
+			limit = {
+				FRG = {
+					is_faction_leader = yes
+				}
+			}
+			every_country = {
+				limit = {
+					NOT = {
+						tag = FRG
+					}
+					capital_scope = { is_on_continent = europe }
+					is_in_faction_with = FRG
+				}
+				country_event = frg_least.2
+			}
+		}
+		else_if = {
+			limit = {
+				FRG = {
+					is_faction_leader = no
+				}
+			}
+			every_country = {
+				limit = {
+					NOT = {
+						tag = FRG
+					}
+					capital_scope = { is_on_continent = europe }
+					is_in_faction_with = FRG
+					is_subject_of = FRG
+				}
+				country_event = frg_least.2
+			}
+		}
+		every_state = {
+			limit = {
+				is_on_continent = europe
+			}
+			FRA = { 
+				add_state_core = PREV 
+			}
+		}
+	}
+	option = {  #优生人与恶魔线专属
+		name = frg_least.1.b
+		ai_chance = {
+			factor = 50
+		}
+		trigger = {
+			FRG = {
+				or = {
+					has_country_leader = { ruling_only = yes name = "雅克·德·马希厄" }
+					has_country_leader = { ruling_only = yes name = "摩洛克" }
+				}
+			}
+		}  
+        every_country = {
+			limit = {
+				NOT = {
+					tag = FRG
+				}
+				is_subject_of = FRG
+			}
+			country_event = frg_least.2
+		}
+		every_state = {
+			FRG = { 
+				add_state_core = PREV 
+			}
+		}
+		if = {
+			limit = {
+				FRG = {
+					is_in_faction = yes
+					is_faction_leader = no
+				}
+			}
+			FRG = {
+				leave_faction = yes
+			}
+		}
+		if = {
+			limit = {
+				FRG = {
+					is_in_faction = yes
+					is_faction_leader = yes
+					has_country_leader = { ruling_only = yes name = "摩洛克" }
+				}
+			}
+			FRG = {
+				dismantle_faction = yes
+			}
+		}
+	}
+	option = {   #雷米专属与香奈儿
+		name = frg_least.2.c
+		ai_chance = {
+			factor = 50
+		}
+		trigger = {
+			FRG = {
+				or = {
+					has_country_leader = { ruling_only = yes name = "加布里埃·香奈儿" }
+					has_country_leader = { ruling_only = yes name = "吉尔伯特·雷诺" }
+				}
+			}
+		} 
+	}	
+}
+country_event = {  #被法国整合
+	id = frg_least.2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event frg_least.1"}
+	title = frg_least.2.t
+	desc = frg_least.2.d
+
+	is_triggered_only = yes
+	
+
+	option = {   #不
+		name = frg_least.2.a
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 0
+				FRG = {
+					is_ai = no
+				}
+			}
+		}
+	}	
+	option = {   #可
+		name = frg_least.2.b
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 100
+				FRG = {
+					is_ai = no
+				}
+			}		
+		}
+		FRG = {
+			annex_country = { target = ROOT transfer_troops = yes }
+		}
+		every_unit_leader = {	
+			set_nationality = FRG
+		}
+	}
+}
+
+#经济线事件
+country_event = { #继承再武装运动
+	id = frgEconomy.2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event frgEconomy.2 "}
+	title = frgEconomy.2.t
+	desc = frgEconomy.2.d
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = frgEconomy.2.a
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+country_event = { #以工制工
+	id = frgEconomy.3
+	immediate = {log = "[GetDateText]: [Root.GetName]: event frgEconomy.3 "}
+	title = frgEconomy.3.t
+	desc = frgEconomy.3.d
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = frgEconomy.3.a
+		trigger = {
+			NOT = {
+				has_completed_focus = FRG_La_scoumoune
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+		set_party_name = {
+			ideology = syndicalist
+			long_name = FRA_yellow_synd_party_long
+			name = FRA_yellow_synd_party
+		}
+		create_country_leader = {
+			name = "保罗·拉努瓦尔"  # Paul Lanoir
+			picture = "gfx/leaders/FRA/Portrait_FRA_Paul_Lanoir.png"
+			expire = "1.1.1"
+			ideology = yellow_syndicalism_subtype
+		}
+		add_synd_to_coalition = yes
+		add_popularity = {
+			ideology = syndicalist
+			popularity = 0.08
+		}
+		add_stability = 0.1
+		set_country_flag = syndicalist_allied
+	}
+	option = {  #黑帮专属选项
+		name = frgEconomy.3.b
+		trigger = {
+			has_completed_focus = FRG_La_scoumoune
+			NOT = {
+				or = {
+					has_country_leader = { ruling_only = yes name = "艾蒂安·莫尼耶" }
+					has_country_leader = { ruling_only = yes name = "路易·兰博" }
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+		add_manpower = -2
+		add_command_power = 60
+		set_country_flag = none_syndicalist
+	}
+}
+country_event = { #百废待兴
+	id = frgEconomy.4
+	immediate = {log = "[GetDateText]: [Root.GetName]: event frgEconomy.4 "}
+	title = frgEconomy.4.t
+	desc = frgEconomy.4.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = frgEconomy.4.a 
+		ai_chance = {
+			factor = 1
+		}
+		set_country_flag = FRG_accept_Monei
+	}
+	option = {
+		name = frgEconomy.4.b
+		ai_chance = {
+			factor = 1
+		}
+		set_country_flag = FRG_refuse_Monei
+	}
+}
 
 
+#趣味事件链
 country_event = {  #共治帝国运动
 	id = frg_new.1
 	immediate = {log = "[GetDateText]: [Root.GetName]: event frg_new.1 "}
@@ -7480,11 +9156,79 @@ country_event = {  #停战
 		name = frg_new.2.a
 		ai_chance = {
 			factor = 100
-		}   
-        white_peace = NRM
-		white_peace = LRE
-		white_peace = BRI
-		white_peace = OCC
+		}
+		every_country = {
+			limit = {
+				has_war_with = NRM
+				OR = {
+					tag = FRA
+					is_in_faction_with = FRA
+				}
+			}
+			white_peace = NRM
+		} 
+		every_country = {
+			limit = {
+				has_war_with = LRE
+				OR = {
+					tag = FRA
+					is_in_faction_with = FRA
+				}
+			}
+			white_peace = LRE
+		} 
+		every_country = {
+			limit = {
+				has_war_with = BRI
+				OR = {
+					tag = FRA
+					is_in_faction_with = BRI
+				}
+			}
+			white_peace = BRI
+		} 
+		every_country = {
+			limit = {
+				has_war_with = OCC
+				OR = {
+					tag = FRA
+					is_in_faction_with = FRA
+				}
+			}
+			white_peace = OCC
+		} 
+		NRM = {
+			hidden_effect = {
+				add_ideas = {
+					civilian_economy
+					volunteer_only
+				}
+			}	
+		}
+		LRE = {
+			hidden_effect = {
+				add_ideas = {
+					civilian_economy
+					volunteer_only
+				}
+			}	
+		}
+		BRI = {
+			hidden_effect = {
+				add_ideas = {
+					civilian_economy
+					volunteer_only
+				}
+			}	
+		}
+		OCC = {
+			hidden_effect = {
+				add_ideas = {
+					civilian_economy
+					volunteer_only
+				}
+			}	
+		}
 	}
 }
 
@@ -7922,6 +9666,36 @@ country_event = {  #路漫漫其修远兮，吾将上下而求索
 			expire = "1.1.1"
 			traits = { chairman_leader }
 			ideology = national_jacobinism_subtype
+		}
+	}
+}
+
+country_event = {  #战争结束
+	id = frg_new.11
+	immediate = {log = "[GetDateText]: [Root.GetName]: event frg_new.1 "}
+	title = frg_new.11.t
+	desc = frg_new.11.d
+	trigger = { 
+		tag = BRI
+		NOT = {
+			country_exists = FRG
+			country_exists = OCC
+			country_exists = NRM
+			country_exists = LRE
+		}
+	}
+	fire_only_once = yes
+	option = {
+		name = frg_new.11.a
+		ai_chance = {
+			factor = 50
+		}   
+		add_stability = 0.05
+		BRI = {
+			remove_ideas = FRG_civil_war_idea
+		}
+		NFA = {
+			remove_ideas = FRG_civil_war_idea
 		}
 	}
 }

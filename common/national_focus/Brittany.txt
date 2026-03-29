@@ -9,7 +9,7 @@ focus_tree = {
 	}
 	default = no
 	continuous_focus_position = { x = 200 y = 2500 }
-	shared_focus = FRB_commune_federation_s_embers
+	shared_focus = FRB_Defend_our_independence
 	focus = {
 		id = BRI_ar_chas_donv_yelo_da_ouez
 		icon = GFX_ALA_grey_wolf
@@ -205,7 +205,7 @@ focus_tree = {
 					id = BRI_FRA.2
 				}
 			}
-			if = {
+			else_if =  {
 				limit = {
 					has_war_with = FRG
 				}
@@ -244,6 +244,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			unlock_decision_category_tooltip = BRI_britanny_on_world_stage_cat
+			remove_ideas = BRI_memories_of_1932
 		}
 	}
 	focus = {
@@ -269,7 +270,7 @@ focus_tree = {
 			OR = {
 					has_country_flag = Bri_Alphonse_de_Chateaubriant_VISIBLE
 					has_country_flag = BRI_France_Marcel_Cachin_puppeted_by_popf
-					has_country_flag = BRI_autonomists
+					has_country_flag = BRI_Britanny_Morvan_Marchal_gain_power
 					has_country_flag = BRI_radsoc_soclib
 					has_country_flag = BRI_France_Marcel_Cachin_win
 				}
@@ -311,7 +312,8 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			add_ideas = IRE_republic_free_from_chaos
+			add_one_random_civilian_factory = yes
+			add_one_random_civilian_factory = yes
 		}
 	}
 	focus = {
@@ -375,12 +377,31 @@ focus_tree = {
 				add_political_power = 28
 			}
 			declare_war_on = {
-				target = FRA
+				target = FRG
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = OCC
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = LRE
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = NRM
 				type = annex_everything
 			}
 			every_state = {
 				limit = {
-					is_core_by = FRA
+					OR = {
+						is_core_of = FRA
+						is_core_of = OCC
+						is_core_of = FRG
+						is_core_of = LRE
+						is_core_of = NRM
+					}
+
 				}
 				BRI = { 
 					add_state_core = PREV 
@@ -718,6 +739,14 @@ focus_tree = {
 			23 = {
 				add_core_of = BRI
 			}
+			create_wargoal = {
+				target = FRG
+				type = take_core_state
+			}
+			create_wargoal = {
+				target = NRM
+				type = take_core_state
+			}
 		}
 	}
 	focus = {
@@ -738,8 +767,41 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			unlock_decision_tooltip = BRI_Support_Scotland
-			unlock_decision_tooltip = BRI_Support_Wales
+			set_cosmetic_tag = BRI_celtic_union
+			if = {
+				limit = {
+					country_exists = SCT
+				}
+				BRI = {
+					every_state = {
+						limit = {
+							is_core_of = SCT
+						}
+						add_core_of = BRI
+					}
+					annex_country = {
+						target = SCT
+						transfer_troops = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					country_exists = WAL
+				}
+				WAL = {
+					every_state = {
+						limit = {
+							is_core_of = WAL
+						}
+						add_core_of = BRI
+					}
+					annex_country = {
+						target = WAL
+						transfer_troops = yes
+					}
+				}
+			}
 		}
 	}
 	focus = {
@@ -818,10 +880,22 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			create_faction_from_template = { 
-				template = faction_template_generic_dominance
-				name = 	"伊姆萨夫集团"
-				icon = GFX_faction_celtic_internationale
+			if = {
+				limit = {
+					has_country_flag = BRI_France_Marcel_Cachin_win
+				}
+				create_faction_from_template = { 
+					template = faction_template_generic_dominance
+					name = 	"第三国际"
+					icon = GFX_faction_third_internationale #GFX_faction_celtic_internationale
+				}
+			}
+			else = {
+				create_faction_from_template = { 
+					template = faction_template_generic_dominance
+					name = 	"伊姆萨夫集团"
+					icon = GFX_faction_Alliance_celtique #GFX_faction_celtic_internationale
+				}
 			}
 			add_political_power = 200
 			add_stability = 0.2
@@ -899,11 +973,120 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			unlock_decision_tooltip = BRI_Anglo_Saxons_surrender
+			custom_effect_tooltip = BRI_attack_Anglo_Saxons_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						has_country_flag = BRI_Wales_aid
+					}
+					BRI = {
+						transfer_state = 122 
+						add_state_core = 1225
+						transfer_state = 1225 
+						add_state_core = 122
+					}
+					division_template = {
+						name = "起义军"
+						priority = 3
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							infantry = { x = 0 y = 2 }
+							infantry = { x = 0 y = 3 }
+							infantry = { x = 0 y = 4 }
+							infantry = { x = 0 y = 5 }
+							infantry = { x = 0 y = 6 }
+						}
+					}
+					random_owned_controlled_state = {
+						prioritize = { 122 1225 }
+						limit = {
+							is_in_home_area = yes
+							impassable = no
+						}
+						create_unit = {
+							division = "division_template = \"起义军\" start_experience_factor = 0.3"
+							owner = BRI
+						}
+						create_unit = {
+							division = "division_template = \"起义军\" start_experience_factor = 0.3"
+							owner = BRI
+						}
+						create_unit = {
+							division = "division_template = \"起义军\" start_experience_factor = 0.3"
+							owner = BRI
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_country_flag = BRI_Scotland_aid
+					}
+					BRI = {
+						transfer_state = 120
+						add_state_core = 120
+					}
+					division_template = {
+						name = "起义军"
+						priority = 3
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							infantry = { x = 0 y = 2 }
+							infantry = { x = 0 y = 3 }
+							infantry = { x = 0 y = 4 }
+							infantry = { x = 0 y = 5 }
+							infantry = { x = 0 y = 6 }
+						}
+					}
+					random_owned_controlled_state = {
+						prioritize = { 120 }
+						limit = {
+							is_in_home_area = yes
+							impassable = no
+						}
+						create_unit = {
+							division = "division_template = \"起义军\" start_experience_factor = 0.3"
+							owner = BRI
+						}
+						create_unit = {
+							division = "division_template = \"起义军\" start_experience_factor = 0.3"
+							owner = BRI
+						}
+						create_unit = {
+							division = "division_template = \"起义军\" start_experience_factor = 0.3"
+							owner = BRI
+						}
+					}
+				}
+			}
+			declare_war_on = { 
+				target = 126.owner 
+				type = annex_everything
+			}
+			unlock_decision_tooltip = BRI_Anglo_Saxons_intergration
+			unlock_decision_tooltip = BRI_France_intergration
+			unlock_decision_tooltip = BRI_Iberian_intergration
 			add_war_support = 0.15
+			add_state_core = 779
+			add_state_core = 28
 			every_state = {
 				limit = {
-					is_core_of = ENG
+					OR = {
+						is_core_of = ENG
+						is_core_of = FRA
+						is_core_of = NRM
+						is_core_of = OCC
+						is_core_of = LRE
+						is_core_of = CNT
+						is_core_of = CAR
+						is_core_of = SPR
+						is_core_of = BAS
+						is_core_of = CAT
+						is_core_of = GLC
+						is_core_of = POR
+						is_core_of = FRG
+					}
 				}
 				add_claim_by = BRI
 			}
@@ -929,9 +1112,12 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			unlock_decision_tooltip = BRI_Support_Ireland
-			add_one_random_civilian_factory = yes
-			add_one_random_civilian_factory = yes
+			IRE = {
+				country_event = {
+				id = BRI_FRA.11
+				}
+			}
+			
 		}
 	}
 	focus = {
@@ -944,7 +1130,9 @@ focus_tree = {
 		prerequisite = {
 			focus = BRI_recelticlize
 		}
-		
+		available = {
+			has_country_flag = BRI_laine_gain_power
+		}
 		ai_will_do = {
 			factor = 100
 		}
@@ -1102,6 +1290,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			custom_effect_tooltip = BRI_reclaim_france_effect_tooltip
+			unlock_decision_tooltip = BRI_Lock_Occitania_back_in_the_cage
+			unlock_decision_tooltip = BRI_Lock_Lorraine_back_in_the_cage
+			unlock_decision_tooltip = BRI_Lock_Normandy_back_in_the_cage
 		}
 	}
 	focus = {
@@ -1121,7 +1312,7 @@ focus_tree = {
 				OR = {
 					has_country_flag = Bri_Alphonse_de_Chateaubriant_VISIBLE
 					has_country_flag = BRI_France_Marcel_Cachin_puppeted_by_popf
-					has_country_flag = BRI_autonomists
+					has_country_flag = BRI_Britanny_Morvan_Marchal_gain_power
 					has_country_flag = BRI_radsoc_soclib
 					has_country_flag = BRI_France_Marcel_Cachin_win
 				}
@@ -1157,7 +1348,7 @@ focus_tree = {
 				limit = {
 					has_country_flag = BRI_France_Marcel_Cachin_win
 				}
-				set_cosmetic_tag = FRA_atheist
+				set_cosmetic_tag = FRA_Jacobinmod
 			}
 			else = {
 				set_cosmetic_tag = BRI_FRA
@@ -1433,7 +1624,9 @@ focus_tree = {
 			factor = 100
 		}
 		available = {
+			
 			NOT = {
+				has_country_flag = Bri_Alphonse_de_Chateaubriant_VISIBLE
 				has_country_flag = BRI_France_Marcel_Cachin_puppeted_by_popf
 			}
 		}
@@ -3879,9 +4072,6 @@ focus_tree = {
 				limit = {
 					has_government = social_liberal
 				}
-				country_event = {
-					id = brittany.11
-				}
 			}
 		}
 	}
@@ -5232,7 +5422,10 @@ focus_tree = {
 					is_ai = yes
 					has_government = totalist
 				}
-				add_ideas = BRI_based_idea
+				swap_ideas = {
+					remove_idea = BRI_based_idea
+					add_idea = BRI_based_idea_1
+				}
 			}
 			add_power_balance_value = {
 				id = BRI_Corbusier_Savina_balance
@@ -5265,7 +5458,10 @@ focus_tree = {
 					is_ai = yes
 					has_government = national_populist
 				}
-				add_ideas = BRI_based_idea
+				swap_ideas = {
+					remove_idea = BRI_based_idea
+					add_idea = BRI_based_idea_1
+				}
 			}
 			BRI = {
 				add_power_balance_value = {
@@ -5574,7 +5770,7 @@ focus_tree = {
 					name = "安东尼·吕布"
 					picture = "gfx/leaders/BRI/Portrait_Antoine_Riboud.png"
 					expire = "1965.1.1"
-					ideology = socdem_utopian_technocracy_subtype
+					ideology = socdem_burnhamite_thought_subtype
 				}
 			}
 		}
@@ -5653,7 +5849,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BRI_sansimon_lagacy
-		icon = GFX_goal_GER_Vision_Saint_Simon
+		icon = GFX_goal_FRA_resurgent_of_sansimonism
 		x = 0
 		y = 3	
 		cost = 4
@@ -7216,6 +7412,296 @@ focus_tree = {
 			}
 			hidden_effect = {
 				add_political_power = 28
+			}
+		}
+	}
+	focus = {
+		id = BRI_Revitalizing_the_Economy_of_Brittany
+		icon = GFX_TRM_Subsidise_Industrial_Expansion
+		x = 6
+		y = 22
+		cost = 4
+		
+		
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+		}
+		
+		completion_reward = {
+			add_stability = 0.1
+			add_ideas = BRI_economy_1
+		}
+	}
+	focus = {
+		id = BRI_Exploiting_the_Wealth_of_the_Armorican_Massif
+		icon = GFX_goal_UMN_cobalt_mines
+		x = 0
+		y = 2
+		cost = 4
+		relative_position_id = BRI_Revitalizing_the_Economy_of_Brittany
+		prerequisite = { focus = BRI_Expanding_the_Tourist_Resort_of_Saint_Malo_Saint_Nazaire }
+		prerequisite = { focus = BRI_Investing_in_the_South_Nantes_Frying_Plant }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+		}
+		
+		completion_reward = {
+			add_stability = 0.1
+			swap_ideas = {
+				remove_idea = BRI_economy_2
+				add_idea = BRI_economy_3
+			}
+			14 = {
+				add_resource = {
+					type = oil
+					amount = 5
+				}
+				add_resource = {
+					type = steel
+					amount = 26
+				}
+				add_resource = {
+					type = tungsten
+					amount = 15
+				}
+				add_resource = {
+					type = chromium
+					amount = 15
+				}
+				add_resource = {
+					type = coal
+					amount = 10
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = BRI_Expanding_the_Tourist_Resort_of_Saint_Malo_Saint_Nazaire
+		icon = GFX_goal_generic_tourism
+		x = -1
+		y = 1
+		cost = 4
+		relative_position_id = BRI_Revitalizing_the_Economy_of_Brittany
+		prerequisite = { focus = BRI_Revitalizing_the_Economy_of_Brittany }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+		}
+		
+		completion_reward = {
+			add_stability = 0.05
+			if = {
+				limit = {
+					has_completed_focus = BRI_Investing_in_the_South_Nantes_Frying_Plant
+				}
+				swap_ideas = {
+					remove_idea = BRI_economy_1
+					add_idea = BRI_economy_2
+				}
+			}
+			BRI_Urban_Renovation_effect_one = yes
+			BRI_Urban_Renovation_effect_one = yes
+		}
+	}
+	
+	focus = {
+		id = BRI_The_Lethal_Weapons_of_Arsetex_Company
+		icon = GFX_goal_CZE_imperial_arms
+		x = -1
+		y = 4
+		cost = 4
+		relative_position_id = BRI_Revitalizing_the_Economy_of_Brittany
+		prerequisite = { focus = BRI_Exploiting_the_Wealth_of_the_Armorican_Massif }
+		prerequisite = { focus = BRI_Developing_the_Primary_Agricultural_Region }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+		}
+		
+		completion_reward = {
+			add_stability = 0.1
+			if = {
+				limit = {
+					has_completed_focus = BRI_Subsidizing_the_Railway_Department_of_Finistere_Province
+				}
+				swap_ideas = {
+					remove_idea = BRI_economy_3
+					add_idea = BRI_economy_4
+				}
+			}
+			add_two_random_military_factories = yes
+			add_two_random_military_factories = yes
+		}
+	}
+	
+	focus = {
+		id = BRI_Funding_Rennes_University
+		icon = GFX_goal_PAN_Create_the_Universidad_de_Panama
+		x = 0
+		y = 3
+		cost = 4
+		relative_position_id = BRI_Revitalizing_the_Economy_of_Brittany
+		prerequisite = { focus = BRI_Exploiting_the_Wealth_of_the_Armorican_Massif }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			has_completed_focus = BRI_Subsidizing_the_Railway_Department_of_Finistere_Province
+			has_completed_focus = BRI_The_Lethal_Weapons_of_Arsetex_Company
+		}
+		
+		completion_reward = {
+			add_stability = 0.1
+			add_research_slot = 1
+			swap_ideas = {
+				remove_idea = BRI_economy_4
+				add_idea = BRI_economy_5
+			}
+		}
+	}
+	
+	focus = {
+		id = BRI_Industries_on_Par_with_France
+		icon = GFX_goal_MNT_decade_to_prosperity
+		x = 0
+		y = 5
+		cost = 4
+		relative_position_id = BRI_Revitalizing_the_Economy_of_Brittany
+		prerequisite = { focus = BRI_Funding_Rennes_University }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+		}
+		
+		completion_reward = {
+			add_stability = 0.1
+			add_two_random_civilian_factories = yes
+			add_two_random_military_factories = yes
+			swap_ideas = {
+				remove_idea = BRI_economy_5
+				add_idea = BRI_economy_6
+			}
+		}
+	}
+	focus = {
+		id = BRI_Subsidizing_the_Railway_Department_of_Finistere_Province
+		icon = GFX_goal_ROM_Railway_Investments
+		x = 1
+		y = 4
+		cost = 4
+		relative_position_id = BRI_Revitalizing_the_Economy_of_Brittany
+		prerequisite = { focus = BRI_Exploiting_the_Wealth_of_the_Armorican_Massif }
+		prerequisite = { focus = BRI_Launching_the_Loire_Valley_Shipyard }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+		}
+		
+		completion_reward = {
+			add_political_power = 50
+			if = {
+				limit = {
+					has_completed_focus = BRI_The_Lethal_Weapons_of_Arsetex_Company
+				}
+				swap_ideas = {
+					remove_idea = BRI_economy_3
+					add_idea = BRI_economy_4
+				}
+			}
+			add_one_random_infrastructure = yes
+			add_one_random_infrastructure = yes
+			add_one_random_infrastructure = yes
+		}
+	}
+	
+	
+	focus = {
+		id = BRI_Developing_the_Primary_Agricultural_Region
+		icon = GFX_goal_VIN_agricultural_modernization
+		x = -2
+		y = 2
+		cost = 4
+		relative_position_id = BRI_Revitalizing_the_Economy_of_Brittany
+		prerequisite = { focus = BRI_Revitalizing_the_Economy_of_Brittany }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+		}
+		
+		completion_reward = {
+			add_stability = 0.1
+			BRI_Urban_Renovation_effect_one = yes
+			BRI_Urban_Renovation_effect_one = yes
+			BRI_Urban_Renovation_effect_one = yes
+			BRI_Urban_Renovation_effect_one = yes
+			add_one_random_infrastructure = yes
+			add_two_random_civilian_factories = yes
+		}
+	}
+	
+	focus = {
+		id = BRI_Launching_the_Loire_Valley_Shipyard
+		icon = GFX_goal_generic_shipyard
+		x = 2
+		y = 2
+		cost = 4
+		relative_position_id = BRI_Revitalizing_the_Economy_of_Brittany
+		prerequisite = { focus = BRI_Revitalizing_the_Economy_of_Brittany }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+		}
+		
+		completion_reward = {
+			add_two_random_dockyards = yes
+			add_two_random_dockyards = yes
+			add_one_random_infrastructure = yes
+			add_one_random_infrastructure = yes
+		}
+	}
+	
+	
+	focus = {
+		id = BRI_Investing_in_the_South_Nantes_Frying_Plant
+		icon = GFX_goal_ALA_fishing
+		x = 1
+		y = 1
+		cost = 4
+		relative_position_id = BRI_Revitalizing_the_Economy_of_Brittany
+		prerequisite = { focus = BRI_Revitalizing_the_Economy_of_Brittany }
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+		}
+		
+		completion_reward = {
+			add_political_power = 45
+			add_one_random_civilian_factory = yes
+			add_two_random_civilian_factories = yes
+			BRI_Urban_Renovation_effect_one = yes
+			BRI_Urban_Renovation_effect_one = yes
+			BRI_Urban_Renovation_effect_one = yes
+			BRI_Urban_Renovation_effect_one = yes
+			if = {
+				limit = {
+					has_completed_focus = BRI_Expanding_the_Tourist_Resort_of_Saint_Malo_Saint_Nazaire
+				}
+				swap_ideas = {
+					remove_idea = BRI_economy_1
+					add_idea = BRI_economy_2
+				}
 			}
 		}
 	}

@@ -525,7 +525,7 @@ BRI_factionism = {
 		days_re_enable = 20
 		priority = 978
 		complete_effect = {
-			BRI_BALA_gain_power_low = yes
+			BRI_BLBA_gain_power_mid = yes
 			add_one_random_infrastructure = yes
 			add_one_random_infrastructure = yes
 			add_one_random_infrastructure = yes
@@ -541,7 +541,7 @@ BRI_factionism = {
 		days_re_enable = 20
 		priority = 977
 		complete_effect = {
-			BRI_BALA_gain_power_low = yes
+			BRI_BLBA_gain_power_high = yes
 			BRI_FLB_lose_power_mid = yes
 			BRI_PNB_lose_power_mid = yes
 			add_popularity = {
@@ -560,7 +560,7 @@ BRI_factionism = {
 		days_re_enable = 20
 		priority = 976
 		complete_effect = {
-			BRI_BALA_gain_power_low = yes
+			BRI_BLBA_gain_power_mid = yes
 			BRI_AB_lose_power_mid = yes
 			add_popularity = {
 				ideology = market_liberal
@@ -579,7 +579,7 @@ BRI_factionism = {
 		days_re_enable = 20
 		priority = 975
 		complete_effect = {
-			BRI_BALA_gain_power_mid = yes
+			BRI_BLBA_gain_power_mid = yes
 			add_popularity = {
 				ideology = market_liberal
 				popularity = 0.06
@@ -946,20 +946,25 @@ BRI_Giant_enterprises_governing_the_country = { #巨企治国
 			army_experience = 30
 			if = {
 				limit = {
+					NOT = {
+						has_idea = BRI_ARMY_Giant_enterprises_0
+						has_idea = BRI_ARMY_Giant_enterprises_1
+						has_idea = BRI_ARMY_Giant_enterprises_2
+						has_idea = BRI_ARMY_Giant_enterprises_3
+						has_idea = BRI_ARMY_Giant_enterprises_4
+						has_idea = BRI_ARMY_Giant_enterprises_5
+					}
+				}
+				add_ideas = BRI_ARMY_Giant_enterprises_0
+			}
+			if = {
+				limit = {
 					has_idea = BRI_ARMY_Giant_enterprises_0
 				}
 				swap_ideas = {
 					remove_idea = BRI_ARMY_Giant_enterprises_0
 					add_idea = BRI_ARMY_Giant_enterprises_1
 				}
-			}
-			if = {
-				limit = {
-					NOT = {
-						has_idea = BRI_ARMY_Giant_enterprises_0
-					}
-				}
-				add_ideas = BRI_ARMY_Giant_enterprises_0
 			}
 			if = {
 				limit = {
@@ -1026,20 +1031,25 @@ BRI_Giant_enterprises_governing_the_country = { #巨企治国
 			army_experience = 30
 			if = {
 				limit = {
+					NOT = {
+						has_idea = BRI_AIR_Giant_enterprises_0
+						has_idea = BRI_AIR_Giant_enterprises_1
+						has_idea = BRI_AIR_Giant_enterprises_2
+						has_idea = BRI_AIR_Giant_enterprises_3
+						has_idea = BRI_AIR_Giant_enterprises_4
+						has_idea = BRI_AIR_Giant_enterprises_5
+					}
+				}
+				add_ideas = BRI_AIR_Giant_enterprises_0
+			}
+			if = {
+				limit = {
 					has_idea = BRI_AIR_Giant_enterprises_0
 				}
 				swap_ideas = {
 					remove_idea = BRI_AIR_Giant_enterprises_0
 					add_idea = BRI_AIR_Giant_enterprises_1
 				}
-			}
-			if = {
-				limit = {
-					NOT = {
-						has_idea = BRI_AIR_Giant_enterprises_0
-					}
-				}
-				add_ideas = BRI_AIR_Giant_enterprises_0
 			}
 			if = {
 				limit = {
@@ -1105,20 +1115,25 @@ BRI_Giant_enterprises_governing_the_country = { #巨企治国
 			army_experience = 30
 			if = {
 				limit = {
+					NOT = {
+						has_idea = BRI_NAVY_Giant_enterprises_0
+						has_idea = BRI_NAVY_Giant_enterprises_5
+						has_idea = BRI_NAVY_Giant_enterprises_1
+						has_idea = BRI_NAVY_Giant_enterprises_2
+						has_idea = BRI_NAVY_Giant_enterprises_3
+						has_idea = BRI_NAVY_Giant_enterprises_4
+					}
+				}
+				add_ideas = BRI_NAVY_Giant_enterprises_0
+			}
+			if = {
+				limit = {
 					has_idea = BRI_NAVY_Giant_enterprises_0
 				}
 				swap_ideas = {
 					remove_idea = BRI_NAVY_Giant_enterprises_0
 					add_idea = BRI_NAVY_Giant_enterprises_1
 				}
-			}
-			if = {
-				limit = {
-					NOT = {
-						has_idea = BRI_NAVY_Giant_enterprises_0
-					}
-				}
-				add_ideas = BRI_NAVY_Giant_enterprises_0
 			}
 			if = {
 				limit = {
@@ -2911,12 +2926,14 @@ BRI_britanny_on_world_stage_cat = {
 	BRI_against_fra = { #举起反旗
 		icon = GFX_decision_generic_break_treaty
 		days_mission_timeout = 30
+		priority = 985
 		available = {
 			hidden_trigger = {
 				always = no
 			}
 		}
 		activation = {
+			original_tag = BRI
 			OR = {
 				has_war_with = NFA
 				has_war_with = FRG
@@ -2931,23 +2948,13 @@ BRI_britanny_on_world_stage_cat = {
 			}
 		}
 		cancel_effect = {
-			add_stability = -0.2
-			add_war_support = -0.2
+			add_stability = -0.05
+			add_war_support = -0.05
+			add_political_power = 150
 		}
-		modifier = {
-			army_attack_factor = 0.1
-			breakthrough_factor = 0.1
-			army_defence_factor = 0.1
-			production_factory_start_efficiency_factor = 0.05
-			line_change_production_efficiency_factor = 0.05
-			production_factory_efficiency_gain_factor = 0.1
-			production_factory_max_efficiency_factor = 0.1
-			industrial_capacity_factory = 0.05
-		}
-		priority = 985
 		timeout_effect = {
-			add_stability = -0.02
-			add_war_support = -0.02
+			add_stability = 0.01
+			add_war_support = 0.01
 			activate_mission = BRI_against_fra
 		}
 	}
@@ -2960,7 +2967,10 @@ BRI_britanny_on_world_stage_cat = {
 			original_tag = BRI
 		}
 		visible = {
-			has_completed_focus = BRI_reclaim_france
+			OR = {
+				has_completed_focus = BRI_towards_great_brittany
+				has_completed_focus = BRI_reclaim_france
+			}
 			country_exists = OCC
 		}
 		fire_only_once = yes
@@ -2992,7 +3002,10 @@ BRI_britanny_on_world_stage_cat = {
 			original_tag = BRI
 		}
 		visible = {
-			has_completed_focus = BRI_reclaim_france
+			OR = {
+				has_completed_focus = BRI_reclaim_france
+				has_completed_focus = BRI_towards_great_brittany
+			}
 			country_exists = LRE
 		}
 		fire_only_once = yes
@@ -3024,7 +3037,10 @@ BRI_britanny_on_world_stage_cat = {
 			original_tag = BRI
 		}
 		visible = {
-			has_completed_focus = BRI_reclaim_france	
+			OR = {
+				has_completed_focus = BRI_towards_great_brittany
+				has_completed_focus = BRI_reclaim_france
+			}	
 			country_exists = NRM
 		}
 		fire_only_once = yes
@@ -3130,7 +3146,7 @@ BRI_britanny_on_world_stage_cat = {
 			has_socialist_government = no
 			is_subject = no
 			is_in_faction = no
-			RUS = {
+			CAN = {
 				is_subject = no
 				exists = yes
 				is_faction_leader = yes
@@ -3163,10 +3179,11 @@ BRI_britanny_on_world_stage_cat = {
 			factor = 10
 		}
 		available = {
+			country_exists = ENG
 			has_socialist_government = yes
 			is_subject = no
 			is_in_faction = no
-			RUS = {
+			ENG = {
 				is_subject = no
 				exists = yes
 				is_faction_leader = yes
@@ -3243,32 +3260,7 @@ BRI_britanny_on_world_stage_cat = {
 			custom_effect_tooltip = BRI_Support_Scotland_tooltip
 		}
 	}
-	BRI_Support_Ireland = {
-		icon = decision_bakuretsu
-		ai_will_do = {
-			factor = 10
-		}
-		available = {
-			has_war = no
-		}
-		visible = {
-			has_completed_focus = BRI_friendship_with_ireland
-		}
-		fire_only_once = yes
-		days_remove = 30
-		complete_effect = {
-			add_stability = -0.1
-			add_political_power = -50
-		}
-		remove_effect = {
-			IRE = {
-				country_event = {
-				id = BRI_FRA.11
-				}
-			}
-			custom_effect_tooltip = BRI_Support_Ireland_tooltip
-		}
-	}
+	
 	BRI_The_October_Revolution = {
 		icon = decision_bakuretsu
 		ai_will_do = {
@@ -3288,8 +3280,8 @@ BRI_britanny_on_world_stage_cat = {
 		}
 		remove_effect = {
 			set_cosmetic_tag = BRI_sov_enterprises
-			set_capital = { id = 129 remember_old_capital = no }
-			set_province_name = { id = 129 name = "列宁格勒" }
+			set_capital = { state = 195 remember_old_capital = yes }
+			set_province_name = { id = 6174 name = "列宁格勒" }
 		}
 	}
 	BRI_Anglo_Saxons_intergration = {
@@ -3325,51 +3317,7 @@ BRI_britanny_on_world_stage_cat = {
 			industrial_capacity_dockyard = -0.1
 		}
 		remove_effect = {
-			set_cosmetic_tag = BRI_celtic_union
-			if = {
-				limit = {
-					has_country_flag = BRI_Scotland_aid
-				}
-				BRI = {
-					add_state_core = 120
-					add_state_core = 121
-					add_state_core = 136
-					add_state_core = 133
-					add_state_core = 938 
-					annex_country = {
-						target = SCT
-						transfer_troops = yes
-					}
-				}
-			}
-			if = {
-				limit = {
-					has_country_flag = BRI_Wales_aid
-				}
-				BRI = {
-					add_state_core = 122 
-					add_state_core = 1225 
-					annex_country = {
-						target = WAL
-						transfer_troops = yes
-					}
-				}
-			}
-			if = {
-				limit = {
-					has_country_flag = BRI_Ireland_aid
-				}
-				BRI = {
-					add_state_core = 113 
-					add_state_core = 119 
-					add_state_core = 134
-					add_state_core = 135 
-					annex_country = {
-						target = IRE
-						transfer_troops = yes
-					}
-				}
-			}
+			
 			every_state = {
 				limit = {
 					is_core_of = ENG
@@ -3379,213 +3327,118 @@ BRI_britanny_on_world_stage_cat = {
 			add_political_power = 100
 		}
 	}
-	BRI_Anglo_Saxons_surrender = {
+	BRI_France_intergration = {
 		icon = decision_bakuretsu
 		ai_will_do = {
 			factor = 10
 		}
 		available = {
-			has_war = no
+			has_completed_focus = BRI_recelticlize
+			16 = {
+				is_controlled_by_ROOT_or_owner = yes
+			}
 		}
 		visible = {
-			has_completed_focus = BRI_recelticlize
+			NOT = {
+				country_exists = FRG
+				country_exists = OCC
+				country_exists = NRM
+				country_exists = LRE
+			}
 		}
 		fire_only_once = yes
 		days_remove = 30
 		complete_effect = {
 			add_stability = -0.1
-			add_political_power = -50
+		}
+		modifier = {
+			political_power_gain = -0.1
+			conversion_cost_civ_to_mil_factor = -0.1
+			conversion_cost_mil_to_civ_factor = -0.1
+			production_factory_start_efficiency_factor = -0.1
+			line_change_production_efficiency_factor = -0.1
+			production_factory_efficiency_gain_factor = -0.1
+			production_factory_max_efficiency_factor = -0.1
+			industrial_capacity_factory = -0.1
+			industrial_capacity_dockyard = -0.1
 		}
 		remove_effect = {
-			set_country_flag = BRI_Ireland_aid
-			custom_effect_tooltip = BRI_Anglo_Saxons_surrender_tooltip
-            create_faction_from_template = { 
-				template = faction_template_generic_dominance              
-				name = Alliance_celtique
-				icon = GFX_faction_arizona
-			}
-			if = {
+			
+			every_state = {
 				limit = {
-					has_country_flag = BRI_Ireland_aid
+					OR = {
+						is_core_of = FRG
+						is_core_of = LRE
+						is_core_of = NRM
+						is_core_of = OCC
+					}
+					
 				}
-				BRI = { add_to_faction = IRE }
-				IRE = {
-					declare_war_on = { target = ENG type = annex_everything }
-				}
+				add_core_of = BRI
 			}
-			if = {
+			add_political_power = 100
+		}
+	}
+	BRI_Iberian_intergration = {
+		icon = decision_bakuretsu
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			has_completed_focus = BRI_recelticlize
+			41 = {
+				is_controlled_by_ROOT_or_owner = yes
+			}
+			112 = {
+				is_controlled_by_ROOT_or_owner = yes
+			}
+		}
+		visible = {
+			NOT = {
+				country_exists = SPR
+				country_exists = CNT
+				country_exists = CAR
+				country_exists = POR
+				country_exists = BAS
+				country_exists = CAT
+				country_exists = GLC
+			}
+		}
+		fire_only_once = yes
+		days_remove = 30
+		complete_effect = {
+			add_stability = -0.1
+		}
+		modifier = {
+			political_power_gain = -0.1
+			conversion_cost_civ_to_mil_factor = -0.1
+			conversion_cost_mil_to_civ_factor = -0.1
+			production_factory_start_efficiency_factor = -0.1
+			line_change_production_efficiency_factor = -0.1
+			production_factory_efficiency_gain_factor = -0.1
+			production_factory_max_efficiency_factor = -0.1
+			industrial_capacity_factory = -0.1
+			industrial_capacity_dockyard = -0.1
+		}
+		remove_effect = {
+			
+			every_state = {
 				limit = {
-					has_country_flag = BRI_Scotland_aid
-				}
-				BRI = { add_to_faction = SCT }
-				SCT = {
-					transfer_state = 120
-					transfer_state = 121
-					transfer_state = 136
-					transfer_state = 133
-					transfer_state = 938 
-					add_state_core = 120
-					add_state_core = 121
-					add_state_core = 136
-					add_state_core = 133
-					add_state_core = 938 
-					division_template = {
-						name = "起义部队"
-						priority = 3
-						regiments = {
-							infantry = { x = 0 y = 0 }
-							infantry = { x = 0 y = 1 }
-							infantry = { x = 0 y = 2 }
-							infantry = { x = 0 y = 3 }
-							infantry = { x = 0 y = 4 }
-							infantry = { x = 0 y = 5 }
-							infantry = { x = 0 y = 6 }
-						}
+					OR = {
+						is_core_of = SPR
+						is_core_of = CNT
+						is_core_of = CAR
+						is_core_of = POR
+						is_core_of = BAS
+						is_core_of = CAT
+						is_core_of = GLC
+						
 					}
-					random_owned_controlled_state = {
-						create_unit = {
-							division = "name = \"起义部队\" division_template = \"起义部队\" start_experience_factor = 0.5 start_equipment_factor = 1"
-							allow_spawning_on_enemy_provs = yes
-							owner = SCT
-						}
-						create_unit = {
-							division = "name = \"起义部队\" division_template = \"起义部队\" start_experience_factor = 0.5 start_equipment_factor = 1"
-							allow_spawning_on_enemy_provs = yes
-							owner = SCT
-						}
-						create_unit = {
-							division = "name = \"起义部队\" division_template = \"起义部队\" start_experience_factor = 0.5 start_equipment_factor = 1"
-							allow_spawning_on_enemy_provs = yes
-							owner = SCT
-						}
-						create_unit = {
-							division = "name = \"起义部队\" division_template = \"起义部队\" start_experience_factor = 0.5 start_equipment_factor = 1"
-							allow_spawning_on_enemy_provs = yes
-							owner = SCT
-						}
-						create_unit = {
-							division = "name = \"起义部队\" division_template = \"起义部队\" start_experience_factor = 0.5 start_equipment_factor = 1"
-							allow_spawning_on_enemy_provs = yes
-							owner = SCT
-						}
-						create_unit = {
-							division = "name = \"起义部队\" division_template = \"起义部队\" start_experience_factor = 0.5 start_equipment_factor = 1"
-							allow_spawning_on_enemy_provs = yes
-							owner = SCT
-						}
-						create_unit = {
-							division = "name = \"起义部队\" division_template = \"起义部队\" start_experience_factor = 0.5 start_equipment_factor = 1"
-							allow_spawning_on_enemy_provs = yes
-							owner = SCT
-						}
-						create_unit = {
-							division = "name = \"起义部队\" division_template = \"起义部队\" start_experience_factor = 0.5 start_equipment_factor = 1"
-							allow_spawning_on_enemy_provs = yes
-							owner = SCT
-						}
-						create_unit = {
-							division = "name = \"起义部队\" division_template = \"起义部队\" start_experience_factor = 0.5 start_equipment_factor = 1"
-							allow_spawning_on_enemy_provs = yes
-							owner = SCT
-						}
-						create_unit = {
-							division = "name = \"起义部队\" division_template = \"起义部队\" start_experience_factor = 0.5 start_equipment_factor = 1"
-							allow_spawning_on_enemy_provs = yes
-							owner = SCT
-						}
-						create_unit = {
-							division = "name = \"起义部队\" division_template = \"起义部队\" start_experience_factor = 0.5 start_equipment_factor = 1"
-							allow_spawning_on_enemy_provs = yes
-							owner = SCT
-						}
-						create_unit = {
-							division = "name = \"起义部队\" division_template = \"起义部队\" start_experience_factor = 0.5 start_equipment_factor = 1"
-							allow_spawning_on_enemy_provs = yes
-							owner = SCT
-						}
-						create_unit = {
-							division = "name = \"起义部队\" division_template = \"起义部队\" start_experience_factor = 0.5 start_equipment_factor = 1"
-							allow_spawning_on_enemy_provs = yes
-							owner = BRI
-						}
-						create_unit = {
-							division = "name = \"起义部队\" division_template = \"起义部队\" start_experience_factor = 0.5 start_equipment_factor = 1"
-							allow_spawning_on_enemy_provs = yes
-							owner = BRI
-						}
-					}
-					declare_war_on = { target = ENG type = annex_everything }
+					
 				}
-				
+				add_core_of = BRI
 			}
-			if = {
-				limit = {
-					has_country_flag = BRI_Wales_aid
-				}
-				BRI = { add_to_faction = WAL }
-				WAL = {
-					transfer_state = 122 
-					add_state_core = 122 
-					transfer_state = 1225 
-					add_state_core = 1225 
-					add_equipment_to_stockpile = {
-						type = infantry_equipment
-						amount = 10000
-						producer = ENG
-					}
-					division_template = {
-						name = "起义部队"
-						priority = 3
-						regiments = {
-							infantry = { x = 0 y = 0 }
-							infantry = { x = 0 y = 1 }
-							infantry = { x = 0 y = 2 }
-							infantry = { x = 0 y = 3 }
-							infantry = { x = 0 y = 4 }
-							infantry = { x = 0 y = 5 }
-							infantry = { x = 0 y = 6 }
-						}
-					}
-					random_owned_controlled_state = {
-						create_unit = {
-							division = "name = \"起义部队\" division_template = \"起义部队\" start_experience_factor = 0.5 start_equipment_factor = 1"
-							allow_spawning_on_enemy_provs = yes
-							owner = WAL
-						}
-						create_unit = {
-							division = "name = \"起义部队\" division_template = \"起义部队\" start_experience_factor = 0.5 start_equipment_factor = 1"
-							allow_spawning_on_enemy_provs = yes
-							owner = WAL
-						}
-						create_unit = {
-							division = "name = \"起义部队\" division_template = \"起义部队\" start_experience_factor = 0.5 start_equipment_factor = 1"
-							allow_spawning_on_enemy_provs = yes
-							owner = WAL
-						}
-						create_unit = {
-							division = "name = \"起义部队\" division_template = \"起义部队\" start_experience_factor = 0.5 start_equipment_factor = 1"
-							allow_spawning_on_enemy_provs = yes
-							owner = WAL
-						}
-						create_unit = {
-							division = "name = \"起义部队\" division_template = \"起义部队\" start_experience_factor = 0.5 start_equipment_factor = 1"
-							allow_spawning_on_enemy_provs = yes
-							owner = WAL
-						}
-						create_unit = {
-							division = "name = \"起义部队\" division_template = \"起义部队\" start_experience_factor = 0.5 start_equipment_factor = 1"
-							allow_spawning_on_enemy_provs = yes
-							owner = WAL
-						}
-						create_unit = {
-							division = "name = \"起义部队\" division_template = \"起义部队\" start_experience_factor = 0.5 start_equipment_factor = 1"
-							allow_spawning_on_enemy_provs = yes
-							owner = WAL
-						}
-					}
-					declare_war_on = { target = ENG type = annex_everything }
-				}
-			}
+			add_political_power = 100
 		}
 	}
 }
@@ -3648,6 +3501,10 @@ BRI_Corbusier_Savina_balance_category = {
 		}
 		remove_effect = {
 			add_stability = -0.05
+			BRI_Urban_Renovation_effect_one = yes
+			BRI_Urban_Renovation_effect_one = yes
+			BRI_Urban_Renovation_effect_one = yes
+			BRI_Urban_Renovation_effect_one = yes
 			BRI_Urban_Renovation_effect_one = yes
 			BRI_Urban_Renovation_effect_one = yes
 		}
@@ -3928,24 +3785,6 @@ BRI_POPF_puppet_category = {
 					expire = "1.1.1"
 					ideology = tot_bukharinist_subtype
 				}
-			}
-		}
-	}
-}
-BRI_guide = {
-	BRI_guide_total = {
-	icon = generic_ignite_civil_war
-		available = {
-			original_tag = BRI
-		}
-		
-		visible = {
-			tag = BRI
-			is_ai = no
-		}
-		complete_effect = {
-			country_event = {
-				id = BRI_guideance.1
 			}
 		}
 	}
