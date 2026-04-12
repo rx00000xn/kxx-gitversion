@@ -45,6 +45,15 @@ scripted_gui = {
 				AUS_DWV_member = yes
 				EUU_EU_member = no
 			}
+			KR_femternationale_button_visible = {
+				ENG_is_in_femternationale = yes
+			}
+			KR_european_peace_union_button_visible = {
+				OR = {
+					has_idea = chud_axis_economic_council
+					has_idea = chud_axis_economic_upgraded
+				}
+			}
 			KR_mitteleuropa_button_click_enabled = {
 				NOT = {
 					ROOT = { has_country_flag = economic_sphere_list_open }
@@ -86,6 +95,16 @@ scripted_gui = {
 				}
 			}
 			KR_rostorg_button_click_enabled = {
+				NOT = {
+					ROOT = { has_country_flag = economic_sphere_list_open }
+				}
+			}
+			KR_femternationale_button_click_enabled = {
+				NOT = {
+					ROOT = { has_country_flag = economic_sphere_list_open }
+				}
+			}
+			KR_european_peace_union_button_click_enabled = {
 				NOT = {
 					ROOT = { has_country_flag = economic_sphere_list_open }
 				}
@@ -292,6 +311,43 @@ scripted_gui = {
 					set_country_flag = economic_sphere_list_open
 				}
 			}
+			KR_femternationale_button_click = {
+				add_to_array = { ROOT.economic_sphere_list_array = ENG }
+				for_each_loop = {
+					array = ENG.ENG_femternationale_members 
+					if = {
+						limit = {
+							NOT = {
+								is_in_array = { ROOT.economic_sphere_list_array = v }
+							}
+						}
+						add_to_array = { ROOT.economic_sphere_list_array = v }
+					}
+				}
+				ROOT = {
+					set_variable = { economic_sphere_leader = ENG }
+					set_country_flag = economic_sphere_list_open
+				}
+			}
+			KR_european_peace_union_button_click = {
+				add_to_array = { ROOT.economic_sphere_list_array = NOR }
+				for_each_loop = {
+					array = global.european_peace_union 
+					if = {
+						limit = {
+							NOT = {
+								is_in_array = { ROOT.economic_sphere_list_array = v }
+							}
+						}
+						add_to_array = { ROOT.economic_sphere_list_array = v }
+					}
+				}
+				ROOT = {
+					set_variable = { economic_sphere_leader = NOR }
+					set_country_flag = economic_sphere_list_open
+				}
+			}
+
 
 			#oc
 			KR_asia_development_bank_button_click = {
