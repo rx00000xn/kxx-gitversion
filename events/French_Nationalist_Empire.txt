@@ -507,6 +507,12 @@ country_event = {
 			}
 			set_country_flag = FRA_ribes_victory
 			complete_national_focus = FRA_ribes_survived
+			hidden_effect = {
+				country_event = {
+					id = kxxribes.1
+					days = 1460
+				}
+			}
 		}
 		else_if = {
 			limit = { 
@@ -516,6 +522,12 @@ country_event = {
 			}
 			set_country_flag = FRA_ribes_victory
 			complete_national_focus = FRA_ribes_survived
+			hidden_effect = {
+				country_event = {
+					id = kxxribes.1
+					days = 1460
+				}
+			}
 		}
 		else_if = {
 			limit = { 
@@ -525,6 +537,12 @@ country_event = {
 			}
 			set_country_flag = FRA_ribes_victory
 			complete_national_focus = FRA_ribes_survived
+			hidden_effect = {
+				country_event = {
+					id = kxxribes.1
+					days = 1460
+				}
+			}
 		}
 		else_if = {
 			limit = { 
@@ -561,6 +579,12 @@ country_event = {
 			}
 			set_country_flag = FRA_ribes_victory
 			complete_national_focus = FRA_ribes_survived
+			hidden_effect = {
+				country_event = {
+					id = kxxribes.1
+					days = 1460
+				}
+			}
 		}
 		else_if = {
 			limit = {	
@@ -570,6 +594,12 @@ country_event = {
 			}
 			set_country_flag = FRA_ribes_victory
 			complete_national_focus = FRA_ribes_survived
+			hidden_effect = {
+				country_event = {
+					id = kxxribes.1
+					days = 1460
+				}
+			}
 		}
 		else_if = {
 			limit = {	
@@ -579,6 +609,12 @@ country_event = {
 			}
 			set_country_flag = FRA_ribes_victory
 			complete_national_focus = FRA_ribes_survived
+			hidden_effect = {
+				country_event = {
+					id = kxxribes.1
+					days = 1460
+				}
+			}
 		}
 		else_if = {
 			limit = {	
@@ -607,6 +643,7 @@ country_event = {
 			set_country_flag = FRA_ribes_ousted
 			complete_national_focus = FRA_tragic_ending
 		}
+		mark_focus_tree_layout_dirty = yes
 	}
 
 	
@@ -3673,7 +3710,11 @@ country_event = { #反德外交方向
 			}
 		}
 		FRG = {
-			create_faction = "大陆轴心"
+			create_faction_from_template = { 
+				template = faction_template_generic_dominance
+				name = "大陆轴心"
+				icon = GFX_faction_continental_system
+			}
 			complete_national_focus = FRG_be_independent
 		}
 		FRG = {
@@ -4156,13 +4197,15 @@ country_event = { #海峡两岸
 			factor = 50
 		}   
 		trigger = {
-			OR = {
+			FRG = {
+				OR = {
 						has_government = syndicalist
 						has_government = radical_socialist
 						has_government = social_democrat
 						has_country_leader = { ruling_only = yes name = "西蒙·萨比亚尼" }
 					}
 			}
+		}
 		add_political_power = 99
 		navy_experience = 99
 		war_support_factor = 0.099
@@ -4426,10 +4469,12 @@ country_event = { #重组法属西非
 			limit = {
 				NOT = {
 					FRG = {
-						has_government = syndicalist
-						has_government = radical_socialist
-						has_government = social_democrat
-						has_country_leader = { ruling_only = yes name = "西蒙·萨比亚尼" }
+						OR = {
+							has_government = syndicalist
+							has_government = radical_socialist
+							has_government = social_democrat
+							has_country_leader = { ruling_only = yes name = "西蒙·萨比亚尼" }
+						}
 					}
 				}
 			}
@@ -4484,10 +4529,12 @@ country_event = { #重组法属西非
 		if = {
 			limit = {
 				FRG = {
-					has_government = syndicalist
-					has_government = radical_socialist
-					has_government = social_democrat
-					has_country_leader = { ruling_only = yes name = "西蒙·萨比亚尼" }
+					OR = {
+						has_government = syndicalist
+						has_government = radical_socialist
+						has_government = social_democrat
+						has_country_leader = { ruling_only = yes name = "西蒙·萨比亚尼" }
+					}
 				}
 			}
 			SEN = {
@@ -4553,8 +4600,20 @@ country_event = {  #划定西非大区管辖范围
 	fire_only_once = yes
 	option = {
 		name = frg.111.a
+		trigger = {
+			NOT = {
+				FRG = {
+					OR = {
+						has_government = syndicalist
+						has_government = radical_socialist
+						has_government = social_democrat
+						has_country_leader = { ruling_only = yes name = "西蒙·萨比亚尼" }
+					}
+				}
+			}
+		}
 		ai_chance = {
-			factor = 0
+			factor = 100
 		}   
 		SEN = {transfer_state = 556}
 		SEN = {transfer_state = 557}
@@ -4577,8 +4636,18 @@ country_event = {  #划定西非大区管辖范围
 	}
 	option = {
 		name = frg.111.b
+		trigger = {
+			FRG = {
+				OR = {
+					has_government = syndicalist
+					has_government = radical_socialist
+					has_government = social_democrat
+					has_country_leader = { ruling_only = yes name = "西蒙·萨比亚尼" }
+				}
+			}
+		}
 		ai_chance = {
-			factor = 5
+			factor = 100
 		}   
 		SEN = {transfer_state = 556}
 		SEN = {transfer_state = 557}
@@ -4636,10 +4705,12 @@ country_event = { #重组法属赤道非洲
     trigger = {
 		NOT = {
 			FRG = {
-				has_government = syndicalist
-				has_government = radical_socialist
-				has_government = social_democrat
-				has_country_leader = { ruling_only = yes name = "西蒙·萨比亚尼" }
+				OR = {
+					has_government = syndicalist
+					has_government = radical_socialist
+					has_government = social_democrat
+					has_country_leader = { ruling_only = yes name = "西蒙·萨比亚尼" }
+				}
 			}
 		}
 		FRG = {
@@ -4663,10 +4734,12 @@ country_event = { #重组法属赤道非洲
 			}
 			NOT = {
 				FRG = {
-					has_government = syndicalist
-					has_government = radical_socialist
-					has_government = social_democrat
-					has_country_leader = { ruling_only = yes name = "西蒙·萨比亚尼" }
+					OR = {
+						has_government = syndicalist
+						has_government = radical_socialist
+						has_government = social_democrat
+						has_country_leader = { ruling_only = yes name = "西蒙·萨比亚尼" }
+					}
 				}
 			}
 		}
@@ -5062,8 +5135,12 @@ country_event = { #煽动德属西非脱钩
 					remove_from_faction = CIV
 				}
 				FRG = {
-					add_to_faction = IVO
+					add_to_faction = CIV
+				}
+				FRG = {
 					add_to_faction = DAH
+				}
+				FRG = {
 					declare_war_on = {
          				target = CIV
          				type = annex_everything
@@ -5640,8 +5717,329 @@ country_event = {  #败者的回复
 
 					transfer_state = 1231
 				}
+			every_state = {
+				limit = {
+					is_owned_and_controlled_by = RUS
+					is_on_continent = europe
+					is_core_of = UKR
+				}
+				transfer_state_to = FRG
+			}
+			every_state = {
+				limit = {
+					is_owned_and_controlled_by = RUS
+					is_on_continent = europe
+					is_core_of = WHR
+				}
+				transfer_state_to = FRG
+			}
+			every_state = {
+				limit = {
+					is_owned_and_controlled_by = RUS
+					is_on_continent = europe
+					is_core_of = EST
+				}
+				transfer_state_to = FRG
+			}
+			every_state = {
+				limit = {
+					is_owned_and_controlled_by = RUS
+					is_on_continent = europe
+					is_core_of = LAT	
+				}
+				transfer_state_to = FRG
+			}
+			every_state = {
+				limit = {
+					is_owned_and_controlled_by = RUS
+					is_on_continent = europe
+					is_core_of = BAT
+				}
+				transfer_state_to = FRG
+			}
+			every_state = {
+				limit = {
+					is_owned_and_controlled_by = RUS
+					is_on_continent = europe
+					is_core_of = LIT
+				}
+				transfer_state_to = FRG
+			}
+			every_state = {
+				limit = {
+					is_owned_and_controlled_by = RUS
+					is_on_continent = europe
+					is_core_of = POL
+				}
+				transfer_state_to = FRG
+			}
+			every_state = {
+				limit = {
+					is_owned_and_controlled_by = RUS
+					is_on_continent = europe
+					is_core_of = ROM
+				}
+				transfer_state_to = FRG
+			}
+			every_state = {
+				limit = {
+					is_owned_and_controlled_by = RUS
+					is_on_continent = europe
+					is_core_of = GAL	
+					is_core_of = EPR
+				}
+				transfer_state_to = FRG
+			}
+			every_state = {
+				limit = {
+					is_owned_and_controlled_by = RUS
+					is_on_continent = europe
+					is_core_of = DKB
+				}
+				transfer_state_to = FRG
+			}
+			every_state = {
+				limit = {
+					is_owned_and_controlled_by = RUS
+					is_on_continent = europe
+					is_core_of = GAL
+				}
+				transfer_state_to = FRG
+			}
+			every_state = {
+				limit = {
+					is_owned_and_controlled_by = RUS
+					is_on_continent = europe
+					is_core_of = KUB
+				}
+				transfer_state_to = FRG
+			}
+			every_state = {
+				limit = {
+					is_owned_and_controlled_by = RUS
+					is_on_continent = europe
+					is_core_of = KLY
+				}
+				transfer_state_to = FRG
+			}
+			every_state = {
+				limit = {
+					is_owned_and_controlled_by = RUS
+					is_on_continent = europe
+					is_core_of = MTR
+				}
+				transfer_state_to = FRG
+			}
+			if = {
+				limit = {
+					OR = {
+						LIT = {
+							is_puppet_of = RUS
+						}
+						96 = {
+							is_owned_and_controlled_by = LIT
+						}
+					}
+				}
+				every_state = {
+					limit = { is_core_of = LIT }
+					transfer_state_to = FRG
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						BAT = {
+							is_puppet_of = RUS
+						}
+						1091 = {
+							is_owned_and_controlled_by = BAT
+						}
+					}
+				}
+				every_state = {
+					limit = { is_core_of = BAT }
+					transfer_state_to = FRG
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						EST = {
+							is_puppet_of = RUS
+						}
+						13 = {
+							is_owned_and_controlled_by = EST
+						}
+					}
+				}
+				every_state = {
+					limit = { is_core_of = EST }
+					transfer_state_to = FRG
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						LAT = {
+							is_puppet_of = RUS
+						}
+						1091 = {
+							is_owned_and_controlled_by = LAT
+						}
+					}
+				}
+				every_state = {
+					limit = { is_core_of = LAT }
+					transfer_state_to = FRG
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						WHR = {
+							is_puppet_of = RUS
+						}
+						206 = {
+							is_owned_and_controlled_by = WHR
+						}
+					}
+				}
+				every_state = {
+					limit = { is_owned_and_controlled_by = WHR }
+					transfer_state_to = FRG
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						UKR = {
+							is_puppet_of = RUS
+						}
+						202 = {
+							is_owned_and_controlled_by = UKR
+						}
+					}
+				}
+				every_state = {
+					limit = { is_core_of = UKR }
+					transfer_state_to = FRG
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						DKB = {
+							is_puppet_of = RUS
+						}
+						218 = {
+							is_owned_and_controlled_by = DKB
+						}
+					}
+				}
+				every_state = {
+					limit = { is_core_of = DKB }
+					transfer_state_to = FRG
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						KUB = {
+							is_puppet_of = RUS
+						}
+						234 = {
+							is_owned_and_controlled_by = KUB
+						}
+					}
+				}
+				every_state = {
+					limit = { is_core_of = KUB }
+					transfer_state_to = FRG
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						KLY = {
+							is_puppet_of = RUS
+						}
+						237 = {
+							is_owned_and_controlled_by = KLY
+						}
+					}
+				}
+				every_state = {
+					limit = { is_core_of = KLY }
+					transfer_state_to = FRG
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						MTR = {
+							is_puppet_of = RUS
+						}
+						233 = {
+							is_owned_and_controlled_by = RUS
+						}
+					}
+				}
+				every_state = {
+					limit = { is_core_of = MTR }
+					transfer_state_to = FRG
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						GEO = {
+							is_puppet_of = RUS
+						}
+						231 = {
+							is_owned_and_controlled_by = RUS
+						}
+					}
+				}
+				every_state = {
+					limit = { is_core_of = GEO }
+					transfer_state_to = FRG
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						AZE = {
+							is_puppet_of = RUS
+						}
+						990 = {
+							is_owned_and_controlled_by = RUS
+						}
+					}
+				}
+				every_state = {
+					limit = { is_core_of = AZE }
+					transfer_state_to = FRG
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						ARM = {
+							is_puppet_of = RUS
+						}
+						230 = {
+							is_owned_and_controlled_by = RUS
+						}
+					}
+				}
+				every_state = {
+					limit = { is_core_of = ARM }
+					transfer_state_to = FRG
+				}
+			}
 			ISH = { add_state_core = 722 }
-			 FRG = {
+			FRG = {
 				set_autonomy = {
 					target = RRF
 					autonomous_state = autonomous_territory
@@ -5770,7 +6168,7 @@ country_event = {  #败者的回复
                     create_country_leader = {
 	                    name = "德米特里·巴甫诺维奇"
 	                    desc = ""
-	                    picture = "gfx/leaders/FRG/Edgar_Puaud.png"
+						picture = "gfx/leaders/FRG/Portrait_FRG_Dmitri_Pavlovich.png"
 	                    expire = "1965.1.1"
 	                    ideology = absolute_monarchy_subtype
                     }
@@ -5874,28 +6272,202 @@ country_event = {  #败者的回复
 						is_subject_of = RUS
 						is_in_faction_with = RUS
 					}
-					OR = {
-						capital_scope = { is_on_continent = europe }				
-					}
+					capital_scope = { is_on_continent = europe }
 				}
 				force_capitulate = yes
 			}
+			
+			
+			RUS = {
+				white_peace = FRG
+			}
+		}
+	}
+	option = { #重燃十月革命
+		name = frg.117.b
+		trigger = {
+			FRG = {
+				OR = {
+					has_government = syndicalist
+					has_government = radical_socialist
+					has_government = social_democrat
+					has_country_leader = { ruling_only = yes name = "西蒙·萨比亚尼" }
+				}
+			}
+		}
+		ai_chance = {
+			factor = 50
+		}
+		RUS = {
+			remove_ideas = FRG_FRG_RUS_Peace
+			add_ideas = RUS_Tver_treaty
+		}
+		RUS = {
+			country_event = { id = frg.124 days = 30 }
+		}
+		hidden_effect = {
+			FRG = { increase_ruling_party_popularity_by_10 = yes }
+			diplomatic_relation = {
+				country = RUS
+				relation = non_aggression_pact
+				active = yes
+			}
+			RUS = {
+				remove_ideas = FRG_FRG_RUS_Peace
+				add_ideas = RUS_Tver_treaty
+			}
 			every_state = {
 				limit = {
-					is_owned_and_controlled_by= RUS
-					is_on_continent = europe
+					is_owned_and_controlled_by = RUS
 					is_core_of = UKR
-					is_core_of = WHR
-					is_core_of = EST
-					is_core_of = LAT
-					is_core_of = BAT
-					is_core_of = LIT
-					is_core_of = POL
-					is_core_of = ROM
-					is_core_of = GAL	
-					is_core_of = EPR
 				}
 				transfer_state_to = FRG
+			}
+			every_state = {
+				limit = {
+					is_owned_and_controlled_by = RUS
+					is_core_of = WHR
+				}
+				transfer_state_to = FRG
+			}
+			every_state = {
+				limit = {
+					is_owned_and_controlled_by = RUS
+					is_core_of = EST
+				}
+				transfer_state_to = FRG
+			}
+			every_state = {
+				limit = {
+					is_owned_and_controlled_by = RUS
+					is_core_of = LAT	
+				}
+				transfer_state_to = FRG
+			}
+			every_state = {
+				limit = {
+					is_owned_and_controlled_by = RUS
+					is_core_of = BAT
+				}
+				transfer_state_to = FRG
+			}
+			every_state = {
+				limit = {
+					is_owned_and_controlled_by = RUS
+					is_core_of = LIT
+				}
+				transfer_state_to = FRG
+			}
+			every_state = {
+				limit = {
+					is_owned_and_controlled_by = RUS
+					is_core_of = POL
+				}
+				transfer_state_to = FRG
+			}
+			every_state = {
+				limit = {
+					is_owned_and_controlled_by = RUS
+					is_core_of = ROM
+				}
+				transfer_state_to = FRG
+			}
+			every_state = {
+				limit = {
+					is_owned_and_controlled_by = RUS
+					is_core_of = GAL	
+				}
+				transfer_state_to = FRG
+			}
+			every_state = {
+				limit = {
+					is_owned_and_controlled_by = RUS
+					is_core_of = DKB
+				}
+				transfer_state_to = FRG
+			}
+			every_state = {
+				limit = {
+					is_owned_and_controlled_by = RUS
+					is_core_of = KUB
+				}
+				transfer_state_to = FRG
+			}
+			every_state = {
+				limit = {
+					is_owned_and_controlled_by = RUS
+					is_core_of = MTR
+				}
+				transfer_state_to = FRG
+			}
+			every_state = {
+				limit = {
+					is_owned_and_controlled_by = RUS
+					is_core_of = GEO
+				}
+				transfer_state_to = FRG
+			}
+			every_state = {
+				limit = {
+					is_owned_and_controlled_by = RUS
+					is_core_of = ARM
+				}
+				transfer_state_to = FRG
+			}
+			every_state = {
+				limit = {
+					is_owned_and_controlled_by = RUS
+					is_core_of = AZE
+				}
+				transfer_state_to = FRG
+			}
+			if = {
+				limit = {
+					OR = {
+						GEO = {
+							is_puppet_of = RUS
+						}
+						231 = {
+							is_owned_and_controlled_by = GEO
+						}
+					}
+				}
+				every_state = {
+					limit = { is_core_of = GEO }
+					transfer_state_to = FRG
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						AZE = {
+							is_puppet_of = RUS
+						}
+						990 = {
+							is_owned_and_controlled_by = AZE
+						}
+					}
+				}
+				every_state = {
+					limit = { is_core_of = AZE }
+					transfer_state_to = FRG
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						ARM = {
+							is_puppet_of = RUS
+						}
+						230 = {
+							is_owned_and_controlled_by = ARM
+						}
+					}
+				}
+				every_state = {
+					limit = { is_core_of = ARM }
+					transfer_state_to = FRG
+				}
 			}
 			if = {
 				limit = {
@@ -5904,7 +6476,7 @@ country_event = {  #败者的回复
 							is_puppet_of = RUS
 						}
 						96 = {
-							is_owned_and_controlled_by = RUS
+							is_owned_and_controlled_by = LIT
 						}
 					}
 				}
@@ -5920,7 +6492,7 @@ country_event = {  #败者的回复
 							is_puppet_of = RUS
 						}
 						1091 = {
-							is_owned_and_controlled_by = RUS
+							is_owned_and_controlled_by = BAT
 						}
 					}
 				}
@@ -5936,7 +6508,7 @@ country_event = {  #败者的回复
 							is_puppet_of = RUS
 						}
 						13 = {
-							is_owned_and_controlled_by = RUS
+							is_owned_and_controlled_by = EST
 						}
 					}
 				}
@@ -5952,7 +6524,7 @@ country_event = {  #败者的回复
 							is_puppet_of = RUS
 						}
 						1091 = {
-							is_owned_and_controlled_by = RUS
+							is_owned_and_controlled_by = LAT
 						}
 					}
 				}
@@ -5968,7 +6540,7 @@ country_event = {  #败者的回复
 							is_puppet_of = RUS
 						}
 						206 = {
-							is_owned_and_controlled_by = RUS
+							is_owned_and_controlled_by = WHR
 						}
 					}
 				}
@@ -5984,7 +6556,7 @@ country_event = {  #败者的回复
 							is_puppet_of = RUS
 						}
 						202 = {
-							is_owned_and_controlled_by = RUS
+							is_owned_and_controlled_by = UKR
 						}
 					}
 				}
@@ -6000,7 +6572,7 @@ country_event = {  #败者的回复
 							is_puppet_of = RUS
 						}
 						218 = {
-							is_owned_and_controlled_by = RUS
+							is_owned_and_controlled_by = DKB
 						}
 					}
 				}
@@ -6016,7 +6588,7 @@ country_event = {  #败者的回复
 							is_puppet_of = RUS
 						}
 						234 = {
-							is_owned_and_controlled_by = RUS
+							is_owned_and_controlled_by = KUB
 						}
 					}
 				}
@@ -6032,7 +6604,7 @@ country_event = {  #败者的回复
 							is_puppet_of = RUS
 						}
 						237 = {
-							is_owned_and_controlled_by = RUS
+							is_owned_and_controlled_by = KLY
 						}
 					}
 				}
@@ -6057,87 +6629,47 @@ country_event = {  #败者的回复
 					transfer_state_to = FRG
 				}
 			}
-			if = {
+			every_state = {
 				limit = {
-					OR = {
-						GEO = {
-							is_puppet_of = RUS
-						}
-						231 = {
-							is_owned_and_controlled_by = RUS
-						}
-					}
+					is_core_of = RUS
+					is_on_continent = europe
+					state = 655
+                    state = 96
+                    state = 11
+                    state = 189
+                    state = 190
+                    state = 1091
+                    state = 12
+                    state = 13
+                    state = 191
+					state = 1329
+                    state = 94
+					state = 1295
+                    state = 95
+					state = 194
+                    state = 204
+					state = 1087
+                    state = 1294
+					state = 206
+                    state = 1288
+					state = 209
+                    state = 880
+					state = 1290
+					state = 1291
+                    state = 1287
+					state = 243
+                    state = 755
+					is_core_of = UKR
+					is_core_of = DKB
+					is_core_of = KUB
+					is_core_of = MTR
+					is_core_of = KLY
+					is_core_of = GRO
+					is_core_of = ARM
+					is_core_of = AZE
 				}
-				every_state = {
-					limit = { is_core_of = GEO }
-					transfer_state_to = FRG
-				}
-			}
-			if = {
-				limit = {
-					OR = {
-						AZE = {
-							is_puppet_of = RUS
-						}
-						990 = {
-							is_owned_and_controlled_by = RUS
-						}
-					}
-				}
-				every_state = {
-					limit = { is_core_of = AZE }
-					transfer_state_to = FRG
-				}
-			}
-			if = {
-				limit = {
-					OR = {
-						ARM = {
-							is_puppet_of = RUS
-						}
-						230 = {
-							is_owned_and_controlled_by = RUS
-						}
-					}
-				}
-				every_state = {
-					limit = { is_core_of = ARM }
-					transfer_state_to = FRG
-				}
-			}
-			RUS = {
-				white_peace = FRG
-			}
-		}
-	}
-	option = { #重燃十月革命
-		name = frg.117.b
-		trigger = {
-			FRG = {
-				OR = {
-					has_government = syndicalist
-					has_government = radical_socialist
-					has_government = social_democrat
-					has_country_leader = { ruling_only = yes name = "西蒙·萨比亚尼" }
-				}
-			}
-		}
-		ai_chance = {
-			factor = 50
-		}
-		RUS = {
-			country_event = { id = frg.124 days = 30 }
-		}
-		hidden_effect = {
-			FRG = { increase_ruling_party_popularity_by_10 = yes }
-			diplomatic_relation = {
-				country = RUS
-				relation = non_aggression_pact
-				active = yes
-			}
-			RUS = {
-				remove_ideas = FRG_FRG_RUS_Peace
-				add_ideas = RUS_Tver_treaty
+				transfer_state_to = LAT
+				add_core_of = LAT
 			}
 			every_state = {
 				limit = {
@@ -6183,50 +6715,7 @@ country_event = {  #败者的回复
 						is_core_of = AZE
 					}
 				}
-				transfer_state_to = LAT
-				add_core_of = LAT
-			}
-			every_state = {
-				limit = {
-					is_core_of = RUS
-					is_on_continent = europe
-					state = 655
-                    state = 96
-                    state = 11
-                    state = 189
-                    state = 190
-                    state = 1091
-                    state = 12
-                    state = 13
-                    state = 191
-					state = 1329
-                    state = 94
-					state = 1295
-                    state = 95
-					state = 194
-                    state = 204
-					state = 1087
-                    state = 1294
-					state = 206
-                    state = 1288
-					state = 209
-                    state = 880
-					state = 1290
-					state = 1291
-                    state = 1287
-					state = 243
-                    state = 755
-					is_core_of = UKR
-					is_core_of = DKB
-					is_core_of = KUB
-					is_core_of = MTR
-					is_core_of = KLY
-					is_core_of = GRO
-					is_core_of = ARM
-					is_core_of = AZE
-				}
-				transfer_state_to = LAT
-				add_core_of = LAT
+				transfer_state_to = FRG
 			}
 			LAT = {
 				set_party_name = {
@@ -6342,7 +6831,9 @@ country_event = {  #败者的回复
 					complete_national_focus = LAT_a_syndicalist_model
 				}
 			}
-
+			LAT = {
+				add_to_faction = FRG
+			}
 			RUS = {
 				if = {
 					limit = {
@@ -6356,70 +6847,6 @@ country_event = {  #败者的回复
 						is_faction_leader = no
 					}
 					leave_faction = yes
-				}
-			}
-			every_other_country = {
-				limit = { 
-					AND = {
-						is_in_europe = yes
-						or = {
-							is_subject_of = RUS
-							is_in_faction_with = RUS
-						}
-					}
-				}
-				FRG = {	
-					annex_country = {
-						target = PREV
-					}
-			    }
-	        }
-			if = {
-				limit = {
-					OR = {
-						GEO = {
-							is_puppet_of = RUS
-						}
-						231 = {
-							is_owned_and_controlled_by = RUS
-						}
-					}
-				}
-				every_state = {
-					limit = { is_core_of = GEO }
-					transfer_state_to = FRG
-				}
-			}
-			if = {
-				limit = {
-					OR = {
-						AZE = {
-							is_puppet_of = RUS
-						}
-						990 = {
-							is_owned_and_controlled_by = RUS
-						}
-					}
-				}
-				every_state = {
-					limit = { is_core_of = AZE }
-					transfer_state_to = FRG
-				}
-			}
-			if = {
-				limit = {
-					OR = {
-						ARM = {
-							is_puppet_of = RUS
-						}
-						230 = {
-							is_owned_and_controlled_by = RUS
-						}
-					}
-				}
-				every_state = {
-					limit = { is_core_of = ARM }
-					transfer_state_to = FRG
 				}
 			}
 			RUS = {
@@ -7015,6 +7442,18 @@ country_event = {  #准备夺取曼德海峡控制权
          
 	option = { #开始行动
 		name = frg.121.a
+		trigger = {
+			NOT = {
+				FRG = {
+					OR = {
+						has_government = syndicalist
+						has_government = radical_socialist
+						has_government = social_democrat
+						has_country_leader = { ruling_only = yes name = "西蒙·萨比亚尼" }
+					}
+				}	
+			}
+		} 
 		ai_chance = {
 			factor = 50
 		}   
@@ -7037,12 +7476,6 @@ country_event = {  #准备夺取曼德海峡控制权
 					has_country_leader = { ruling_only = yes name = "西蒙·萨比亚尼" }
 				}
 			}
-			DJI = {
-				OR = {
-					has_government = social_conservative
-					has_government = national_populist
-				}
-			}
 		}   
         DJI = {
 			set_party_name = {
@@ -7056,10 +7489,18 @@ country_event = {  #准备夺取曼德海峡控制权
 			}
 			add_popularity = {
 				ideology = radical_socialist
-				popularity = 0.15
+				popularity = 0.3
 			}
 			add_popularity = {
 				ideology = social_democrat
+				popularity = 0.3
+			}
+			add_popularity = {
+				ideology = social_conservative
+				popularity = 0.15
+			}
+			add_popularity = {
+				ideology = national_populist
 				popularity = 0.15
 			}
 			add_radsoc_to_coalition = yes
@@ -7155,10 +7596,12 @@ country_event = {  #意料之内的新金主
 		trigger = {
 			NOT = {
 				FRG = {
-					has_government = syndicalist
-					has_government = radical_socialist
-					has_government = social_democrat
-					has_country_leader = { ruling_only = yes name = "西蒙·萨比亚尼" }
+					OR = {
+						has_government = syndicalist
+						has_government = radical_socialist
+						has_government = social_democrat
+						has_country_leader = { ruling_only = yes name = "西蒙·萨比亚尼" }
+					}
 				}
 			}
 			FRG = {
@@ -7222,10 +7665,12 @@ country_event = {  #意料之内的新金主
 		trigger = {
 			NOT = {
 				FRG = {
-					has_government = syndicalist
-					has_government = radical_socialist
-					has_government = social_democrat
-					has_country_leader = { ruling_only = yes name = "西蒙·萨比亚尼" }
+					OR = {
+						has_government = syndicalist
+						has_government = radical_socialist
+						has_government = social_democrat
+						has_country_leader = { ruling_only = yes name = "西蒙·萨比亚尼" }
+					}
 				}
 			}
 		}    
@@ -8829,7 +9274,29 @@ country_event = { #政路漫漫
 						popularity = 0.36
 					}
 				} 
-			}             
+			}
+		FRG = {
+			create_wargoal = {
+				type = annex_everything
+				target = ARG
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = FOP
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = CHL
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = BOL
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = PAR
+			}
+		}             
     }
 }
 
@@ -9157,46 +9624,47 @@ country_event = {  #停战
 		ai_chance = {
 			factor = 100
 		}
-		every_country = {
-			limit = {
-				has_war_with = NRM
-				OR = {
-					tag = FRA
-					is_in_faction_with = FRA
-				}
-			}
-			white_peace = NRM
-		} 
-		every_country = {
-			limit = {
-				has_war_with = LRE
-				OR = {
-					tag = FRA
-					is_in_faction_with = FRA
-				}
-			}
-			white_peace = LRE
-		} 
-		every_country = {
-			limit = {
-				has_war_with = BRI
-				OR = {
-					tag = FRA
-					is_in_faction_with = BRI
-				}
-			}
-			white_peace = BRI
-		} 
-		every_country = {
-			limit = {
-				has_war_with = OCC
-				OR = {
-					tag = FRA
-					is_in_faction_with = FRA
-				}
-			}
-			white_peace = OCC
-		} 
+        every_country = {
+            limit = {
+                has_war_with = NRM
+                OR = {
+                    tag = FRA
+                    is_in_faction_with = FRA
+                }
+            }
+            white_peace = NRM
+        } 
+        every_country = {
+            limit = {
+                has_war_with = LRE
+                OR = {
+                    tag = FRA
+                    is_in_faction_with = FRA
+                }
+            }
+            white_peace = LRE
+        } 
+        every_country = {
+            limit = {
+                has_war_with = BRI
+                OR = {
+                    tag = FRA
+                    is_in_faction_with = BRI
+                }
+            }
+            white_peace = BRI
+        } 
+        every_country = {
+            limit = {
+                has_war_with = OCC
+                OR = {
+                    tag = FRA
+                    is_in_faction_with = FRA
+                }
+            }
+            white_peace = OCC
+        }
+
 		NRM = {
 			hidden_effect = {
 				add_ideas = {
@@ -9228,6 +9696,174 @@ country_event = {  #停战
 					volunteer_only
 				}
 			}	
+		}
+
+		hidden_effect = {
+			NRM = { transfer_state = 15 }
+			NRM = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 50000
+					producer = FRA
+				}
+				division_template = {
+						name = "诺曼底卫队"
+						division_names_group = NRM_NRARMY_01
+						regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 2 y = 0 }
+						infantry = { x = 2 y = 1 }
+						}
+						support = {
+						artillery = { x = 0 y = 0 }
+						}
+					}
+				random_owned_controlled_state = {
+						create_unit = {
+							division = "name = \"诺曼底卫队\" division_template = \"诺曼底卫队\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = NRM
+						}
+						create_unit = {
+							division = "name = \"诺曼底卫队\" division_template = \"诺曼底卫队\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = NRM
+						}
+						create_unit = {
+							division = "name = \"诺曼底卫队\" division_template = \"诺曼底卫队\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = NRM
+						}
+						create_unit = {
+							division = "name = \"诺曼底卫队\" division_template = \"诺曼底卫队\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = NRM
+						}
+						create_unit = {
+							division = "name = \"诺曼底卫队\" division_template = \"诺曼底卫队\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = NRM
+						}
+						create_unit = {
+							division = "name = \"诺曼底卫队\" division_template = \"诺曼底卫队\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = NRM
+						}
+						create_unit = {
+							division = "name = \"诺曼底卫队\" division_template = \"诺曼底卫队\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = NRM
+						}
+						create_unit = {
+							division = "name = \"诺曼底卫队\" division_template = \"诺曼底卫队\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = NRM
+						}
+						create_unit = {
+							division = "name = \"诺曼底卫队\" division_template = \"诺曼底卫队\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = NRM
+						}
+						create_unit = {
+							division = "name = \"诺曼底卫队\" division_template = \"诺曼底卫队\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = NRM
+						}
+				}
+			}
+			OCC = { transfer_state = 817 }
+			OCC = { transfer_state = 984 }
+			OCC = { transfer_state = 1334 }
+			OCC = { transfer_state = 31 }
+			OCC = { transfer_state = 19 }
+			OCC = { transfer_state = 22 }
+			OCC = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 50000
+					producer = FRA
+				}
+				division_template = {
+						name = "教士武装"
+						division_names_group = OCC_NRARMY_01
+						regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 2 y = 0 }
+						infantry = { x = 2 y = 1 }
+						}
+						support = {
+						artillery = { x = 0 y = 0 }
+						}
+					}
+				random_owned_controlled_state = {
+						create_unit = {
+							division = "name = \"教士武装\" division_template = \"教士武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = OCC
+						}
+						create_unit = {
+							division = "name = \"教士武装\" division_template = \"教士武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = OCC
+						}
+						create_unit = {
+							division = "name = \"教士武装\" division_template = \"教士武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = OCC
+						}
+						create_unit = {
+							division = "name = \"教士武装\" division_template = \"教士武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = OCC
+						}
+						create_unit = {
+							division = "name = \"教士武装\" division_template = \"教士武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = OCC
+						}
+						create_unit = {
+							division = "name = \"教士武装\" division_template = \"教士武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = OCC
+						}
+						create_unit = {
+							division = "name = \"教士武装\" division_template = \"教士武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = OCC
+						}
+						create_unit = {
+							division = "name = \"教士武装\" division_template = \"教士武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = OCC
+						}
+						create_unit = {
+							division = "name = \"教士武装\" division_template = \"教士武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = OCC
+						}
+						create_unit = {
+							division = "name = \"教士武装\" division_template = \"教士武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = OCC
+						}
+						create_unit = {
+							division = "name = \"教士武装\" division_template = \"教士武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = OCC
+						}
+						create_unit = {
+							division = "name = \"教士武装\" division_template = \"教士武装\" start_experience_factor = 0.6 start_equipment_factor = 1"
+							allow_spawning_on_enemy_provs = yes
+							owner = OCC
+						}
+					}
+			}
 		}
 	}
 }
@@ -9675,15 +10311,7 @@ country_event = {  #战争结束
 	immediate = {log = "[GetDateText]: [Root.GetName]: event frg_new.1 "}
 	title = frg_new.11.t
 	desc = frg_new.11.d
-	trigger = { 
-		tag = BRI
-		NOT = {
-			country_exists = FRG
-			country_exists = OCC
-			country_exists = NRM
-			country_exists = LRE
-		}
-	}
+	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
 		name = frg_new.11.a
