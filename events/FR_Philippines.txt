@@ -2633,7 +2633,7 @@ country_event = { # Pope
 	option = { # Deus Vult!
 		log = "[GetDateText]: [Root.GetName]: event philippines.106 option philippines.106.a"
 		name = philippines.106.a
-		
+		set_country_flag = PHI_no_second_election
 		set_politics = {
 			ruling_party = national_populist
 			elections_allowed = no
@@ -2641,7 +2641,7 @@ country_event = { # Pope
 			name = PHI_holy_party
 		}
 		increase_ruling_party_popularity_by_20 = yes
-		remove_every_minister = yes
+		remove_all_ministers = yes
 		set_cosmetic_tag = PHI_HOLY
 		remove_all_ministers = yes
 		add_ideas = {
