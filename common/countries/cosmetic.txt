@@ -5064,7 +5064,38 @@ NOR_norse_union = {
 	color = rgb { 100 71 0 }
 	color_ui = rgb { 100 71 0 }
 }
-
+BAS_socdem_eu = {
+	color = rgb { 50 25 212 }
+	color_ui = rgb { 50 25 212 }
+}
+BAS_socdem_eu_alt = {
+	color = rgb { 50 25 212 }
+	color_ui = rgb { 50 25 212 }
+}
+BAS_syndie_europe = {
+	color = rgb { 38 29 99 }
+	color_ui = rgb { 38 29 99 }
+}
+SER_kingdom_BH = {
+	color = rgb { 84 63 103 }
+	color_ui = rgb { 84 63 103 }
+}
+NOR_peace_union = {
+	color = rgb { 86 60 92 }
+	color_ui = rgb { 86 60 92 }
+}
+NOR_norse_union = {
+	color = rgb { 100 71 0 }
+	color_ui = rgb { 100 71 0 }
+}
+BAS_celtic = {
+	color = rgb { 64 150 58 }
+	color_ui = rgb { 64 150 58 }
+}
+BAS_pran = {
+	color = rgb { 150 58 122 }
+	color_ui = rgb { 150 58 122 }
+}
 ###小黄总督辖区
 HYP = {
 	color = rgb { 75 75 75 }
