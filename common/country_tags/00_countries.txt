@@ -192,6 +192,8 @@ SYR = "countries/MidEast.txt"
 UZB = "countries/MidEast.txt" #Bukhara
 TUN = "countries/MidEast.txt"
 YEM = "countries/YEM.txt"
+ZGS = "countries/Zagros.txt" #Zagros
+ORM = "countries/Orumiyeh.txt" #Orumiyeh
 
 ### South/Central America ###
 AMA = "countries/WestEur.txt"
