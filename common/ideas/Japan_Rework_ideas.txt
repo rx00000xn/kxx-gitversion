@@ -4872,6 +4872,7 @@ ideas = {
 				}
 			}
 		
+<<<<<<< HEAD
 		JAP_takahashi_finance = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JAP_takahashi_finance"}
 			picture = JAP_yen
@@ -5159,6 +5160,11 @@ ideas = {
 			}
 		}
 
+=======
+		
+		
+		
+>>>>>>> parent of 19ad5adc3 (Merge branch 'master' of https://github.com/rx00000xn/kxx-gitversion)
 	}	
 }
 

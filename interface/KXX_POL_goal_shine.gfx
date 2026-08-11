@@ -92,6 +92,7 @@ SpriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
+<<<<<<< HEAD
 	spriteType = {
 		name = "GFX_focus_generic_andrassy_emblem_shine"
 		texturefile = "gfx/interface/goals/KXX_POL/GFX_focus_generic_andrassy_emblem.dds"
@@ -542,4 +543,8 @@ SpriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
+=======
+
+	
+>>>>>>> parent of 19ad5adc3 (Merge branch 'master' of https://github.com/rx00000xn/kxx-gitversion)
 }

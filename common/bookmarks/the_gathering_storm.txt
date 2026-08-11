@@ -194,19 +194,19 @@ bookmarks = {
 		}
 
 
-		"PHI" = {
+		"MNT" = {
 			minor = yes
-			history = "PHI_KR_GATHERING_STORM_DESC"
-			ideology = social_conservative
+			history = "MNT_KR_GATHERING_STORM_DESC"
+			ideology = authoritarian_democrat
 			ideas = {
-				PHI_lingering_sakdalistas
-				PHI_agricultural_society
-				PHI_hacienda_questions
+				MNT_dynastic_issues
+				MNT_serb_separatism
+				MNT_shackled_economy
 			}
 			focuses = {
-				PHI_eleven_star_union
-				PHI_eurasianism_in_philippines
-				PHI_realization_of_human_unity
+				MNT_blazo_joganovic_putsch
+				MNT_nationalist
+				MNT_legion_putsch
 			}
 		}
 
@@ -240,19 +240,19 @@ bookmarks = {
 		}
 	
 
-		"FNG" = {
+		"YUN" = {
 			minor = yes
-			history = "FNG_KR_GATHERING_STORM_DESC"
-			ideology = authoritarian_democrat
+			history = "YUN_KR_GATHERING_STORM_DESC"
+			ideology = paternal_autocrat
 			ideas = {
-				FNG_Backward_Industry
-				FNG_Unscrupulous_Governance
-				FNG_Investment_Dearth
+				YUN_Tangs_rule
+				YUN_opium_exports
+				YUN_starting_army_idea
 			}
 			focuses = {
-				FNG_from_poverty_to_extravagance
-				FNG_national_revolution
-				FNG_Oath_of_The_Peach_Garden
+				YUN_the_federalist_revival
+				YUN_to_save_yunnan_from_itself
+				YUN_developing_the_civilian_party
 			}
 		}
 

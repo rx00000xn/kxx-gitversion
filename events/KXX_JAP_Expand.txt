@@ -32,6 +32,7 @@ country_event = { #崛起之龙还是旭日骨寒
 			id = japan_new_event.15 
 			days = 135 
 		}
+<<<<<<< HEAD
 		create_country_leader = {
 			name = "犬养毅"
 			picture = "gfx/leaders/JAP/Portrait_JAP_Inukai_Tsuyoshi.png"
@@ -53,6 +54,8 @@ country_event = { #崛起之龙还是旭日骨寒
 			name = "帝国陆军（永田派）"
 			long_name = "大日本帝国陆军（永田派）"
 		}
+=======
+>>>>>>> parent of 19ad5adc3 (Merge branch 'master' of https://github.com/rx00000xn/kxx-gitversion)
 	}	
 
 	option = { #旭日骨寒
@@ -6207,7 +6210,7 @@ country_event = { #朝鲜起义优化
 	option = { #总督府扩大自治
 		name = KXXJAP.181.a
 		ai_chance = {
-			base = 5
+			base = 90
 		}
 		trigger = {
 			JAP = {
@@ -6266,7 +6269,7 @@ country_event = { #朝鲜起义优化
 	option = { #那咋了
 		name = KXXJAP.181.b
 		ai_chance = {
-			base = 2
+			base = 90
 		}
 		hidden_effect = {
 			news_event = {
@@ -6287,7 +6290,7 @@ country_event = { #朝鲜起义优化
 	option = { #起义
 		name = KXXJAP.181.c
 		ai_chance = {
-			base = 3
+			base = 10
 		}
 		country_event = {
 			id = rework_japan.300
@@ -6296,15 +6299,6 @@ country_event = { #朝鲜起义优化
 		set_country_flag = JAP_korea_revolt_now
 	}
 
-	option = { #AI防止过分多的分离朝鲜
-		name = KXXJAP.181.d
-		trigger = {
-			is_ai = yes
-		}
-		ai_chance = {
-			base = 90
-		}
-	}	
 	
 
 }

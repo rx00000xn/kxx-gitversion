@@ -1449,6 +1449,7 @@ PLX_arm_decisions = {
 		}
 	}
 }
+<<<<<<< HEAD
 
 PLX_choose_monarch = {
 	PLX_saxon_king = {
@@ -1749,3 +1750,5 @@ PLX_choose_monarch = {
 	}
 }
 
+=======
+>>>>>>> parent of 19ad5adc3 (Merge branch 'master' of https://github.com/rx00000xn/kxx-gitversion)

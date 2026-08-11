@@ -13,5 +13,9 @@ dependencies={
 	"test2"
 }
 picture="thumbnail.png"
+<<<<<<< HEAD
 supported_version="1.18.1.0"
+=======
+supported_version="1.17.3.0"
+>>>>>>> parent of 19ad5adc3 (Merge branch 'master' of https://github.com/rx00000xn/kxx-gitversion)
 remote_file_id="3244364529"

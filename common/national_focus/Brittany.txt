@@ -2141,7 +2141,7 @@ focus_tree = {
 		relative_position_id = BRI_PNB_holds
 		cost = 4
 		prerequisite = {
-			focus = BRI_corporatism_policy
+			focus = BRI_mordel_again
 		}
 		ai_will_do = {
 			factor = 100

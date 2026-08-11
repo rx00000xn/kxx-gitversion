@@ -23,3 +23,7 @@ leader_traits = {
 
 	}
 }
+
+
+
+#####-----------------------------------------------------------> Mod by Sig "Greatexperiment" Altre

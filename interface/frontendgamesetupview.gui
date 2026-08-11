@@ -734,7 +734,7 @@ guiTypes = {
 			textureFile = ""
 			font = "hoi_20b"
 			borderSize = {x = 0 y = -226}
-			text = "菲律宾"
+			text = "黑山"
 			maxWidth = 340
 			maxHeight = 30	
 			format = centre
@@ -758,7 +758,7 @@ guiTypes = {
 			textureFile = ""
 			font = "hoi_20b"
 			borderSize = {x = 0 y = -226}
-			text = "奉天政府"
+			text = "滇系军阀"
 			maxWidth = 340
 			maxHeight = 30	
 			format = centre

@@ -74,7 +74,6 @@ BRI_factionism = {
 					}
 				}
 			}
-			set_country_flag = BRI_Sb_trouble_over
 		}
 	}
 	BRI_PNB_action = { #民族党
@@ -3084,7 +3083,6 @@ BRI_britanny_on_world_stage_cat = {
 		}
 		visible = {
 			has_completed_focus = BRI_join_faction
-			is_in_faction = no
 		}
 		fire_only_once = yes
 		days_remove = 30
@@ -3122,7 +3120,6 @@ BRI_britanny_on_world_stage_cat = {
 		}
 		visible = {
 			has_completed_focus = BRI_join_faction
-			is_in_faction = no
 		}
 		fire_only_once = yes
 		days_remove = 30
@@ -3160,7 +3157,6 @@ BRI_britanny_on_world_stage_cat = {
 		}
 		visible = {
 			has_completed_focus = BRI_join_faction
-			is_in_faction = no
 		}
 		fire_only_once = yes
 		days_remove = 30
@@ -3198,7 +3194,6 @@ BRI_britanny_on_world_stage_cat = {
 		}
 		visible = {
 			has_completed_focus = BRI_join_faction
-			is_in_faction = no
 		}
 		fire_only_once = yes
 		days_remove = 30

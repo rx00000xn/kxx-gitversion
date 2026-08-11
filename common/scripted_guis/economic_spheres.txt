@@ -45,6 +45,7 @@ scripted_gui = {
 				AUS_DWV_member = yes
 				EUU_EU_member = no
 			}
+<<<<<<< HEAD
 			KR_femternationale_button_visible = {
 				ENG_is_in_femternationale = yes
 			}
@@ -54,6 +55,8 @@ scripted_gui = {
 					has_idea = chud_axis_economic_upgraded
 				}
 			}
+=======
+>>>>>>> parent of 19ad5adc3 (Merge branch 'master' of https://github.com/rx00000xn/kxx-gitversion)
 			KR_mitteleuropa_button_click_enabled = {
 				NOT = {
 					ROOT = { has_country_flag = economic_sphere_list_open }
@@ -99,6 +102,7 @@ scripted_gui = {
 					ROOT = { has_country_flag = economic_sphere_list_open }
 				}
 			}
+<<<<<<< HEAD
 			KR_femternationale_button_click_enabled = {
 				NOT = {
 					ROOT = { has_country_flag = economic_sphere_list_open }
@@ -109,6 +113,8 @@ scripted_gui = {
 					ROOT = { has_country_flag = economic_sphere_list_open }
 				}
 			}
+=======
+>>>>>>> parent of 19ad5adc3 (Merge branch 'master' of https://github.com/rx00000xn/kxx-gitversion)
 
 			#oc
 			KR_asia_development_bank_button_visible = {
@@ -311,6 +317,7 @@ scripted_gui = {
 					set_country_flag = economic_sphere_list_open
 				}
 			}
+<<<<<<< HEAD
 			KR_femternationale_button_click = {
 				add_to_array = { ROOT.economic_sphere_list_array = ENG }
 				for_each_loop = {
@@ -348,6 +355,8 @@ scripted_gui = {
 				}
 			}
 
+=======
+>>>>>>> parent of 19ad5adc3 (Merge branch 'master' of https://github.com/rx00000xn/kxx-gitversion)
 
 			#oc
 			KR_asia_development_bank_button_click = {

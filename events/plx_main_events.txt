@@ -5466,29 +5466,14 @@ country_event = {
 				id = plx.8 days = 120
 			}			
 		}
+		create_country_leader = {
+			name = "皇家委员会"
+			picture = "gfx/leaders/POL/Portrait_POL_Rada_Regencyjna.png"
+			expire = "1965.1.1"
+			ideology = christian_democracy_subtype
+		}
+			clr_country_flag = KXX_LEADER_GUI_VISIBLE
 			clr_country_flag = POL_Jozef_Chacinski_VISIBLE
-			set_country_flag = POL_Zdzislaw_Lubomirski_VISIBLE
-			create_country_leader = {
-				name = "卡罗尔·奥布拉希特二世"
-				picture = "gfx/leaders/POL/Portrait_POL_Karol_Olbracht.png"
-				expire = "1965.1.1"
-				ideology = provisional_government_subtype
-				traits = { charitable_emperor }
-				desc = "POLITICS_KAROL_OLBRACHT_HABSBURG_DESC"
-			}
-			set_politics = {
-				ruling_party = paternal_autocrat
-				elections_allowed = no
-			}
-			add_popularity = {
-				ideology = paternal_autocrat
-				popularity = 0.15
-			}
-			set_party_name = {
-				ideology = paternal_autocrat
-				long_name = POL_royal_council_party_long
-				name = POL_royal_council_party
-			}
 		ai_chance = {
 			factor = 0
 		}
@@ -6224,8 +6209,13 @@ country_event = {
 				}
 				set_party_name = {
 					ideology = radical_socialist
+<<<<<<< HEAD
 					long_name = "波兰人民党-左翼"
 					name = "波兰人民党"
+=======
+					long_name = "波兰社会党-左翼"
+					name = "波兰社会党"
+>>>>>>> parent of 19ad5adc3 (Merge branch 'master' of https://github.com/rx00000xn/kxx-gitversion)
 				}
 				remove_all_ministers = yes
 				add_ideas = {
@@ -6262,7 +6252,7 @@ country_event = {
 			popularity = 0.10
 		}
 		hidden_effect = { 
-			set_country_flag = plx_chadecja_center
+			set_country_flag = plx_chadecja_left
 		}
 		ai_chance = {
 			factor = 1
@@ -6283,6 +6273,7 @@ country_event = {
 			factor = 1
 		}
 	}
+<<<<<<< HEAD
 	option = {
 		name = plxv2.007.c
 		
@@ -6299,6 +6290,8 @@ country_event = {
 			factor = 1
 		}
 	}	
+=======
+>>>>>>> parent of 19ad5adc3 (Merge branch 'master' of https://github.com/rx00000xn/kxx-gitversion)
 }
 
 country_event = {
@@ -6363,23 +6356,75 @@ country_event = {
 	desc = plxv2.009.d
 	#picture = GFX_report_event_soldiers_marching
 	is_triggered_only = yes
-
+	
 	option = {
-		name = plxv2.009.f
+		name = plxv2.009.a
+		trigger = {
+			NOT = { has_country_flag = POL_repeat }
+		}
+		add_stability = 0.03
+		create_country_leader = {
+			name = "瓦莱雷·斯瓦韦克"
+			#desc = ""
+			picture = "gfx/leaders/POL/Portrait_POL_Walery_Slawek_kx.png"
+			expire = "1965.1.1"
+			ideology = socdem_warlordism_subtype
+		}
+		hidden_effect = {  
+			country_event = {
+				id = plxv2.030 days = 5
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}		
+	option = {
+		name = plxv2.009.b
 		add_political_power = 30
-		
+		create_country_leader = {
+			name = "伊格纳齐·莫希奇茨基"
+			picture = "gfx/leaders/POL/Portrait_PLX_Ignacy_Moscicki.png"
+			expire = "1965.1.1"
+			ideology = authoritarian_social_democracy_subtype
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}	
+	option = {
+		name = plxv2.009.c
+		add_political_power = 30
+		create_country_leader = {
+			name = "欧根纽什·克维亚特科夫斯基"
+			picture = "gfx/leaders/POL/Portrait_PLX_Eugeniusz_Kwiatkowski.png"
+			expire = "1965.1.1"
+			ideology = socdem_utopian_technocracy_subtype
+		}
 		ai_chance = {
 			factor = 1
 		}
 	}
 	option = {
-		name = plxv2.009.g
+		name = plxv2.009.e
 		add_political_power = 30
-
 		create_country_leader = {
-			name = "托马什·阿尔奇谢夫斯基"
-			picture = "gfx/leaders/POL/Portrait_PLX_Tomasz_Arciszewski.png"
-			expire = "1.1.1"
+			name = "约瑟夫·贝克"
+			picture = "gfx/leaders/POL/Portrait_POL_Jozef_Beck.png"
+			expire = "1965.1.1"
+			ideology = popular_patriotism_subtype
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = plxv2.009.f
+		add_political_power = 30
+		create_country_leader = {
+			name = "诺伯特·巴利奇"
+			picture = "gfx/leaders/POL/Portrait_POL_Norbert_Barlicki_plx.png"
+			expire = "1965.1.1"
 			ideology = revisionist_marxism_subtype
 		}
 		ai_chance = {
@@ -6387,9 +6432,8 @@ country_event = {
 		}
 	}
 	option = {
-		name = plxv2.009.h
+		name = plxv2.009.g
 		add_political_power = 30
-
 		create_country_leader = {
 			name = "卡齐米日·普扎克"
 			picture = "gfx/leaders/POL/Portrait_Kazimierz_Puzak.png"
@@ -7866,7 +7910,13 @@ country_event = {
 				expire = "1965.1.1"
 				ideology = elective_monarchy_subtype
 			}
+<<<<<<< HEAD
 			
+=======
+			country_event = {
+				id = plxv2.083 days = 5
+			}
+>>>>>>> parent of 19ad5adc3 (Merge branch 'master' of https://github.com/rx00000xn/kxx-gitversion)
 			country_event = {
 				id = plxv2.095 days = 1
 			}			
@@ -7929,7 +7979,13 @@ country_event = {
 				expire = "1965.1.1"
 				ideology = elective_monarchy_subtype
 			}
+<<<<<<< HEAD
 			
+=======
+			country_event = {
+				id = plxv2.083 days = 5
+			}
+>>>>>>> parent of 19ad5adc3 (Merge branch 'master' of https://github.com/rx00000xn/kxx-gitversion)
 			country_event = {
 				id = plxv2.096 days = 1
 			}			
@@ -7992,7 +8048,13 @@ country_event = {
 				expire = "1965.1.1"
 				ideology = elective_monarchy_subtype
 			}
+<<<<<<< HEAD
 			
+=======
+			country_event = {
+				id = plxv2.083 days = 5
+			}
+>>>>>>> parent of 19ad5adc3 (Merge branch 'master' of https://github.com/rx00000xn/kxx-gitversion)
 			country_event = {
 				id = plxv2.097 days = 1
 			}		
@@ -8055,7 +8117,13 @@ country_event = {
 				expire = "1965.1.1"
 				ideology = elective_monarchy_subtype
 			}
+<<<<<<< HEAD
 			
+=======
+			country_event = {
+				id = plxv2.083 days = 5
+			}
+>>>>>>> parent of 19ad5adc3 (Merge branch 'master' of https://github.com/rx00000xn/kxx-gitversion)
 			country_event = {
 				id = plxv2.098 days = 1
 			}		
@@ -8118,7 +8186,13 @@ country_event = {
 				expire = "1965.1.1"
 				ideology = elective_monarchy_subtype
 			}
+<<<<<<< HEAD
 			
+=======
+			country_event = {
+				id = plxv2.083 days = 5
+			}
+>>>>>>> parent of 19ad5adc3 (Merge branch 'master' of https://github.com/rx00000xn/kxx-gitversion)
 			country_event = {
 				id = plxv2.099 days = 1
 			}		
@@ -8186,7 +8260,13 @@ option = {
 		expire = "1.1.1"
 		ideology = elective_monarchy_subtype
 	}
+<<<<<<< HEAD
 	
+=======
+	country_event = {
+		id = plxv2.083 days = 5
+	}
+>>>>>>> parent of 19ad5adc3 (Merge branch 'master' of https://github.com/rx00000xn/kxx-gitversion)
 	country_event = {
 		id = plxv2.099 days = 1
 	}	
@@ -8270,7 +8350,13 @@ option = {
 
 	}
 	set_country_flag = POL_Pawel_Salwator
+<<<<<<< HEAD
 	
+=======
+	country_event = {
+		id = plxv2.083 days = 5
+	}
+>>>>>>> parent of 19ad5adc3 (Merge branch 'master' of https://github.com/rx00000xn/kxx-gitversion)
 	country_event = {
 		id = plxv2.099 days = 1
 	}	
@@ -8307,7 +8393,10 @@ country_event = {
 		hidden_effect = {
 			set_country_flag = plx_rc_reafirmed
 			complete_national_focus = KX_PL_PG_REAFFIRM_ROYAL_COUNCIL
+<<<<<<< HEAD
 			
+=======
+>>>>>>> parent of 19ad5adc3 (Merge branch 'master' of https://github.com/rx00000xn/kxx-gitversion)
 		}
 		ai_chance = {
 			factor = 1
@@ -8752,6 +8841,7 @@ country_event = {
 		}
 	}
 }
+<<<<<<< HEAD
 country_event = {
 	id = plxv2.105 #
 	#immediate = { log = "[GetDateText]: [Root.GetName]: event plxv2.105" }
@@ -9154,3 +9244,5 @@ country_event = {
 		}
 	}	
 }
+=======
+>>>>>>> parent of 19ad5adc3 (Merge branch 'master' of https://github.com/rx00000xn/kxx-gitversion)
