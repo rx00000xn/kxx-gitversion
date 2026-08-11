@@ -3081,7 +3081,6 @@ ideas = {
 			}
 			picture = HUN_deregulation_idea
 		}
-<<<<<<< HEAD
 		KX_mon_military_democracy_1 = {
 			modifier = {
 				political_power_gain = 0.10
@@ -3475,7 +3474,5 @@ ideas = {
 			}
 			picture = HOL_order_of_orange_nassau
 		}
-=======
->>>>>>> parent of 19ad5adc3 (Merge branch 'master' of https://github.com/rx00000xn/kxx-gitversion)
 	}	
 }

@@ -2,11 +2,7 @@
 # MAIN THEME
 music = {
 	name = "maintheme"
-<<<<<<< HEAD
 	file = "Tano.ogg"
-=======
-	file = "Le_Sort_du_Paysan.ogg"
->>>>>>> parent of 19ad5adc3 (Merge branch 'master' of https://github.com/rx00000xn/kxx-gitversion)
 	volume = 1
 }
 

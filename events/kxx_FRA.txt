@@ -1063,11 +1063,7 @@ country_event = {	#戴亚选举第二部分
 			picture = "gfx/leaders/FRA/FRA_Robert_Pelletier.png"
 			expire = "1.1.1"
 			traits = { gaul_man }
-<<<<<<< HEAD
 			ideology = radsoc_pan_celticism_subtype
-=======
-			ideology = pan_celticism_subtype
->>>>>>> parent of 19ad5adc3 (Merge branch 'master' of https://github.com/rx00000xn/kxx-gitversion)
 		}
 		set_politics = {
 			ruling_party = radical_socialist

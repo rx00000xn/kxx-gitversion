@@ -133,7 +133,7 @@ focus_tree = {
 		relative_position_id = KX_PL_Assess_Situation
 		x = 1
 		y = 1
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 0
 		}
@@ -185,7 +185,7 @@ focus_tree = {
 		relative_position_id = KX_PL_Seek_Royal_Support
 		x = -1
 		y = 1
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -241,7 +241,7 @@ focus_tree = {
 		relative_position_id = KX_PL_Limit_Trade_Unions
 		x = -1
 		y = 1
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -315,7 +315,7 @@ focus_tree = {
 		}		
 		x = -29
 		y = 0
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -803,9 +803,7 @@ focus_tree = {
 		prerequisite = {
 			focus = KX_PLX_CRISIS_DEALING_WITH_DEPRESSION
 		}		
-		mutually_exclusive = {
-            focus = KX_PLX_CRISIS_BUY_OUT_GER
-		}
+		
 		relative_position_id = KX_PLX_CRISIS_DEALING_WITH_DEPRESSION		
 		cost = 4
 		ai_will_do = {
@@ -1461,7 +1459,7 @@ focus_tree = {
             focus = KX_PLX_CRISIS_PREVENT_CITY_MIGRATION
 		}		
 		relative_position_id = KX_PLX_CRISIS_PREVENT_CITY_MIGRATION		
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -1795,7 +1793,7 @@ focus_tree = {
 		relative_position_id = KX_PLX_LODZ_INDUSTRY
 		x = -1
 		y = 1
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -1826,7 +1824,7 @@ focus_tree = {
 		relative_position_id = KX_PLX_LODZ_INDUSTRY
 		x = 1
 		y = 1
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -1982,7 +1980,7 @@ focus_tree = {
 		relative_position_id = KX_PL_AS_TALKS_WITH_OFFICER_CORPS
 		x = 0
 		y = 1
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -2140,7 +2138,7 @@ focus_tree = {
 		relative_position_id = KX_PL_AS_UNITED_FRONT
 		x = 0
 		y = 1
-		cost = 3 #?
+		cost = 4 #?
 		ai_will_do = {
 			factor = 100
 		}
@@ -2161,7 +2159,7 @@ focus_tree = {
 		relative_position_id = KX_PL_AS_BUTCHERS_OF_DEMOCRACY
 		x = -1
 		y = 1
-		cost = 3 #?
+		cost = 4 #?
 		ai_will_do = {
 			factor = 100
 		}
@@ -2181,7 +2179,7 @@ focus_tree = {
 		relative_position_id = KX_PL_AS_BUTCHERS_OF_DEMOCRACY
 		x = 1
 		y = 1
-		cost = 3 #?
+		cost = 4 #?
 		ai_will_do = {
 			factor = 100
 		}
@@ -2414,7 +2412,7 @@ focus_tree = {
 		relative_position_id = KX_PL_AS_RELIGIOUS_TAX
 		x = -2
 		y = 1
-		cost = 6
+		cost = 4
 		ai_will_do = {
 			factor = 10
 		}
@@ -3598,11 +3596,7 @@ focus_tree = {
 			has_country_flag = plx_endecja_rules
 		}	
 		relative_position_id = KX_PL_PNPR_WINS_ELECTIONS
-<<<<<<< HEAD
 		x = 20
-=======
-		x = 17
->>>>>>> parent of 19ad5adc3 (Merge branch 'master' of https://github.com/rx00000xn/kxx-gitversion)
 		y = 0
 		cost = 1
 		ai_will_do = {
@@ -3737,11 +3731,7 @@ focus_tree = {
 		relative_position_id = KX_PL_NATDEM_YOUNG
 		x = -2
 		y = 1
-<<<<<<< HEAD
 		cost = 4 #?
-=======
-		cost = 3 #?
->>>>>>> parent of 19ad5adc3 (Merge branch 'master' of https://github.com/rx00000xn/kxx-gitversion)
 		ai_will_do = {
 			factor = 100
 		}
@@ -4079,7 +4069,7 @@ focus_tree = {
 		relative_position_id = KX_PL_PZPR_UNITED_FRONT
 		x = 0
 		y = 1
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -5641,7 +5631,7 @@ focus_tree = {
 				remove_idea = KX_PLX_pan_slav_1
 				add_idea = KX_PLX_pan_slav_2b
 			}
-			country_event =	plx.59		
+			#country_event = plx.59		
 		}
 	}	
 	focus = {
@@ -5726,18 +5716,26 @@ focus_tree = {
 	####German Takeover
 	focus = {
 		id = KX_PL_PG_GERMAN_TAKEOVER
-		icon = GFX_goal_POL_german_king
+		icon = GFX_goal_POL_austrian_king
 		available = {
 			has_country_flag = plx_rc_in_power
 		}
-		x = 25
-		y = 20
+		prerequisite = {
+			focus = KX_PL_PG_KING_IN_POWER
+		}
+		mutually_exclusive = {
+			focus = KX_PL_PG_A_MONARCH_TO_CHOOSE
+		
+		}
+		relative_position_id = KX_PL_PG_KING_IN_POWER
+		x = -1
+		y = 1
 		cost = 1
 		ai_will_do = {
 			factor = 100
 		}
 		completion_reward = {
-			#add_political_power = 25		
+			add_ideas = POL_lessons_of_the_empire_idea	
 		}
 	}
 	focus = {
@@ -5746,33 +5744,28 @@ focus_tree = {
 		available = {
 			has_country_flag = plx_rc_in_power
 		}
-		prerequisite = {
+		mutually_exclusive = {
 			focus = KX_PL_PG_GERMAN_TAKEOVER
+		
+		}
+		prerequisite = {
+			focus = KX_PL_PG_KING_IN_POWER
 		}
 		relative_position_id = KX_PL_PG_GERMAN_TAKEOVER
-<<<<<<< HEAD
 		x = 2
 		y = 0
-=======
-		x = 0
-		y = 1
->>>>>>> parent of 19ad5adc3 (Merge branch 'master' of https://github.com/rx00000xn/kxx-gitversion)
 		cost = 12
 		ai_will_do = {
 			factor = 100
 		}
 		completion_reward = {
 			add_political_power = 25	
-<<<<<<< HEAD
 		create_country_leader = {
 			name = "皇家委员会"
 			picture = "gfx/leaders/POL/Portrait_POL_Rada_Regencyjna.png"
 			expire = "1965.1.1"
 			ideology = elective_monarchy_subtype
 		}
-=======
-
->>>>>>> parent of 19ad5adc3 (Merge branch 'master' of https://github.com/rx00000xn/kxx-gitversion)
 		}
 	}
 	focus = {
@@ -5781,19 +5774,10 @@ focus_tree = {
 		available = {
 			has_country_flag = plx_rc_in_power
 		}
-<<<<<<< HEAD
 		
 		
 		x = 35
 		y = 21
-=======
-		prerequisite = {
-			focus = KX_PL_PG_A_MONARCH_TO_CHOOSE
-		}
-		relative_position_id = KX_PL_PG_A_MONARCH_TO_CHOOSE
-		x = 0
-		y = 1
->>>>>>> parent of 19ad5adc3 (Merge branch 'master' of https://github.com/rx00000xn/kxx-gitversion)
 		cost = 1
 		ai_will_do = {
 			factor = 100
@@ -5809,17 +5793,21 @@ focus_tree = {
 			has_country_flag = plx_rc_in_power
 		}
 		prerequisite = {
-			focus = KX_PL_PG_KING_IN_POWER
+			focus = KX_PL_PG_GERMAN_TAKEOVER
+			focus = KX_PL_PG_A_MONARCH_TO_CHOOSE
+		
 		}		
 		relative_position_id = KX_PL_PG_KING_IN_POWER
 		x = 0
-		y = 1
+		y = 2
 		cost = 2
 		ai_will_do = {
 			factor = 100
 		}
 		completion_reward = {
-			country_event = plxv2.043
+			#country_event = plxv2.043
+			country_event = plxv2.083
+			
 		}
 	}
 	focus = {
@@ -5846,7 +5834,6 @@ focus_tree = {
 		}
 	}
 	focus = {
-<<<<<<< HEAD
 		id = KX_PL_PG_hail_king_family
 		icon = GFX_goal_POL_hail_king_family
 		available = {
@@ -6193,8 +6180,6 @@ focus_tree = {
 		}
 	}
 	focus = {
-=======
->>>>>>> parent of 19ad5adc3 (Merge branch 'master' of https://github.com/rx00000xn/kxx-gitversion)
 		id = KX_PL_PG_RISE_OF_SYNARCHISM
 		icon = GFX_goal_COR_Attract_Wayward_Technocrats
 		available = {
@@ -6205,11 +6190,12 @@ focus_tree = {
 		}	
 		mutually_exclusive = {
 			focus = KX_PL_PG_ROYAL_CABINET_continues
+			focus = KX_PL_PG_hail_king_family
 		}		
 		relative_position_id = KX_PL_PG_EXPAND_ROYAL_COMPETENCIES
 		x = 4
 		y = 1
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -6230,7 +6216,7 @@ focus_tree = {
 		relative_position_id = KX_PL_PG_RISE_OF_SYNARCHISM
 		x = -2
 		y = 1
-		cost = 7
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -6259,7 +6245,7 @@ focus_tree = {
 		relative_position_id = KX_PL_PG_RISE_OF_SYNARCHISM
 		x = 0
 		y = 1
-		cost = 8
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -6282,7 +6268,7 @@ focus_tree = {
 		relative_position_id = KX_PL_PG_RISE_OF_SYNARCHISM
 		x = 2
 		y = 1
-		cost = 7
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -6320,26 +6306,30 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_stability = 0.10
+			country_event = plxv2.137
 		}
 	}
 	focus = {
 		id = KX_PL_PG_RELY_ON_ARISTOCRACY
-		icon = GFX_goal_BRG_Aristocratic_Ally
+		icon = GFX_goal_POR_royal_edicts
 		available = {
-			#has_country_flag = plx_rc_in_power
+			has_country_flag = plx_rc_old
 		}
 		prerequisite = {
 			focus = KX_PL_PG_REAFFIRM_ROYAL_COUNCIL
-		}		
+		}	
+		mutually_exclusive = {
+			focus = KX_PL_PG_NEW_MILITARY_SAFEGUARD
+		}
 		relative_position_id = KX_PL_PG_REAFFIRM_ROYAL_COUNCIL
-		x = 0
+		x = -1
 		y = 1
-		cost = 8
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
 		completion_reward = {
-			add_ideas = KX_mon_royal_council_1
+			add_political_power = 100
 		}
 	}
 	focus = {
@@ -6354,11 +6344,12 @@ focus_tree = {
 		relative_position_id = KX_PL_PG_RELY_ON_ARISTOCRACY
 		x = -1
 		y = 1
-		cost = 7
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
 		completion_reward = {
+			country_event = plxv2.142
 			if = { 
 				limit = { has_idea = KX_mon_royal_council_2 }
 				swap_ideas = {
@@ -6374,38 +6365,7 @@ focus_tree = {
 			}
 		}
 	}
-	focus = {
-		id = KX_PL_PG_EXPAND_LOCAL_GOVERNANCE
-		icon = GFX_goal_COR_american_estates
-		available = {
-			#has_country_flag = plx_rc_in_power
-		}
-		prerequisite = {
-			focus = KX_PL_PG_RELY_ON_ARISTOCRACY
-		}
-		relative_position_id = KX_PL_PG_RELY_ON_ARISTOCRACY
-		x = 1
-		y = 1
-		cost = 7
-		ai_will_do = {
-			factor = 100
-		}
-		completion_reward = {
-			if = { 
-				limit = { has_idea = KX_mon_royal_council_2 }
-				swap_ideas = {
-					remove_idea = KX_mon_royal_council_2
-					add_idea = KX_mon_royal_council_3
-				}
-			}
-			else = {
-				swap_ideas = {
-					remove_idea = KX_mon_royal_council_1
-					add_idea = KX_mon_royal_council_2
-				}
-			}
-		}
-	}
+	
 	focus = {
 		id = KX_PL_PG_APPEAL_TO_INDUSTRIALISTS
 		icon = GFX_goal_AST_drink_with_industrialists
@@ -6413,26 +6373,84 @@ focus_tree = {
 			#has_country_flag = plx_rc_in_power
 		}
 		prerequisite = {
-			focus = KX_PL_PG_EXPAND_LOCAL_GOVERNANCE
-		}
-		prerequisite = {
-			focus = KX_PL_PG_POWER_TO_THE_SENAT
+			focus = KX_PL_PG_UNITY_NOT_IDEOLOGY
+			focus = KX_PL_PG_ARISTOCRATIC_REPUBLIC
 		}
 		mutually_exclusive = {
-			focus = KX_PL_PG_TOWARDS_CORPORATISM
-		}		
-		relative_position_id = KX_PL_PG_POWER_TO_THE_SENAT
-		x = 0
+			focus = KX_PL_PG_IGNORE_THE_NEW_RICH
+			focus = KX_PL_PG_SEEK_LEGITIMACY_IN_PEOPLE
+		}
+		relative_position_id = KX_PL_PG_ARISTOCRATIC_REPUBLIC
+		x = 1
 		y = 1
-		cost = 10
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
 		completion_reward = {
 			add_ideas = KX_mon_royal_capitalism_1
-			country_event = plxv2.085
+			
 		}
 	}
+	focus = {
+		id = KX_PL_PG_IGNORE_THE_NEW_RICH
+		icon = GFX_goal_CRO_seize_riches
+		available = {
+			#has_country_flag = plx_rc_in_power
+		}
+		prerequisite = {
+			focus = KX_PL_PG_ARISTOCRATIC_REPUBLIC
+		}
+		mutually_exclusive = {
+			focus = KX_PL_PG_APPEAL_TO_INDUSTRIALISTS
+		}
+		relative_position_id = KX_PL_PG_ARISTOCRATIC_REPUBLIC
+		x = -1
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_ideas = PLX_mon_aristocracy_econ_1
+			if = {
+				limit = {
+					has_idea = POL_Wladyslaw_Sikorski_hog_pau
+				}
+				set_country_leader_ideology = autdem_christian_democracy_subtype
+			}
+		}
+	}
+	focus = {
+		id = KX_PL_PG_SEEK_LEGITIMACY_IN_PEOPLE
+		icon = GFX_goal_USA_To_You_The_People
+		available = {
+			#has_country_flag = plx_rc_in_power
+		}
+		prerequisite = {
+			focus = KX_PL_PG_UNITY_NOT_IDEOLOGY
+		}
+		mutually_exclusive = {
+			focus = KX_PL_PG_APPEAL_TO_INDUSTRIALISTS
+			focus = KX_PL_PG_IGNORE_THE_NEW_RICH
+		}
+		relative_position_id = KX_PL_PG_UNITY_NOT_IDEOLOGY
+		x = 1
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_ideas = PLX_mon_in_everyones_service_1
+			if = {
+				limit = {
+					has_idea = POL_Aleksy_Cwiakowski_hog_sde
+				}
+				set_country_leader_ideology = authdem_monsoc_subtype
+			}
+		}
+	}	
 	focus = {
 		id = KX_PL_PG_TAX_BREAKS
 		icon = GFX_RUS_Tax_Reform
@@ -6441,28 +6459,17 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = KX_PL_PG_APPEAL_TO_INDUSTRIALISTS
+			focus = KX_PL_PG_IGNORE_THE_NEW_RICH
 		}
 		relative_position_id = KX_PL_PG_APPEAL_TO_INDUSTRIALISTS
-		x = 0
+		x = -1
 		y = 1
-		cost = 10
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
 		completion_reward = {
-			if = { 
-				limit = { has_idea = KX_mon_royal_capitalism_2 }
-				swap_ideas = {
-					remove_idea = KX_mon_royal_capitalism_2
-					add_idea = KX_mon_royal_capitalism_3
-				}
-			}
-			else = {
-				swap_ideas = {
-					remove_idea = KX_mon_royal_capitalism_1
-					add_idea = KX_mon_royal_capitalism_2
-				}
-			}
+			add_ideas = PLX_mon_tax_breaks
 		}
 	}
 	focus = {
@@ -6472,57 +6479,25 @@ focus_tree = {
 			#has_country_flag = plx_rc_in_power
 		}
 		prerequisite = {
-			focus = KX_PL_PG_APPEAL_TO_INDUSTRIALISTS
-		}
-		relative_position_id = KX_PL_PG_APPEAL_TO_INDUSTRIALISTS
-		x = -2
-		y = 1
-		cost = 10
-		ai_will_do = {
-			factor = 100
-		}
-		completion_reward = {
-			if = { 
-				limit = { has_idea = KX_mon_royal_capitalism_2 }
-				swap_ideas = {
-					remove_idea = KX_mon_royal_capitalism_2
-					add_idea = KX_mon_royal_capitalism_3
-				}
-			}
-			else = {
-				swap_ideas = {
-					remove_idea = KX_mon_royal_capitalism_1
-					add_idea = KX_mon_royal_capitalism_2
-				}
-			}
-		}
-	}
-	focus = {
-		id = KX_PL_PG_PROTECTIONISM
-		icon = GFX_USA_payment_protection
-		available = {
-			#has_country_flag = plx_rc_in_power
-		}
-		prerequisite = {
-			focus = KX_PL_PG_LOWER_REGULATIONS
-		}
-		prerequisite = {
 			focus = KX_PL_PG_TAX_BREAKS
 		}
-		relative_position_id = KX_PL_PG_LOWER_REGULATIONS
+		prerequisite = {
+			focus = KX_PL_PG_CONTINUE_LAND_CONSOLIDATION
+		}		
+		relative_position_id = KX_PL_PG_TAX_BREAKS
 		x = 1
 		y = 1
-		cost = 10
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
 		completion_reward = {
 			swap_ideas = {
-				remove_idea = KX_mon_royal_capitalism_3
-				add_idea = KX_mon_royal_capitalism_4
+				remove_idea = KX_mon_royal_capitalism_1
+				add_idea = KX_mon_royal_capitalism_2
 			}
 		}
-	}	
+	}
 	focus = {
 		id = KX_PL_PG_CONTINUE_LAND_CONSOLIDATION
 		icon = GFX_goal_ZIM_land_husbandry_act
@@ -6530,15 +6505,13 @@ focus_tree = {
 			#has_country_flag = plx_rc_in_power
 		}
 		prerequisite = {
-			focus = KX_PL_PG_PROTECTIONISM
+			focus = KX_PL_PG_APPEAL_TO_INDUSTRIALISTS
+			focus = KX_PL_PG_SEEK_LEGITIMACY_IN_PEOPLE
 		}
-		mutually_exclusive = {
-			focus = KX_PL_PG_LIMIT_LAND_SALE
-		}		
-		relative_position_id = KX_PL_PG_PROTECTIONISM
+		relative_position_id = KX_PL_PG_APPEAL_TO_INDUSTRIALISTS
 		x = 1
 		y = 1
-		cost = 10
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -6553,15 +6526,12 @@ focus_tree = {
 			#has_country_flag = plx_rc_in_power
 		}
 		prerequisite = {
-			focus = KX_PL_PG_PROTECTIONISM
+			focus = KX_PL_PG_IGNORE_THE_NEW_RICH
 		}
-		mutually_exclusive = {
-			focus = KX_PL_PG_CONTINUE_LAND_CONSOLIDATION
-		}
-		relative_position_id = KX_PL_PG_PROTECTIONISM
+		relative_position_id = KX_PL_PG_IGNORE_THE_NEW_RICH
 		x = -1
 		y = 1
-		cost = 10
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -6570,93 +6540,115 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = KX_PL_PG_TOWARDS_CORPORATISM
-		icon = GFX_goal_BRG_Distributist_Economy
+		id = KX_PL_PG_STATE_CONTRACTING
+		icon = GFX_NEE_elite_contracts
 		available = {
-			#has_country_flag = plx_start
-		}	
-		prerequisite = {
-			focus = KX_PL_PG_EXPAND_LOCAL_GOVERNANCE
+			#has_country_flag = plx_rc_in_power
 		}
-		mutually_exclusive = {
-			focus = KX_PL_PG_APPEAL_TO_INDUSTRIALISTS
+		prerequisite = {
+			focus = KX_PL_PG_LIMIT_LAND_SALE
+		}
+		prerequisite = {
+			focus = KX_PL_PG_TAX_BREAKS
 		}		
-		relative_position_id = KX_PL_PG_EXPAND_LOCAL_GOVERNANCE
-		x = 0
+		relative_position_id = KX_PL_PG_LIMIT_LAND_SALE
+		x = 1
 		y = 1
-		cost = 10 #?
-		ai_will_do = {
-			factor = 100
-		}
-		completion_reward = {
-			add_ideas = SOC_POL_PZPR_corporatism_1
-			country_event = plxv2.086
-		}
-	}	
-	focus = {
-		id = KX_PL_PG_CLASS_BLIND_SYNDICATES
-		icon = GFX_RUS_Corporatist_Lean
-		available = {
-			#has_country_flag = plx_start
-		}	
-		prerequisite = {
-			focus = KX_PL_PG_TOWARDS_CORPORATISM
-		}
-		relative_position_id = KX_PL_PG_TOWARDS_CORPORATISM
-		x = 2
-		y = 1
-		cost = 10 #?
-		ai_will_do = {
-			factor = 100
-		}
-		completion_reward = {
-			add_ideas = SOC_POL_PZPR_right_syndicates
-		}
-	}
-	focus = {
-		id = KX_PL_PG_COUNCIL_OF_WORKERS_AND_CAPITALISTS
-		icon = GFX_BBR_collective_management
-		available = {
-			#has_country_flag = plx_start
-		}	
-		prerequisite = {
-			focus = KX_PL_PG_TOWARDS_CORPORATISM
-		}
-		relative_position_id = KX_PL_PG_TOWARDS_CORPORATISM
-		x = 0
-		y = 1
-		cost = 10 #?
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
 		completion_reward = {
 			swap_ideas = {
-				remove_idea = SOC_POL_PZPR_corporatism_1
-				add_idea = SOC_POL_PZPR_corporatism_2
+				remove_idea = PLX_mon_aristocracy_econ_1
+				add_idea = PLX_mon_aristocracy_econ_2
 			}
 		}
-	}	
+	}
 	focus = {
-		id = KX_PL_PG_CLASS_COLABORATIONIST_AGRICULTURE
-		icon = GFX_goal_AUS_corporatocratic_democracy
+		id = KX_PL_PG_PROMOTE_PHILANTROPY
+		icon = GFX_goal_AUS_Jewels_Charity_Orders
 		available = {
-			#has_country_flag = plx_start
+			#has_country_flag = plx_rc_in_power
+		}
+		prerequisite = {
+			focus = KX_PL_PG_STATE_CONTRACTING
+			focus = KX_PL_PG_LOWER_REGULATIONS
 		}	
-		prerequisite = {
-			focus = KX_PL_PG_COUNCIL_OF_WORKERS_AND_CAPITALISTS
-		}
-		prerequisite = {
-			focus = KX_PL_PG_CLASS_BLIND_SYNDICATES
-		}
-		relative_position_id = KX_PL_PG_COUNCIL_OF_WORKERS_AND_CAPITALISTS
+		relative_position_id = KX_PL_PG_STATE_CONTRACTING
 		x = 0
 		y = 1
-		cost = 10 #?
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
 		completion_reward = {
-<<<<<<< HEAD
+			add_ideas = PLX_mon_philantropy
+		}
+	}
+	focus = {
+		id = KX_PL_PG_RESTORE_TRADE_UNIONS
+		icon = GFX_RUS_Trade_Unions_Impartiality_Act
+		available = {
+			#has_country_flag = plx_rc_in_power
+		}
+		prerequisite = {
+			focus = KX_PL_PG_SEEK_LEGITIMACY_IN_PEOPLE
+		}	
+		relative_position_id = KX_PL_PG_SEEK_LEGITIMACY_IN_PEOPLE
+		x = 1
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_ideas = PLX_mon_trade_unions
+		}
+	}
+	focus = {
+		id = KX_PL_PG_PLATFORM_BETWEEN_CLASSES
+		icon = GFX_goal_NFA_bridge_class_divide
+		available = {
+			#has_country_flag = plx_rc_in_power
+		}
+		prerequisite = {
+			focus = KX_PL_PG_RESTORE_TRADE_UNIONS
+		}
+		prerequisite = {
+			focus = KX_PL_PG_CONTINUE_LAND_CONSOLIDATION
+		}		
+		relative_position_id = KX_PL_PG_RESTORE_TRADE_UNIONS
+		x = -1
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = PLX_mon_in_everyones_service_1
+				add_idea = PLX_mon_in_everyones_service_2
+			}
+		}
+	}
+	focus = {
+		id = KX_PL_PG_MODERATE_WELFARE_STATE
+		icon = GFX_goal_NOR_welfare_for_the_nordic_race
+		available = {
+			#has_country_flag = plx_rc_in_power
+		}
+		prerequisite = {
+			focus = KX_PL_PG_PLATFORM_BETWEEN_CLASSES
+		}		
+		relative_position_id = KX_PL_PG_PLATFORM_BETWEEN_CLASSES
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
 			add_ideas = PLX_mon_moderate_welfare
 			hidden_effect = {
 				country_event = {
@@ -6666,56 +6658,164 @@ focus_tree = {
 					id = plxv2.120 days = 40
 				}
 			}			
-=======
-			add_ideas = SOC_POL_colab_agri
->>>>>>> parent of 19ad5adc3 (Merge branch 'master' of https://github.com/rx00000xn/kxx-gitversion)
 		}
 	}
 	focus = {
-		id = KX_PL_PG_COORDINATE_SMALL_BUSINESS
-		icon = GFX_goal_NFA_People_Corporatism
+		id = KX_PL_PG_PROTECTIONISM
+		icon = GFX_USA_payment_protection
 		available = {
-			#has_country_flag = plx_start
-		}	
-		prerequisite = {
-			focus = KX_PL_PG_CLASS_BLIND_SYNDICATES
+			#has_country_flag = plx_rc_in_power
 		}
 		prerequisite = {
-			focus = KX_PL_PG_COUNCIL_OF_WORKERS_AND_CAPITALISTS
+			focus = KX_PL_PG_LOWER_REGULATIONS
+			focus = KX_PL_PG_STATE_CONTRACTING
+			focus = KX_PL_PG_PLATFORM_BETWEEN_CLASSES
 		}
-		relative_position_id = KX_PL_PG_CLASS_BLIND_SYNDICATES
+		relative_position_id = KX_PL_PG_LOWER_REGULATIONS
 		x = 0
 		y = 1
-		cost = 10 #?
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
 		completion_reward = {
-			add_ideas = SOC_POL_PZPR_business_coordination
+			add_ideas = PLX_mon_protectionism
+		}
+	}	
+	
+	focus = {
+		id = KX_PL_PG_NEW_MILITARY_SAFEGUARD
+		icon = GFX_goal_GAL_military_in_charge
+		available = {
+			has_country_flag = plx_rc_new
+		}
+		prerequisite = {
+			focus = KX_PL_PG_REAFFIRM_ROYAL_COUNCIL
+		}
+		mutually_exclusive = {
+			focus = KX_PL_PG_RELY_ON_ARISTOCRACY
+		}		
+		relative_position_id = KX_PL_PG_REAFFIRM_ROYAL_COUNCIL
+		x = 1
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_stability = 0.10
 		}
 	}	
 	focus = {
-		id = KX_PL_PG_POLISH_SOLIDARISM
-		icon = GFX_focus_rus_organic_solidarity
+		id = KX_PL_PG_FINDING_COMPROMISE
+		icon = GFX_goal_MEX_find_compromise
 		available = {
-			#has_country_flag = plx_start
-		}	
-		prerequisite = {
-			focus = KX_PL_PG_CLASS_COLABORATIONIST_AGRICULTURE
+			#has_country_flag = plx_rc_in_power
 		}
 		prerequisite = {
-			focus = KX_PL_PG_COORDINATE_SMALL_BUSINESS
+			focus = KX_PL_PG_NEW_MILITARY_SAFEGUARD
 		}		
-		relative_position_id = KX_PL_PG_COORDINATE_SMALL_BUSINESS
+		relative_position_id = KX_PL_PG_NEW_MILITARY_SAFEGUARD
+		x = 1
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_ideas = KX_mon_military_democracy_1
+					
+		}
+	}
+	focus = {
+		id = KX_PL_PG_REOPEN_PARLIAMENT
+		icon = GFX_RUS_Reinforce_Local_Parliaments
+		available = {
+			#has_country_flag = plx_rc_in_power
+		}
+		prerequisite = {
+			focus = KX_PL_PG_FINDING_COMPROMISE
+		}		
+		relative_position_id = KX_PL_PG_FINDING_COMPROMISE
+		x = 1
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			if = { 
+				limit = { has_idea = KX_mon_military_democracy_2 }
+				swap_ideas = {
+					remove_idea = KX_mon_military_democracy_2
+					add_idea = KX_mon_military_democracy_3
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = KX_mon_military_democracy_1
+					add_idea = KX_mon_military_democracy_2
+				}
+			}
+		}
+	}	
+	focus = {
+		id = KX_PL_PG_SEJM_ADVISORY_ROLE
+		icon = GFX_RUS_Lower_Local_Parliaments
+		available = {
+			#has_country_flag = plx_rc_in_power
+		}
+		prerequisite = {
+			focus = KX_PL_PG_POWER_TO_THE_SENAT
+		}		
+		relative_position_id = KX_PL_PG_POWER_TO_THE_SENAT
 		x = -1
 		y = 1
-		cost = 10 #?
+		cost = 4
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			if = { 
+				limit = { has_idea = KX_mon_royal_council_2 }
+				swap_ideas = {
+					remove_idea = KX_mon_royal_council_2
+					add_idea = KX_mon_royal_council_3
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = KX_mon_royal_council_1
+					add_idea = KX_mon_royal_council_2
+				}
+			}
+		}
+	}	
+	focus = {
+		id = KX_PL_PG_LIMIT_ROYAL_PREROGATIVES
+		icon = GFX_goal_SRD_royalist_fervor
+		available = {
+			#has_country_flag = plx_rc_in_power
+		}
+		prerequisite = {
+			focus = KX_PL_PG_CONTINUE_EXECUTIVE_ORDERS
+		}
+		prerequisite = {
+			focus = KX_PL_PG_POWER_TO_THE_SENAT
+			focus = KX_PL_PG_FINDING_COMPROMISE
+		}
+		mutually_exclusive = {
+			focus = KX_PL_PG_GOVERNMENT_BY_APPOINTMENT
+		}
+		relative_position_id = KX_PL_PG_CONTINUE_EXECUTIVE_ORDERS
+		x = -1
+		y = 1
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
 		completion_reward = {
 			swap_ideas = {
-<<<<<<< HEAD
 				remove_idea = PLX_mon_monarch_role_1
 				add_idea = PLX_mon_monarch_role_2a
 			}
@@ -6823,13 +6923,30 @@ focus_tree = {
 					remove_idea = KX_mon_royal_council_1
 					add_idea = KX_mon_royal_council_2
 				}
-=======
-				remove_idea = SOC_POL_PZPR_corporatism_2
-				add_idea = SOC_POL_PZPR_corporatism_3
->>>>>>> parent of 19ad5adc3 (Merge branch 'master' of https://github.com/rx00000xn/kxx-gitversion)
 			}
 		}
 	}	
+	focus = {
+		id = KX_PL_PG_CONTINUE_EXECUTIVE_ORDERS
+		icon = GFX_goal_MEX_All_power_to_the_Executive
+		available = {
+			#has_country_flag = plx_rc_in_power
+		}
+		prerequisite = {
+			focus = KX_PL_PG_NEW_MILITARY_SAFEGUARD
+			focus = KX_PL_PG_RELY_ON_ARISTOCRACY
+		}		
+		relative_position_id = KX_PL_PG_RELY_ON_ARISTOCRACY
+		x = 1
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_ideas = PLX_mon_monarch_role_1
+		}
+	}
 	focus = {
 		id = KX_PL_PG_SCIENTIFIC_ECONOMY
 		icon = GFX_goal_FRA_technocratic_ministry
@@ -6848,7 +6965,7 @@ focus_tree = {
 		relative_position_id = KX_PL_PG_REFORM_ROYAL_COUNCIL
 		x = 0
 		y = 1
-		cost = 10
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -6868,7 +6985,7 @@ focus_tree = {
 		relative_position_id = KX_PL_PG_SCIENTIFIC_ECONOMY
 		x = 0
 		y = 1
-		cost = 10
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -6891,7 +7008,7 @@ focus_tree = {
 		relative_position_id = KX_PL_PG_SCIENTIFIC_ECONOMY
 		x = -2
 		y = 1
-		cost = 10
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -6914,7 +7031,7 @@ focus_tree = {
 		relative_position_id = KX_PL_PG_NEW_KIND_OF_MONEY
 		x = 1
 		y = 1
-		cost = 10
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -6937,7 +7054,7 @@ focus_tree = {
 		relative_position_id = KX_PL_PG_SCIENTIFIC_ECONOMY
 		x = 2
 		y = 1
-		cost = 10
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -6960,7 +7077,7 @@ focus_tree = {
 		relative_position_id = KX_PL_PG_INSTITUTE_OF_GUIDANCE
 		x = 1
 		y = 1
-		cost = 10
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -6986,7 +7103,7 @@ focus_tree = {
 		relative_position_id = KX_PL_PG_BALANCE_CONSUMPTION
 		x = -1
 		y = 1
-		cost = 8
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -6999,7 +7116,7 @@ focus_tree = {
 	}	
 	focus = {
 		id = KX_PL_PG_ROYAL_CABINET_continues
-		icon = GFX_goal_HEJ_royal_house_hashemite
+		icon = GFX_goal_SPR_Popular_Nationalism
 		available = {
 			has_country_flag = plx_rc_in_power
 		}
@@ -7008,10 +7125,11 @@ focus_tree = {
 		}	
 		mutually_exclusive = {
 			focus = KX_PL_PG_RISE_OF_SYNARCHISM
+			focus = KX_PL_PG_hail_king_family
 		}	
 		relative_position_id = KX_PL_PG_KING_IN_POWER
 		x = -10
-		y = 3
+		y = 4
 		cost = 2
 		ai_will_do = {
 			factor = 100
@@ -7061,7 +7179,7 @@ focus_tree = {
 		relative_position_id = KX_PL_PG_CLERGICAL_ADVISORS
 		x = 1
 		y = 1
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -7106,7 +7224,7 @@ focus_tree = {
 		relative_position_id = KX_PL_PG_CLERGICAL_ADVISORS
 		x = -1
 		y = 1
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -7171,7 +7289,7 @@ focus_tree = {
 		relative_position_id = KX_PL_PG_NOBLES_OF_THE_ROBE
 		x = 0
 		y = 1
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -7195,7 +7313,7 @@ focus_tree = {
 		relative_position_id = KX_PL_PG_ESTATE_CONSOLIDATION
 		x = 2
 		y = 1
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -7222,7 +7340,7 @@ focus_tree = {
 		relative_position_id = KX_PL_PG_ESTATE_CONSOLIDATION
 		x = 0
 		y = 1
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -7249,7 +7367,7 @@ focus_tree = {
 		relative_position_id = KX_PL_PG_ESTATE_CONSOLIDATION
 		x = -2
 		y = 1
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -7276,7 +7394,7 @@ focus_tree = {
 		relative_position_id = KX_PL_PG_AGRICTULTURAL_WORKERS_PROTECTION
 		x = 1
 		y = 1
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -7296,7 +7414,7 @@ focus_tree = {
 		relative_position_id = KX_PL_PG_ROYAL_TRADE_UNIONS
 		x = -1
 		y = 1
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -7319,7 +7437,7 @@ focus_tree = {
 		relative_position_id = KX_PL_PG_PROGRESSIVE_TAX
 		x = 0
 		y = 1
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -7346,7 +7464,7 @@ focus_tree = {
 		relative_position_id = KX_PL_PG_NEO_SERFDOM
 		x = -1
 		y = 1
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -7366,7 +7484,7 @@ focus_tree = {
 		relative_position_id = KX_PL_PG_DEREGULATION
 		x = 1
 		y = 1
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -7389,7 +7507,7 @@ focus_tree = {
 		relative_position_id = KX_PL_PG_LIBERAL_TAX
 		x = 0
 		y = 1
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -7413,7 +7531,7 @@ focus_tree = {
 		relative_position_id = KX_PL_PG_DEREGULATION
 		x = -1
 		y = 1
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -7460,7 +7578,7 @@ focus_tree = {
 		relative_position_id = KX_PL_PG_CHADECJA_ADVISORS
 		x = -1
 		y = 1
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -7689,7 +7807,7 @@ focus_tree = {
 		relative_position_id = KX_PL_PG_RULE_FROM_BERLIN
 		x = -1
 		y = 1
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -7711,7 +7829,7 @@ focus_tree = {
 		relative_position_id = KX_PL_PG_BEGIN_GERMANISATION
 		x = 0
 		y = 1
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -7731,7 +7849,7 @@ focus_tree = {
 		relative_position_id = KX_PL_PG_OPEN_THE_MARKET
 		x = 1
 		y = 1
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -7755,11 +7873,7 @@ focus_tree = {
 		relative_position_id = KX_PL_PG_BEGIN_GERMANISATION
 		x = -2
 		y = 1
-<<<<<<< HEAD
 		cost = 4
-=======
-		cost = 3
->>>>>>> parent of 19ad5adc3 (Merge branch 'master' of https://github.com/rx00000xn/kxx-gitversion)
 		ai_will_do = {
 			factor = 100
 		}
@@ -7782,7 +7896,7 @@ focus_tree = {
 		relative_position_id = KX_PL_PG_GRAIN_MANAGEMENT
 		x = -1
 		y = 1
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -7808,7 +7922,7 @@ focus_tree = {
 		relative_position_id = KX_PL_PG_GRAIN_MANAGEMENT
 		x = 1
 		y = 1
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -7835,7 +7949,7 @@ focus_tree = {
 		relative_position_id = KX_PL_PG_CASH_CROPS
 		x = 0
 		y = 1
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -7847,22 +7961,6 @@ focus_tree = {
 		}
 	}
 
-<<<<<<< HEAD
-=======
-
-
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> parent of 19ad5adc3 (Merge branch 'master' of https://github.com/rx00000xn/kxx-gitversion)
     ### Army Tree ###
 	focus = {
 		id = POL_The_General_Inspectorate
@@ -10143,14 +10241,7 @@ focus_tree = {
 	focus = {
     id = POL_soc_victory_of_the_people
     icon = GFX_goal_POL_ZPP
-    allow_branch = {
-      NOT = {
-        has_country_leader = {
-          name = "海克·甘德松斯基"  # Heck Gandersoński
-          ruling_only = yes
-        }
-      }
-    }
+    
 	prerequisite = {
 			focus = KX_PL_KPP_INTERNATIONALISM
 		}	
@@ -11873,7 +11964,7 @@ focus_tree = {
 	focus = {
 		id = PLX_PLC_join_with_france
 		icon = GFX_goal_AUS_paris_london_envoy
-		cost = 3.00
+		cost = 4.00
 		prerequisite = {
 			focus = PLX_PLC_the_revolution
 		}
@@ -11942,11 +12033,7 @@ focus_tree = {
 	focus = {
 		id = PLX_PLC_strike_east
 		icon = GFX_goal_GER_Butcher_Russian_Bear
-<<<<<<< HEAD
 		cost = 4.00
-=======
-		cost = 3.00
->>>>>>> parent of 19ad5adc3 (Merge branch 'master' of https://github.com/rx00000xn/kxx-gitversion)
 		available = { NOT = { is_in_faction_with = GER } }
 		prerequisite = {
 			focus = PLX_PLC_our_natural_borders
@@ -11990,11 +12077,7 @@ focus_tree = {
 	focus = {
 		id = PLX_PLC_strike_south
 		icon = GFX_goal_GAL_divide_nation
-<<<<<<< HEAD
 		cost = 4.00
-=======
-		cost = 3.00
->>>>>>> parent of 19ad5adc3 (Merge branch 'master' of https://github.com/rx00000xn/kxx-gitversion)
 		prerequisite = {
 			focus = PLX_PLC_our_natural_borders
 		}
@@ -12074,11 +12157,7 @@ focus_tree = {
 	focus = {
 		id = PLX_PLC_ruthenian_invitation
 		icon = GFX_goal_AUS_brest_litovsk
-<<<<<<< HEAD
 		cost = 4.00
-=======
-		cost = 3.00
->>>>>>> parent of 19ad5adc3 (Merge branch 'master' of https://github.com/rx00000xn/kxx-gitversion)
 		prerequisite = {
 			focus = PLX_PLC_the_greater_commonwealth
 		}
@@ -12109,11 +12188,7 @@ focus_tree = {
 	focus = {
 		id = PLX_PLC_galician_referendum
 		icon = GFX_goal_POL_union
-<<<<<<< HEAD
 		cost = 4.00
-=======
-		cost = 3.00
->>>>>>> parent of 19ad5adc3 (Merge branch 'master' of https://github.com/rx00000xn/kxx-gitversion)
 		prerequisite = {
 			focus = PLX_PLC_the_greater_commonwealth
 		}
@@ -15454,14 +15529,7 @@ focus_tree = {
 	focus = {
     id = PLX_POL_Undivine_Comedy
     icon = GFX_goal_POL_Undivine_Comedy
-    allow_branch = {
-      NOT = {
-        has_country_leader = {
-          name = "海克·甘德松斯基"  # Heck Gandersoński
-          ruling_only = yes
-        }
-      }
-    }
+    
     available = {
       has_country_flag = POL_Undivine_Anarchists
     }
@@ -15496,7 +15564,7 @@ focus_tree = {
     relative_position_id = PLX_POL_Undivine_Comedy
     x = -1
     y = 1
-    cost = 3
+    cost = 4
     ai_will_do = {
       factor = 50
     }
@@ -15653,14 +15721,7 @@ focus_tree = {
   focus = {
     id = PLX_POL_Reborn_Through_Faith
     icon = GFX_goal_POL_Reborn_Through_Faith
-    allow_branch = {
-      NOT = {
-        has_country_leader = {
-          name = "海克·甘德松斯基"  # Heck Gandersoński
-          ruling_only = yes
-        }
-      }
-    }
+    
     available = {
       has_country_flag = POL_christian_takeover
     }
@@ -15738,7 +15799,7 @@ focus_tree = {
     relative_position_id = PLX_POL_Reborn_Through_Faith
     x = 0
     y = 1
-    cost = 3
+    cost = 4
     ai_will_do = {
       factor = 1500
     }
@@ -15759,7 +15820,7 @@ focus_tree = {
     relative_position_id = PLX_POL_Convince_Chadecja
     x = 0
     y = 1
-    cost = 3
+    cost = 4
     ai_will_do = {
       factor = 1500
     }
@@ -15854,7 +15915,7 @@ focus_tree = {
     relative_position_id = PLX_POL_Cleanse_Whites_Reds
     x = 0
     y = 1
-    cost = 3
+    cost = 4
     ai_will_do = {
       factor = 1500
     }
@@ -15886,7 +15947,7 @@ focus_tree = {
     relative_position_id = PLX_POL_Convene_Holy_Council
     x = -8
     y = 1
-    cost = 3
+    cost = 4
     ai_will_do = {
       factor = 1500
     }
@@ -15914,7 +15975,7 @@ focus_tree = {
     relative_position_id = PLX_POL_Convene_Holy_Council
     x = 0
     y = 1
-    cost = 3
+    cost = 4
     ai_will_do = {
       factor = 1550
     }
@@ -15942,7 +16003,7 @@ focus_tree = {
     relative_position_id = PLX_POL_Convene_Holy_Council
     x = 8
     y = 1
-    cost = 3
+    cost = 4
     ai_will_do = {
       factor = 1550
     }
@@ -15969,7 +16030,7 @@ focus_tree = {
     relative_position_id = PLX_POL_GWL_Win
     x = -2
     y = 1
-    cost = 3
+    cost = 4
     ai_will_do = {
       factor = 50
     }
@@ -16020,7 +16081,7 @@ focus_tree = {
     relative_position_id = PLX_POL_GWL_Win
     x = 0
     y = 1
-    cost = 7
+    cost = 4
     ai_will_do = {
       factor = 50
     }
@@ -16050,7 +16111,7 @@ focus_tree = {
     relative_position_id = PLX_POL_Gather_Reliques
     x = 0
     y = 1
-    cost = 3
+    cost = 4
     ai_will_do = {
       factor = 50
     }
@@ -16108,7 +16169,7 @@ focus_tree = {
     relative_position_id = PLX_POL_Forgotten_Ancestors
     x = 0
     y = 1
-    cost = 3
+    cost = 4
     ai_will_do = {
       factor = 50
     }
@@ -16140,7 +16201,7 @@ focus_tree = {
     relative_position_id = PLX_POL_Prepare_Great_Ritual
     x = 0
     y = 1
-    cost = 7
+    cost = 4
     ai_will_do = {
       factor = 50
     }
@@ -16168,7 +16229,7 @@ focus_tree = {
     relative_position_id = PLX_POL_Second_Coming
     x = 4
     y = 1
-    cost = 3
+    cost = 4
     ai_will_do = {
       factor = 50
     }
@@ -16222,7 +16283,7 @@ focus_tree = {
     relative_position_id = PLX_POL_Forgotten_Ancestors
     x = 2
     y = 0
-    cost = 3
+    cost = 4
     ai_will_do = {
       factor = 50
     }
@@ -16344,7 +16405,7 @@ focus_tree = {
     relative_position_id = PLX_POL_Procession_Wawel
     x = 0
     y = 1
-    cost = 9
+    cost = 4
     ai_will_do = {
       factor = 50
     }
@@ -16426,7 +16487,7 @@ focus_tree = {
     relative_position_id = PLX_POL_Land_Stanislaus
     x = 0
     y = 1
-    cost = 7
+    cost = 4
     ai_will_do = {
       factor = 50
     }
@@ -16450,7 +16511,7 @@ focus_tree = {
     relative_position_id = PLX_POL_Enthrone_Rightous_King
     x = 0
     y = 1
-    cost = 3
+    cost = 4
     ai_will_do = {
       factor = 50
     }
@@ -16537,7 +16598,7 @@ focus_tree = {
     relative_position_id = PLX_POL_KSB_Win
     x = -2
     y = 1
-    cost = 7
+    cost = 4
     ai_will_do = {
       factor = 50
     }
@@ -16567,7 +16628,7 @@ focus_tree = {
     relative_position_id = PLX_POL_Lithuania_Homeland
     x = 0
     y = 1
-    cost = 9
+    cost = 4
     ai_will_do = {
       factor = 50
     }
@@ -16672,7 +16733,7 @@ focus_tree = {
     relative_position_id = PLX_POL_KSB_Win
     x = 2
     y = 1
-    cost = 3
+    cost = 4
     ai_will_do = {
       factor = 50
     }
@@ -16693,7 +16754,7 @@ focus_tree = {
     relative_position_id = PLX_POL_Oldest_Brothers
     x = 0
     y = 1
-    cost = 3
+    cost = 4
     ai_will_do = {
       factor = 50
     }
@@ -16723,7 +16784,7 @@ focus_tree = {
     relative_position_id = PLX_POL_National_Socialists
     x = 0
     y = 1
-    cost = 7
+    cost = 4
     ai_will_do = {
       factor = 50
     }
@@ -16747,7 +16808,7 @@ focus_tree = {
     relative_position_id = PLX_POL_Messiah_Rises
     x = -4
     y = 1
-    cost = 3
+    cost = 4
     ai_will_do = {
       factor = 50
     }
@@ -17118,7 +17179,7 @@ focus_tree = {
   focus = {
 		id = PLX_POL_Renovate_The_University_Of_Warsaw
 		icon = GFX_focus_POL_nationalist_education #GFX_goal_PAN_Create_the_Universidad_de_Panama
-		cost = 5
+		cost = 4
 
 		relative_position_id = PLX_POL_new_universities
 		x = -1
@@ -17450,7 +17511,7 @@ focus_tree = {
 		relative_position_id = PLX_POL_central_arms
 		x = -1
 		y = 1
-		cost = 6
+		cost = 4
 		ai_will_do = {
 			factor = 10
 		}
@@ -17555,7 +17616,7 @@ focus_tree = {
   focus = {
 		id = PLX_POL_Expansion_Of_The_Electrical_Grid
 		icon = GFX_focus_generic_electricity
-		cost = 5
+		cost = 4
 
 		relative_position_id = PLX_POL_attract_investments
 		x = -1
@@ -17585,7 +17646,7 @@ focus_tree = {
 	focus = {
 		id = PLX_POL_Expand_The_Chemical_Industry
 		icon = GFX_goal_basic_oil
-		cost = 5
+		cost = 4
 
 		relative_position_id = PLX_POL_attract_investments
 		x = 1
@@ -17845,14 +17906,7 @@ focus_tree = {
   focus = {
     id = PLX_POL_the_great_debate
     icon = GFX_goal_POL_Regency_Thing
-    allow_branch = {
-      NOT = {
-        has_country_leader = {
-          name = "海克·甘德松斯基"  # Heck Gandersoński
-          ruling_only = yes
-        }
-      }
-    }
+    
     available = {
       OR = {
         POL_has_regency_council = yes
@@ -17862,11 +17916,7 @@ focus_tree = {
     cancelable = no
     x = 60
     y = 30
-<<<<<<< HEAD
     cost = 4
-=======
-    cost = 30
->>>>>>> parent of 19ad5adc3 (Merge branch 'master' of https://github.com/rx00000xn/kxx-gitversion)
     ai_will_do = {
       factor = 100
     }
@@ -17877,16 +17927,7 @@ focus_tree = {
   focus = {
     id = PLX_POL_False_Piast
     icon = GFX_goal_pol_piast
-    allow_branch = {
-      NOT = {
-        has_country_leader = {
-          name = "海克·甘德松斯基"  # Heck Gandersoński
-          ruling_only = yes
-        }
-      }
-    }
     available = {
-<<<<<<< HEAD
       has_country_leader = { 
 		name = "帕维乌一世·萨尔瓦托" 
 		ruling_only = yes 
@@ -17922,20 +17963,13 @@ focus_tree = {
 		name = "安德烈一世" 
 		ruling_only = yes 
 	}
-=======
-      has_country_flag = POL_Pawel_Salwator
->>>>>>> parent of 19ad5adc3 (Merge branch 'master' of https://github.com/rx00000xn/kxx-gitversion)
     }
     prerequisite = {
       focus = PLX_POL_the_great_debate
     }
-    mutually_exclusive = {
-      focus = POL_polish_king
-      focus = POL_mendog_iii
-      focus = POL_von_hohenzollern
-    }
+    
     relative_position_id = PLX_POL_the_great_debate
-    x = 0
+    x = -3
     y = 1
     cost = 2.9
     ai_will_do = {
@@ -17944,7 +17978,6 @@ focus_tree = {
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus POL_False_Piast"
       add_political_power = 100
-<<<<<<< HEAD
       
     }
     search_filters = {
@@ -18410,20 +18443,6 @@ focus_tree = {
       log = "[GetDateText]: [Root.GetName]: Focus POL_False_Piast"
       add_political_power = 100
       add_stability = 0.1
-=======
-      add_popularity = {
-        ideology = social_liberal
-        popularity = 0.10
-      }
-      add_popularity = {
-        ideology = market_liberal
-        popularity = 0.05
-      }
-      add_popularity = {
-        ideology = social_democrat
-        popularity = 0.05
-      }
->>>>>>> parent of 19ad5adc3 (Merge branch 'master' of https://github.com/rx00000xn/kxx-gitversion)
     }
     search_filters = {
       FOCUS_FILTER_POLITICAL
@@ -18432,37 +18451,27 @@ focus_tree = {
   focus = {
     id = PLX_POL_polish_king
     icon = GFX_goal_POL_polish_king
-    allow_branch = {
-      NOT = {
-        has_country_leader = {
-          name = "海克·甘德松斯基"  # Heck Gandersoński
-          ruling_only = yes
-        }
-      }
-    }
+    
     available = {
-      OR = {
-        POL_king_augustyn = yes
-        POL_king_janusz = yes
-      }
+		OR = {
+			has_country_leader = { 
+				name = "奥古斯丁一世" 
+				ruling_only = yes 
+			}
+			has_country_leader = { 
+				name = "雅纽什一世" 
+				ruling_only = yes 
+			}
+		}
+     
     }
     prerequisite = {
       focus = PLX_POL_the_great_debate
     }
-    mutually_exclusive = {
-      focus = PLX_POL_False_Piast
-      focus = PLX_POL_mendog_iii
-      focus = PLX_POL_von_hohenzollern
-    }
-    select_effect = {
-      country_event = {
-        id = poland.209
-        days = 80
-        random_days = 20
-      }
-    }
+   
+    
     relative_position_id = PLX_POL_the_great_debate
-    x = -3
+    x = -11
     y = 1
     cost = 2.9
     ai_will_do = {
@@ -18471,26 +18480,7 @@ focus_tree = {
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus POL_polish_king"
       add_political_power = 100
-      add_popularity = {
-        ideology = authoritarian_democrat
-        popularity = 0.20
-      }
-      add_popularity = {
-        ideology = paternal_autocrat
-        popularity = 0.05
-      }
-      add_popularity = {
-        ideology = social_conservative
-        popularity = 0.05
-      }
-      reverse_add_opinion_modifier = {
-        target = AUS
-        modifier = KR_disapproves_of_govt
-      }
-      reverse_add_opinion_modifier = {
-        target = GER
-        modifier = KR_hates_govt
-      }
+      
     }
     search_filters = {
       FOCUS_FILTER_POLITICAL
@@ -18500,7 +18490,6 @@ focus_tree = {
     id = PLX_POL_a_new_constitution
     icon = GFX_goal_POL_Write_New_Constitution
     prerequisite = {
-      focus = PLX_POL_False_Piast
       focus = PLX_POL_polish_king
     }
     relative_position_id = PLX_POL_polish_king
@@ -18513,7 +18502,7 @@ focus_tree = {
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus POL_a_new_constitution"
       add_political_power = 200
-      country_event = poland.8
+      add_ideas = POL_true_polish_king
     }
     search_filters = {
       FOCUS_FILTER_POLITICAL
@@ -18534,7 +18523,7 @@ focus_tree = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus POL_line_of_succession"
-      add_political_power = 25
+      add_political_power = 100
       add_stability = 0.1
     }
     search_filters = {
@@ -18559,7 +18548,7 @@ focus_tree = {
       log = "[GetDateText]: [Root.GetName]: Focus POL_the_peoples_king"
       add_political_power = 50
       add_ideas = POL_peoples_king_idea
-      add_ideas = POL_true_polish_king
+      
     }
     search_filters = {
       FOCUS_FILTER_ARMY_BONUS
@@ -18573,7 +18562,17 @@ focus_tree = {
       focus = PLX_POL_polish_king
       focus = PLX_POL_mendog_iii
       focus = PLX_POL_von_hohenzollern
+	  focus = PLX_POL_romanian_king
+	  focus = PLX_POL_russian_king
+	  focus = PLX_POL_hunagarian_king
+	  focus = PLX_POL_nap_king
+	  focus = PLX_POL_False_Piast
+	  focus = PLX_POL_sobieski
+	  focus = PLX_POL_pilsudski
     }
+	available = {
+		has_government = paternal_autocrat
+	}
     mutually_exclusive = {
       focus = PLX_POL_reform_the_monarchy
     }
@@ -18638,18 +18637,28 @@ focus_tree = {
       FOCUS_FILTER_POLITICAL
     }
   }
+  
   focus = {
     id = PLX_POL_reform_the_monarchy
     icon = GFX_goal_POL_Reform_Monarchy
-    prerequisite = {
-      focus = PLX_POL_False_Piast
+     prerequisite = {
       focus = PLX_POL_polish_king
       focus = PLX_POL_mendog_iii
       focus = PLX_POL_von_hohenzollern
+	  focus = PLX_POL_romanian_king
+	  focus = PLX_POL_russian_king
+	  focus = PLX_POL_hunagarian_king
+	  focus = PLX_POL_nap_king
+	  focus = PLX_POL_False_Piast
+	  focus = PLX_POL_sobieski
+	  focus = PLX_POL_pilsudski
     }
     mutually_exclusive = {
       focus = PLX_POL_absolutism
     }
+	available = {
+		has_government = authoritarian_democrat
+	}
     relative_position_id = PLX_POL_the_great_debate
     x = 1
     y = 2
@@ -18712,40 +18721,23 @@ focus_tree = {
   focus = {
     id = PLX_POL_mendog_iii
     icon = GFX_goal_POL_lithuanian_king
-    allow_branch = {
-      NOT = {
-        has_country_leader = {
-          name = "海克·甘德松斯基"  # Heck Gandersoński
-          ruling_only = yes
-        }
-      }
-    }
+    
     available = {
-      OR = {
-        POL_king_mendog = yes
+      
+        
         has_country_leader = {
-          name = "卢茨扬·热利戈夫斯基"  # Lucjan Żeligowski
+          name = "瓦迪斯瓦夫五世"  
           ruling_only = yes
         }
-      }
+      
     }
     prerequisite = {
       focus = PLX_POL_the_great_debate
     }
-    mutually_exclusive = {
-      focus = PLX_POL_False_Piast
-      focus = PLX_POL_polish_king
-      focus = PLX_POL_von_hohenzollern
-    }
-    select_effect = {
-      country_event = {
-        id = poland.209
-        days = 80
-        random_days = 20
-      }
-    }
+    
+   
     relative_position_id = PLX_POL_the_great_debate
-    x = 3
+    x = 5
     y = 1
     cost = 2.9
     ai_will_do = {
@@ -18754,18 +18746,7 @@ focus_tree = {
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus POL_mendog_iii"
       add_political_power = 100
-      add_popularity = {
-        ideology = paternal_autocrat
-        popularity = 0.20
-      }
-      add_popularity = {
-        ideology = authoritarian_democrat
-        popularity = 0.05
-      }
-      add_popularity = {
-        ideology = national_populist
-        popularity = 0.05
-      }
+      
       reverse_add_opinion_modifier = {
         target = AUS
         modifier = KR_disapproves_of_govt
@@ -18783,7 +18764,6 @@ focus_tree = {
       FOCUS_FILTER_POLITICAL
     }
   }
-<<<<<<< HEAD
    focus = {
     id = PLX_POL_sobieski
     icon = GFX_goal_POL_sobieski
@@ -18996,8 +18976,6 @@ focus_tree = {
       FOCUS_FILTER_POLITICAL
     }
   }
-=======
->>>>>>> parent of 19ad5adc3 (Merge branch 'master' of https://github.com/rx00000xn/kxx-gitversion)
   focus = {
     id = PLX_POL_minority_rights
     icon = GFX_goal_COR_Equal_Economic_Political_Legal_Rights
@@ -19005,7 +18983,7 @@ focus_tree = {
       focus = PLX_POL_mendog_iii
     }
     relative_position_id = PLX_POL_the_great_debate
-    x = 3
+    x = 5
     y = 2
     cost = 4
     ai_will_do = {
@@ -19029,8 +19007,6 @@ focus_tree = {
       country_exists = LIT
       LIT = {
         exists = yes
-        is_in_faction = no
-        is_subject = no
         has_war = no
       }
     }
@@ -19038,7 +19014,7 @@ focus_tree = {
       focus = PLX_POL_minority_rights
     }
     relative_position_id = PLX_POL_the_great_debate
-    x = 3
+    x = 5
     y = 3
     cost = 4
     ai_will_do = {
@@ -19059,8 +19035,7 @@ focus_tree = {
       has_war = no
       country_exists = LIT
       LIT = {
-        is_in_faction = no
-        is_subject = no
+    
         has_war = no
       }
     }
@@ -19068,7 +19043,7 @@ focus_tree = {
       focus = PLX_POL_vilinus_accord
     }
     relative_position_id = PLX_POL_the_great_debate
-    x = 3
+    x = 5
     y = 4
     cost = 4
     ai_will_do = {
@@ -19084,34 +19059,19 @@ focus_tree = {
   focus = {
     id = PLX_POL_von_hohenzollern
     icon = GFX_goal_POL_saxon_king
-    allow_branch = {
-      NOT = {
-        has_country_leader = {
-          name = "海克·甘德松斯基"  # Heck Gandersoński
+    
+    available = {
+      has_country_leader = {
+          name = "弗雷德里克二世·克里斯蒂安"  #
           ruling_only = yes
         }
-      }
-    }
-    available = {
-      POL_king_fryderyk = yes
     }
     prerequisite = {
       focus = PLX_POL_the_great_debate
     }
-    mutually_exclusive = {
-      focus = PLX_POL_False_Piast
-      focus = PLX_POL_polish_king
-      focus = PLX_POL_mendog_iii
-    }
-    select_effect = {
-      country_event = {
-        id = poland.209
-        days = 80
-        random_days = 20
-      }
-    }
+   
     relative_position_id = PLX_POL_the_great_debate
-    x = 5
+    x = 11
     y = 1
     cost = 2.9
     ai_will_do = {
@@ -19119,19 +19079,8 @@ focus_tree = {
     }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus POL_von_hohenzollern"
-      add_political_power = 50
-      add_popularity = {
-        ideology = paternal_autocrat
-        popularity = 0.20
-      }
-      add_popularity = {
-        ideology = authoritarian_democrat
-        popularity = 0.05
-      }
-      add_popularity = {
-        ideology = national_populist
-        popularity = 0.05
-      }
+      add_political_power = 100
+      
       reverse_add_opinion_modifier = {
         target = GER
         modifier = KR_close_allies
@@ -19140,21 +19089,7 @@ focus_tree = {
         target = AUS
         modifier = KR_hates_govt
       }
-      if = {
-        limit = {
-          country_exists = GER
-          NOT = {
-            is_in_faction_with = GER
-            has_war_with = GER
-          }
-          GER = {
-            is_faction_leader = yes
-          }
-        }
-        GER = {
-          country_event = poland.38
-        }
-      }
+      
     }
     search_filters = {
       FOCUS_FILTER_POLITICAL
@@ -19196,7 +19131,7 @@ focus_tree = {
     }
     relative_position_id = PLX_POL_german_advisors
     x = 0
-    y = 2
+    y = 1
     cost = 4
     ai_will_do = {
       factor = 10
@@ -19231,7 +19166,7 @@ focus_tree = {
     }
     relative_position_id = PLX_POL_von_hohenzollern
     x = 1
-    y = 2
+    y = 3
     cost = 4
     ai_will_do = {
       factor = 10
@@ -19253,12 +19188,10 @@ focus_tree = {
 	available = {
 	  has_country_flag = POL_Temporal_Rift
 	}
-	allow_branch = {
-		  has_country_flag = POL_Temporal_Rift
-	  }
+	
 	x = 24
 	y = 46
-	cost = 6
+	cost = 4
 	ai_will_do = {
 		factor = 1500
 	}
@@ -19307,7 +19240,7 @@ focus_tree = {
 			relative_position_id = PLX_POL_Many_Years_Domination
 	x = -3
 	y = 1
-	cost = 3.3
+	cost = 4.3
 	ai_will_do = {
 		factor = 50
 	}
@@ -19331,7 +19264,7 @@ focus_tree = {
 			relative_position_id = PLX_POL_Never_Interrupt_Your_Enemy
 	x = 1
 	y = 1
-	cost = 5
+	cost = 4
 	ai_will_do = {
 		factor = 50
 	}
@@ -19351,7 +19284,7 @@ focus_tree = {
 			relative_position_id = PLX_POL_Many_Years_Domination
 	x = -1
 	y = 1
-	cost = 6.4
+	cost = 4.4
 	ai_will_do = {
 		factor = 50
 	}
@@ -19424,7 +19357,7 @@ focus_tree = {
 			relative_position_id = PLX_POL_Many_Years_Domination
 	x = 3
 	y = 1
-	cost = 5.9
+	cost = 4.9
 	ai_will_do = {
 		factor = 50
 	}
@@ -19448,7 +19381,7 @@ focus_tree = {
 			relative_position_id = PLX_POL_Many_Years_Domination
 	x = 5
 	y = 1
-	cost = 6
+	cost = 4
 	ai_will_do = {
 		factor = 50
 	}
@@ -19505,7 +19438,7 @@ focus_tree = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus POL_Concerto_Midnight_Sun" 
-					create_country_leader = {
+			create_country_leader = {
 			   name = "马泰乌什·莫拉维茨基"
 			   picture = "gfx/leaders/POL/Portrait_POL_Mateusz_Morawiecki.png"
 			   expire = "1965.1.1"
@@ -19555,7 +19488,7 @@ focus_tree = {
 		relative_position_id = KX_PL_esoterics_TAKES_POWER
 		x = -2
 		y = 1
-		cost = 7 #?
+		cost = 4 #?
 		ai_will_do = {
 			factor = 100
 		}
@@ -19575,7 +19508,7 @@ focus_tree = {
 		relative_position_id = KX_PL_esoterics_TAKES_POWER
 		x = 2
 		y = 1
-		cost = 7 #?
+		cost = 4 #?
 		ai_will_do = {
 			factor = 100
 		}
@@ -19595,7 +19528,7 @@ focus_tree = {
 		relative_position_id = KX_PL_esoterics_TAKES_POWER
 		x = 0
 		y = 1
-		cost = 7 #?
+		cost = 4 #?
 		ai_will_do = {
 			factor = 100
 		}
@@ -19618,7 +19551,7 @@ focus_tree = {
 		relative_position_id = KX_PL_ZSP_CREATE_CONSUMER_SYNDICATES
 		x = -1
 		y = 1
-		cost = 7 #?
+		cost = 4 #?
 		ai_will_do = {
 			factor = 100
 		}
@@ -19644,7 +19577,7 @@ focus_tree = {
 		relative_position_id = KX_PL_ZSP_ABOLISH_PRIVATE_PROPERTY
 		x = -1
 		y = 1
-		cost = 7 #?
+		cost = 4 #?
 		ai_will_do = {
 			factor = 100
 		}
@@ -19673,7 +19606,7 @@ focus_tree = {
 		relative_position_id = KX_PL_ZSP_AUTONOMISATION
 		x = 0
 		y = 1
-		cost = 7 #?
+		cost = 4 #?
 		ai_will_do = {
 			factor = 100
 		}
@@ -19699,7 +19632,7 @@ focus_tree = {
 		relative_position_id = KX_PL_ZSP_FOUND_PRODUCTION_SYNDICATES
 		x = 0
 		y = 1
-		cost = 7 #?
+		cost = 4 #?
 		ai_will_do = {
 			factor = 100
 		}
@@ -19773,7 +19706,7 @@ focus_tree = {
 		relative_position_id = KX_PL_ZSP_HEMPELS_CENTER
 		x = 2
 		y = 1
-		cost = 5 #?
+		cost = 4 #?
 		ai_will_do = {
 			factor = 100
 		}
@@ -19799,7 +19732,7 @@ focus_tree = {
 		relative_position_id = KX_PL_ZSP_GODLESS_RELIGION
 		x = -1
 		y = 1
-		cost = 5 #?
+		cost = 4 #?
 		ai_will_do = {
 			factor = 100
 		}
@@ -19822,7 +19755,7 @@ focus_tree = {
 		relative_position_id = KX_PL_ZSP_GODLESS_RELIGION
 		x = 1
 		y = 1
-		cost = 5 #?
+		cost = 4 #?
 		ai_will_do = {
 			factor = 100
 		}
@@ -19868,7 +19801,7 @@ focus_tree = {
 	#	relative_position_id = KX_PL_ZSP_A_TRULY_FREE_SYSTEM
 	#	x = -4
 	#	y = 1
-	#	cost = 6 #?
+	#	cost = 4 #?
 	#	ai_will_do = {
 	#		factor = 100
 	#	}
@@ -19889,7 +19822,7 @@ focus_tree = {
 		relative_position_id = KX_PL_ZSP_HEMPELS_CENTER
 		x = -2
 		y = 1
-		cost = 10
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -19910,7 +19843,7 @@ focus_tree = {
 		relative_position_id = KX_PL_ZSP_GMINY_FEDERALISM
 		x = 1
 		y = 1
-		cost = 10
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -19942,7 +19875,7 @@ focus_tree = {
 		relative_position_id = KX_PL_ZSP_GMINY_FEDERALISM
 		x = -1
 		y = 1
-		cost = 10
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -19977,7 +19910,7 @@ focus_tree = {
 		relative_position_id = KX_PL_ZSP_ELECTIVE_BUREAUCRACY_2
 		x = -1
 		y = 1
-		cost = 10
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -20000,7 +19933,7 @@ focus_tree = {
 	#	relative_position_id = KX_PL_ZSP_DEMOCRATIC_NATIONAL_SYNDICALISM
 	#	x = -1
 	#	y = 1
-	#	cost = 6 #?
+	#	cost = 4 #?
 	#	ai_will_do = {
 	#		factor = 100
 	#	}
@@ -20044,7 +19977,7 @@ focus_tree = {
 		relative_position_id = KX_PL_ZSP_BIERUTS_NATIONALISM
 		x = 2
 		y = 1
-		cost = 9 #?
+		cost = 4 #?
 		ai_will_do = {
 			factor = 100
 		}
@@ -20064,7 +19997,7 @@ focus_tree = {
 		relative_position_id = KX_PL_ZSP_CENTRAL_SYNDICATE
 		x = 1
 		y = 1
-		cost = 10
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -20096,7 +20029,7 @@ focus_tree = {
 		relative_position_id = KX_PL_ZSP_CENTRAL_SYNDICATE
 		x = -1
 		y = 1
-		cost = 10
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -20131,7 +20064,7 @@ focus_tree = {
 		relative_position_id = KX_PL_ZSP_NAIL_TO_SMALL_ENTRPRENEURSHIP
 		x = 1
 		y = 1
-		cost = 10
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -20145,7 +20078,7 @@ focus_tree = {
   focus = {
 	id = POL_In_Zakrzewskis_Light
 	icon = GFX_goal_ideology_totalist
-	cost = 7
+	cost = 4
 
 	relative_position_id = KX_PL_ZSP_TAKES_POWER
 	x = 9
@@ -20171,7 +20104,7 @@ focus_tree = {
 focus = {
 	id = POL_Sorelian_Doctrine
 	icon = GFX_goal_FRA_sorelians
-	cost = 7
+	cost = 4
 
 	relative_position_id = POL_In_Zakrzewskis_Light
 	x = -1
@@ -20193,7 +20126,7 @@ focus = {
 focus = {
 	id = POL_Moral_Syndicalism
 	icon = GFX_goal_ALB_Reinforce_Syndicalist_System
-	cost = 7
+	cost = 4
 
 	relative_position_id = POL_In_Zakrzewskis_Light
 	x = -2
@@ -20216,7 +20149,7 @@ focus = {
 focus = {
 	id = POL_Catholic_Social_Teaching
 	icon = GFX_goal_CZE_respective_church
-	cost = 7
+	cost = 4
 
 	relative_position_id = POL_In_Zakrzewskis_Light
 	x = 1
@@ -20237,7 +20170,7 @@ focus = {
 focus = {
 	id = POL_Proletarian_Nationalism
 	icon = GFX_goal_POL_Not_Yet_Lost
-	cost = 7
+	cost = 4
 
 	relative_position_id = POL_In_Zakrzewskis_Light
 	x = 2
@@ -20257,7 +20190,7 @@ focus = {
 focus = {
 	id = POL_Pilsudskis_Vision
 	icon = GFX_ITA_syndicalist_unite
-	cost = 7
+	cost = 4
 
 	relative_position_id = POL_Moral_Syndicalism
 	x = 2
@@ -20294,11 +20227,7 @@ focus = {
 focus = {
 	id = POL_Red_Intermarium
 	icon = GFX_goal_POL_intermarium
-<<<<<<< HEAD
 	cost = 4
-=======
-	cost = 7
->>>>>>> parent of 19ad5adc3 (Merge branch 'master' of https://github.com/rx00000xn/kxx-gitversion)
 
 	relative_position_id = POL_Pilsudskis_Vision
 	x = -1
@@ -20345,11 +20274,7 @@ focus = {
 focus = {
 	id = POL_Central_European_Commonwealth
 	icon = GFX_goal_POL_Spreading_Revolution
-<<<<<<< HEAD
 	cost = 4
-=======
-	cost = 7
->>>>>>> parent of 19ad5adc3 (Merge branch 'master' of https://github.com/rx00000xn/kxx-gitversion)
 
 	relative_position_id = POL_Pilsudskis_Vision
 	x = 1
@@ -20418,7 +20343,7 @@ focus = {
 		#mutually_exclusive = {
 		#	focus = KX_PL_PNPR_WINS_ELECTIONS
 		#}	
-		x = -8
+		x = -6
 		y = 8
 		cost = 1
 		ai_will_do = {
@@ -20755,20 +20680,8 @@ focus = {
 			factor = 100
 		}
 		completion_reward = {
-			if ={
-				limit = { has_country_leader = { name = "卡罗尔·奥布拉希特二世" ruling_only = yes } }
-				add_ideas = PLX_pps_guided_democracy_1
-			}
-			if ={
-				limit = { has_country_leader = { name = "诺伯特·巴利奇" ruling_only = yes } }
-				add_ideas = PLX_pps_guided_democracy_1
-				hidden_effect = {
-					country_event = {
-						id = plxv2.009
-						days = 7
-					}		
-				}	
-			}
+			add_ideas = PLX_pps_guided_democracy_1
+			
 		}
 	}	
 	focus = {
@@ -21047,11 +20960,7 @@ focus = {
 		#mutually_exclusive = {
 		#	focus = KX_PL_PNPR_WINS_ELECTIONS
 		#}	
-<<<<<<< HEAD
 		x = 3
-=======
-		x = 1
->>>>>>> parent of 19ad5adc3 (Merge branch 'master' of https://github.com/rx00000xn/kxx-gitversion)
 		y = 8
 		cost = 1
 		ai_will_do = {
@@ -21155,7 +21064,7 @@ focus = {
 	}	
 	focus = {
 		id = KX_PLX_PSL_Populist_Rhetoric
-		icon = GFX_RUS_Party_Lands_Peoples_Reform
+		icon = GFX_goal_SWE_land_to_people
 		available = {
 			has_country_flag = plx_psl_rules
 		}
@@ -21476,7 +21385,7 @@ focus = {
 		relative_position_id = KX_PLX_PSL_Look_to_City
 		x = 0
 		y = 1
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -21596,11 +21505,7 @@ focus = {
 		#mutually_exclusive = {
 		#	focus = KX_PL_PSL_WINS_ELECTIONS
 		#}	
-<<<<<<< HEAD
 		x = 16
-=======
-		x = 11
->>>>>>> parent of 19ad5adc3 (Merge branch 'master' of https://github.com/rx00000xn/kxx-gitversion)
 		y = 8
 		cost = 1
 		ai_will_do = {
@@ -21616,7 +21521,7 @@ focus = {
 		icon = GFX_goal_NZL_conservative_outreach
 		available = {
 			has_country_flag = plx_chadecja_rules
-			has_country_flag = plx_chadecja_left
+			has_country_flag = plx_chadecja_center
 		}
 		mutually_exclusive = {
 			focus = KX_PL_Chadecja_Cooperate_with_NatDem
@@ -21636,7 +21541,6 @@ focus = {
 		}
 	}
 	focus = {
-<<<<<<< HEAD
 		id = KX_PL_Chadecja_Left
 		icon = GFX_goal_TEX_christian_nat_crusade
 		available = {
@@ -21991,8 +21895,6 @@ focus = {
 		}
 	}
 	focus = {
-=======
->>>>>>> parent of 19ad5adc3 (Merge branch 'master' of https://github.com/rx00000xn/kxx-gitversion)
 		id = KX_PL_Commit_to_Constitution
 		icon = GFX_goal_MEX_maintain_the_plan
 		available = {
@@ -22041,7 +21943,9 @@ focus = {
 		}
 		prerequisite = {
 			focus = KX_PL_Chadecja_Stays_Pure
+			focus = KX_PL_Chadecja_Left
 		}
+	
 		relative_position_id = KX_PL_Chadecja_Stays_Pure
 		x = -1
 		y = 1
@@ -22355,68 +22259,7 @@ focus = {
 		}
 	}
 
-	focus = {
-		id = KX_PL_PNPR_RELIGIOUS_PLURALISM
-		icon = GFX_goal_GER_Religious_Freedom
-		available = {
-			#has_country_flag = plx_start
-		}
-		prerequisite = {
-			focus = KX_PL_PNPR_STABLE_PROGRESS
-			focus = KX_PL_PNPR_CLASS_COLABORATION
-		}			
-		relative_position_id = KX_PL_PNPR_STABLE_PROGRESS
-		x = -1
-		y = 1
-		cost = 4
-		ai_will_do = {
-			factor = 100
-		}
-		completion_reward = {
-			add_stability = 0.05		
-		}
-	}
-	focus = {
-		id = KX_PL_PNPR_AUTONOMY_FOR_MINORITIES
-		icon = GFX_TRM_Minorities_Government
-		available = {
-			#has_country_flag = plx_start
-		}
-		prerequisite = {
-			focus = KX_PL_PNPR_RELIGIOUS_PLURALISM
-		}			
-		relative_position_id = KX_PL_PNPR_RELIGIOUS_PLURALISM
-		x = -1
-		y = 1
-		cost = 4
-		ai_will_do = {
-			factor = 100
-		}
-		completion_reward = {
-			add_stability = 0.05		
-		}
-	}	
-	focus = {
-		id = KX_PL_PNPR_BUT_POLISH_PRIMACY
-		icon = GFX_goal_POL_Beacon_Polish_Spirit
-		available = {
-			#has_country_flag = plx_start
-		}
-		prerequisite = {
-			focus = KX_PL_PNPR_RELIGIOUS_PLURALISM
-		}			
-		relative_position_id = KX_PL_PNPR_RELIGIOUS_PLURALISM
-		x = 1
-		y = 1
-		cost = 4
-		ai_will_do = {
-			factor = 100
-		}
-		completion_reward = {
-			add_political_power = 50
-		}
-	}
-
+	
 	focus = {
 		id = KX_PL_PNPR_FURTHER_PROGRAM
 		icon = GFX_goal_AUS_Push_Forward_Womens_Movement
@@ -22424,7 +22267,6 @@ focus = {
 			#has_country_flag = plx_start
 		}
 		prerequisite = {
-<<<<<<< HEAD
 			focus = KX_PL_Chadecja_Creating_Welfare_State
 		}	
 		prerequisite = {
@@ -22433,16 +22275,6 @@ focus = {
 		relative_position_id = KX_PL_PNPR_CLASS_COLABORATION
 		x = 1
 		y = 3
-=======
-			focus = KX_PL_PNPR_BUT_POLISH_PRIMACY
-		}	
-		prerequisite = {
-			focus = KX_PL_PNPR_AUTONOMY_FOR_MINORITIES
-		}			
-		relative_position_id = KX_PL_PNPR_BUT_POLISH_PRIMACY
-		x = -1
-		y = 1
->>>>>>> parent of 19ad5adc3 (Merge branch 'master' of https://github.com/rx00000xn/kxx-gitversion)
 		cost = 4 #?
 		ai_will_do = {
 			factor = 100
@@ -22628,11 +22460,7 @@ focus = {
 		
 		x = -43
 		y = 5
-<<<<<<< HEAD
 		cost = 4
-=======
-		cost = 3
->>>>>>> parent of 19ad5adc3 (Merge branch 'master' of https://github.com/rx00000xn/kxx-gitversion)
 		ai_will_do = {
 			factor = 100
 		}
@@ -22649,7 +22477,7 @@ focus = {
 		prerequisite = {
 			focus = POL_national_socialists
 		}
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -22668,7 +22496,7 @@ focus = {
 		prerequisite = {
 			focus = POL_yesterday_today_tomorrow
 		}
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -22701,7 +22529,7 @@ focus = {
 		prerequisite = {
 			focus = POL_yesterday_today_tomorrow
 		}
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -22749,7 +22577,7 @@ focus = {
 		prerequisite = {
 			focus = POL_death_to_greedy_of_capitalism
 		}
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -22767,7 +22595,7 @@ focus = {
 		prerequisite = {
 			focus = POL_national_democratic_revoltion
 		}
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -22786,7 +22614,7 @@ focus = {
 		prerequisite = {
 			focus = POL_salute_to_marshall
 		}
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -22808,7 +22636,7 @@ focus = {
 		prerequisite = {
 			focus = POL_salute_to_marshall
 		}
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -22832,7 +22660,7 @@ focus = {
 		prerequisite = {
 			focus = POL_unity_of_people
 		}
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -22849,7 +22677,7 @@ focus = {
 		prerequisite = {
 			focus = POL_national_democratic_revoltion
 		}
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -22869,7 +22697,7 @@ focus = {
 		prerequisite = {
 			focus = POL_legacy_of_national_socialist_community
 		}
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -22889,7 +22717,7 @@ focus = {
 		prerequisite = {
 			focus = POL_legacy_of_national_socialist_community
 		}
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -22911,7 +22739,7 @@ focus = {
 		prerequisite = {
 			focus = POL_expel_jews
 		}
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -22932,7 +22760,7 @@ focus = {
 		prerequisite = {
 			focus = POL_national_democratic_revoltion
 		}
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -22949,7 +22777,7 @@ focus = {
 		prerequisite = {
 			focus = POL_labor_defeat_capitalism
 		}
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -22969,7 +22797,7 @@ focus = {
 		prerequisite = {
 			focus = POL_labor_defeat_capitalism
 		}
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -22992,7 +22820,7 @@ focus = {
 		prerequisite = {
 			focus = POL_massive_nationalization
 		}
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -23018,7 +22846,7 @@ focus = {
 		prerequisite = {
 			focus = POL_absolute_worker_power
 		}
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -23046,11 +22874,7 @@ focus = {
 		}
 		x = -52
 		y = 25
-<<<<<<< HEAD
 		cost = 4
-=======
-		cost = 3
->>>>>>> parent of 19ad5adc3 (Merge branch 'master' of https://github.com/rx00000xn/kxx-gitversion)
 		ai_will_do = {
 			factor = 100
 		}
@@ -23068,7 +22892,7 @@ focus = {
 		relative_position_id = POL_radical_healing_movement
 		x = 0
 		y = 1
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -23093,7 +22917,7 @@ focus = {
 		relative_position_id = POL_radical_healing_movement
 		x = 0
 		y = 2
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -23118,7 +22942,7 @@ focus = {
 		relative_position_id = POL_radical_healing_movement
 		x = 0
 		y = 3
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -23135,7 +22959,7 @@ focus = {
 		relative_position_id = POL_radical_healing_movement
 		x = -1
 		y = 4
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -23152,7 +22976,7 @@ focus = {
 		relative_position_id = POL_radical_healing_movement
 		x = 1
 		y = 4
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -23169,7 +22993,7 @@ focus = {
 		relative_position_id = POL_radical_healing_movement
 		x = -2
 		y = 5
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -23192,7 +23016,7 @@ focus = {
 		relative_position_id = POL_radical_healing_movement
 		x = 0
 		y = 5
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -23210,7 +23034,7 @@ focus = {
 		relative_position_id = POL_radical_healing_movement
 		x = 2
 		y = 5
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -23231,7 +23055,7 @@ focus = {
 		relative_position_id = POL_radical_healing_movement
 		x = -4
 		y = 6
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -23257,7 +23081,7 @@ focus = {
 		relative_position_id = POL_radical_healing_movement
 		x = -2
 		y = 6
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -23280,7 +23104,7 @@ focus = {
 		relative_position_id = POL_radical_healing_movement
 		x = 0
 		y = 6
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -23299,7 +23123,7 @@ focus = {
 		relative_position_id = POL_radical_healing_movement
 		x = 4
 		y = 6
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -23335,7 +23159,7 @@ focus = {
 		relative_position_id = POL_radical_healing_movement
 		x = 2
 		y = 6
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -23355,7 +23179,7 @@ focus = {
 		relative_position_id = POL_radical_healing_movement
 		x = -2
 		y = 7
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -23373,7 +23197,7 @@ focus = {
 		relative_position_id = POL_radical_healing_movement
 		x = 0
 		y = 7
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -23391,7 +23215,7 @@ focus = {
 		relative_position_id = POL_radical_healing_movement
 		x = 2
 		y = 7
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -23409,7 +23233,7 @@ focus = {
 		relative_position_id = POL_radical_healing_movement
 		x = -1
 		y = 8
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -23432,7 +23256,7 @@ focus = {
 		relative_position_id = POL_radical_healing_movement
 		x = 1
 		y = 8
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -23463,7 +23287,7 @@ focus = {
 		relative_position_id = POL_radical_healing_movement
 		x = 0
 		y = 9
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -23495,11 +23319,7 @@ focus = {
 		relative_position_id = KX_PL_KPP_TAKES_POWER
 		x = -15
 		y = 0
-<<<<<<< HEAD
 		cost = 4
-=======
-		cost = 3
->>>>>>> parent of 19ad5adc3 (Merge branch 'master' of https://github.com/rx00000xn/kxx-gitversion)
 		ai_will_do = {
 			factor = 100
 		}
@@ -23520,7 +23340,7 @@ focus = {
 		relative_position_id = KX_FAL_NATDEM_FALANGA
 		x = 3
 		y = 1
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -23541,7 +23361,7 @@ focus = {
 		relative_position_id = KX_FAL_NATIONAL_REVOLUTION
 		x = -2
 		y = 1
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -23562,7 +23382,7 @@ focus = {
 		relative_position_id = KX_FAL_NATIONAL_REVOLUTION
 		x = 2
 		y = 1
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -23591,7 +23411,7 @@ focus = {
 		relative_position_id = KX_FAL_NATIONAL_CATHOLICISM
 		x = -1
 		y = 1
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -23621,7 +23441,7 @@ focus = {
 		relative_position_id = KX_FAL_NATIONAL_REVOLUTION
 		x = 0
 		y = 1
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -23654,7 +23474,7 @@ focus = {
 		relative_position_id = KX_FAL_CULT_OF_PERSONALITY
 		x = -1
 		y = 1
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -23681,7 +23501,7 @@ focus = {
 		relative_position_id = KX_FAL_GREATER_POLISH_NATION
 		x = -1
 		y = 1
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -23715,7 +23535,7 @@ focus = {
 		relative_position_id = KX_FAL_NATDEM_FALANGA
 		x = -3
 		y = 1
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -23735,7 +23555,7 @@ focus = {
 		relative_position_id = KX_FAL_HIERARCHICAL_ECONOMY
 		x = -1
 		y = 1
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -23755,7 +23575,7 @@ focus = {
 		relative_position_id = KX_FAL_NATIONALIZED_INDUSTRY
 		x = -1
 		y = 1
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -23778,7 +23598,7 @@ focus = {
 		relative_position_id = KX_FAL_HIERARCHICAL_ECONOMY
 		x = 0
 		y = 2
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -23804,7 +23624,7 @@ focus = {
 		relative_position_id = KX_FAL_TRADE_UNION_PLANNING
 		x = 0
 		y = 1
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -23833,7 +23653,7 @@ focus = {
 		relative_position_id = KX_FAL_HIERARCHICAL_ECONOMY
 		x = 1
 		y = 1
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -23856,7 +23676,7 @@ focus = {
 		relative_position_id = KX_FAL_NATIONALIZE_BANKING
 		x = 1
 		y = 1
-		cost = 3
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -24725,11 +24545,7 @@ focus = {
 		}
 		x = 51
 		y = 7
-<<<<<<< HEAD
 		cost = 4
-=======
-		cost = 7
->>>>>>> parent of 19ad5adc3 (Merge branch 'master' of https://github.com/rx00000xn/kxx-gitversion)
 		ai_will_do = { factor = 10 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus POL_join_international_community"
@@ -24767,7 +24583,7 @@ focus = {
 		relative_position_id = POL_join_international_community
 		x = -3
 		y = 1
-		cost = 5
+		cost = 4
 		ai_will_do = { factor = 10 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus POL_poland_alone"
@@ -24780,11 +24596,7 @@ focus = {
 	focus = {
 		id = POL_mobilize_the_people
 		icon = GFX_goal_FRA_classical_heroic_socialism
-<<<<<<< HEAD
 		cost = 4
-=======
-		cost = 5
->>>>>>> parent of 19ad5adc3 (Merge branch 'master' of https://github.com/rx00000xn/kxx-gitversion)
 		prerequisite = { focus = POL_ally_internationale  focus = POL_poland_alone }
 		available = { has_socialist_government = yes }
 		relative_position_id = POL_ally_internationale
@@ -24928,7 +24740,7 @@ focus = {
 		relative_position_id = POL_join_international_community
 		x = -5
 		y = 1
-		cost = 5
+		cost = 4
 		ai_will_do = {
 			factor = 10 
 			modifier = {
@@ -25048,11 +24860,7 @@ focus = {
 		relative_position_id = POL_join_international_community
 		x = 6
 		y = 1
-<<<<<<< HEAD
 		cost = 4
-=======
-		cost = 5
->>>>>>> parent of 19ad5adc3 (Merge branch 'master' of https://github.com/rx00000xn/kxx-gitversion)
 		ai_will_do = {
 			factor = 10 
 			modifier = {
@@ -25241,7 +25049,7 @@ focus = {
 		relative_position_id = POL_join_international_community
 		x = 3
 		y = 1
-		cost = 5
+		cost = 4
 		ai_will_do = {
 			factor = 10 
 			modifier = {

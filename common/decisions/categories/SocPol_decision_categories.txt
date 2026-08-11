@@ -17,7 +17,6 @@ PLX_arm_decisions = {
 		tag = POL
 	}
 }
-<<<<<<< HEAD
 PLX_choose_monarch = {
 	icon = GFX_decision_category_generic_industry
 	priority = 80
@@ -29,5 +28,3 @@ PLX_choose_monarch = {
 		}
 	}
 }
-=======
->>>>>>> parent of 19ad5adc3 (Merge branch 'master' of https://github.com/rx00000xn/kxx-gitversion)

@@ -5986,12 +5986,6 @@ text = {
 	}
 	text = {
 		trigger = {
-			has_country_leader_ideology = pan_turkism_subtype
-		}
-		localization_key = pan_turkism_subtype
-	}
-	text = {
-		trigger = {
 			has_country_leader_ideology = antoun_saadeh_thought_subtype
 		}
 		localization_key = antoun_saadeh_thought_subtype
@@ -6383,9 +6377,9 @@ text = {
 	}
 	text = {
 		trigger = {
-			has_country_leader_ideology = pan_celticism_subtype
+			has_country_leader_ideology = radical_soc_pan_celticism_subtype
 		}
-		localization_key = pan_celticism_subtype  
+		localization_key = radical_soc_pan_celticism_subtype  
 	}
 	text = {
 		trigger = {
@@ -8507,6 +8501,12 @@ text = {
 	}
 	text = {
 		trigger = {
+			has_country_leader_ideology = apartheid_socialism_subtype
+		}
+		localization_key = apartheid_socialism_subtype  
+	}
+	text = {
+		trigger = {
 			has_country_leader_ideology = socdem_apartheid_socialism_subtype
 		}
 		localization_key = socdem_apartheid_socialism_subtype  
@@ -9352,8 +9352,67 @@ text = {
         }
         localization_key = manhem_nordicism_subtype
     }
+	text = {
+        trigger = {
+            has_country_leader_ideology = tot_kritarchy_subtype
+        }
+        localization_key = tot_kritarchy_subtype
+    }
+	text = {
+        trigger = {
+            has_country_leader_ideology = vorticism_subtype
+        }
+        localization_key = vorticism_subtype
+    }
+	text = {
+        trigger = {
+            has_country_leader_ideology = tot_ngara_modekngei_subtype
+        }
+        localization_key = tot_ngara_modekngei_subtype
+    }
+	text = {
+        trigger = {
+            has_country_leader_ideology = surrealism_subtype
+        }
+        localization_key = surrealism_subtype
+    }
+	text = {
+        trigger = {
+            has_country_leader_ideology = syn_platformism_subtype
+        }
+        localization_key = syn_platformism_subtype
+    }
+	text = {
+        trigger = {
+            has_country_leader_ideology = synthesis_anarchism_subtype
+        }
+        localization_key = synthesis_anarchism_subtype
+    }
+	text = {
+        trigger = {
+            has_country_leader_ideology = ngara_modekngei_subtype
+        }
+        localization_key = ngara_modekngei_subtype
+    }
+	text = {
+        trigger = {
+            has_country_leader_ideology = syn_liberal_socialism_subtype
+        }
+        localization_key = syn_liberal_socialism_subtype
+    }
+	text = {
+        trigger = {
+            has_country_leader_ideology = syn_surrealism_subtype
+        }
+        localization_key = syn_surrealism_subtype
+    }
+	text = {
+        trigger = {
+            has_country_leader_ideology = platformism_subtype
+        }
+        localization_key = platformism_subtype
+    }
 
-<<<<<<< HEAD
 	text = {
         trigger = {
             has_country_leader_ideology = radsoc_synthesis_anarchism_subtype
@@ -9591,9 +9650,6 @@ text = {
 
 
 	#风
-=======
-	#AD
->>>>>>> parent of 19ad5adc3 (Merge branch 'master' of https://github.com/rx00000xn/kxx-gitversion)
 	text = {
 		trigger = {
 			has_country_leader_ideology = anarcho_internationalism_subtype
@@ -11555,7 +11611,6 @@ text = {
 
 		localization_key = natpop_sansepolcrismo
 	}
-<<<<<<< HEAD
 	text = {
 		trigger = {
 			has_country_leader_ideology = nationalist_tridemism_subtype
@@ -11584,6 +11639,4 @@ text = {
 
 		localization_key = moncadoism_subtype
 	}
-=======
->>>>>>> parent of 19ad5adc3 (Merge branch 'master' of https://github.com/rx00000xn/kxx-gitversion)
 }

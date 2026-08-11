@@ -11,7 +11,6 @@ spriteTypes = {
 		name = "GFX_goal_POL_national_socialists_alt"
 		texturefile = "gfx/interface/goals/KXX_POL/POL_national_socialists_alt.png"
 	}
-<<<<<<< HEAD
 	SpriteType = {
 		name = "GFX_focus_generic_andrassy_emblem"
 		texturefile = "gfx/interface/goals/KXX_POL/focus_generic_andrassy_emblem.dds"
@@ -72,7 +71,4 @@ spriteTypes = {
 		name = "GFX_goal_POL_sobieski"
 		texturefile = "gfx/interface/goals/KXX_POL/POL_sobieski.png"
 	}
-=======
-	
->>>>>>> parent of 19ad5adc3 (Merge branch 'master' of https://github.com/rx00000xn/kxx-gitversion)
 }

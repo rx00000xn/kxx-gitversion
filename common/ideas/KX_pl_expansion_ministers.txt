@@ -342,7 +342,6 @@ ideas = {
 				hog_corporate_suit
 			}
 		}
-<<<<<<< HEAD
 		POL_Aleksy_Cwiakowski_hog_sde = {
 			allowed = { original_tag = POL }
 			available = {
@@ -361,8 +360,6 @@ ideas = {
 				the_great_compromiser
 			}
 		}
-=======
->>>>>>> parent of 19ad5adc3 (Merge branch 'master' of https://github.com/rx00000xn/kxx-gitversion)
 	}
 	person_of_influence = {
 		POL_Jan_Hempel_sec_syn = {
