@@ -421,7 +421,7 @@ ideologies = {
 			syn_mayakovskyism_subtype = { can_be_randomly_selected = no } #马雅可夫斯基主义
 			syn_yamakawaism_subtype = { can_be_randomly_selected = no } #山川主义
 			polish_natsynd = {can_be_randomly_selected = no color = { 0 93 149 } } #蓝色工团主义
-
+			syn_colonial_government = {can_be_randomly_selected = no} #社会主义殖民政府
 	
 			despotism_vanguard_anarchism_subtype = {can_be_randomly_selected = no color = { 5 5 5 } } #先锋无政府主义（rm扩展）
 			syn_united_front = {can_be_randomly_selected = no} #统一阵线
@@ -438,7 +438,6 @@ ideologies = {
 			natdem_syndicalism_subtype = { can_be_randomly_selected = no } #民族民主工团主义
 			canaanist_subtype = {can_be_randomly_selected = no} #迦南主义
 			syn_sssp_subtype_subtype = { can_be_randomly_selected = no }  #科学特搜署
-			syn_bukharinist_subtype = {can_be_randomly_selected = no} #布哈林主义
 			syn_esoteric_anarchism_subtype = { can_be_randomly_selected = no color = { 91 9 76 } }  #神秘无政府主义
 			syn_chinese_nationalism_subtype = { can_be_randomly_selected = no } #大中华主义
 			syn_social_futurism_subtype = { can_be_randomly_selected = no } #社会未来主义
@@ -679,6 +678,7 @@ ideologies = {
 			luxembourgism_subtype = {can_be_randomly_selected = no} #卢森堡主义
 			radsoc_zadrugism_subtype = { can_be_randomly_selected = no  } #自由札德鲁加主义
 			radsoc_lapiang_malaya_subtype = { can_be_randomly_selected = no } #永恒教
+			radsoc_biopolitics_subtype = { can_be_randomly_selected = no } #生物政治
 			#AD
 			radsoc_moral_discipline_system_subtype = {can_be_randomly_selected = no} #道德规训体制
 			cossack_anarchism_subtype = {can_be_randomly_selected = no} #哥萨克无政府主义
@@ -1344,6 +1344,7 @@ ideologies = {
 			soccon_hilozoismo_subtype = {can_be_randomly_selected = no } #物活主义
 			soccon_theocracy_subtype = {can_be_randomly_selected = no } #神权制
 			soccon_yugoslavism_subtype = {can_be_randomly_selected = no} #南斯拉夫主义
+			soccon_hearstian_democracy_subtype = {can_be_randomly_selected = no} #赫式民主
 
 			soccon_datong_shu_subtype = { can_be_randomly_selected = no } #大同术
 			soccon_new_legalism_subtype = {can_be_randomly_selected = no} #新法家
@@ -1359,7 +1360,7 @@ ideologies = {
 			soccon_national_democracy_subtype = { can_be_randomly_selected = no  } #民族民主主义
 			#AD
 			moral_discipline_system_subtype = {can_be_randomly_selected = no} #道德规训体制
-
+			soccon_latin_falangism_subtype= {can_be_randomly_selected = no} #拉丁长枪主义
 			#日本重置
 			soccon_security_state_subtype = {can_be_randomly_selected = no} #安保国家
 			soccon_controlled_democracy_subtype = {can_be_randomly_selected = no} #指导式民主
@@ -1548,7 +1549,7 @@ ideologies = {
 			slovak_populism_subtype = {can_be_randomly_selected = no} #斯洛伐克人民主义
 			anarchy_subtype = {can_be_randomly_selected = no} #无政府状态
 			autdem_moral_discipline_system_subtype = {can_be_randomly_selected = no} #道德规训体制
-
+			autdem_latin_national_syndicalism_subtype = {can_be_randomly_selected = no} #拉丁国家工团主义
 			#印度重置
 			khaksarism_subtype = { can_be_randomly_selected = no } #喀克萨主义
 			authdem_hindutva_subtype = { can_be_randomly_selected = no } #印度教民族主义

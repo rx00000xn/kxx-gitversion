@@ -21,9 +21,10 @@ country_event = { #崛起之龙还是旭日骨寒
 	option = { #崛起之龙
 		name = KXXJAP.1.a
 		ai_chance = {
-			base = 100
+			base = 0
 		}
 		set_country_flag = RD_SCB_path_decided
+		country_event = { id = japan_new_event.0 days = 1 }
 		country_event = {
 			id = japan_new_event.7
 			days = 45
@@ -53,17 +54,36 @@ country_event = { #崛起之龙还是旭日骨寒
 			name = "帝国陆军（永田派）"
 			long_name = "大日本帝国陆军（永田派）"
 		}
+		add_ideas = JAP_red_army_resistance_1
+		remove_all_ministers = yes
+		add_ideas = {
+			JAP_Inukai_Tsuyoshi_hog_sco
+			JAP_Yoshizawa_Kenkichi_for_sco
+			JAP_Mitsuchi_Chuzo_eco_sco
+			JAP_Suzuki_Kisaburo_sec_sco
+		}
 	}	
 
 	option = { #旭日骨寒
 		name = KXXJAP.1.b
 		ai_chance = {
-			base = 0
+			base = 100
 		}
 		set_country_flag = SCB_path_decided
 		country_event = { 
-			id = KXXJAP.10
-			days = 60
+			id = SCBJAP.1
+			days = 1
+		}
+		load_focus_tree = SCB_JAP_natunity_bureaucracy_military
+		mark_focus_tree_layout_dirty = yes
+		add_ideas = yun_arlt_dongbei
+		add_ideas = yun_comical_performance
+		if = {
+			limit = {
+				is_ai = no
+			}
+			add_ideas = KXX_power_of_fh45c5
+			add_ideas = yun_skull_army
 		}
 	}	
 
@@ -2985,7 +3005,7 @@ country_event = { #民间右翼维新路线最终决定
 			picture = "gfx/leaders/JAP/Portrait_JAP_Kishio_Satomi.png"
 			expire = "1965.1.1"
 			ideology = socdem_nichiren_buddhism_subtype
-		}			
+		}
 		set_party_name = {
 			ideology = social_democrat
 			long_name = "JAP_party_nichiren_long"
@@ -3227,7 +3247,7 @@ country_event = { #民间右翼-日莲主义者
 			desc = "GIRO_LEADER_DESC"
 			expire = "1965.1.1"
 			ideology = radsoc_nichiren_buddhism_subtype
-		}		
+		}
 		set_politics = {
 			ruling_party = radical_socialist
 			elections_allowed = no
