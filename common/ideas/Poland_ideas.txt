@@ -4,30 +4,6 @@ ideas = {
 # Country ideas
 ##############
 	country = {
-		POL_pacify_oun = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea POL_eternal_regency"}
-			allowed = { always = no }
-			name = "粉碎乌克兰起义"
-            targeted_modifier = {
-				tag = WSU
-				attack_bonus_against = 0.15
-				defense_bonus_against = 0.15
-				breakthrough_bonus_against = 0.15
-			}
-			picture = UKR_broken
-		}
-		POL_colonialism = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea POL_eternal_regency"}
-			allowed = { always = no }
-			name = "波兰殖民主义"
-            modifier = {
-				navy_max_range_factor = 0.1
-				invasion_preparation = -0.15
-				dig_in_speed_factor = 0.1
-				resistance_target = -0.15
-			}
-			picture = NGR_Angry_Colonials
-		}
 		POL_eternal_regency = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea POL_eternal_regency"}
 			allowed = { always = no }
@@ -228,10 +204,9 @@ ideas = {
 			}
 			picture = great_depression
 		}
-		PLX_opportunism_idea = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea PLX_opportunism_idea"}
+		POL_opportunism_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea POL_opportunism_idea"}
 			picture = air_support_focus
-			name = "地缘政治投机主义"
 			allowed = { always = no }
             modifier = {
 				justify_war_goal_time = -0.33

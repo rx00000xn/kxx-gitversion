@@ -6,8 +6,7 @@ bookmarks = {
 		picture = "GFX_select_date_1936"
 		default_country = "FRA"
 		default = yes
-		sort_unplayed_first = no
-		include_majors_in_minor_list = no
+		
 		"FRA" = {
 			history = "FRA_KR_GATHERING_STORM_DESC"
 			ideology = syndicalist
@@ -179,19 +178,18 @@ bookmarks = {
 			}
 		}
 
-		"CHL" = {
+		"HUN" = {
 			minor = yes
-			history = "CHL_KR_GATHERING_STORM_DESC"
-			ideology = radical_socialist
+			history = "HUN_KR_GATHERING_STORM_DESC"
+			ideology = paternal_autocrat
 			ideas = {
-				CHL_home_of_south_american_syndicalism_false
-				CHL_dual_regime
-				CHL_economic_disaster
+				HUN_financial_ties_broken
+				AUS_part_of_the_Empire
 			}
 			focuses = {
-				CHL_Socialism_shall_never_fall
-				CHL_COCAT_Emergency_Conference
-				CHL_pinochet_coups
+				SVK_1936_General_Election
+				SVK_Hardline_Communist
+				SVK_Ukrainian_Insurgent_Army
 			}
 		}
 
@@ -212,7 +210,18 @@ bookmarks = {
 			}
 		}
 
-		
+		"KXX" = {
+			minor = yes
+			history = "KXX_KR_GATHERING_STORM_DESC"
+			ideology = authoritarian_democrat 
+			ideas = {
+				
+			}
+			focuses = {
+				
+			
+			}
+		}
 		
 		"NIC" = {
 			minor = yes

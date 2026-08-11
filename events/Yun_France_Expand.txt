@@ -669,24 +669,14 @@ country_event = {
 	option = { 
 		name = COF_Valois.1.a
 		ai_chance = {
-			factor = 50
+			base = 30
 			modifier = {
-		    	factor = 0
-			    OR = {
-					has_game_rule = {
-			    		rule = FRA_start_election
-			    		option = FRA_START_TOTALIST_SORELIAN_KING  #乔治一世
-			    	}
-					has_game_rule = {
-			    		rule = FRA_start_election
-			    		option = FRA_START_TOTALIST_SORELIAN_BERTH  #爱德华·贝尔特
-			    	}
-					has_game_rule = {
-			    		rule = FRA_start_election
-			    		option = FRA_START_TOTALIST_SORELIAN_DIE  #至暗之日
-			    	}
+				factor = 100
+				has_game_rule = {
+					rule = FRA_xday_of_imfamy
+					option = FRA_VALOIS_ETERNAL_CONTROL
 				}
-		    }
+			}
 		}
 		country_event = COF_Valois.2
 	}
@@ -694,24 +684,40 @@ country_event = {
 	option = { 
 		name = COF_Valois.1.b
 		ai_chance = {
-			factor = 50
+			base = 40
 			modifier = {
-		    	factor = 0
-			    OR = {
+				factor = 100
+				OR = {
 					has_game_rule = {
-			    		rule = FRA_start_election
-			    		option = FRA_START_TOTALIST_SORELIAN_ALIVE  #乔治·瓦卢瓦
-			    	}
+						rule = FRA_xday_of_imfamy
+						option = FRA_ARTHUYS_ASSUMES_CONTROL
+					}
 					has_game_rule = {
-			    		rule = FRA_start_election
-			    		option = FRA_START_TOTALIST_SORELIAN_KING  #乔治一世
-			    	}
+						rule = FRA_day_of_imfamy
+						option = FRA_BUCARD_ASSUMES_CONTROL
+					}
 					has_game_rule = {
-			    		rule = FRA_start_election
-			    		option = FRA_START_TOTALIST_SORELIAN_BERTH  #爱德华·贝尔特
-			    	}
+						rule = FRA_xday_of_imfamy
+						option = FRA_ORTHOR_ASSUMES_CONTROL
+					}
+					has_game_rule = {
+						rule = FRA_day_of_imfamy
+						option = FRA_DEAT_ASSUMES_CONTROL
+					}
+					has_game_rule = {
+						rule = FRA_day_of_imfamy
+						option = FRA_BLACK_GUARD_COUNTERREVOLUTION
+					}
+					has_game_rule = {
+						rule = FRA_xday_of_imfamy
+						option = FRA_CLEMEN_ASSUMES_CONTROL
+					}
+					has_game_rule = {
+						rule = FRA_xday_of_imfamy
+						option = FRA_DORIOT_ASSUMES_CONTROL
+					}
 				}
-		    }
+			}
 		}
 		country_event = comfrance.904
 	}
@@ -719,20 +725,7 @@ country_event = {
 	option = { 
 		name = COF_Valois.1.c
 		ai_chance = {
-			factor = 50
-			modifier = {
-		    	factor = 0
-			    OR = {
-					has_game_rule = {
-			    		rule = FRA_start_election
-			    		option = FRA_START_TOTALIST_SORELIAN_ALIVE  #乔治·瓦卢瓦
-			    	}
-					has_game_rule = {
-			    		rule = FRA_start_election
-			    		option = FRA_START_TOTALIST_SORELIAN_DIE  #至暗之日
-			    	}
-				}
-		    }
+			base = 30	
 		}
 		country_event = COF_Valois.9
 	}
@@ -1230,16 +1223,7 @@ country_event = {
 	option = {
 		name = COF_Valois.9.a
 		ai_chance = {
-			factor = 1
-			modifier = {
-		    	factor = 0
-			    OR = {
-					has_game_rule = {
-			    		rule = FRA_start_election
-			    		option = FRA_START_TOTALIST_SORELIAN_BERTH  #爱德华·贝尔特
-			    	}
-				}
-		    }
+			base = 0
 		}
 		add_stability = -0.2
 		set_country_flag = Georges_Valois_crazy
@@ -1253,16 +1237,7 @@ country_event = {
 	option = {
 		name = COF_Valois.9.b
 		ai_chance = {
-			factor = 100
-			modifier = {
-		    	factor = 0
-			    OR = {
-					has_game_rule = {
-			    		rule = FRA_start_election
-			    		option = FRA_START_TOTALIST_SORELIAN_KING  #乔治一世
-			    	}
-				}
-		    }
+			base = 100
 		}		
 		add_stability = 0.2
 		set_country_flag = Valois_Berth
@@ -1271,20 +1246,6 @@ country_event = {
 			picture = "gfx/leaders/FRA/Portrait_France_Edouard_Berth.png"
 			expire = "1.1.1"
 			ideology = sorelianism_subtype
-			traits = {}
-		}
-		create_country_leader = {
-			name = "爱德华·贝尔特"
-			picture = "gfx/leaders/FRA/Portrait_France_Edouard_Berth.png"
-			expire = "1.1.1"
-			ideology = syndicalist_subtype
-			traits = {}
-		}
-		create_country_leader = {
-			name = "爱德华·贝尔特"
-			picture = "gfx/leaders/FRA/Portrait_France_Edouard_Berth.png"
-			expire = "1.1.1"
-			ideology = radical_socialist_subtype
 			traits = {}
 		}
 		mark_focus_tree_layout_dirty = yes

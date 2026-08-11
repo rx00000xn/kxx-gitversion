@@ -7,14 +7,6 @@ set_war_support = 0.65
 set_fuel_ratio = 0.75
 set_research_slots = 4
 starting_train_buffer = 2.0
-set_cosmetic_tag = JAP_real
-
-complete_national_focus = JAP_hiranuma_cabinet
-complete_national_focus = JAP_privy_council_reform
-complete_national_focus = JAP_army_navy_budget_coordination
-complete_national_focus = JAP_continued_election_purification
-complete_national_focus = JAP_suppress_right_wing_agitation
-complete_national_focus = JAP_alliance_with_seiyukai
 
 if = {
 	limit = {
@@ -229,8 +221,8 @@ set_convoys = 300
 
 give_guarantee = FNG
 
-#country_event = { id = japan_new_event.0 days = 1 } #Recovering from the Lost Decade
-#country_event = { id = japan_new_event.6 days = 40 }
+country_event = { id = japan_new_event.0 days = 1 } #Recovering from the Lost Decade
+country_event = { id = japan_new_event.6 days = 40 }
 country_event = { id = japan_new_event.48 days = 572 } #Ryohei dies
 country_event = { id = japfor.1 days = 7 } #Mantetsu Declares Record Earnings
 country_event = { id = japan_new_event.138 days = 133 } #Charlie Chaplin Arrives in Japan
@@ -283,15 +275,18 @@ set_variable = {
 
 add_ideas = {
 	#Ministers
-	JAP_Hiranuma_Kiichiro_hog_pau
-	JAP_Arita_Hachiro_for_ade
-	JAP_Toyotaro_Yuki_eco_pau
-	JAP_tanabe_harumichi_sec_pau
+	JAP_Inukai_Tsuyoshi_hog_sco
+	JAP_Yoshizawa_Kenkichi_for_sco
+	JAP_Mitsuchi_Chuzo_eco_sco
+	JAP_Suzuki_Kisaburo_sec_sco
 	#Ideas
 	JAP_rising_sun_idea_1
 	JAP_narrow_rail
 	JAP_bad_land
+	JAP_no_army_focus
 	FNG_mantetsu_profits
+	JAP_naval_army_comp
+	JAP_red_army_resistance_1
 	#Laws
 	limited_conscription
 	limited_exports
@@ -392,16 +387,16 @@ create_country_leader = {
 	ideology = socdem_paternal_socialism_subtype
 }
 create_country_leader = {
-	name = "尾崎行雄"
-	picture = "gfx/leaders/JAP/Portrait_JAP_Yukio_Ozaki.png"
+	name = "武藤山治"
+	picture = "gfx/leaders/JAP/Portrait_JAP_Sanji_Muto.png"
 	expire = "1965.1.1"
-	ideology = classical_liberalism_subtype
+	ideology = soclib_humanistic_capitalism_subtype
 }
 create_country_leader = {
-	name = "町田忠治"
-	picture = "gfx/leaders/JAP/Portrait_JAP_Machida_Chuji.png"
+	name = "井上准之助"
+	picture = "gfx/leaders/JAP/Portrait_JAP_Junnosuke_Inoue.png"
 	expire = "1965.1.1"
-	ideology = liberal_conservative_subtype
+	ideology = marlib_oligarchy_subtype
 }
 create_country_leader = {
 	name = "铃木喜三郎"

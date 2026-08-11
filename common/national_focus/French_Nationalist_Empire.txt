@@ -13081,16 +13081,25 @@ focus = {
 		id = FRG_A_Call_from_Deep_Space
 		dynamic = yes
 		icon = {
-			GFX_goal_FRG_A_Call_from_Deep_Space = {
+			trigger = {
 				NOT = {
 					has_country_flag = Mambro_first_phase
 					has_country_flag = Mambro_second_phase
 				}
 			}
-			GFX_goal_FRG_A_Call_from_Deep_Space_2 = {
+			value = GFX_goal_FRG_A_Call_from_Deep_Space
+		}
+		icon = {
+			trigger = {
 				has_country_flag = Mambro_first_phase
 			}
-			GFX_goal_NEE_Face_Oblivion = yes
+			value = GFX_goal_FRG_A_Call_from_Deep_Space_2
+		}
+		icon = {
+			trigger = {
+				has_country_flag = Mambro_second_phase
+			}
+			value = GFX_goal_NEE_Face_Oblivion
 		}
 		x = 0
 		y = 4
@@ -13773,10 +13782,16 @@ focus = {
 		id = FRG_comrades #环视欧洲
 		dynamic = yes
 		icon = {
-			GFX_goal_communist_world_revolution = {
+			trigger = {
 				has_socialist_government = yes
 			}
-			GFX_goal_BRG_Look_East = yes
+			value = GFX_goal_communist_world_revolution
+		}
+		icon = {
+			trigger = {
+				has_socialist_government = no
+			}
+			value = GFX_goal_BRG_Look_East
 		}
 		relative_position_id = FRG_world
 		available = {
@@ -13854,10 +13869,16 @@ focus = {
 		id = FRG_lowlands #瞄准低地
 		dynamic = yes
 		icon = {
-			GFX_goal_HOL_baerle_talks = {
+			trigger = {
 				has_socialist_government = yes
 			}
-			GFX_goal_HOL_crush_belgium = yes
+			value = GFX_goal_HOL_baerle_talks
+		}
+		icon = {
+			trigger = {
+				has_socialist_government = no
+			}
+			value = GFX_goal_HOL_crush_belgium
 		}
 		cost = 3
 		relative_position_id = FRG_comrades
@@ -13919,11 +13940,17 @@ focus = {
 	focus = {
 		id = FRG_italy #平定亚平宁
 		dynamic = yes
-		GFX_SRI_fascist_italy = {
+		icon = {
 			trigger = {
 				has_socialist_government = yes
 			}
-			GFX_goal_CZE_attack_italy = yes
+			value = GFX_SRI_fascist_italy
+		}
+		icon = {
+			trigger = {
+				has_socialist_government = no
+			}
+			value = GFX_goal_CZE_attack_italy
 		}
 		cost = 3
 		relative_position_id = FRG_comrades
@@ -13987,10 +14014,16 @@ focus = {
 		id = FRG_romandy #声索罗曼蒂
 		dynamic = yes
 		icon = {
-			GFX_goal_NFA_Romandie_Francaise = {
+			trigger = {
 				has_socialist_government = yes
 			}
-			GFX_BAY_DESTROY_SWITZERLAND = yes
+			value = GFX_goal_NFA_Romandie_Francaise
+		}
+		icon = {
+			trigger = {
+				has_socialist_government = no
+			}
+			value = GFX_BAY_DESTROY_SWITZERLAND
 		}
 		cost = 3
 		relative_position_id = FRG_comrades
@@ -14049,10 +14082,16 @@ focus = {
 		id = FRG_iberian #征服伊比利亚
 		dynamic = yes
 		icon = {
-			GFX_goal_CSA_iberian_revolution = {
+			trigger = {
 				has_socialist_government = yes
 			}
-			GFX_goal_FRA_liberate_Iberia = yes
+			value = GFX_goal_CSA_iberian_revolution
+		}
+		icon = {
+			trigger = {
+				has_socialist_government = no
+			}
+			value = GFX_goal_FRA_liberate_Iberia
 		}
 		cost = 3
 		relative_position_id = FRG_comrades
@@ -14124,10 +14163,16 @@ focus = {
 		id = FRG_Britain #征服不列颠
 		dynamic = yes
 		icon = {
-			GFX_goal_ENG_new_britain = {
+			trigger = {
 				has_socialist_government = yes
 			}
-			GFX_goal_IRE_crush_uob = yes
+			value = GFX_goal_ENG_new_britain
+		}
+		icon = {
+			trigger = {
+				has_socialist_government = no
+			}
+			value = GFX_goal_IRE_crush_uob
 		}
 		cost = 3
 		relative_position_id = FRG_comrades
@@ -14185,10 +14230,16 @@ focus = {
 		id = FRG_Germany #撕碎雄鹰
 		dynamic = yes
 		icon = {
-			GFX_NATFRA_rightfullborders = {
+			trigger = {
 				has_socialist_government = yes
 			}
-			GFX_goal_FRA_germanophobia = yes
+			value = GFX_NATFRA_rightfullborders
+		}
+		icon = {
+			trigger = {
+				has_socialist_government = no
+			}
+			value = GFX_goal_FRA_germanophobia
 		}
 		cost = 3
 		relative_position_id = FRG_comrades
@@ -14247,10 +14298,16 @@ focus = {
 		id = FRG_habsburgs #摧毁哈布斯堡
 		dynamic = yes
 		icon = {
-			GFX_goal_AUS_crimson_danube = {
+			trigger = {
 				has_socialist_government = yes
 			}
-			GFX_BAY_SKEWER_AUSTRIA = yes
+			value = GFX_goal_AUS_crimson_danube
+		}
+		icon = {
+			trigger = {
+				has_socialist_government = no
+			}
+			value = GFX_BAY_SKEWER_AUSTRIA
 		}
 		cost = 3
 		relative_position_id = FRG_comrades
@@ -14362,10 +14419,17 @@ focus = {
 		id = FRG_Balkans #熄灭巴尔干火药桶
 		dynamic = yes
 		icon = {
-			GFX_goal_MNT_yugoslav_supremacism = {
+			trigger = {
 				has_socialist_government = yes
 			}
-			GFX_focus_rus_balkans = yes
+			value = GFX_goal_MNT_yugoslav_supremacism
+
+		}
+		icon = {
+			trigger = {
+				has_socialist_government = no
+			}
+			value = GFX_focus_rus_balkans
 		}
 		cost = 3
 		relative_position_id = FRG_comrades
@@ -14422,10 +14486,19 @@ focus = {
 		id = FRG_french_might #法兰西的新秩序
 		dynamic = yes
 		icon = {
-			GFX_goal_ALB_Red_Flag = {
+			trigger = {
 				has_socialist_government = yes
+				
 			}
-			GFX_goal_NFA_France_Aux_Francais = yes
+			value = GFX_goal_ALB_Red_Flag
+
+		}
+		icon = {
+			trigger = {
+				has_socialist_government = no
+				
+			}
+			value = GFX_goal_NFA_France_Aux_Francais
 		}
 		cost = 15
 		relative_position_id = FRG_comrades
@@ -14476,10 +14549,17 @@ focus = {
 		id = FRG_european #奏响欧洲欢乐颂
 		dynamic = yes
 		icon = {
-			GFX_goal_ALB_Communist_Internationalism = {
+			trigger = {
 				has_socialist_government = yes
 			}
-			GFX_goal_Focus_FRA_Propose_European_Commonwealth = yes
+			value = GFX_goal_ALB_Communist_Internationalism
+
+		}
+		icon = {
+			trigger = {
+				has_socialist_government = no
+			}
+			value = GFX_goal_Focus_FRA_Propose_European_Commonwealth
 		}
 		cost = 3
 		relative_position_id = FRG_comrades
@@ -14522,11 +14602,17 @@ focus = {
 		id = FRG_european_state #欧罗巴团结一致
 		dynamic = yes
 		icon = {
-			GFX_goal_INT_paneuropa = {
+			trigger = {
 				has_socialist_government = yes
 			}
-			GFX_goal_Focus_FRA_Continental_System = yes
+			value = GFX_goal_INT_paneuropa
 
+		}
+		icon = {
+			trigger = {
+				has_socialist_government = no
+			}
+			value = GFX_goal_Focus_FRA_Continental_System
 		}
 		cost = 3
 		relative_position_id = FRG_comrades
@@ -14559,11 +14645,17 @@ focus = {
 		id = FRG_colony #法兰西帝国主义
 		dynamic = yes
 		icon = {
-			GFX_goal_FRA_World_Revolution = {
+			trigger = {
 				has_socialist_government = yes
 			}
-			GFX_goal_NFA_Integrate_Far_Right_Leagues = yes
+			value = GFX_goal_FRA_World_Revolution
 
+		}
+		icon = {
+			trigger = {
+				has_socialist_government = no
+			}
+			value = GFX_goal_NFA_Integrate_Far_Right_Leagues
 		}
 		cost = 3
 		relative_position_id = FRG_world
@@ -14616,11 +14708,17 @@ focus = {
 		id = FRG_africa #深入黑暗之心
 		dynamic = yes
 		icon = {
-			GFX_goal_CEA_liberate_equatorial_africa = {
+			trigger = {
 				has_socialist_government = yes
 			}
-			GFX_goal_GAB_africanist_revolution = yes
+			value = GFX_goal_CEA_liberate_equatorial_africa
 
+		}
+		icon = {
+			trigger = {
+				has_socialist_government = no
+			}
+			value = GFX_goal_GAB_africanist_revolution
 		}
 		cost = 3
 		relative_position_id = FRG_colony
@@ -14660,10 +14758,17 @@ focus = {
 		id = FRG_rus #驯服巨熊
 		dynamic = yes
 		icon = {
-			GFX_UKR_Smash_Russian_Imperialism = {
+			trigger = {
 				has_socialist_government = yes
 			}
-			GFX_focus_attack_RUS = yes
+			value = GFX_UKR_Smash_Russian_Imperialism
+
+		}
+		icon = {
+			trigger = {
+				has_socialist_government = no
+			}
+			value = GFX_focus_attack_RUS
 		}
 		cost = 3
 		relative_position_id = FRG_colony
@@ -14701,11 +14806,17 @@ focus = {
 		id = FRG_ottoman #踏平阿拉伯
 		dynamic = yes
 		icon = {
-			GFX_goal_OTT_Dawn_Ottoman_Constitutionalism = {
+			trigger = {
 				has_socialist_government = yes
 			}
-			GFX_goal_Unite_Arabia = yes
+			value = GFX_goal_OTT_Dawn_Ottoman_Constitutionalism
 
+		}
+		icon = {
+			trigger = {
+				has_socialist_government = no
+			}
+			value = GFX_goal_Unite_Arabia
 		}
 		cost = 3
 		relative_position_id = FRG_colony
@@ -14740,10 +14851,17 @@ focus = {
 		id = FRG_Afghanistan #征服帝国坟场
 		dynamic = yes
 		icon = {
-			GFX_goal_AFG_Maintain_Pashtun_Dominance = {
+			trigger = {
 				has_socialist_government = yes
 			}
-			GFX_goal_AFG_ottoman_railway = yes
+			value = GFX_goal_AFG_Maintain_Pashtun_Dominance
+
+		}
+		icon = {
+			trigger = {
+				has_socialist_government = no
+			}
+			value = GFX_goal_AFG_ottoman_railway
 		}
 		cost = 3
 		relative_position_id = FRG_colony
@@ -14799,11 +14917,17 @@ focus = {
 		id = FRG_India #踹开南亚大门
 		dynamic = yes
 		icon = {
-			GFX_goal_AFG_Towards_Indian_Unification = {
+			trigger = {
 				has_socialist_government = yes
 			}
-			GFX_PRF_new_india = yes
+			value = GFX_goal_AFG_Towards_Indian_Unification
 
+		}
+		icon = {
+			trigger = {
+				has_socialist_government = no
+			}
+			value = GFX_PRF_new_india
 		}
 		cost = 3
 		relative_position_id = FRG_colony
@@ -14832,11 +14956,17 @@ focus = {
 		id = FRG_china #擒拿东方巨龙
 		dynamic = yes
 		icon = {
-			GFX_goal_chi_one_china_policy_KMT = {
+			trigger = {
 				has_socialist_government = yes
 			}
-			GFX_goal_QIE_zhili_unite_china = yes
+			value = GFX_goal_chi_one_china_policy_KMT
 
+		}
+		icon = {
+			trigger = {
+				has_socialist_government = no
+			}
+			value = GFX_goal_QIE_zhili_unite_china
 		}
 		cost = 3
 		relative_position_id = FRG_colony
@@ -14876,11 +15006,17 @@ focus = {
 		id = FRG_japan #射日
 		dynamic = yes
 		icon = {
-			GFX_goal_RUS_japan = {
+			trigger = {
 				has_socialist_government = yes
 			}
-			GFX_goal_RUS_japan = yes
+			value = GFX_goal_RUS_japan
 
+		}
+		icon = {
+			trigger = {
+				has_socialist_government = no
+			}
+			value = GFX_goal_RUS_japan
 		}
 		cost = 3
 		relative_position_id = FRG_colony
@@ -14908,11 +15044,17 @@ focus = {
 		id = FRG_Indochina #重归印度支那
 		dynamic = yes
 		icon = {
-			GFX_INC_Indochina_Internationale_Outpost = {
+			trigger = {
 				has_socialist_government = yes
 			}
-			GFX_goal_NFA_Our_Men_Hanoi = yes
+			value = GFX_INC_Indochina_Internationale_Outpost
 
+		}
+		icon = {
+			trigger = {
+				has_socialist_government = no
+			}
+			value = GFX_goal_NFA_Our_Men_Hanoi
 		}
 		cost = 3
 		relative_position_id = FRG_colony
@@ -14940,11 +15082,17 @@ focus = {
 		id = FRG_America #迈向新大陆
 		dynamic = yes
 		icon = {
-			GFX_goal_USA_stop_southern_syndicalism = {
+			trigger = {
 				has_socialist_government = yes
 			}
-			GFX_goal_TEX_americanist_doctrine = yes
+			value = GFX_goal_USA_stop_southern_syndicalism
 
+		}
+		icon = {
+			trigger = {
+				has_socialist_government = no
+			}
+			value = GFX_goal_TEX_americanist_doctrine
 		}
 		cost = 3
 		relative_position_id = FRG_colony
@@ -14974,11 +15122,17 @@ focus = {
 		id = FRG_ally #毁灭协约国残余
 		dynamic = yes
 		icon = {
-			GFX_goal_NFL_liberation_of_canada = {
+			trigger = {
 				has_socialist_government = yes
 			}
-			GFX_NEE_entente_support = yes
+			value = GFX_goal_NFL_liberation_of_canada
 
+		}
+		icon = {
+			trigger = {
+				has_socialist_government = no
+			}
+			value = GFX_NEE_entente_support
 		}
 		cost = 3
 		relative_position_id = FRG_colony
@@ -15030,11 +15184,17 @@ focus = {
 		id = FRG_La_Plata #称霸南美
 		dynamic = yes
 		icon = {
-			GFX_goal_CSA_red_brazil = {
+			trigger = {
 				has_socialist_government = yes
 			}
-			GFX_focus_por_recover_latin_america = yes
+			value = GFX_goal_CSA_red_brazil
 
+		}
+		icon = {
+			trigger = {
+				has_socialist_government = no
+			}
+			value = GFX_focus_por_recover_latin_america
 		}
 		cost = 3
 		relative_position_id = FRG_colony
@@ -15064,11 +15224,17 @@ focus = {
 		id = FRG_global_system #重返阳光下的土地
 		dynamic = yes
 		icon = {
-			GFX_goal_CSA_true_revolutionary_alliance = {
+			trigger = {
 				has_socialist_government = yes
 			}
-			GFX_goal_NFA_Colonial_Riches = yes
+			value = GFX_goal_CSA_true_revolutionary_alliance
 
+		}
+		icon = {
+			trigger = {
+				has_socialist_government = no
+			}
+			value = GFX_goal_NFA_Colonial_Riches
 		}
 		cost = 3
 		relative_position_id = FRG_colony

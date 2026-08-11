@@ -3672,11 +3672,14 @@ focus_tree = {
 	focus = {
 		id = LEP_staff_officer_school
 		icon = {
-			GFX_goal_LEP_officer_initiative = {
+			trigger = {
 				QIE = { is_monarchy = yes }
 				NOT = { has_global_flag = QIE_manchu_restoration }
 			}
-			GFX_focus_generic_military_mission = yes
+			value = GFX_goal_LEP_officer_initiative
+		}
+		icon = {
+			value = GFX_focus_generic_military_mission
 		}
 		dynamic = yes
 		cost = 7
@@ -4715,11 +4718,14 @@ focus_tree = {
 	focus = {
 		id = LEP_two_marshals_under_the_sky
 		icon = {
-			GFX_goal_ANQ_stand_with_qing = {
+			trigger = {
 				QIE = { is_monarchy = yes }
 				NOT = { has_global_flag = QIE_manchu_restoration }
 			}
-			GFX_goal_beijing_begonia = yes
+			value = GFX_goal_ANQ_stand_with_qing
+		}
+		icon = {
+			value = GFX_goal_beijing_begonia
 		}
 		dynamic = yes
 		cost = 4
@@ -4835,11 +4841,14 @@ focus_tree = {
 	focus = {
 		id = LEP_joint_training_with_beijing
 		icon = {
-			GFX_goal_QIE_hail_to_the_qing = {
+			trigger = {
 				QIE = { is_monarchy = yes }
 				NOT = { has_global_flag = QIE_manchu_restoration }
 			}
-			GFX_goal_QIE_reorganise_warlord_divisions = yes
+			value = GFX_goal_QIE_hail_to_the_qing
+		}
+		icon = {
+			value = GFX_goal_QIE_reorganise_warlord_divisions
 		}
 		dynamic = yes
 		cost = 5
@@ -5193,10 +5202,12 @@ focus_tree = {
 	focus = {
 		id = LEP_last_son_of_the_family
 		icon = {
-			GFX_goal_generic_attack_qing = { has_global_flag = QIE_manchu_restoration }
-			GFX_goal_generic_attack_zhili = yes
+			trigger = { has_global_flag = QIE_manchu_restoration }
+			value = GFX_goal_generic_attack_qing
 		}
-		
+		icon = {
+			value = GFX_goal_generic_attack_zhili
+		}
 		dynamic = yes
 		cost = 5
 

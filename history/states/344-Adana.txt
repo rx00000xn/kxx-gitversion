@@ -3,9 +3,6 @@ state={
 	id=344
 	name="STATE_344"
 
-	resources = {
-		coal = 4
-	}
 	history={
 		owner = TUR
 		add_core_of = TUR

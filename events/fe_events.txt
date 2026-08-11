@@ -35,29 +35,11 @@ country_event = {
 	
 	option = {
 		name = shizo_finland.2.a
-		ai_chance = {
-			base = 80
-			modifier = {
-				factor = 0
-				OR = {
-					has_game_rule = { rule = FIN_future option = FIN_EGY_ATHON }
-				}
-			}
-		}
 		complete_national_focus = FIN_old_gods
 		set_country_flag = FIN_gods_reborn
 	}
 	option = {
 		name = shizo_finland.2.b
-		ai_chance = {
-			base = 80
-			modifier = {
-				factor = 0
-				OR = {
-					has_game_rule = { rule = FIN_future option = FIN_EGY_OLD_GODS }
-				}
-			}
-		}
 		complete_national_focus = FIN_athon
 		set_country_flag = FIN_ATON_reborn
 	}
@@ -331,38 +313,17 @@ country_event = {
 			country_event = {
 				id = shizo_finland.28
 				days = 2
+			  }
 			}
-		}
-		ai_chance = {
-			base = 50
-			modifier = {
-				factor = 0
-				OR = {
-					has_game_rule = { rule = FIN_foreign_policy option = FIN_FOREIGN_POLICY_NEUTRALITY }
-					has_game_rule = { rule = FIN_foreign_policy option = FIN_FOREIGN_POLICY_NORDIC }
-					has_game_rule = { rule = FIN_foreign_policy option = FIN_FOREIGN_POLICY_UKRAINE }
-					has_game_rule = { rule = FIN_foreign_policy option = FIN_FOREIGN_POLICY_REICHSPAKT }
-					has_game_rule = { rule = FIN_foreign_policy option = FIN_FOREIGN_POLICY_INTERNATIONALE }
-				}
-			}
-		}
+		ai_chance = { factor = 10 }
 	}
 	option = {
 		name = shizo_finland.16.b
 		FIN = {
 			country_event = {			
-			  id = shizo_finland.17 
+			  id = shizo_finland.17 }
 			}
-		}
-		ai_chance = {
-			base = 50
-			modifier = {
-				factor = 0
-				OR = {
-					has_game_rule = { rule = FIN_foreign_policy option = FIN_FOREIGN_POLICY_ENTENTE }
-				}
-			}
-		}
+		ai_chance = { factor = 0 }
 	}
 	
 }
@@ -411,15 +372,7 @@ country_event = {
 			}
 		  }
 		set_country_flag = fin_1_no
-		ai_chance = {
-			base = 40
-			modifier = {
-				factor = 0
-				OR = {
-					has_game_rule = { rule = FIN_foreign_policy option = FIN_FOREIGN_POLICY_ENTENTE }
-				}
-			}
-		}
+		ai_chance = { factor = 40 }
 	}
 }
 country_event = {			
@@ -454,15 +407,7 @@ country_event = {
 			}
 		  }
 		set_country_flag = fin_2_no
-		ai_chance = {
-			base = 40
-			modifier = {
-				factor = 0
-				OR = {
-					has_game_rule = { rule = FIN_foreign_policy option = FIN_FOREIGN_POLICY_ENTENTE }
-				}
-			}
-		}
+		ai_chance = { factor = 40 }
 	}
 }
 country_event = {			
@@ -512,15 +457,7 @@ country_event = {
 			}
 		  }
 		set_country_flag = fin_3_no
-		ai_chance = {
-			base = 40
-			modifier = {
-				factor = 0
-				OR = {
-					has_game_rule = { rule = FIN_foreign_policy option = FIN_FOREIGN_POLICY_ENTENTE }
-				}
-			}
-		}
+		ai_chance = { factor = 40 }
 	}
 }
 country_event = {			
@@ -543,15 +480,7 @@ country_event = {
 		name = shizo_finland.21.b
 		set_country_flag = fin_4_no
 		set_country_flag = fin_metting_done
-		ai_chance = {
-			base = 40
-			modifier = {
-				factor = 0
-				OR = {
-					has_game_rule = { rule = FIN_foreign_policy option = FIN_FOREIGN_POLICY_ENTENTE }
-				}
-			}
-		}
+		ai_chance = { factor = 40 }
 	}
 }
 country_event = {			

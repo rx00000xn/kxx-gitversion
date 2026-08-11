@@ -8387,8 +8387,12 @@ focus = {
 		id = SHX_undertake_mass_militarisation_focus
 		dynamic = yes
 		icon = {
-			GFX_goal_ideology_national_populist = { has_country_leader = { character = SHX_yan_xishan } }
-			GFX_goal_conscription = yes
+			trigger = { has_country_leader = { character = SHX_yan_xishan } }
+			value = GFX_goal_ideology_national_populist
+		}
+		icon = {
+			trigger = { always = yes }
+			value = GFX_goal_conscription
 		}
 		cost = 3
 

@@ -168,7 +168,3 @@ instant_effect = {
 		efficiency = 100
 	}
 }
-focus = {
-	current = "CHL_the_day_of_judgement"
-	progress = 3
-}

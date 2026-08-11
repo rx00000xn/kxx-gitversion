@@ -1,10 +1,6 @@
 state={
 	id=553
 	name="STATE_553"
-	resources = {
-		steel = 7
-		coal = 2
-	}
 
 	history={
 		owner = LEB

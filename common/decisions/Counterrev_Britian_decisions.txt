@@ -1156,8 +1156,7 @@ BRG_pick_a_king = {
 			}
 		}
 	}
-###第一个
-    BRG_elect_Edward_Fitzherbert = {
+	BRG_elect_Edward_Fitzherbert = {
 		cost = 10
 		icon = GFX_decision_generic_nationalism
 		fire_only_once = yes
@@ -1219,7 +1218,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_EDWARD_FITZHERBERT
+					option = BRG_KING_POTATO_TUGA
 				}
 			}
 			modifier = {
@@ -1231,7 +1230,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_EDWARD_FITZHERBERT
+						option = BRG_KING_POTATO_TUGA
 					}
 				}
 			}
@@ -1299,7 +1298,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_MICK2
+					option = BRG_KING_POTATO_TUGA
 				}
 			}
 			modifier = {
@@ -1311,7 +1310,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_MICK2
+						option = BRG_KING_POTATO_TUGA
 					}
 				}
 			}
@@ -1379,7 +1378,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_DONNELL
+					option = BRG_KING_POTATO_TUGA
 				}
 			}
 			modifier = {
@@ -1391,7 +1390,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_DONNELL
+						option = BRG_KING_POTATO_TUGA
 					}
 				}
 			}
@@ -1459,7 +1458,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_POER
+					option = BRG_KING_POTATO_TUGA
 				}
 			}
 			modifier = {
@@ -1471,7 +1470,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_POER
+						option = BRG_KING_POTATO_TUGA
 					}
 				}
 			}
@@ -1539,7 +1538,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_DONOUGH_OBRIEN
+					option = BRG_KING_POTATO_TUGA
 				}
 			}
 			modifier = {
@@ -1551,14 +1550,13 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_DONOUGH_OBRIEN
+						option = BRG_KING_POTATO_TUGA
 					}
 				}
 			}
 		}
 	}
-###第二个
-    BRG_elect_Moulton_OBrien = {
+	BRG_elect_Moulton_OBrien = {
 		cost = 10
 		icon = GFX_decision_generic_nationalism
 		fire_only_once = yes
@@ -1620,7 +1618,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_MOULTON_OBRIEN
+					option = BRG_KING_POTATO_TUGA
 				}
 			}
 			modifier = {
@@ -1632,7 +1630,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_MOULTON_OBRIEN
+						option = BRG_KING_POTATO_TUGA
 					}
 				}
 			}
@@ -1710,7 +1708,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_WILHELM_V
+					option = BRG_KING_Wilhelm
 				}
 			}
 			modifier = {
@@ -1722,7 +1720,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_WILHELM_V
+						option = BRG_KING_Wilhelm
 					}
 				}
 			}
@@ -1789,7 +1787,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_WILHELM_V
+					option = BRG_KING_Wilhelm
 				}
 			}
 			modifier = {
@@ -1801,7 +1799,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_WILHELM_V
+						option = BRG_KING_Wilhelm
 					}
 				}
 			}
@@ -1868,7 +1866,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_DUKE_OF_BAVARIA
+					option = BRG_KING_Wilhelm
 				}
 			}
 			modifier = {
@@ -1880,7 +1878,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_DUKE_OF_BAVARIA
+						option = BRG_KING_Wilhelm
 					}
 				}
 			}
@@ -1947,7 +1945,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_HEINRICHI
+					option = BRG_KING_Wilhelm
 				}
 			}
 			modifier = {
@@ -1959,13 +1957,12 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_HEINRICHI
+						option = BRG_KING_Wilhelm
 					}
 				}
 			}
 		}
 	}
-###第三个
 	BRG_elect_Eitel_Friedrich = {
 		cost = 10
 		icon = GFX_decision_generic_nationalism
@@ -2027,7 +2024,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_EITEL_FRIEDRICH
+					option = BRG_KING_Wilhelm
 				}
 			}
 			modifier = {
@@ -2039,7 +2036,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_EITEL_FRIEDRICH
+						option = BRG_KING_Wilhelm
 					}
 				}
 			}
@@ -2106,7 +2103,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_ADALBERTI
+					option = BRG_KING_Wilhelm
 				}
 			}
 			modifier = {
@@ -2118,7 +2115,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_ADALBERTI
+						option = BRG_KING_Wilhelm
 					}
 				}
 			}
@@ -2185,7 +2182,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_AUGUST_WILHELM
+					option = BRG_KING_Wilhelm
 				}
 			}
 			modifier = {
@@ -2197,7 +2194,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_AUGUST_WILHELM
+						option = BRG_KING_Wilhelm
 					}
 				}
 			}
@@ -2264,7 +2261,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_OSKARI
+					option = BRG_KING_Wilhelm
 				}
 			}
 			modifier = {
@@ -2276,7 +2273,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_OSKARI
+						option = BRG_KING_Wilhelm
 					}
 				}
 			}
@@ -2344,7 +2341,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_JOACHIMI
+					option = BRG_KING_Wilhelm
 				}
 			}
 			modifier = {
@@ -2356,14 +2353,13 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_JOACHIMI
+						option = BRG_KING_Wilhelm
 					}
 				}
 			}
 		}
 	}
-###第四个
-    BRG_elect_Victoria = {
+	BRG_elect_Victoria = {
 		cost = 10
 		icon = GFX_decision_generic_nationalism
 		fire_only_once = yes
@@ -2424,7 +2420,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_VICTORIA
+					option = BRG_KING_Wilhelm
 				}
 			}
 			modifier = {
@@ -2436,7 +2432,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_VICTORIA
+						option = BRG_KING_Wilhelm
 					}
 				}
 			}
@@ -2503,7 +2499,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_WILHELM_IV
+					option = BRG_KING_Wilhelm
 				}
 			}
 			modifier = {
@@ -2515,7 +2511,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_WILHELM_IV
+						option = BRG_KING_Wilhelm
 					}
 				}
 			}
@@ -2582,7 +2578,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_LOUIS_FERDINAND
+					option = BRG_KING_Wilhelm
 				}
 			}
 			modifier = {
@@ -2594,7 +2590,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_LOUIS_FERDINAND
+						option = BRG_KING_Wilhelm
 					}
 				}
 			}
@@ -2661,7 +2657,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_WILHELM_V
+					option = BRG_KING_Wilhelm
 				}
 			}
 			modifier = {
@@ -2673,7 +2669,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_WILHELM_V
+						option = BRG_KING_Wilhelm
 					}
 				}
 			}
@@ -2740,7 +2736,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_FRIEDRICH_WILHELM
+					option = BRG_KING_Wilhelm
 				}
 			}
 			modifier = {
@@ -2752,13 +2748,12 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_FRIEDRICH_WILHELM
+						option = BRG_KING_Wilhelm
 					}
 				}
 			}
 		}
 	}
-###第五个
 	BRG_elect_FrancoisIII = {
 		cost = 10
 		icon = GFX_decision_generic_nationalism
@@ -2820,7 +2815,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_FRANCOISIII
+					option = BRG_KING_Wilhelm
 				}
 			}
 			modifier = {
@@ -2832,7 +2827,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_FRANCOISIII
+						option = BRG_KING_Wilhelm
 					}
 				}
 			}
@@ -2899,7 +2894,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_WIED
+					option = BRG_KING_Wilhelm
 				}
 			}
 			modifier = {
@@ -2911,7 +2906,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_WIED
+						option = BRG_KING_Wilhelm
 					}
 				}
 			}
@@ -2978,7 +2973,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_FRIEDRICH_VIKTOR
+					option = BRG_KING_Wilhelm
 				}
 			}
 			modifier = {
@@ -2990,7 +2985,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_FRIEDRICH_VIKTOR
+						option = BRG_KING_Wilhelm
 					}
 				}
 			}
@@ -3057,7 +3052,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_FRANZ_JOSEPH
+					option = BRG_KING_Wilhelm
 				}
 			}
 			modifier = {
@@ -3069,7 +3064,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_FRANZ_JOSEPH
+						option = BRG_KING_Wilhelm
 					}
 				}
 			}
@@ -3136,7 +3131,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_MINDAUGASIII
+					option = BRG_KING_Wilhelm
 				}
 			}
 			modifier = {
@@ -3148,14 +3143,13 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_MINDAUGASIII
+						option = BRG_KING_Wilhelm
 					}
 				}
 			}
 		}
 	}
-###第六个
-    BRG_elect_Mindaugas4 = {
+	BRG_elect_Mindaugas4 = {
 		cost = 10
 		icon = GFX_decision_generic_nationalism
 		fire_only_once = yes
@@ -3216,7 +3210,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_MINDAUGAS4
+					option = BRG_KING_Wilhelm
 				}
 			}
 			modifier = {
@@ -3228,7 +3222,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_MINDAUGAS4
+						option = BRG_KING_Wilhelm
 					}
 				}
 			}
@@ -3295,7 +3289,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_ULADZIMIR
+					option = BRG_KING_Wilhelm
 				}
 			}
 			modifier = {
@@ -3307,7 +3301,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_ULADZIMIR
+						option = BRG_KING_Wilhelm
 					}
 				}
 			}
@@ -3374,7 +3368,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_ZYHIMONT
+					option = BRG_KING_Wilhelm
 				}
 			}
 			modifier = {
@@ -3386,7 +3380,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_ZYHIMONT
+						option = BRG_KING_Wilhelm
 					}
 				}
 			}
@@ -3453,7 +3447,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_FREDRIK_KAARLEI
+					option = BRG_KING_Wilhelm
 				}
 			}
 			modifier = {
@@ -3465,7 +3459,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_FREDRIK_KAARLEI
+						option = BRG_KING_Wilhelm
 					}
 				}
 			}
@@ -3532,7 +3526,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_FREDRIK_VAINOI
+					option = BRG_KING_Wilhelm
 				}
 			}
 			modifier = {
@@ -3544,14 +3538,13 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_FREDRIK_VAINOI
+						option = BRG_KING_Wilhelm
 					}
 				}
 			}
 		}
 	}
-###第七个
-    BRG_elect_Fryderyk = {
+	BRG_elect_Fryderyk = {
 		cost = 10
 		icon = GFX_decision_generic_nationalism
 		fire_only_once = yes
@@ -3612,7 +3605,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_FRYDERYK
+					option = BRG_KING_Wilhelm
 				}
 			}
 			modifier = {
@@ -3624,7 +3617,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_FRYDERYK
+						option = BRG_KING_Wilhelm
 					}
 				}
 			}
@@ -3691,7 +3684,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_SAX_GEORGE
+					option = BRG_KING_Wilhelm
 				}
 			}
 			modifier = {
@@ -3703,7 +3696,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_SAX_GEORGE
+						option = BRG_KING_Wilhelm
 					}
 				}
 			}
@@ -3770,7 +3763,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_GABRIEL_I
+					option = BRG_KING_Wilhelm
 				}
 			}
 			modifier = {
@@ -3782,7 +3775,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_GABRIEL_I
+						option = BRG_KING_Wilhelm
 					}
 				}
 			}
@@ -3849,7 +3842,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_BERTRAN_II
+					option = BRG_KING_Wilhelm
 				}
 			}
 			modifier = {
@@ -3861,7 +3854,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_BERTRAN_II
+						option = BRG_KING_Wilhelm
 					}
 				}
 			}
@@ -3928,7 +3921,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_ALBERT
+					option = BRG_KING_Wilhelm
 				}
 			}
 			modifier = {
@@ -3940,13 +3933,12 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_ALBERT
+						option = BRG_KING_Wilhelm
 					}
 				}
 			}
 		}
 	}
-###第八个
 	BRG_elect_LeopoldIII = {
 		cost = 10
 		icon = GFX_decision_generic_nationalism
@@ -4008,7 +4000,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_LEOPOLDIII
+					option = BRG_KING_Wilhelm
 				}
 			}
 			modifier = {
@@ -4020,7 +4012,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_LEOPOLDIII
+						option = BRG_KING_Wilhelm
 					}
 				}
 			}
@@ -4102,7 +4094,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_ROMANI
+					option = BRG_KING_ROMANOV
 				}
 			}
 			modifier = {
@@ -4114,7 +4106,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_ROMANI
+						option = BRG_KING_ROMANOV
 					}
 				}
 			}
@@ -4192,7 +4184,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_VSEVOLODI
+					option = BRG_KING_ROMANOV
 				}
 			}
 			modifier = {
@@ -4204,7 +4196,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_VSEVOLODI
+						option = BRG_KING_ROMANOV
 					}
 				}
 			}
@@ -4271,7 +4263,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_DMITRI_ROMANOV
+					option = BRG_KING_ROMANOV
 				}
 			}
 			modifier = {
@@ -4283,7 +4275,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_DMITRI_ROMANOV
+						option = BRG_KING_ROMANOV
 					}
 				}
 			}
@@ -4350,7 +4342,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_PAVEL_ROMANOV
+					option = BRG_KING_ROMANOV
 				}
 			}
 			modifier = {
@@ -4362,13 +4354,12 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_PAVEL_ROMANOV
+						option = BRG_KING_ROMANOV
 					}
 				}
 			}
 		}
 	}
-###第九个
 	BRG_elect_VsevolodI = {
 		cost = 10
 		icon = GFX_decision_generic_nationalism
@@ -4430,7 +4421,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_VSEVOLODI
+					option = BRG_KING_ROMANOV
 				}
 			}
 			modifier = {
@@ -4442,7 +4433,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_VSEVOLODI
+						option = BRG_KING_ROMANOV
 					}
 				}
 			}
@@ -4509,7 +4500,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_ROMANI
+					option = BRG_KING_ROMANOV
 				}
 			}
 			modifier = {
@@ -4521,7 +4512,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_ROMANI
+						option = BRG_KING_ROMANOV
 					}
 				}
 			}
@@ -4588,7 +4579,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_ANDREI_ROMANOV
+					option = BRG_KING_ROMANOV
 				}
 			}
 			modifier = {
@@ -4600,7 +4591,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_ANDREI_ROMANOV
+						option = BRG_KING_ROMANOV
 					}
 				}
 			}
@@ -4667,7 +4658,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_BORISI
+					option = BRG_KING_ROMANOV
 				}
 			}
 			modifier = {
@@ -4679,7 +4670,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_BORISI
+						option = BRG_KING_ROMANOV
 					}
 				}
 			}
@@ -4746,7 +4737,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_MIKHAILII
+					option = BRG_KING_ROMANOV
 				}
 			}
 			modifier = {
@@ -4758,13 +4749,12 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_MIKHAILII
+						option = BRG_KING_ROMANOV
 					}
 				}
 			}
 		}
 	}
-###第十个
 	BRG_elect_NicholasII = {
 		cost = 10
 		icon = GFX_decision_generic_nationalism
@@ -4826,7 +4816,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_NICHOLASII
+					option = BRG_KING_ROMANOV
 				}
 			}
 			modifier = {
@@ -4838,7 +4828,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_NICHOLASII
+						option = BRG_KING_ROMANOV
 					}
 				}
 			}
@@ -4905,7 +4895,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_ALEXI_ROMANOV
+					option = BRG_KING_ROMANOV
 				}
 			}
 			modifier = {
@@ -4917,7 +4907,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_ALEXI_ROMANOV
+						option = BRG_KING_ROMANOV
 					}
 				}
 			}
@@ -4984,7 +4974,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_ANASTASIA
+					option = BRG_KING_ROMANOV
 				}
 			}
 			modifier = {
@@ -4996,7 +4986,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_ANASTASIA
+						option = BRG_KING_ROMANOV
 					}
 				}
 			}
@@ -5063,7 +5053,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_PYOTR_WRANGEL
+					option = BRG_KING_ROMANOV
 				}
 			}
 			modifier = {
@@ -5075,7 +5065,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_PYOTR_WRANGEL
+						option = BRG_KING_ROMANOV
 					}
 				}
 			}
@@ -5142,7 +5132,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_PYOTR_P_WRANGEL
+					option = BRG_KING_ROMANOV
 				}
 			}
 			modifier = {
@@ -5154,13 +5144,12 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_PYOTR_P_WRANGEL
+						option = BRG_KING_ROMANOV
 					}
 				}
 			}
 		}
 	}
-###第十一个
 	BRG_elect_Felix_Yusupov_Drip = {
 		cost = 10
 		icon = GFX_decision_generic_nationalism
@@ -5222,7 +5211,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_FELIX_YUSUPOV_DRIP
+					option = BRG_KING_ROMANOV
 				}
 			}
 			modifier = {
@@ -5234,7 +5223,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_FELIX_YUSUPOV_DRIP
+						option = BRG_KING_ROMANOV
 					}
 				}
 			}
@@ -5301,7 +5290,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_NIKOLAY_ALEKSANDROVICH_KULIKOVSKI
+					option = BRG_KING_ROMANOV
 				}
 			}
 			modifier = {
@@ -5313,7 +5302,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_NIKOLAY_ALEKSANDROVICH_KULIKOVSKI
+						option = BRG_KING_ROMANOV
 					}
 				}
 			}
@@ -5380,7 +5369,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_PAVLO_SKOROPADSKYI
+					option = BRG_KING_ROMANOV
 				}
 			}
 			modifier = {
@@ -5392,7 +5381,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_PAVLO_SKOROPADSKYI
+						option = BRG_KING_ROMANOV
 					}
 				}
 			}
@@ -5459,7 +5448,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_DANYLO_SKOROPADSKY
+					option = BRG_KING_ROMANOV
 				}
 			}
 			modifier = {
@@ -5471,14 +5460,14 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_DANYLO_SKOROPADSKY
+						option = BRG_KING_ROMANOV
 					}
 				}
 			}
 		}
 	}
 	BRG_elect_Kadyr_Giray = {
-	 cost = 10
+		cost = 10
 		icon = GFX_decision_generic_nationalism
 		fire_only_once = yes
 		available = { always = yes }
@@ -5538,7 +5527,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_KADYR_GIRAY
+					option = BRG_KING_ROMANOV
 				}
 			}
 			modifier = {
@@ -5550,13 +5539,12 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_KADYR_GIRAY
+						option = BRG_KING_ROMANOV
 					}
 				}
 			}
 		}
 	}
-###第十二个
 	BRG_elect_Seraya_Shapshal = {
 		cost = 10
 		icon = GFX_decision_generic_nationalism
@@ -5618,7 +5606,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_SERAYA_SHAPSHAL
+					option = BRG_KING_ROMANOV
 				}
 			}
 			modifier = {
@@ -5630,7 +5618,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_SERAYA_SHAPSHAL
+						option = BRG_KING_ROMANOV
 					}
 				}
 			}
@@ -5704,7 +5692,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_FROG
+					option = BRG_KING_ORLEANISTS
 				}
 			}
 			modifier = {
@@ -5716,7 +5704,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_FROG
+						option = BRG_KING_ORLEANISTS
 					}
 				}
 			}
@@ -5783,7 +5771,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_FROG2
+					option = BRG_KING_ORLEANISTS
 				}
 			}
 			modifier = {
@@ -5795,7 +5783,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_FROG2
+						option = BRG_KING_ORLEANISTS
 					}
 				}
 			}
@@ -5873,7 +5861,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_POLOCK
+					option = BRG_KING_PIAST
 				}
 			}
 			modifier = {
@@ -5885,7 +5873,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_POLOCK
+						option = BRG_KING_PIAST
 					}
 				}
 			}
@@ -5963,7 +5951,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_AUSTRIAN_CHARLES
+					option = BRG_KING_CARLIST
 				}
 			}
 			modifier = {
@@ -5975,14 +5963,13 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_AUSTRIAN_CHARLES
+						option = BRG_KING_CARLIST
 					}
 				}
 			}
 		}
 	}
-###第十三个
-    BRG_elect_christian = {
+	BRG_elect_christian = {
 		cost = 10
 		icon = GFX_decision_generic_nationalism
 		fire_only_once = yes
@@ -6054,7 +6041,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_CHRISTIAN
+					option = BRG_KING_GLUCKSBURG
 				}
 			}
 			modifier = {
@@ -6066,7 +6053,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_CHRISTIAN
+						option = BRG_KING_GLUCKSBURG
 					}
 				}
 			}
@@ -6133,7 +6120,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_FREDERICK
+					option = BRG_KING_GLUCKSBURG
 				}
 			}
 			modifier = {
@@ -6145,7 +6132,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_FREDERICK
+						option = BRG_KING_GLUCKSBURG
 					}
 				}
 			}
@@ -6212,7 +6199,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_HAAKON_VII
+					option = BRG_KING_GLUCKSBURG
 				}
 			}
 			modifier = {
@@ -6224,7 +6211,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_HAAKON_VII
+						option = BRG_KING_GLUCKSBURG
 					}
 				}
 			}
@@ -6298,7 +6285,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_SPAINARD
+					option = BRG_KING_SPAIN
 				}
 			}
 			modifier = {
@@ -6310,7 +6297,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_SPAINARD
+						option = BRG_KING_SPAIN
 					}
 				}
 			}
@@ -6377,7 +6364,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_JUAN_III
+					option = BRG_KING_SPAIN
 				}
 			}
 			modifier = {
@@ -6389,13 +6376,12 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_JUAN_III
+						option = BRG_KING_SPAIN
 					}
 				}
 			}
 		}
 	}
-###第十四个
 	BRG_elect_Jaime_I = {
 		cost = 10
 		icon = GFX_decision_generic_nationalism
@@ -6457,7 +6443,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_JAIME_I
+					option = BRG_KING_SPAIN
 				}
 			}
 			modifier = {
@@ -6469,7 +6455,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_JAIME_I
+						option = BRG_KING_SPAIN
 					}
 				}
 			}
@@ -6536,7 +6522,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_JAVIER_I
+					option = BRG_KING_SPAIN
 				}
 			}
 			modifier = {
@@ -6548,7 +6534,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_JAVIER_I
+						option = BRG_KING_SPAIN
 					}
 				}
 			}
@@ -6615,7 +6601,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_LOUIS_BONAPARTE
+					option = BRG_KING_ONION
 				}
 			}
 			modifier = {
@@ -6627,7 +6613,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_LOUIS_BONAPARTE
+						option = BRG_KING_ONION
 					}
 				}
 			}
@@ -6701,7 +6687,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_NAP
+					option = BRG_KING_ONION
 				}
 			}
 			modifier = {
@@ -6713,7 +6699,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_NAP
+						option = BRG_KING_ONION
 					}
 				}
 			}
@@ -6780,7 +6766,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_JOACHIM_NAPOLEON
+					option = BRG_KING_ONION
 				}
 			}
 			modifier = {
@@ -6792,13 +6778,12 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_JOACHIM_NAPOLEON
+						option = BRG_KING_ONION
 					}
 				}
 			}
 		}
 	}
-###第十五个
 	BRG_elect_Antoine_Colonna_Walewski = {
 		cost = 10
 		icon = GFX_decision_generic_nationalism
@@ -6860,7 +6845,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_ANTOINE_COLONNA_WALEWSKI
+					option = BRG_KING_ONION
 				}
 			}
 			modifier = {
@@ -6872,7 +6857,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_ANTOINE_COLONNA_WALEWSKI
+						option = BRG_KING_ONION
 					}
 				}
 			}
@@ -6946,7 +6931,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_ROMANIAN_CHARLES
+					option = BRG_KING_PICKPOCKET
 				}
 			}
 			modifier = {
@@ -6958,7 +6943,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_ROMANIAN_CHARLES
+						option = BRG_KING_PICKPOCKET
 					}
 				}
 			}
@@ -7025,7 +7010,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_ROMANIAN_MICHAEL
+					option = BRG_KING_PICKPOCKET
 				}
 			}
 			modifier = {
@@ -7037,7 +7022,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_ROMANIAN_MICHAEL
+						option = BRG_KING_PICKPOCKET
 					}
 				}
 			}
@@ -7104,7 +7089,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_ROMANIAN_NICOLAEI
+					option = BRG_KING_PICKPOCKET
 				}
 			}
 			modifier = {
@@ -7116,7 +7101,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_ROMANIAN_NICOLAEI
+						option = BRG_KING_PICKPOCKET
 					}
 				}
 			}
@@ -7183,7 +7168,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_ROMANIAN_MIHAIL2
+					option = BRG_KING_PICKPOCKET
 				}
 			}
 			modifier = {
@@ -7195,13 +7180,12 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_ROMANIAN_MIHAIL2
+						option = BRG_KING_PICKPOCKET
 					}
 				}
 			}
 		}
 	}
-###第十六个
 	BRG_elect_romanian_Cantacuzino = {
 		cost = 10
 		icon = GFX_decision_generic_nationalism
@@ -7263,7 +7247,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_ROMANIAN_CANTACUZINO
+					option = BRG_KING_PICKPOCKET
 				}
 			}
 			modifier = {
@@ -7275,7 +7259,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_ROMANIAN_CANTACUZINO
+						option = BRG_KING_PICKPOCKET
 					}
 				}
 			}
@@ -7349,7 +7333,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_PASTA
+					option = BRG_KING_SAVOY
 				}
 			}
 			modifier = {
@@ -7361,7 +7345,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_PASTA
+						option = BRG_KING_SAVOY
 					}
 				}
 			}
@@ -7428,7 +7412,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_PASTA1
+					option = BRG_KING_SAVOY
 				}
 			}
 			modifier = {
@@ -7440,7 +7424,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_PASTA1
+						option = BRG_KING_SAVOY
 					}
 				}
 			}
@@ -7507,7 +7491,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_PASTA2
+					option = BRG_KING_SAVOY
 				}
 			}
 			modifier = {
@@ -7519,7 +7503,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_PASTA2
+						option = BRG_KING_SAVOY
 					}
 				}
 			}
@@ -7586,7 +7570,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_PASTA3
+					option = BRG_KING_SAVOY
 				}
 			}
 			modifier = {
@@ -7598,13 +7582,12 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_PASTA3
+						option = BRG_KING_SAVOY
 					}
 				}
 			}
 		}
 	}
-###第十七个
 	BRG_elect_pasta4 = {
 		cost = 10
 		icon = GFX_decision_generic_nationalism
@@ -7666,7 +7649,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_PASTA4
+					option = BRG_KING_SAVOY
 				}
 			}
 			modifier = {
@@ -7678,7 +7661,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_PASTA4
+						option = BRG_KING_SAVOY
 					}
 				}
 			}
@@ -7745,7 +7728,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_PASTA5
+					option = BRG_KING_SAVOY
 				}
 			}
 			modifier = {
@@ -7757,7 +7740,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_PASTA5
+						option = BRG_KING_SAVOY
 					}
 				}
 			}
@@ -7824,7 +7807,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_PASTA6
+					option = BRG_KING_SAVOY
 				}
 			}
 			modifier = {
@@ -7836,7 +7819,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_PASTA6
+						option = BRG_KING_SAVOY
 					}
 				}
 			}
@@ -7903,7 +7886,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_PASTA7
+					option = BRG_KING_SAVOY
 				}
 			}
 			modifier = {
@@ -7915,7 +7898,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_PASTA7
+						option = BRG_KING_SAVOY
 					}
 				}
 			}
@@ -7982,7 +7965,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_PASTA8
+					option = BRG_KING_SAVOY
 				}
 			}
 			modifier = {
@@ -7994,13 +7977,12 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_PASTA8
+						option = BRG_KING_SAVOY
 					}
 				}
 			}
 		}
 	}
-###第十八个
 	BRG_elect_RobertoI = {
 		cost = 10
 		icon = GFX_decision_generic_nationalism
@@ -8062,7 +8044,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_ROBERTOI
+					option = BRG_KING_SAVOY
 				}
 			}
 			modifier = {
@@ -8074,7 +8056,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_ROBERTOI
+						option = BRG_KING_SAVOY
 					}
 				}
 			}
@@ -8141,7 +8123,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_ELIASI
+					option = BRG_KING_SAVOY
 				}
 			}
 			modifier = {
@@ -8153,7 +8135,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_ELIASI
+						option = BRG_KING_SAVOY
 					}
 				}
 			}
@@ -8220,7 +8202,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_PIUS_XII
+					option = BRG_KING_SAVOY
 				}
 			}
 			modifier = {
@@ -8232,7 +8214,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_PIUS_XII
+						option = BRG_KING_SAVOY
 					}
 				}
 			}
@@ -8299,7 +8281,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_STATE_JOHN
+					option = BRG_KING_SAVOY
 				}
 			}
 			modifier = {
@@ -8311,7 +8293,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_STATE_JOHN
+						option = BRG_KING_SAVOY
 					}
 				}
 			}
@@ -8378,7 +8360,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_STATE_LEO
+					option = BRG_KING_SAVOY
 				}
 			}
 			modifier = {
@@ -8390,14 +8372,13 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_STATE_LEO
+						option = BRG_KING_SAVOY
 					}
 				}
 			}
 		}
 	}
-###第十九个
-    BRG_elect_State_Benedict = {
+	BRG_elect_State_Benedict = {
 		cost = 10
 		icon = GFX_decision_generic_nationalism
 		fire_only_once = yes
@@ -8458,7 +8439,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_STATE_BENEDICT
+					option = BRG_KING_SAVOY
 				}
 			}
 			modifier = {
@@ -8470,7 +8451,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_STATE_BENEDICT
+						option = BRG_KING_SAVOY
 					}
 				}
 			}
@@ -8537,7 +8518,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_STATE_ADRIAN
+					option = BRG_KING_SAVOY
 				}
 			}
 			modifier = {
@@ -8549,7 +8530,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_STATE_ADRIAN
+						option = BRG_KING_SAVOY
 					}
 				}
 			}
@@ -8616,7 +8597,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_STATE_JULIUS
+					option = BRG_KING_SAVOY
 				}
 			}
 			modifier = {
@@ -8628,7 +8609,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_STATE_JULIUS
+						option = BRG_KING_SAVOY
 					}
 				}
 			}
@@ -8695,7 +8676,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_MARCEL_LEFEBVRE
+					option = BRG_KING_SAVOY
 				}
 			}
 			modifier = {
@@ -8707,7 +8688,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_MARCEL_LEFEBVRE
+						option = BRG_KING_SAVOY
 					}
 				}
 			}
@@ -8774,7 +8755,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_MICHEL_COLLIN
+					option = BRG_KING_SAVOY
 				}
 			}
 			modifier = {
@@ -8786,13 +8767,12 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_MICHEL_COLLIN
+						option = BRG_KING_SAVOY
 					}
 				}
 			}
 		}
 	}
-###第二十个
 	BRG_elect_Charles_Ginisty = {
 		cost = 10
 		icon = GFX_decision_generic_nationalism
@@ -8854,7 +8834,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_CHARLES_GINISTY
+					option = BRG_KING_SAVOY
 				}
 			}
 			modifier = {
@@ -8866,7 +8846,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_CHARLES_GINISTY
+						option = BRG_KING_SAVOY
 					}
 				}
 			}
@@ -8933,7 +8913,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_LUIGI_BARLASSINA
+					option = BRG_KING_SAVOY
 				}
 			}
 			modifier = {
@@ -8945,7 +8925,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_LUIGI_BARLASSINA
+						option = BRG_KING_SAVOY
 					}
 				}
 			}
@@ -9012,7 +8992,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_SERGIUS_STRAGORODSKY
+					option = BRG_KING_ROMANOV
 				}
 			}
 			modifier = {
@@ -9024,7 +9004,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_SERGIUS_STRAGORODSKY
+						option = BRG_KING_ROMANOV
 					}
 				}
 			}
@@ -9091,7 +9071,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_PETER_ARIDA
+					option = BRG_KING_ROMANOV
 				}
 			}
 			modifier = {
@@ -9103,7 +9083,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_PETER_ARIDA
+						option = BRG_KING_ROMANOV
 					}
 				}
 			}
@@ -9170,7 +9150,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_LEONTIOS_SECOND
+					option = BRG_KING_ROMANOV
 				}
 			}
 			modifier = {
@@ -9182,14 +9162,13 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_LEONTIOS_SECOND
+						option = BRG_KING_ROMANOV
 					}
 				}
 			}
 		}
 	}
-###第二十一个
-    BRG_elect_swede = {
+	BRG_elect_swede = {
 		cost = 10
 		icon = GFX_decision_generic_nationalism
 		fire_only_once = yes
@@ -9257,7 +9236,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_SWEDE
+					option = BRG_KING_BERNADOTTE
 				}
 			}
 			modifier = {
@@ -9269,7 +9248,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_SWEDE
+						option = BRG_KING_BERNADOTTE
 					}
 				}
 			}
@@ -9336,7 +9315,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_SWEDE2
+					option = BRG_KING_BERNADOTTE
 				}
 			}
 			modifier = {
@@ -9348,7 +9327,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_SWEDE2
+						option = BRG_KING_BERNADOTTE
 					}
 				}
 			}
@@ -9415,7 +9394,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_SWEDE3
+					option = BRG_KING_BERNADOTTE
 				}
 			}
 			modifier = {
@@ -9427,7 +9406,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_SWEDE3
+						option = BRG_KING_BERNADOTTE
 					}
 				}
 			}
@@ -9580,7 +9559,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_PRINCE_KYRIL
+					option = BRG_KING_BULGAR
 				}
 			}
 			modifier = {
@@ -9592,13 +9571,12 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_PRINCE_KYRIL
+						option = BRG_KING_BULGAR
 					}
 				}
 			}
 		}
 	}
-###第二十二个
 	BRG_elect_portugal = {
 		cost = 10
 		icon = GFX_decision_generic_nationalism
@@ -9667,7 +9645,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_PORTUGAL
+					option = BRG_KING_TUGA
 				}
 			}
 			modifier = {
@@ -9679,7 +9657,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_PORTUGAL
+						option = BRG_KING_TUGA
 					}
 				}
 			}
@@ -9746,7 +9724,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_ADELAIDE
+					option = BRG_KING_TUGA
 				}
 			}
 			modifier = {
@@ -9758,7 +9736,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_ADELAIDE
+						option = BRG_KING_TUGA
 					}
 				}
 			}
@@ -9825,7 +9803,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_MARIA_ANA
+					option = BRG_KING_TUGA
 				}
 			}
 			modifier = {
@@ -9837,7 +9815,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_MARIA_ANA
+						option = BRG_KING_TUGA
 					}
 				}
 			}
@@ -9910,7 +9888,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_ZOG
+					option = BRG_KING_TUGA
 				}
 			}
 			modifier = {
@@ -9922,7 +9900,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_ZOG
+						option = BRG_KING_TUGA
 					}
 				}
 			}
@@ -10013,8 +9991,7 @@ BRG_pick_a_king = {
 			}
 		}
 	}
-###第二十三个
-	BRG_elect_PeterII_Alexander = {
+	BRG_elect_PeterII = {
 		cost = 10
 		icon = GFX_decision_generic_nationalism
 		fire_only_once = yes
@@ -10074,7 +10051,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_PETERII_ALEXANDER
+					option = BRG_KING_SERB
 				}
 			}
 			modifier = {
@@ -10086,13 +10063,13 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_PETERII_ALEXANDER
+						option = BRG_KING_SERB
 					}
 				}
 			}
 		}
 	}
-	BRG_elect_PeterII_Peter = {
+	BRG_elect_PeterII = {
 		cost = 10
 		icon = GFX_decision_generic_nationalism
 		fire_only_once = yes
@@ -10152,7 +10129,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_PETERII_PETER
+					option = BRG_KING_SERB
 				}
 			}
 			modifier = {
@@ -10164,7 +10141,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_PETERII_PETER
+						option = BRG_KING_SERB
 					}
 				}
 			}
@@ -10230,7 +10207,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_GEORGEI
+					option = BRG_KING_SERB
 				}
 			}
 			modifier = {
@@ -10242,7 +10219,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_GEORGEI
+						option = BRG_KING_SERB
 					}
 				}
 			}
@@ -10308,7 +10285,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_MICHAEL1
+					option = BRG_KING_SERB
 				}
 			}
 			modifier = {
@@ -10320,7 +10297,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_MICHAEL1
+						option = BRG_KING_SERB
 					}
 				}
 			}
@@ -10405,7 +10382,6 @@ BRG_pick_a_king = {
 			}
 		}
 	}
-###第二十四个
 	BRG_elect_AlexanderI = {
 		cost = 10
 		icon = GFX_decision_generic_nationalism
@@ -10467,7 +10443,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_ALEXANDERI
+					option = BRG_KING_GAYREEK
 				}
 			}
 			modifier = {
@@ -10479,7 +10455,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_ALEXANDERI
+						option = BRG_KING_GAYREEK
 					}
 				}
 			}
@@ -10546,7 +10522,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_GEORGEII
+					option = BRG_KING_GAYREEK
 				}
 			}
 			modifier = {
@@ -10558,7 +10534,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_GEORGEII
+						option = BRG_KING_GAYREEK
 					}
 				}
 			}
@@ -10624,7 +10600,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_PEDRO
+					option = BRG_KING_GAYREEK
 				}
 			}
 			modifier = {
@@ -10636,7 +10612,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_PEDRO
+						option = BRG_KING_GAYREEK
 					}
 				}
 			}
@@ -10703,7 +10679,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_KARL
+					option = BRG_KING_GAYREEK
 				}
 			}
 			modifier = {
@@ -10715,7 +10691,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_KARL
+						option = BRG_KING_GAYREEK
 					}
 				}
 			}
@@ -10782,7 +10758,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_OLBRACHT
+					option = BRG_KING_GAYREEK
 				}
 			}
 			modifier = {
@@ -10794,14 +10770,13 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_OLBRACHT
+						option = BRG_KING_GAYREEK
 					}
 				}
 			}
 		}
 	}
-###第二十五个
-    BRG_elect_Vasyl = {
+	BRG_elect_Vasyl = {
 		cost = 10
 		icon = GFX_decision_generic_nationalism
 		fire_only_once = yes
@@ -10862,7 +10837,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_VASYL
+					option = BRG_KING_GAYREEK
 				}
 			}
 			modifier = {
@@ -10874,7 +10849,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_VASYL
+						option = BRG_KING_GAYREEK
 					}
 				}
 			}
@@ -10941,7 +10916,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_LEO_STEFAN
+					option = BRG_KING_GAYREEK
 				}
 			}
 			modifier = {
@@ -10953,7 +10928,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_LEO_STEFAN
+						option = BRG_KING_GAYREEK
 					}
 				}
 			}
@@ -11020,7 +10995,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_LOBKOWICZ
+					option = BRG_KING_GAYREEK
 				}
 			}
 			modifier = {
@@ -11032,7 +11007,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_LOBKOWICZ
+						option = BRG_KING_GAYREEK
 					}
 				}
 			}
@@ -11099,7 +11074,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_SCHWARZENBERG
+					option = BRG_KING_GAYREEK
 				}
 			}
 			modifier = {
@@ -11111,7 +11086,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_SCHWARZENBERG
+						option = BRG_KING_GAYREEK
 					}
 				}
 			}
@@ -11179,7 +11154,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_JULINIA
+					option = BRG_KING_julinia
 				}
 			}
 			modifier = {
@@ -11191,13 +11166,12 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_JULINIA
+						option = BRG_KING_julinia
 					}
 				}
 			}
 		}
 	}
-###第二十六个
 	BRG_elect_maria = {
 		cost = 10
 		icon = GFX_decision_generic_nationalism
@@ -11266,7 +11240,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_MARIA
+					option = BRG_KING_ADELAIDE
 				}
 			}
 			modifier = {
@@ -11278,13 +11252,13 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_MARIA
+						option = BRG_KING_ADELAIDE
 					}
 				}
 			}
 		}
 	}
-	BRG_elect_maria_adelaide = {
+	BRG_elect_maria = {
 		cost = 10
 		icon = GFX_decision_generic_nationalism
 		fire_only_once = yes
@@ -11352,7 +11326,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_MARIA_ADELAIDE
+					option = BRG_KING_ADELAIDE
 				}
 			}
 			modifier = {
@@ -11364,7 +11338,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_MARIA_ADELAIDE
+						option = BRG_KING_ADELAIDE
 					}
 				}
 			}
@@ -11431,7 +11405,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_CHARLOTTE
+					option = BRG_KING_ADELAIDE
 				}
 			}
 			modifier = {
@@ -11443,7 +11417,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_CHARLOTTE
+						option = BRG_KING_ADELAIDE
 					}
 				}
 			}
@@ -11510,7 +11484,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_CHEIKH_ANTONIOS
+					option = BRG_KING_SAVOY
 				}
 			}
 			modifier = {
@@ -11522,7 +11496,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_CHEIKH_ANTONIOS
+						option = BRG_KING_SAVOY
 					}
 				}
 			}
@@ -11589,7 +11563,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_ABDULMECID_II
+					option = BRG_KING_SAVOY
 				}
 			}
 			modifier = {
@@ -11601,13 +11575,12 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_ABDULMECID_II
+						option = BRG_KING_SAVOY
 					}
 				}
 			}
 		}
 	}
-###第二十七个
 	BRG_elect_Ahmed_IV = {
 		cost = 10
 		icon = GFX_decision_generic_nationalism
@@ -11669,7 +11642,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_AHMED_IV
+					option = BRG_KING_SAVOY
 				}
 			}
 			modifier = {
@@ -11681,7 +11654,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_AHMED_IV
+						option = BRG_KING_SAVOY
 					}
 				}
 			}
@@ -11748,7 +11721,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_OSMAN_FUAD
+					option = BRG_KING_SAVOY
 				}
 			}
 			modifier = {
@@ -11760,7 +11733,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_OSMAN_FUAD
+						option = BRG_KING_SAVOY
 					}
 				}
 			}
@@ -11827,7 +11800,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_OMER_FARUK
+					option = BRG_KING_SAVOY
 				}
 			}
 			modifier = {
@@ -11839,7 +11812,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_OMER_FARUK
+						option = BRG_KING_SAVOY
 					}
 				}
 			}
@@ -11906,7 +11879,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_AZIZ_EMIR
+					option = BRG_KING_SAVOY
 				}
 			}
 			modifier = {
@@ -11918,7 +11891,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_AZIZ_EMIR
+						option = BRG_KING_SAVOY
 					}
 				}
 			}
@@ -11985,7 +11958,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_TALAL_AL_RASHID
+					option = BRG_KING_SAVOY
 				}
 			}
 			modifier = {
@@ -11997,13 +11970,12 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_TALAL_AL_RASHID
+						option = BRG_KING_SAVOY
 					}
 				}
 			}
 		}
 	}
-###第二十八个
 	BRG_elect_Abd_al_Aziz = {
 		cost = 10
 		icon = GFX_decision_generic_nationalism
@@ -12065,7 +12037,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_ABD_AL_AZIZ
+					option = BRG_KING_SAVOY
 				}
 			}
 			modifier = {
@@ -12077,7 +12049,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_ABD_AL_AZIZ
+						option = BRG_KING_SAVOY
 					}
 				}
 			}
@@ -12144,7 +12116,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_MUHAMMAD_IBN_TALIL
+					option = BRG_KING_SAVOY
 				}
 			}
 			modifier = {
@@ -12156,7 +12128,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_MUHAMMAD_IBN_TALIL
+						option = BRG_KING_SAVOY
 					}
 				}
 			}
@@ -12223,7 +12195,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_SUBHAN
+					option = BRG_KING_SAVOY
 				}
 			}
 			modifier = {
@@ -12235,7 +12207,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_SUBHAN
+						option = BRG_KING_SAVOY
 					}
 				}
 			}
@@ -12302,7 +12274,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_ABDULAZIZ_IBN_SAUD
+					option = BRG_KING_SAVOY
 				}
 			}
 			modifier = {
@@ -12314,7 +12286,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_ABDULAZIZ_IBN_SAUD
+						option = BRG_KING_SAVOY
 					}
 				}
 			}
@@ -12381,7 +12353,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_ABDULAZIZ_AL_SAUD
+					option = BRG_KING_SAVOY
 				}
 			}
 			modifier = {
@@ -12393,13 +12365,12 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_ABDULAZIZ_AL_SAUD
+						option = BRG_KING_SAVOY
 					}
 				}
 			}
 		}
 	}
-###第二十九个
 	BRG_elect_bin_al_Hussein = {
 		cost = 10
 		icon = GFX_decision_generic_nationalism
@@ -12461,7 +12432,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_BIN_AL_HUSSEIN
+					option = BRG_KING_SAVOY
 				}
 			}
 			modifier = {
@@ -12473,7 +12444,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_BIN_AL_HUSSEIN
+						option = BRG_KING_SAVOY
 					}
 				}
 			}
@@ -12527,7 +12498,7 @@ BRG_pick_a_king = {
 				traits = { BRG_the_New_King }
 			}
 			create_country_leader = {
-				name = "西满二十一世·以赛亚"
+				name = "阿卜杜拉一世"
 				picture = "gfx/leaders/BRG/Portrait_Assyria_Shimun_XXI_Eshai.png"
 				expire = "1965.1.1"
 				ideology = liberal_socialism_subtype
@@ -12540,7 +12511,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_SHIMUN_XXI_ESHAI
+					option = BRG_KING_SAVOY
 				}
 			}
 			modifier = {
@@ -12552,7 +12523,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_SHIMUN_XXI_ESHAI
+						option = BRG_KING_SAVOY
 					}
 				}
 			}
@@ -12619,7 +12590,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_IMAM_YAHA
+					option = BRG_KING_SAVOY
 				}
 			}
 			modifier = {
@@ -12631,7 +12602,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_IMAM_YAHA
+						option = BRG_KING_SAVOY
 					}
 				}
 			}
@@ -12698,7 +12669,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_AHMAD_BIN_YAHA
+					option = BRG_KING_SAVOY
 				}
 			}
 			modifier = {
@@ -12710,7 +12681,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_AHMAD_BIN_YAHA
+						option = BRG_KING_SAVOY
 					}
 				}
 			}
@@ -12777,7 +12748,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_IBN_TAIMUR
+					option = BRG_KING_SAVOY
 				}
 			}
 			modifier = {
@@ -12789,13 +12760,12 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_IBN_TAIMUR
+						option = BRG_KING_SAVOY
 					}
 				}
 			}
 		}
 	}
-###第三十个
 	BRG_elect_Yusuf_Saadun = {
 		cost = 10
 		icon = GFX_decision_generic_nationalism
@@ -12857,7 +12827,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_YUSUF_SAADUN
+					option = BRG_KING_SAVOY
 				}
 			}
 			modifier = {
@@ -12869,7 +12839,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_YUSUF_SAADUN
+						option = BRG_KING_SAVOY
 					}
 				}
 			}
@@ -12936,7 +12906,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_EGYPT_FAROUK
+					option = BRG_KING_SAVOY
 				}
 			}
 			modifier = {
@@ -12948,7 +12918,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_EGYPT_FAROUK
+						option = BRG_KING_SAVOY
 					}
 				}
 			}
@@ -13015,7 +12985,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_ABBAS_II
+					option = BRG_KING_SAVOY
 				}
 			}
 			modifier = {
@@ -13027,7 +12997,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_ABBAS_II
+						option = BRG_KING_SAVOY
 					}
 				}
 			}
@@ -13094,7 +13064,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_SYR_MONEIM
+					option = BRG_KING_SAVOY
 				}
 			}
 			modifier = {
@@ -13106,7 +13076,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_SYR_MONEIM
+						option = BRG_KING_SAVOY
 					}
 				}
 			}
@@ -13173,7 +13143,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_HAILE_SELASSIE
+					option = BRG_KING_SAVOY
 				}
 			}
 			modifier = {
@@ -13185,14 +13155,13 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_HAILE_SELASSIE
+						option = BRG_KING_SAVOY
 					}
 				}
 			}
 		}
 	}
-###第三十一个
-    BRG_elect_Ali_Shire = {
+	BRG_elect_Ali_Shire = {
 		cost = 10
 		icon = GFX_decision_generic_nationalism
 		fire_only_once = yes
@@ -13253,7 +13222,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_ALI_SHIRE
+					option = BRG_KING_SAVOY
 				}
 			}
 			modifier = {
@@ -13265,7 +13234,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_ALI_SHIRE
+						option = BRG_KING_SAVOY
 					}
 				}
 			}
@@ -13332,7 +13301,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_IDRIS
+					option = BRG_KING_SAVOY
 				}
 			}
 			modifier = {
@@ -13344,7 +13313,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_IDRIS
+						option = BRG_KING_SAVOY
 					}
 				}
 			}
@@ -13411,7 +13380,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_BOSI
+					option = BRG_KING_PICKPOCKET
 				}
 			}
 			modifier = {
@@ -13423,7 +13392,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_BOSI
+						option = BRG_KING_PICKPOCKET
 					}
 				}
 			}
@@ -13490,7 +13459,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_BOSI2
+					option = BRG_KING_PICKPOCKET
 				}
 			}
 			modifier = {
@@ -13502,7 +13471,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_BOSI2
+						option = BRG_KING_PICKPOCKET
 					}
 				}
 			}
@@ -13569,7 +13538,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_DANZAN_TUNDUTOV
+					option = BRG_KING_PICKPOCKET
 				}
 			}
 			modifier = {
@@ -13581,13 +13550,12 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_DANZAN_TUNDUTOV
+						option = BRG_KING_PICKPOCKET
 					}
 				}
 			}
 		}
 	}
-###第三十二个
 	BRG_elect_Nadjmudin_Gotskynsky = {
 		cost = 10
 		icon = GFX_decision_generic_nationalism
@@ -13649,7 +13617,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_NADJMUDIN_GOTSKYNSKY
+					option = BRG_KING_PICKPOCKET
 				}
 			}
 			modifier = {
@@ -13661,7 +13629,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_NADJMUDIN_GOTSKYNSKY
+						option = BRG_KING_PICKPOCKET
 					}
 				}
 			}
@@ -13728,7 +13696,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_BAGRIATON_MUKHRANELI
+					option = BRG_KING_PICKPOCKET
 				}
 			}
 			modifier = {
@@ -13740,7 +13708,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_BAGRIATON_MUKHRANELI
+						option = BRG_KING_PICKPOCKET
 					}
 				}
 			}
@@ -13807,7 +13775,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_ALEKSANDR_CHACHBA
+					option = BRG_KING_PICKPOCKET
 				}
 			}
 			modifier = {
@@ -13819,7 +13787,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_ALEKSANDR_CHACHBA
+						option = BRG_KING_PICKPOCKET
 					}
 				}
 			}
@@ -13886,7 +13854,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_SAYID_ABDULLA
+					option = BRG_KING_PICKPOCKET
 				}
 			}
 			modifier = {
@@ -13898,7 +13866,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_SAYID_ABDULLA
+						option = BRG_KING_PICKPOCKET
 					}
 				}
 			}
@@ -13965,7 +13933,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_PAYA
+					option = BRG_KING_PICKPOCKET
 				}
 			}
 			modifier = {
@@ -13977,13 +13945,12 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_PAYA
+						option = BRG_KING_PICKPOCKET
 					}
 				}
 			}
 		}
 	}
-#第三十三个
 	BRG_elect_aisin_gioro = {
 		cost = 10
 		icon = GFX_decision_generic_nationalism
@@ -14045,7 +14012,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_AISIN_GIORO
+					option = BRG_KING_WEEB_HOBART
 				}
 			}
 			modifier = {
@@ -14057,7 +14024,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_AISIN_GIORO
+						option = BRG_KING_WEEB_HOBART
 					}
 				}
 			}
@@ -14124,7 +14091,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_AISIN_GIORO2
+					option = BRG_KING_WEEB_HOBART
 				}
 			}
 			modifier = {
@@ -14136,7 +14103,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_AISIN_GIORO2
+						option = BRG_KING_WEEB_HOBART
 					}
 				}
 			}
@@ -14203,7 +14170,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_AISIN_GIORO3
+					option = BRG_KING_WEEB_HOBART
 				}
 			}
 			modifier = {
@@ -14215,7 +14182,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_AISIN_GIORO3
+						option = BRG_KING_WEEB_HOBART
 					}
 				}
 			}
@@ -14282,7 +14249,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_BOGD_KHAN
+					option = BRG_KING_WEEB_HOBART
 				}
 			}
 			modifier = {
@@ -14294,7 +14261,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_BOGD_KHAN
+						option = BRG_KING_WEEB_HOBART
 					}
 				}
 			}
@@ -14361,7 +14328,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_DEMCHUGDONGRUB
+					option = BRG_KING_WEEB_HOBART
 				}
 			}
 			modifier = {
@@ -14373,13 +14340,12 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_DEMCHUGDONGRUB
+						option = BRG_KING_WEEB_HOBART
 					}
 				}
 			}
 		}
 	}
-###第三十四个
 	BRG_elect_fng_elder = {
 		cost = 10
 		icon = GFX_decision_generic_nationalism
@@ -14441,7 +14407,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_FNG_ELDER
+					option = BRG_KING_WEEB_HOBART
 				}
 			}
 			modifier = {
@@ -14453,7 +14419,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_FNG_ELDER
+						option = BRG_KING_WEEB_HOBART
 					}
 				}
 			}
@@ -14520,7 +14486,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_FNG_YOUNG
+					option = BRG_KING_WEEB_HOBART
 				}
 			}
 			modifier = {
@@ -14532,7 +14498,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_FNG_YOUNG
+						option = BRG_KING_WEEB_HOBART
 					}
 				}
 			}
@@ -14599,7 +14565,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_FNG_DOGE
+					option = BRG_KING_WEEB_HOBART
 				}
 			}
 			modifier = {
@@ -14611,7 +14577,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_FNG_DOGE
+						option = BRG_KING_WEEB_HOBART
 					}
 				}
 			}
@@ -14678,7 +14644,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_YUANSHEN
+					option = BRG_KING_WEEB_HOBART
 				}
 			}
 			modifier = {
@@ -14690,7 +14656,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_YUANSHEN
+						option = BRG_KING_WEEB_HOBART
 					}
 				}
 			}
@@ -14757,7 +14723,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_YUN_TANG
+					option = BRG_KING_WEEB_HOBART
 				}
 			}
 			modifier = {
@@ -14769,13 +14735,12 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_YUN_TANG
+						option = BRG_KING_WEEB_HOBART
 					}
 				}
 			}
 		}
-	}
-###第三十五个
+	}	
 	BRG_elect_luuchuu_sho = {
 		cost = 10
 		icon = GFX_decision_generic_nationalism
@@ -14838,7 +14803,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_LUUCHUU_SHO
+					option = BRG_KING_WEEB_HOBART
 				}
 			}
 			modifier = {
@@ -14850,7 +14815,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_LUUCHUU_SHO
+						option = BRG_KING_WEEB_HOBART
 					}
 				}
 			}
@@ -14870,42 +14835,42 @@ BRG_pick_a_king = {
 			set_cosmetic_tag = BRG_korea
 			set_country_flag = BRG_jap_faction
 			create_country_leader = {
-				name = "李垠垠"
+				name = "李垠"
 				picture = "gfx/leaders/KOR/Portrait_KOR_Yi_Un_Suit.png"
 				expire = "1965.1.1"
 				ideology = junta_subtype
 				traits = { BRG_the_New_King }
 			}
 			create_country_leader = {
-				name = "李垠垠"
+				name = "李垠"
 				picture = "gfx/leaders/KOR/Portrait_KOR_Yi_Un_Suit.png"
 				expire = "1965.1.1"
 				ideology = authoritarian_democrat_subtype
 				traits = { BRG_the_New_King }
 			}
 			create_country_leader = {
-				name = "李垠垠"
+				name = "李垠"
 				picture = "gfx/leaders/KOR/Portrait_KOR_Yi_Un_Suit.png"
 				expire = "1965.1.1"
 				ideology = christian_democracy_subtype
 				traits = { BRG_the_New_King }
 			}
 			create_country_leader = {
-				name = "李垠垠"
+				name = "李垠"
 				picture = "gfx/leaders/KOR/Portrait_KOR_Yi_Un_Suit.png"
 				expire = "1965.1.1"
 				ideology = liberal_conservative_subtype
 				traits = { BRG_the_New_King }
 			}
 			create_country_leader = {
-				name = "李垠垠"
+				name = "李垠"
 				picture = "gfx/leaders/KOR/Portrait_KOR_Yi_Un_Suit.png"
 				expire = "1965.1.1"
 				ideology = national_liberalism_subtype
 				traits = { BRG_the_New_King }
 			}
 			create_country_leader = {
-				name = "李垠垠"
+				name = "李垠"
 				picture = "gfx/leaders/KOR/Portrait_KOR_Yi_Un_Suit.png"
 				expire = "1965.1.1"
 				ideology = liberal_socialism_subtype
@@ -14918,7 +14883,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_KOREA_YIUN
+					option = BRG_KING_WEEB_HOBART
 				}
 			}
 			modifier = {
@@ -14930,7 +14895,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_KOREA_YIUN
+						option = BRG_KING_WEEB_HOBART
 					}
 				}
 			}
@@ -14950,42 +14915,42 @@ BRG_pick_a_king = {
 			set_cosmetic_tag = BRG_korea
 			set_country_flag = BRG_jap_faction
 			create_country_leader = {
-				name = "李堈堈"
+				name = "李堈"
 				picture = "gfx/leaders/KOR/Portrait_KOR_Yi_Kang.png"
 				expire = "1965.1.1"
 				ideology = junta_subtype
 				traits = { BRG_the_New_King }
 			}
 			create_country_leader = {
-				name = "李堈堈"
+				name = "李堈"
 				picture = "gfx/leaders/KOR/Portrait_KOR_Yi_Kang.png"
 				expire = "1965.1.1"
 				ideology = authoritarian_democrat_subtype
 				traits = { BRG_the_New_King }
 			}
 			create_country_leader = {
-				name = "李堈堈"
+				name = "李堈"
 				picture = "gfx/leaders/KOR/Portrait_KOR_Yi_Kang.png"
 				expire = "1965.1.1"
 				ideology = christian_democracy_subtype
 				traits = { BRG_the_New_King }
 			}
 			create_country_leader = {
-				name = "李堈堈"
+				name = "李堈"
 				picture = "gfx/leaders/KOR/Portrait_KOR_Yi_Kang.png"
 				expire = "1965.1.1"
 				ideology = liberal_conservative_subtype
 				traits = { BRG_the_New_King }
 			}
 			create_country_leader = {
-				name = "李堈堈"
+				name = "李堈"
 				picture = "gfx/leaders/KOR/Portrait_KOR_Yi_Kang.png"
 				expire = "1965.1.1"
 				ideology = national_liberalism_subtype
 				traits = { BRG_the_New_King }
 			}
 			create_country_leader = {
-				name = "李堈堈"
+				name = "李堈"
 				picture = "gfx/leaders/KOR/Portrait_KOR_Yi_Kang.png"
 				expire = "1965.1.1"
 				ideology = liberal_socialism_subtype
@@ -14998,7 +14963,7 @@ BRG_pick_a_king = {
 				factor = 1000
 				has_game_rule = {
 					rule = BRG_king
-					option = BRG_KING_KOREA_YIGANG
+					option = BRG_KING_WEEB_HOBART
 				}
 			}
 			modifier = {
@@ -15010,7 +14975,7 @@ BRG_pick_a_king = {
 					}
 					has_game_rule = {
 						rule = BRG_king
-						option = BRG_KING_KOREA_YIGANG
+						option = BRG_KING_WEEB_HOBART
 					}
 				}
 			}
