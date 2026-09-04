@@ -1295,8 +1295,11 @@ focus = {
 		focus = FRA_reinforce_the_arf_command
 	}
 	available = {
-		has_completed_focus = FRA_marshal_resignation
-		has_completed_focus = FRA_reinforce_the_arf_command
+		OR = {
+			has_completed_focus = FRA_marshal_resignation
+			has_completed_focus = FRA_reinforce_the_arf_command
+		}
+		
 	}
 
 
@@ -3531,7 +3534,7 @@ focus = {
 		y = 2
 		relative_position_id = FRA_eco_direction
 		ai_will_do = {
-			factor = 20
+			factor = 9500
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_amenagement"
@@ -3799,7 +3802,7 @@ focus = {
 		x = 0
 		y = 1
 
-		ai_will_do = { factor = 15 }
+		ai_will_do = { factor = 9500 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_office_des_chemins_de_fer"
@@ -3927,7 +3930,7 @@ focus = {
 		}
 
 		ai_will_do = {
-			factor = 10
+			factor = 9500
 			modifier = {
 				factor = 10
 				has_completed_focus = FRA_voluntary_association
@@ -3964,7 +3967,7 @@ focus = {
 		}
 
 		ai_will_do = {
-			factor = 10
+			factor = 9500
 			modifier = {
 				factor = 10
 				has_completed_focus = FRA_voluntary_association
@@ -4017,7 +4020,7 @@ focus = {
 focus = FRA_office_des_chemins_de_fer
 		}
 
-		ai_will_do = { factor = 8 }
+		ai_will_do = { factor = 9500 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_garden_city_movement"
@@ -4057,7 +4060,7 @@ focus = FRA_office_des_chemins_de_fer
 		}
 
 		ai_will_do = {
-			factor = 15
+			factor = 9500
 			modifier = {
 				factor = 0
 				NOT = { has_completed_focus = FRA_new_hydroelectric_dams }
@@ -4190,7 +4193,7 @@ focus = FRA_mass_application_of_pre_stressed_concrete
 		}
 
 		ai_will_do = {
-			factor = 10
+			factor = 9500
 			modifier = {
 				factor = 10
 				has_completed_focus = FRA_militarisation_of_the_proletariat
@@ -4271,7 +4274,7 @@ focus = FRA_office_des_chemins_de_fer
 		}
 
 		ai_will_do = {
-			factor = 10
+			factor = 9500
 			modifier = {
 				factor = 10
 				has_completed_focus = FRA_militarisation_of_the_proletariat
@@ -4347,7 +4350,7 @@ focus = FRA_office_des_chemins_de_fer
 		}
 
 		ai_will_do = {
-			factor = 10
+			factor = 9500
 			modifier = {
 				factor = 10
 				has_completed_focus = FRA_modernisation_and_cartelisation
@@ -4425,7 +4428,7 @@ focus = FRA_office_des_chemins_de_fer
 		}
 
 		ai_will_do = {
-			factor = 5
+			factor = 9500
 			modifier = {
 				factor = 4
 				GER = { has_completed_focus = GER_buying_time_with_spies }
@@ -4462,7 +4465,7 @@ focus = FRA_office_des_chemins_de_fer
 		}
 
 		ai_will_do = {
-			factor = 5
+			factor = 9500
 			modifier = {
 				factor = 4
 				GER = { has_completed_focus = GER_buying_time_with_spies }
@@ -4509,7 +4512,7 @@ focus = FRA_office_des_chemins_de_fer
 		x = -5
 		y = 2
 
-		ai_will_do = { factor = 15 }
+		ai_will_do = { factor = 9500 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_build_the_autoroutes"
@@ -4605,7 +4608,7 @@ focus = FRA_office_des_chemins_de_fer
 		}
 
 		ai_will_do = {
-			factor = 10
+			factor = 9500
 			modifier = {
 				factor = 10
 				has_completed_focus = FRA_militarisation_of_the_proletariat
@@ -4690,7 +4693,7 @@ focus = FRA_office_des_chemins_de_fer
 		}
 
 		ai_will_do = {
-			factor = 10
+			factor = 9500
 			modifier = {
 				factor = 10
 				has_completed_focus = FRA_militarisation_of_the_proletariat
@@ -4783,7 +4786,7 @@ focus = FRA_office_des_chemins_de_fer
 		}
 
 		ai_will_do = {
-			factor = 10
+			factor = 9500
 			modifier = {
 				factor = 10
 				has_completed_focus = FRA_militarisation_of_the_proletariat
@@ -4872,7 +4875,7 @@ focus = FRA_office_des_chemins_de_fer
 			focus = FRA_communal_waterworks
 		}
 
-		ai_will_do = { factor = 8 }
+		ai_will_do = { factor = 9500 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_ploughshares_into_swords"
@@ -4911,7 +4914,7 @@ focus = FRA_office_des_chemins_de_fer
 		}
 
 		ai_will_do = {
-			factor = 10
+			factor = 9500
 			modifier = {
 				factor = 0
 				NOT = { owns_state = 735 } #Savoy
@@ -5027,7 +5030,7 @@ focus = FRA_office_des_chemins_de_fer
 			focus = FRA_close_bureaucratic_loopholes
 		}
 
-		ai_will_do = { factor = 15 }
+		ai_will_do = { factor = 9500 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_syndical_consolidation"
@@ -5155,7 +5158,7 @@ focus = FRA_office_des_chemins_de_fer
 		}
 
 		ai_will_do = {
-			factor = 3
+			factor = 9500
 			modifier = {
 				factor = 30
 				has_completed_focus = FRA_embrace_planism
@@ -5243,7 +5246,7 @@ focus = FRA_office_des_chemins_de_fer
 		}
 
 		ai_will_do = {
-			factor = 3
+			factor = 9500
 			modifier = {
 				factor = 30
 				has_completed_focus = FRA_embrace_planism
@@ -5331,7 +5334,7 @@ focus = FRA_office_des_chemins_de_fer
 			focus = FRA_embrace_chain_production
 		}
 		ai_will_do = {
-			factor = 3
+			factor = 9500
 			modifier = {
 				factor = 30
 				has_completed_focus = FRA_embrace_planism
@@ -5416,7 +5419,7 @@ focus = FRA_office_des_chemins_de_fer
 			focus = FRA_syndical_consolidation
 		}
 
-		ai_will_do = { factor = 10 }
+		ai_will_do = { factor = 9500 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_the_working_mans_automobile"
@@ -5442,7 +5445,7 @@ focus = FRA_office_des_chemins_de_fer
 			focus = FRA_syndical_consolidation
 		}
 
-		ai_will_do = { factor = 10 }
+		ai_will_do = { factor = 9500 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_new_tractor_factories"
@@ -5468,7 +5471,7 @@ focus = FRA_office_des_chemins_de_fer
 			focus = FRA_syndical_consolidation
 		}
 
-		ai_will_do = { factor = 10 }
+		ai_will_do = { factor = 9500 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_viticulture_of_the_twentieth_century"
@@ -5493,7 +5496,7 @@ focus = FRA_office_des_chemins_de_fer
 			focus = FRA_syndical_consolidation
 		}
 
-		ai_will_do = { factor = 10 }
+		ai_will_do = { factor = 9500 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_expand_the_textile_industry"
@@ -5524,7 +5527,7 @@ focus = FRA_office_des_chemins_de_fer
 			focus = FRA_syndical_consolidation
 		}
 
-		ai_will_do = { factor = 5 }
+		ai_will_do = { factor = 9500 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_exploit_the_massif_central"
@@ -5572,7 +5575,7 @@ focus = FRA_office_des_chemins_de_fer
 		y = 6
 		relative_position_id = FRA_office_des_chemins_de_fer
 		ai_will_do = {
-			factor = 20
+			factor = 9500
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_plan_prost"
@@ -5637,7 +5640,7 @@ focus = FRA_office_des_chemins_de_fer
 		y = 3
 		relative_position_id = FRA_office_des_chemins_de_fer
 		ai_will_do = {
-			factor = 20
+			factor = 9500
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_autoroutes"
@@ -5919,7 +5922,7 @@ focus = FRA_office_des_chemins_de_fer
 		y = 1
 		relative_position_id = FRA_office_des_chemins_de_fer
 		ai_will_do = {
-			factor = 20
+			factor = 9500
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_hydroelectricity"
@@ -5937,7 +5940,7 @@ focus = FRA_office_des_chemins_de_fer
 		y = 1
 		relative_position_id = FRA_office_des_chemins_de_fer
 		ai_will_do = {
-			factor = 20
+			factor = 9500
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_chemins_de_fer"
@@ -6633,7 +6636,7 @@ focus = FRA_office_des_chemins_de_fer
 		y = 2
 		relative_position_id = FRA_socialist_education
 		ai_will_do = {
-			factor = 10000
+			factor = 100
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_Blanqui_Research_Institute"
@@ -6690,7 +6693,7 @@ focus = FRA_office_des_chemins_de_fer
 		y = 3
 		relative_position_id = FRA_socialist_education
 		ai_will_do = {
-			factor = 15000
+			factor = 5000
 		}
 		available = {
 			ENG = {
@@ -14052,7 +14055,7 @@ focus = FRA_office_des_chemins_de_fer
 		y = 2
 		relative_position_id = FRA_socialist_education
 		ai_will_do = {
-			factor = 10000
+			factor = 100
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_working_women"
@@ -16015,7 +16018,7 @@ focus = FRA_office_des_chemins_de_fer
 		y = 1
 		relative_position_id = FRA_sorelians_rule_supreme
 			ai_will_do = {
-				factor = 100
+				factor = 20000
 			}
 			available = {
 				has_government = totalist
@@ -16273,7 +16276,7 @@ focus = FRA_office_des_chemins_de_fer
 		y = 3
 		relative_position_id = FRA_sorelians_rule_supreme
 		ai_will_do = {
-			factor = 100
+			factor = 20000
 		}
 		bypass = {
 	    	hidden_trigger = {
@@ -16312,7 +16315,7 @@ focus = FRA_office_des_chemins_de_fer
 		    }
 	    }
 		ai_will_do = {
-			factor = 100
+			factor = 20000
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_direct_rule"
@@ -19235,7 +19238,7 @@ focus = {
 		icon = GFX_goal_FRA_Prometheus_the_Immortal
 		cost = 4
 		ai_will_do = {
-	    	factor = 10000
+	    	factor = 20000
 	    }
 		prerequisite = {
 			focus = FRA_valois_is_gone
@@ -34524,6 +34527,22 @@ focus = {
 				}
 		    }
 	    }
+		offset = {
+	    	x = 1
+	    	y = 11
+	    	trigger = {
+				AND = {
+					has_global_flag = FRA_no_majority_1936
+		        	or = {
+		        		has_country_flag = FRA_PDP_win
+	        			has_country_flag = FRA_COMPROMISE_Manouchian
+			        	has_country_flag = FRA_COMPROMISE_Cachin
+			        	has_country_flag = FRA_COMPROMISE_sfio
+			        	has_country_flag = FRA_COMPROMISE_socdem
+		        	}
+				}
+	    	}
+	    }
 		cost = 3
 		available = {
 			has_country_flag = FRA_SECOND_SYND
@@ -36060,7 +36079,22 @@ focus = {
 				}
 		    }
 	    }
-
+		offset = {
+	    	x = 1
+	    	y = 11
+	    	trigger = {
+				AND = {
+					has_global_flag = FRA_no_majority_1936
+		        	or = {
+		        		has_country_flag = FRA_PDP_win
+	        			has_country_flag = FRA_COMPROMISE_Manouchian
+			        	has_country_flag = FRA_COMPROMISE_Cachin
+			        	has_country_flag = FRA_COMPROMISE_sfio
+			        	has_country_flag = FRA_COMPROMISE_socdem
+		        	}
+				}
+	    	}
+	    }
 		cost = 5
 		cost = 3
 		available = {
@@ -37969,6 +38003,22 @@ focus = {
 	                has_country_flag = FRA_deat_christsoc
 				}
 		    }
+	    }
+		offset = {
+	    	x = 1
+	    	y = 11
+	    	trigger = {
+				AND = {
+					has_global_flag = FRA_no_majority_1936
+		        	or = {
+		        		has_country_flag = FRA_PDP_win
+	        			has_country_flag = FRA_COMPROMISE_Manouchian
+			        	has_country_flag = FRA_COMPROMISE_Cachin
+			        	has_country_flag = FRA_COMPROMISE_sfio
+			        	has_country_flag = FRA_COMPROMISE_socdem
+		        	}
+				}
+	    	}
 	    }
 		cost = 3
 		 available = {
@@ -43129,7 +43179,7 @@ focus = {
 		}
 		cost = 5
 		ai_will_do = {
-			factor = 10000
+			factor = 20000
 		}
 		
 		completion_reward = {
@@ -43449,7 +43499,7 @@ focus = {
 		}
 		cost = 5
 		ai_will_do = {
-			factor = 10000
+			factor = 20000
 		}
 		
 		completion_reward = {
@@ -43780,7 +43830,7 @@ focus = {
 		}
 		cost = 5
 		ai_will_do = {
-			factor = 10000
+			factor = 20000
 		}
 		
 		completion_reward = {
@@ -44373,7 +44423,7 @@ focus = {
 		relative_position_id = FRA_future_of_the_commune
 		cost = 5
 		ai_will_do = {
-			factor = 10000
+			factor = 20000
 		}
 		mutually_exclusive = {
 			focus = FRA_monatte_faction
@@ -44910,7 +44960,7 @@ focus = {
 		relative_position_id = FRA_future_of_the_commune
 		cost = 5
 		ai_will_do = {
-			factor = 10000
+			factor = 20000
 		}
 		available = {
 			has_country_flag = FRA_SYNDIE_FRACHON
@@ -45429,7 +45479,7 @@ focus = {
 		relative_position_id = FRA_future_of_the_commune
 		cost = 5
 		ai_will_do = {
-			factor = 10000
+			factor = 20000
 		}
 		available = {
 			has_country_flag = FRA_SYNDIE_JOUHAUX
@@ -48446,6 +48496,12 @@ focus = {
 				ideology = totalist
 				popularity = 0.1
 			}
+			hidden_effect = {
+				country_event = {
+					id = COF_tech.1
+					days = 5
+				}
+			}
 		}
 	}
 	focus = {
@@ -48465,6 +48521,12 @@ focus = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_heroic_cruelty"
 			add_ideas = FRA_pure_order
+			hidden_effect = {
+				country_event = {
+					id = COF_tech.2
+					days = 10
+				}				
+			}
 		}
 	}
 	focus = {
@@ -48484,6 +48546,12 @@ focus = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_heroic_cruelty"
 			add_ideas = FRA_pure_race
+			hidden_effect = {
+				country_event = {
+					id = COF_tech.3
+					days = 5
+				}				
+			}			
 		}
 	}
 	focus = {
@@ -48510,6 +48578,12 @@ focus = {
 			add_one_random_civilian_factory = yes
 			add_one_random_civilian_factory = yes
 			add_one_random_civilian_factory = yes
+			hidden_effect = {
+				country_event = {
+					id = COF_tech.4
+					days = 5
+				}				
+			}		
 
 		}
 	}
@@ -48558,13 +48632,7 @@ focus = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_heroic_cruelty"
-			add_manpower = -10000
-			add_stability = 0.1
-			add_war_support = 0.1
-			add_popularity = {
-				ideology = totalist
-				popularity = 0.1
-			}
+			country_event = COF_tech.5
 		}
 	}
 	focus = {
@@ -48592,6 +48660,7 @@ focus = {
 				remove_idea = FRA_pure_order
 				add_idea = FRA_pure_order2
 			}
+			unlock_decision_tooltip = FRA_nation_city_collective_decision 
 		}
 	}
 	focus = {
@@ -48615,10 +48684,9 @@ focus = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_heroic_cruelty"
-			swap_ideas = {
-				remove_idea = FRA_pure_race
-				add_idea = FRA_pure_race2
-			}
+			add_stability = -0.2
+			add_war_support = -0.2
+			country_event = COF_tech.6
 		}
 	}
 	focus = {
@@ -48642,12 +48710,9 @@ focus = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_heroic_cruelty"
 			add_ideas = FRA_perfect_system
 			set_cosmetic_tag = FRA_corb_larp
-
-			every_state = {
-				
-				FRA = { 
-					add_state_core = PREV 
-				}
+			country_event = {
+				id = COF_tech.7
+				days = 14
 			}
 		}
 	}

@@ -1,4 +1,4 @@
-###################
+﻿###################
 # Galicia Events
 ###################
 
@@ -9,16 +9,14 @@ country_event = { #Galicia becomes independent, after war
 	immediate = { log = "[GetDateText]: [Root.GetName]: event gal.1" }
 	title = gal.1.t
 	desc = gal.1.d
-
-	trigger = {
-		tag = GAL
-		has_war = no
-		is_subject = no
-		country_exists = POL
-	}
-	mean_time_to_happen = {
-		days = 14
-	}
+	is_triggered_only = yes
+#	trigger = {
+#		tag = GAL
+#		has_war = no
+#		is_subject = no
+#		country_exists = POL
+#	}
+	
 
 	fire_only_once = yes
 
@@ -39,7 +37,12 @@ country_event = { #Galicia becomes independent, after war
 		ai_chance = {
 			factor = 0
 		}
-		add_political_power = -100
+		POL = {
+			create_wargoal = {
+				target = GAL
+				type = annex_country
+			}
+		}
 	}
 }
 
@@ -206,7 +209,8 @@ country_event = {#BM
 
 	option = { 
 		name = gal.12.a
-				add_stability = -0.05
+		add_stability = -0.05
+		add_ideas = GAL_black_monday
 		swap_ideas = {
 			remove_idea = GAL_golicja_glodomeria
 			add_idea = GAL_golicja_glodomeria_2
@@ -378,6 +382,7 @@ country_event = { #
 
 	option = {
 		name = gal.17.a
+		set_cosmetic_tag = GAL_socialist
 		set_politics = {
 			ruling_party = totalist
 			elections_allowed = no
@@ -404,6 +409,9 @@ country_event = { #
 			ideology = radical_socialist
 			popularity = 0.1
 		}
+		AUS = {
+				end_puppet = ROOT
+			}
 		leave_faction = yes
 	}
 }
@@ -478,6 +486,7 @@ country_event = { #
 
 	option = {
 		name = gal.19.a
+		set_cosmetic_tag = GAL_nationalist
 		add_popularity = {
 			ideology = national_populist
 			popularity = 0.1
@@ -495,6 +504,9 @@ country_event = { #
 			KRK_Czeslaw_Strzeszewski_sec_npo
 		}
 		set_country_flag = GAL_nationalist_coup
+		AUS = {
+				end_puppet = ROOT
+			}
 		leave_faction = yes
 		
 		
@@ -973,11 +985,11 @@ country_event = { #UGA
 	trigger = {
 		tag = GAL
 		check_variable = { UKR_ukrainian_resistance > 90 }
-		
+		NOT = {
+			has_active_mission = GAL_near_collapse
+			has_country_flag = GAL_has_collapsed
+		}
 	}
-	
-	
-
 	option = {
 		name = gal.42.a
 		ai_chance = { base = 70 }
@@ -990,6 +1002,7 @@ country_event = { #collapse
 	immediate = { 
 		log = "[GetDateText]: [Root.GetName]: event gal.41 FROM = [From.GetName]" 
 		hidden_effect = {
+			set_country_flag = GAL_has_collapsed
 			OVERLORD =  {
 				end_puppet = ROOT
 			}
@@ -1178,10 +1191,15 @@ country_event = {
 		ai_chance = { base = 30 }
 		clr_country_flag = GAL_szlachata_coup
 		set_country_flag = GAL_esoteric
+		set_cosmetic_tag = GAL_esoteric_cosmetic
 		add_popularity = {
 			ideology = radical_socialist
 			popularity = 0.1
 		}
+		AUS = {
+				end_puppet = ROOT
+			}
+		leave_faction = yes
 		create_country_leader = {
 			name = "安杰伊·胡萨诺"
 			picture = "gfx/leaders/GAL/Portrait_GAL_Andrzej_Huszno.png"
@@ -1203,6 +1221,10 @@ country_event = {
 			long_name = POL_pnkp_party_long
 			name = POL_pnkp_party
 		}
+		set_politics = {
+			ruling_party = radical_socialist
+			elections_allowed = no
+		}
 		add_tot_to_coalition = yes
 		add_synd_to_coalition = yes
 		remove_all_ministers = yes
@@ -1212,6 +1234,7 @@ country_event = {
 			GAL_Franciszek_Krempa_eco_rso
 			GAL_Antoni_Kurowski_sec_rso
 		}
+			
 	}
 }
 country_event = { 
@@ -1277,6 +1300,11 @@ country_event = {
 		ai_chance = { base = 30 }
 		clr_country_flag = GAL_socialist_revolution
 		set_country_flag = GAL_moscow
+		set_cosmetic_tag = GAL_rus_cosmetic
+		AUS = {
+				end_puppet = ROOT
+			}
+		leave_faction = yes
 		if = {
 			limit = {
 				RUS = {
@@ -1345,6 +1373,13 @@ country_event = {
 			long_name = POL_moscow_party_long
 			name = POL_moscow_party
 		}
+		remove_all_ministers = yes
+		add_ideas = {
+			GAL_Grigoriy_Semyonovich_Malets_hog_pau
+			GAL_Vasiliy_Romanovich_Vavrik_for_rso
+			GAL_Mikhaylo_Dmitrovich_Mondich_eco_ade
+			GAL_Aleksey_Yulianovich_Gerovskiy_sec_pau
+		}
 	}
 }
 country_event = { 
@@ -1410,7 +1445,7 @@ country_event = {
 		has_war_with = WSU
 		surrender_progress > 0.5
 	}
-
+	fire_only_once = yes
 	option = {
 		name = gal.49.a
 		ai_chance = { base = 100 }
@@ -1431,12 +1466,773 @@ country_event = {
 		}
 		clr_country_flag = GAL_autocracy
 		clr_country_flag = GAL_democracy_mandate
-		set_country_flag = GAL_hidden_parth_unlock
+		set_country_flag = GAL_hidden_path_unlock
 		set_party_name = {
 			ideology = radical_socialist
 			long_name = GAL_WiN_party_long
 			name = GAL_WiN_party
 		}
+		set_cosmetic_tag = GAL_polukr
+		remove_all_ministers = yes
+		add_ideas = {
+			GAL_Jan_Rzepecki_hog_ade
+			GAL_Lukasz_Cieplinski_for_pau
+			GAL_Franciszek_Niepokolczycki_eco_rso
+			GAL_Wincenty_Kwiecinski_sec_ade
+		}
+		mark_focus_tree_layout_dirty = yes
 	}
+	
+}
+country_event = { 
+	id = gal.50
+	immediate = { log = "[GetDateText]: [Root.GetName]: event gal.41 FROM = [From.GetName]" }
+	title = gal.50.t
+	desc = gal.50.d
+	is_triggered_only = yes
+
+	option = {
+		name = gal.50.a
+		ai_chance = { base = 70 }
+		
+	}
+	option = {
+		name = gal.50.b
+		ai_chance = { base = 30 }
+		create_country_leader = {
+			name = "鲁道夫·维斯纳"
+			picture = "gfx/leaders/GAL/Portrait_GAL_Rudolf_Wiesner.png"
+			expire = "1.1.1"
+			ideology = rejuvenated_prussianism_subtype
+		}
+		AUS = {
+				end_puppet = ROOT
+			}
+			leave_faction = yes
+		set_cosmetic_tag = GAL_german_cosmetic
+		set_politics = {
+			ruling_party = authoritarian_democrat
+			elections_allowed = no
+		}
+		clr_country_flag = GAL_nationalist_coup
+		set_country_flag = GAL_german_colony
+		set_party_name = {
+			ideology = authoritarian_democrat
+			long_name = GAL_authoritarian_democrat_german_party_long
+			name = GAL_authoritarian_democrat_german_party
+		}
+		set_party_name = {
+			ideology = paternal_autocrat
+			long_name = GAL_paternal_autocrat_german_party_long
+			name = GAL_paternal_autocrat_german_party
+		}
+		set_party_name = {
+			ideology = national_populist
+			long_name = GAL_national_populist_german_party_long
+			name = GAL_national_populist_german_party
+		}
+	}
+	
+}
+country_event = { 
+	id = gal.51
+	immediate = { log = "[GetDateText]: [Root.GetName]: event gal.41 FROM = [From.GetName]" }
+	title = gal.51.t
+	desc = gal.51.d
+	is_triggered_only = yes
+
+	option = {
+		name = gal.51.a
+		ai_chance = { base = 70 }
+		
+	}
+	option = {
+		name = gal.51.b
+		ai_chance = { base = 30 }
+		create_country_leader = {
+			name = "约瑟夫·斯特日戈夫斯基"
+			picture = "gfx/leaders/GAL/KRK_Josef_Strzygowski.png"
+			expire = "1.1.1"
+			ideology = pataut_volkism_subtype
+		}
+		set_politics = {
+			ruling_party = paternal_autocrat
+			elections_allowed = no
+		}
+		
+		
+	}
+	option = {
+		name = gal.51.c
+		ai_chance = { base = 30 }
+		create_country_leader = {
+			name = "亨利克·萨特科夫斯基"
+			picture = "gfx/leaders/GAL/Portrait_GAL_Henryk_Szatkowski.png"
+			expire = "1.1.1"
+			ideology = natpop_volkisch_communitarianism_subtype
+		}
+		set_politics = {
+			ruling_party = national_populist
+			elections_allowed = no
+		}
+		set_cosmetic_tag = GAL_goral
+		
+	}
+	
+}
+country_event = { 
+	id = gal.52
+	immediate = { log = "[GetDateText]: [Root.GetName]: event gal.41 FROM = [From.GetName]" }
+	title = gal.52.t
+	desc = gal.52.d
+	is_triggered_only = yes
+
+	option = {
+		name = gal.52.a
+		ai_chance = { base = 100 }
+		set_cosmetic_tag = POL
+		
+	}
+	option = {
+		trigger = {
+			has_country_flag = GAL_esoteric
+		}
+		name = gal.52.b
+		ai_chance = { base = 0 }
+		every_state = {
+			GAL = {
+				add_state_core = PREV
+			}
+		}
+		every_country = {
+			GAL = {
+				create_wargoal = {
+					target = PREV
+					type = annex_everything
+				}
+			}
+		}
+		set_cosmetic_tag = GAL_esoteric_larp
+	}
+	option = {
+		name = gal.52.c
+		trigger = {
+			has_country_flag = GAL_moscow
+		}
+		set_cosmetic_tag = GAL_rus_governate
+		create_wargoal = {
+				target = UKR
+				type = annex_everything
+			}
+			every_state = {
+				limit = {
+					is_core_of = UKR
+				}
+				GAL = {
+					add_state_core = PREV
+				}
+			}
+			create_wargoal = {
+				target = WHR
+				type = annex_everything
+			}
+			every_state = {
+				limit = {
+					is_core_of = WHR
+				}
+				GAL = {
+					add_state_core = PREV
+				}
+			}
+			create_wargoal = {
+				target = BAT
+				type = annex_everything
+			}
+			every_state = {
+				limit = {
+					is_core_of = BAT
+				}
+				GAL = {
+					add_state_core = PREV
+				}
+			}
+			create_wargoal = {
+				target = EST
+				type = annex_everything
+			}
+			every_state = {
+				limit = {
+					is_core_of = EST
+				}
+				GAL = {
+					add_state_core = PREV
+				}
+			}
+			create_wargoal = {
+				target = LAT
+				type = annex_everything
+			}
+			every_state = {
+				limit = {
+					is_core_of = LAT
+				}
+				GAL = {
+					add_state_core = PREV
+				}
+			}
+			create_wargoal = {
+				target = LIT
+				type = annex_everything
+			}
+			every_state = {
+				limit = {
+					is_core_of = LIT
+				}
+				GAL = {
+					add_state_core = PREV
+				}
+			}
+			create_wargoal = {
+				target = POL
+				type = annex_everything
+			}
+			every_state = {
+				limit = {
+					is_core_of = POL
+				}
+				GAL = {
+					add_state_core = PREV
+				}
+			}
+			create_wargoal = {
+				target = WSU
+				type = annex_everything
+			}
+			every_state = {
+				limit = {
+					is_core_of = WSU
+				}
+				GAL = {
+					add_state_core = PREV
+				}
+			}
+			create_wargoal = {
+				target = AUS
+				type = annex_everything
+			}
+			every_state = {
+				limit = {
+					is_core_of = AUS
+				}
+				GAL = {
+					add_state_core = PREV
+				}
+			}
+			create_wargoal = {
+				target = HUN
+				type = annex_everything
+			}
+			every_state = {
+				limit = {
+					is_core_of = HUN
+				}
+				GAL = {
+					add_state_core = PREV
+				}
+			}
+			create_wargoal = {
+				target = CZE
+				type = annex_everything
+			}
+			every_state = {
+				limit = {
+					is_core_of = CZE
+				}
+				GAL = {
+					add_state_core = PREV
+				}
+			}
+			create_wargoal = {
+				target = SVK
+				type = annex_everything
+			}
+			every_state = {
+				limit = {
+					is_core_of = SVK
+				}
+				GAL = {
+					add_state_core = PREV
+				}
+			}
+			create_wargoal = {
+				target = ROM
+				type = annex_everything
+			}
+			every_state = {
+				limit = {
+					is_core_of = ROM
+				}
+				GAL = {
+					add_state_core = PREV
+				}
+			}
+			create_wargoal = {
+				target = CRO
+				type = annex_everything
+			}
+			every_state = {
+				limit = {
+					is_core_of = CRO
+				}
+				GAL = {
+					add_state_core = PREV
+				}
+			}
+			create_wargoal = {
+				target = SLO
+				type = annex_everything
+			}
+			every_state = {
+				limit = {
+					is_core_of = SLO
+				}
+				GAL = {
+					add_state_core = PREV
+				}
+			}
+			create_wargoal = {
+				target = SER
+				type = annex_everything
+			}
+			every_state = {
+				limit = {
+					is_core_of = SER
+				}
+				GAL = {
+					add_state_core = PREV
+				}
+			}
+			create_wargoal = {
+				target = MNT
+				type = annex_everything
+			}
+			every_state = {
+				limit = {
+					is_core_of = MNT
+				}
+				GAL = {		
+					add_state_core = PREV
+				}
+			}
+			create_wargoal = {
+				target = BUL
+				type = annex_everything
+			}
+			every_state = {
+				limit = {
+					is_core_of = BUL
+				}
+				GAL = {		
+					add_state_core = PREV
+				}
+			}
+			create_wargoal = {
+				target = ALB
+				type = annex_everything
+			}
+			every_state = {
+				limit = {
+					is_core_of = ALB
+				}
+				GAL = {			
+					add_state_core = PREV
+				}
+			}
+		ai_chance = { base = 0 }
+		
+	}
+	option = {
+		name = gal.52.e
+		trigger = {
+			has_country_flag = GAL_socialist_revolution
+		}
+		ai_chance = { base = 0 }
+		set_cosmetic_tag = POL_soviet
+			RUS_enable_integration = yes
+			for_each_scope_loop = {
+				array = RUS.RUS_starting_states_array
+				add_core_of = ROOT
+			}
+	}
+	option = {
+		name = gal.52.f
+		trigger = {
+			has_country_flag = GAL_german_colony
+		}
+		ai_chance = { base = 0 }
+		set_cosmetic_tag = GAL_pangerman
+			create_wargoal = {
+				target = GER
+				type = annex_everything
+			}
+			every_state = {
+				limit = {
+					is_core_of = GER
+				}
+				GAL = {			
+					add_state_core = PREV
+				}
+			}
+			create_wargoal = {
+				target = AUS
+				type = annex_everything
+			}
+			every_state = {
+				limit = {
+					is_core_of = AUS
+				}
+				GAL = {			
+					add_state_core = PREV
+				}
+			}
+			create_wargoal = {
+				target = SWI
+				type = annex_everything
+			}
+			every_state = {
+				limit = {
+					is_core_of = SWI
+				}
+				GAL = {			
+					add_state_core = PREV
+				}
+			}
+			create_wargoal = {
+				target = HOL
+				type = annex_everything
+			}
+			every_state = {
+				limit = {
+					is_core_of = HOL
+				}
+				GAL = {			
+					add_state_core = PREV
+				}
+			}
+			create_wargoal = {
+				target = BEL	
+				type = annex_everything
+			}
+			every_state = {
+				limit = {
+					is_core_of = BEL
+				}
+				GAL = {			
+					add_state_core = PREV
+				}
+			}
+			create_wargoal = {
+				target = WLL
+				type = annex_everything
+			}
+			every_state = {
+				limit = {
+					is_core_of = WLL
+				}
+				GAL = {			
+					add_state_core = PREV
+				}
+			}
+			create_wargoal = {
+				target = FLN
+				type = annex_everything
+			}
+			every_state = {
+				limit = {
+					is_core_of = FLN
+				}
+				GAL = {			
+					add_state_core = PREV
+				}
+			}
+			create_wargoal = {
+				target = NOR
+				type = annex_everything
+			}
+			every_state = {
+				limit = {
+					is_core_of = NOR
+				}
+				GAL = {			
+					add_state_core = PREV
+				}
+			}
+			create_wargoal = {
+				target = DEN
+				type = annex_everything
+			}
+			every_state = {
+				limit = {
+					is_core_of = DEN
+				}
+				GAL = {			
+					add_state_core = PREV
+				}
+			}
+			create_wargoal = {
+				target = SWE
+				type = annex_everything
+			}
+			every_state = {
+				limit = {
+					is_core_of = SWE
+				}
+				GAL = {			
+					add_state_core = PREV
+				}
+			}
+	}
+	option = {
+		name = gal.52.g
+		ai_chance = { base = 0 }
+		create_wargoal = {
+				target = WHR
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = UKR
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = LIT
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = BAT
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = LAT
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = EST
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = GER
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = CZE
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = ROM
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = SER
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = CRO
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = BUL
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = HUN
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = ALB
+				type = annex_everything
+			}
+		set_cosmetic_tag = POL_intermarian
+		1314 = { add_core_of = GAL }
+	1319 = { add_core_of = GAL }	
+	776 = { add_core_of = GAL }
+	86 = { add_core_of = GAL }
+	67 = { add_core_of = GAL }
+	777 = { add_core_of = GAL }
+	655 = { add_core_of = GAL }
+	94 = { add_core_of = GAL }
+	96 = { add_core_of = GAL }
+	93 = { add_core_of = GAL }	
+	997 = { add_core_of = GAL }
+	792 = { add_core_of = GAL }
+	95 = { add_core_of = GAL }
+	1295 = { add_core_of = GAL }
+	207 = { add_core_of = GAL }
+	1124 = { add_core_of = GAL }
+	88 = { add_core_of = GAL }
+	1125 = { add_core_of = GAL }
+	1126 = { add_core_of = GAL }
+	1127 = { add_core_of = GAL }	
+	91 = { add_core_of = GAL }
+	89 = { add_core_of = GAL }
+	1140 = { add_core_of = GAL }
+	1131 = { add_core_of = GAL }
+	
+	66 = { add_core_of = GAL }
+	68 = { add_core_of = GAL }
+	63 = { add_core_of = GAL }
+	5 = { add_core_of = GAL }
+	188 = { add_core_of = GAL }
+	189 = { add_core_of = GAL }
+	11 = { add_core_of = GAL }
+	206 = { add_core_of = GAL }
+	1294 = { add_core_of = GAL }
+	1087 = { add_core_of = GAL }
+	204 = { add_core_of = GAL }
+	194 = { add_core_of = GAL }
+	1228 = { add_core_of = GAL }
+	199 = { add_core_of = GAL }
+	1244 = { add_core_of = GAL }
+	201 = { add_core_of = GAL }
+	1245 = { add_core_of = GAL }
+	198	= { add_core_of = GAL }
+
+	#Smolensk and stuff
+	243 = { add_core_of = GAL }
+
+	755 = { add_core_of = GAL }
+	1287 = { add_core_of = GAL }
+	73 = { add_core_of = GAL }
+	242 = { add_core_of = GAL }	
+	821 = { add_core_of = GAL }	
+	#Baltics
+	every_state = {
+		limit = { region = 37 }
+		add_core_of = GAL
+	}
+
+	#Ukraine
+	every_state = {
+		limit = { region = 130 }
+		add_core_of = GAL
+	}
+	every_state = {
+		limit = { region = 165 }
+		add_core_of = GAL
+	}
+	80 = { add_core_of = GAL }	
+	1320 = { add_core_of = GAL }
+	78 = { add_core_of = GAL }	
+	1222 = { add_core_of = GAL }	
+	
+	#Czechoslovakia
+	every_state = {
+		limit = { region = 22 }
+		add_core_of = GAL
+	}
+	every_state = {
+		limit = { region = 145 }
+		add_core_of = GAL
+	}
+	
+	#Hungary
+	every_state = {
+		limit = { region = 27 }
+		add_core_of = GAL
+	}
+	every_state = {
+		limit = { region = 144 }
+		add_core_of = GAL
+	}
+
+	#Romania
+	every_state = {
+		limit = { region = 15 }
+		add_core_of = GAL
+	}
+	
+	#Balkans
+	every_state = {
+		limit = { region = 143 }
+		add_core_of = GAL
+	}
+	every_state = {
+		limit = { region = 24 }
+		add_core_of = GAL
+	}
+	every_state = {
+		limit = { region = 26 }
+		add_core_of = GAL
+	}	
+	}
+}
+country_event = { 
+	id = gal.53
+	immediate = { log = "[GetDateText]: [Root.GetName]: event gal.41 FROM = [From.GetName]" }
+	title = gal.53.t
+	desc = gal.53.d
+	trigger = {
+		tag = POL
+		has_country_flag = GAL_esoteric
+		date > 1939.6.5
+	}
+	option = {
+		name = gal.53.a
+		create_country_leader = {
+			name = "扬·扎瓦达"
+			picture = "gfx/leaders/GAL/Portrait_GAL_Jan_Zawada.png"
+			expire = "1.1.1"
+			ideology = tot_theosophy_subtype
+		}
+		create_country_leader = {
+			name = "扬·扎瓦达"
+			picture = "gfx/leaders/GAL/Portrait_GAL_Jan_Zawada.png"
+			expire = "1.1.1"
+			ideology = christian_syndicalism_subtype
+		}
+		create_country_leader = {
+			name = "扬·扎瓦达"
+			picture = "gfx/leaders/GAL/Portrait_GAL_Jan_Zawada.png"
+			expire = "1.1.1"
+			ideology = radsoc_zadrugism_subtype
+		}
+	}
+}
+country_event = { 
+	id = gal.54
+	immediate = { log = "[GetDateText]: [Root.GetName]: event gal.41 FROM = [From.GetName]" }
+	title = gal.54.t
+	desc = gal.54.d
+	is_triggered_only = yes
+	option = {
+		name = gal.54.a
+		
+	}
+	
+	
+}
+country_event = { 
+	id = gal.55
+	immediate = { log = "[GetDateText]: [Root.GetName]: event gal.41 FROM = [From.GetName]" }
+	title = gal.55.t
+	desc = gal.55.d
+	is_triggered_only = yes
+	option = {
+		name = gal.55.a
+		GAL = {
+			annex_country = {
+				target = WSU
+				transfer_troops = yes
+			}
+		}
+		WSU = {
+			every_unit_leader = {
+				set_nationality = GAL
+			}
+		}
+		set_country_flag = KXX_LEADER_GUI_VISIBLE
+		set_country_flag = GAL_Shtendera_Yevgen_VISIBLE
+
+	}
+	
 	
 }

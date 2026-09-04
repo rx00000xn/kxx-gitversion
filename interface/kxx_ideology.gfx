@@ -827,7 +827,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-	name = "GFX_ideology_patau_chiangism_subtype" #未注册
+	name = "GFX_ideology_pataut_chiangism_subtype" #蒋介石思想
 	texturefile = "gfx/interface/ideologies/subideologies/patau_chiangism.png"
 	}
 	SpriteType = {
@@ -1705,5 +1705,9 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_ideology_autdem_latin_national_syndicalism_subtype" #威民—拉丁国工主义
 		texturefile = "gfx/interface/ideologies/subideologies/autdem_latin_national_syndicalism_group.png"
+	}
+	SpriteType = {
+		name = "GFX_ideology_quezonian_communism_subtype" #社民—奎松共产主义
+		texturefile = "gfx/interface/ideologies/subideologies/quezonian_communism_subtype.png"
 	}
 }

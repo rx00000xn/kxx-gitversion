@@ -613,9 +613,7 @@ focus_tree = {
 		cost = 4.00
 		x = 27
 		y = 0
-		available = {
-			has_idea = GAL_xiangcunzhenxing
-		}
+		
 		completion_reward = {
 			add_ideas = GAL_zuigaozhihuibu
 			army_experience = 50
@@ -1303,6 +1301,7 @@ focus_tree = {
 		}
 		available = {
 			is_in_faction_with = AUS
+			is_subject = no
 		}
 		prerequisite = {
 			focus = GAL_fp
@@ -1316,7 +1315,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GAL_legacy_krakow_uprising
-		icon = GFX_goal_GAL_tough_year
+		icon = GFX_goal_POL_New_Knightly_Orders
 		cost = 4
 		relative_position_id = GAL_fp
 		x = 0
@@ -1330,6 +1329,9 @@ focus_tree = {
 				is_in_faction_with = AUS
 			}
 		}
+		available = {
+			is_subject = no
+		}
 		prerequisite = {
 			focus = GAL_fp
 		}
@@ -1337,12 +1339,35 @@ focus_tree = {
 			factor = 1500
 		}
 		completion_reward = {
-			leave_faction = yes
+			add_stability = 0.1
+			if = {
+				limit = {
+					OR = {
+						has_country_flag = GAL_autocracy
+						has_country_flag = GAL_democracy_mandate
+						has_country_flag = GAL_technocracy
+						has_country_flag = GAL_szlachata_coup
+					}
+					
+				}
+				set_cosmetic_tag = GAL_independent
+			}
+			
+			if = {
+				limit = {
+					is_in_faction_with = AUS
+				}
+				AUS = {
+					end_puppet = ROOT
+				}
+				leave_faction = yes
+			}
+			
 		}
 	}
 	focus = {
 		id = GAL_join_poland
-		icon = GFX_goal_GAL_tough_year
+		icon = GFX_goal_POL_Poland_Forever
 		cost = 4
 		relative_position_id = GAL_fp
 		x = 2
@@ -1357,6 +1382,9 @@ focus_tree = {
         ai_will_do = {
 			factor = 1500
 		}
+		available = {
+			is_subject = no
+		}
 		completion_reward = {
 			custom_effect_tooltip = GAME_OVER_TT
 			POL = {
@@ -1368,7 +1396,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GAL_liberate_pol
-		icon = GFX_goal_GAL_tough_year
+		icon = GFX_goal_POL_Spreading_Revolution
 		cost = 4
 		relative_position_id = GAL_fp
 		x = -1
@@ -1382,6 +1410,7 @@ focus_tree = {
 			factor = 1500
 		}
 		completion_reward = {
+			custom_effect_tooltip = "解锁决议加入阵营。"
 			create_wargoal = {
 				target = POL
 				type = annex_everything
@@ -1399,20 +1428,26 @@ focus_tree = {
 	
 	focus = {
 		id = GAL_bigger_ambition
-		icon = GFX_goal_GAL_tough_year
+		icon = GFX_goal_POL_Cavaliers_Triumphant
 		cost = 4
 		relative_position_id = GAL_fp
-		x = 0
+		x = -1
 		y = 3
 		prerequisite = {
 			focus = GAL_liberate_pol
 		}
-		
+		available = {
+			is_subject = no
+			NOT = {
+				country_exists = POL
+			}
+		}
         ai_will_do = {
 			factor = 1500
 		}
 		completion_reward = {
-			custom_effect_tooltip = "该国策的效果取决于路线。"
+			country_event = gal.52
+			
 			#insert event later
 		}
 	}
@@ -2613,7 +2648,14 @@ focus_tree = {
 			add_stability = 0.1
 			add_war_support = 0.1
 		}
-
+		select_effect = {
+			hidden_effect = {
+				country_event = {
+					id = gal.47
+					days = 3
+				}
+			}
+		}
 		x = 30
 		y = 10
 	}
@@ -2787,8 +2829,10 @@ focus_tree = {
 		prerequisite = { focus = GAL_enpower_worker_council }
 		available = {}
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.05
+			swap_ideas = {
+				remove_idea = GAL_orthocom_pol2
+				add_idea = GAL_orthocom_pol3
+			}
 		}
 
 		relative_position_id = GAL_appeal_to_comintern
@@ -2820,8 +2864,10 @@ focus_tree = {
 		prerequisite = { focus = GAL_work_with_socdem }
 		available = {}
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.05
+			swap_ideas = {
+				remove_idea = GAL_revmod_pol2
+				add_idea = GAL_revmod_pol3
+			}
 		}
 
 		relative_position_id = GAL_appeal_to_comintern
@@ -2853,8 +2899,10 @@ focus_tree = {
 		prerequisite = { focus = GAL_red_priests }
 		available = {}
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.05
+			swap_ideas = {
+				remove_idea = GAL_godsoc_pol2
+				add_idea = GAL_godsoc_pol3
+			}
 		}
 
 		relative_position_id = GAL_appeal_to_comintern
@@ -2933,6 +2981,14 @@ focus_tree = {
         cost = 4
         available = {
 			has_country_flag = GAL_nationalist_coup
+		}
+		select_effect = {
+			hidden_effect = {
+				country_event = {
+					id = gal.50
+					days = 3
+				}
+			}
 		}
         completion_reward = {
             add_political_power = 100
@@ -3112,10 +3168,8 @@ focus_tree = {
         mutually_exclusive = { focus = GAL_orthodox_nationalism_bastion }
         completion_reward = {
             add_political_power = 50
-            swap_ideas = {
-                remove_idea = GAL_syndstat_pol
-                add_idea = GAL_syndstat_pol2
-            }
+			add_ideas = GAL_natdemsynd_pol
+           
         }
     }
     focus = {
@@ -3133,10 +3187,8 @@ focus_tree = {
         mutually_exclusive = { focus = GAL_orthodox_nationalism_bastion }
         completion_reward = {
             add_political_power = 50
-            swap_ideas = {
-                remove_idea = GAL_agrfasc_pol
-                add_idea = GAL_agrfasc_pol2
-            }
+			add_ideas = GAL_natonr_pol
+            
         }
     }
     focus = {
@@ -3157,10 +3209,8 @@ focus_tree = {
         mutually_exclusive = { focus = GAL_rise_of_ethnic_radicalism }
         completion_reward = {
             add_political_power = 50
-            swap_ideas = {
-                remove_idea = GAL_agrfasc_pol
-                add_idea = GAL_orthodox_nationalism_bastion_pol
-            }
+			add_ideas = GAL_natdem_pol
+            
         }
     }
 
@@ -3174,8 +3224,10 @@ focus_tree = {
         cost = 4
         prerequisite = { focus = GAL_manage_labor_movement }
         completion_reward = {
-            add_political_power = 50
-            add_stability = 0.05
+             swap_ideas = {
+                remove_idea = GAL_natdemsynd_pol
+                add_idea = GAL_natdemsynd_pol2
+            }
         }
     }
     focus = {
@@ -3187,8 +3239,10 @@ focus_tree = {
         cost = 4
         prerequisite = { focus = GAL_rise_of_ethnic_radicalism }
         completion_reward = {
-            add_political_power = 50
-            add_stability = 0.05
+            swap_ideas = {
+                remove_idea = GAL_natonr_pol
+                add_idea = GAL_natonr_pol2
+            }
         }
     }
     focus = {
@@ -3200,8 +3254,10 @@ focus_tree = {
         cost = 4
         prerequisite = { focus = GAL_orthodox_nationalism_bastion }
         completion_reward = {
-            add_political_power = 50
-            add_stability = 0.05
+            swap_ideas = {
+                remove_idea = GAL_natdem_pol
+                add_idea = GAL_natdem_pol2
+            }
         }
     }
 
@@ -3236,7 +3292,12 @@ focus_tree = {
         ai_will_do = {
             factor = 100
         }
-        available = {}
+        available = {
+			has_country_flag = GAL_hidden_path_unlock
+		}
+		allow_branch = {
+			has_country_flag = GAL_hidden_path_unlock
+		}
         completion_reward = {
             add_ideas = GAL_save_galicia
         }
@@ -3273,6 +3334,7 @@ focus_tree = {
             add_stability = 0.1
             add_war_support = 0.1
 			#insert event later
+			country_event = gal.54
         }
     }
 
@@ -3291,6 +3353,7 @@ focus_tree = {
         available = {}
         completion_reward = {
            #insert event later
+		   country_event = gal.55
         }
     }
 
@@ -4164,8 +4227,10 @@ focus_tree = {
         ai_will_do = { factor = 70 }
         available = {}
         completion_reward = {
-            add_political_power = 50
-            add_stability = 0.05
+             swap_ideas = {
+                remove_idea = GAL_mild_left_turn_pol2
+                add_idea = GAL_mild_left_turn_pol3
+            }
         }
     }
 
@@ -4180,8 +4245,10 @@ focus_tree = {
         ai_will_do = { factor = 70 }
         available = {}
         completion_reward = {
-            add_political_power = 50
-            add_stability = 0.05
+            swap_ideas = {
+                remove_idea = GAL_corporatism_and_democracy_pol2
+                add_idea = GAL_corporatism_and_democracy_pol3
+            }
         }
     }
 
@@ -4196,8 +4263,10 @@ focus_tree = {
         ai_will_do = { factor = 70 }
         available = {}
         completion_reward = {
-            add_political_power = 50
-            add_stability = 0.05
+            swap_ideas = {
+                remove_idea = GAL_second_galicia_governorate_pol2
+                add_idea = GAL_second_galicia_governorate_pol3
+            }
         }
     }
 
@@ -4232,7 +4301,9 @@ focus_tree = {
        y = 20
        cost = 4
        ai_will_do = { factor = 100 }
-       available = {}
+       available = {
+		has_country_flag = GAL_german_colony
+	   }
        completion_reward = {
            add_political_power = 100
            add_stability = 0.1
@@ -4346,10 +4417,8 @@ focus_tree = {
        available = {}
        completion_reward = {
            add_political_power = 50
-           swap_ideas = {
-               remove_idea = GAL_distribute_land_to_germans_idea
-               add_idea = GAL_implement_corporatist_policy_idea
-           }
+          add_ideas = GAL_implement_corporatist_policy_idea
+		   country_event = gal.51
        }
    }
 
@@ -4364,7 +4433,11 @@ focus_tree = {
        prerequisite = { focus = GAL_implement_corporatist_policy }
 	   mutually_exclusive = { focus = GAL_adopt_pan_germanism }
        ai_will_do = { factor = 80 }
-       available = {}
+       available = {
+			NOT = {
+				has_government = national_populist
+			}
+	   }
        completion_reward = {
            add_ideas = GAL_adhere_pan_germanism_pol
        }
@@ -4379,7 +4452,11 @@ focus_tree = {
        prerequisite = { focus = GAL_implement_corporatist_policy }
        ai_will_do = { factor = 80 }
        mutually_exclusive = { focus = GAL_adhere_pan_germanism }
-       available = {}
+       available = {
+			NOT = {
+				has_government = authoritarian_democrat
+			}
+	   }
        completion_reward = {
            add_ideas = GAL_adopt_pan_germanism_pol
        }
@@ -4401,7 +4478,9 @@ focus_tree = {
 
        prerequisite = { focus = GAL_adhere_pan_germanism }
        ai_will_do = { factor = 70 }
-       available = {}
+       available = {
+			has_government = authoritarian_democrat
+	   }
        completion_reward = {
           add_ideas = GAL_young_german_pol
        }
@@ -4423,7 +4502,9 @@ focus_tree = {
 			focus = GAL_roar_of_sarmatians
 		}
 
-       available = {}
+       available = {
+			has_government = paternal_autocrat
+	   }
        completion_reward = {
            add_ideas = GAL_populist_artists_pol
        }
@@ -4443,7 +4524,9 @@ focus_tree = {
 	}
 
 
-       available = {}
+       available = {
+		has_government = national_populist
+	   }
        completion_reward = {
           add_ideas = GAL_roar_of_sarmatians_pol
        }
