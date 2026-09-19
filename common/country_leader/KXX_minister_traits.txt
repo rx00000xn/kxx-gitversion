@@ -1,0 +1,231 @@
+leader_traits = {
+	eco_unpopular_taxman = { #colombian
+		production_factory_max_efficiency_factor = -0.01
+		local_resources_factor = -0.02
+		industrial_capacity_factory = -0.02
+		political_power_gain = -0.05
+		random = no
+	}
+
+	hog_Revolutionary_General = {
+		army_attack_factor = 0.07
+		breakthrough = 0.07
+		industrial_capacity_factory = 0.07
+		random = no
+	}
+
+	hog_Absurd_revolutionaries = {
+		army_attack_factor = 0.07
+		stability_factor = 0.05
+		production_speed_buildings_factor = 0.1
+		mobilization_speed = 0.2
+		industrial_capacity_factory = 0.07
+		random = no
+	}
+
+	hog_butcherl = {
+		resistance_damage_to_garrison = -0.2
+		resistance_activity = -0.2
+		random = no
+	}
+
+	hog_Fanatical_reactionaries = {
+		national_populist_drift = 0.02
+		paternal_autocrat_drift = 0.02
+		send_volunteer_size = 2
+		random = no
+	}
+
+	hog_staunch_royalists = {
+		consumer_goods_factor = -0.15
+		drift_defence_factor = 0.3
+		research_speed_factor = 0.05
+		stability_factor = 0.05
+		random = no
+	}
+
+	hog_Great_protector = {
+		army_attack_factor = 0.07
+		army_defence_factor = 0.12
+		production_factory_max_efficiency_factor = 0.15
+		production_factory_efficiency_gain_factor = 0.15
+		random = no
+	}
+
+	hog_eccentric_ideologues = {
+		army_attack_factor = 0.05
+		army_defence_factor = 0.05
+		production_factory_max_efficiency_factor = 0.1
+		production_factory_efficiency_gain_factor = 0.1
+		stability_factor = 0.05
+		random = no
+	}
+
+	hog_popular_leader_of_the_people = {
+		local_resources_factor = 0.3
+		production_speed_buildings_factor = 0.3
+		justify_war_goal_time = -0.2
+		stability_weekly = 0.002
+		war_support_weekly = 0.002
+		random = no
+	}
+
+	hog_heredero_de_los_pecados_de_los_padres = {
+		local_resources_factor = 0.3
+		production_speed_buildings_factor = 0.3
+		justify_war_goal_time = -0.2
+		stability_factor = -0.1
+		random = no
+	}
+
+	eco_theorist_of_national_syndicalism = {
+		industrial_capacity_factory = 0.2
+		production_factory_efficiency_gain_factor = 0.2
+		random = no
+	}
+
+	eco_A_whimsical_master_builder = {
+		production_speed_buildings_factor = 0.2
+		production_speed_arms_factory_factor = 0.2
+		production_speed_industrial_complex_factor = 0.2
+		production_speed_dockyard_factor = 0.1
+		random = no
+	}
+
+	for_futurist_with_a_reputation_for_faturism = {
+		opinion_gain_monthly_factor = 0.2
+		opinion_gain_monthly_same_ideology_factor = 0.2
+		trade_opinion_factor = 0.3
+		random = no
+	}
+
+	for_master_of_diplomacy = {
+		opinion_gain_monthly_factor = 0.2
+		opinion_gain_monthly_same_ideology_factor = 0.2
+		trade_opinion_factor = 0.3
+		random = no
+	}
+
+	for_fanatical_reactionaries = {
+		national_populist_drift = 0.02
+		paternal_autocrat_drift = 0.02
+		send_volunteer_size = 2
+		random = no
+	}
+
+	for_religious_specialists = {
+		compliance_growth = 0.01
+		army_morale_factor = 0.05
+		random = no
+	}
+
+	for_transformers = {
+		army_attack_factor = 0.05
+		political_power_gain = 0.1
+		send_volunteer_size = 1
+		random = no
+	}
+
+	eco_biased_intellectual = {
+		opinion_gain_monthly_same_ideology_factor = 0.15
+		opinion_gain_monthly_factor = -0.15
+		random = no
+	}
+
+	eco_reactionary_theoretician = {
+		stability_factor = 0.05
+		army_attack_factor = 0.05
+		breakthrough = 0.05
+		random = no
+	}
+
+	eco_robin_hood_of_odessa = {
+		consumer_goods_factor = -0.15
+		industrial_capacity_factory = 0.05
+		random = no
+	}
+
+	eco_mixed_economy_advocate = {
+		industrial_capacity_factory = 0.1
+		production_factory_max_efficiency_factor = 0.1
+		production_factory_efficiency_gain_factor = 0.1
+		production_speed_buildings_factor = 0.1
+		random = no
+	}
+
+	sec_Former_member_of_the_Communist_Party = {
+		production_factory_max_efficiency_factor = 0.1
+		production_factory_efficiency_gain_factor = 0.1
+		random = no
+	}
+
+	sec_ideological_crusader = {
+		opinion_gain_monthly_same_ideology_factor = 1.0
+		send_volunteer_size = 1
+		party_popularity_stability_factor = 0.25
+		random = no
+	}
+
+	sec_Popular_Honorary_Leader = {
+		stability_factor = 0.15
+		mobilization_speed = 0.2
+		random = no
+	}
+
+	sec_ataman = {
+		army_attack_factor = 0.05
+		breakthrough = 0.05
+		land_reinforce_rate = 0.05
+		random = no
+	}
+
+	sec_industry_elites = {
+		research_speed_factor = 0.1
+		resistance_decay = 0.15
+		random = no
+	}
+
+	sec_friends_of_the_people = {
+		intelligence_agency_defense = 0.5
+		resistance_target = -0.1
+		compliance_gain = 0.25
+		random = no
+	}
+
+	hog_the_black_baron = { #Wrangel
+		political_power_gain = 0.05
+		consumer_goods_factor = 0.05
+		equipment_bonus = {
+			infantry_equipment = {
+				build_cost_ic = -0.05
+				instant = yes
+			}
+		}
+		army_speed_factor = 0.05
+		random = no
+	}
+
+	hog_the_peasant_marshal = { #Denikin
+		army_attack_factor = 0.05
+		army_defence_factor = 0.025
+		equipment_bonus = {
+			infantry_equipment = {
+				build_cost_ic = -0.05
+				instant = yes
+			}
+			artillery_equipment = {
+				build_cost_ic = -0.05
+				instant = yes
+			}
+		}
+		random = no
+	}
+
+	cos_school_of_insurgent_war = {
+		army_morale_factor = 0.04
+		enemy_army_bonus_air_superiority_factor = -0.05
+		attrition = -0.08
+		equipment_capture = 0.05
+		random = no
+	}
+}
