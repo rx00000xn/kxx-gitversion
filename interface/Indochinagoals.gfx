@@ -1,0 +1,94 @@
+spriteTypes = {
+	SpriteType = {
+		name = "GFX_INC_the_designer_debuts"
+		texturefile = "gfx/interface/goals/INC/INC_the_designer_debuts.png"
+	}
+	SpriteType = {
+		name = "GFX_INC_advance_towards_the_city"
+		texturefile = "gfx/interface/goals/INC/INC_advance_towards_the_city.png"
+	}
+	SpriteType = {
+		name = "GFX_INC_step_from_the_countryside"
+		texturefile = "gfx/interface/goals/INC/INC_step_from_the_countryside.png"
+	}
+	SpriteType = {
+		name = "GFX_INC_the_renovation_miracle_on_the_mekong"
+		texturefile = "gfx/interface/goals/INC/INC_the_renovation_miracle_on_the_mekong.png"
+	}
+	SpriteType = {
+		name = "GFX_INC_universal_social_dividend"
+		texturefile = "gfx/interface/goals/INC/INC_universal_social_dividend.png"
+	}
+	SpriteType = {
+		name = "GFX_INC_implement_trade_union_autonomy"
+		texturefile = "gfx/interface/goals/INC/INC_implement_trade_union_autonomy.png"
+	}
+	SpriteType = {
+		name = "GFX_INC_unleash_small_enterprise_vitality"
+		texturefile = "gfx/interface/goals/INC/INC_unleash_small_enterprise_vitality.png"
+	}
+	SpriteType = {
+		name = "GFX_INC_do_muoi_implements_the_market_prosperity_policy"
+		texturefile = "gfx/interface/goals/INC/INC_do_muoi_implements_the_market_prosperity_policy.png"
+	}
+	SpriteType = {
+		name = "GFX_INC_let_the_reform_proceed_steadily"
+		texturefile = "gfx/interface/goals/INC/INC_let_the_reform_proceed_steadily.png"
+	}
+	SpriteType = {
+		name = "GFX_INC_let_the_money_flow"
+		texturefile = "gfx/interface/goals/INC/INC_let_the_money_flow.png"
+	}
+	SpriteType = {
+		name = "GFX_INC_small_enterprises_go_global"
+		texturefile = "gfx/interface/goals/INC/INC_small_enterprises_go_global.png"
+	}
+	SpriteType = {
+		name = "GFX_INC_spokesperson_for_bukharins_policies"
+		texturefile = "gfx/interface/goals/INC/INC_spokesperson_for_bukharins_policies.png"
+	}
+	SpriteType = {
+		name = "GFX_INC_make_the_cake_bigger"
+		texturefile = "gfx/interface/goals/INC/INC_make_the_cake_bigger.png"
+	}
+	SpriteType = {
+		name = "GFX_INC_divide_the_cake_fairly"
+		texturefile = "gfx/interface/goals/INC/INC_divide_the_cake_fairly.png"
+	}
+	SpriteType = {
+		name = "GFX_INC_listen_to_teachings_of_holy_ho"
+		texturefile = "gfx/interface/goals/INC/INC_listen_to_teachings_of_holy_ho.png"
+	}
+	SpriteType = {
+		name = "GFX_INC_hammer_sickle_and_sutras_hand_in_hand"
+		texturefile = "gfx/interface/goals/INC/INC_hammer_sickle_and_sutras_hand_in_hand.png"
+	}
+	SpriteType = {
+		name = "GFX_INC_construct_proletarian_esoteric_theocracy"
+		texturefile = "gfx/interface/goals/INC/INC_construct_proletarian_esoteric_theocracy.png"
+	}
+	SpriteType = {
+		name = "GFX_INC_extol_revolutionary_karma_of_red_mahayana_pioneers"
+		texturefile = "gfx/interface/goals/INC/INC_extol_revolutionary_karma_of_red_mahayana_pioneers.png"
+	}
+	SpriteType = {
+		name = "GFX_INC_revolutionary_karmic_fire_reshapes_mahayana_light"
+		texturefile = "gfx/interface/goals/INC/INC_revolutionary_karmic_fire_reshapes_mahayana_light.png"
+	}
+	SpriteType = {
+		name = "GFX_INC_equality_forges_unity"
+		texturefile = "gfx/interface/goals/INC/INC_equality_forges_unity.png"
+	}
+	SpriteType = {
+		name = "GFX_INC_asceticism_forges_conscience"
+		texturefile = "gfx/interface/goals/INC/INC_asceticism_forges_conscience.png"
+	}
+	SpriteType = {
+		name = "GFX_INC_material_bullets_cannot_extinguish_red_spirit"
+		texturefile = "gfx/interface/goals/INC/INC_material_bullets_cannot_extinguish_red_spirit.png"
+	}
+	SpriteType = {
+		name = "GFX_INC_fulfill_holy_hos_great_vow_of_nirvana"
+		texturefile = "gfx/interface/goals/INC/INC_fulfill_holy_hos_great_vow_of_nirvana.png"
+	}
+}
