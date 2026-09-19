@@ -132,7 +132,7 @@ spriteTypes = {
 	####################################################################
 	spriteType = {
 		name = "GFX_Portrait_GRU_Heinrich_Himmler"
-		texturefile = "gfx/leaders/GRU/Portrait_VKB_Heinrich_Himmler.png"
+		texturefile = "gfx/leaders/GRU/Portrait_Germany_Heinrich_Himmler.png"
 	}
 	spriteType = {
 		name = "GFX_Portrait_GRU_Albert_Speer"
@@ -856,7 +856,7 @@ spriteTypes = {
 	}	
 	spriteType = {
 		name = "GFX_Portrait_POL_Ignacy_Moscicki"
-		texturefile = "gfx/leaders/POL/Portrait_PLX_Ignacy_Moscicki.png"
+		texturefile = "gfx/leaders/POL/Portrait_POL_Ignacy_Moscicki.png"
 	}	
 	spriteType = {
 		name = "GFX_Portrait_POL_Jozef_Beck"
@@ -864,7 +864,7 @@ spriteTypes = {
 	}	
 	spriteType = {
 		name = "GFX_Portrait_GAL_Tomasz_Dabal"
-		texturefile = "gfx/leaders/POL/Portrait_PLX_Tomasz_Dabal.png"
+		texturefile = "gfx/leaders/POL/Portrait_Portrait_PLX_Tomasz_Dabal.png"
 	}
 	#加利西亚
 	spriteType = {
@@ -890,7 +890,7 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_Portrait_WRS_Georgy_Zhukov"
-		texturefile = "gfx/leaders/RUS/Portrait_SOV_Georgy_Zhukov_prussia.png"
+		texturefile = "gfx/leaders/SOV/Portrait_SOV_Georgy_Zhukov_prussia.png"
 	}
 	spriteType = {
 		name = "GFX_Portrait_WRS_Mikhail_Tukhachevskiy"
@@ -981,7 +981,7 @@ spriteTypes = {
 	
 	spriteType = {
 		name = "GFX_Portrait_HNN_Gao_Gang"
-		texturefile = "gfx/leaders/HNN/Portrait_HNN_Gao_gang.png"
+		texturefile = "gfx/leaders/SHX/Portrait_SHX_Gao_Gang.png"
 	}
 	
 	spriteType = {
