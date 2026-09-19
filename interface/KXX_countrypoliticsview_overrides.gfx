@@ -1,0 +1,10 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ideology_juche_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/juche_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_socdem_fascism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/fascism_group.png"
+	}
+}
