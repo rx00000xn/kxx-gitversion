@@ -1,0 +1,789 @@
+﻿l_simp_chinese:
+ KR_Bharatiya_Commune:0"婆罗多公社国策树"
+ POLITICS_LALA_LAJPAT_RAI_DESC:0"拉拉·拉贾帕·拉伊是旁遮普的印度教徒慈善家，他在美国支持印度独立，回国后计划在印度建立一个社会主义国家。英国统治在1925年崩溃后，拉伊同其他社会主义领导者宣布成立孟加拉人民共和国。孟加拉人民共和国尚无力一统印度，却已占领了次大陆的三分之一壁江山。拉伊领导下的人民共和国已经稳定，为表现统一意志，国号被改为“婆罗多公社”，拉伊如今面临着争相表现的反对的各支社会主义派别。年事已高又势单力薄的他打算辞职，公社的未来掌握在他的继任者手中。"
+ POLITICS_FAZLUL_HUQ_DESC:0"法兹鲁尔·胡克，孟加拉穆斯林联盟的前秘书长，现在公开承认了自己的工团主义者身份，他带领着他的 “温和派 ”在印度国民大会的特别会议上取得了胜利。他在竞选纲领中提出了以工会为中心实行工业化并逐步实施社会主义改革的计划。然而，尽管在选举中取胜，胡克仍然面临着来自印度国民大会中反对派的坚决反对。不管怎么说，胡克看到了历史上曾经贫困的印度东部地区乃至整个次大陆的繁荣愿景，至少对他的支持者来说，这一愿景似乎在逐渐化为现实。"
+ POLITICS_CHANDRA_BOSE_DESC:0"苏巴斯·钱德拉·鲍斯还是个小男孩的时候，就揍过他的校长，因为校长诽谤他所爱的印度，被开除的他疯狂地想着复仇。英印当局垮台后，鲍斯用自己富有煽动力的演讲吸引了大量印度人投身社会主义事业，他反对一切不认可印度人统治次大陆的观点。鲍斯及其领导的准则派赢的印度国民大会内部选举后，整个婆罗多公社都开始向着军国主义的倾向奔去，如今的婆罗多公社似乎会给自治领和王公联盟以致命一击。"
+ POLITICS_MOHANDAS_GHANDI_DESC:0"曾经作为一名律师的莫罕达斯·卡拉姆昌德·甘地高度重视印度从英国统治下逐步、和平、合法地独立。然而，随着英国对印度殖民统治的瓦解，他和他的许多追随者被迫重新考虑他们的主张。虽然甘地仍然倡导和平主义，但他也开始逐渐被激进的印度国民大会中的同僚们的思想所影响。甘地在印度国民大会特别会议上的胜利唤起了人们对印度次大陆的和平统一以及分裂派系重新和解的新希望。"
+ POLITICS_JAWAHARLAL_NEHRU_DESC:0"贾瓦哈拉尔·尼赫鲁无疑是婆罗多公社中最圆滑的人。英印当局垮台后，尼赫鲁主张立即独立，同时他在不同政治派别的领导者之间调停争端。尼赫鲁政治手段高超，并凭此接连担任印度国民大会和整个婆罗多公社的最高领导人，虽然他的批评者仍在声称尼赫鲁优柔寡断、懦弱无能。尼赫鲁的领导也许能够对国民大会中数十年来未能解决的宗派主义问题给出一份自己的答卷。"
+ POLITICS_NIRMAL_KUMAR_BOSE_DESC:0"尼尔马·库马尔·鲍斯是著名的圣雄甘地的门徒，如今他是婆罗多公社的领袖。他可能会继续推进甘地主张的农业改革，并鼓励印度非暴力再统一。婆罗多公社内部有许多人对他感到不满，他们不认可官方对甘地死因的解释，他们认为是鲍斯一手策划了甘地之死。"
+ POLITICS_SHRIPAD_AMRIT_DANGE_DESC:0"什里帕德·阿姆里特·丹吉或许是印度国民大会中最激进的人了。同法国无政府主义者内斯托尔·马赫诺一样，他主张解构国家自身。但他又和其他无政府主义者不同，他不认同农业集体化，他认为应该由工会和工业化来承担国家的经济结构。"
+ BHC_backwards_economy_1:0"欠发达的经济"
+ BHC_backwards_economy_1_desc:0"这个国家很大程度上依赖于农耕，但许多农业生产方式都是过时的。"
+ BHC_backwards_economy_2:0"恢复中的经济"
+ BHC_backwards_economy_2_desc:0"这个国家很大程度依赖于农耕，但许多农业生产方式都是过时的。但这一切正在慢慢改变，城市地区逐渐开始走上工业化的道路。"
+ BHC_divided_government:0"分裂的政府"
+ BHC_divided_government_desc:0"加尔各答政府内部有三个派别：准则派、温和派和农民派。他们在内战中曾并肩作战，然而即使他们都是公社政府的一部分，每个人对自己的目标和社会主义印度理想有着的不同愿景。这种内讧有时会变得很极端，有人担心这种分裂最终可能导致矛盾公开化。"
+#party
+ BHC_tot_party:0"印度国民大会党-左翼联合委员会"
+ BHC_tot_party_long:0"印度国民大会党-左翼联合委员会(INC-Left Consolidation Committee)"
+ BHC_syn_party:0"印度国民大会党-国大社会主义党"
+ BHC_syn_party_long:0"印度国民大会党-国大社会主义党(INC-Congress Socialists)"
+ BHC_rso_party:0"印度国民大会党-甘地派"
+ BHC_rso_party_long:0"印度国民大会党-甘地派(INC-Gandhians)"
+ BHC_soc_dem_party:0"印度国民大会党-工作委员会"
+ BHC_soc_dem_party_long:0"印度国民大会党-工作委员会(INC-Working Committee)"
+ BHC_soc_lib_party:0"印度国民大会党-国大改革委员会"
+ BHC_soc_lib_party_long:0"印度国民大会党-国大改革委员会(INC-Congress Reform Committee)"
+ BHC_mar_lib_party:0"印度国民大会党-信托"
+ BHC_mar_lib_party_long:0"印度国民大会党-信托(INC-Trusteeship)"
+ BHC_soc_con_party:0"印度国民大会党-国大民族主义党"
+ BHC_soc_con_party_long:0"印度国民大会党-国大民族主义党(INC-Congress Nationalists)"
+ BHC_aut_den_party:0"孟加拉柴明达尔"
+ BHC_aut_den_party_long:0"孟加拉柴明达尔(Zamindars of Bengal)"
+ BHC_pat_aut_party:0"查克玛圈"
+ BHC_pat_aut_party_long:0"查克玛圈(Chakma Circle)"
+ BHC_nat_pop_party:0"赫拉卡"
+ BHC_nat_pop_party_long:0"赫拉卡(Heraka)"
+ BHC_totalist_tata_party:0"婆罗多救国委员会-信托"
+ BHC_totalist_tata_party_long:0"婆罗多救国委员会-信托(Brahmaputra National Salvation Committee-Trusteeship)"
+ BHC_totalist_Feroze_party:0"婆罗多救国委员会-尼赫鲁效忠派"
+ BHC_totalist_Feroze_party_long:0"婆罗多救国委员会-尼赫鲁效忠派(Brahmaputra National Salvation Committee-Nehru loyalists)"
+ BHC_totalist_Kaul_party:0"婆罗多救国委员会-临时军政府"
+ BHC_totalist_Kaul_party_long:0"婆罗多救国委员会-临时军政府(Brahmaputra National Salvation Committee-Provisional Military Government)"
+ 
+#bop
+ BHC_The_Congress_Party_constantly_at_odds:0"混乱的国民大会"
+ BHC_Congress_Party_revolution:0"革命派"
+ BHC_Congress_Party_Conservative:0"保守派"
+ Influence_of_the_revolutionary_faction_0:0"革命派微弱优势"
+ Influence_of_the_revolutionary_faction_1:0"革命派占优"
+ Influence_of_the_revolutionary_faction_2:0"革命派优势显著"
+ Conservative_influence_0:0"保守派微弱优势"
+ Conservative_influence_1:0"保守派占优"
+ Conservative_influence_2:0"保守派优势显著"
+ BHC_Promote_the_revolutionary_spirit:0"发扬革命精神"
+ BHC_Curb_radical_ideas:0"遏制激进思想"
+ BHC_Mobilize_revolutionary_enthusiasm:0"动员革命热情"
+ BHC_Appease_revolutionaries:0"安抚革命派"
+ BHC_Appease_conservatives:0"安抚保守派"
+ BHC_Respect_existing_traditions:0"尊重旧有传统"
+
+#mio
+ IND_jessop_company_organisation_desc:0"装甲设计商“
+
+ IND_Basic_Armor_Research:0"基础装甲研究"
+
+ IND_Light_Armor:0"轻型装甲"
+
+ IND_Medium_Armor_Development:0"中型装甲发展"
+
+ IND_Armor_Maintenance_System:0"装甲维修体系"
+
+ IND_Warfare_Adaptability:0"做战适应性"
+
+ IND_Reconnaissance_Armor_Development:0"侦察装甲发展"
+
+ IND_Localized_Design:0"本土化设计"
+
+ IND_Heavy_Armor_Experimentation:0"重型装甲实验"
+
+ IND_Standardized_Production:0"标准化生产"
+
+ IND_Logistics_Optimization:0"后勤优化"
+
+ IND_Advanced_Armor_Research:0"先进装甲研究"
+
+ IND_Special_Operations_Armor:0"特种作战装甲"
+
+ IND_Main_Battle_Tank_Development:0"主战坦克开发"
+
+ IND_Mass_Production:0"大规模生产"
+
+ IND_Rapid_Deployment_Capability:0"快速部署能力"
+
+ IND_Future_Armor_Concepts:0"未来装甲概念"
+
+ IND_Synthetic_Oil:0"合成油"
+
+ IND_Lean_Production:0"精益生产"
+
+ IND_Production_Line_Optimization:0"产线优化"
+
+ IND_Armor_Piercing_Technology:0"穿甲科技"
+
+ generic_infantry_tank_organization:0"步兵坦克制造商"
+ generic_mio_initial_trait_infantry_tanks_designer:0"步兵坦克设计商"
+ generic_mio_trait_single_engine:0"单引擎"
+ generic_mio_trait_dual_engine_redundancy:0"双引擎冗余设计"
+ generic_mio_trait_interleaved_track_wheels:0"交错式履带轮"
+ generic_mio_trait_overlapped_track_wheels:0"部分重叠式履带轮"
+ generic_mio_trait_battle_tank_specifications:0"战斗坦克规格"
+ generic_mio_trait_adaptable_turret_ring:0"适应性炮塔座圈"
+ generic_mio_trait_turret_sights:0"炮镜"
+ generic_mio_trait_close_support_role:0"近距支援职能"
+ generic_mio_trait_anti_tank_role:0"反坦克职能"
+ generic_mio_trait_adaptable_chassis:0"适应性底盘"
+ generic_mio_trait_light_tank_specialization:0"轻型坦克专精"
+ generic_mio_trait_medium_tank_specialization:0"中型坦克专精"
+ generic_mio_trait_heavy_tank_specialization:0"重型坦克专精"
+ generic_mio_trait_thick_armor:0"加厚型装甲"
+ generic_mio_trait_even_thicker_armor:0"极厚型装甲"
+#民族精神
+ BHC_Passive_national_defense:0"消极国防"
+ BHC_Inadequate_self_sufficiency:0"不充分的自给自足"
+ BHC_Chaotic_National_Congress:0"混乱的国民大会"
+ BHC_Mahatma_s_vigil:0"圣雄的守望"
+ BHC_Praise_the_Motherland:0"歌颂祖国母亲"
+ BHC_the_vigil:0"圣雄野望"
+ BHC_Feed_the_people:0"喂饱人民"
+ BHC_rouse_the_masses:0"唤醒大众"
+ BHC_raw_founded:0"研究与分析"
+ BHC_arm_the_soldiers:0"重视士兵装备"
+ BHC_foreign_tech:0"外国科研援助"
+ BHC_army_reformed:0"公社农民派军队"
+ BHC_elite_resistance:0"精英们的反抗"
+ BHC_elite_incentive:0"对精英的激励"
+ BHC_elite_promotion:0"精英振兴"
+ BHC_army_training:0"陆军训练学院"
+ BHC_army_production:0"国家军队供应"
+ BHC_navy_production:0"国家海军供应"
+ BHC_army_focus:0"统治陆地"
+ BHC_air_focus:0"统治天空"
+ BHC_navy_focus:0"统治海洋"
+ BHC_unitedindia:0"印度统一！"
+ BHC_Indochina:0"支持我们在印度支那殖民地的分离主义团体"
+ BHC_cautious_support:0"谨慎的支持"
+ BHC_approves_government:0"新政府的支持"
+ mahatma:0"圣雄"
+ BHC_INC_meeting_done:0"印度国民大会会议休会\n"
+ BHC_focus_paratrooper_tt:0"红狮空降兵团将被部署在婆罗多公社\n"
+ BHC_attended_congress:0"接受了来自第三国际第九届代表大会的邀请\n"
+ BHC_ENG_intl_aid:0"第三国际的§Y[ENG.GetName]§!承诺援助\n"
+ BHC_FRA_intl_aid:0"第三国际的§Y[FRA.GetName]§!承诺援助\n"
+ BHC_DEH_convert_faster:0"在§Y[DEH.GetName]§!地区获取核心的速度变快了。\n"
+ BHC_DEH_convert_slower:0"在§Y[DEH.GetName]§!地区获取核心的速度变慢了\n"
+ BHC_DEH_cores_1:0"现在可以获得§Y[DEH.GetName]§!北方各邦的核心了\n"
+ BHC_DEH_cores_2:0"现在可以获得§Y[DEH.GetName]§!南方诸邦的核心了。\n"
+  BHC_convert_faster:0"在§Y[PRF.GetName]§!地区获取核心的速度变快了\n"
+  BHC_convert_slower:0"在§Y[PRF.GetName]§!地区获取核心的速度变慢了\n"
+  BHC_cores_1:0"现在可以获得§Y孟买§!和§Y安德拉§!的核心了\n"
+  BHC_cores_2:0"现在可以获得§Y[PRF.GetName]§!的核心了\n"
+ BHC_shimla_uprising_successful:0"一场社会主义革命将成功地在§Y西姆拉§!开始\n"
+ BHC_kolhapur_uprising_successful:0"一场社会主义革命将成功地在§Y戈尔哈布尔§!开始\n"
+ BHC_summit_refused:0"峰会不能再举行了\n"
+ BHC_summit_agreed:0"首脑会议的建议已被接受\n"
+ BHC_summit_called_off:0"勒克瑙峰会将被取消\n"
+ BHC_surrender_to_totalists:0"向准则派投降！\n"
+ BHC_surrender_to_agrarians:0"向农民派投降！\n"
+ BHC_gandhi_assassinated:0"§Y莫罕达斯·卡拉姆昌德·甘地§!遇刺！\n"
+ BHC_volunteers_added:0"两支志愿军将加入我们的军队\n"
+ BHC_home_guard_added:0"两支地方志愿军将加入我们的军队\n"
+ BHC_ships_sold:0"一艘战列舰和三艘驱逐舰将加入我们的海军\n"
+ BHC_shimla_forces:0"在西姆拉的革命者将会起义并为我们的事业而战\n"
+ BHC_kolhapur_forces:0"在戈尔哈布尔的革命者将会起义并为我们的事业而战\n"
+ BHC_union_forces:0"两个单位的步兵单位和三个单位的民兵部队将加入我们的军队\n"
+ BHC_totalist_party:0"印度国民大会党_左翼联合委员会"
+ BHC_radical_socialist_party:0"印度国民大会党_主流派"
+ BHC_syndicalist_party:0"印度国民大会党_国大社会主义党"
+ BHC_totalist_party_long:0"印度国民大会党_左翼联合委员会(INC_Left Consolidation Committee)"
+ BHC_radical_socialist_party_long:0"印度国民大会党_主流派(INC_Mainstream)"
+ BHC_syndicalist_party_long:0"印度国民大会党_国大社会主义党(INC_Congress Socialists)"
+ BHC_anarcho_syndicalist_party:0"无政府工团派"
+ BHC_anarcho_syndicalist_party_long:0"印度自修协会(Bharatiya Svayamsiddhi Sangh)"
+ BHC_social_democrat_party:0"印度国民大会党_辛迪加"
+ BHC_social_democrat_party_long:0"印度国民大会党_辛迪加(INC_Syndicate)"
+ BHC_social_liberal_party:0"印度国民大会党_国大改革委员会"
+ BHC_social_liberal_party_long:0"印度国民大会党_国大改革委员会(INC_Congress Reform Committee)"
+ BHC_market_liberal_party:0"印度国民大会党_信托"
+ BHC_market_liberal_party_long:0"印度国民大会党_信托(INC_Trusteeship)"
+ BHC_social_conservative_party:0"印度国民大会党_国大民族主义党"
+ BHC_social_conservative_party_long:0"印度国民大会党_国大民族主义党(INC_Congress Nationalists)"
+ BHC_authoritarian_democrat_party:0"孟加拉柴明达尔"
+ BHC_authoritarian_democrat_party_long:0"孟加拉柴明达尔(Zamindars of Bengal)"
+ BHC_paternal_autocrat_party:0"查克玛圈"
+ BHC_paternal_autocrat_party_long:0"查克玛圈(Chakma Circle)"
+ BHC_national_populist_party:0"赫拉卡"
+ BHC_national_populist_party_long:0"赫拉卡(Heraka)"
+ #国策
+
+#军事
+ BHC_Rebuild_the_Republican_Air_Force:0"重建共和国空军"
+ BHC_Rebuild_the_Republican_Air_Force_desc:0"重建共和国空军"
+
+ BHC_Focus_on_ground_forces:0"注重地面部队"
+ BHC_Focus_on_ground_forces_desc:0"注重地面部队"
+
+ BHC_Republican_Army:0"共和国陆军"
+ BHC_Republican_Army_desc:0"共和国陆军"
+
+ BHC_Begin_military_mobilization:0"开始军事动员"
+ BHC_Begin_military_mobilization_desc:0"开始军事动员"
+
+ BHC_Develop_new_weapons:0"开发新武"
+ BHC_Develop_new_weapons_desc:0"开发新武"
+
+ BHC_United_Civil_Aviation_Company:0"联合民航公司"
+ BHC_United_Civil_Aviation_Company_desc:0"联合民航公司"
+
+ BHC_Win_through_firepower:0"火力制胜"
+ BHC_Win_through_firepower_desc:0"火力制胜"
+
+ BHC_Invest_in_air_force_RD:0"投资空军研发"
+ BHC_Invest_in_air_force_RD_desc:0"投资空军研发"
+
+ BHC_Form_a_joint_dockyard_company:0"组建联合船坞公司"
+ BHC_Form_a_joint_dockyard_company_desc:0"组建联合船坞公司"
+
+ BHC_Allocate_naval_research_funds:0"分配海军科研经费"
+ BHC_Allocate_naval_research_funds_desc:0"分配海军科研经费"
+
+ BHC_Rebuild_the_Republican_Navy:0"重建共和国海军"
+ BHC_Rebuild_the_Republican_Navy_desc:0"重建共和国海军"
+
+ BHC_Defend_our_coasts:0"保卫我们的海岸"
+ BHC_Defend_our_coasts_desc:0"保卫我们的海岸"
+
+ BHC_Special_Forces_Project:0"特种部队项目"
+ BHC_Special_Forces_Project_desc:0"特种部队项目"
+
+ BHC_Frogman_Plan:0"蛙人计划"
+ BHC_Frogman_Plan_desc:0"蛙人计划"
+
+ BHC_Marine_Corps:0"海军陆战队培训"
+ BHC_Marine_Corps_desc:0"海军陆战队培训"
+
+ BHC_The_future_of_underwater_wolves:0"水下狼群的未来"
+ BHC_The_future_of_underwater_wolves_desc:0"水下狼群的未来"
+
+ BHC_Introduce_foreign_designs:0"引入外国设计"
+ BHC_Introduce_foreign_designs_desc:0"引入外国设计"
+
+ BHC_Joint_research_and_development_of_new_ship_types:0"新舰种联合研发"
+ BHC_Joint_research_and_development_of_new_ship_types_desc:0"新舰种联合研发"
+
+ BHC_Guard_our_seas:0"守卫我们的海"
+ BHC_Guard_our_seas_desc:0"守卫我们的海"
+
+ BHC_Special_naval_engineering_projects:0"专项海军工程"
+ BHC_Special_naval_engineering_projects_desc:0"专项海军工程"
+
+ BHC_Purchase_foreign_fighter_jets:0"购买外国战机"
+ BHC_Purchase_foreign_fighter_jets_desc:0"购买外国战机"
+
+ BHC_Improve_production:0"改进生产"
+ BHC_Improve_production_desc:0"改进生产"
+
+ BHC_New_Eagle:0"新雄鹰"
+ BHC_New_Eagle_desc:0"新雄鹰"
+
+ BHC_Develop_air_combat_theory:0"发展空战理论"
+ BHC_Develop_air_combat_theory_desc:0"发展空战理论"
+
+ BHC_Joint_research_and_development_of_new_aircraft_models:0"新机型联合研发"
+ BHC_Joint_research_and_development_of_new_aircraft_models_desc:0"新机型联合研发"
+
+ BHC_Air_firepower:0"空中火力"
+ BHC_Air_firepower_desc:0"空中火力"
+
+ BHC_Westernize_army_tactics:0"陆军战术西化"
+ BHC_Westernize_army_tactics_desc:0"陆军战术西化"
+
+ BHC_Optimize_the_command_system:0"优化指挥系统"
+ BHC_Optimize_the_command_system_desc:0"优化指挥系统"
+
+ BHC_The_sturdy_backbone_of_the_republic:0"共和国的坚固后盾"
+ BHC_The_sturdy_backbone_of_the_republic_desc:0"共和国的坚固后盾"
+
+ BHC_Ace_pilots:0"王牌飞行员"
+ BHC_Ace_pilots_desc:0"王牌飞行员"
+
+ BHC_Expand_airports:0"扩建机场"
+ BHC_Expand_airports_desc:0"扩建机场"
+
+ BHC_Republican_armored_spearhead:0"共和国装甲矛头"
+ BHC_Republican_armored_spearhead_desc:0"共和国装甲矛头"
+
+ BHC_Focus_on_logistics_networks:0"注重后勤网络"
+ BHC_Focus_on_logistics_networks_desc:0"注重后勤网络"
+
+ BHC_Army_command_chain:0"陆军指挥链"
+ BHC_Army_command_chain_desc:0"陆军指挥链"
+
+ BHC_Our_skies_we_dominate:0"我们的天空，我们来主宰"
+ BHC_Our_skies_we_dominate_desc:0"我们的天空，我们来主宰"
+
+#工业
+
+ BHC_Catch_up_with_capitalism:0"追赶资本主义"
+ BHC_Catch_up_with_capitalism_desc:0"追赶资本主义"
+
+ BHC_Productivity_first:0"生产力优先"
+ BHC_Productivity_first_desc:0"生产力优先"
+
+ BHC_Efficient_local_cooperatives:0"地方合作社高效化"
+ BHC_Efficient_local_cooperatives_desc:0"地方合作社高效化"
+
+ BHC_The_roar_of_modernization:0"现代化的轰鸣"
+ BHC_The_roar_of_modernization_desc:0"现代化的轰鸣"
+
+ BHC_Establish_a_planning_committee:0"设立规划委员会"
+ BHC_Establish_a_planning_committee_desc:0"设立规划委员会"
+
+ BHC_Republic_industrialization:0"共和国工业化"
+ BHC_Republic_industrialization_desc:0"共和国工业化"
+
+ BHC_Accelerate_industrialization:0"加速工业化"
+ BHC_Accelerate_industrialization_desc:0"加速工业化"
+
+ BHC_Mobilize_national_production:0"动员国民生产"
+ BHC_Mobilize_national_production_desc:0"动员国民生产"
+
+ BHC_Repair_roads:0"修缮道路"
+ BHC_Repair_roads_desc:0"修缮道路"
+
+ BHC_Make_up_for_barren_industries:0"弥补贫瘠的工业"
+ BHC_Make_up_for_barren_industries_desc:0"弥补贫瘠的工业"
+
+ BHC_Thorough_agricultural_reform:0"彻底的农业改革"
+ BHC_Thorough_agricultural_reform_desc:0"彻底的农业改革"
+
+ BHC_Begin_national_defense_mobilization:0"开始国防动员"
+ BHC_Begin_national_defense_mobilization_desc:0"开始国防动员"
+
+ BHC_Establish_regional_committees:0"设立区域委员会"
+ BHC_Establish_regional_committees_desc:0"设立区域委员会"
+
+ BHC_Feeding_the_people_first:0"喂饱人民优先"
+ BHC_Feeding_the_people_first_desc:0"喂饱人民优先"
+
+ BHC_Buy_domestic_products_movement:0"国货运动"
+ BHC_Buy_domestic_products_movement_desc:0"国货运动"
+
+ BHC_The_choice_of_the_Mahatma:0"圣雄的选择"
+ BHC_The_choice_of_the_Mahatma_desc:0"圣雄的选择"
+
+ BHC_Develop_industry_and_mining:0"发展工矿业"
+ BHC_Develop_industry_and_mining_desc:0"发展工矿业"
+
+ BHC_Develop_energy_minerals:0"开发能源矿物"
+ BHC_Develop_energy_minerals_desc:0"开发能源矿物"
+
+ BHC_Ensure_supply:0"确保供应"
+ BHC_Ensure_supply_desc:0"确保供应"
+
+ BHC_Promote_self_sufficiency:0"推广自给自足"
+ BHC_Promote_self_sufficiency_desc:0"推广自给自足"
+
+ BHC_Practice_the_trusteeship_system:0"践行托管体制"
+ BHC_Practice_the_trusteeship_system_desc:0"践行托管体制"
+
+ BHC_Everything_is_ready:0"万事俱备"
+ BHC_Everything_is_ready_desc:0"万事俱备"
+
+ BHC_National_mass_production_boom:0"国民大生产热潮"
+ BHC_National_mass_production_boom_desc:0"国民大生产热潮"
+
+ BHC_Revolutionary_stronghold_in_the_East: "东方的革命阵地"
+ BHC_Revolutionary_stronghold_in_the_East_desc: "东方的革命阵地"
+
+ BHC_The_watchful_guardian_of_the_Mahatma: "圣雄之指引"
+ BHC_The_watchful_guardian_of_the_Mahatma_desc: "圣雄之指引"
+
+ BHC_Conservatives_concerns: "保守派的抱怨"
+ BHC_Conservatives_concerns_desc: "保守派的抱怨"
+
+ BHC_Carry_forward_the_ideal_of_the_commune: "发扬公社理想"
+ BHC_Carry_forward_the_ideal_of_the_commune_desc: "发扬公社理想"
+
+ BHC_Restless_revolutionaries: "躁动的激进派"
+ BHC_Restless_revolutionaries_desc: "躁动的激进派"
+
+ BHC_Be_good_at_giving_systematic_guidance: "循循善诱"
+ BHC_Be_good_at_giving_systematic_guidance_desc: "循循善诱"
+
+ BHC_Rally_ones_forces: "万众齐心"
+ BHC_Rally_ones_forces_desc: "万众齐心"
+
+ BHC_Efforts_for_peace: "为和平的努力"
+ BHC_Efforts_for_peace_desc: "为和平的努力"
+
+ BHC_Marching_towards_the_congress: "迈向大会"
+ BHC_Marching_towards_the_congress_desc: "迈向大会"
+#尼赫鲁
+ BHC_Necessary_dictatorship:0"革命紧急状态"
+ BHC_Necessary_dictatorship_desc:0""
+
+ BHC_Strengthening_local_police_forces:0"强化地方警力"
+ BHC_Strengthening_local_police_forces_desc:0""
+
+ BHC_Strongly_maintaining_stability:0"强势维稳"
+ BHC_Strongly_maintaining_stability_desc:0""
+
+ BHC_Silencing_the_political_arena:0"缄默政坛"
+ BHC_Silencing_the_political_arena_desc:0""
+
+ BHC_Reforming_the_Indian_National_Congress:0"掌控国大党话语权"
+ BHC_Reforming_the_Indian_National_Congress_desc:0""
+
+ BHC_A_duty_to_fulfill:0"我们的应尽之事"
+ BHC_A_duty_to_fulfill_desc:0""  
+
+ BHC_Reforming_the_INC:0"授予紧急权力"
+ BHC_Reforming_the_INC_desc:0""
+
+ BHC_Purging_the_opposition:0"打压反对派"
+ BHC_Purging_the_opposition_desc:0""
+
+ BHC_The_next_step:0"下一步"
+ BHC_The_next_step_desc:0""
+
+ BHC_Silence_the_Congress_Party:0"让国大党噤声"
+ BHC_Silence_the_Congress_Party_desc:0"让国大党噤声"
+
+ BHC_Secure_the_Loyalty_of_the_Military:0"争取军队忠诚"
+ BHC_Secure_the_Loyalty_of_the_Military_desc:0"争取军队忠诚"
+
+ BHC_Purge_the_Traitors:0"清洗叛徒"
+ BHC_Purge_the_Traitors_desc:0"清洗叛徒"
+
+ BHC_Permanent_State_of_Emergency:0"永远的紧急状态"
+ BHC_Permanent_State_of_Emergency_desc:0"永远的紧急状态"
+#尼赫鲁仙逝
+ BHC_Twenty_Five_Point_Plan:0"二十五点计划"
+ BHC_Twenty_Five_Point_Plan_desc:0"二十五点计划"
+
+ BHC_The_Darkest_Day:0"至暗之日"
+ BHC_The_Darkest_Day_desc:0"至暗之日"
+
+ BHC_Cooperation_with_Gandhian_Socialists:0"与甘地社会主义者合作"
+ BHC_Cooperation_with_Gandhian_Socialists_desc:0"与甘地社会主义者合作"
+
+ BHC_March_Towards_Self_Sufficiency:0"向着“自给自足”进发"
+ BHC_March_Towards_Self_Sufficiency_desc:0"向着“自给自足”进发"
+
+ BHC_Discipline_of_the_Graveyard:0"“墓场的纪律”"
+ BHC_Discipline_of_the_Graveyard_desc:0"“墓场的纪律”"
+
+ BHC_Desh_Bachao:0"...拯救国家！"
+ BHC_Desh_Bachao_desc:0"...拯救国家！"
+
+ BHC_Abandon_Corrupt_Parliamentarism:0"摒弃腐败议会制"
+ BHC_Abandon_Corrupt_Parliamentarism_desc:0"摒弃腐败议会制"
+
+ BHC_Tycoon:0"大亨"
+ BHC_Tycoon_desc:0"大亨"
+
+ BHC_Establish_a_Loyal_Bureaucracy:0"建立忠诚的官僚机构"
+ BHC_Establish_a_Loyal_Bureaucracy_desc:0"建立忠诚的官僚机构"
+
+ BHC_Radical_Nationalization:0"激进国有化"
+ BHC_Radical_Nationalization_desc:0"激进国有化"
+
+ BHC_Gabiri_Hatao:0"消灭贫困..."
+ BHC_Gabiri_Hatao_desc:0"消灭贫困..."
+
+ BHC_Successor:0"接班人"
+ BHC_Successor_desc:0"接班人"
+
+ BHC_Rely_on_the_Kashmir_Mafia:0"依靠“克什米尔黑手党”"
+ BHC_Rely_on_the_Kashmir_Mafia_desc:0"依靠“克什米尔黑手党”"
+
+ BHC_Introduce_a_Technocratic_Cabinet:0"引入技官内阁"
+ BHC_Introduce_a_Technocratic_Cabinet_desc:0"引入技官内阁"
+
+ BHC_Practice_the_Idea_of_Trusteeship:0"实践“信托”思想"
+ BHC_Practice_the_Idea_of_Trusteeship_desc:0"实践“信托”思想"
+
+ BHC_Fair_Legislation:0"“公平”立法"
+ BHC_Fair_Legislation_desc:0"“公平”立法"
+
+ BHC_Win_Over_Defectors_from_the_Previous_Regime:0"拉拢前朝投诚者"
+ BHC_Win_Over_Defectors_from_the_Previous_Regime_desc:0"拉拢前朝投诚者"
+
+ BHC_Militarize_the_Army:0"军队政治化"
+ BHC_Militarize_the_Army_desc:0"军队政治化"
+
+ BHC_Leverage_Nehrus_Connections:0"借助尼赫鲁的纽带"
+ BHC_Leverage_Nehrus_Connections_desc:0"借助尼赫鲁的纽带"
+
+ BHC_The_General_Who_Saved_the_Nation:0"将军"
+ BHC_The_General_Who_Saved_the_Nation_desc:0"将军"
+
+ BHC_Money_Makes_the_Horse_Go_Fast:0"金钱的马儿跑得快"
+ BHC_Money_Makes_the_Horse_Go_Fast_desc:0"金钱的马儿跑得快"
+
+ BHC_Buy_Off_Left_Wing_Politicians:0"收买左翼政客"
+ BHC_Buy_Off_Left_Wing_Politicians_desc:0"收买左翼政客"
+
+ BHC_Strengthen_the_Country_and_the_Army:0"强国富兵"
+ BHC_Strengthen_the_Country_and_the_Army_desc:0"强国富兵"
+
+ BHC_The_Great_Protector_of_Bharat:0"婆罗多的大护国公"
+ BHC_The_Great_Protector_of_Bharat_desc:0"婆罗多的大护国公"
+
+ BHC_Iron_and_Steel_Idyll:0"钢铁牧歌"
+ BHC_Iron_and_Steel_Idyll_desc:0"钢铁牧歌"
+
+ BHC_Descendants_of_Bharat:0"婆罗多的子嗣"
+ BHC_Descendants_of_Bharat_desc:0"婆罗多的子嗣"
+
+ BHC_Reconcile_with_Trade_Unions:0"与工会“和解”"
+ BHC_Reconcile_with_Trade_Unions_desc:0"与工会“和解”"
+
+ BHC_Manage_the_Revolution_Not_Syndicalist_Revolution:0"管理革命而非工团革命"
+ BHC_Manage_the_Revolution_Not_Syndicalist_Revolution_desc:0"管理革命而非工团革命"
+
+ BHC_Back_on_Track:0"再回正轨"
+ BHC_Back_on_Track_desc:0"再回正轨"
+
+ BHC_Revolution_of_Liberating_the_Soul:0"解放心灵之革命"
+ BHC_Revolution_of_Liberating_the_Soul_desc:0"解放心灵之革命"
+
+ BHC_Building_the_Divine_Kingdom_Together:0"共建神圣天国"
+ BHC_Building_the_Divine_Kingdom_Together_desc:0"共建神圣天国"
+
+ BHC_The_Art_of_the_Astrologer:0"占星者之术"
+ BHC_The_Art_of_the_Astrologer_desc:0"占星者之术"
+
+ BHC_Spirit_Manifests_from_Internalization:0"精神自内化中显现"
+ BHC_Spirit_Manifests_from_Internalization_desc:0"精神自内化中显现"
+
+ BHC_Uniting_Comrades_on_the_Path_to_Sainthood:0"团结同志入圣途"
+ BHC_Uniting_Comrades_on_the_Path_to_Sainthood_desc:0"团结同志入圣途"
+
+ BHC_Ultimately_Merging_into_Brahman:0"终合为梵"
+ BHC_Ultimately_Merging_into_Brahman_desc:0"终合为梵"
+
+ BHC_The_Evil_Self:0"邪恶的自我"
+ BHC_The_Evil_Self_desc:0"邪恶的自我"
+
+ BHC_The_Renaissance_of_India:0"印度的复兴"
+ BHC_The_Renaissance_of_India_desc:0"印度的复兴"
+
+ BHC_The_Soul_of_Art:0"艺术之魂"
+ BHC_The_Soul_of_Art_desc:0"艺术之魂"
+
+ BHC_Human_Potential:0"人类的潜能"
+ BHC_Human_Potential_desc:0"人类的潜能"
+
+ BHC_The_Apostle_Comes_from_the_North:0"使徒自北方来"
+ BHC_The_Apostle_Comes_from_the_North_desc:0"使徒自北方来"
+
+ BHC_Direct_Justice:0"直接的正义"
+ BHC_Direct_Justice_desc:0"直接的正义"
+
+ BHC_Following_in_the_Footsteps_of_God:0"追寻上帝之步伐"
+ BHC_Following_in_the_Footsteps_of_God_desc:0"追寻上帝之步伐"
+
+ BHC_Forms_of_Brahman:0"梵的形式"
+ BHC_Forms_of_Brahman_desc:0"梵的形式"
+
+ BHC_Reconciliation_with_the_Theosophical_Society:0"与神智学会和解"
+ BHC_Reconciliation_with_the_Theosophical_Society_desc:0"与神智学会和解"
+
+ BHC_Love_of_the_Self:0"自我之爱"
+ BHC_Love_of_the_Self_desc:0"自我之爱"
+
+ BHC_The_Evolution_of_Matter:0"物质的进化"
+ BHC_The_Evolution_of_Matter_desc:0"物质的进化"
+
+ BHC_Looking_Back_on_the_Path_Traveled:0"望向来时路"
+ BHC_Looking_Back_on_the_Path_Traveled_desc:0"望向来时路"
+
+ BHC_Reconstructing_the_Connection_Between_You_and_Me:0"重构你我之联系"
+ BHC_Reconstructing_the_Connection_Between_You_and_Me_desc:0"重构你我之联系"
+
+ BHC_The_Revolution_of_Love:0"爱的革命"
+ BHC_The_Revolution_of_Love_desc:0"爱的革命"
+
+ BHC_Listening_to_the_Voice_of_the_Self:0"聆听自我之声"
+ BHC_Listening_to_the_Voice_of_the_Self_desc:0"聆听自我之声"
+
+ BHC_The_Essence_of_Brahman:0"梵的本质"
+ BHC_The_Essence_of_Brahman_desc:0"梵的本质"
+
+ BHC_Embracing_the_Blood_Relatives_of_the_North:0"拥抱北境的血亲"
+ BHC_Embracing_the_Blood_Relatives_of_the_North_desc:0"拥抱北境的血亲"
+
+ BHC_The_Limitations_of_the_Mind:0"心灵的局限性"
+ BHC_The_Limitations_of_the_Mind_desc:0"心灵的局限性"
+
+ BHC_Truth_is_a_Place_Without_Paths:0"真理乃无路之地"
+ BHC_Truth_is_a_Place_Without_Paths_desc:0"真理乃无路之地"
+
+ BHC_The_Golden_Symphony_of_National_Rejuvenation:0"民族复兴之黄金交响曲"
+ BHC_The_Golden_Symphony_of_National_Rejuvenation_desc:0"民族复兴之黄金交响曲"
+
+ BHC_The_Divine_Life:0"神圣的生活"
+ BHC_The_Divine_Life_desc:0"神圣的生活"
+
+ BHC_the_congress:0"大会开幕"
+ BHC_the_congress_desc:0"大会开幕"
+
+ BHC_March_forward: "前进前进向前进"
+ BHC_In_response_to_Delhis_call:0 "响应德里的呼唤…"
+ BHC_In_response_to_Delhis_call_desc:0 "在英国侵略者的铁蹄之下，我们丢失了我们文明古国的地位，而印度的心脏——德里，也沦于殖民者之手。如今古老的心脏再一次微弱的呼唤着她的孩子们，我们必须响应她的呼唤，这可能是我们最后的机会……"
+ BHC_raise_the_flag_of_the_nation:0 "…举起民族的旗帜…"
+ BHC_raise_the_flag_of_the_nation_desc:0 "印度的土地，养育了她的孩子。养育着这个曾经辉煌一时而如今已变得黯淡的国家。必须高举印度民族的旗帜，我们才能击退侵略者，让蒙难的国家得以重回正轨，实现民族的复兴。"
+ BHC_inserted_in_the_great_Red_Fort:0 "…插在伟大的红堡…"
+ BHC_inserted_in_the_great_Red_Fort_desc:0 "红堡作为印度灵魂的象征意义。它不仅是一座宏伟的莫卧儿建筑，更是印度从殖民枷锁走向主权独立的见证者。当三色旗升起于神圣的红堡，我们才能迎接民族尊严与自由的最伟大时刻……"
+ BHC_let_it_fly_high_without_falling:0 "…让她飘扬不坠地"
+ BHC_let_it_fly_high_without_falling_desc:0 "我们将伟大的旗帜树立于古老祖国的心脏，红旗是印度的自由，红旗是印度的尊严，红旗是印度的脊背……我们就守卫在此，绝不让他再一次折杆坠地……"
+ BHC_Awaken_the_Indian_Tiger:0 "唤醒印度猛虎"
+ BHC_Awaken_the_Indian_Tiger_desc:0 "“印度完蛋了，印度沉沦了，印度蒙难了……但印度奋起了，印度觉醒了，印度胜利了。”当吾等屹立于这光荣而伟大的时刻，我们将向世界宣告，我们醒了，就不会再次沉睡！"
+ BHC_Memory_of_the_Father_of_the_Nation:0 "国父的记忆"
+ BHC_Memory_of_the_Father_of_the_Nation_desc:0 "甘地的栉风沐雨，于乱世中支撑着革命者们与渴望自由的印度人民们，我们如今的壮大，正是因为我们站在甘地的基业上，让我们为伟大的国父再次高呼万岁！。"
+ BHC_Try_War_Criminals:0 "审判战犯"
+ BHC_Try_War_Criminals_desc:0 "我们胜利了，但我们的任务还没有结束，那些出卖祖国的人还没有被给予惩罚。我们是时候开庭审判，让那些小人们得到应有的报应了"
+ BHC_Root_Out_the_Black_Sheep:0 "揪出害群之马"
+ BHC_Root_Out_the_Black_Sheep_desc:0 "胜利不代表革命的结束，胜利在带来喜悦的同时，也会带来自满，让革命队伍出现不该有的陋习，我们不能坐视不管，我们应该积极的行动起来，对他们进行坚决的抵制和斗争。决不让革命队伍堕入深渊"
+ BHC_Purge_the_National_Army:0 "整肃国民军"
+ BHC_Purge_the_National_Army_desc:0 "军队是革命的支柱，我们必须将军队打造成一支忠于革命的利刃。而整肃军队，确保军队对革命的信心与忠诚正是我们达成目的的必由之路"
+ BHC_Position_of_the_Third_International_Delegation:0 "第三国际代表团的位置"
+ BHC_Position_of_the_Third_International_Delegation_desc:0 "除此之外，第三国际的同志们也发挥了重大的作用。我们务必要团结来自海外的同志。让我们在革命的道路上走得更快更远"
+ BHC_Reorganize_the_Congress_Party:0 "重组国大党"
+ BHC_Reorganize_the_Congress_Party_desc:0 "国大党在甘地遇刺前的种种，都警告我们不能重蹈其覆辙。在革命面前，我们要让国大党成为一个真正的，革命的党。那样，我们才能团结起来，坚持斗争，直到斗争胜利。"
+ BHC_Fate_of_the_Gandhians:0 "“甘地主义者”们的命运"
+ BHC_Fate_of_the_Gandhians_desc:0 "那些软弱的人，那些自称甘地信徒的懦夫，我们的革命容不得这种人肆意干涉。我们要让这堆污泥从革命者的队伍中洗去"
+ BHC_Head_towards_Delhi:0 "向德里进发……"
+ BHC_Head_towards_Delhi_desc:0 "德里是我们的，现在，将来，永远都是。夺回祖国，建功立业，为印度人民，为印度民族。我们必须进行这场光荣的进军！"
+ BHC_ask_PRF:0"邀请孟买"
+ BHC_ask_DEH:0"邀请德里"
+ BHC_OPEN:0"会议开幕"
+ INDAN_already:0"印度准备好了"
+ BHC_OVER_1:0"第一项议题"
+ BHC_OVER_1_2:0"第一项议题"
+ BHC_OVER_2:0"第二项议题"
+ BHC_OVER_2_2:0"第二项议题"
+ IND_kxx_issue:0"进行中的议题"
+ DEH_allow_2:0"德里方面同意了我们的关于XX的提案"
+ DEH_not_allow_2:0"德里方面拒绝了我们的关于XX的提案"
+ DEH_allow_1:0"德里方面同意了我们的关于XX的提案"
+ DEH_not_allow_1:0"德里方面拒绝了我们的关于XX的提案"
+ PRF_allow_2:0"孟买方面同意了我们的关于XX的提案"
+ PRF_not_allow_2:0"孟买方面拒绝了我们的关于XX的提案"
+ PRF_allow_1:0"孟买方面同意了我们的关于XX的提案"
+ PRF_not_allow_1:0"孟买方面拒绝了我们的关于XX的提案"
+ BHC_con_side:0"国大党倾向于保守的一侧"
+ BHC_rev_side:0"国大党倾向于激进的一侧"
+ BHC_attend_Lucknow_Conference:0"我们奠定了会议的基石"
+ BHC_stpo:0"稳定的政治"
+ PRF_Establish_a_stability_gov:0"孟买的局势已经稳定下来"
+ BHC_asked_DEH:0"我们向德里伸出了橄榄枝"
+ BHC_asked_PRF:0"我们向孟买伸出了橄榄枝"
+ PRF_agree_to_attend_The_Lucknow_Conference:0"孟买同意了我们的邀请"
+ IND_The_Lucknow_Conference_bhc:0"希望的会晤"
+ #new
+ IND_The_Lucknow_Conference:0"山羊与狮子"
+ IND_The_Lucknow_Conference_desc:0"\n\n\n\n\n\n\n\n目前，印度正处于一个关键的十字路口，这是唯一一次化干戈为玉帛的良机。和平的橄榄枝已然落下，但这并不意味着和平的解决方案就此出现。此次谈判是正如山羊与狮子中的一个经典的不对称局面，德里方面虽在印度内战后元气大伤，但实力仍不可小觑，面对强大的狮子，作为绵羊的一方更不可轻举妄动，我们必须在谈判桌上智胜，来为自己争取更多有利的条件。\n\n§6德里方面在谈判桌上的权重： [?DEH.INDpower] / 50 §!    §R婆罗多公社在谈判中的的权重： [?BHC.INDpower] / 50 §!\n\n\n§Y会议紧张度： [?BHC.BOPpower] / 100§!"
+ The_Lucknow_issue_1:0"第一项议题进行中"
+ The_Lucknow_issue_2:0"第二项议题进行中"
+ The_DEH_MISSION:0"会议进行时……"
+ BHC_Hardline_stance:0"硬线姿态"
+ BHC_Soft_stance:0"以退为进"
+ BHC_no_time_to_waste:0"敦促德里"
+ BHC_Improve_terms:0"完善条款"
+ BHC_Hold_meeting_for_introductions:0"召开公众集会"
+ DEH_Reaffirm_the_commitment_to_autonomy:0"重申自治承诺"
+ DEH_Attract_the_support_of_the_colonial_elite:0"拉取殖民地精英的支持"
+ DEH_Criticize_the_legitimacy_of_the_government_in_Kolkata:0"抨击加尔各答政权的合法性"
+ DEH_Coercive_tactics:0"恫吓手段"
+ DEH_Raise_the_price_tag:0"提高价码"
+ IND_negotiation_deadlock_tt:0"§R谈判将因陷入僵局而破裂§!"
+ BHC_advantage_tt:0"§t加尔各答在目前的谈判中占优§!"
+ DEH_advantage_tt:0"§B德里在目前的谈判中占优§!"
+ IND_OVER_I_ISSUE_tt:0"§Y第一项议题发谈判到此结束§!"
+ IND_OVER_II_ISSUE_tt:0"§Y第二项议题发谈判到此结束§!"
+ IND_The_Lucknow_issue_1_begin:0"§Y第一项议题开始§!"
+ IND_The_Lucknow_issue_2_begin:0"§Y第二项议题开始§!"
+ The_MISSION_1:0"谈判桌上的博弈"
+ The_MISSION_2:0"谈判桌上的博弈"
+ BHC_gain_power_s_tt:0"§t这将§L小幅增强§!加尔各答在会议中的影响力§!"
+ BHC_gain_power_m_tt:0"§t这将§L中幅增强§!加尔各答在会议中的影响力§!"
+ BHC_gain_power_h_tt:0"§t这将§L大幅增强§!加尔各答在会议中的影响力§!"
+ BHC_lose_power_s_tt:0"§t这将§L小幅减弱§!加尔各答在会议中的影响力§!"
+ BHC_lose_power_m_tt:0"§t这将§L中幅减弱§!加尔各答在会议中的影响力§!"
+ BHC_lose_power_h_tt:0"§t这将§L大幅减弱§!加尔各答在会议中的影响力§!"
+ DEH_gain_power_s_tt:0"§B这将§L小幅增强§!德里在会议中的影响力§!"
+ DEH_gain_power_m_tt:0"§B这将§L中幅增强§!德里在会议中的影响力§!"
+ DEH_gain_power_h_tt:0"§B这将§L大幅增强§!德里在会议中的影响力§!"
+ DEH_lose_power_s_tt:0"§B这将§L小幅减弱§!德里在会议中的影响力§!"
+ DEH_lose_power_m_tt:0"§B这将§L中幅减弱§!德里在会议中的影响力§!"
+ DEH_lose_power_h_tt:0"§B这将§L大幅减弱§!德里在会议中的影响力§!"
+ BOP_gain_power_s_tt:0"§R这将§Y轻微激化§!双方在会议中的矛盾§!"
+ BOP_gain_power_m_tt:0"§R这将§Y激化§!双方在会议中的矛盾§!"
+ BOP_gain_power_h_tt:0"§R这将§Y极大的激化§!双方在会议中的矛盾§!"
+ BOP_lose_power_s_tt:0"§G这将§Y轻微缓和§!双方在会议中的矛盾§!"
+ BOP_lose_power_m_tt:0"§G这将§Y缓和§!双方在会议中的矛盾§!"
+ BOP_lose_power_h_tt:0"§G这将§Y大幅缓和§!双方在会议中的矛盾§!"
+ KXXBHC.1.t:0"战争之训诫"
+ KXXBHC.1.d:0"我们应矢志不渝地追寻正义，然而须知，鲜血的倾洒绝无法催生正义之花。倘若印度在战争的烈焰中沦为一片焦土，即便最终赢得胜利，你们又能够统治些什么呢？不过是一片满目疮痍的废墟，以及满心仇恨的民众罢了。在此，我恳切呼吁，请暂且放下手中的武器，齐聚于谈判桌前。真正的社会变革，应立足于一个统一且和平的印度，凭借人民的觉醒与真理的力量得以实现，而非诉诸那永无止境的杀戮。"
+ KXXBHC.1.a:0"祈愿上天庇佑印度"
+ KXXBHC.2.t:0"和平的橄榄枝"
+ KXXBHC.2.d:0"我国政府今天收到了来自[BHC.GetNameDef]领导人的信息。透过这条讯息，圣雄甘地希望我们两国间能够举行一次秘密谈判讨论和平统一的可能性，他要求这场会谈没有我们的欧洲盟友或其他人在场，只准让真正的印度人出席。人们不禁猜测圣雄究竟会提出些什么，大多数人认为这至少意味着我们必须退出协约国，而且他们预期这样的计划必然会遭到[BHC.GetAdjective]准则派的强烈反对。但是……如果这份提议真的能够成功呢？如果圣雄能够真正平息他们国内的极端分子，我们就可以避免流血地讨论建立一个只属于印度人联盟，这么做的话又会怎么样呢？[PRF.GetNameDef]会同意这样的协议吗，但我们应该这样做吗？"
+ KXXBHC.2.a:0"话虽如此，但这次机会难得，值得一试"
+ KXXBHC.3.t:0"德里决定参与峰会"
+ KXXBHC.3.d:0"德里方面尽管他们对我们能否提出令他们欣然接受的建议，或是担忧我们不会因准则派极端分子的强烈抵制而率先陷入混乱，都抱有相当程度的怀疑。毕竟，德里作为印度的重要政治中心，长期在复杂的政治格局中周旋，对于各方势力的诉求和潜在风险有着敏锐的洞察力。他们深知，准则派极端分子在印度部分地区拥有广泛的影响力和一批狂热的追随者，这些极端分子坚决反对任何形式的统一谈判，认为这是对他们所谓“独立理念”的背叛，甚至不惜采取暴力手段来破坏会议进程。\n\n[From.GetAdjective]政府已然应允出席此次会谈。这一决定并非轻易做出，背后是政府内部多次激烈的讨论和权衡。\n\n无论如何，他们后者的担忧确实不无道理。峰会的消息，毫无悬念，定会在会议正式召开之前就泄露出去。这并非空穴来风，在印度复杂的社会环境中，各方势力都有自己庞大的情报网络和消息渠道。一旦消息泄露，准则派极端分子必然会借此大做文章，煽动不明真相的群众，制造社会动荡。他们可能会组织大规模的示威游行，甚至发动恐怖袭击，试图向政府和参会各方施压，迫使会议取消或者按照他们的意愿进行。\n\n届时，我们势必要与苏巴斯·钱德拉·鲍斯及其准则派势力好好清算一番……"
+ KXXBHC.3.a:0"尽管前路险阻，但吾等愿为了南亚之和平携手共进！"
+ KXXBHC.4.t:0""
+ KXXBHC.4.d:0"我国政府今天收到了来自[BHC.GetNameDef]领导人的信息。透过这条讯息，圣雄甘地希望我们两国间能够举行一次秘密谈判讨论和平统一的可能性，他要求这场会谈没有我们的欧洲盟友或其他人在场，只准让真正的印度人出席。人们不禁猜测圣雄究竟会提出些什么，大多数人认为这至少意味着我们必须退出协约国，而且他们预期这样的计划必然会遭到[BHC.GetAdjective]准则派的强烈反对。但是……如果这份提议真的能够成功呢？如果圣雄能够真正平息他们国内的极端分子，我们就可以避免流血地讨论建立一个只属于印度人联盟，这么做的话又会怎么样呢？我们的命运会怎么样呢？我们应该这样做吗？"
+ KXXBHC.4.a:0"为了和平，为了不再兵戈相见……"
+ KXXBHC.4.b:0"这是背叛的开始"……"
+ KXXBHC.5.t:0"孟买方面同意"
+ KXXBHC.5.d:0""
+ KXXBHC.5.a:0"我们共携印度之未来，共同迎接和平之愿景"
+ KXXBHC.6.t:0"孟买方面同意拒绝"
+ KXXBHC.6.d:0""
+ KXXBHC.6.a:0"道不同不相与谋……"
+ KXXBHC.7.t:0"我们要表明自己的立场了"
+ KXXBHC.7.d:0""
+ KXXBHC.7.a:0"没错"
+ KXXBHC.8.t:0"会议基石"
+ KXXBHC.8.d:0""
+ KXXBHC.8.a:0"我们接受有条件的自治"
+ KXXBHC.8.b:0"印度必须独立"
+ KXXBHC.9.t:0"和平已成泡影"
+ KXXBHC.9.d:0""
+ KXXBHC.9.a:0"这都是天意阿"
+ KXXBHC.10.t:0"孟买的提案"
+ KXXBHC.10.d:0""
+ BHCissue.1.t:0"第一项议题"
+ BHCissue.1.d:0""
+ BHCissue.1.a:0"我们同意德里的提案，并将其作为我们共同的立场。"
+ BHCissue.2.t:0"第一项议题的结局"
+ BHCissue.2.d:0"我们在谈判中掌握了主动权，现在我们将决定这项议案的结局"
+ BHCissue.2.a:0"我们同意提案，并将其作为我们共同的立场。"
+ BHCissue.2.b:0"这种废纸还是一边去吧。"
+ BHCissue.2.c:0"我们同意提案，并将其作为我们共同的立场。"
+ BHCissue.2.e:0"这种废纸还是一边去吧。"
+ BHCissue.3.t:0"议案通过了"
+ BHCissue.3.d:0"我们通过了议案，这是好事阿"
+ BHCissue.3.a:0"当浮一大白"
+ BHCissue.4.t:0"议案没能通过"
+ BHCissue.4.d:0"我们的议案被否决了"
+ BHCissue.4.a:0"竟然不许！！！！"
+ BHCissue.5.t:0"第二项议题"
+ BHCissue.5.d:0""
+ BHCissue.5.a:0"我们同意德里的提案，并将其作为我们共同的立场。"
+ BHCissue.6.t:0"第一项议题的结局"
+ BHCissue.6.d:0"我们在谈判中掌握了主动权，现在我们将决定这项议案的结局"
+ BHCissue.6.a:0"我们同意提案，并将其作为我们共同的立场。"
+ BHCissue.6.b:0"这种废纸还是一边去吧。"
+ BHCissue.6.c:0"我们同意提案，并将其作为我们共同的立场。"
+ BHCissue.6.e:0"这种废纸还是一边去吧。"
+ BHCissue.7.t:0"议案通过了"
+ BHCissue.7.d:0"我们通过了议案，这是好事阿"
+ BHCissue.7.a:0"当浮一大白"
+ BHCissue.8.t:0"议案没能通过"
+ BHCissue.8.d:0"我们的议案被否决了"
+ BHCissue.8.a:0"竟然不许！！！！"
+ BHCissue.9.t:0"峰会的命运"
+ BHCissue.9.d:0""
+ BHCissue.9.a:0"北方终归祥和"
+ BHCissue.9.b:0"我觉得到此为止就好了"
+ BHCissue.9.c:0"北方终归祥和"
+ BHCissue.9.e:0"我觉得到此为止就好了"
+ BHCissue.10.t:0"再为手足"
+ BHCissue.10.d:0""
+ BHCissue.10.a:0"百年苦难终成云烟"
+ kxxbeng.1.t:0"公社现状"
+ kxxbeng.1.d:0""
+ kxxbeng.1.a:0"知道了"
+ kxxbeng.2.t:0"甘地上任"
+ kxxbeng.2.d:0""
+ kxxbeng.2.a:0"好"
+ BHC_LINE.1.t: "独裁者之死……"
+ BHC_LINE.1.d: "如今统治着印度的最后的英国人——贾瓦哈拉尔·尼赫鲁。为自己的持续化状态的选择付出了惨痛的代价，一枚炮弹不偏不倚的正中了尼赫鲁的房间，等军警赶到之势。尼赫鲁的尸首碎块四散的洒落在现场，惨不忍睹。\n\n尼赫鲁之死留下了巨大的政治真空，杰汉吉尔·拉坦吉·达达博伊·塔塔作为钢铁巨头——塔塔钢铁的BOSS开始了他的行动，而军队方面，考尔也开始动员他的亲信，试图用枪炮夺取政权。而作为尼赫鲁政权的正统继承者，费罗兹·甘地也不会坐以待毙……\n\n尼赫鲁那朵标志性的红玫瑰已随爆炸化作焦炭，而他苦心经营的秩序也随之分崩离析，在这片焦土之上，一场关于印度灵魂的饕餮盛宴正拉开帷幕。杰汉吉尔·塔塔，这位冷静的工业巨擘，迅速将他的商业帝国转化为国家的临时骨架，塔塔钢铁的准军事安保接管了关键工业区，塔塔航空的机群绕过瘫痪的官僚系统接管了物资生命线，他试图在混乱中建立一个由技术官僚和资本法则统治的“公司国家”；与此同时，在新德里的午夜，考尔将军正披着尼赫鲁生前赋予他的政治宠光，指挥坦克履带无情地碾过议会大街的柏油路，他那双习惯了政治博弈而非实战指挥的手此刻死死抠住指挥刀柄，企图通过一场波拿巴式的政变，在旧日优雅的废墟上重建一套唯命是从的军管秩序；然而，在这两股钢铁洪流之间，费罗兹·甘地作为尼赫鲁政治遗产的唯一正统继承人，正站在德里红堡的断壁残垣下，凭借着“甘地”这个在数亿底层民众心中近乎神格化的姓氏，点燃了名为“民粹”的燎原大火，他通过电波向全境宣称任何僭越者都是对独立精神的背叛。枪炮、金钱与旗帜在季风来临前的闷热空气中剧烈碰撞，这场由工业巨头、野心将领和政治孤臣构成的三足鼎立，不仅是在争夺那一柄断裂的权杖，更是要将印度从统一后安宁幻梦中强行拽出，投入到一个由血腥而未知的未来……"
+ BHC_LINE.1.a: "费罗兹·甘地击碎了阴谋"
+ BHC_LINE.1.b: "考尔将军推翻了政府！"
+ BHC_LINE.1.c: "塔塔钢铁渔翁得利，将政权收入囊中……"

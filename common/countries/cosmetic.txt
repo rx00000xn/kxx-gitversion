@@ -13866,6 +13866,7 @@ CHI_volkstaat = {
 	color = rgb { 74 74 74 }
 	color_ui = rgb { 74 74 74 }
 }
+
 #补充（12/11）
 SQI_REVOLUTION = {
 	color = rgb { 145 0 0 }
@@ -13924,6 +13925,25 @@ JAP_AKAMATSU = {
 TRM_JAP = {
 	color = rgb { 255 200 200 }
 	color_ui = rgb { 255 255 255 }
+}
+
+#印度
+CEY_ger = {
+	color = rgb { 112 112 112 }
+	color_ui = rgb { 90 90 90 }
+}
+PGI_uprising = {
+	color = rgb { 0 127 14 }
+	color_ui = rgb { 0 127 14 }
+}
+PRF_eng = {
+	color = rgb { 100 125 175 }
+	color_ui = rgb { 100 125 175 }
+}
+#清
+QIE_TAN = {
+	color = rgb { 152 130 191 }
+	color_ui = rgb { 198 169 248 }
 }
 #布列塔尼重置
 BRI_pnb = {

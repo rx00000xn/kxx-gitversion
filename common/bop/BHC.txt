@@ -1,0 +1,240 @@
+BHC_The_Congress_Party_constantly_at_odds = {
+	initial_value = 0.00
+	left_side = BHC_Congress_Party_revolution
+	right_side = BHC_Congress_Party_Conservative
+	decision_category = BHC_The_Congress_Party_constantly_at_odds_category
+
+	### Neutral status
+	range = {
+		id = Influence_of_the_revolutionary_faction_0
+		min = -0.2
+		max = 0
+		modifier = {
+				#political_power_gain = -0.0
+				totalist_drift = 0.01
+				syndicalist_drift = 0.01
+				radical_socialist_drift = 0.01
+		}
+		on_activate = {
+
+		}
+		on_deactivate = {
+			
+		}
+	}
+
+	### 革命
+	side = {
+		id = BHC_Congress_Party_revolution	
+		icon = GFX_ideology_syn_gandhism_subtype
+
+		range = {
+			id = Influence_of_the_revolutionary_faction_2
+			min = -1
+			max = -0.5
+			modifier = {
+				political_power_gain = -0.05
+				totalist_drift = 0.04
+				syndicalist_drift = 0.04
+				radical_socialist_drift = 0.04
+							
+			}
+			on_activate = {
+				
+			}
+			on_deactivate = {
+				
+			}
+		}
+
+		range = {
+			id = Influence_of_the_revolutionary_faction_1
+			min = -0.5
+			max = -0.2
+			modifier = {
+				political_power_gain = -0.03
+				totalist_drift = 0.02
+				syndicalist_drift = 0.02
+				radical_socialist_drift = 0.02
+				
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+			}
+		}		
+	}
+	### 保守
+	side = {
+		id = BHC_Congress_Party_Conservative
+		icon = GFX_ideology_soccon_gandhism_subtype
+
+		range = {
+			id = Conservative_influence_0
+			min = 0
+			max = 0.2
+			modifier = {
+				#political_power_gain = -0.0
+				authoritarian_democrat_drift = 0.01
+				social_conservative_drift = 0.01
+				social_liberal_drift = 0.01
+				market_liberal_drift = 0.01
+				social_democrat_drift = 0.01
+						
+			}
+			on_activate = {
+				
+			}
+			on_deactivate = {
+				
+			}
+		}
+
+		range = {
+			id = Conservative_influence_1
+			min = 0.2
+			max = 0.5
+			modifier = {
+				political_power_gain = -0.03
+				authoritarian_democrat_drift = 0.02
+				social_conservative_drift = 0.02
+				social_liberal_drift = 0.02
+				market_liberal_drift = 0.02
+				social_democrat_drift = 0.02
+				
+			}
+			on_activate = {
+				
+			}
+			on_deactivate = {
+				
+			}
+		}
+
+		range = {
+			id = Conservative_influence_2
+			min = 0.5
+			max = 1
+			modifier = {
+				political_power_gain = -0.05
+				authoritarian_democrat_drift = 0.03
+				social_conservative_drift = 0.03
+				social_liberal_drift = 0.03
+				market_liberal_drift = 0.03
+				social_democrat_drift = 0.03
+			}
+			on_activate = {
+				
+			}
+			on_deactivate = {
+				
+			}
+		}		
+	}	
+}
+
+BHC_Torn_Revolution = {
+	initial_value = 0.00
+	left_side = BHC_totalism_Party_Conservative
+	right_side = BHC_communism_Party_revolution
+	decision_category = BHC_Torn_Revolution_category
+
+	### Neutral status
+	range = {
+		id = the_mid
+		min = -0.3
+		max = 0.3
+		modifier = {
+			political_power_gain = -0.05
+			authoritarian_democrat_drift = 0.03
+			paternal_autocrat_drift = 0.03
+		}
+		on_activate = {
+
+		}
+		on_deactivate = {
+			
+		}
+	}
+
+	### 革命
+	side = {
+		id = BHC_totalism_Party_Conservative	
+		icon = GFX_ideology_british_maximism_subtype
+
+		range = {
+			id = Influence_of_the_totalism_faction_1
+			min = -0.6
+			max = -0.1
+			modifier = {
+				political_power_gain = -0.05
+				authoritarian_democrat_drift = 0.04
+				paternal_autocrat_drift = 0.02
+							
+			}
+			on_activate = {
+				
+			}
+			on_deactivate = {
+				
+			}
+		}
+
+		range = {
+			id = Influence_of_the_totalism_faction_0
+			min = -0.3
+			max = -0.6
+			modifier = {
+				political_power_gain = -0.05
+				authoritarian_democrat_drift = 0.05
+				paternal_autocrat_drift = -0.02
+				
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+			}
+		}		
+	}
+	### 康米
+	side = {
+		id = BHC_communism_Party_revolution
+		icon = GFX_ideology_hardliner_bolshevism_subtype
+
+		range = {
+			id = Influence_of_the_communism_faction_0
+			min = 0.3
+			max = 0.6
+			modifier = {
+				political_power_gain = -0.05
+				paternal_autocrat_drift = 0.05
+				authoritarian_democrat_drift = -0.02
+				
+			}
+			on_activate = {
+				
+			}
+			on_deactivate = {
+				
+			}
+		}
+
+		range = {
+			id = Influence_of_the_communism_faction_0
+			min = 0.6
+			max = 1
+			modifier = {
+				political_power_gain = -0.05
+				paternal_autocrat_drift = 0.05
+				authoritarian_democrat_drift = -0.02
+				
+			}
+			on_activate = {
+				
+			}
+			on_deactivate = {
+				
+			}
+		}		
+	}	
+}

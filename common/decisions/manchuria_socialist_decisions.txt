@@ -68,6 +68,8 @@ MAN_socialist_holdout_mission = {
 			}
 		}
 	}
+}
+}
 
 }
 
@@ -78,5 +80,3 @@ MAN_socialist_holdout_mission = {
 
 
 
-
-}

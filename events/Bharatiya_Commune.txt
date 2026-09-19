@@ -1,0 +1,396 @@
+﻿###########################
+# Bharatiya Commune Events
+###########################
+
+add_namespace = beng
+
+add_namespace = BHC
+
+add_namespace = BHC_gadi
+
+add_namespace = BHC_Lucknow
+
+add_namespace = bhcconf
+
+add_namespace = BHC_calcutta
+
+### 勒克瑙
+country_event = { #邀请
+	id = BHC_Lucknow.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BHC_Lucknow.1" }
+	title = BHC_Lucknow.1.t
+	desc = BHC_Lucknow.1.d
+	picture = GFX_report_event_BHC_leaders
+
+	is_triggered_only = yes
+
+	option = {
+		name = BHC_Lucknow.1.a
+		add_political_power = 50
+		DEH = {
+			country_event = {
+				id = BHC_Lucknow.2
+				days = 2
+			}
+		}
+	}
+}
+country_event = { #邀请DEH
+	id = BHC_Lucknow.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BHC_Lucknow.2" }
+	title = BHC_Lucknow.2.t
+	desc = BHC_Lucknow.2.d
+	picture = GFX_report_event_BHC_leaders
+
+	is_triggered_only = yes
+
+	option = {
+		name = BHC_Lucknow.2.a
+		add_political_power = 50
+		BHC = {
+			country_event = {
+				id = BHC_Lucknow.3
+				days = 2
+			}
+		}
+	}
+}
+country_event = { #DEH同意
+	id = BHC_Lucknow.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BHC_Lucknow.3" }
+	title = BHC_Lucknow.3.t
+	desc = BHC_Lucknow.3.d
+	picture = GFX_report_event_BHC_leaders
+
+	is_triggered_only = yes
+
+	option = {
+		name = BHC_Lucknow.3.a
+		add_political_power = 50
+		set_country_flag = DEH_agree
+	}
+}
+country_event = { #邀请PRF
+	id = BHC_Lucknow.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BHC_Lucknow.4" }
+	title = BHC_Lucknow.4.t
+	desc = BHC_Lucknow.4.d
+	picture = GFX_report_event_BHC_leaders
+
+	is_triggered_only = yes
+
+	option = {
+		name = BHC_Lucknow.4.a
+		trigger = {
+			NOT = {
+				has_country_flag = PRF_Uprising_victory
+			}
+		}
+		add_political_power = 50
+		BHC = {
+			country_event = {
+				id = BHC_Lucknow.5
+				days = 2
+			}
+		}
+	}
+	option = {
+		name = BHC_Lucknow.4.b
+		add_political_power = 50
+		BHC = {
+			country_event = {
+				id = BHC_Lucknow.6
+				days = 2
+			}
+		}
+	}
+}
+country_event = { #PRF同意
+	id = BHC_Lucknow.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BHC_Lucknow.5" }
+	title = BHC_Lucknow.5.t
+	desc = BHC_Lucknow.5.d
+	picture = GFX_report_event_BHC_leaders
+
+	is_triggered_only = yes
+
+	option = {
+		name = BHC_Lucknow.5.a
+		add_political_power = 50
+		set_country_flag = PRF_agree
+	}
+}
+country_event = { #PRF拒绝
+	id = BHC_Lucknow.6
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BHC_Lucknow.6" }
+	title = BHC_Lucknow.6.t
+	desc = BHC_Lucknow.6.d
+	picture = GFX_report_event_BHC_leaders
+
+	is_triggered_only = yes
+
+	option = {
+		name = BHC_Lucknow.6.a
+		add_political_power = 50
+	}
+}
+country_event = {
+	id = beng.10000
+	immediate = { log = "[GetDateText]: [Root.GetName]: event beng.10000" }
+	title = beng.10000.t
+	desc = beng.10000.d
+	picture = GFX_report_event_BHC_calcutta
+
+	is_triggered_only = yes
+
+	option = {
+		name = beng.10000.a
+		add_political_power = 80
+		add_stability = 0.05
+		add_ideas = IND_The_Lucknow_Conference_idea #全印统一大会的邀请
+		DEH = {
+			add_ideas = IND_The_Lucknow_Conference_idea
+		}
+		if = {
+			limit = {
+				PRF = {
+					has_counrty_flag = PRF_allow_IND_AIUC
+				}
+			}
+			add_ideas = IND_The_Lucknow_Conference_idea
+		}
+	}
+}
+country_event = { #第一个议题
+	id = bhcconf.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bhcconf.1" }
+	title = bhcconf.1.t
+	desc = bhcconf.1.d
+	picture = GFX_report_event_bhcconf_leaders
+
+	is_triggered_only = yes
+
+	option = { #保留王公
+		name = bhcconf.1.a
+		add_political_power = 50
+		set_country_flag = IND_The_Lucknow_issue_1_begin
+		DEH = {
+			set_country_flag = IND_The_Lucknow_issue_1_begin
+		}
+		if = {
+			limit = {
+				PRF = {
+					has_counrty_flag = PRF_allow_IND_AIUC
+				}
+			}
+			set_country_flag = IND_The_Lucknow_issue_1_begin
+		}
+	}
+	option = { #废除土邦
+		name = bhcconf.1.b
+		add_political_power = 50
+		set_country_flag = IND_The_Lucknow_issue_1_begin
+		set_country_flag = IND_AIUC
+		DEH = {
+			set_country_flag = IND_The_Lucknow_issue_1_begin
+			set_country_flag = IND_AIUC
+		}
+		if = {
+			limit = {
+				PRF = {
+					has_counrty_flag = PRF_allow_IND_AIUC
+				}
+			}
+			set_country_flag = IND_The_Lucknow_issue_1_begin
+			set_country_flag = IND_AIUC
+		}
+	}
+}
+country_event = { #第二个议题
+	id = bhcconf.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bhcconf.2" }
+	title = bhcconf.2.t
+	desc = bhcconf.2.d
+	picture = GFX_report_event_bhcconf_leaders
+
+	is_triggered_only = yes
+
+	option = { #有限改革
+		name = bhcconf.2.a
+		add_political_power = 50
+    	ai_will_do = {
+    	    factor = 70
+    	}
+		set_country_flag = IND_The_Lucknow_issue_2_begin
+		set_country_flag = IND_AIUC
+		DEH = {
+			set_country_flag = IND_The_Lucknow_issue_2_begin
+			set_country_flag = IND_AIUC
+		}
+		if = {
+			limit = {
+				PRF = {
+					has_counrty_flag = PRF_allow_IND_AIUC
+				}
+			}
+			set_country_flag = IND_The_Lucknow_issue_2_begin
+			set_country_flag = IND_AIUC
+		}
+		
+	}
+	option = { #彻底改革
+		name = bhcconf.2.b
+		add_political_power = 50
+    	ai_will_do = {
+    	    factor = 30
+    	}
+		set_country_flag = IND_The_Lucknow_issue_2_begin
+		DEH = {
+			set_country_flag = IND_The_Lucknow_issue_2_begin
+		}
+		if = {
+			limit = {
+				PRF = {
+					has_counrty_flag = PRF_allow_IND_AIUC
+				}
+			}
+			set_country_flag = IND_The_Lucknow_issue_2_begin
+		}
+	}
+}
+country_event = { #你在哪一边
+	id = bhcconf.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bhcconf.3" }
+	title = bhcconf.3.t
+	desc = bhcconf.3.d
+	is_triggered_only = yes
+
+	option = { #
+		name = bhcconf.3.a
+		add_political_power = 50
+    	ai_will_do = {
+    	    factor = 70
+    	}
+		set_country_flag = BHC_stpo
+		if = {
+			limit = {
+				power_balance_value = {
+					id = BHC_The_Congress_Party_constantly_at_odds
+					value < 0
+				}
+			}
+			remove_power_balance = { id = BHC_The_Congress_Party_constantly_at_odds }
+			set_country_flag = rev_side
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					power_balance_value = {
+						id = BHC_The_Congress_Party_constantly_at_odds
+						value < 0
+					}
+				}
+			}
+			remove_power_balance = { id = BHC_The_Congress_Party_constantly_at_odds }
+			set_country_flag = con_side
+		}
+	}
+}
+country_event = { #会议的基石
+	id = bhcconf.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bhcconf.4" }
+	title = bhcconf.4.t
+	desc = bhcconf.4.d
+	is_triggered_only = yes
+
+	option = { #
+		name = bhcconf.4.a
+		add_political_power = 50
+    	ai_will_do = {
+    	    factor = 70
+    	}
+		set_country_flag = BHC_attend_Lucknow_Conference
+	}
+}
+country_event = { #和平幻象
+	id = bhcconf.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bhcconf.5" }
+	title = bhcconf.5.t
+	desc = bhcconf.5.d
+	is_triggered_only = yes
+
+	option = { #
+		name = bhcconf.5.a
+		add_political_power = 50
+    	ai_will_do = {
+    	    factor = 70
+    	}
+		clr_country_flag = BHC_the_congress_plan
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+#介绍 
+country_event = {
+	id = beng.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event beng.1" }
+	title = beng.1.t
+	desc = beng.1.d
+	picture = GFX_report_event_BHC_calcutta
+
+	is_triggered_only = yes
+
+	option = {
+		name = beng.1.a
+		add_political_power = -80
+		add_stability = -0.05
+		hidden_effect = {
+			# Deactive ministers who don't start in BHC
+			set_country_flag = Ba_Cho_dead #BRM
+			set_country_flag = U_Nu_dead #BRM
+			set_country_flag = Aung_San_dead #BRM
+			set_country_flag = Ba_Win_dead #BRM
+			set_country_flag = Thakin_Mya_dead #BRM
+			set_country_flag = Thakin_Soe_dead #BRM
+			set_country_flag = Than_Tun_dead #BRM
+			set_country_flag = Chempakaraman_Pillai_dead #TRV
+			set_country_flag = P_Krishna_Pillai_dead #TRV
+			set_country_flag = Army_Reform_Committee_dead
+		}
+	}
+}
+
+
+### First INC Meeting
+
+
+# 政府换届，甘地上任
+country_event = {
+	id = BHC_gadi.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BHC_gadi.2" }
+	title = BHC_gadi.2.t
+	desc = BHC_gadi.2.d
+	picture = GFX_report_event_BHC_leaders
+
+	is_triggered_only = yes
+
+	option = {
+		name = BHC_gadi.2.a
+		add_political_power = 50
+		create_country_leader = {
+			name = "Mohandas Karamchand Gandhi"
+			desc = "POLITICS_MOHANDAS_GHANDI_DESC"
+			picture = "gfx/leaders/BHC/Portrait_BHC_Mohandas_Karamchand_Gandhi.png"
+			expire = "1.1.1"
+			ideology = gandhism_subtype
+			traits = {mahatma}
+		}
+		remove_all_ministers = yes
+		add_ideas = BHC_Rabindranath_Tagore_hog_rso
+		add_ideas = BHC_Mahadev_Desai_for_rso
+		add_ideas = BHC_Bhogaraju_Pattabhi_Sitaramayya_eco_rso
+		add_ideas = BHC_Rajkumari_Amrit_Kaur_sec_rso
+	}
+}
+############################################
+##### 
+############################################
