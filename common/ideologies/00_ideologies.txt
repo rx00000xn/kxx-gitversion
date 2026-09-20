@@ -306,6 +306,16 @@ ideologies = {
 			tot_chilean_national_socialist_subtype = {can_be_randomly_selected = no}
 
 
+			new_democracy_subtype = { can_be_randomly_selected = no }
+			tot_awmdawm_subtype = {can_be_randomly_selected = no}
+			burmese_way_to_socialism_subtype = {can_be_randomly_selected = no}
+			constructivism_subtype = {can_be_randomly_selected = no}
+			tot_falangism_subtype = {can_be_randomly_selected = no}
+			sansepolcrismo_subtype = {can_be_randomly_selected = no}
+			tot_revolutionary_peronism_subtype = {can_be_randomly_selected = no}
+			revolutionary_syndicalism_subtype = {can_be_randomly_selected = no}
+			western_marxism_subtype = {can_be_randomly_selected = no}
+			bourguibism_subtype = {can_be_randomly_selected = no} #Bourguibism
 		}
 		dynamic_faction_names = {
 			"FACTION_NAME_TOTALIST_1"
@@ -476,6 +486,10 @@ ideologies = {
 
 
 			
+			syn_awmdawm_subtype = {can_be_randomly_selected = no}
+			syn_falangism_subtype = {can_be_randomly_selected = no}
+			syn_manifesto_fascist_subtype = {can_be_randomly_selected = no}
+			revolutionary_peronism_subtype = {can_be_randomly_selected = no}
 		}
 		dynamic_faction_names = {
 			"FACTION_NAME_SYNDICALIST_1"
@@ -740,6 +754,13 @@ ideologies = {
 			military_anarchism_subtype = {can_be_randomly_selected = no}
 			radsoc_latin_falangism_subtype = {can_be_randomly_selected = no}
 			radsoc_chilean_national_socialist_subtype = {can_be_randomly_selected = no}
+			radsoc_poor_man_socialism_subtype = { can_be_randomly_selected = no }
+			radsoc_awmdawm_subtype = {can_be_randomly_selected = no}
+			radsoc_laipaianism_subtype = {can_be_randomly_selected = no }
+			radsoc_falangism_subtype = {can_be_randomly_selected = no}
+			radsoc_revolutionary_reformism_subtype = {can_be_randomly_selected = no}
+			manifesto_fascist_subtype = {can_be_randomly_selected = no}
+			radsoc_revolutionary_peronism_subtype = {can_be_randomly_selected = no}
 		}
 		dynamic_faction_names = {
 			"FACTION_NAME_RADICAL_SOCIALIST_1"
@@ -959,6 +980,14 @@ ideologies = {
 			socdem_longism_subtype = {can_be_randomly_selected = no}
 			socdem_radical_progressivism_subtype = {can_be_randomly_selected = no}
 			
+			socdem_vlasovism_subtype = {can_be_randomly_selected = no}
+			socdem_poor_man_socialism_subtype = { can_be_randomly_selected = no }
+			socdem_awmdawm_subtype = {can_be_randomly_selected = no}
+			socdem_falangism_subtype = {can_be_randomly_selected = no}
+			socdem_mazzinianesimo_subtype = {can_be_randomly_selected = no}
+			revolutionary_reformism_subtype = {can_be_randomly_selected = no}
+			socdem_peronism_subtype = {can_be_randomly_selected = no}
+			socdem_anthroposophy_subtype = {can_be_randomly_selected = no} #Anthroposophy			
 		}
 		dynamic_faction_names = {
 			"FACTION_NAME_SOCIAL_DEMOCRAT_1"
@@ -1124,6 +1153,10 @@ ideologies = {
 			soclib_warlordism_subtype = {can_be_randomly_selected = no}
 			soclib_longism_subtype = {can_be_randomly_selected = no}
 
+			soclib_falangism_subtype = {can_be_randomly_selected = no}
+			soclib_peronism_subtype = {can_be_randomly_selected = no}
+			soclib_nacionalismo_subtype = {can_be_randomly_selected = no}
+			yrigoyenismo_subtype = {can_be_randomly_selected = no}
 		}
 		dynamic_faction_names = {
 			"FACTION_NAME_SOCIAL_LIBERAL_1"
@@ -1257,6 +1290,9 @@ ideologies = {
 			marlib_warlordism_subtype = {can_be_randomly_selected = no}
 			liberal_conservative_subtype = {can_be_randomly_selected = no}
 
+			dissident_peronism_subtype = {can_be_randomly_selected = no}
+			marlib_nacionalismo_subtype = {can_be_randomly_selected = no}
+			marlib_theodemocracy_subtype = {can_be_randomly_selected = no} #Theodemocracy
 		}
 		dynamic_faction_names = {
 			"FACTION_NAME_MARKET_LIBERAL_1"
@@ -1410,6 +1446,9 @@ ideologies = {
 
 			#大乐队时代
 			soccon_diamond_dust_subtype = { can_be_randomly_selected = no } #钻尘时代
+			soccon_dissident_peronism_subtype = {can_be_randomly_selected = no}
+			soccon_nacionalismo_subtype = {can_be_randomly_selected = no}
+			soccon_theodemocracy_subtype = {can_be_randomly_selected = no} #Theodemocracy
 		}
 		dynamic_faction_names = {
 			"FACTION_NAME_SOCIAL_CONSERVATIVE_1"
@@ -1610,6 +1649,11 @@ ideologies = {
 			slovak_populism_subtype = {can_be_randomly_selected = no}
 			anarchy_subtype = {can_be_randomly_selected = no}
 			autdem_moral_discipline_system_subtype = {can_be_randomly_selected = no}
+			autdem_falangism_subtype = {can_be_randomly_selected = no}
+			autdem_nacionalismo_subtype = {can_be_randomly_selected = no}
+			autdem_yrigoyenismo_subtype = {can_be_randomly_selected = no}
+			authdem_centrist_subtype = {can_be_randomly_selected = no} #Centrism
+			theodemocracy_subtype = {can_be_randomly_selected = no} #Theodemocracy
 		}
 		dynamic_faction_names = {
 			"FACTION_NAME_AUTHORITARIAN_DEMOCRAT_1"
@@ -1827,6 +1871,13 @@ ideologies = {
 			pataut_slovak_populism_subtype = {can_be_randomly_selected = no}
 			pataut_moral_discipline_system_subtype = {can_be_randomly_selected = no}
 			pataut_eternal_revolution_subtype = {can_be_randomly_selected = no}
+			pataut_diemism_subtype = {can_be_randomly_selected = no} #Diemism
+			pataut_galon_nationalism_subtype = {can_be_randomly_selected = no } #Galon Nationalism
+			falangism_subtype = {can_be_randomly_selected = no}
+			orthodox_peronism_subtype = {can_be_randomly_selected = no}
+			pataut_nacionalismo_subtype = {can_be_randomly_selected = no}
+			pataut_anthroposophy_subtype = {can_be_randomly_selected = no} #Anthroposophy
+			pataut_theodemocracy_subtype = {can_be_randomly_selected = no} #Theodemocracy
 		}
 		dynamic_faction_names = {
 			"FACTION_NAME_PATERNAL_AUTOCRAT_1"
@@ -2175,6 +2226,16 @@ ideologies = {
 			natpop_moral_discipline_system_subtype = {can_be_randomly_selected = no}
 			natpop_latin_falangism_subtype = {can_be_randomly_selected = no}
 			natpop_chilean_national_socialist_subtype = {can_be_randomly_selected = no}
+			galon_nationalism_subtype = {can_be_randomly_selected = no } #Galon Nationalism
+			natpop_awmdawm_subtype = {can_be_randomly_selected = no }
+			natpop_laipaianism_subtype = {can_be_randomly_selected = no }
+			burmese_mysticism_subtype = {can_be_randomly_selected = no}
+			natpop_falangism_subtype = {can_be_randomly_selected = no}
+			natpop_mazzinianesimo_subtype = {can_be_randomly_selected = no}
+			natpop_orthodox_peronism_subtype = {can_be_randomly_selected = no}
+			hungarism_subtype = {can_be_randomly_selected = no}
+			anthroposophy_subtype = {can_be_randomly_selected = no} #Anthroposophy
+			natpop_theodemocracy_subtype = {can_be_randomly_selected = no} #Theodemocracy
 		}
 		dynamic_faction_names = {
 			"FACTION_NAME_NATIONAL_POPULIST_1"
