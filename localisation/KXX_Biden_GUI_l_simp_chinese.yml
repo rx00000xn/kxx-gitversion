@@ -160,9 +160,6 @@
  WHR_OR_Ljosik:0 "亚泽普·柳西克"
 
  #国民党左派
- CHI_OR_Wang_LEADER:0 "点击以切换§R傀儡主席§!与§g幕后操控者§!"
- CHI_OR_Wang_LEADER2:0 "[FROM.GetNameWithFlag]的§R傀儡主席§!"
- CHI_OR_Wang_jingwei:0 "汪精卫"
 
  #布列塔尼
  BRI_OR_LEADER:0 "点击以切换§R主席§!与§R总书记§!"

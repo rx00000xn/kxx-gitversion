@@ -1,0 +1,305 @@
+add_namespace = KXX_shared_for
+add_namespace = KXX_shared_McMahon
+
+country_event = {
+		id = KXX_shared_McMahon.1
+		title = KXX_shared_McMahon.1.t
+		desc = KXX_shared_McMahon.1.d
+		fire_only_once = yes
+		is_triggered_only = yes
+		option = {
+			name = KXX_shared_McMahon.1.a
+			ai_chance = {
+				base = 70
+				modifier = {
+					factor = 0.5
+					TIB = {
+						is_subject_of = ROOT
+					}
+				}
+				modifier = {
+					factor = 1.5
+					FROM = {
+						is_neighbor_of = ROOT
+						any_allied_country = {
+							is_neighbor_of = ROOT
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					FROM = {
+						is_in_faction_with = INT
+					}
+				}
+				modifier = {
+					factor = 0.5
+					FROM = {
+						is_faction_leader = yes
+					}
+				}
+			}
+			FROM = {
+				country_event = { id = KXX_shared_McMahon.2 days = 3 }
+			}
+		}
+		option = {
+			name = KXX_shared_McMahon.1.b
+			ai_chance = {
+				base = 30
+				modifier = {
+					factor = 0
+					TIB = {
+						OR = {
+							exists = no
+							is_subject_of = FROM
+						}
+					}
+				}
+			}
+			FROM = {
+				country_event = { id = KXX_shared_McMahon.3 days = 3 }
+			}
+		}
+	}
+
+country_event = {
+		id = KXX_shared_McMahon.2
+		title = KXX_shared_McMahon.2.t
+		desc = KXX_shared_McMahon.2.d
+		fire_only_once = yes
+		is_triggered_only = yes
+		option = {
+			name = KXX_shared_McMahon.2.a
+			ai_chance = {
+				base = 90
+			}
+			add_political_power = 5
+			FROM = {
+				country_event = { id = KXX_shared_McMahon.4 days = 3 }
+			}
+		}
+	}
+
+country_event = {
+		id = KXX_shared_McMahon.3
+		title = KXX_shared_McMahon.3.t
+		desc = KXX_shared_McMahon.3.d
+		fire_only_once = yes
+		is_triggered_only = yes
+		option = {
+			name = KXX_shared_McMahon.3.a
+			add_political_power = -15
+			858 = {
+				add_claim_by = ROOT
+			}
+			activate_targeted_decision = { target = FROM decision = KXX_shared_CHI_dec_BHC_expedition }
+		}
+	}
+
+country_event = {
+		id = KXX_shared_McMahon.4
+		title = KXX_shared_McMahon.4.t
+		desc = KXX_shared_McMahon.4.d
+		fire_only_once = yes
+		is_triggered_only = yes
+		option = {
+			name = KXX_shared_McMahon.4.a
+			ai_chance = {
+				base = 50
+				modifier = {
+					factor = 1.5
+					FROM = {
+						is_stronger_than_ROOT = yes
+					}
+				}
+				modifier = {
+					factor = 1.5
+					FNG = {
+						OR = {
+							exists = no
+							is_subject_of = FROM
+						}
+					}
+					NOT = { country_exists = QIE }
+				}
+			}
+			FROM = {
+				country_event = { id = KXX_shared_McMahon.5 days = 3 }
+			}
+		}
+		option = {
+			name = KXX_shared_McMahon.5.b
+			ai_chance = {
+				base = 50
+				modifier = {
+					factor = 0.5
+					FROM = {
+						is_stronger_than_ROOT = yes
+					}
+				}
+				modifier = {
+					factor = 1.5
+					TIB = {
+						is_subject_of = ROOT
+					}
+				}
+			}
+			FROM = {
+				country_event = { id = KXX_shared_McMahon.3 days = 3 }
+			}
+		}
+	}
+
+country_event = {
+		id = KXX_shared_McMahon.5
+		title = KXX_shared_McMahon.5.t
+		desc = KXX_shared_McMahon.5.d
+		fire_only_once = yes
+		is_triggered_only = yes
+		option = {
+			name = KXX_shared_McMahon.5.a
+			858 = {
+				transfer_state_to = ROOT
+			}
+			give_resource_rights = {
+				receiver = FROM
+				state = 858
+			}
+			858 = {
+				set_demilitarized_zone = yes
+			}
+			add_opinion_modifier = {
+				target = FROM
+				modifier = KXX_shared_CHI_friend
+			}
+			FROM = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = KXX_shared_CHI_friend
+				}
+			}
+			hidden_effect = {
+				set_country_flag = China_india_friendship
+			}
+			custom_effect_tooltip = China_india_friendship_tt
+		}
+	}
+
+country_event = {
+		id = KXX_shared_for.21
+		immediate = { log = "[GetDateText]: [Root.GetName]: event KXX_shared_for.21 FROM = [From.GetName]" }
+
+		title = KXX_shared_for.21.t
+		desc = KXX_shared_for.21.d
+		picture = GFX_report_event_CHI_infiltration
+
+		fire_only_once = yes
+		is_triggered_only = yes
+
+		option = {
+			name = KXX_shared_for.21.a
+			ai_chance = {
+				base = 50
+				modifier = {
+					factor = 0
+					OR = {
+						has_government = paternal_autocrat
+						has_government = national_populist
+					}
+				}
+			}
+			QIE = {
+				set_country_flag = QIE_shared_LEC_success
+				country_event = { id = KXX_shared_for.22 days = 2 }
+			}
+		}
+		option = {
+			name = KXX_shared_for.21.b
+			ai_chance = {
+				base = 50
+				modifier = {
+					factor = 0
+					OR = {
+						has_government = totalist
+						has_government = syndicalist
+						has_government = radical_socialist
+						has_government = social_democrat
+						has_government = social_liberal
+					}
+				}
+			}
+			QIE = {
+				set_country_flag = QIE_shared_LEC_refuse
+				country_event = { id = KXX_shared_for.22 days = 2 }
+			}
+		}
+	}
+
+country_event = {
+		id = KXX_shared_for.22
+		immediate = { log = "[GetDateText]: [Root.GetName]: event KXX_shared_for.22 FROM = [From.GetName]" }
+
+		title = KXX_shared_for.22.t
+		desc = {
+			text = KXX_shared_for.22.d1
+			trigger = { QIE = { has_country_flag = QIE_shared_LEC_success } }
+		}
+		desc = {
+			text = KXX_shared_for.22.d2
+			trigger = { QIE = { has_country_flag = QIE_shared_LEC_refuse } }
+		}
+		picture = GFX_report_event_CHI_ambassador_announcement
+
+		fire_only_once = yes
+		is_triggered_only = yes
+
+		option = {
+			name = KXX_shared_for.22.a
+			trigger = { QIE = { has_country_flag = QIE_shared_LEC_success } }
+			annex_country = {
+				target = LEC
+				transfer_troops = no
+			}
+		}
+		option = {
+			name = KXX_shared_for.22.b
+			trigger = { QIE = { has_country_flag = QIE_shared_LEC_refuse } }
+			create_wargoal = {
+				type = annex_everything
+				target = LEC
+			}
+		}
+	}
+
+country_event = {
+		id = KXX_shared_for.6
+		immediate = { log = "[GetDateText]: [Root.GetName]: event KXX_shared_for.6 FROM = [From.GetName]" }
+
+		title = KXX_shared_for.6.t
+		desc = KXX_shared_for.6.d
+		picture = GFX_report_event_CHI_train_bombing
+
+		fire_only_once = yes
+		is_triggered_only = yes
+
+		option = {
+			name = KXX_shared_for.6.a
+		}
+	}
+
+country_event = {
+		id = KXX_shared_for.7
+		immediate = { log = "[GetDateText]: [Root.GetName]: event KXX_shared_for.7 FROM = [From.GetName]" }
+
+		title = KXX_shared_for.7.t
+		desc = KXX_shared_for.7.d
+		picture = GFX_report_event_chinese_soldiers_fighting
+
+		fire_only_once = yes
+		is_triggered_only = yes
+
+		option = {
+			name = KXX_shared_for.7.a
+		}
+	}

@@ -1,0 +1,63 @@
+ideas = { country = {
+KXX_shared_CHI_NRA_remnants = {
+            picture = MEX_revolutionary_army
+			modifier = {
+                army_org_factor = -0.05
+                army_attack_factor = 0.10
+			}
+        }
+
+KXX_shared_CHI_NRA_remnants2 = {
+            name = KXX_shared_CHI_NRA_remnants
+            picture = MEX_revolutionary_army
+			modifier = {
+                training_time_factor = -0.10
+                conscription_factor = 0.20
+                army_org_factor = 0.05
+                army_attack_factor = 0.10
+			}
+        }
+
+KXX_shared_CHI_china_labour_federation = {
+            name = KXX_shared_CHI_china_labour_federation
+			picture = generic_syndicalist_worker
+			modifier = {
+                consumer_goods_factor = 0.05
+				production_factory_max_efficiency_factor = 0.10
+			}
+        }
+
+KXX_shared_CHI_china_labour_federation2 = {
+            name = KXX_shared_CHI_china_labour_federation
+			picture = generic_syndicalist_worker
+			modifier = {
+				production_factory_max_efficiency_factor = 0.10
+			}
+        }
+
+KXX_shared_CHI_two_stage_revolution_idea2 = {
+            name = CHI_two_stage_revolution_idea
+			picture = FRA_idea_revenge
+			modifier = {
+				political_power_gain = 0.1
+                stability_factor = -0.10
+				local_resources_factor = 0.20
+                production_factory_efficiency_gain_factor = 0.15
+			}
+		}
+
+KXX_shared_CHI_two_stage_revolution_idea3 = {
+            name = CHI_two_stage_revolution_idea
+			picture = FRA_idea_revenge
+			modifier = {
+				political_power_gain = 0.1
+                stability_factor = -0.10
+				local_resources_factor = 0.20
+                production_factory_efficiency_gain_factor = 0.15
+                training_time_factor = -0.10
+				special_forces_training_time_factor = -0.05
+                special_forces_cap = 0.05
+				experience_loss_factor = -0.15
+			}
+        }
+} }

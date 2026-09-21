@@ -313,12 +313,7 @@ defined_text = {
 	}
 
 	#国民党左派
-	text = {
-		trigger = {
-			has_country_flag = CHI_Wang_jingwei_VISIBLE
-	  	}
-	   localization_key = CHI_OR_Wang_LEADER
-	}
+
 
 
 	#日本重置
@@ -996,12 +991,7 @@ defined_text = {
 		localization_key = FNG_OR_LEADER_SONG_QIN_LING_S
 	}
 	#国民党左派
-	text = {
-		trigger = {
-			has_country_flag = CHI_Wang_jingwei_VISIBLE
-	  	}
-	   localization_key = CHI_OR_Wang_LEADER2
-	}
+
 
 
 	#日本重置
@@ -2117,12 +2107,7 @@ defined_text = {
 		localization_key = FNG_OR_LEADER_SONG_QIN_LING_name
 	}
 	#国民党左派
-	text = {
-		trigger = {
-			has_country_flag = CHI_Wang_jingwei_VISIBLE
-	  	}
-	   localization_key = CHI_OR_Wang_jingwei
-	}
+
 
 	#日本重置
 	text = {
@@ -3545,12 +3530,7 @@ defined_text = {
 		localization_key = GFX_Portrait_FNG_SONG_QIN_LING
 	}
 	#国民党左派
-	text = {
-		trigger = {
-			has_country_flag = CHI_Wang_jingwei_VISIBLE
-	  	}
-	   localization_key = GFX_Portrait_CHI_Wang_jingwei
-	}
+
 
 	#日本重置
 	text = {

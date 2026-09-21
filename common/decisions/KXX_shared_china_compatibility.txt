@@ -1,0 +1,76 @@
+KXX_shared_china_diplomacy = {
+KXX_shared_CHI_dec_BHC_expedition = {
+		war_with_target_on_remove = yes
+		icon = generic_ignite_civil_war
+
+		allowed = { always = no }
+
+		visible = {
+			can_declare_war_on = FROM
+			FROM = {
+				owns_state = 858
+			}
+		}
+		available = {
+			OR = {
+				is_neighbor_of = FROM
+				any_allied_country = { is_neighbor_of = FROM }
+				any_subject_country = { is_neighbor_of = FROM }
+			}
+		}
+
+		cost = 40
+		days_remove = 20
+		cancel_if_not_visible = yes
+		war_with_target_on_remove = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision KXX_shared_CHI_dec_BHC_expedition target: [From.GetName]"
+			set_country_flag = { flag = imminent_war days = 21 value = 1 }
+			FROM = { country_event = KXX_shared_for.7 }
+			setup_decision_attack_AI = yes
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove KXX_shared_CHI_dec_BHC_expedition target: [From.GetName]"
+			clear_decision_attack_AI = yes
+			declare_war_on = {
+				type = annex_everything
+				target = FROM
+			}
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 0
+				ROOT_is_threatened = yes
+			}
+			modifier = {
+				factor = 0
+				FNG = {
+					exists = yes
+					NOT = { is_subject_of = ROOT }
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_war_with = JAP
+					has_war_with = RUS
+					has_war_with = GER
+					has_war_with = CAN
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					OR = {
+						is_stronger_than_ROOT_and_not_vulnerable = yes
+						overlord_is_stronger_than_ROOT_and_not_vulnerable = yes
+						faction_leader_is_stronger_than_ROOT_and_not_vulnerable = yes
+						guarantor_is_stronger_than_ROOT_and_not_vulnerable = yes
+					}
+				}
+			}
+		}
+	}
+}

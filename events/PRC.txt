@@ -398,7 +398,7 @@ country_event = {#海军将领李之龙回国信
 
 	option = {
 		name = MPRC.13.a
-		CHI = { CHI_li_zhilong = { set_nationality = PLA } }#现在回国，保留国民党的属性
+		CHI = { 2279 = { set_nationality = PLA } }#现在回国，保留国民党的属性
 	}
 	option = {
 		name = MPRC.13.b

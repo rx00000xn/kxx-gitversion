@@ -699,12 +699,7 @@ scripted_gui = {
 			}
 
 			#国民党左派
-			Wang_jingwei_visible = { #汪精卫
-				AND = {
-					has_country_flag = KXX_HOG_veiw
-					has_country_flag = CHI_Wang_jingwei_VISIBLE
-				}
-			}
+
 
 			#日本重置
 			Kumazawa_Hiromichi_visible = {  #熊泽天皇

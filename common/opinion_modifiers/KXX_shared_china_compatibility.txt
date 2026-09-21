@@ -1,0 +1,3 @@
+opinion_modifiers = {
+KXX_shared_CHI_friend = { value = 150 }
+}

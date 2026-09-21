@@ -10,7 +10,7 @@ FRA_hidden_path = {
         # classic triggers used in all vanilla achievements
         has_start_date < 1936.01.02
 		#achievment specific
-        original_tag = FRA		
+        original_tag = FRA
     }
     happened = {
         original_tag = FRA
@@ -25,7 +25,7 @@ WHR_hidden_path = {
         # classic triggers used in all vanilla achievements
         has_start_date < 1936.01.02
 		#achievment specific
-        original_tag = WHR		
+        original_tag = WHR
     }
     happened = {
         original_tag = WHR
@@ -40,7 +40,7 @@ DEN_hidden_path = {
         # classic triggers used in all vanilla achievements
         has_start_date < 1936.01.02
 		#achievment specific
-        original_tag = DEN	
+        original_tag = DEN
     }
     happened = {
         original_tag = DEN
@@ -63,7 +63,7 @@ QIE_hidden_path = {
 			tooltip = KXX_hidden_achievement_tt
 			has_country_flag = QIE_hidden_path_unlock
 		}
-       
+
     }
 }
 GRE_hidden_path = {
@@ -96,21 +96,7 @@ SER_hidden_path = {
 		}
     }
 }
-CHI_hidden_path = {
-    possible = {
-        # classic triggers used in all vanilla achievements
-        has_start_date < 1936.01.02
-		#achievment specific
-        #original_tag = LEP
-    }
-    happened = {
-        original_tag = CHI #has to be here because you can't start as lkmt
-        custom_trigger_tooltip = {
-			tooltip = KXX_hidden_achievement_tt
-			has_country_flag = CHI_hidden_path_unlock
-		}
-    }
-}
+
 SQI_hidden_path = {
     possible = {
         # classic triggers used in all vanilla achievements
@@ -179,7 +165,7 @@ CHL_hidden_path = {
         original_tag = CHL
     }
     happened = {
-        original_tag = CHL 
+        original_tag = CHL
         custom_trigger_tooltip = {
 			tooltip = KXX_hidden_achievement_tt
 			has_country_flag = CHL_hidden_path_unlock
@@ -198,6 +184,21 @@ GAL_hidden_path = {
         custom_trigger_tooltip = {
 			tooltip = KXX_hidden_achievement_tt
 			has_country_flag = GAL_hidden_path_unlock
+		}
+    }
+}
+CHI_hidden_path = {
+    possible = {
+        # classic triggers used in all vanilla achievements
+        has_start_date < 1936.01.02
+		#achievment specific
+        #original_tag = LEP
+    }
+    happened = {
+        original_tag = CHI #has to be here because you can't start as lkmt
+        custom_trigger_tooltip = {
+			tooltip = KXX_hidden_achievement_tt
+			has_country_flag = CHI_hidden_path_unlock
 		}
     }
 }

@@ -1,0 +1,16 @@
+KXX_CHI_resume_base_crisis_effect = {
+ clr_country_flag = KXX_CHI_three_routes_active
+ clr_country_flag = KXX_CHI_zhou_interlude
+ set_politics = { ruling_party = radical_socialist }
+ create_country_leader = {
+  name = "Chen Gongbo"
+  desc = POLITICS_CHI_CHEN_GONGBO_DESC
+  picture = "gfx/leaders/CHI/Portrait_CHI_Chen_Gongbo.png"
+  ideology = radsoc_tridemism_subtype
+  expire = "1965.1.1"
+ }
+ add_ideas = CHI_nation_in_disarray_idea
+ country_event = { id = CHI.lategame.353 days = 1 }
+ country_event = { id = CHI.lategame.354 days = 4 }
+ mark_focus_tree_layout_dirty = yes
+}

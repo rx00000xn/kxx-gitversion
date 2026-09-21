@@ -795,14 +795,7 @@ on_actions = {
 			}
 
 			# BHC-CHI peace deal
-			if = {
-				limit = {
-					owns_state = 858
-					has_war_with = FROM
-					FROM = { tag = CHI }
-				}
-				country_event = chi_for.45
-			}
+
 
 			# Recalculate GEA AOG bonus 经济
 			if = {

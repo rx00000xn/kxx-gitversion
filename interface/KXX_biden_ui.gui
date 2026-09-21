@@ -681,11 +681,7 @@ guiTypes = {
 			spriteType = "GFX_Portrait_FNG_CHEN_JONGMING"
 		}
 		####################国民党左派#######################
-		iconType = { #
-			name = "Wang_jingwei"
-			position = { x = 8 y = 10 }
-			spriteType = "GFX_Portrait_CHI_Wang_jingwei"
-		}
+
 		
 		#################法公社杜克洛########################
 		

@@ -1,0 +1,211 @@
+add_namespace = KXX_CHI_routes
+country_event = {
+		id = KXX_CHI_routes.1
+		immediate = { log = "[GetDateText]: [Root.GetName]: event KXX_CHI_routes.1 FROM = [From.GetName]" }
+		title = KXX_CHI_routes.1.t
+		desc = KXX_CHI_routes.1.d
+
+		is_triggered_only = yes
+		fire_only_once = yes
+		option = {
+			name = KXX_CHI_routes.1.a #Go ahead with the invasion
+			ai_chance = {
+				base = 1
+			}
+			add_ideas = chi_yiguandao
+		}
+
+		option = {
+			name = KXX_CHI_routes.1.b #This is too risky now
+			ai_chance = {
+				base = 99
+			}
+
+ KXX_CHI_resume_base_crisis_effect = yes
+}
+	}
+
+country_event = {
+		id = KXX_CHI_routes.2
+		immediate = { log = "[GetDateText]: [Root.GetName]: event KXX_CHI_routes.1 FROM = [From.GetName]" }
+		title = KXX_CHI_routes.2.t
+		desc = KXX_CHI_routes.2.d
+
+
+		fire_only_once = yes
+		option = {
+			name = KXX_CHI_routes.2.a #Go ahead with the invasion
+			ai_chance = {
+				base = 1
+			}
+			remove_ideas = chi_yiguandao
+ remove_ideas_with_trait = head_of_government
+ set_country_flag = chi_lilijiu
+ set_country_flag = KXX_CHI_li_lijiu_route
+ clr_country_flag = KXX_CHI_zhou_interlude
+ mark_focus_tree_layout_dirty = yes
+			set_politics = {
+				ruling_party = national_populist
+			}
+			create_country_leader = {
+				name = "李丽久"
+				desc = ""
+				picture = "gfx/leaders/SQI/Portrait_Shandong_Li_Lijiu.png"
+				expire = "1965.1.1"
+				ideology = occultism_subtype
+				traits = {  }
+			}
+		}
+
+		option = {
+			name = KXX_CHI_routes.2.b #This is too risky now
+			ai_chance = {
+				base = 99
+			}
+			remove_ideas = chi_yiguandao
+ clr_country_flag = KXX_CHI_zhou_interlude
+ clr_country_flag = KXX_CHI_three_routes_active
+ mark_focus_tree_layout_dirty = yes
+			add_popularity = {
+				ideology = national_populist
+				popularity = -1
+			}
+			add_popularity = {
+				ideology = totalist
+				popularity = 1
+			}
+
+ KXX_CHI_resume_base_crisis_effect = yes
+}
+
+
+
+
+ trigger = { tag = CHI has_country_flag = KXX_CHI_zhou_interlude has_idea = chi_yiguandao national_populist > 0.40 }
+ mean_time_to_happen = { days = 1 }
+}
+
+country_event = {
+		id = KXX_CHI_routes.3
+		immediate = { log = "[GetDateText]: [Root.GetName]: event KXX_CHI_routes.1 FROM = [From.GetName]" }
+		title = KXX_CHI_routes.3.t
+		desc = KXX_CHI_routes.3.d
+
+		is_triggered_only = yes
+		fire_only_once = yes
+		option = {
+			name = KXX_CHI_routes.3.a #Go ahead with the invasion
+			ai_chance = {
+				base = 25
+			}
+			create_country_leader = {
+				name = "袁克定"
+				desc = ""
+				picture = "gfx/leaders/MON/Portrait_MON_Yuan_Keding.png"
+				expire = "1965.1.1"
+				ideology = occultism_subtype
+				traits = {  }
+			}
+		}
+
+		option = {
+			name = KXX_CHI_routes.3.b #This is too risky now
+			ai_chance = {
+				base = 25
+			}
+			create_country_leader = {
+				name = "洪武帝"
+				desc = ""
+				picture = "gfx/leaders/LEC/Portrait_LEC_Hongwu.png"
+				expire = "1965.1.1"
+				ideology = occultism_subtype
+				traits = {  }
+			}
+		}
+
+		option = {
+			name = KXX_CHI_routes.3.c #This is too risky now
+			ai_chance = {
+				base = 25
+			}
+			create_country_leader = {
+				name = "大仪"
+				desc = ""
+				picture = "gfx/leaders/FNG/Portrait_FNG_Kong_Lingyi.png"
+				expire = "1965.1.1"
+				ideology = occultism_subtype
+				traits = {  }
+			}
+		}
+
+		option = {
+			name = KXX_CHI_routes.3.e #This is too risky now
+			ai_chance = {
+				base = 25
+			}
+			create_country_leader = {
+				name = "郑守让"
+				desc = ""
+				picture = "gfx/leaders/TWI/Zhenshourang.png"
+				expire = "1965.1.1"
+				ideology = occultism_subtype
+				traits = {  }
+			}
+		}
+	}
+
+country_event = {
+	id = KXX_CHI_routes.4
+	title = KXX_CHI_routes.4.t
+	picture = GFX_report_event_CHI_LDF
+	desc = KXX_CHI_routes.4.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = KXX_CHI_routes.4.a
+	}
+	option = {
+		name = KXX_CHI_routes.4.b
+		set_politics = {
+			ruling_party = totalist
+			elections_allowed = no
+		}
+		hidden_effect = {
+		add_radsoc_to_coalition = yes
+		add_synd_to_coalition = yes
+		create_country_leader = {
+			name = "安德烈·马尔罗"
+			desc = ""
+			picture = "gfx/leaders/CHI/CHI_Andre_Malraux_FRA.png"
+			expire = "1965.1.1"
+			ideology = revisionist_sorelianism_subtype
+			traits = {
+				CHI_orientist
+			}
+		}
+		}
+	}
+	option = {
+		name = KXX_CHI_routes.4.c
+		set_politics = {
+			ruling_party = radical_socialist
+			elections_allowed = no
+		}
+		hidden_effect = {
+		add_tot_to_coalition = yes
+		add_synd_to_coalition = yes
+		create_country_leader = {
+			name = "安德烈·马尔罗"
+			desc = ""
+			picture = "gfx/leaders/CHI/CHI_Andre_Malraux_FRA.png"
+			expire = "1965.1.1"
+			ideology = radsoc_clientelism_subtype
+			traits = {
+				CHI_orientist
+			}
+		}
+		}
+	}
+}

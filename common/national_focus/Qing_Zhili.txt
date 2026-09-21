@@ -8799,7 +8799,7 @@ focus = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHI_absorb_NRA_remnants"
 			add_popularity = { ideology = social_democrat popularity = 0.05 } 	add_popularity = { ideology = radical_socialist popularity = 0.05 }
-			add_ideas = CHI_NRA_remnants
+			add_ideas = KXX_shared_CHI_NRA_remnants
 		}
 		search_filters = { FOCUS_FILTER_ARMY_BONUS }
 	}
@@ -8820,8 +8820,8 @@ focus = {
 			army_experience = 50
 			add_war_support = 0.15
 			swap_ideas = {
-				remove_idea = CHI_NRA_remnants
-				add_idea = CHI_NRA_remnants2
+				remove_idea = KXX_shared_CHI_NRA_remnants
+				add_idea = KXX_shared_CHI_NRA_remnants2
 			}
 		}
 		search_filters = { FOCUS_FILTER_ARMY_BONUS }
@@ -8914,7 +8914,7 @@ focus = {
 			add_war_support = 0.1
 			swap_ideas = {
 				remove_idea = CHI_two_stage_revolution_idea
-				add_idea = CHI_two_stage_revolution_idea2
+				add_idea = KXX_shared_CHI_two_stage_revolution_idea2
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -8973,8 +8973,8 @@ focus = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHI_eastern_socialist_bastion"
 			swap_ideas = {
-				remove_idea = CHI_two_stage_revolution_idea2
-				add_idea = CHI_two_stage_revolution_idea3
+				remove_idea = KXX_shared_CHI_two_stage_revolution_idea2
+				add_idea = KXX_shared_CHI_two_stage_revolution_idea3
 			}
 			add_war_support = 0.05
 		}
@@ -8995,7 +8995,7 @@ focus = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHI_empower_all_china_labour_federation"
 			add_popularity = { ideology = syndicalist popularity = 0.10 }
-			add_ideas = CHI_china_labour_federation
+			add_ideas = KXX_shared_CHI_china_labour_federation
 		}
 		search_filters = { FOCUS_FILTER_STABILITY }
 	}
@@ -9057,8 +9057,8 @@ focus = {
 			add_popularity = { ideology = totalist popularity = 0.03 }
 			add_popularity = { ideology = radical_socialist popularity = 0.03 }
 			swap_ideas = {
-				remove_idea = CHI_china_labour_federation
-				add_idea = CHI_china_labour_federation2
+				remove_idea = KXX_shared_CHI_china_labour_federation
+				add_idea = KXX_shared_CHI_china_labour_federation2
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -9130,7 +9130,7 @@ focus = {
 				limit = {
 					country_exists = LEC
 				}
-				LEC = { country_event = chi_for.21 }
+				LEC = { country_event = KXX_shared_for.21 }
 			}
 			activate_targeted_decision = { target = GEA decision = CHI_threaten_ger_treaty_ports }
 			
@@ -9154,7 +9154,7 @@ focus = {
 			log = "[GetDateText]: [Root.GetName]: Focus SYN_draw_McMahon_line"
 			858 = {
 				controller = {
-					country_event = chi_McMahon.1
+					country_event = KXX_shared_McMahon.1
 				}
 			}
 			
@@ -9268,7 +9268,7 @@ focus = {
 		completion_reward = {
 			country_event = shouchang.1
 			log = "[GetDateText]: [Root.GetName]: Focus CHI_national_peoples_congress"
-			remove_ideas = CHI_china_labour_federation2
+			remove_ideas = KXX_shared_CHI_china_labour_federation2
 			swap_ideas = {
 				remove_idea = KR_CHI_popular_support_5
 				add_idea = CHI_popular_support_proletarian_future_idea

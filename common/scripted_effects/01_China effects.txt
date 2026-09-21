@@ -1079,8 +1079,6 @@ china_generic_set_government_cosmetic_effect = {
 	else_if = {
 		limit = { original_tag = CHI }
 		set_cosmetic_tag = CHI_government
-		complete_national_focus = CHI_second_national_congress
-		set_country_flag = CHI_phase_two_begins_flag
 	}
 	else_if = {
 		limit = { original_tag = GXC }

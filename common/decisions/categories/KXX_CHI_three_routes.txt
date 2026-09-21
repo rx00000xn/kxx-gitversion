@@ -1,0 +1,1 @@
+KXX_CHI_three_routes_expansion = { icon = generic_political_actions visible = { tag = CHI has_country_flag = KXX_CHI_wei_route } }

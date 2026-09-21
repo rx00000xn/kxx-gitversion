@@ -42,7 +42,6 @@
  prc_minister_of_People:0 "人民的总理"
  PRC_deng_xiaoping:0 "邓希贤"
  prc_economic_planner:0 "经济规划师"
- CHI_deng_yingchao:0 "邓颖超"
  PRC_Deng_Zhongxia:0 "邓中夏"
  PRC_Su_Zhaozheng:0 "苏兆征"
 #陆军将领
@@ -75,7 +74,6 @@
  PRC_Liu_Zhidan:0 "刘志丹"
  PRC_Liu_Zhidan_desc:"§Y陆军将领介绍\n生于：§!§g1903年10月4日；\n大清帝国、陕西保安县§!\n§Y军旅生涯：§!§g1922年考入陕北联合县立榆林中学，曾任学生会主席，组织领导学生运动，同军阀等势力作斗争。\n\n入黄埔军官学校后积极参与反对军阀的战争，期间加入工农联盟，并积极帮助澎湃推动工农联盟的发展，使得其影响力不断在黄埔学生中扩大。\n\n在北伐战争失败以后，认识到帝国主义势力在中国仍然具有巨大的影响力，决定前往西北开拓根据地，积极筹划在远离帝国主义势力范围的内陆地区开展革命运动。§!"
 #海军将领
- CHI_li_zhilong:0 "李之龙"
  PRC_li_zhilong:0 "李之龙"
 #国策（开局四国策）
  PRC_establish_CCP_reign:0 "建立人民政府"

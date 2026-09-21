@@ -11863,15 +11863,17 @@ country_event = {
 	option = { #Forgive the KMT, Song becomes an advisor
 		log = "[GetLogInfo]: event shx_endgame.11 option shx_endgame.11.a"
 		name = shx_endgame.11.a
-		CHI = {
+		ROOT = {
+ recruit_character = SHX_kxx_song_qingling
+ recruit_character = SHX_kxx_wang_jingwei
 			hidden_effect = {
-				CHI_song_qingling = {
+				SHX_kxx_song_qingling = {
 					remove_civilian_advisor_roles = yes
 					set_nationality = ROOT
 					promote_character = { ideology = radical_socialist_subtype }
 				}
 			}
-			CHI_song_qingling = {
+			SHX_kxx_song_qingling = {
 				add_advisor_role = {
 					advisor = {
 						slot = political_advisor
@@ -11914,16 +11916,18 @@ country_event = {
 	option = { #Wang becomes an advisor
 		log = "[GetLogInfo]: event shx_endgame.11 option shx_endgame.11.b"
 		name = shx_endgame.11.b
-		CHI = {
+		ROOT = {
+ recruit_character = SHX_kxx_song_qingling
+ recruit_character = SHX_kxx_wang_jingwei
 			hidden_effect = {
-				CHI_song_qingling = { promote_character = { ideology = radical_socialist_subtype } }
-				CHI_wang_jingwei = {
+				SHX_kxx_song_qingling = { promote_character = { ideology = radical_socialist_subtype } }
+				SHX_kxx_wang_jingwei = {
 					remove_civilian_advisor_roles = yes
 					set_nationality = ROOT
 					promote_character = { ideology = radical_socialist_subtype }
 				}
 			}
-			CHI_wang_jingwei = {
+			SHX_kxx_wang_jingwei = {
 				add_advisor_role = {
 					advisor = {
 						slot = political_advisor
@@ -12257,7 +12261,7 @@ country_event = { #Wang's New Post
 
 	trigger = {
 		has_completed_focus = SHX_from_china_to_world
-		CHI_wang_jingwei = { is_political_advisor = yes }
+		SHX_kxx_wang_jingwei = { is_political_advisor = yes }
 		country_exists = FRA
 	}
 

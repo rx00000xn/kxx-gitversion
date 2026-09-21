@@ -1,0 +1,36 @@
+characters = {
+SHX_kxx_song_qingling = {
+		name = SHX_kxx_song_qingling
+		gender = female
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/CHI/Portrait_CHI_Song_Qingling.png"
+				small = "gfx/interface/advisors/CHI/CHI_Song_Qingling.png"
+			}
+		}
+		country_leader = {
+			desc = CHI_song_qingling_leader_desc
+			ideology = radsoc_tridemism_subtype
+			traits = {
+				sec_man_of_the_people
+			}
+		}
+		country_leader = {
+			desc = CHI_song_qingling_leader_desc
+			ideology = socdem_tridemism_subtype
+			traits = {
+				sec_man_of_the_people
+			}
+		}
+	}
+
+SHX_kxx_wang_jingwei = {
+		name = SHX_kxx_wang_jingwei
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/CHI/Portrait_CHI_Wang_Jingwei_KR.png"
+				small = "gfx/interface/advisors/CHI/CHI_Wang_Jingwei_KR.png"
+			}
+		}
+	}
+}
