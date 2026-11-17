@@ -131,13 +131,14 @@ POL_sanation_opposition_decisions_category = {
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision GAL_WSU_guerilla_activity"
-			hidden_effect = { activate_mission = POL_military_action }
+			
+			country_event = sanation.25
 			POL_sanation_military_lose_power = yes
 		}
 
 		timeout_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision timeout GAL_WSU_guerilla_activity"
-			hidden_effect = { activate_mission = POL_military_action }
+			activate_mission = POL_military_action
 			POL_sanation_military_gain_power_big = yes
 		}
 	}
@@ -169,13 +170,14 @@ POL_sanation_opposition_decisions_category = {
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision GAL_WSU_guerilla_activity"
-			hidden_effect = { activate_mission = POL_agrarian_action }
+			country_event = sanation.26
+			
 			POL_sanation_agrarian_lose_power = yes
 		}
 
 		timeout_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision timeout GAL_WSU_guerilla_activity"
-			hidden_effect = { activate_mission = POL_agrarian_action }
+			activate_mission = POL_agrarian_action
 			POL_sanation_agrarian_gain_power_big = yes
 		}
 	}
@@ -207,13 +209,14 @@ POL_sanation_opposition_decisions_category = {
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision GAL_WSU_guerilla_activity"
-			hidden_effect = { activate_mission = POL_natdem_action }
+			
+			country_event = sanation.27
 			POL_sanation_natdem_lose_power = yes
 		}
 
 		timeout_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision timeout GAL_WSU_guerilla_activity"
-			hidden_effect = { activate_mission = POL_natdem_action }
+			activate_mission = POL_natdem_action
 			POL_sanation_natdem_gain_power_big = yes
 		}
 	}
@@ -305,6 +308,136 @@ POL_sanation_opposition_decisions_category = {
 			POL_sanation_decrease_unity = yes
 		}
 	}
+}
+POL_sanation_second = {
+	POL_congress_mission = {
+
+		allowed = { always = no } #manually activated
+
+		available = {
+			hidden_trigger = { always = no }
+		}
+		
+		icon = generic_political_discourse
+
+		days_mission_timeout = 90
+		fire_only_once = yes
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SOV_26_congress_mission"
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SOV_26_congress_mission"
+		}
+
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision timeout SOV_26_congress_mission"
+			if = {
+				limit = {
+					check_variable = { smigly_factor > moci_factor }
+                    check_variable = { smigly_factor > beck_factor }
+				}
+				country_event = sanation.14 #smigly
+			}
+			else_if = {
+				limit = {
+					check_variable = { moci_factor > smigly_factor }
+                    check_variable = { moci_factor > beck_factor }
+				}
+				country_event = sanation.12 #moci
+			}
+			else = {
+				country_event = sanation.10 #beck
+				
+			}
+		}
+	}
+
+
+	POL_Smigly_Supporters_mission = {
+		visible = {
+			has_country_flag = POL_sanation_struggle_second
+		}
+		available = {
+			has_country_flag = POL_sanation_struggle_second
+		}
+		icon = GFX_decision_generic_political_discourse
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 50
+				has_political_power > 150
+			}
+		}
+		fire_only_once = no
+		days_re_enable = 14
+		cost = 35
+		
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SOV_Shliapnikov_Supporters_mission"
+			add_to_variable = { var = smigly_factor value = 3 }
+			custom_effect_tooltip = "希米格维的影响力将增加"
+		}
+
+	}
+	POL_Moci_Supporters_mission = {
+		visible = {
+			has_country_flag = POL_sanation_struggle_second
+		}
+		available = {
+			has_country_flag = POL_sanation_struggle_second
+		}
+		icon = GFX_decision_generic_political_discourse
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 50
+				has_political_power > 150
+			}
+		}
+		fire_only_once = no
+		days_re_enable = 14
+		cost = 35
+		
+		
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SOV_Shliapnikov_Supporters_mission"
+			add_to_variable = { var = moci_factor value = 3 }
+			custom_effect_tooltip = "莫希奇茨基的影响力将增加"
+		}
+
+		
+	}
+	POL_Beck_Supporters_mission = {
+		visible = {
+			has_country_flag = POL_sanation_struggle_second
+		}
+		available = {
+			has_country_flag = POL_sanation_struggle_second
+		}
+		icon = GFX_decision_generic_political_discourse
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 50
+				has_political_power > 150
+			}
+		}
+		fire_only_once = no
+		days_re_enable = 14
+		cost = 35
+		
+		
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SOV_Shliapnikov_Supporters_mission"
+			add_to_variable = { var = beck_factor value = 3 }
+			custom_effect_tooltip = "贝克的影响力将增加"
+		}
+
+		
+	}
+
 }
 POL_sanation_debug = {
 	POL_load_commie = {

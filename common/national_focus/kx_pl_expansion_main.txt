@@ -2888,14 +2888,15 @@ focus_tree = {
 		id = KX_PL_ZL_MATTER_OF_ECONOMY
 		icon = GFX_goal_NFA_centralised_economy
 		available = {
-			#has_country_flag = plx_start
+			has_country_flag = POL_struggle_is_over
 			has_completed_focus = KX_PLX_CRISIS_RECOVERY_PROSPECT
 		}
+		
 		prerequisite = {
 			focus = KX_PL_ZL_REPLACE_ADMIN_APARATUS
 		}	
 		relative_position_id = KX_PL_ZL_REPLACE_ADMIN_APARATUS
-		x = 5
+		x = -8
 		y = 1
 		cost = 4 #?
 		ai_will_do = {
@@ -2968,14 +2969,14 @@ focus_tree = {
 			focus = KX_PL_ZL_REPLACE_ADMIN_APARATUS
 		}	
 		relative_position_id = KX_PL_ZL_REPLACE_ADMIN_APARATUS
-		x = -8
+		x = 5
 		y = 1
 		cost = 2
 		ai_will_do = {
 			factor = 100
 		}
 		completion_reward = {
-			country_event = plxv2.060
+			country_event = sanation.1
 		}
 	}
 	focus = {
@@ -2983,6 +2984,9 @@ focus_tree = {
 		icon = GFX_goal_ALB_Purge_Purgers
 		available = {
 			#has_country_flag = plx_start
+		}
+		bypass = {
+			has_country_flag = POL_struggle_is_over
 		}
 		prerequisite = {
 			focus = KX_PL_ZL_DIVIDE_IN_THE_MOVEMENT
@@ -2996,11 +3000,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			country_event = plxv2.063
-			hidden_effect = {
-				country_event = {
-					id = plxv2.72 days = 14
-				}
-			}
+			
 		}
 	}	
 	focus = {
@@ -3012,6 +3012,9 @@ focus_tree = {
 		prerequisite = {
 			focus = KX_PL_ZL_DIVIDE_IN_THE_MOVEMENT
 		}	
+		bypass = {
+			has_country_flag = POL_struggle_is_over
+		}
 		relative_position_id = KX_PL_ZL_DIVIDE_IN_THE_MOVEMENT
 		x = -2
 		y = 1
@@ -3023,7 +3026,7 @@ focus_tree = {
 			country_event = plxv2.061
 		}
 	}	
-	focus = {
+	focus = { 
 		id = KX_PL_ZL_QUESTION_OF_THE_ELITES
 		icon = GFX_goal_collaborate_local_elites
 		available = {
@@ -3032,6 +3035,9 @@ focus_tree = {
 		prerequisite = {
 			focus = KX_PL_ZL_DIVIDE_IN_THE_MOVEMENT
 		}	
+		bypass = {
+			has_country_flag = POL_struggle_is_over
+		}
 		relative_position_id = KX_PL_ZL_DIVIDE_IN_THE_MOVEMENT
 		x = 0
 		y = 1
@@ -3048,6 +3054,9 @@ focus_tree = {
 		icon = GFX_goal_HOL_black_monday
 		available = {
 			#has_country_flag = plx_start
+		}
+		bypass = {
+			has_country_flag = POL_struggle_is_over
 		}
 		prerequisite = {
 			focus = KX_PL_ZL_QUESTION_OF_THE_ELITES
@@ -3072,6 +3081,9 @@ focus_tree = {
 		available = {
 			#has_country_flag = plx_start
 		}
+		bypass = {
+			has_country_flag = POL_struggle_is_over
+		}
 		prerequisite = {
 			focus = KX_PL_ZL_QUESTION_OF_THE_ELITES
 		}
@@ -3093,20 +3105,7 @@ focus_tree = {
 		id = KX_PL_ZL_LEFT
 		icon = GFX_goal_NFA_cdg_army_purge
 		available = {
-			#has_country_flag = plx_start
-			custom_trigger_tooltip = {
-				tooltip = KX_PL_ZL_LEFT_tooltitp
-				OR = {				
-					has_country_flag = {
-						flag = plx_legionist_sway
-						value = 5
-					}
-					has_country_flag = {
-						flag = plx_legionist_sway
-						value = 4
-					}
-				}
-			}
+			
 		}
 		prerequisite = {
 			focus = KX_PL_ZL_STATE_COUNCIL
@@ -3119,7 +3118,10 @@ focus_tree = {
 		}
 		mutually_exclusive = {
             focus = KX_PL_ZL_RIGHT
-		}			
+		}	
+		bypass = {
+			has_country_flag = POL_struggle_is_over
+		}		
 		relative_position_id = KX_PL_ZL_QUESTION_OF_THE_ELITES
 		x = -2
 		y = 2
@@ -3128,74 +3130,8 @@ focus_tree = {
 			factor = 100
 		}
 		completion_reward = {
-			#if = {
-			#	limit = {
-			#		has_country_flag = {
-			#			flag = plx_legionist_sway
-			#			value = 5
-			#		}
-			#	}
-			#	country_event = plxv2.066
-			#}
-			#if = {
-			#	limit = {
-			#		has_country_flag = {
-			#			flag = plx_legionist_sway
-			#			value = 4
-			#		}
-			#	}
-			#	country_event = plxv2.067
-			#}
-			if = {
-				limit = {
-					has_country_flag = {
-						flag = plx_legionist_sway
-						value = 4
-					}
-					has_country_flag = plx_kwiatkowski_available
-					has_country_flag = plx_legionist_planning
-				}
-				country_event = plxv2.067
-			}
-			else_if = {
-				limit = {
-					has_country_flag = {
-						flag = plx_legionist_sway
-						value = 4
-					}
-					has_country_flag = plx_legionist_unions
-					has_country_flag = plx_legionist_corporatism
-				}
-				country_event = plxv2.101
-			}
-			else_if = {
-				limit = {
-					#has_country_flag = plx_legionist_young
-					has_country_flag = {
-						flag = plx_legionist_sway
-						value = 5
-					}					
-				}
-				country_event = plxv2.133
-			}
-			else_if = {
-				limit = {
-					OR = {
-						has_country_flag = {
-							flag = plx_legionist_sway
-							value = 4
-						}
-						has_country_flag = {
-							flag = plx_legionist_sway
-							value = 5
-						}
-					}
-				}
-				country_event = plxv2.066
-			}
-			else = {
-				custom_effect_tooltip = PLX_legionists_uncertain_outcome_tooltitp
-			}			
+			POL_sanation_military_lose_power = yes
+			add_command_power = -25
 		}
 	}
 	focus = {
@@ -3203,6 +3139,9 @@ focus_tree = {
 		icon = GFX_goal_Generic_China_Arm_Peasants
 		available = {
 			
+		}
+		bypass = {
+			has_country_flag = POL_struggle_is_over
 		}
 		prerequisite = {
 			focus = KX_PL_ZL_STATE_COUNCIL
@@ -3224,34 +3163,15 @@ focus_tree = {
 			factor = 100
 		}
 		completion_reward = {
-			if = {
-				limit = {
-					has_country_flag = {
-						flag = plx_legionist_sway
-						value = 0
-					}
-				}
-				country_event = plxv2.071
-			}
-			else_if = {
-				limit = {
-					has_country_flag = {
-						flag = plx_legionist_sway
-						value = 1
-					}
-				}
-				country_event = plxv2.070
-			}
-			else = {
-				custom_effect_tooltip = PLX_legionists_uncertain_outcome_tooltitp
-			}			
+			POL_sanation_agrarian_lose_power = yes
+			add_political_power = -50
 		}
 	}	
 	focus = {
 		id = KX_PL_ZL_LONGEST_DAY
 		icon = GFX_goal_GER_Yet_Another_Provisional_Government
 		available = {
-			
+			has_country_flag = POL_struggle_is_over
 		}
 		prerequisite = {
 			focus = KX_PL_ZL_LEFT
@@ -3270,27 +3190,34 @@ focus_tree = {
 			factor = 100
 		}
 		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.1
+			add_war_support = 0.1
 			if = {
 				limit = {
-					has_country_flag = {
-						flag = plx_legionist_sway
-						value = 0
-					}
+					check_variable = { POL.militarypower > 70 }
 				}
-				country_event = plxv2.071
+				hidden_effect = {
+					country_event = sanation.20
+				}
 			}
 			else_if = {
 				limit = {
-					has_country_flag = {
-						flag = plx_legionist_sway
-						value = 1
-					}
+					check_variable = { POL.agrarianpower > 70 }
 				}
-				country_event = plxv2.070
+				hidden_effect = {
+					country_event = sanation.21
+				}
 			}
-			else = {
-				custom_effect_tooltip = PLX_legionists_uncertain_outcome_tooltitp
-			}			
+			else_if = {
+				limit = {
+					check_variable = { POL.natdempower > 70 }
+				}
+				hidden_effect = {
+					country_event = sanation.23
+				}
+			}
+			#insert anti sanation here	
 		}
 	}	
 	focus = {
@@ -3310,7 +3237,10 @@ focus_tree = {
 		}		
 		mutually_exclusive = {
             focus = KX_PL_ZL_RIGHT
-		}		
+		}	
+		bypass = {
+			has_country_flag = POL_struggle_is_over
+		}	
 		relative_position_id = KX_PL_ZL_QUESTION_OF_THE_ELITES
 		x = 0
 		y = 2
@@ -3319,34 +3249,30 @@ focus_tree = {
 			factor = 100
 		}
 		completion_reward = {
-			if = {
-				limit = {
-					has_country_flag = {
-						flag = plx_legionist_sway
-						value = 3
-					}
-				}			
-				country_event = plxv2.069
-			}
-			else_if = {
-				limit = {
-					has_country_flag = {
-						flag = plx_legionist_sway
-						value = 2
-					}
-				}			
-				country_event = plxv2.068
-			}
-			else = {
-				custom_effect_tooltip = PLX_legionists_uncertain_outcome_tooltitp
-			}
+			POL_sanation_natdem_lose_power = yes
+			add_war_support = -0.1
 		}
 	}
 	focus = {
 		id = KX_PL_ZL_CORPORATISM
 		icon = GFX_BRY_Support_Capitalists
 		available = {
-			
+			OR = {
+				has_completed_focus = POL_PROLETARIAT_UPRISING
+				has_completed_focus = POL_beks_victory
+				has_completed_focus = POL_maintain_the_triumvirate_alliance
+				has_completed_focus = POL_establish_economic_control
+				has_completed_focus = POL_rise_of_the_labor_clubs
+				has_completed_focus = POL_first_free_elections
+				has_completed_focus = POL_a_new_augustus
+				has_completed_focus = POL_dream_of_a_superpower
+				has_completed_focus = POL_polish_savinkovism
+				has_completed_focus = POL_second_spring_of_the_strongmen
+				has_completed_focus = POL_green_poland
+				has_completed_focus = POL_blue_flame
+				has_completed_focus = POL_purge_the_left
+				has_completed_focus = POL_return_of_the_specter
+			}
 		}
 		prerequisite = {
 			focus = KX_PL_ZL_MATTER_OF_ECONOMY
@@ -3369,7 +3295,17 @@ focus_tree = {
 		id = KX_PL_ZL_APPROACH_CAPITALISTS
 		icon = GFX_goal_CAT_Corporatism_over_socialism
 		available = {
-			#
+			OR = {
+				has_completed_focus = POL_beks_victory
+				has_completed_focus = POL_maintain_the_triumvirate_alliance
+				has_completed_focus = POL_establish_economic_control
+				has_completed_focus = POL_a_new_augustus
+				has_completed_focus = POL_polish_savinkovism
+				has_completed_focus = POL_second_spring_of_the_strongmen
+				has_completed_focus = POL_blue_flame
+				has_completed_focus = POL_purge_the_left
+				has_completed_focus = POL_return_of_the_specter
+			}
 		}
 		mutually_exclusive = {
 			focus = KX_PL_ZL_MARKET_LIBERAL
@@ -3392,7 +3328,14 @@ focus_tree = {
 		id = KX_PL_ZL_MARKET_LIBERAL
 		icon = GFX_RUS_New_Liberal_Era
 		available = {
-			#
+			OR = {
+				has_completed_focus = POL_PROLETARIAT_UPRISING
+				has_completed_focus = POL_rise_of_the_labor_clubs
+				has_completed_focus = POL_first_free_elections
+				has_completed_focus = POL_dream_of_a_superpower
+				has_completed_focus = POL_green_poland
+
+			}
 		}
 		
 		prerequisite = {
@@ -3409,7 +3352,7 @@ focus_tree = {
 			factor = 100
 		}
 		completion_reward = {
-			add_ideas = PLX_leg_semi_nationalization_1
+			add_ideas = PLX_leg_liberal_1
 		}
 	}
 	focus = {
@@ -3431,7 +3374,10 @@ focus_tree = {
 			factor = 100
 		}
 		completion_reward = {
-			add_ideas = PLX_leg_semi_nationalization_1
+			swap_ideas = {
+				remove_idea = PLX_leg_liberal_1
+				add_idea = PLX_leg_liberal_2
+			}
 		}
 	}
 	focus = {
@@ -3455,7 +3401,10 @@ focus_tree = {
 			factor = 100
 		}
 		completion_reward = {
-			add_ideas = PLX_leg_semi_nationalization_1
+			swap_ideas = {
+				remove_idea = PLX_leg_liberal_2
+				add_idea = PLX_leg_liberal_3
+			}
 		}
 	}
 	focus = {
@@ -3478,15 +3427,25 @@ focus_tree = {
 			factor = 100
 		}
 		completion_reward = {
-			add_ideas = PLX_leg_semi_nationalization_1
+			add_ideas = SOC_POL_ZL_capital_first
 		}
 	}
 	focus = {
 		id = KX_PL_ZL_LEFT_ECONOMY
 		icon = GFX_goal_NYC_Syndicalism_Without_Radicalism
 		available = {
-		
-				
+			OR = {
+				has_completed_focus = POL_sweetheart_general_regime
+				has_completed_focus = POL_socialist_party_second_chance
+				has_completed_focus = POL_syndicalism_in_service_of_the_nation
+				has_completed_focus = POL_rise_of_the_national_labor_party
+				has_completed_focus = POL_return_of_the_holy_son
+				has_completed_focus = POL_lessons_of_the_syndicalist_model
+				has_completed_focus = POL_zeligowski_coup
+				has_completed_focus = POL_a_national_revolution
+				has_completed_focus = POL_hammer_and_sickle
+				has_completed_focus = POL_the_red_general
+			}
 		}
 		prerequisite = {
 			focus = KX_PL_ZL_MATTER_OF_ECONOMY
@@ -3503,21 +3462,24 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_political_power = 100
-			hidden_effect = {
-				country_event = {
-					id = plxv2.119 days = 60
-				}	
-				country_event = {
-					id = plxv2.120 days = 40
-				}			
-			}
+			
 		}
 	}
 	focus = {
 		id = KX_PL_ZL_STATE_ECONOMY
 		icon = GFX_BBR_party_with_a_state
 		available = {
-			has_country_flag = plx_legionist_planning
+			OR = {
+				has_completed_focus = POL_sweetheart_general_regime
+				has_completed_focus = POL_socialist_party_second_chance
+				has_completed_focus = POL_rise_of_the_national_labor_party
+				has_completed_focus = POL_return_of_the_holy_son
+				has_completed_focus = POL_lessons_of_the_syndicalist_model
+				has_completed_focus = POL_zeligowski_coup
+				has_completed_focus = POL_a_national_revolution
+				has_completed_focus = POL_hammer_and_sickle
+				has_completed_focus = POL_the_red_general
+			}
 		}
 		prerequisite = {
 			focus = KX_PL_ZL_LEFT_ECONOMY
@@ -3589,8 +3551,7 @@ focus_tree = {
 		id = KX_PL_ZL_NATIONAL_SYNDICALISM
 		icon = GFX_goal_FRA_sorelians
 		available = {
-			has_country_flag = plx_legionist_unions
-			NOT = { has_country_flag = plx_kwiatkowski_in_power }
+			has_completed_focus = POL_syndicalism_in_service_of_the_nation
 		}
 		prerequisite = {
 			focus = KX_PL_ZL_LEFT_ECONOMY
@@ -3648,9 +3609,17 @@ focus_tree = {
 			factor = 100
 		}
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = PLX_leg_semi_nationalization_1
-				add_idea = PLX_leg_semi_nationalization_2
+			if = {
+				limit = {
+					has_idea = PLX_leg_semi_nationalization_1
+				}
+				swap_ideas = {
+					remove_idea = PLX_leg_semi_nationalization_1
+					add_idea = PLX_leg_semi_nationalization_2
+				}
+			}
+			else = {
+				add_ideas = PLX_leg_limit_strike
 			}
 		}
 	}
@@ -5097,7 +5066,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KX_PL_BAD_BYZANTINISM
-		icon = GFX_BAY_UNITE_GERMANY
+		icon = GFX_goal_GER_renewed_militarism
 		available = {
 			
 		}
@@ -5576,7 +5545,7 @@ focus_tree = {
 	}		
 	focus = {
 		id = KX_PL_NATDEM_VOTING_RESTRICTIONS
-		icon = GFX_goal_GER_Blind_Voters
+		icon = GFX_goal_NFL_no_poor_votes
 		available = {
 			#has_country_flag = plx_start
 		}
@@ -6187,6 +6156,7 @@ focus_tree = {
 					flag = plx_PZPR_to_left
 					value = 2
 				}
+				#event turn socdem
 			}			
 		}
 	}	
@@ -6236,7 +6206,7 @@ focus_tree = {
 		id = KX_PL_PZPR_ABSOLUTE_UNION_SUPPORT
 		icon = GFX_goal_POL_New_Central_Industrial_Region
 		available = {
-			#has_country_flag = plx_start
+			has_completed_focus = KX_PL_PZPR_FERVENT_ANTICLERICALISM
 		}	
 		prerequisite = {
 			focus = KX_PL_PZPR_SUPREMACY_OF_PUBLIC_COMPANIES
@@ -6259,6 +6229,7 @@ focus_tree = {
 					flag = plx_PZPR_to_left
 					value = 2
 				}
+				country_event = plx.55
 			}			
 		}
 	}
@@ -6266,7 +6237,7 @@ focus_tree = {
 		id = KX_PL_PZPR_NOD_TO_SMALL_BUSINESS
 		icon = GFX_goal_NFA_Middle_Class
 		available = {
-			#has_country_flag = plx_start
+			has_completed_focus = KX_PL_PZPR_FERVENT_ANTICLERICALISM
 		}	
 		prerequisite = {
 			focus = KX_PL_PZPR_SUPREMACY_OF_PUBLIC_COMPANIES
@@ -6388,6 +6359,8 @@ focus_tree = {
 					flag = plx_PZPR_to_left
 					value = 2
 				}
+				#event turn radsoc
+				country_event = plx.53
 			}			
 		}
 	}	
@@ -6416,7 +6389,7 @@ focus_tree = {
 		id = KX_PL_PZPR_SOCIALISED_MARKET_ECONOMY
 		icon = GFX_RUS_State_Regulation_Act
 		available = {
-			#has_country_flag = plx_start
+			has_completed_focus = KX_PL_PZPR_WE_ALWAYS_WERE_REPUBLICANS
 		}
 		prerequisite = {
 			focus = KX_PL_PZPR_MID_FARMING
@@ -6494,7 +6467,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KX_PL_KPP_PACIFY_RESISTANCE
-		icon = GFX_goal_SER_pacify_oposition
+		icon = GFX_goal_ALB_Permanent_Purge
 		available = {
 			#has_country_flag = plx_start
 		}
@@ -7281,6 +7254,7 @@ focus_tree = {
 				has_country_flag = PLX_natsoc
 				has_country_flag = plx_zsp_rules_true
 				has_country_flag = plx_communism_slav_flag
+				has_country_flag = POL_sanation_zeli_win
 			}
 			
 		}
@@ -7333,6 +7307,8 @@ focus_tree = {
 			OR = {
 				has_country_flag = POL_zadruga_in_power
 				has_country_flag = PLX_libzadruga
+				has_country_flag = POL_sanation_savin_win
+				has_completed_focus = POL_awaken_the_national_spirit
 			}
 			
 		}
@@ -10609,7 +10585,7 @@ focus_tree = {
 
 	focus = {
 		id = POL_Mitteleuropa_Ties
-		icon = GFX_goal_GER_Mitteleuropa_Cash
+		icon = GFX_goal_GER_Mitteleuropa_European
 		cost = 4
 
 		relative_position_id = KX_PL_PG_GRAIN_MANAGEMENT
@@ -10926,7 +10902,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KX_PL_PG_GERMANS_ALONE
-		icon = GFX_goal_GER_Pax_Germanica
+		icon = GFX_goal_GER_What_Victory_Brought_Us
 		available = {
 			has_country_flag = plx_pg_in_power
 		}
@@ -11489,7 +11465,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KX_PL_PG_LAND_OF_IG_FARBEN
-		icon = GFX_goal_Reichstag
+		icon = GFX_goal_GER_Reichstag
 		available = {
 			has_country_flag = PLX_ambros
 			
@@ -11657,7 +11633,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KX_PL_PG_SUPPORT_SPD
-		icon = GFX_goal_GER_Left_SPD
+		icon = GFX_goal_GER_SPD
 		available = {
 			has_country_flag = plx_pg_in_power
 		}
@@ -12435,7 +12411,7 @@ focus_tree = {
 #Germany tree
 	focus = {
 		id = POL_Germanys_Eastern_Bulwark
-		icon = GFX_goal_Deutsches_Heer
+		icon = GFX_goal_GER_Deutsches_Heer
 		cost = 4
 
 		relative_position_id = POL_Expand_The_Academy_Of_Warsaw
@@ -12613,7 +12589,7 @@ focus_tree = {
 
 	focus = {
 		id = POL_Army-Air_Coordination
-		icon = GFX_goal_Deutsche_Luftstreitkrafte
+		icon = GFX_goal_GER_Sinking_Steel_Behemoths
 		cost = 4
 
 		relative_position_id = POL_Germanys_Eastern_Bulwark
@@ -14077,7 +14053,7 @@ focus = {
 	}
 	focus = {
 		id = KX_PLX_CLEANSE_REACTION
-		icon = GFX_goal_GER_Decapitate_Reactionaries
+		icon = GFX_goal_GER_Resist_Prussianist_Dogma
 		available = {
 			#has_country_flag = plx_supernation_flag
 		}
@@ -20248,8 +20224,7 @@ focus = {
 		y = 1
 		relative_position_id = POL_beks_victory
 		available = {
-			has_country_flag = PLC_pilsudski
-			
+			has_government = authoritarian_democrat
 		}
 		ai_will_do = {
 			factor = 10
@@ -20259,8 +20234,7 @@ focus = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus PLC_rocket_experiments"
-			add_political_power = 100
-			add_stability = 0.2
+			add_ideas = POL_diplomatic
 		}
 	}
 	focus = {
@@ -20273,9 +20247,7 @@ focus = {
 		prerequisite = {
 			focus = PLX_PLC_under_becks_eye
 		}
-		available = {
-			has_socialist_government = no
-		}
+		
 		ai_will_do = {
 			factor = 10
 		}
@@ -20286,112 +20258,6 @@ focus = {
 		}
 	}
 	
-	
-	
-	
-	focus = {
-		id = PLX_PLC_enemy_in_the_west
-		icon = GFX_goal_PLC_enemy_in_the_west
-		cost = 4
-		x = 7
-		y = 38
-		available = {
-			NOT = {
-				is_in_faction_with = GER
-			}
-			has_socialist_government = no
-		}
-		
-		prerequisite = {
-			focus = PLX_PLC_night_in_vilnius
-		}
-		ai_will_do = {
-			factor = 10
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus PLC_rocket_experiments"
-			add_ideas = PLC_enemy_in_the_west
-			add_equipment_to_stockpile = {
-				type = infantry_equipment
-				amount = 5000
-				producer = GER
-			}
-		}
-	}
-	
-	focus = {
-		id = PLX_PLC_one_sided_alliance
-		icon = GFX_goal_PLC_oneside
-		cost = 4
-		x = 9
-		y = 38
-		available = {
-			is_in_faction_with = GER
-			has_socialist_government = no
-		}
-		prerequisite = {
-			focus = PLX_PLC_night_in_vilnius
-		}
-		ai_will_do = {
-			factor = 10
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus PLC_rocket_experiments"
-			add_equipment_to_stockpile = {
-				type = infantry_equipment
-				amount = 15000
-				producer = POL
-			}
-			swap_ideas = {
-				add_idea = PLC_miedzymorze_idea_2
-				remove_idea = PLC_miedzymorze_idea
-			}
-			add_tech_bonus = {
-				bonus = 1
-				category = mountaineers_tech
-				uses = 1
-			}
-			add_tech_bonus = {
-				bonus = 1
-				category = para_tech
-				uses = 1
-			}
-			add_stability = 0.1
-			add_political_power = -25
-		}
-	}
-	
-	focus = {
-		id = PLX_PLC_enemy_in_the_east
-		icon = GFX_goal_PLC_euthanize_bear
-		cost = 4
-		x = 8
-		y = 39
-		prerequisite = {
-			focus = PLX_PLC_enemy_in_the_west
-			focus = PLX_PLC_one_sided_alliance
-		}
-		available = {
-			has_socialist_government = no
-		}
-		ai_will_do = {
-			factor = 10
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus PLC_rocket_experiments"
-			add_ideas = PLC_enemy_in_the_east
-			
-			hidden_effect = {
-				country_event = {
-					id = kxplc.17
-					days = 18
-				}
-			}
-		}
-	}
 	
 	focus = {
 		id = PLX_PLC_entente
@@ -20452,65 +20318,11 @@ focus = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus PLC_rocket_experiments"
-			add_popularity = {
-				ideology = authoritarian_democrat
-				popularity = 0.1
-			}
-			add_stability = 0.10
+			add_ideas = PLC_polish_lithuanian_spirit
 		}
 	}
 	
-	focus = {
-		id = PLX_PLC_night_in_vilnius
-		icon = GFX_goal_PLC_night_in_vilnius
-		cost = 4
-		x = 6
-		y = 37
-		
-		available = {
-			has_socialist_government = no
-		}
-		ai_will_do = {
-			factor = 10
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus PLC_rocket_experiments"
-			
-			add_war_support = 0.05
-			add_political_power = 100
-			add_popularity = {
-				ideology = authoritarian_democrat
-				popularity = 0.1
-			}
-			
-			96 = {
-				add_extra_state_shared_building_slots = 4
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-			
-			hidden_effect = {
-				country_event = {
-					id = kxplc.11
-					hours = 3
-				}
-				
-				country_event = {
-					id = kxplc.19
-					days = 64
-				}
-			}
-		}
-	}
+	
 	
 	focus = {
 		id = PLX_PLC_guide_her_carefully
@@ -20525,32 +20337,18 @@ focus = {
 		prerequisite = {
 			focus = PLX_PLC_a_bound_military
 		}
-		available = {
-			has_socialist_government = no
-		}
+		
 		ai_will_do = {
 			factor = 10
 		}
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus PLC_rocket_experiments"
-			add_political_power = 100
+			LIT = {
+				country_event = sanation.9
+			}
 			add_ideas = PLC_diplomacy
-			add_popularity = {
-				ideology = authoritarian_democrat
-				popularity = 0.1
-			}
-			random_owned_state = {
-				limit = {
-					is_capital = yes
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 3
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 2
-			}
+			
 		}
 	}
 	
@@ -20564,50 +20362,15 @@ focus = {
 		prerequisite = {
 			focus = PLX_PLC_guide_her_carefully
 		}
-		available = {
-			has_socialist_government = no
-		}
+		
 		ai_will_do = {
 			factor = 10
 		}
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus PLC_rocket_experiments"
-			add_stability = 0.1
-			add_political_power = 50
-			random_owned_state = {
-				limit = {
-					is_capital = yes
-				}
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 2
-			}
-			random_owned_state = {
-				limit = {
-					is_capital = no
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 3
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 1
-			}
-			random_owned_state = {
-				limit = {
-					is_capital = no
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 3
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 1
-			}
+			add_ideas = POL_expansionism_colonialism
+		
 		}
 	}
 	
@@ -20621,46 +20384,15 @@ focus = {
 		prerequisite = {
 			focus = PLX_PLC_guide_her_carefully
 		}
-		available = {
-			has_socialist_government = no
-		}
+		
 		ai_will_do = {
 			factor = 10
 		}
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus PLC_rocket_experiments"
-			add_war_support = 0.1
-			add_political_power = 50
-			random_owned_state = {
-				limit = {
-					is_capital = yes
-				}
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 2
-			}
-			custom_effect_tooltip = PLC_level_2_forts_border
-			hidden_effect = {
-				every_owned_state = {
-					add_building_construction = {
-						type = bunker
-						level = 2
-						instant_build = yes
-						province = {
-							all_provinces = yes
-							limit_to_border = yes
-						}
-					}
-				}
-				country_event = {
-					id = kxplc.13
-					days = 24
-				}
-			}
+			add_ideas = POL_friend_japan
+			country_event = sanation.8
 		}
 	}
 	
@@ -20677,42 +20409,14 @@ focus = {
 		prerequisite = {
 			focus = PLX_PLC_show_her_light
 		}
-		available = {
-			has_socialist_government = no
-		}
+		
 		ai_will_do = {
 			factor = 10
 		}
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus PLC_rocket_experiments"
-			add_manpower = 120000
 			add_ideas = PLC_new_polish_strategy
-			custom_effect_tooltip = PLC_grants_tank_model
-			#### Flavor event ####
-			hidden_effect = {
-				set_technology = {
-					improved_light_tank = 1
-				}
-				create_equipment_variant = { 
-					name = "8TP" 
-					type = light_tank_equipment_2
-					upgrades = { 
-						tank_reliability_upgrade = 3
-						tank_engine_upgrade = 3
-						tank_armor_upgrade = 3
-						tank_gun_upgrade = 3
-					}
-				}
-				country_event = {
-					id = kxplc.14
-					days = 93
-				}
-			}
-			
-			hidden_effect = {
-				
-			}
 		}
 	}
 	
@@ -20726,24 +20430,14 @@ focus = {
 		prerequisite = {
 			focus = PLX_PLC_show_her_the_destiny
 		}
-		available = {
-			has_socialist_government = no
-		}
+		
 		ai_will_do = {
 			factor = 10
 		}
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus PLC_rocket_experiments"
-			add_war_support = 0.2
-			add_ideas = PLC_polish_lithuanian_spirit
-			
-			hidden_effect = {
-				country_event = {
-					id = kxplc.15
-					days = 93
-				}
-			}
+			add_ideas = POL_rally_commonwealth_workers
 		}
 	}
 	
@@ -23372,7 +23066,7 @@ focus = {
   }
   focus = {
     id = PLX_POL_invite_russian_monarchists
-    icon = GFX_BAY_CORPORATE_MONARCHY
+    icon = GFX_goal_GRE_restore_the_monarchy
     
      
     prerequisite = {
@@ -31202,6 +30896,9 @@ focus = {
 					has_country_flag = POL_zadruga_in_power
 					has_country_flag = PLX_libzadruga
 					has_country_flag = PLX_natsoc
+					has_country_flag = POL_sanation_zeli_win
+					has_country_flag = POL_sanation_savin_win
+					has_completed_focus = POL_awaken_the_national_spirit
 				}
 		}
 		ai_will_do = {
@@ -32798,7 +32495,7 @@ focus = {
 	}
 	focus = {
 		id = POL_takeover_maf
-		icon = GFX_goal_FRA_red_africa
+		icon = GFX_goals_FRA_red_africa
 		available = {
 			has_war = no
 			is_subject = no
@@ -33283,7 +32980,9 @@ focus = {
 	y = 10
 	
 	prerequisite = { }
-	available = { always = yes }
+	available = { 
+		has_country_flag = PLX_solidarity
+	 }
 	ai_will_do = { factor = 100 }
 	completion_reward = {
 		add_political_power = 100
@@ -33302,7 +33001,18 @@ focus = {
 	available = { always = yes }
 	ai_will_do = { factor = 100 }
 	completion_reward = {
-		
+		if = {
+			limit = {
+				has_country_flag = POL_solidarity_left
+			}
+			country_event = plxv2.153
+		}
+		if = {
+			limit = {
+				has_country_flag = POL_solidarity_right
+			}
+			country_event = plxv2.154
+		}
 	}
 }
 focus = {
@@ -33323,11 +33033,10 @@ focus = {
        		ideology = social_conservative
       		popularity = -0.1
       	}
+		
 		increase_ruling_party_popularity_by_10 = yes
 		add_stability = 0.15
-		hidden_effect = {
-
-		}
+		
 	}
 }
 focus = {
@@ -33361,7 +33070,9 @@ focus = {
 
 	prerequisite = { focus = POL_keep_union_leadership }
 	mutually_exclusive = { focus = POL_socialist_party_remnants }
-	available = { always = yes }
+	available = { 
+		has_government = radical_socialist
+	}
 	ai_will_do = { factor = 100 }
 	completion_reward = {
 		add_ideas = POL_solidarity_radsoc
@@ -33382,7 +33093,9 @@ focus = {
 
 	prerequisite = { focus = POL_keep_union_leadership }
 	mutually_exclusive = { focus = POL_economists_politics }
-	available = { always = yes }
+	available = { 
+		has_government = social_democrat
+	}
 	ai_will_do = { factor = 100 }
 	completion_reward = {
 		add_ideas = POL_solidarity_socdem
@@ -33615,7 +33328,9 @@ focus = {
 	mutually_exclusive = {
 		focus = POL_national_unity_congress
 	}
-	available = { always = yes }
+	available = { 
+		has_government = paternal_autocrat
+	}
 	ai_will_do = { factor = 100 }
 	completion_reward = {
 		add_ideas = POL_solidarity_pataut
@@ -33636,7 +33351,9 @@ focus = {
 	mutually_exclusive = {
 		focus = POL_agrarianism_first
 	}
-	available = { always = yes }
+	available = { 
+		has_government = authoritarian_democrat
+	}
 	ai_will_do = { factor = 100 }
 	completion_reward = {
 		add_ideas = POL_solidarity_authdem
@@ -33900,15 +33617,16 @@ focus = {
 	x = 1
 	y = 1
 
-	prerequisite = { focus = POL_settle_scores_with_fake_revolutionaries }
-	prerequisite = { focus = POL_end_of_socialist_tyranny }
+	prerequisite = { 
+		focus = POL_settle_scores_with_fake_revolutionaries
+		focus = POL_end_of_socialist_tyranny
+	 }
+
 	
 	available = { always = yes }
 	ai_will_do = { factor = 100 }
 	completion_reward = {
-		#add_tot_to_ban = yes
-		#add_synd_to_ban = yes
-		#add_natpop_to_ban = yes
+		country_event = plxv2.155
 
 	}
 }
@@ -34021,7 +33739,7 @@ focus = {
 	available = { always = yes }
 	ai_will_do = { factor = 100 }
 	completion_reward = {
-		
+		country_event = plxv2.156
 	}
 }
 
@@ -34038,14 +33756,21 @@ focus = {
   focus = {
         id = POL_PROLETARIAT_UPRISING
         icon = GFX_goal_BAS_Communism_Without_Orthodox_Puritanism
-        x = -78
-        y = 60
+		prerequisite = {
+			focus = KX_PL_ZL_LONGEST_DAY
+		}
+		relative_position_id = KX_PL_ZL_LONGEST_DAY
+        x = 0
+        y = 1
+		allow_branch = {
+			has_country_flag = POL_sanation_commie_win
+		}
         cost = 4
         ai_will_do = { factor = 1 }
 		
         completion_reward = {
             add_political_power = 100
-            custom_effect_tooltip = "无产阶级奋起效果占位"
+			country_event = sanation.4
         }
     }
 
@@ -34059,12 +33784,16 @@ focus = {
         x = -1
         y = 1
         cost = 4
+		available = {
+			has_government = totalist
+		}
 		 mutually_exclusive = { focus = POL_MINORITY_RISE }
         prerequisite = { focus = POL_PROLETARIAT_UPRISING }
         ai_will_do = { factor = 1 }
         completion_reward = {
             add_political_power = 100
-            custom_effect_tooltip = "合作者的归来效果占位"
+			add_stability = 0.1
+			add_war_support = 0.1
         }
     }
 
@@ -34075,12 +33804,16 @@ focus = {
         x = 1
         y = 1
         cost = 4
+		available = {
+			has_government = radical_socialist
+		}
         prerequisite = { focus = POL_PROLETARIAT_UPRISING }
         mutually_exclusive = { focus = POL_COLLABORATORS_RETURN }
         ai_will_do = { factor = 1 }
         completion_reward = {
-            add_political_power = 100
-            custom_effect_tooltip = "少数派的崛起效果占位"
+            add_one_random_civilian_factory = yes
+			add_one_random_civilian_factory = yes
+			add_one_random_civilian_factory = yes
         }
     }
 
@@ -34097,8 +33830,8 @@ focus = {
         prerequisite = { focus = POL_COLLABORATORS_RETURN }
         ai_will_do = { factor = 1 }
         completion_reward = {
-            add_political_power = 100
-            custom_effect_tooltip = "放弃无产阶级专政效果占位"
+           add_ideas = POL_yellow_synd_pol
+		   add_synd_to_ban = yes
         }
     }
 
@@ -34119,8 +33852,7 @@ focus = {
 
         ai_will_do = { factor = 1 }
         completion_reward = {
-            add_political_power = 100
-            custom_effect_tooltip = "学习布哈林主义效果占位"
+            add_ideas = POL_learn_bukharinism
         }
     }
 
@@ -34138,8 +33870,9 @@ focus = {
         prerequisite = { focus = POL_MINORITY_RISE }
         ai_will_do = { factor = 1 }
         completion_reward = {
-            add_political_power = 100
-            custom_effect_tooltip = "左翼人民阵线效果占位"
+             add_ideas = POL_bukarinist_pol
+			 add_socdem_to_coalition = yes 
+			 add_soclib_to_coalition = yes
         }
     }
 
@@ -34156,8 +33889,12 @@ focus = {
         prerequisite = { focus = POL_ABANDON_PROLETARIAT_DICTATORSHIP }
         ai_will_do = { factor = 1 }
         completion_reward = {
-            add_political_power = 100
-            custom_effect_tooltip = "驾驭萨纳齐亚官僚效果占位"
+            swap_ideas = {
+				remove_idea = POL_yellow_synd_pol
+				add_idea = POL_yellow_synd_pol2
+			}
+			add_authdem_to_coalition = yes
+			add_pataut_to_coalition = yes
         }
     }
 
@@ -34174,8 +33911,7 @@ focus = {
         prerequisite = { focus = POL_LEARN_BUKHARINISM }
         ai_will_do = { factor = 1 }
         completion_reward = {
-            add_political_power = 100
-            custom_effect_tooltip = "隔墙有耳效果占位"
+            add_ideas = POL_walls_have_ears
         }
     }
 
@@ -34192,8 +33928,10 @@ focus = {
         prerequisite = { focus = POL_LEARN_BUKHARINISM }
         ai_will_do = { factor = 1 }
         completion_reward = {
-            add_political_power = 100
-            custom_effect_tooltip = "统战富农效果占位"
+            swap_ideas = {
+				remove_idea = POL_learn_bukharinism
+				add_idea = POL_unite_kulaks
+			}
         }
     }
 
@@ -34208,8 +33946,11 @@ focus = {
 
         ai_will_do = { factor = 1 }
         completion_reward = {
-            add_political_power = 100
-            custom_effect_tooltip = "清洗少数派效果占位"
+            swap_ideas = {
+				remove_idea = POL_bukarinist_pol
+				add_idea = POL_bukarinist_pol2
+			}
+			add_synd_to_ban = yes
         }
     }
 
@@ -34227,8 +33968,10 @@ focus = {
         prerequisite = { focus = POL_HARNESS_SANACJA_BUREAUCRACY }
         ai_will_do = { factor = 1 }
         completion_reward = {
-            add_political_power = 100
-            custom_effect_tooltip = "共产主义法团效果占位"
+           swap_ideas = {
+				remove_idea = POL_yellow_synd_pol2
+				add_idea = POL_yellow_synd_pol3
+			}
         }
     }
 
@@ -34246,8 +33989,10 @@ focus = {
 		prerequisite = { focus = POL_UNITE_KULAKS }
         ai_will_do = { factor = 1 }
         completion_reward = {
-            add_political_power = 100
-            custom_effect_tooltip = "允许资本主义存在效果占位"
+           swap_ideas = {
+				remove_idea = POL_unite_kulaks
+				add_idea = POL_allow_capitalism
+			}
         }
     }
 
@@ -34264,8 +34009,10 @@ focus = {
         prerequisite = { focus = POL_PURGE_MINORITIES }
         ai_will_do = { factor = 1 }
         completion_reward = {
-            add_political_power = 100
-            custom_effect_tooltip = "建立社会主义民主效果占位"
+            swap_ideas = {
+				remove_idea = POL_bukarinist_pol2
+				add_idea = POL_bukarinist_pol3
+			}
         }
     }
 
@@ -34286,15 +34033,24 @@ focus = {
 		}
         ai_will_do = { factor = 1 }
         completion_reward = {
-            add_political_power = 100
-            custom_effect_tooltip = "实现捷尔任斯基之愿效果占位"
+           swap_ideas = {
+				remove_idea = POL_allow_capitalism
+				add_idea = POL_fulfill_dzerzhinsky_wish
+			}
         }
     }
 	focus = {
 		id = POL_sweetheart_general_regime
 		icon = GFX_goal_POL_sweetheart_general_regime
-		x = -70
-		y = 60
+		prerequisite = {
+			focus = KX_PL_ZL_LONGEST_DAY
+		}
+		relative_position_id = KX_PL_ZL_LONGEST_DAY
+        x = 0
+        y = 1
+		allow_branch = {
+			has_country_flag = POL_sanation_dlugo_win
+		}
 		cost = 4
 		
 		ai_will_do = { factor = 1 }
@@ -34314,7 +34070,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_hedonism_is_revolution
 		}
 		# 享乐即革命
 	}
@@ -34329,7 +34085,10 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			swap_ideas = {
+				remove_idea = POL_hedonism_is_revolution
+				add_idea = POL_hedonism_is_revolution2
+			}
 		}
 		# 巴黎茶歇
 	}
@@ -34345,7 +34104,9 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_all_revolutionary_alliance
+			add_synd_to_coalition = yes 
+			add_radsoc_to_coalition = yes
 		}
 		# 工会共产—全都来吧！
 	}
@@ -34360,7 +34121,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_omniscient_omnipotent_omnibenevolent
 		}
 		# 全知、全能、全善
 	}
@@ -34375,7 +34136,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_romantic_national_charterism
 		}
 		# 浪漫民族宪章主义
 	}
@@ -34391,7 +34152,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_modern_legion_chivalry
 		}
 		# 现代军团骑士精神
 	}
@@ -34409,7 +34170,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_long_live_the_chief
 		}
 		# 首长万岁！
 	}
@@ -34427,7 +34188,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_unleash_the_vanguardist_war_machine
 		}
 		# 发动先锋主义战争引擎
 	}
@@ -34435,8 +34196,15 @@ focus = {
 	focus = {
 		id = POL_socialist_party_second_chance
 		icon = GFX_goal_POL_socialist_party_second_chance
-		x = -63
-		y = 60
+		prerequisite = {
+			focus = KX_PL_ZL_LONGEST_DAY
+		}
+		relative_position_id = KX_PL_ZL_LONGEST_DAY
+        x = 0
+        y = 1
+		allow_branch = {
+			has_country_flag = POL_sanation_pps_win
+		}
 		cost = 4
 		
 		ai_will_do = { factor = 1 }
@@ -34456,7 +34224,10 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_socialism_without_democratic_filth
+			add_radsoc_to_ban = yes
+			add_soclib_to_ban = yes
+			add_marlib_to_ban = yes
 		}
 		# 社会主义无民主污秽
 	}
@@ -34471,7 +34242,10 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_conservative_remnants
+			add_soccon_to_ban = yes
+			add_authdem_to_ban = yes
+			add_natpop_to_ban = yes
 		}
 		# 保守派残党
 	}
@@ -34489,7 +34263,7 @@ focus = {
 		y = 2
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_proletarian_social_nationalism
 		}
 		# 无产阶级社会民族主义
 	}
@@ -34507,7 +34281,7 @@ focus = {
 		y = 2
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_dictator_of_the_workers
 		}
 		# 工人的独裁者
 	}
@@ -34525,7 +34299,8 @@ focus = {
 		y = 2
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_pilsudski_alpha_and_omega_of_socialism
+			add_pataut_to_coalition = yes
 		}
 		# 毕苏斯基，社会主义的阿尔法与欧米茄
 	}
@@ -34543,7 +34318,7 @@ focus = {
 		y = 2
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_police_state_of_worker_militias
 		}
 		# 工人民兵的警察国家
 	}
@@ -34558,7 +34333,8 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_total_control_over_unions
+			add_synd_to_ban = yes
 		}
 		# 对工会的全面控制
 	}
@@ -34573,15 +34349,23 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_defeat_the_communist_specter
+			add_tot_to_ban = yes
 		}
 		# 战胜共产主义幽灵
 	}
 	focus = {
 		id = POL_syndicalism_in_service_of_the_nation
 		icon = GFX_goal_syndicalism
-		x = -56
-		y = 60
+		prerequisite = {
+			focus = KX_PL_ZL_LONGEST_DAY
+		}
+		relative_position_id = KX_PL_ZL_LONGEST_DAY
+        x = 0
+        y = 1
+		allow_branch = {
+			has_country_flag = POL_sanation_synd_win
+		}
 		cost = 4
 		
 		ai_will_do = { factor = 1 }
@@ -34601,7 +34385,8 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_integrate_the_republic_restoration_society
+			add_pataut_to_coalition = yes
 		}
 		# 整合共和国修复协会
 	}
@@ -34616,7 +34401,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_strengthen_interventionism
 		}
 		# 强化干预主义
 	}
@@ -34634,7 +34419,9 @@ focus = {
 		y = 2
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_establish_trade_union_confederation
+			add_radsoc_to_coalition = yes 
+			add_socdem_to_coalition = yes
 		}
 		# 建立工会联盟
 	}
@@ -34647,12 +34434,15 @@ focus = {
 		mutually_exclusive = {
 			focus = POL_the_will_of_the_workers
 		}
+		available = {
+			has_government = totalist
+		}
 		relative_position_id = POL_strengthen_interventionism
 		x = 0
 		y = 2
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_power_of_myth
 		}
 		# 神话的伟力
 	}
@@ -34667,7 +34457,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_non_partisan_unions
 		}
 		# 工会无党派
 	}
@@ -34682,7 +34472,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_all_workers_patriotic
 		}
 		# 全体工人皆爱国
 	}
@@ -34697,7 +34487,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_classless_society_of_producers
 		}
 		# 无阶级生产者社会
 	}
@@ -34710,12 +34500,15 @@ focus = {
 		mutually_exclusive = {
 			focus = POL_power_of_myth
 		}
+		available = {
+			has_government = syndicalist
+		}
 		relative_position_id = POL_power_of_myth
 		x = 2
 		y = 0
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_the_will_of_the_workers
 		}
 		# 工人的意志
 	}
@@ -34730,7 +34523,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_establish_peoples_democracy
 		}
 		# 建立人民民主
 	}
@@ -34745,7 +34538,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_class_struggle_is_the_truth
 		}
 		# 阶级斗争是真理
 	}
@@ -34760,7 +34553,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_nationalization_and_communalization
 		}
 		# 国有化和公社化
 	}
@@ -34775,15 +34568,22 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_seek_self_sufficiency
 		}
 		# 寻求自给自足
 	}
 	focus = {
 		id = POL_rise_of_the_national_labor_party
 		icon = GFX_goal_POL_birth_npr
-		x = -50
-		y = 60
+		prerequisite = {
+			focus = KX_PL_ZL_LONGEST_DAY
+		}
+		relative_position_id = KX_PL_ZL_LONGEST_DAY
+        x = 0
+        y = 1
+		allow_branch = {
+			has_country_flag = POL_sanation_npr_win
+		}
 		cost = 4
 		
 		ai_will_do = { factor = 1 }
@@ -34803,7 +34603,10 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_uniting_the_left
+			add_tot_to_coalition = yes
+			add_synd_to_coalition = yes
+			add_socdem_to_coalition = yes
 		}
 		# 既联合左派……
 	}
@@ -34818,7 +34621,10 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			swap_ideas = {
+				remove_idea = POL_uniting_the_left
+				add_idea = POL_uniting_the_left2
+			}
 		}
 		# 统一基督教工人运动
 	}
@@ -34833,7 +34639,10 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			swap_ideas = {
+				remove_idea = POL_uniting_the_left2
+				add_idea = POL_uniting_the_left3
+			}
 		}
 		# 组建国家劳动营
 	}
@@ -34851,7 +34660,7 @@ focus = {
 		y = 4
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_controlled_democracy
 		}
 		# 受控制的民主
 	}
@@ -34866,7 +34675,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_gradual_regime_transition
 		}
 		# 渐进体制转型
 	}
@@ -34881,7 +34690,10 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_uniting_the_right
+			add_authdem_to_coalition = yes
+			add_pataut_to_coalition = yes
+			add_natpop_to_coalition = yes
 		}
 		# ……又统战右派
 	}
@@ -34896,7 +34708,10 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			swap_ideas = {
+				remove_idea = POL_uniting_the_right
+				add_idea = POL_uniting_the_right2
+			}
 		}
 		# 摧毁犹太经济特权
 	}
@@ -34911,17 +34726,51 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			swap_ideas = {
+				remove_idea = POL_uniting_the_right2
+				add_idea = POL_uniting_the_right3
+			}
 		}
 		# 阶级斗争为国家服务
 	}
 	focus = {
 		id = POL_return_of_the_holy_son
 		icon = GFX_goal_POL_return_of_the_holy_son
-		x = -40
-		y = 60
+		prerequisite = {
+			focus = KX_PL_ZL_LONGEST_DAY
+		}
+		relative_position_id = KX_PL_ZL_LONGEST_DAY
+        x = 0
+        y = 1
+		allow_branch = {
+			has_country_flag = POL_sanation_slawek_win
+		}
 		cost = 4
-		
+		select_effect = {
+			if = {
+				limit = {
+					check_variable = { POL.unity < 45 } #other left
+				}
+				hidden_effect = {
+					country_event = {
+						id = sanation.3
+						days = 14
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { POL.unity > 45 }
+					check_variable = { POL.radicalism > 60 } #dlugo
+				}
+				hidden_effect = {
+					country_event = {
+						id = sanation.7
+						days = 14
+					}
+				}
+			}
+		}
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_political_power = 100
@@ -34940,12 +34789,42 @@ focus = {
 		mutually_exclusive = {
 			focus = POL_reward_the_majors_clique
 		}
+		available = {
+			
+			custom_trigger_tooltip = {
+				tooltip = POL_radicalism_is_medium
+				check_variable = { POL.radicalism > 30 }
+				check_variable = { POL.radicalism < 60 }
+			}
+		}
 		relative_position_id = POL_return_of_the_holy_son
 		prerequisite = {
 			focus = POL_return_of_the_holy_son
 		}
 		completion_reward = {
-			add_political_power = 100
+			create_country_leader = {
+				name = "亚当·斯克瓦尔钦斯基"
+				picture = "gfx/leaders/POL/Portrait_PLX_Adam_Skwarczynski.png"
+				expire = "1.1.1"
+				ideology = tot_paternal_socialism_subtype
+			}
+		set_party_name = {
+			ideology = totalist
+			long_name = POL_totalist_bbwr_party_long
+			name = POL_totalist_bbwr_party
+		}
+			set_country_flag = KXX_LEADER_GUI_VISIBLE
+			set_country_flag = POL_Walery_Slawek_VISIBLE
+			add_popularity = {
+				ideology = totalist
+				popularity = 0.15
+			}
+			set_politics = {
+				ruling_party = totalist
+				elections_allowed = no
+			}
+			
+			
 		}
 		# 实现毕苏斯基的愿景
 	}
@@ -34961,12 +34840,50 @@ focus = {
 		mutually_exclusive = {
 			focus = POL_reward_the_majors_clique
 		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = POL_radicalism_is_low
+				check_variable = { POL.radicalism < 30 }
+			}
+			
+			
+		}
 		relative_position_id = POL_realize_pilsudskis_vision
 		x = 3
 		y = 0
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			create_country_leader = {
+				name = "亚历山大·普里斯托尔"
+				picture = "gfx/leaders/POL/Portrait_POL_Aleksander_Prystor.png"
+				expire = "1.1.1"
+				ideology = radsoc_popular_patriotism_subtype
+			}
+			create_country_leader = {
+				name = "亚历山大·普里斯托尔"
+				picture = "gfx/leaders/POL/Portrait_POL_Aleksander_Prystor.png"
+				expire = "1.1.1"
+				ideology = popular_patriotism_subtype
+			}
+		set_party_name = {
+			ideology = social_democrat
+			long_name = POL_social_democrat_legacy_party_long
+			name = POL_social_democrat_legacy_party
+		}
+		set_party_name = {
+			ideology = radical_socialist
+			long_name = POL_social_democrat_legacy_party_long
+			name = POL_social_democrat_legacy_party
+		}
+			
+			add_popularity = {
+				ideology = radical_socialist
+				popularity = 0.15
+			}
+			add_popularity = {
+				ideology = social_democrat
+				popularity = 0.15
+			}
 		}
 		# 回归社会主义根源
 	}
@@ -34987,7 +34904,18 @@ focus = {
 		y = 0
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			create_country_leader = {
+				name = "卡齐米日·斯威塔尔斯基"
+				picture = "gfx/leaders/POL/Portrait_POL_Kazimierz_Switalski.png"
+				expire = "1.1.1"
+				ideology = red_tinted_autocracy_subtype
+			}
+			set_country_flag = KXX_LEADER_GUI_VISIBLE
+			set_country_flag = POL_Walery_Slawek_VISIBLE
+			add_popularity = {
+				ideology = paternal_autocrat
+				popularity = 0.15
+			}
 		}
 		# 奖赏少校集团
 	}
@@ -35002,7 +34930,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_unlimited_presidential_power
 		}
 		# 总统权力无限
 	}
@@ -35018,6 +34946,23 @@ focus = {
 		cost = 4
 		completion_reward = {
 			add_political_power = 100
+			add_stability = 0.1
+			add_war_support = 0.1
+			add_popularity = {
+				ideology = totalist
+				popularity = -0.15
+			}
+			add_popularity = {
+				ideology = syndicalist
+				popularity = -0.15
+			}
+			add_popularity = {
+				ideology = radical_socialist
+				popularity = -0.15
+			}
+			add_tot_to_ban = yes
+			add_synd_to_ban = yes
+			add_radsoc_to_ban = yes
 		}
 		# 净化工团污秽
 	}
@@ -35035,7 +34980,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_socialism_in_jackboots
 		}
 		# 军靴中的社会主义
 	}
@@ -35050,7 +34995,7 @@ focus = {
 		y = 2
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_build_a_patronage_network
 		}
 		# 建立恩庇关系网
 	}
@@ -35065,7 +35010,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_rule_of_brutal_oppression
 		}
 		# 暴力高压统治
 	}
@@ -35080,7 +35025,7 @@ focus = {
 		y = 2
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_hyperindustrialization_under_authority
 		}
 		# 威权指导下的超工业化
 	}
@@ -35098,7 +35043,7 @@ focus = {
 		y = 2
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_the_nation_sings_in_unison
 		}
 		# 全国同声歌唱
 	}
@@ -35117,7 +35062,16 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
+			set_politics = {
+				ruling_party = social_democrat
+				elections_allowed = no
+			}
+			set_country_flag = KXX_LEADER_GUI_VISIBLE
+			set_country_flag = POL_Walery_Slawek_VISIBLE
 			add_political_power = 100
+			add_stability = 0.1
+			add_war_support = 0.1
+			add_radsoc_to_coalition = yes
 		}
 		# 忠诚的打手们
 	}
@@ -35136,7 +35090,16 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			set_politics = {
+				ruling_party = radical_socialist
+				elections_allowed = no
+			}
+			set_country_flag = KXX_LEADER_GUI_VISIBLE
+			set_country_flag = POL_Walery_Slawek_VISIBLE
+			add_socdem_to_coalition = yes
+			add_one_random_military_factory = yes
+			add_one_random_military_factory = yes
+			add_one_random_military_factory = yes
 		}
 		# 老同志们的橄榄枝
 	}
@@ -35153,7 +35116,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_overcome_party_politics
 		}
 		# 战胜党派政治
 	}
@@ -35168,7 +35131,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_know_everything_intervene_everywhere
 		}
 		# 了解一切，干预一切
 	}
@@ -35186,7 +35149,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_redder_than_britain_and_france
 		}
 		# 比英法更红
 	}
@@ -35201,7 +35164,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_blue_socialist_reconstruction
 		}
 		# 蓝色社会主义式重构
 	}
@@ -35219,7 +35182,7 @@ focus = {
 		y = 3
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_unite_the_socialist_parties
 		}
 		# 统合社会主义政党
 	}
@@ -35238,7 +35201,7 @@ focus = {
 		y = 3
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_peoples_capitalism
 		}
 		# 人民资本主义
 	}
@@ -35256,7 +35219,7 @@ focus = {
 		y = 3
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_welfarist_safety_net
 		}
 		# 福利主义托底
 	}
@@ -35274,7 +35237,7 @@ focus = {
 		y = 2
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_republic_shining_new
 		}
 		# 共和国，崭新闪亮
 	}
@@ -35289,7 +35252,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_purification_of_sanacja
 		}
 		# 萨纳齐亚的净化
 	}
@@ -35305,6 +35268,25 @@ focus = {
 		cost = 4
 		completion_reward = {
 			add_political_power = 100
+			add_stability = 0.1
+			add_war_support = 0.1
+			add_popularity = {
+				ideology = national_populist
+				popularity = -0.15
+			}
+			add_popularity = {
+				ideology = paternal_autocrat
+				popularity = -0.15
+			}
+			add_popularity = {
+				ideology = authoritarian_democrat
+				popularity = -0.15
+			}
+			random_unit_leader = {
+				limit = { has_id = 19861 }
+				remove_unit_leader = yes
+			}
+		
 		}
 		# 清理国贼
 	}
@@ -35322,7 +35304,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_a_national_moral_revolution
 		}
 		# 一场国民道德革命
 	}
@@ -35337,7 +35319,7 @@ focus = {
 		y = 2
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_vanguardist_elite_stratum
 		}
 		# 先锋队精英阶层
 	}
@@ -35352,7 +35334,10 @@ focus = {
 		y = 4
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_vision_of_the_total_state
+			set_popularity = {
+				totalist = 100
+			}
 		}
 		# 总体国度之愿景
 	}
@@ -35367,7 +35352,16 @@ focus = {
 		y = 2
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_achieve_state_socialization
+			add_synd_to_ban = yes
+			add_radsoc_to_ban = yes
+			add_socdem_to_ban = yes
+			add_soclib_to_ban = yes
+			add_marlib_to_ban = yes
+			add_soccon_to_ban = yes
+			add_authdem_to_ban = yes
+			add_pataut_to_ban = yes
+			add_natpop_to_ban = yes
 		}
 		# 实现国家社会化
 	}
@@ -35385,7 +35379,7 @@ focus = {
 		y = 2
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_the_marshal_was_the_marshal_is_the_marshal_shall_be
 		}
 		# 元帅活在过去！元帅活在现在！元帅将会永存！
 	}
@@ -35393,9 +35387,15 @@ focus = {
 		id = POL_the_military_coup
 		icon = GFX_goal_SWE_Military_Coup
 		
-		relative_position_id = POL_the_marshal_was_the_marshal_is_the_marshal_shall_be
-		x = 0
-		y = 2
+		prerequisite = {
+			focus = KX_PL_ZL_LONGEST_DAY
+		}
+		relative_position_id = KX_PL_ZL_LONGEST_DAY
+        x = 0
+        y = 1
+		allow_branch = {
+			has_country_flag = POL_sanation_mil_win
+		}
 		cost = 4
 		
 		completion_reward = {
@@ -35417,7 +35417,15 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			set_politics = {
+				ruling_party = totalist
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = totalist
+				popularity = 0.1
+			}
+			add_pataut_to_coalition = yes
 		}
 		# 锤子与镰刀
 	}
@@ -35432,7 +35440,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_left_junta_pol
 		}
 		# 强迫合并共产党
 	}
@@ -35447,7 +35455,10 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			swap_ideas = {
+				remove_idea = POL_left_junta_pol
+				add_idea = POL_left_junta_pol2
+			}
 		}
 		# 向国际示好
 	}
@@ -35462,7 +35473,10 @@ focus = {
 		y = 2
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			swap_ideas = {
+				remove_idea = POL_left_junta_pol2
+				add_idea = POL_left_junta_pol3
+			}
 		}
 		# 枪指挥党
 	}
@@ -35480,7 +35494,11 @@ focus = {
 		y = 0
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_popularity = {
+				ideology = paternal_autocrat
+				popularity = 0.1
+			}
+			add_tot_to_ban = yes
 		}
 		# 清洗左派
 	}
@@ -35496,7 +35514,7 @@ focus = {
 		y = 2
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas =  POL_declare_martial_law
 		}
 		# 颁布戒严令
 	}
@@ -35511,7 +35529,7 @@ focus = {
 		y = 2
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_the_new_marshal_cult
 		}
 		# 新元帅崇拜
 	}
@@ -35526,7 +35544,15 @@ focus = {
 		y = 2
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_try_the_traitors
+			random_unit_leader = {
+				limit = { has_id = 19861 }
+				remove_unit_leader = yes
+			}
+			random_unit_leader = {
+				limit = { has_id = 2137 }
+				remove_unit_leader = yes
+			}
 		}
 		# 审判国贼
 	}
@@ -35544,7 +35570,7 @@ focus = {
 		y = 2
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_military_patronage
 		}
 		# 军政庇护主义
 	}
@@ -35559,7 +35585,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_right_junta_pol
 		}
 		# 乾纲独断
 	}
@@ -35574,7 +35600,10 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			swap_ideas = {
+				remove_idea = POL_right_junta_pol
+				add_idea = POL_right_junta_pol2
+			}
 		}
 		# 傀儡化民主派与工会
 	}
@@ -35589,7 +35618,10 @@ focus = {
 		y = 2
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			swap_ideas = {
+				remove_idea = POL_right_junta_pol2
+				add_idea = POL_right_junta_pol3
+			}
 		}
 		# 警察与特工的政权
 	}
@@ -35608,7 +35640,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_the_military_salvation_council_above_all
 		}
 		# 军事救国委员会高于一切
 	}
@@ -35616,12 +35648,20 @@ focus = {
 	focus = {
 		id = POL_beks_victory
 		icon = GFX_goal_POL_beks_victory
-		x = -24
-		y = 60
+		prerequisite = {
+			focus = KX_PL_ZL_LONGEST_DAY
+		}
+		relative_position_id = KX_PL_ZL_LONGEST_DAY
+        x = 0
+        y = 1
+		allow_branch = {
+			has_country_flag = POL_sanation_beck_win
+		}
 		cost = 4
 		
 		completion_reward = {
 			add_political_power = 100
+			
 		}
 		# 贝克的胜利
 	}
@@ -35634,12 +35674,15 @@ focus = {
 		mutually_exclusive = {
 			focus = PLX_PLC_under_becks_eye
 		}
+		available = {
+			has_government = national_populist
+		}
 		relative_position_id = POL_beks_victory
 		x = -3
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_awaken_the_national_spirit
 		}
 		# 唤醒国民精神
 	}
@@ -35654,7 +35697,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_moral_hetman
 		}
 		# 道德盖特曼
 	}
@@ -35669,7 +35712,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_theosophic_freemason_aristocracy
 		}
 		# 神智学—共济会贵族集团
 	}
@@ -35687,7 +35730,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_i_am_the_messiah
 		}
 		# 我即弥赛亚
 	}
@@ -35702,7 +35745,11 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_war_on_modernism
+			add_socdem_to_ban = yes 
+			add_radsoc_to_ban = yes 
+			add_synd_to_ban = yes 
+			add_tot_to_ban = yes
 		}
 		# 对现代主义宣战
 	}
@@ -35720,7 +35767,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_awaken_the_polish_aryan_spirit
 		}
 		# 唤醒波兰雅利安精神
 	}
@@ -35735,7 +35782,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_educate_in_occult_research
 		}
 		# 神秘学研究教育化
 	}
@@ -35753,7 +35800,8 @@ focus = {
 		y = 3
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_toward_polish_national_ascension
+			country_event = plx.28
 		}
 		# 迈向波兰国家飞升
 	}
@@ -35761,12 +35809,19 @@ focus = {
 		id = POL_the_peasant_strike
 		icon = GFX_goal_generic_peasant_strike
 		
-		relative_position_id = POL_purge_syndicalist_filth
-		x = 1
-		y = 5
+		prerequisite = {
+			focus = KX_PL_ZL_LONGEST_DAY
+		}
+		relative_position_id = KX_PL_ZL_LONGEST_DAY
+        x = 0
+        y = 1
+		allow_branch = {
+			has_country_flag = POL_sanation_agar_win
+		}
 		cost = 4
 		completion_reward = {
 			add_political_power = 100
+			country_event = sanation.22
 		}
 		# 农民大罢工！
 	}
@@ -35775,6 +35830,9 @@ focus = {
 		icon = GFX_goal_POL_the_red_general
 		prerequisite = {
 			focus = POL_the_peasant_strike
+		}
+		available = {
+			has_government = totalist
 		}
 		mutually_exclusive = {
 			focus = POL_green_poland
@@ -35787,7 +35845,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_red_agar_pol
 		}
 		# 红色将军
 	}
@@ -35802,7 +35860,11 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			swap_ideas = {
+				remove_idea = POL_red_agar_pol
+				add_idea = POL_red_agar_pol2
+			}
+			
 		}
 		# 农民自助组织
 	}
@@ -35817,7 +35879,10 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			swap_ideas = {
+				remove_idea = POL_red_agar_pol2
+				add_idea = POL_red_agar_pol3
+			}
 		}
 		# 揭露布尔什维克的反共主义
 	}
@@ -35832,7 +35897,10 @@ focus = {
 		y = 3
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			swap_ideas = {
+				remove_idea = POL_red_agar_pol3
+				add_idea = POL_red_agar_pol4
+			}
 		}
 		# 土地归于农民
 	}
@@ -35847,7 +35915,10 @@ focus = {
 		y = 3
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			swap_ideas = {
+				remove_idea = POL_red_agar_pol4
+				add_idea = POL_red_agar_pol5
+			}
 		}
 		# 布尔什维工农革命
 	}
@@ -35862,7 +35933,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_liquidate_the_sanacja_nobility
 		}
 		# 清算萨纳齐亚贵族
 	}
@@ -35878,7 +35949,19 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_unify_the_peoples_movement
+			set_party_name = {
+				ideology = market_liberal
+				long_name = POL_social_liberal_party_long
+				name = POL_social_liberal_party
+			}
+			set_party_name = {
+				ideology = radical_socialist
+				long_name = POL_social_liberal_party_long
+				name = POL_social_liberal_party
+			}
+			add_marlib_to_coalition = yes
+			add_radsoc_to_coalition = yes
 		}
 		# 统一人民运动
 	}
@@ -35886,6 +35969,9 @@ focus = {
 	focus = {
 		id = POL_green_poland
 		icon = GFX_goal_POL_green_poland
+		available = {
+			has_government = social_liberal
+		}
 		prerequisite = {
 			focus = POL_the_peasant_strike
 		}
@@ -35915,7 +36001,14 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_grand_coalition_of_free_parties
+			add_socdem_to_coalition = yes
+			add_soccon_to_coalition = yes
+			set_party_name = {
+				ideology = social_conservative
+				long_name = POL_social_conservative_party_long
+				name = POL_social_conservative_party	
+			}
 		}
 		# 自由政党大联合
 	}
@@ -35930,13 +36023,16 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_restore_democratic_institutions
 		}
 		# 恢复民主制度
 	}
 	focus = {
 		id = POL_blue_flame
 		icon = GFX_goal_POL_blue_flame
+		available = {
+			has_government = paternal_autocrat
+		}
 		prerequisite = {
 			focus = POL_the_peasant_strike
 		}
@@ -35951,7 +36047,7 @@ focus = {
 		y = 0
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_aut_agar_pol
 		}
 		# 蓝色火焰
 	}
@@ -35981,7 +36077,10 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			swap_ideas = {
+				remove_idea = POL_aut_agar_pol
+				add_idea = POL_aut_agar_pol2
+			}
 		}
 		# 为传统挺身而出
 	}
@@ -35996,7 +36095,10 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			swap_ideas = {
+				remove_idea = POL_aut_agar_pol2
+				add_idea = POL_aut_agar_pol3
+			}
 		}
 		# 农民的独裁者
 	}
@@ -36012,7 +36114,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_strengthen_peasant_guards
 		}
 		# 强化农民卫队
 	}
@@ -36030,7 +36132,7 @@ focus = {
 		y = 3
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_revenge_landlords
 		}
 		# 为自由民主而战
 	}
@@ -36045,7 +36147,7 @@ focus = {
 		y = 4
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_fight_for_liberal_democracy
 		}
 		# 为自由民主而战
 	}
@@ -36061,7 +36163,10 @@ focus = {
 		y = 3
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			swap_ideas = {
+				remove_idea = POL_aut_agar_pol3
+				add_idea = POL_aut_agar_pol4
+			}
 		}
 		# 波兰的土地，波兰人耕种
 	}
@@ -36076,7 +36181,10 @@ focus = {
 		y = 3
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			swap_ideas = {
+				remove_idea = POL_aut_agar_pol4
+				add_idea = POL_aut_agar_pol5
+			}
 		}
 		# 全体农民皆爱国
 	}
@@ -36093,7 +36201,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_revenge_against_the_cities
 		}
 		# 向城市复仇
 	}
@@ -36106,12 +36214,20 @@ focus = {
 	focus = {
 		id = POL_first_free_elections
 		icon = GFX_goal_POL_Hold_Free_Elections
-		x = 5
-		y = 60
+		prerequisite = {
+			focus = KX_PL_ZL_LONGEST_DAY
+		}
+		relative_position_id = KX_PL_ZL_LONGEST_DAY
+        x = 0
+        y = 1
+		allow_branch = {
+			has_country_flag = POL_sanation_demo_win
+		}
 		cost = 4
 		
 		completion_reward = {
 			add_political_power = 100
+			country_event = sanation.29
 		}
 		# 第一次自由选举
 	}
@@ -36124,12 +36240,15 @@ focus = {
 		mutually_exclusive = {
 			focus = POL_conservative_election_victory
 		}
+		available = {
+			has_government = social_liberal
+		}
 		relative_position_id = POL_first_free_elections
 		x = -3
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_soclib_pol
 		}
 		# 民主党多数
 	}
@@ -36145,7 +36264,7 @@ focus = {
 		y = 2
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_defend_democratic_institutions
 		}
 		# 保卫民主制度
 	}
@@ -36163,7 +36282,9 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_integrate_sanacja_liberals
+			add_socdem_to_coalition = yes
+			add_marlib_to_coalition = yes
 		}
 		# 整合萨纳齐亚自由派
 	}
@@ -36181,7 +36302,9 @@ focus = {
 		y = 0
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_down_with_sanacja
+			add_socdem_to_ban = yes
+			add_marlib_to_ban = yes
 		}
 		# 打倒萨纳齐亚！
 	}
@@ -36195,12 +36318,15 @@ focus = {
 		mutually_exclusive = {
 			focus = POL_democratic_party_majority
 		}
+		available = {
+			has_government = social_conservative
+		}
 		relative_position_id = POL_democratic_party_majority
 		x = 6
 		y = 0
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_soccon_pol
 		}
 		# 保守党胜选
 	}
@@ -36215,7 +36341,11 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			swap_ideas = {
+				remove_idea = POL_soccon_pol
+				add_idea = POL_soccon_pol2
+			}
+			
 		}
 		# 强化教会角色
 	}
@@ -36230,7 +36360,10 @@ focus = {
 		y = 2
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			swap_ideas = {
+				remove_idea = POL_soccon_pol2
+				add_idea = POL_soccon_pol3
+			}
 		}
 		# XYZ原则
 	}
@@ -36245,7 +36378,11 @@ focus = {
 		y = 2
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			swap_ideas = {
+				remove_idea = POL_soccon_pol3
+				add_idea = POL_soccon_pol4
+			}
+			add_natpop_to_coalition = yes
 		}
 		# 拉拢右翼激进派
 	}
@@ -36261,7 +36398,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_arm_the_catholic_faithful
 		}
 		# 武装天主教徒
 	}
@@ -36279,7 +36416,10 @@ focus = {
 		y = 2
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			swap_ideas = {
+				remove_idea = POL_soccon_pol4
+				add_idea = POL_soccon_pol5
+			}
 		}
 		# 波兰—上帝之国
 	}
@@ -36294,7 +36434,11 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			swap_ideas = {
+				remove_idea = POL_soclib_pol
+				add_idea = POL_soclib_pol2
+			}
+			
 		}
 		# 谴责威权主义暴政
 	}
@@ -36309,7 +36453,11 @@ focus = {
 		y = 2
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			swap_ideas = {
+				remove_idea = POL_soclib_pol2
+				add_idea = POL_soclib_pol3
+			}
+			add_radsoc_to_coalition = yes
 		}
 		# 组织自由工会
 	}
@@ -36324,7 +36472,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_raise_education_standards
 		}
 		# 提高教育水平
 	}
@@ -36339,7 +36487,10 @@ focus = {
 		y = 2
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			swap_ideas = {
+				remove_idea = POL_soclib_pol3
+				add_idea = POL_soclib_pol4
+			}
 		}
 		# 急速扩军
 	}
@@ -36358,7 +36509,10 @@ focus = {
 		y = 2
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			swap_ideas = {
+				remove_idea = POL_soclib_pol4
+				add_idea = POL_soclib_pol5
+			}
 		}
 		# 华沙民主俱乐部的统治
 	}
@@ -36367,8 +36521,15 @@ focus = {
 	focus = {
 		id = POL_zeligowski_coup
 		icon = GFX_goal_POL_zeligowski_coup
-		x = 25
-		y = 60
+		prerequisite = {
+			focus = KX_PL_ZL_LONGEST_DAY
+		}
+		relative_position_id = KX_PL_ZL_LONGEST_DAY
+        x = 0
+        y = 1
+		allow_branch = {
+			has_country_flag = POL_sanation_zeli_win
+		}
 		cost = 4
 		
 		completion_reward = {
@@ -36387,7 +36548,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_decentralized_direct_democracy
 		}
 		# 去中心化直接民主
 	}
@@ -36402,7 +36563,14 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_cooperate_with_panslavists
+			add_tot_to_coalition = yes
+			set_party_name = {
+				ideology = totalist
+				long_name = POL_sanation_authoritarian_democrat_party_long
+				name = POL_sanation_authoritarian_democrat_party
+			}
+			
 		}
 		# 同泛斯拉夫主义者合作
 	}
@@ -36417,7 +36585,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_national_self_sufficiency
 		}
 		# 民族的自给自足
 	}
@@ -36438,7 +36606,13 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			LIT = {
+				country_event = sanation.9
+			}
+			swap_ideas = {
+				remove_idea = POL_cooperate_with_panslavists
+				add_idea = POL_cooperate_with_panslavists2
+			}
 		}
 		# 维尔纽斯之夜
 	}
@@ -36453,7 +36627,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_the_german_threat_from_the_west
 		}
 		# 西方的日耳曼威胁
 	}
@@ -36468,7 +36642,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_yellow_peril_panic_from_the_east
 		}
 		# 东方的黄祸恐慌
 	}
@@ -36486,7 +36660,10 @@ focus = {
 		y = 2
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			swap_ideas = {
+				remove_idea = POL_cooperate_with_panslavists2
+				add_idea = POL_cooperate_with_panslavists3
+			}
 		}
 		# 完成立陶宛整合
 	}
@@ -36501,7 +36678,14 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_fight_for_slavic_unity
+			country_event = plx.28
+			hidden_effect = {
+				country_event = {
+					id = sanation.19
+					days = 30
+				}
+			}
 		}
 		# 为斯拉夫统一而战
 	}
@@ -36509,9 +36693,15 @@ focus = {
 	focus = {
 		id = POL_dream_of_a_superpower
 		icon = GFX_goal_POL_dream_of_a_superpower
-		x = 32
-		y = 60
-		
+		prerequisite = {
+			focus = KX_PL_ZL_LONGEST_DAY
+		}
+		relative_position_id = KX_PL_ZL_LONGEST_DAY
+        x = 0
+        y = 1
+		allow_branch = {
+			has_country_flag = POL_sanation_super_win
+		}
 		cost = 4
 		completion_reward = {
 			add_political_power = 100
@@ -36529,7 +36719,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_implement_separation_of_church_and_state
 		}
 		# 实施政教分离
 	}
@@ -36544,7 +36734,7 @@ focus = {
 		y = 2
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_total_laissez_faire_economy
 		}
 		# 全面自由放任经济
 	}
@@ -36559,7 +36749,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_end_of_centralization
 		}
 		# 终结中央集权
 	}
@@ -36574,7 +36764,7 @@ focus = {
 		y = 2
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_awaken_civic_building_interest
 		}
 		# 唤醒公民建设兴趣
 	}
@@ -36592,7 +36782,7 @@ focus = {
 		y = 2
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_imperialism_not_nationalism
 		}
 		# 帝国主义，而非民族主义
 	}
@@ -36607,7 +36797,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_assimilate_minorities
 		}
 		# 同化少数民族
 	}
@@ -36628,7 +36818,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_supplement_objectivism_with_tradition
 		}
 		# 以传统补充客观主义
 	}
@@ -36643,15 +36833,23 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_freer_market_greater_nation
+			country_event = sanation.30
 		}
 		# 市场越自由，国家越伟大
 	}
 	focus = {
 		id = POL_polish_savinkovism
 		icon = GFX_RUS_Focus_On_Savinkovites
-		x = 40
-		y = 60
+		prerequisite = {
+			focus = KX_PL_ZL_LONGEST_DAY
+		}
+		relative_position_id = KX_PL_ZL_LONGEST_DAY
+        x = 0
+        y = 1
+		allow_branch = {
+			has_country_flag = POL_sanation_savin_win
+		}
 		cost = 4
 		
 		completion_reward = {
@@ -36665,6 +36863,12 @@ focus = {
 		prerequisite = {
 			focus = POL_polish_savinkovism
 		}
+		available = {
+			has_country_leader = {
+				name = "卡罗尔·温季亚戈尔斯基"
+				ruling_only = yes
+			}
+		}
 		mutually_exclusive = {
 			focus = POL_musketeers_take_power
 		}
@@ -36673,7 +36877,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_orth_savin_pol
 		}
 		# 密友的统治
 	}
@@ -36683,6 +36887,12 @@ focus = {
 		prerequisite = {
 			focus = POL_polish_savinkovism
 		}
+		available = {
+			has_country_leader = {
+				name = "斯特凡·维特科夫斯基"
+				ruling_only = yes
+			}
+		}
 		mutually_exclusive = {
 			focus = POL_rule_of_confidants
 		}
@@ -36691,7 +36901,7 @@ focus = {
 		y = 0
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_mil_savin_pol
 		}
 		# 火枪手掌权
 	}
@@ -36706,7 +36916,10 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			swap_ideas = {
+				remove_idea = POL_mil_savin_pol
+				add_idea = POL_mil_savin_pol2
+			}
 		}
 		# 清洗军队
 	}
@@ -36721,7 +36934,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_form_combat_squads
 		}
 		# 组建战斗队
 	}
@@ -36739,7 +36952,10 @@ focus = {
 		y = 2
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			swap_ideas = {
+				remove_idea = POL_mil_savin_pol3
+				add_idea = POL_mil_savin_pol4
+			}
 		}
 		# 鼓励科技创新
 	}
@@ -36757,7 +36973,11 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			swap_ideas = {
+				remove_idea = POL_mil_savin_pol4
+				add_idea = POL_mil_savin_pol5
+			}
+			country_event = plx.28
 		}
 		# 情报机构的统治
 	}
@@ -36772,7 +36992,10 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			swap_ideas = {
+				remove_idea = POL_orth_savin_pol
+				add_idea = POL_orth_savin_pol2
+			}
 		}
 		# 实践民粹主义
 	}
@@ -36802,7 +37025,10 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			swap_ideas = {
+				remove_idea = POL_orth_savin_pol2
+				add_idea = POL_orth_savin_pol3
+			}
 		}
 		# 对抗民主的十字军东征
 	}
@@ -36820,7 +37046,10 @@ focus = {
 		y = 2
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			swap_ideas = {
+				remove_idea = POL_orth_savin_pol3
+				add_idea = POL_orth_savin_pol4
+			}
 		}
 		# 为了斯拉夫人民的自由
 	}
@@ -36838,7 +37067,11 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			swap_ideas = {
+				remove_idea = POL_orth_savin_pol4
+				add_idea = POL_orth_savin_pol5
+			}
+			country_event = plx.28
 		}
 		# 波兰的元首
 	}
@@ -36854,7 +37087,7 @@ focus = {
 		y = 2
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_agrarian_revolution
 		}
 		# 农业革命
 	}
@@ -36869,7 +37102,10 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			swap_ideas = {
+				remove_idea = POL_mil_savin_pol2
+				add_idea = POL_mil_savin_pol3
+			}
 		}
 		# 拉拢贵族
 	}
@@ -36884,16 +37120,24 @@ focus = {
 		y = 2
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_corporate_corporatism
+			add_pataut_to_coalition = yes
+			country_event = sanation.28
 		}
 		# 企业法团主义
 	}
 	focus = {
 		id = POL_second_spring_of_the_strongmen
 		icon = GFX_goal_GER_Love_Thy_Neighbor
-		x = 48
-		y = 60
-		
+		prerequisite = {
+			focus = KX_PL_ZL_LONGEST_DAY
+		}
+		relative_position_id = KX_PL_ZL_LONGEST_DAY
+        x = 0
+        y = 1
+		allow_branch = {
+			has_country_flag = POL_sanation_szla_win
+		}
 		cost = 4
 		completion_reward = {
 			add_political_power = 100
@@ -36911,7 +37155,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_protect_the_notables
 		}
 		# 保障权贵
 	}
@@ -36926,7 +37170,8 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_loyalty_to_the_catholic_church
+			add_pataut_to_coalition = yes
 		}
 		# 忠于天主教会
 	}
@@ -36944,7 +37189,7 @@ focus = {
 		y = 2
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_grind_down_social_resistance
 		}
 		# 磨平社会反抗
 	}
@@ -36959,7 +37204,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_allies_of_industry
 		}
 		# 实业家盟友
 	}
@@ -36974,7 +37219,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_economic_pragmatism
 		}
 		# 经济实用主义
 	}
@@ -36992,7 +37237,7 @@ focus = {
 		y = 2
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_progress_and_order
 		}
 		# 进步与秩序
 	}
@@ -37010,7 +37255,7 @@ focus = {
 		y = 2
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_rebuild_cross_party_bloc
 		}
 		# 重建跨党政治集团
 	}
@@ -37028,16 +37273,22 @@ focus = {
 		y = 2
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_szlachta_shall_never_fall
 		}
 		# 什拉赫塔永世不倒
 	}
 	focus = {
 		id = POL_a_national_revolution
 		icon = GFX_goal_POL_a_national_revolution
-		x = 55
-		y = 60
-		
+		prerequisite = {
+			focus = KX_PL_ZL_LONGEST_DAY
+		}
+		relative_position_id = KX_PL_ZL_LONGEST_DAY
+        x = 0
+        y = 1
+		allow_branch = {
+			has_country_flag = POL_sanation_onr_win
+		}
 		cost = 4
 		completion_reward = {
 			add_political_power = 100
@@ -37055,7 +37306,13 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_united_national_radical_camp
+			add_natpop_to_coalition = yes
+			set_party_name = {
+				ideology = national_populist
+				long_name = POL_abc_party_long
+				name = POL_abc_party
+			}
 		}
 		# 统一民族激进阵营
 	}
@@ -37070,7 +37327,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_embrace_charter_totalitarian_ideas
 		}
 		# 接纳宪章极权主义思想
 	}
@@ -37085,7 +37342,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_merciless_struggle
 		}
 		# 无情斗争
 	}
@@ -37100,7 +37357,8 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_strengthen_statist_policies
+			add_pataut_to_coalition = yes
 		}
 		# 强化国家主义方针
 	}
@@ -37118,7 +37376,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_railway_union_workers_example
 		}
 		# 铁路工会，工人榜样
 	}
@@ -37136,7 +37394,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_authoritarian_police_state
 		}
 		# 威权警察国家
 	}
@@ -37154,7 +37412,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_national_pacification_plan
 		}
 		# 国家平定计划
 	}
@@ -37175,17 +37433,37 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_hail_the_leader
 		}
 		# 向领袖致敬！
 	}
 	focus = {
 		id = POL_new_king_in_the_castle
 		icon = GFX_goal_POL_new_king_in_the_castle
-		x = -10
-		y = 60
+		prerequisite = {
+			focus = KX_PL_ZL_LONGEST_DAY
+		}
+		relative_position_id = KX_PL_ZL_LONGEST_DAY
+        x = 0
+        y = 1
+		allow_branch = {
+			has_country_flag = POL_sanation_moci_win
+		}
 		cost = 4
-		
+		select_effect = {
+			if = {
+				limit = {
+					check_variable = { POL.unity < 45 }
+				}
+				#zegota
+				hidden_effect = {
+					country_event = {
+						id = sanation.13
+						days = 5
+					}
+				}
+			}
+		}
 		completion_reward = {
 			add_political_power = 100
 		}
@@ -37197,6 +37475,12 @@ focus = {
 		relative_position_id = POL_new_king_in_the_castle
 		x = -4
 		y = 1
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = POL_radicalism_is_low
+				check_variable = { POL.radicalism < 30 }
+			}
+		}
 		prerequisite = {
 			focus = POL_new_king_in_the_castle
 		}
@@ -37208,7 +37492,27 @@ focus = {
 		}
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			create_country_leader = {
+				name = "费利恰·斯克拉德科夫斯基"
+				picture = "gfx/leaders/POL/Portrait_POL_Felicjan_Skladkowski.png"
+				expire = "1.1.1"
+				ideology = soccon_big_tent_subtype
+			}
+		set_party_name = {
+			ideology = social_conservative
+			long_name = POL_sanation_paternal_autocrat_party
+			name = POL_sanation_paternal_autocrat_party
+		}
+			set_country_flag = KXX_LEADER_GUI_VISIBLE
+			set_country_flag = POL_Ignacy_Moscicki_VISIBLE
+			add_popularity = {
+				ideology = social_conservative
+				popularity = 0.15
+			}
+			set_politics = {
+				ruling_party = social_conservative
+				elections_allowed = no
+			}
 		}
 		# 维持三巨头联盟
 	}
@@ -37224,12 +37528,31 @@ focus = {
 		mutually_exclusive = {
 			focus = POL_rise_of_the_labor_clubs
 		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = POL_radicalism_is_medium
+				check_variable = { POL.radicalism > 30 }
+				check_variable = { POL.radicalism < 60 }
+			}
+		}
 		relative_position_id = POL_maintain_the_triumvirate_alliance
 		x = 4
 		y = 0
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			create_country_leader = {
+				name = "尤金纽什·克维亚特科夫斯基"
+				picture = "gfx/leaders/POL/Portrait_PLX_Eugeniusz_Kwiatkowski.png"
+				expire = "1.1.1"
+				ideology = right_technocracy_subtype
+			}
+			set_country_flag = KXX_LEADER_GUI_VISIBLE
+			set_country_flag = POL_Ignacy_Moscicki_VISIBLE
+			add_popularity = {
+				ideology = paternal_autocrat
+				popularity = 0.15
+			}
+			
 		}
 		# 门徒派的政权
 	}
@@ -37245,12 +37568,38 @@ focus = {
 		mutually_exclusive = {
 			focus = POL_regime_of_the_disciples
 		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = POL_radicalism_is_high
+				check_variable = { POL.radicalism > 60 }
+			}
+		}
 		relative_position_id = POL_regime_of_the_disciples
 		x = 4
 		y = 0
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			create_country_leader = {
+				name = "卡齐米日·巴特尔"
+				picture = "gfx/leaders/POL/Portrait_POL_Kazimierz_Bartel.png"
+				expire = "1.1.1"
+				ideology = soclib_authoritarian_liberalism_subtype
+			}
+		set_party_name = {
+			ideology = social_liberal
+			long_name = POL_sanation_bartel_party_long
+			name = POL_sanation_bartel_party
+		}
+			set_country_flag = KXX_LEADER_GUI_VISIBLE
+			set_country_flag = POL_Ignacy_Moscicki_VISIBLE
+			add_popularity = {
+				ideology = social_liberal
+				popularity = 0.15
+			}
+			set_politics = {
+				ruling_party = social_liberal
+				elections_allowed = no
+			}
 		}
 		# 劳工俱乐部的崛起
 	}
@@ -37265,7 +37614,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_no_more_oligarchic_democracy
 		}
 		# 寡头民主不再
 	}
@@ -37280,7 +37629,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_controlled_parlament
 		}
 		# 胁迫其他党派
 	}
@@ -37298,7 +37647,10 @@ focus = {
 		y = 2
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			swap_ideas = {
+				remove_idea = POL_controlled_parlament
+				add_idea = POL_controlled_parlament2
+			}
 		}
 		# 巴特尔议会
 	}
@@ -37313,7 +37665,10 @@ focus = {
 		y = 2
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			swap_ideas = {
+				remove_idea = POL_controlled_parlament2
+				add_idea = POL_controlled_parlament3
+			}
 		}
 		# 经济发展优先
 	}
@@ -37343,7 +37698,7 @@ focus = {
 		y = 2
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_strengthen_administrative_apparatus
 		}
 		# 强化行政机构
 	}
@@ -37361,7 +37716,7 @@ focus = {
 		y = 2
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_genuine_parliamentary_democracy
 		}
 		# 真正的议会民主
 	}
@@ -37381,7 +37736,29 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			create_country_leader = {
+				name = "尤金纽什·克维亚特科夫斯基"
+				picture = "gfx/leaders/POL/Portrait_PLX_Eugeniusz_Kwiatkowski.png"
+				expire = "1.1.1"
+				ideology = syn_technocratic_socialism_subtype
+			}
+			add_popularity = {
+				ideology = syndicalist
+				popularity = 0.15
+			}
+			set_politics = {
+				ruling_party = syndicalist
+				elections_allowed = no 
+			}
+			set_party_name = {
+				ideology = syndicalist
+				long_name = POL_sanation_paternal_autocrat_party
+				name = POL_sanation_paternal_autocrat_party
+			}
+			add_pataut_to_coalition = yes
+			add_one_random_civilian_factory = yes
+			add_one_random_civilian_factory = yes
+			add_one_random_civilian_factory = yes
 		}
 		# 工团模式的启示
 	}
@@ -37399,7 +37776,10 @@ focus = {
 		y = 0
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_synd_to_coalition = yes
+			add_one_random_military_factory = yes
+			add_one_random_military_factory = yes
+			add_one_random_military_factory = yes
 		}
 		# 建立经济统制
 	}
@@ -37415,7 +37795,16 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_reconcile_with_the_opposition
+			add_radsoc_to_coalition = yes
+			add_socdem_to_coalition = yes
+			add_marlib_to_coalition = yes
+			if = {
+				NOT = {
+					has_government = social_liberal
+				}
+				add_soclib_to_coalition = yes
+			}
 		}
 		# 与反对派和解
 	}
@@ -37431,7 +37820,7 @@ focus = {
 		y = 2
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_simplify_the_tax_system
 		}
 		# 简化税制
 	}
@@ -37447,7 +37836,7 @@ focus = {
 		y = 2
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_establish_institute_of_prices_and_conjuncture
 		}
 		# 建立经济状况与价格研究所
 	}
@@ -37462,7 +37851,7 @@ focus = {
 		y = 2
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_equal_civil_rights
 		}
 		# 公民权利平等
 	}
@@ -37477,7 +37866,7 @@ focus = {
 		y = 2
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_increase_public_investment
 		}
 		# 增加公共投资
 	}
@@ -37496,7 +37885,7 @@ focus = {
 		y = 2
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_implement_the_four_year_plan
 		}
 		# 制订四年计划
 	}
@@ -37511,7 +37900,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_economic_development_utmost
 		}
 		# 经济发展最优先
 	}
@@ -37526,7 +37915,10 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_tot_to_ban = yes
+			add_synd_to_ban = yes
+			add_radsoc_to_ban = yes
+			add_ideas = POL_no_more_leftist_agitation
 		}
 		# 左翼煽动不再
 	}
@@ -37542,6 +37934,23 @@ focus = {
 		cost = 4
 		completion_reward = {
 			add_political_power = 100
+			add_stability = 0.1
+			add_war_support = 0.1
+			add_popularity = {
+				ideology = social_democrat
+				popularity = -0.15
+			}
+			add_popularity = {
+				ideology = social_liberal
+				popularity = -0.15
+			}
+			add_popularity = {
+				ideology = market_liberal
+				popularity = -0.15
+			}
+			add_socdem_to_ban = yes
+			add_soclib_to_ban = yes
+			add_marlib_to_ban = yes
 		}
 		# 可悲的民主派
 	}
@@ -37557,7 +37966,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_implement_land_reform
 		}
 		# 实施土地改革
 	}
@@ -37573,7 +37982,7 @@ focus = {
 		y = 2
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_decentralized_planned_economy
 		}
 		# 去中心化计划经济
 	}
@@ -37591,7 +38000,10 @@ focus = {
 		y = 2
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			swap_ideas = {
+				remove_idea = POL_no_more_leftist_agitation
+				add_idea = POL_enact_authoritarian_constitution
+			}
 		}
 		# 颁布威权宪法
 	}
@@ -37606,7 +38018,13 @@ focus = {
 		y = 2
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			swap_ideas = {
+				remove_idea = POL_enact_authoritarian_constitution
+				add_idea = POL_enact_authoritarian_constitution2
+			}
+			add_authdem_to_coalition = yes
+			add_pataut_to_coalition = yes
+			add_natpop_to_coalition = yes
 		}
 		# 安抚右翼势力
 	}
@@ -37621,7 +38039,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_empower_the_police
 		}
 		# 赋权警察
 	}
@@ -37636,7 +38054,7 @@ focus = {
 		y = 2
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_bureaucratic_economic_system
 		}
 		# 官僚经济体系
 	}
@@ -37654,7 +38072,7 @@ focus = {
 		y = 2
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_no_turning_against_the_state
 		}
 		# 无逆于国
 	}
@@ -37663,9 +38081,15 @@ focus = {
 		id = POL_return_of_the_specter
 		icon = GFX_goal_POL_National_Rebirth
 		
-		relative_position_id = POL_empower_the_police
-		x = 0
-		y = 2
+		prerequisite = {
+			focus = KX_PL_ZL_LONGEST_DAY
+		}
+		relative_position_id = KX_PL_ZL_LONGEST_DAY
+        x = 0
+        y = 1
+		allow_branch = {
+			has_country_flag = POL_sanation_natdem_win
+		}
 		cost = 4
 		completion_reward = {
 			add_political_power = 100
@@ -37683,7 +38107,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_modernized_nationalism
 		}
 		# 现代化民族主义
 	}
@@ -37698,7 +38122,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_appease_the_sanacja_followers
 		}
 		# 安抚萨纳齐亚分子
 	}
@@ -37713,7 +38137,13 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_unite_the_national_democratic_movement
+			add_authdem_to_coalition = yes
+			set_party_name = {
+				ideology = authoritarian_democrat
+				long_name = POL_authoritarian_democrat_party_long
+				name = POL_authoritarian_democrat_party	
+			}
 		}
 		# 团结民族民主运动
 	}
@@ -37734,7 +38164,8 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_dmowski_pilsudski_synthesis
+			country_event = sanation.24
 		}
 		# 德莫夫斯基—毕苏斯基思想
 	}
@@ -37747,12 +38178,18 @@ focus = {
 		mutually_exclusive = {
 			focus = POL_anti_liberal_revolution
 		}
+		available = {
+			has_country_leader = {
+				name = "扬·兹季托维茨基"
+				ruling_only = yes
+			}
+		}
 		relative_position_id = POL_dmowski_pilsudski_synthesis
 		x = -1
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_market_freedom_against_liberalism
 		}
 		# 市场自由反对自由主义
 	}
@@ -37765,13 +38202,18 @@ focus = {
 		mutually_exclusive = {
 			focus = POL_market_freedom_against_liberalism
 		}
-
+		available = {
+			has_country_leader = {
+				name = "扬·斯基夫斯基"
+				ruling_only = yes
+			}
+		}
 		relative_position_id = POL_market_freedom_against_liberalism
 		x = 2
 		y = 0
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_anti_liberal_revolution
 		}
 		# 反自由革命
 	}
@@ -37786,7 +38228,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_autonomy_democracy_science_leadership
 		}
 		# 自治，民主，科学领导
 	}
@@ -37801,7 +38243,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_slay_the_capitalist_hydra
 		}
 		# 杀死资本主义九头蛇
 	}
@@ -37816,7 +38258,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_nationalism_the_inevitable_result_of_progress
 		}
 		# 民族主义—社会进步的必然结果
 	}
@@ -37831,7 +38273,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_total_catholicism_against_pluralism
 		}
 		# 反多元化总体天主教
 	}
@@ -37846,7 +38288,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_fiscal_system_reform
 		}
 		# 财政体系改革
 	}
@@ -37861,7 +38303,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_polish_national_community
 		}
 		# 波兰民族共同体
 	}
@@ -37874,6 +38316,40 @@ focus = {
 		x = 15
 		y = 60
 		cost = 4
+		prerequisite = {
+			focus = KX_PL_ZL_LONGEST_DAY
+		}
+		relative_position_id = KX_PL_ZL_LONGEST_DAY
+        x = 0
+        y = 1
+		allow_branch = {
+			has_country_flag = POL_sanation_smigly_win
+		}
+		select_effect = {
+			if = {
+				limit = {
+					check_variable = { POL.unity < 45 } #other right
+				}
+				hidden_effect = {
+					country_event = {
+						id = sanation.17
+						days = 5
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { POL.unity > 45 }
+					check_variable = { POL.radicalism > 60 } #zeli
+				}
+				hidden_effect = {
+					country_event = {
+						id = sanation.15
+						days = 5
+					}
+				}
+			}
+		}
 		
 		completion_reward = {
 			add_political_power = 100
@@ -37886,6 +38362,12 @@ focus = {
 		prerequisite = {
 			focus = POL_a_new_augustus
 		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = POL_radicalism_is_low
+				check_variable = { POL.radicalism < 30 }
+			}
+		}
 		mutually_exclusive = {
 			focus = POL_first_marshal_second_figure
 		}
@@ -37897,7 +38379,39 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			create_country_leader = {
+				name = "亚当·科茨"
+				picture = "gfx/leaders/POL/Portrait_POL_Adam_Koc.png"
+				expire = "1.1.1"
+				ideology = authdem_national_front_subtype
+			}
+			set_party_name = {
+				ideology = authoritarian_democrat
+				long_name = POL_ozn_party_long
+				name = POL_ozn_party
+			}
+			set_party_name = {
+				ideology = paternal_autocrat
+				long_name = POL_ozn_party_long
+				name = POL_ozn_party
+			}
+			set_party_name = {
+				ideology = national_populist
+				long_name = POL_ozn_party_long
+				name = POL_ozn_party
+			}
+			set_country_flag = KXX_LEADER_GUI_VISIBLE
+			set_country_flag = POL_Edward_Rydz_Smigly_VISIBLE
+			add_popularity = {
+				ideology = authoritarian_democrat
+				popularity = 0.15
+			}
+			set_politics = {
+				ruling_party = authoritarian_democrat
+				elections_allowed = no
+			}
+			add_pataut_to_coalition = yes
+			add_natpop_to_coalition = yes
 		}
 		# 建立民族统一营
 	}
@@ -37906,6 +38420,14 @@ focus = {
 		icon = GFX_focus_POL_sanation_right
 		prerequisite = {
 			focus = POL_a_new_augustus
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = POL_radicalism_is_medium
+				check_variable = { POL.radicalism > 30 }
+				check_variable = { POL.radicalism < 60 }	
+			}
+
 		}
 		mutually_exclusive = {
 			focus = POL_establish_the_camp_of_national_unity
@@ -37918,7 +38440,19 @@ focus = {
 		y = 0
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			create_country_leader = {
+				name = "博古斯瓦夫·米耶津斯基"
+				picture = "gfx/leaders/POL/Portrait_POL_Boguslaw_Miedzinski.png"
+				expire = "1.1.1"
+				ideology = junta_subtype
+			}
+			set_country_flag = KXX_LEADER_GUI_VISIBLE
+			set_country_flag = POL_Edward_Rydz_Smigly_VISIBLE
+			add_popularity = {
+				ideology = paternal_autocrat
+				popularity = 0.15
+			}
+			
 		}
 		# 第一元帅，第二人物
 	}
@@ -37939,7 +38473,28 @@ focus = {
 		y = 0
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			create_country_leader = {
+				name = "斯坦尼斯瓦夫·维特凯维奇"
+				picture = "gfx/leaders/POL/Portrait_POL_Stanislaw_Witkiewicz.png"
+				expire = "1.1.1"
+				ideology = natpop_futurism_subtype
+			}
+			set_party_name = {
+				ideology = national_populist
+				long_name = POL_sanation_paternal_autocrat_party_long
+				name = POL_sanation_paternal_autocrat_party
+			}
+			set_country_flag = KXX_LEADER_GUI_VISIBLE
+			set_country_flag = POL_Edward_Rydz_Smigly_VISIBLE
+			add_popularity = {
+				ideology = national_populist
+				popularity = 0.15
+			}
+			set_politics = {
+				ruling_party = national_populist
+				elections_allowed = no
+			}
+			add_pataut_to_coalition = yes
 		}
 		# 授权总统密党
 	}
@@ -37954,7 +38509,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_the_social_pyramid_stands
 		}
 		# 社会金字塔不可撼动
 	}
@@ -37970,7 +38525,7 @@ focus = {
 		y = 2
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_artist_spiritual_aristocracy
 		}
 		# 艺术家精神贵族
 	}
@@ -37988,7 +38543,9 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_manpower = 10000
+			add_command_power = 50
+			army_experience = 50
 		}
 		# 超级种族—波兰超人
 	}
@@ -37997,14 +38554,13 @@ focus = {
 		icon = GFX_goal_COL_Promote_Radical_Individualism
 		prerequisite = {
 			focus = POL_patriotic_dictator
-			
 		}
 		relative_position_id = POL_authorize_the_presidents_cabal
 		x = -2
 		y = 2
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_individualist_monad_society
 		}
 		# 个人主义单子社会
 	}
@@ -38020,7 +38576,7 @@ focus = {
 		y = -1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_patriotic_dictator
 		}
 		# 爱国独裁者
 	}
@@ -38035,7 +38591,7 @@ focus = {
 		y = 2
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_centralization_of_power
 		}
 		# 权力集中化
 	}
@@ -38053,7 +38609,7 @@ focus = {
 		y = 3
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_war_against_the_masses
 		}
 		# 对群众的战争
 	}
@@ -38071,7 +38627,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_bongo_above_all
 		}
 		# 邦戈高于一切！
 	}
@@ -38089,6 +38645,8 @@ focus = {
 		cost = 4
 		completion_reward = {
 			add_political_power = 100
+			add_command_power = 50
+			add_war_support = 0.1
 		}
 		# 建立元帅崇拜
 	}
@@ -38104,7 +38662,7 @@ focus = {
 		y = 3
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_savior_of_the_nation
 		}
 		# 国家的救世主
 	}
@@ -38119,7 +38677,8 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_polish_shogunate
+			set_country_leader_ideology = spectral_state_subtype
 		}
 		# 波兰幕府
 	}
@@ -38135,6 +38694,32 @@ focus = {
 		cost = 4
 		completion_reward = {
 			add_political_power = 100
+			add_stability = 0.1
+			add_war_support = 0.1
+			add_socdem_to_coalition = yes
+			add_soclib_to_coalition = yes 
+			add_marlib_to_coalition = yes
+			add_soccon_to_coalition = yes
+			set_party_name = {
+				ideology = social_democrat
+				long_name = POL_ozn_party_long
+				name = POL_ozn_party
+			}
+			set_party_name = {
+				ideology = social_liberal
+				long_name = POL_ozn_party_long
+				name = POL_ozn_party
+			}
+			set_party_name = {
+				ideology = market_liberal
+				long_name = POL_ozn_party_long
+				name = POL_ozn_party
+			}
+			set_party_name = {
+				ideology = social_conservative
+				long_name = POL_ozn_party_long
+				name = POL_ozn_party
+			}
 		}
 		# 实现全社会团结
 	}
@@ -38152,7 +38737,7 @@ focus = {
 		y = 2
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_liberal_interventionism
 		}
 		# 自由干预主义
 	}
@@ -38170,7 +38755,7 @@ focus = {
 		y = 2
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_cooperate_with_the_catholic_church
 		}
 		# 与天主教会合作
 	}
@@ -38186,7 +38771,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_ministry_of_state_defense
 		}
 		# 国家保卫部
 	}
@@ -38201,7 +38786,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_forced_polonization
 		}
 		# 强制波兰化
 	}
@@ -38216,7 +38801,16 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			swap_ideas = {
+				remove_idea = POL_forced_polonization
+				add_idea = POL_forced_polonization2
+			}
+			if = {
+				limit = {
+					has_government = paternal_autocrat
+				}
+				add_natpop_to_coalition = yes
+			}
 		}
 		# 骑劫民族民主运动
 	}
@@ -38234,7 +38828,7 @@ focus = {
 		y = 2
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_national_vertical_integration
 		}
 		# 国家垂直整合
 	}
@@ -38252,7 +38846,7 @@ focus = {
 		y = 1
 		cost = 4
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = POL_achieve_total_political_dominance
 		}
 		# 实现彻底政治支配
 	}
